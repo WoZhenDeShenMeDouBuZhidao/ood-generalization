@@ -39,10 +39,10 @@ class Trainer():
                 loss.backward()
                 self.optimizer.step()
 
-                train_loss += loss.item()
+                train_loss += loss.item() * Xs.size(0)
                 train_correct += (preds.argmax(dim=1) == Ys).sum().item()
 
-            avg_train_loss = train_loss / len(self.train_loader)
+            avg_train_loss = train_loss / len(self.train)
             train_acc = train_correct / len(self.train)
             
             # validation
@@ -57,10 +57,10 @@ class Trainer():
                     preds = self.model(Xs)
                     loss = self.criterion(preds, Ys)
 
-                    val_loss += loss.item()
+                    val_loss += loss.item() * Xs.size(0)
                     val_correct += (preds.argmax(dim=1) == Ys).sum().item()
 
-            avg_val_loss = val_loss / len(self.val_loader)
+            avg_val_loss = val_loss / len(self.val)
             val_acc = val_correct / len(self.val)
 
             # track loss, acc
@@ -93,7 +93,6 @@ class Trainer():
                 for Xs, Ys in test_loader:
                     Xs, Ys = Xs.to(self.device), Ys.to(self.device)
                     preds = best_model(Xs)
-                    loss = self.criterion(preds, Ys)
 
                     test_correct += (preds.argmax(dim=1) == Ys).sum().item()
 
