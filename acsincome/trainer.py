@@ -1,3 +1,4 @@
+import copy
 import torch
 from typing import List, Tuple
 from tqdm import tqdm
@@ -20,7 +21,7 @@ class Trainer():
         epoch = 0
         no_improve_epoch = 0
         best_val_acc = 0
-        best_model = None
+        best_state = copy.deepcopy(self.model.state_dict())
         train_losses, val_losses = [], []
         train_accs, val_accs = [], []
         for _ in tqdm(range(1000), desc=f"training repeat {repeat_i + 1}"):
@@ -76,13 +77,15 @@ class Trainer():
             if val_acc > best_val_acc:
                 no_improve_epoch = 0
                 best_val_acc = val_acc
-                best_model = self.model
+                best_state = copy.deepcopy(self.model.state_dict())
             else:
                 no_improve_epoch += 1
                 if no_improve_epoch >= self.PATIENCE:
                     break
 
         # testing
+        self.model.load_state_dict(best_state)
+        best_model = self.model
         test_state_accs = []
         for test, test_loader in tqdm(zip(self.tests, self.test_loaders), total=len(self.tests), desc=f"testing repeat {repeat_i + 1}"):
             best_model.eval()

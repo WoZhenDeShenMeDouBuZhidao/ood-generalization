@@ -18,9 +18,8 @@ def main(
     BATCH_SIZE: int=256, VAL_RATE: float=0.2, LR: int=1e-4, 
     PATIENCE: int=50, REPEAT: int=10, device: str="cuda"
 ) -> Tuple[float, float, float]:
-    ID_accs = []
-    OOD_MEAN_accs = []
-    OOD_WORST_accs = []
+    # a fixed seed for data split
+    set_seeds(67)
 
     # dataset, dataloader
     train, val = load_train_val(REMOVED_FEATURE_INDICES, TRAIN_VAL_STATE, VAL_RATE)
@@ -30,6 +29,10 @@ def main(
     val_loader = DataLoader(val, batch_size=BATCH_SIZE, shuffle=False)
     test_loaders = [DataLoader(test, batch_size=BATCH_SIZE, shuffle=False) for test in tests]
 
+    # repeat experiments
+    ID_accs = []
+    OOD_MEAN_accs = []
+    OOD_WORST_accs = []
     for repeat_i in range(REPEAT):
         set_seeds(random.randint(0, 100000))
 
@@ -66,8 +69,7 @@ def main(
 
 if __name__ == "__main__":
     # data config
-    set_seeds(67)
-    device = "cpu"#"cuda" if torch.cuda.is_available() else "cpu"
+    device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"Device: {device}")
     TRAIN_VAL_STATE = "PR"
     TEST_STATES = [ 
