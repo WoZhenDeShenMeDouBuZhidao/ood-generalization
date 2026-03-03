@@ -34,6 +34,7 @@ def main(
     OOD_MEAN_accs = []
     OOD_WORST_accs = []
     for repeat_i in range(REPEAT):
+        # random seeds for model initialization
         set_seeds(random.randint(0, 100000))
 
         # model, loss, optimizer
