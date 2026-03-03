@@ -34,11 +34,8 @@ class Trainer():
             for Xs, Ys in self.train_loader:
                 Xs, Ys = Xs.to(self.device), Ys.to(self.device)
                 self.optimizer.zero_grad()
-                use_input_grads = getattr(self.criterion, "requires_inputs", False)
-                if use_input_grads:
-                    Xs = Xs.requires_grad_(True)
                 preds = self.model(Xs)
-                loss = self.criterion(preds, Ys, Xs) if use_input_grads else self.criterion(preds, Ys)
+                loss = self.criterion(preds, Ys)
                 loss.backward()
                 self.optimizer.step()
 
