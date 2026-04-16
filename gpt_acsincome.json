@@ -1,0 +1,85 @@
+{
+  "dataset_name": "ACSIncome",
+  "ranking": ["SCHL", "WKHP", "OCCP", "AGEP", "COW", "MAR", "RELP", "POBP", "SEX", "RAC1P"],
+  "spurious_start_rank": 7,
+  "high_confidence_front_features": ["SCHL", "WKHP", "OCCP"],
+  "high_risk_spurious_features": ["RAC1P", "SEX", "POBP", "RELP"],
+  "per_feature": [
+    {
+      "feature": "SCHL",
+      "rank": 1,
+      "importance_score": 9,
+      "spurious_risk_score": 2,
+      "short_reason": "教育程度是最穩定的人力資本訊號之一，跨州與跨年通常都比群體屬性 proxy 更接近收入形成機制。"
+    },
+    {
+      "feature": "WKHP",
+      "rank": 2,
+      "importance_score": 8,
+      "spurious_risk_score": 3,
+      "short_reason": "目標是年收入是否超過 50k，而每週通常工時對年收入有近機械式影響，所以可遷移性很高。"
+    },
+    {
+      "feature": "OCCP",
+      "rank": 3,
+      "importance_score": 8,
+      "spurious_risk_score": 4,
+      "short_reason": "職業類別直接連到薪資結構與技能需求，但仍會受地方產業組成與職業編碼變動影響。"
+    },
+    {
+      "feature": "AGEP",
+      "rank": 4,
+      "importance_score": 7,
+      "spurious_risk_score": 4,
+      "short_reason": "年齡可近似經驗與生命週期薪資軌跡，但 ACS/PUMS 對年齡有擾動且高齡處理較粗，因此穩定性次於前 3 名。"
+    },
+    {
+      "feature": "COW",
+      "rank": 5,
+      "importance_score": 6,
+      "spurious_risk_score": 5,
+      "short_reason": "公部門、私部門、自營與無薪家族工作代表不同報酬制度，屬中度直接訊號，但也容易混入州別與產業結構差異。"
+    },
+    {
+      "feature": "MAR",
+      "rank": 6,
+      "importance_score": 5,
+      "spurious_risk_score": 6,
+      "short_reason": "婚姻狀態常反映家庭形成、勞動供給與選擇效應，對收入有用但更像間接 proxy，不如教育與工時穩定。"
+    },
+    {
+      "feature": "RELP",
+      "rank": 7,
+      "importance_score": 4,
+      "spurious_risk_score": 7,
+      "short_reason": "household relationship 主要在捕捉家庭角色與生命階段，且 RELP 在後續 PUMS 已被 RELSHIPP 取代，跨年份可比性更脆弱。"
+    },
+    {
+      "feature": "POBP",
+      "rank": 8,
+      "importance_score": 3,
+      "spurious_risk_score": 8,
+      "short_reason": "出生地編碼非常細，容易吸收移民來源、地域分布與 cohort composition，而非穩定個體收入機制。"
+    },
+    {
+      "feature": "SEX",
+      "rank": 9,
+      "importance_score": 2,
+      "spurious_risk_score": 9,
+      "short_reason": "雖然性別薪資差異在勞動市場中持續存在，但它本質上是敏感屬性，更多反映結構不平等與訓練分布，而不是可鼓勵依賴的遷移性因果訊號。"
+    },
+    {
+      "feature": "RAC1P",
+      "rank": 10,
+      "importance_score": 1,
+      "spurious_risk_score": 10,
+      "short_reason": "種族是 ACSIncome 內建的群組變數之一，最容易承載州別人口組成、歷史不平等與取樣差異，因此對 OOD 來說風險最高。"
+    }
+  ],
+  "recommended_grouping": "3-group",
+  "group_definition": {
+    "group_1": ["SCHL", "WKHP", "OCCP"],
+    "group_2": ["AGEP", "COW", "MAR"],
+    "group_3": ["RELP", "POBP", "SEX", "RAC1P"]
+  }
+}

@@ -3,7 +3,7 @@ import torch
 from torch.utils.data import Dataset
 from typing import List, Tuple
 from folktables import ACSDataSource, ACSIncome
-data_source = ACSDataSource(survey_year='2018', horizon='1-Year', survey='person')
+data_source = ACSDataSource(survey_year='2018', horizon='1-Year', survey='person', root_dir="./acsincome/data")
 
 
 class ACSIncomeDataset(Dataset):
@@ -19,15 +19,13 @@ class ACSIncomeDataset(Dataset):
         return self.n_samples
 
 
-def remove_feature(REMOVED_FEATURE_INDICES: List[int], X: List[List[float]]) -> List[List[float]]:
-    removed = set(REMOVED_FEATURE_INDICES)
-    return np.array([
-        [value for i, value in enumerate(row) if i not in removed]
-        for row in X
-    ])
+def remove_feature(removed_feature_indices: List[int], X: np.ndarray) -> np.ndarray:
+    removed = set(removed_feature_indices)
+    keep_indices = [i for i in range(X.shape[1]) if i not in removed]
+    return X[:, keep_indices]
 
 
-def load_train_val(REMOVED_FEATURE_INDICES: List[int], state: str, VAL_RATE: int) -> Tuple[ACSIncomeDataset, ACSIncomeDataset]:
+def acsincome_load_train_val(REMOVED_FEATURE_INDICES: List[int], state: str, VAL_RATE: int) -> Tuple[ACSIncomeDataset, ACSIncomeDataset]:
     # load
     acs_data = data_source.get_data(states=[state], download=True)
     X_train_val, Y_train_val, _ = ACSIncome.df_to_numpy(acs_data)
@@ -48,7 +46,7 @@ def load_train_val(REMOVED_FEATURE_INDICES: List[int], state: str, VAL_RATE: int
     return train, val
 
 
-def load_tests(REMOVED_FEATURE_INDICES: List[int], states: List[str]) -> List[ACSIncomeDataset]:
+def acsincome_load_tests(REMOVED_FEATURE_INDICES: List[int], states: List[str]) -> List[ACSIncomeDataset]:
     tests = []
     for state in states:
         acs_data = data_source.get_data(states=[state], download=True)
