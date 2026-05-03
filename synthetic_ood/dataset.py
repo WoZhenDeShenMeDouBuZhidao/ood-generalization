@@ -1,6 +1,6 @@
 import os
 from dataclasses import dataclass
-from typing import List, Tuple
+from typing import List, Optional, Tuple
 
 import numpy as np
 import torch
@@ -129,32 +129,27 @@ def _build_synthetic_arrays(
     return X_train, y_train, X_val, y_val, X_test_ood, y_test_ood
 
 
-def synthetic_ood_load_train_val(
+def synthetic_ood_load_data(
     removed_feature_indices: List[int],
-    group: str,
+    train_val_group: str,
+    test_groups: List[str],
     val_rate: float,
-    config: SyntheticConfig = SyntheticConfig(),
-) -> Tuple[SyntheticOODDataset, SyntheticOODDataset]:
-    del group
+    config: Optional[SyntheticConfig] = None,
+) -> Tuple[SyntheticOODDataset, SyntheticOODDataset, List[SyntheticOODDataset]]:
+    del train_val_group
+    del test_groups
     del val_rate
 
-    X_train, y_train, X_val, y_val, _, _ = _build_synthetic_arrays(config)
+    if config is None:
+        config = SyntheticConfig()
+
+    X_train, y_train, X_val, y_val, X_test_ood, y_test_ood = _build_synthetic_arrays(config)
 
     X_train = remove_feature(removed_feature_indices, X_train)
     X_val = remove_feature(removed_feature_indices, X_val)
+    X_test_ood = remove_feature(removed_feature_indices, X_test_ood)
 
     train = SyntheticOODDataset(X_train, y_train)
     val = SyntheticOODDataset(X_val, y_val)
-    return train, val
-
-
-def synthetic_ood_load_tests(
-    removed_feature_indices: List[int],
-    groups: List[str],
-    config: SyntheticConfig = SyntheticConfig(),
-) -> List[SyntheticOODDataset]:
-    del groups
-
-    _, _, _, _, X_test_ood, y_test_ood = _build_synthetic_arrays(config)
-    X_test_ood = remove_feature(removed_feature_indices, X_test_ood)
-    return [SyntheticOODDataset(X_test_ood, y_test_ood)]
+    tests = [SyntheticOODDataset(X_test_ood, y_test_ood)]
+    return train, val, tests

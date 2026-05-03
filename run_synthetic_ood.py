@@ -1,5 +1,4 @@
 import torch
-
 from synthetic_ood.dataset import FEATURE_INDEX, SyntheticConfig
 from src.main import main
 
@@ -51,7 +50,7 @@ if __name__ == "__main__":
         "noise_2": 1.0,
         "noise_3": 1.0,
     }
-    REG_SCALE = 0.0
+    REG_SCALE = 0.5
     LOSS_KWARGS = {
         "grad_scale":2.0,
         "weight_scale": 3.0,
@@ -59,12 +58,15 @@ if __name__ == "__main__":
         "target_power": 1.0,
     }
 
+    PLOT_SHAP = True
+    PLOT_TEST_SHAP = False & PLOT_SHAP
+
     ID_result, OOD_MEAN_result, OOD_WORST_result = main(
         DATASET, TRAIN_VAL_GROUP, TEST_GROUPS,
         FEATURE_INDEX, REMOVED_FEATURE_INDICES, FEATURE_LOSS_WEIGHTS,
         TRAIN_BATCH=TRAIN_BATCH, EVAL_BATCH=EVAL_BATCH, LR=LR, REG_SCALE=REG_SCALE,
         PATIENCE=PATIENCE, REPEAT=REPEAT, MAX_EPOCHS=MAX_EPOCHS,
-        DATASET_CONFIG=DATASET_CONFIG, PLOT_TEST_SHAP=False,
+        DATASET_CONFIG=DATASET_CONFIG, PLOT_SHAP=PLOT_SHAP, PLOT_TEST_SHAP=PLOT_TEST_SHAP,
         MODEL_NAME=MODEL_NAME, LOSS_NAME=LOSS_NAME, LOSS_KWARGS=LOSS_KWARGS,
         device=device, MODEL_SEEDS=[9803, 38224, 8113, 4854, 98825]
     )

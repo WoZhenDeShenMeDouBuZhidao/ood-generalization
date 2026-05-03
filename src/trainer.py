@@ -12,14 +12,14 @@ from tqdm import tqdm
 
 class Trainer():
     def __init__(
-        self, device: str, PATIENCE: int, MAX_EPOCHS: int, SHAP_ON_TESTS: bool,
-        train: Dataset, val: Dataset, tests: List[Dataset],
-        train_loader: DataLoader, val_loader: DataLoader, test_loaders: List[DataLoader],
+        self, device: str, PATIENCE: int, MAX_EPOCHS: int, SHAP_ON_VAL: bool, SHAP_ON_TESTS: bool,
+        train: Dataset, val: Dataset, tests: List[Dataset], train_loader: DataLoader, val_loader: DataLoader, test_loaders: List[DataLoader],
         model: MLP, criterion: FeatureGradCELoss, optimizer: optim.Adam
     ):
         self.device = device
         self.PATIENCE = PATIENCE
         self.MAX_EPOCHS = MAX_EPOCHS
+        self.SHAP_ON_VAL = SHAP_ON_VAL
         self.SHAP_ON_TESTS = SHAP_ON_TESTS
         self.train, self.val, self.tests = train, val, tests
         self.train_loader, self.val_loader, self.test_loaders = train_loader, val_loader, test_loaders
@@ -44,24 +44,24 @@ class Trainer():
             train_grad_terms_sum = {}
             for Xs, Ys in self.train_loader:
                 Xs, Ys = Xs.to(self.device, non_blocking=True), Ys.to(self.device, non_blocking=True)
-                self.optimizer.zero_grad()
+                self.optimizer.zero_grad(set_to_none=True)
                 logits, loss, loss_terms, grad_terms = self.criterion(self.model, Xs, Ys)
                 loss.backward()
                 self.optimizer.step()
 
-                train_correct += (logits.argmax(dim=1) == Ys).sum().item()
+                train_correct += (logits.argmax(dim=1) == Ys).sum()
                 for loss_name, loss_value in loss_terms.items():
                     if loss_name in train_loss_terms_sum:
-                        train_loss_terms_sum[loss_name] += loss_value * Xs.size(0)
+                        train_loss_terms_sum[loss_name] += loss_value.detach() * Xs.size(0)
                     else:
-                        train_loss_terms_sum[loss_name] = loss_value * Xs.size(0)
+                        train_loss_terms_sum[loss_name] = loss_value.detach() * Xs.size(0)
                 for grad_name, grad_value in grad_terms.items():
                     if grad_name in train_grad_terms_sum:
-                        train_grad_terms_sum[grad_name] += grad_value * Xs.size(0)
+                        train_grad_terms_sum[grad_name] += grad_value.detach() * Xs.size(0)
                     else:
-                        train_grad_terms_sum[grad_name] = grad_value * Xs.size(0)
+                        train_grad_terms_sum[grad_name] = grad_value.detach() * Xs.size(0)
 
-            train_acc = train_correct / len(self.train)
+            train_acc = train_correct.item() / len(self.train)
             
 
             # validation
@@ -72,35 +72,35 @@ class Trainer():
                 Xs, Ys = Xs.to(self.device, non_blocking=True), Ys.to(self.device, non_blocking=True)
                 logits, loss, loss_terms, _ = self.criterion(self.model, Xs, Ys)
 
-                val_correct += (logits.argmax(dim=1) == Ys).sum().item()
+                val_correct += (logits.argmax(dim=1) == Ys).sum()
                 for loss_name, loss_value in loss_terms.items():
                     if loss_name in val_loss_terms_sum:
-                        val_loss_terms_sum[loss_name] += loss_value * Xs.size(0)
+                        val_loss_terms_sum[loss_name] += loss_value.detach() * Xs.size(0)
                     else:
-                        val_loss_terms_sum[loss_name] = loss_value * Xs.size(0)
+                        val_loss_terms_sum[loss_name] = loss_value.detach() * Xs.size(0)
 
-            val_acc = val_correct / len(self.val)
+            val_acc = val_correct.item() / len(self.val)
 
 
             # track loss, acc
             epoch += 1
-            for loss_name, loss_sum in train_loss_terms_sum.items():
-                if loss_name in train_losses:
-                    train_losses[loss_name].append(float(loss_sum.detach() / len(self.train)))
-                else:
-                    train_losses[loss_name] = [float(loss_sum.detach() / len(self.train))]
-            for loss_name, loss_sum in val_loss_terms_sum.items():
-                if loss_name in val_losses:
-                    val_losses[loss_name].append(float(loss_sum.detach() / len(self.val)))
-                else:
-                    val_losses[loss_name] = [float(loss_sum.detach() / len(self.val))]
+            def _append_epoch_terms(history, term_sums, denom):
+                if not term_sums:
+                    return
+
+                names = list(term_sums.keys())
+                values = torch.stack([
+                    term_sums[name] / denom
+                    for name in names
+                ]).detach().cpu().tolist()
+
+                for name, value in zip(names, values):
+                    history.setdefault(name, []).append(float(value))
+            _append_epoch_terms(train_losses, train_loss_terms_sum, len(self.train))
+            _append_epoch_terms(val_losses, val_loss_terms_sum, len(self.val))
+            _append_epoch_terms(train_grads, train_grad_terms_sum, len(self.train))
             train_accs.append(train_acc)
             val_accs.append(val_acc)
-            for grad_name, grad_sum in train_grad_terms_sum.items():
-                if grad_name in train_grads:
-                    train_grads[grad_name].append(float(grad_sum.detach() / len(self.train)))
-                else:
-                    train_grads[grad_name] = [float(grad_sum.detach() / len(self.train))]
 
 
             # save best model
@@ -119,14 +119,26 @@ class Trainer():
             self.model.load_state_dict(best_state)
             best_model = self.model
             test_state_accs = []
-            for test, test_loader in tqdm(zip(self.tests, self.test_loaders), total=len(self.tests), desc=f"testing repeat {repeat_i + 1}"):
-                test_correct = 0
-                for Xs, Ys in test_loader:
-                    Xs, Ys = Xs.to(self.device, non_blocking=True), Ys.to(self.device, non_blocking=True)
+
+            batch_size = self.test_loaders[0].batch_size if self.test_loaders else 2048
+            test_tensors = [
+                (
+                    test.X.to(self.device, non_blocking=True),
+                    test.Y.to(self.device, non_blocking=True),
+                )
+                for test in self.tests
+            ]
+
+            for X_test, Y_test in test_tensors:
+                test_correct = torch.zeros((), device=self.device, dtype=torch.long)
+                for start in range(0, X_test.size(0), batch_size):
+                    Xs = X_test[start:start + batch_size]
+                    Ys = Y_test[start:start + batch_size]
                     logits = best_model(Xs)
-                    test_correct += (logits.argmax(dim=1) == Ys).sum().item()
-                test_state_accs.append(test_correct / len(test))
-        
+                    test_correct += (logits.argmax(dim=1) == Ys).sum()
+
+                test_state_accs.append(test_correct.item() / Y_test.numel())
+
 
         # shap
         def predict_fn(X_np):
@@ -135,7 +147,7 @@ class Trainer():
                 return self.model(X_tensor).detach().numpy()
 
         shap_values = []
-        if repeat_i < 3:
+        if self.SHAP_ON_VAL and repeat_i < 3:
             self.model.to("cpu")
             X_background = self.train.X.detach().numpy()
             explainer = shap.Explainer(predict_fn, X_background)
