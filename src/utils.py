@@ -1,10 +1,14 @@
+import dataclasses
+import datetime
+import json
 import os
 import random
 import torch
 from openai import OpenAI
 import numpy as np
-from typing import Any, Dict, List, Tuple
-from src.paths import dataset_artifact_dir
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
+from src.paths import dataset_plot_dir
 
 
 # Result formatting
@@ -56,6 +60,69 @@ def print_results(metrics: ExperimentMetrics) -> None:
     )
 
 
+def metric_summary_to_dict(metric: MetricSummary) -> Dict[str, float]:
+    mean, interval_range = metric
+    return {
+        "mean": float(mean),
+        "ci_range": float(interval_range),
+    }
+
+
+def experiment_metrics_to_dict(metrics: ExperimentMetrics) -> Dict[str, Dict[str, Dict[str, float]]]:
+    (
+        acc_id,
+        acc_ood_mean,
+        acc_ood_worst,
+        acc_ood_std,
+        f1_id,
+        f1_ood_mean,
+        f1_ood_worst,
+        f1_ood_std,
+    ) = metrics
+    return {
+        "accuracy": {
+            "id": metric_summary_to_dict(acc_id),
+            "ood_mean": metric_summary_to_dict(acc_ood_mean),
+            "ood_worst": metric_summary_to_dict(acc_ood_worst),
+            "ood_std": metric_summary_to_dict(acc_ood_std),
+        },
+        "f1": {
+            "id": metric_summary_to_dict(f1_id),
+            "ood_mean": metric_summary_to_dict(f1_ood_mean),
+            "ood_worst": metric_summary_to_dict(f1_ood_worst),
+            "ood_std": metric_summary_to_dict(f1_ood_std),
+        },
+    }
+
+
+def _jsonable(value: Any) -> Any:
+    if dataclasses.is_dataclass(value) and not isinstance(value, type):
+        return _jsonable(dataclasses.asdict(value))
+    if isinstance(value, Path):
+        return str(value)
+    if isinstance(value, (datetime.datetime, datetime.date)):
+        return value.isoformat()
+    if isinstance(value, np.ndarray):
+        return value.tolist()
+    if isinstance(value, np.generic):
+        return value.item()
+    if isinstance(value, torch.Tensor):
+        return value.detach().cpu().tolist()
+    if isinstance(value, dict):
+        return {str(key): _jsonable(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple, set)):
+        return [_jsonable(item) for item in value]
+    return value
+
+
+def save_json_result(path: Path, payload: Dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        json.dumps(_jsonable(payload), indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+
+
 # Reproducibility
 
 def set_seeds(seed: int) -> None:
@@ -98,10 +165,11 @@ def plot_training_curves(
     train_accs: List[float], val_accs: List[float],
     train_f1s: List[float], val_f1s: List[float],
     train_grads: Dict[str, List[float]], date: str,
+    benchmark: str = "acs", artifact_dataset: Optional[str] = None,
 ) -> None:
     import matplotlib.pyplot as plt
 
-    plot_path = dataset_artifact_dir(dataset) / "plots" / "curves"
+    plot_path = dataset_plot_dir(benchmark, artifact_dataset or dataset) / "curves"
     os.makedirs(plot_path, exist_ok=True)
 
     epochs = range(1, EPOCH + 1)
@@ -215,10 +283,11 @@ def plot_training_curves(
 def plot_accdelta_bars(
     dataset: str, rmfeature_accdelta: Dict[str, Dict[str, float]],
     ID_base: float, OOD_MEAN_base: float, OOD_WORST_base: float, REPEAT: int,
+    benchmark: str = "acs", artifact_dataset: Optional[str] = None,
 ) -> None:
     import matplotlib.pyplot as plt
 
-    plot_path = dataset_artifact_dir(dataset) / "plots" / "accdelta"
+    plot_path = dataset_plot_dir(benchmark, artifact_dataset or dataset) / "accdelta"
     os.makedirs(plot_path, exist_ok=True)
     if not rmfeature_accdelta:
         return
@@ -277,10 +346,11 @@ def plot_shap_values(
     dataset: str, TRAIN_VAL_GROUP: str, TEST_GROUPS: List[str],
     FEATURE_INDEX: Dict[int, str], REMOVED_FEATURE_INDICES: List[int],
     shap_values: List[np.ndarray], repeat_i: int, date: str,
+    benchmark: str = "acs", artifact_dataset: Optional[str] = None,
 ):
     import matplotlib.pyplot as plt
 
-    plot_path = dataset_artifact_dir(dataset) / "plots" / "shap"
+    plot_path = dataset_plot_dir(benchmark, artifact_dataset or dataset) / "shap"
     os.makedirs(plot_path, exist_ok=True)
 
     active_feature_names = [

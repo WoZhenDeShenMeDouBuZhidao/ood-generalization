@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Dict, Tuple
 
-from acs_tasks.dataset import ACS_TASKS
+from data.acs.dataset import ACS_TASKS
 
 
 ACS_DATASET_ORDER = (

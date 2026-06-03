@@ -1,12 +1,11 @@
 import torch
-from synthetic_ood.dataset import FEATURE_INDEX, SyntheticConfig
+from data.synthetic_ood.dataset import FEATURE_INDEX, SyntheticConfig
 from src.main import main
-from src.utils import print_results
+from src.paths import result_output_path
 
 
 if __name__ == "__main__":
     device = "cuda:1" if torch.cuda.is_available() else "cpu"
-    print(f"Device: {device}")
 
     DATASET = "synthetic_ood"
     TRAIN_VAL_GROUP = "train_env"
@@ -62,13 +61,20 @@ if __name__ == "__main__":
     PLOT_SHAP = True
     PLOT_TEST_SHAP = False & PLOT_SHAP
 
-    metrics = main(
+    result_path = result_output_path("synthetic_ood", "fitce", "default")
+    main(
         DATASET, TRAIN_VAL_GROUP, TEST_GROUPS,
         FEATURE_INDEX, REMOVED_FEATURE_INDICES, FEATURE_LOSS_WEIGHTS,
         TRAIN_BATCH=TRAIN_BATCH, EVAL_BATCH=EVAL_BATCH, LR=LR, REG_SCALE=REG_SCALE,
         PATIENCE=PATIENCE, REPEAT=REPEAT, MAX_EPOCHS=MAX_EPOCHS,
         DATASET_CONFIG=DATASET_CONFIG, PLOT_SHAP=PLOT_SHAP, PLOT_TEST_SHAP=PLOT_TEST_SHAP,
         MODEL_NAME=MODEL_NAME, LOSS_NAME=LOSS_NAME, LOSS_KWARGS=LOSS_KWARGS,
-        device=device, MODEL_SEEDS=[9803, 38224, 8113, 4854, 98825]
+        device=device, MODEL_SEEDS=[9803, 38224, 8113, 4854, 98825],
+        RESULT_PATH=result_path,
+        RESULT_METADATA={
+            "method": "fitce",
+        },
+        BENCHMARK="synthetic_ood",
+        DATASET_ARTIFACT_NAME="default",
     )
-    print_results(metrics)
+    print(f"saved {result_path}")

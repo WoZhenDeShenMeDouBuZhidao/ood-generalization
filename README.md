@@ -223,7 +223,7 @@ these eight ACS tasks.
 Shared ACS protocol:
 
 - Dataset metadata, train/validation state, test states, and removed feature indices
-  come from `acs_tasks/config.py`.
+  come from `data/acs/config.py`.
 - Each method uses the same train/validation split, held-out test states, raw tensor
   cache, and dataset-specific feature removal.
 - Class/sample reweighting is selected once per ACS task with the MLP
@@ -234,6 +234,9 @@ Shared ACS protocol:
 - `ID` is the validation metric from the train/validation state. `OOD MEAN`,
   `OOD WORST`, and `OOD STD` are computed across held-out test states.
 - Current neural baselines use seeds `[9803, 38224, 8113, 4854, 98825]`.
+- Runners write ignored raw results to
+  `outputs/acs/<method>/<dataset>/result.json` with indented JSON; README tables
+  should be aggregated from those JSON files.
 
 | method | runner | model/package | selection rule | notes |
 |---|---|---|---|---|
@@ -252,7 +255,7 @@ Shared ACS protocol:
 ### GPT Ranking Token Cost
 
 Token counts are recorded from `gpt-5.5` ranking JSON files under
-`acs_tasks/<dataset>/rankings/`. Each cell is:
+`data/acs/<dataset>/rankings/`. Each cell is:
 `total tokens (input/output tokens, calls)`.
 
 | dataset | rank | score | score_all | seq |

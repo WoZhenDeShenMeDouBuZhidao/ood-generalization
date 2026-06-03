@@ -1,8 +1,6 @@
 import argparse
 import os
-import pickle
 import warnings
-from pathlib import Path
 
 import numpy as np
 from sklearn.exceptions import ConvergenceWarning
@@ -10,11 +8,18 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
-from acs_tasks.config import ACS_DATASET_ORDER, ACS_TASK_CONFIGS, feature_index_for, test_states_for
-from acs_tasks.dataset import acs_task_load_data
-from src.main import _data_cache_dir
+from data.acs.config import ACS_DATASET_ORDER, ACS_TASK_CONFIGS, feature_index_for, test_states_for
+from data.acs.dataset import acs_task_load_data
+from src.data_cache import load_or_build_dataset_cache
 from src.metrics import binary_accuracy_f1
-from src.utils import ExperimentMetrics, metric_summary, print_results, set_seeds
+from src.paths import result_output_path
+from src.utils import (
+    ExperimentMetrics,
+    experiment_metrics_to_dict,
+    metric_summary,
+    save_json_result,
+    set_seeds,
+)
 
 REWEIGHTING_BY_DATASET = {
     "acsincome": True,
@@ -52,35 +57,25 @@ def _load_acs_data(dataset: str):
         "standardize": False,
     }
     removed_feature_indices = list(task_config.removed_feature_indices)
-    data_dir = _data_cache_dir(dataset, removed_feature_indices, dataset_config)
-    print({"data_cache_dir": str(data_dir)})
 
-    if Path(data_dir / "train.pkl").is_file():
-        with open(data_dir / "train.pkl", "rb") as fp:
-            train = pickle.load(fp)
-        with open(data_dir / "val.pkl", "rb") as fp:
-            val = pickle.load(fp)
-        with open(data_dir / "tests.pkl", "rb") as fp:
-            tests = pickle.load(fp)
-        return train, val, tests
+    def _build_dataset():
+        set_seeds(67)
+        return acs_task_load_data(
+            dataset,
+            removed_feature_indices,
+            task_config.train_val_state,
+            list(test_states_for(dataset)),
+            0.2,
+            dataset_config,
+        )
 
-    set_seeds(67)
-    train, val, tests = acs_task_load_data(
+    return load_or_build_dataset_cache(
+        "acs",
         dataset,
         removed_feature_indices,
-        task_config.train_val_state,
-        list(test_states_for(dataset)),
-        0.2,
         dataset_config,
+        _build_dataset,
     )
-    os.makedirs(data_dir, exist_ok=True)
-    with open(data_dir / "train.pkl", "wb") as fp:
-        pickle.dump(train, fp)
-    with open(data_dir / "val.pkl", "wb") as fp:
-        pickle.dump(val, fp)
-    with open(data_dir / "tests.pkl", "wb") as fp:
-        pickle.dump(tests, fp)
-    return train, val, tests
 
 
 def _as_numpy(dataset) -> tuple[np.ndarray, np.ndarray]:
@@ -100,14 +95,18 @@ def run_dataset(args: argparse.Namespace) -> ExperimentMetrics:
         if idx not in removed_feature_indices
     ]
     if not kept_feature_indices:
-        print({
-            "all_features_removed": True,
+        metrics = tuple((0.0, 0.0) for _ in range(8))
+        save_json_result(result_output_path("acs", "linear", args.dataset), {
+            "status": "all_features_removed",
+            "metadata": {"method": "linear"},
+            "dataset": args.dataset,
             "removed_feature_indices": sorted(removed_feature_indices),
+            "metrics": experiment_metrics_to_dict(metrics),
             "message": "No input features remain; recording zero ACC/F1 metrics.",
         })
-        return tuple((0.0, 0.0) for _ in range(8))
+        return metrics
 
-    train, val, tests = _load_acs_data(args.dataset)
+    train, val, tests, data_dir, cache_hit = _load_acs_data(args.dataset)
     X_train, y_train = _as_numpy(train)
     X_val, y_val = _as_numpy(val)
     class_weight = "balanced" if REWEIGHTING_BY_DATASET[args.dataset] else None
@@ -116,6 +115,7 @@ def run_dataset(args: argparse.Namespace) -> ExperimentMetrics:
     best_c = None
     best_val_acc = -np.inf
     best_val_f1 = 0.0
+    search_trace = []
     for c_value in args.c_grid:
         model = make_pipeline(
             StandardScaler(),
@@ -131,7 +131,11 @@ def run_dataset(args: argparse.Namespace) -> ExperimentMetrics:
             warnings.filterwarnings("ignore", category=ConvergenceWarning)
             model.fit(X_train, y_train)
         val_acc, val_f1 = _evaluate(model, X_val, y_val)
-        print(f"C={c_value:g}: val_acc={val_acc:.4f}, val_f1={val_f1:.4f}")
+        search_trace.append({
+            "C": c_value,
+            "val_accuracy": val_acc,
+            "val_f1": val_f1,
+        })
         if val_acc > best_val_acc:
             best_model = model
             best_c = c_value
@@ -140,20 +144,21 @@ def run_dataset(args: argparse.Namespace) -> ExperimentMetrics:
 
     test_accs = []
     test_f1s = []
-    for test in tests:
+    test_state_metrics = []
+    for state, test in zip(test_states_for(args.dataset), tests):
         X_test, y_test = _as_numpy(test)
         test_acc, test_f1 = _evaluate(best_model, X_test, y_test)
         test_accs.append(test_acc)
         test_f1s.append(test_f1)
+        test_state_metrics.append({
+            "state": state,
+            "accuracy": test_acc,
+            "f1": test_f1,
+        })
 
     test_accs_np = np.array(test_accs)
     test_f1s_np = np.array(test_f1s)
-    print({
-        "best_C": best_c,
-        "class_weight": class_weight,
-        "standard_scaler": "fit_on_train_only",
-    })
-    return (
+    metrics = (
         metric_summary(best_val_acc),
         metric_summary(float(test_accs_np.mean())),
         metric_summary(float(test_accs_np.min())),
@@ -163,6 +168,33 @@ def run_dataset(args: argparse.Namespace) -> ExperimentMetrics:
         metric_summary(float(test_f1s_np.min())),
         metric_summary(float(test_f1s_np.std())),
     )
+    save_json_result(result_output_path("acs", "linear", args.dataset), {
+        "status": "ok",
+        "metadata": {"method": "linear"},
+        "dataset": args.dataset,
+        "train_val_group": ACS_TASK_CONFIGS[args.dataset].train_val_state,
+        "test_groups": list(test_states_for(args.dataset)),
+        "feature_index": feature_index,
+        "removed_feature_indices": sorted(removed_feature_indices),
+        "data_cache_dir": data_dir,
+        "data_cache_hit": cache_hit,
+        "model": {
+            "name": "logistic_regression",
+            "c_grid": args.c_grid,
+            "max_iter": args.max_iter,
+            "penalty": "l2",
+            "solver": "lbfgs",
+            "class_weight": class_weight,
+            "standard_scaler": "fit_on_train_only",
+        },
+        "best_hyperparameters": {
+            "C": best_c,
+        },
+        "search_trace": search_trace,
+        "test_states": test_state_metrics,
+        "metrics": experiment_metrics_to_dict(metrics),
+    })
+    return metrics
 
 
 def main_cli() -> None:
@@ -171,8 +203,8 @@ def main_cli() -> None:
     for dataset in datasets:
         task_args = argparse.Namespace(**vars(args))
         task_args.dataset = dataset
-        print(f"Dataset: {dataset}")
-        print_results(run_dataset(task_args))
+        run_dataset(task_args)
+        print(f"saved {result_output_path('acs', 'linear', dataset)}")
 
 
 if __name__ == "__main__":

@@ -13,12 +13,13 @@ from folktables import (
     ACSPublicCoverage,
     ACSTravelTime,
 )
+from src.paths import acs_raw_data_root
 
 
 ACS_SURVEY_YEAR = "2018"
 ACS_HORIZON = "1-Year"
 ACS_SURVEY = "person"
-ACS_RAW_DATA_ROOT = "./acs_tasks/raw/data"
+ACS_RAW_DATA_ROOT = str(acs_raw_data_root())
 
 ACS_TASKS = {
     "acsincome": ACSIncome,

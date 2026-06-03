@@ -9,8 +9,8 @@ from typing import Any, Dict, Iterable, List
 
 from dotenv import load_dotenv
 
-from acs_tasks.config import ACS_DATASET_ORDER, feature_index_for
-from src.paths import dataset_artifact_dir
+from data.acs.config import ACS_DATASET_ORDER, feature_index_for
+from src.paths import ranking_artifact_dir
 from src.utils import call_llm
 
 
@@ -264,7 +264,7 @@ def validate_seq_payload(payload: Dict[str, Any], remaining_features: List[str])
 
 def output_path(dataset_name: str, model_name: str, method: str) -> Path:
     safe_model_name = model_name.replace("/", "_")
-    return dataset_artifact_dir(dataset_name) / "rankings" / f"{safe_model_name}_{method}_feature_ranking.json"
+    return ranking_artifact_dir("acs", dataset_name) / f"{safe_model_name}_{method}_feature_ranking.json"
 
 
 def select_datasets(requested_dataset: str, metadata: Dict[str, Dict[int, str]]) -> List[str]:

@@ -47,7 +47,7 @@ related works 與讀過的 paper 筆記放在 `codex_notes/related_work.md`；
 
 - `run_acs_fitce.py`
   - ACS `FeatureImportanceTargetCELoss` runner
-  - dataset metadata comes from `acs_tasks/config.py`
+  - dataset metadata comes from `data/acs/config.py`
   - loss / ranking hyperparameters remain local runner settings
 - `run_acs_mlp_ce.py`
   - ACS MLP + `CrossEntropyLoss` baseline runner
@@ -121,33 +121,52 @@ related works 與讀過的 paper 筆記放在 `codex_notes/related_work.md`；
 
 ### Datasets
 
-- `acs_tasks/dataset.py`
+- `data/acs/dataset.py`
   - shared ACS task loader
   - feature removal
   - train/val split
   - optional train-only balanced oversampling via `RESAMPLING`
   - optional train-stat standardization via `standardize`
-- `acs_tasks/<dataset>/data/`
-  - regenerated local cache for processed ACS train/val/test tensors
+- `data/acs/config.py`
+  - ACS dataset order, train/validation state, held-out test states, default
+    removed-feature indices, and feature-index metadata
+- `data/synthetic_ood/dataset.py`
+  - synthetic OOD data generation
+  - controllable spurious correlation shift
+- The old top-level `acs_tasks/` and `synthetic_ood/` Python packages were
+  removed on 2026-06-03; dataset code now lives with dataset assets under
+  `data/`.
+- Dataset assets now live under `data/` rather than code package directories:
+  - `data/acs/raw/` for downloaded ACS PUMS files
+  - `data/acs/<dataset>/rankings/` for tracked GPT ranking JSON inputs
+  - `data/acs/<dataset>/cache/` for regenerated local ACS train/val/test tensors
+  - `data/synthetic_ood/default/cache/` for regenerated synthetic OOD tensors
+  - `raw/` and `cache/` directories are ignored and are not pushed
+- ACS cache paths:
   - cache path is derived from data-changing factors:
     `rm_<removed-feature-indices>__rs<0/1>__std<0/1>`
   - example: `rm_9-10-14__rs0__std0`
   - `VAL_RATE` is intentionally omitted because ACS runs use the fixed `0.2`
     train/validation split ratio
   - old ad hoc cache directories were deleted on 2026-05-31
-- `synthetic_ood/dataset.py`
-  - synthetic OOD data generation
-  - controllable spurious correlation shift
 
 ### Outputs
 
-- `acsincome/plots/curves`
-- `acsincome/plots/shap`
-- `acsincome/plots/accdelta`
-- `synthetic_ood/plots/curves`
-- `synthetic_ood/plots/shap`
-- Raw experiment logs under `acs_tasks/*logs*` are not retained once their detailed
-  Accuracy/F1 tables have been recorded in `codex_notes/dev_log/`.
+- `outputs/acs/<method>/<dataset>/result.json`
+- `outputs/synthetic_ood/<method>/default/result.json`
+- Candidate/search runs may write sibling JSON files such as
+  `candidate_<setting>.json` under the same ignored output directory.
+- These JSON files store aggregate Accuracy/F1, confidence intervals, per-seed
+  details when available, hyperparameters, and model-selection metadata. README
+  tables should be aggregated from JSON rather than parsed from stdout logs.
+- `outputs/acs/<dataset>/plots/curves`
+- `outputs/acs/<dataset>/plots/shap`
+- `outputs/acs/<dataset>/plots/accdelta`
+- `outputs/synthetic_ood/default/plots/curves`
+- `outputs/synthetic_ood/default/plots/shap`
+- `outputs/` is ignored and is the only standard runtime-output directory.
+  Raw stdout logs are not retained once results are recorded in JSON and then
+  summarized in `codex_notes/dev_log/` or `README.md`.
 - Raw result artifacts under `acs_tasks/state_sweep/` and
   `acs_tasks/metric_benchmarks/` were also removed after their results were recorded
   in `codex_notes/dev_log/` and `README.md`.
@@ -283,7 +302,7 @@ Reference details:
 - implementation reference:
   - `src/ranking.py`
   - `run_acs_fitce.py`
-  - `acs_tasks/config.py`
+  - `data/acs/config.py`
 
 ### 2026-05-14
 
@@ -301,7 +320,7 @@ Reference details:
 - `codex_notes/dev_log/2026-05-14.md`
 - implementation reference:
   - `rank_features.py`
-  - `acs_tasks/<dataset>/rankings/gpt-5.5_score_all_feature_ranking.json`
+  - `data/acs/<dataset>/rankings/gpt-5.5_score_all_feature_ranking.json`
   - `README.md`
 
 ### 2026-05-11
@@ -333,9 +352,9 @@ Conclusion:
 - `README.md` and the ACS runner can intentionally contain different ACSIncome GPT
   rankings: the runner ranking came from a later manual web-ChatGPT query and is not a
   constraint on the automation target.
-- `rank_features.py` now imports ACS dataset/feature metadata from `acs_tasks/config.py`,
+- `rank_features.py` now imports ACS dataset/feature metadata from `data/acs/config.py`,
   builds a strict JSON ranking prompt, calls `gpt-5.5`, validates the response, and writes
-  reusable ranking JSON files under `acs_tasks/<dataset>/rankings/`.
+  reusable ranking JSON files under `data/acs/<dataset>/rankings/`.
 - The ranking JSON stores only the ranking result and call metadata. It intentionally does
   not store derived feature weights or repeated train/test split metadata; ranking-to-weight
   conversion remains a separate design question.
@@ -352,7 +371,7 @@ Reference details:
 - implementation reference:
   - `rank_features.py`
   - `run_acs_fitce.py`
-  - `acs_tasks/config.py`
+  - `data/acs/config.py`
 ### 2026-05-04
 
 Conclusion:
@@ -366,13 +385,14 @@ Conclusion:
   - `ACSMobility`
   - `ACSEmploymentFiltered`
   - `ACSIncomePovertyRatio`
-- Added shared loader wiring in `acs_tasks/dataset.py` and registered new dataset keys in
+- Added shared loader wiring in `data/acs/dataset.py` and registered new dataset keys in
   `src/main.py`.
 - Merged `ACSIncome` into `acs_tasks`, removed the old `acsincome/dataset.py` loader, and
-  fixed raw data loading to `acs_tasks/raw/data/2018/1-Year`.
+  fixed raw data loading. After the 2026-06-03 data-layout refactor, ACS raw
+  files live under `data/acs/raw/2018/1-Year`.
 - ACS cache and plot artifacts now route to:
-  - `acs_tasks/{task_name}/data/{train,val,tests}.pkl`
-  - `acs_tasks/{task_name}/plots/`
+  - `data/acs/{task_name}/cache/{train,val,tests}.pkl`
+  - `outputs/acs/{task_name}/plots/`
 - Added `run_*.py` templates using `cross_entropy`, class reweighting, PR train/validation,
   and the existing ACSIncome held-out state list as placeholders.
 - No experiments were run.
@@ -438,7 +458,7 @@ Additional conclusion:
   - `acspubliccoverage`, remove `ST`: 0.5915 -> 0.6648; default remove
   - `acstraveltime`, remove `PUMA`, `ST`, `POWPUMA`: 0.4658 -> 0.4764; default remove
 - Runner defaults reflected these decisions at the time; current dataset-specific
-  removed-feature defaults live in `acs_tasks/config.py`.
+  removed-feature defaults live in `data/acs/config.py`.
 - Detailed results: `codex_notes/dev_log/2026-05-04.md`, section
   `ACS Plain CE Baseline: Reweighting And State-Feature Defaults`.
 

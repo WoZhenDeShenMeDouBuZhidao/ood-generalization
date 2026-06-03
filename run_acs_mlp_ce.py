@@ -3,9 +3,10 @@ import os
 
 import torch
 
-from acs_tasks.config import ACS_DATASET_ORDER, ACS_TASK_CONFIGS, feature_index_for, test_states_for
+from data.acs.config import ACS_DATASET_ORDER, ACS_TASK_CONFIGS, feature_index_for, test_states_for
 from src.main import main
-from src.utils import ExperimentMetrics, print_results
+from src.paths import result_output_path
+from src.utils import ExperimentMetrics
 
 REWEIGHTING_BY_DATASET = {
     "acsincome": True,
@@ -65,18 +66,21 @@ def run_dataset(args: argparse.Namespace) -> ExperimentMetrics:
         LOSS_KWARGS=loss_kwargs,
         device=args.device,
         MODEL_SEEDS=[9803, 38224, 8113, 4854, 98825],
+        RESULT_PATH=result_output_path("acs", "mlp_ce", args.dataset),
+        RESULT_METADATA={
+            "method": "mlp_ce",
+        },
     )
 
 
 def main_cli() -> None:
     args = build_parser().parse_args()
-    print(f"Device: {args.device}")
     datasets = [args.dataset] if args.dataset else ACS_DATASET_ORDER
     for dataset in datasets:
         task_args = argparse.Namespace(**vars(args))
         task_args.dataset = dataset
-        print(f"Dataset: {dataset}")
-        print_results(run_dataset(task_args))
+        run_dataset(task_args)
+        print(f"saved {result_output_path('acs', 'mlp_ce', dataset)}")
 
 
 if __name__ == "__main__":

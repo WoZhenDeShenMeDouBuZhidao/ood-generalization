@@ -15,7 +15,8 @@ class Trainer():
     def __init__(
         self, device: str, PATIENCE: int, MAX_EPOCHS: int, SHAP_ON_VAL: bool, SHAP_ON_TESTS: bool,
         train: Dataset, val: Dataset, tests: List[Dataset], train_loader: DataLoader, val_loader: DataLoader, test_loaders: List[DataLoader],
-        model: MLP, criterion: FeatureGradCELoss, optimizer: optim.Adam
+        model: MLP, criterion: FeatureGradCELoss, optimizer: optim.Adam,
+        SHOW_PROGRESS: bool = False,
     ):
         self.device = device
         self.PATIENCE = PATIENCE
@@ -25,6 +26,7 @@ class Trainer():
         self.train, self.val, self.tests = train, val, tests
         self.train_loader, self.val_loader, self.test_loaders = train_loader, val_loader, test_loaders
         self.model, self.criterion, self.optimizer = model, criterion, optimizer
+        self.SHOW_PROGRESS = SHOW_PROGRESS
     
     def run_training(
         self, repeat_i
@@ -50,7 +52,11 @@ class Trainer():
         train_accs, val_accs = [], []
         train_f1s, val_f1s = [], []
         train_grads = {}
-        for _ in tqdm(range(self.MAX_EPOCHS), desc=f"training repeat {repeat_i + 1}"):
+        for _ in tqdm(
+            range(self.MAX_EPOCHS),
+            desc=f"training repeat {repeat_i + 1}",
+            disable=not self.SHOW_PROGRESS,
+        ):
             # training
             self.model.train()
             train_correct = 0

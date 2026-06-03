@@ -3,8 +3,9 @@ import os
 
 import torch
 
-from acs_tasks.config import ACS_DATASET_ORDER, ACS_TASK_CONFIGS, feature_index_for, test_states_for
+from data.acs.config import ACS_DATASET_ORDER, ACS_TASK_CONFIGS, feature_index_for, test_states_for
 from src.main import main
+from src.paths import result_output_path
 from src.ranking import (
     RANKING_METHODS,
     SCORE_WEIGHT_METHODS,
@@ -12,7 +13,7 @@ from src.ranking import (
     removed_feature_indices_from_selected_names,
     selected_feature_names_from_ranking,
 )
-from src.utils import ExperimentMetrics, print_results
+from src.utils import ExperimentMetrics, experiment_metrics_to_dict, save_json_result
 
 REWEIGHTING_BY_DATASET = {
     "acsincome": True,
@@ -70,6 +71,15 @@ def _candidate_values(args: argparse.Namespace) -> tuple[float, ...]:
     return args.top_p_grid
 
 
+def _value_token(value: float) -> str:
+    return f"{value:g}".replace("-", "m").replace(".", "p")
+
+
+def _candidate_result_path(args: argparse.Namespace, value: float):
+    filename = f"candidate_{args.selection_mode}_{_value_token(value)}.json"
+    return result_output_path("acs", "llm_select", args.dataset, filename=filename)
+
+
 def _run_candidate(args: argparse.Namespace, value: float) -> ExperimentMetrics:
     task_config = ACS_TASK_CONFIGS[args.dataset]
     feature_index = feature_index_for(args.dataset)
@@ -94,12 +104,6 @@ def _run_candidate(args: argparse.Namespace, value: float) -> ExperimentMetrics:
         selected_features,
         task_config.removed_feature_indices,
     )
-    print({
-        "selection_mode": args.selection_mode,
-        "selection_value": value,
-        "selected_features": selected_features,
-        "removed_feature_indices": removed_feature_indices,
-    })
     dataset_config = {
         "resampling": False,
         "standardize": False,
@@ -130,6 +134,15 @@ def _run_candidate(args: argparse.Namespace, value: float) -> ExperimentMetrics:
         LOSS_KWARGS=loss_kwargs,
         device=args.device,
         MODEL_SEEDS=MODEL_SEEDS,
+        RESULT_PATH=_candidate_result_path(args, value),
+        RESULT_METADATA={
+            "method": "llm_select",
+            "ranking_method": args.ranking_method,
+            "selection_mode": args.selection_mode,
+            "selection_value": value,
+            "selected_features": selected_features,
+            "removed_feature_indices": removed_feature_indices,
+        },
     )
 
 
@@ -137,28 +150,46 @@ def run_dataset(args: argparse.Namespace) -> ExperimentMetrics:
     best_value = None
     best_metrics = None
     best_val_acc = float("-inf")
+    candidates = []
     for value in _candidate_values(args):
-        print(f"LLM-Select candidate {args.selection_mode}={value:g}")
         metrics = _run_candidate(args, value)
-        print_results(metrics)
         val_acc = metrics[0][0]
+        candidates.append({
+            "selection_mode": args.selection_mode,
+            "selection_value": value,
+            "result_path": _candidate_result_path(args, value),
+            "metrics": experiment_metrics_to_dict(metrics),
+        })
         if val_acc > best_val_acc:
             best_value = value
             best_metrics = metrics
             best_val_acc = val_acc
-    print({"best_selection_mode": args.selection_mode, "best_selection_value": best_value})
+    save_json_result(result_output_path("acs", "llm_select", args.dataset), {
+        "status": "ok",
+        "metadata": {
+            "method": "llm_select",
+            "ranking_method": args.ranking_method,
+            "selection_mode": args.selection_mode,
+            "top_p_grid": args.top_p_grid,
+            "score_threshold_grid": args.score_threshold_grid,
+        },
+        "dataset": args.dataset,
+        "best_selection_mode": args.selection_mode,
+        "best_selection_value": best_value,
+        "metrics": experiment_metrics_to_dict(best_metrics),
+        "candidates": candidates,
+    })
     return best_metrics
 
 
 def main_cli() -> None:
     args = build_parser().parse_args()
-    print(f"Device: {args.device}")
     datasets = [args.dataset] if args.dataset else ACS_DATASET_ORDER
     for dataset in datasets:
         task_args = argparse.Namespace(**vars(args))
         task_args.dataset = dataset
-        print(f"Dataset: {dataset}")
-        print_results(run_dataset(task_args))
+        run_dataset(task_args)
+        print(f"saved {result_output_path('acs', 'llm_select', dataset)}")
 
 
 if __name__ == "__main__":

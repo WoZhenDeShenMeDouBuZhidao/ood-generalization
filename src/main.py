@@ -1,5 +1,3 @@
-import os
-import pickle
 import datetime
 import random
 import numpy as np
@@ -19,15 +17,17 @@ from src.loss import (
     LLMAttributionAlignedCELoss,
 )
 from src.trainer import Trainer
+from src.data_cache import load_or_build_dataset_cache
 from src.utils import (
     ExperimentMetrics,
     MetricSummary,
+    experiment_metrics_to_dict,
+    save_json_result,
     set_seeds, 
     plot_training_curves, plot_shap_values
 )
-from acs_tasks.dataset import ACS_TASKS, acs_task_load_data, acsincome_load_data_acc_upperbound_test
-from synthetic_ood.dataset import synthetic_ood_load_data
-from src.paths import dataset_artifact_dir
+from data.acs.dataset import ACS_TASKS, acs_task_load_data, acsincome_load_data_acc_upperbound_test
+from data.synthetic_ood.dataset import synthetic_ood_load_data
 
 data_loading_wrapper = {
     dataset: partial(acs_task_load_data, dataset)
@@ -91,6 +91,7 @@ def _build_criterion(
 def _resolve_loss_kwargs_from_train(
     loss_kwargs: Optional[Dict[str, Any]],
     train,
+    verbose: bool = False,
 ) -> Dict[str, Any]:
     resolved_kwargs = dict(loss_kwargs or {})
     if resolved_kwargs.get("importance_scale") != "train_std":
@@ -98,51 +99,14 @@ def _resolve_loss_kwargs_from_train(
 
     feature_std = train.X.std(dim=0, unbiased=False).clamp_min(1e-6)
     resolved_kwargs["importance_scale"] = feature_std.tolist()
-    print({
-        "resolved_importance_scale": [
-            round(float(value), 6)
-            for value in resolved_kwargs["importance_scale"]
-        ]
-    })
+    if verbose:
+        print({
+            "resolved_importance_scale": [
+                round(float(value), 6)
+                for value in resolved_kwargs["importance_scale"]
+            ]
+        })
     return resolved_kwargs
-
-
-def _get_config_value(config: Optional[Any], key: str, default: Any) -> Any:
-    if config is None:
-        return default
-    if isinstance(config, dict):
-        return config.get(key, default)
-    return getattr(config, key, default)
-
-
-def _removed_features_cache_token(removed_feature_indices: List[int]) -> str:
-    removed = sorted(set(removed_feature_indices))
-    if not removed:
-        return "rm_none"
-    return "rm_" + "-".join(str(idx) for idx in removed)
-
-
-def _data_cache_dir(
-    dataset: str,
-    removed_feature_indices: List[int],
-    dataset_config: Optional[Any],
-) -> Path:
-    data_dir = dataset_artifact_dir(dataset) / "data"
-    cache_suffix = _get_config_value(dataset_config, "cache_suffix", "")
-    if cache_suffix:
-        return data_dir / str(cache_suffix)
-
-    if dataset not in ACS_TASKS:
-        return data_dir
-
-    resampling = int(bool(_get_config_value(dataset_config, "resampling", False)))
-    standardize = int(bool(_get_config_value(dataset_config, "standardize", False)))
-    cache_name = "__".join([
-        _removed_features_cache_token(removed_feature_indices),
-        f"rs{resampling}",
-        f"std{standardize}",
-    ])
-    return data_dir / cache_name
 
 
 def _mean_confidence_interval(values: List[float], confidence: float = 0.95) -> MetricSummary:
@@ -171,63 +135,70 @@ def main(
     MODEL_NAME: str="mlp", HIDDEN_SIZE: int=64,
     LOSS_NAME: str="feature_grad_ce", LOSS_KWARGS: Optional[Dict[str, Any]]=None,
     MODEL_SEEDS: Optional[List[int]]=None,
-    device: str="cuda"
+    device: str="cuda",
+    RESULT_PATH: Optional[Path]=None,
+    RESULT_METADATA: Optional[Dict[str, Any]]=None,
+    BENCHMARK: str="acs",
+    DATASET_ARTIFACT_NAME: Optional[str]=None,
+    SHOW_PROGRESS: bool=False,
+    VERBOSE: bool=False,
 ) -> ExperimentMetrics:
-    print({
-        "model_name": MODEL_NAME,
-        "loss_name": LOSS_NAME,
-        "feature_loss_weights": FEATURE_LOSS_WEIGHTS,
-        "loss_kwargs": LOSS_KWARGS or {},
-        "dataset_config": DATASET_CONFIG,
-    })
+    artifact_dataset = DATASET_ARTIFACT_NAME or dataset
     removed_feature_indices = set(REMOVED_FEATURE_INDICES)
     kept_feature_indices = [
         idx for idx in sorted(FEATURE_INDEX)
         if idx not in removed_feature_indices
     ]
     if not kept_feature_indices:
-        print({
-            "all_features_removed": True,
-            "removed_feature_indices": sorted(removed_feature_indices),
-            "message": "No input features remain; recording zero ACC/F1 metrics.",
-        })
-        return tuple((0.0, 0.0) for _ in range(8))
+        metrics = tuple((0.0, 0.0) for _ in range(8))
+        if RESULT_PATH is not None:
+            save_json_result(RESULT_PATH, {
+                "status": "all_features_removed",
+                "completed_at": datetime.datetime.now(),
+                "metadata": RESULT_METADATA or {},
+                "benchmark": BENCHMARK,
+                "dataset": dataset,
+                "artifact_dataset": artifact_dataset,
+                "train_val_group": TRAIN_VAL_GROUP,
+                "test_groups": TEST_GROUPS,
+                "feature_index": FEATURE_INDEX,
+                "removed_feature_indices": sorted(removed_feature_indices),
+                "feature_loss_weights": FEATURE_LOSS_WEIGHTS,
+                "metrics": experiment_metrics_to_dict(metrics),
+                "repeats": [],
+                "message": "No input features remain; recording zero ACC/F1 metrics.",
+            })
+        return metrics
 
     # a fixed seed for data split
     set_seeds(67)
 
     # dataset
-    data_dir = _data_cache_dir(dataset, REMOVED_FEATURE_INDICES, DATASET_CONFIG)
-    print({"data_cache_dir": str(data_dir)})
-    if Path(data_dir / "train.pkl").is_file():
-        with open(data_dir / "train.pkl", "rb") as fp:
-            train = pickle.load(fp)
-        with open(data_dir / "val.pkl", "rb") as fp:
-            val = pickle.load(fp)
-        with open(data_dir / "tests.pkl", "rb") as fp:
-            tests = pickle.load(fp)
-    else:
-        train, val, tests = data_loading_wrapper[dataset](
+    def _build_dataset():
+        return data_loading_wrapper[dataset](
             REMOVED_FEATURE_INDICES,
             TRAIN_VAL_GROUP,
             TEST_GROUPS,
             VAL_RATE,
             DATASET_CONFIG,
         )
-        os.makedirs(data_dir, exist_ok=True)
-        with open(data_dir / "train.pkl", "wb") as fp:
-            pickle.dump(train, fp)
-        with open(data_dir / "val.pkl", "wb") as fp:
-            pickle.dump(val, fp)
-        with open(data_dir / "tests.pkl", "wb") as fp:
-            pickle.dump(tests, fp)
+
+    train, val, tests, data_dir, cache_hit = load_or_build_dataset_cache(
+        BENCHMARK,
+        artifact_dataset,
+        REMOVED_FEATURE_INDICES,
+        DATASET_CONFIG,
+        _build_dataset,
+    )
+    if VERBOSE:
+        print({"data_cache_dir": str(data_dir), "cache_hit": cache_hit})
     
     train_loader = DataLoader(train, batch_size=TRAIN_BATCH, shuffle=True, pin_memory=True)
     val_loader = DataLoader(val, batch_size=EVAL_BATCH, shuffle=False, pin_memory=True)
     test_loaders = [DataLoader(test, batch_size=EVAL_BATCH, shuffle=False, pin_memory=True) for test in tests]
 
     # loss
-    resolved_loss_kwargs = _resolve_loss_kwargs_from_train(LOSS_KWARGS, train)
+    resolved_loss_kwargs = _resolve_loss_kwargs_from_train(LOSS_KWARGS, train, verbose=VERBOSE)
     criterion = _build_criterion(
         LOSS_NAME,
         FEATURE_INDEX,
@@ -247,11 +218,13 @@ def main(
     OOD_MEAN_f1s = []
     OOD_WORST_f1s = []
     OOD_STD_f1s = []
+    repeat_details = []
     for repeat_i in range(REPEAT):
         # random seeds for model initialization
         model_seed = MODEL_SEEDS[repeat_i] if MODEL_SEEDS is not None else random.randint(0, 100000)
         set_seeds(model_seed)
-        print(f"repeat {repeat_i + 1} model_seed={model_seed}")
+        if VERBOSE:
+            print(f"repeat {repeat_i + 1} model_seed={model_seed}")
 
         # model, optimizer
         model = _build_model(
@@ -265,7 +238,7 @@ def main(
         trainer = Trainer(
             device, PATIENCE, MAX_EPOCHS, PLOT_SHAP, PLOT_TEST_SHAP,
             train, val, tests, train_loader, val_loader, test_loaders,
-            model, criterion, optimizer
+            model, criterion, optimizer, SHOW_PROGRESS=SHOW_PROGRESS
         )
         (
             epoch,
@@ -304,13 +277,17 @@ def main(
                     repeat_i, epoch, PATIENCE,
                     train_losses, val_losses, train_accs, val_accs,
                     train_f1s, val_f1s,
-                    train_grad_terms_sum, date
+                    train_grad_terms_sum, date,
+                    benchmark=BENCHMARK,
+                    artifact_dataset=artifact_dataset,
                 )
             if PLOT_SHAP:
                 plot_shap_values(
                     dataset, TRAIN_VAL_GROUP, TEST_GROUPS,
                     FEATURE_INDEX, REMOVED_FEATURE_INDICES,
-                    shape_values, repeat_i, date
+                    shape_values, repeat_i, date,
+                    benchmark=BENCHMARK,
+                    artifact_dataset=artifact_dataset,
                 )
         
         # logging
@@ -322,12 +299,39 @@ def main(
         OOD_MEAN_f1s.append(OOD_MEAN_f1)
         OOD_WORST_f1s.append(OOD_WORST_f1)
         OOD_STD_f1s.append(OOD_STD_f1)
-        print(
-            f"ACC: {ID_acc:.4f}, {OOD_MEAN_acc:.4f}, {OOD_WORST_acc:.4f}, {OOD_STD_acc:.4f}; "
-            f"F1: {ID_f1:.4f}, {OOD_MEAN_f1:.4f}, {OOD_WORST_f1:.4f}, {OOD_STD_f1:.4f}"
-        )
+        repeat_details.append({
+            "repeat": repeat_i + 1,
+            "model_seed": model_seed,
+            "epochs": epoch,
+            "best_epoch": best_epoch_idx + 1,
+            "accuracy": {
+                "id": float(ID_acc),
+                "ood_mean": float(OOD_MEAN_acc),
+                "ood_worst": float(OOD_WORST_acc),
+                "ood_std": float(OOD_STD_acc),
+                "test_states": {
+                    str(state): float(value)
+                    for state, value in zip(TEST_GROUPS, test_state_accs)
+                },
+            },
+            "f1": {
+                "id": float(ID_f1),
+                "ood_mean": float(OOD_MEAN_f1),
+                "ood_worst": float(OOD_WORST_f1),
+                "ood_std": float(OOD_STD_f1),
+                "test_states": {
+                    str(state): float(value)
+                    for state, value in zip(TEST_GROUPS, test_state_f1s)
+                },
+            },
+        })
+        if VERBOSE:
+            print(
+                f"ACC: {ID_acc:.4f}, {OOD_MEAN_acc:.4f}, {OOD_WORST_acc:.4f}, {OOD_STD_acc:.4f}; "
+                f"F1: {ID_f1:.4f}, {OOD_MEAN_f1:.4f}, {OOD_WORST_f1:.4f}, {OOD_STD_f1:.4f}"
+            )
 
-    return (
+    metrics = (
         _mean_confidence_interval(ID_accs),
         _mean_confidence_interval(OOD_MEAN_accs),
         _mean_confidence_interval(OOD_WORST_accs),
@@ -337,3 +341,46 @@ def main(
         _mean_confidence_interval(OOD_WORST_f1s),
         _mean_confidence_interval(OOD_STD_f1s),
     )
+
+    if RESULT_PATH is not None:
+        save_json_result(RESULT_PATH, {
+            "status": "ok",
+            "completed_at": datetime.datetime.now(),
+            "metadata": RESULT_METADATA or {},
+            "benchmark": BENCHMARK,
+            "dataset": dataset,
+            "artifact_dataset": artifact_dataset,
+            "train_val_group": TRAIN_VAL_GROUP,
+            "test_groups": TEST_GROUPS,
+            "data_cache_dir": data_dir,
+            "data_cache_hit": cache_hit,
+            "feature_index": FEATURE_INDEX,
+            "removed_feature_indices": REMOVED_FEATURE_INDICES,
+            "feature_loss_weights": FEATURE_LOSS_WEIGHTS,
+            "dataset_config": DATASET_CONFIG,
+            "model": {
+                "name": MODEL_NAME,
+                "hidden_size": HIDDEN_SIZE,
+                "seeds": MODEL_SEEDS,
+            },
+            "training": {
+                "device": device,
+                "train_batch": TRAIN_BATCH,
+                "eval_batch": EVAL_BATCH,
+                "val_rate": VAL_RATE,
+                "lr": LR,
+                "patience": PATIENCE,
+                "repeat": REPEAT,
+                "max_epochs": MAX_EPOCHS,
+            },
+            "loss": {
+                "name": LOSS_NAME,
+                "reg_scale": REG_SCALE,
+                "kwargs": LOSS_KWARGS or {},
+                "resolved_kwargs": resolved_loss_kwargs,
+            },
+            "metrics": experiment_metrics_to_dict(metrics),
+            "repeats": repeat_details,
+        })
+
+    return metrics

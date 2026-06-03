@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from typing import Any, Dict, List, Sequence
 
-from src.paths import dataset_artifact_dir
+from src.paths import ranking_artifact_dir
 
 
 DEFAULT_RANKING_MODEL = "gpt-5.5"
@@ -24,8 +24,7 @@ def ranking_artifact_path(
 
     safe_model_name = model_name.replace("/", "_")
     return (
-        dataset_artifact_dir(dataset)
-        / "rankings"
+        ranking_artifact_dir("acs", dataset)
         / f"{safe_model_name}_{method}_feature_ranking.json"
     )
 
