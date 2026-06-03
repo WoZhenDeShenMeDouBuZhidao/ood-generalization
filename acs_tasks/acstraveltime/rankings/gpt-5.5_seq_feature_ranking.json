@@ -1,0 +1,226 @@
+{
+  "model": "gpt-5.5",
+  "method": "seq",
+  "temperature": 0.0,
+  "created_at": "2026-05-10T21:30:23",
+  "token_usage": {
+    "num_calls": 16,
+    "input_tokens": 4543,
+    "output_tokens": 7065,
+    "total_tokens": 11608
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature": "JWTR",
+        "rationale": "Means of transportation to work is directly and semantically tied to commute duration and should retain strong predictive value across states without relying primarily on geographic identifiers."
+      },
+      {
+        "rank": 2,
+        "feature": "OCCP",
+        "rationale": "Occupation has stable semantic links to commute length through job location, schedule, and worksite type, adding predictive value beyond travel mode without directly encoding geography."
+      },
+      {
+        "rank": 3,
+        "feature": "AGEP",
+        "rationale": "Age has stable semantic links to commuting patterns and work-life stage, adding marginal signal after commute mode and occupation without directly encoding geography or sensitive demographic shortcuts."
+      },
+      {
+        "rank": 4,
+        "feature": "SCHL",
+        "rationale": "Education level provides stable socioeconomic and job-structure signal for commute time across states, with less direct geographic leakage than PUMA/ST/POWPUMA."
+      },
+      {
+        "rank": 5,
+        "feature": "POVPIP",
+        "rationale": "Socioeconomic status can stably relate to commute length and transportation constraints across states, while avoiding direct geographic or demographic shortcut variables."
+      },
+      {
+        "rank": 6,
+        "feature": "MAR",
+        "rationale": "Marital status can stably capture household and residential constraints that affect commute length, while avoiding direct geography codes and stronger demographic shortcut variables."
+      },
+      {
+        "rank": 7,
+        "feature": "DIS",
+        "rationale": "Disability status can semantically affect commuting constraints and travel time across states, while avoiding direct geographic encodings or more brittle demographic shortcuts."
+      },
+      {
+        "rank": 8,
+        "feature": "MIG",
+        "rationale": "Recent mobility can affect commute stability and length across states, while avoiding direct geography or demographic shortcut features."
+      },
+      {
+        "rank": 9,
+        "feature": "SEX",
+        "rationale": "Adds modest, generally portable commute-pattern signal beyond age, occupation, education, and household variables, while avoiding explicit geographic identifiers like ST/PUMA/POWPUMA."
+      },
+      {
+        "rank": 10,
+        "feature": "RELP",
+        "rationale": "Household relationship can add stable life-stage and household-role signal for commute patterns beyond age, marital status, and sex, without directly encoding geography or protected demographic shortcuts."
+      },
+      {
+        "rank": 11,
+        "feature": "CIT",
+        "rationale": "Citizenship status may add modest, semantically interpretable socioeconomic and labor-market signal while avoiding the explicit geographic leakage of ST/PUMA/POWPUMA and the brittle demographic shortcut risk of RAC1P."
+      },
+      {
+        "rank": 12,
+        "feature": "RAC1P",
+        "rationale": "Among remaining non-geographic options, race may add some stable signal through broad commuting and residential-segregation patterns, while ESP is mostly inapplicable and PUMA/ST/POWPUMA are brittle geographic identifiers."
+      },
+      {
+        "rank": 13,
+        "feature": "ESP",
+        "rationale": "Non-geographic household employment context with more stable semantic signal than PUMA/ST/POWPUMA, which mostly encode state-specific location artifacts."
+      },
+      {
+        "rank": 14,
+        "feature": "POWPUMA",
+        "rationale": "Place-of-work PUMA is the most directly commute-related remaining geographic feature, likely adding more stable signal about workplace location and commute patterns than residence PUMA or state, though it remains geography-sensitive."
+      },
+      {
+        "rank": 15,
+        "feature": "PUMA",
+        "rationale": "Residence PUMA can add origin-side commute information relative to POWPUMA, whereas ST is a coarser geographic shortcut with poorer out-of-state stability."
+      },
+      {
+        "rank": 16,
+        "feature": "ST",
+        "rationale": "Only remaining candidate; it may add marginal regional commute-pattern signal, but it is largely a geography/state shortcut and likely brittle for OOD generalization."
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "step": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[]\n\nCandidate features not yet selected:\n[\n  \"AGEP\",\n  \"SCHL\",\n  \"MAR\",\n  \"SEX\",\n  \"DIS\",\n  \"ESP\",\n  \"MIG\",\n  \"RELP\",\n  \"RAC1P\",\n  \"PUMA\",\n  \"ST\",\n  \"CIT\",\n  \"OCCP\",\n  \"JWTR\",\n  \"POWPUMA\",\n  \"POVPIP\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"JWTR\",\"rationale\":\"Means of transportation to work is directly and semantically tied to commute duration and should retain strong predictive value across states without relying primarily on geographic identifiers.\"}",
+      "input_tokens": 283,
+      "output_tokens": 196,
+      "total_tokens": 479
+    },
+    {
+      "step": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"JWTR\"\n]\n\nCandidate features not yet selected:\n[\n  \"AGEP\",\n  \"SCHL\",\n  \"MAR\",\n  \"SEX\",\n  \"DIS\",\n  \"ESP\",\n  \"MIG\",\n  \"RELP\",\n  \"RAC1P\",\n  \"PUMA\",\n  \"ST\",\n  \"CIT\",\n  \"OCCP\",\n  \"POWPUMA\",\n  \"POVPIP\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"OCCP\",\"rationale\":\"Occupation has stable semantic links to commute length through job location, schedule, and worksite type, adding predictive value beyond travel mode without directly encoding geography.\"}",
+      "input_tokens": 284,
+      "output_tokens": 390,
+      "total_tokens": 674
+    },
+    {
+      "step": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"JWTR\",\n  \"OCCP\"\n]\n\nCandidate features not yet selected:\n[\n  \"AGEP\",\n  \"SCHL\",\n  \"MAR\",\n  \"SEX\",\n  \"DIS\",\n  \"ESP\",\n  \"MIG\",\n  \"RELP\",\n  \"RAC1P\",\n  \"PUMA\",\n  \"ST\",\n  \"CIT\",\n  \"POWPUMA\",\n  \"POVPIP\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"AGEP\",\"rationale\":\"Age has stable semantic links to commuting patterns and work-life stage, adding marginal signal after commute mode and occupation without directly encoding geography or sensitive demographic shortcuts.\"}",
+      "input_tokens": 284,
+      "output_tokens": 563,
+      "total_tokens": 847
+    },
+    {
+      "step": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"JWTR\",\n  \"OCCP\",\n  \"AGEP\"\n]\n\nCandidate features not yet selected:\n[\n  \"SCHL\",\n  \"MAR\",\n  \"SEX\",\n  \"DIS\",\n  \"ESP\",\n  \"MIG\",\n  \"RELP\",\n  \"RAC1P\",\n  \"PUMA\",\n  \"ST\",\n  \"CIT\",\n  \"POWPUMA\",\n  \"POVPIP\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"SCHL\",\"rationale\":\"Education level provides stable socioeconomic and job-structure signal for commute time across states, with less direct geographic leakage than PUMA/ST/POWPUMA.\"}",
+      "input_tokens": 284,
+      "output_tokens": 431,
+      "total_tokens": 715
+    },
+    {
+      "step": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"JWTR\",\n  \"OCCP\",\n  \"AGEP\",\n  \"SCHL\"\n]\n\nCandidate features not yet selected:\n[\n  \"MAR\",\n  \"SEX\",\n  \"DIS\",\n  \"ESP\",\n  \"MIG\",\n  \"RELP\",\n  \"RAC1P\",\n  \"PUMA\",\n  \"ST\",\n  \"CIT\",\n  \"POWPUMA\",\n  \"POVPIP\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"POVPIP\",\"rationale\":\"Socioeconomic status can stably relate to commute length and transportation constraints across states, while avoiding direct geographic or demographic shortcut variables.\"}",
+      "input_tokens": 284,
+      "output_tokens": 477,
+      "total_tokens": 761
+    },
+    {
+      "step": 6,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"JWTR\",\n  \"OCCP\",\n  \"AGEP\",\n  \"SCHL\",\n  \"POVPIP\"\n]\n\nCandidate features not yet selected:\n[\n  \"MAR\",\n  \"SEX\",\n  \"DIS\",\n  \"ESP\",\n  \"MIG\",\n  \"RELP\",\n  \"RAC1P\",\n  \"PUMA\",\n  \"ST\",\n  \"CIT\",\n  \"POWPUMA\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"MAR\",\"rationale\":\"Marital status can stably capture household and residential constraints that affect commute length, while avoiding direct geography codes and stronger demographic shortcut variables.\"}",
+      "input_tokens": 284,
+      "output_tokens": 559,
+      "total_tokens": 843
+    },
+    {
+      "step": 7,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"JWTR\",\n  \"OCCP\",\n  \"AGEP\",\n  \"SCHL\",\n  \"POVPIP\",\n  \"MAR\"\n]\n\nCandidate features not yet selected:\n[\n  \"SEX\",\n  \"DIS\",\n  \"ESP\",\n  \"MIG\",\n  \"RELP\",\n  \"RAC1P\",\n  \"PUMA\",\n  \"ST\",\n  \"CIT\",\n  \"POWPUMA\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"DIS\",\"rationale\":\"Disability status can semantically affect commuting constraints and travel time across states, while avoiding direct geographic encodings or more brittle demographic shortcuts.\"}",
+      "input_tokens": 284,
+      "output_tokens": 559,
+      "total_tokens": 843
+    },
+    {
+      "step": 8,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"JWTR\",\n  \"OCCP\",\n  \"AGEP\",\n  \"SCHL\",\n  \"POVPIP\",\n  \"MAR\",\n  \"DIS\"\n]\n\nCandidate features not yet selected:\n[\n  \"SEX\",\n  \"ESP\",\n  \"MIG\",\n  \"RELP\",\n  \"RAC1P\",\n  \"PUMA\",\n  \"ST\",\n  \"CIT\",\n  \"POWPUMA\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"MIG\",\"rationale\":\"Recent mobility can affect commute stability and length across states, while avoiding direct geography or demographic shortcut features.\"}",
+      "input_tokens": 284,
+      "output_tokens": 470,
+      "total_tokens": 754
+    },
+    {
+      "step": 9,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"JWTR\",\n  \"OCCP\",\n  \"AGEP\",\n  \"SCHL\",\n  \"POVPIP\",\n  \"MAR\",\n  \"DIS\",\n  \"MIG\"\n]\n\nCandidate features not yet selected:\n[\n  \"SEX\",\n  \"ESP\",\n  \"RELP\",\n  \"RAC1P\",\n  \"PUMA\",\n  \"ST\",\n  \"CIT\",\n  \"POWPUMA\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"SEX\",\"rationale\":\"Adds modest, generally portable commute-pattern signal beyond age, occupation, education, and household variables, while avoiding explicit geographic identifiers like ST/PUMA/POWPUMA.\"}",
+      "input_tokens": 284,
+      "output_tokens": 450,
+      "total_tokens": 734
+    },
+    {
+      "step": 10,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"JWTR\",\n  \"OCCP\",\n  \"AGEP\",\n  \"SCHL\",\n  \"POVPIP\",\n  \"MAR\",\n  \"DIS\",\n  \"MIG\",\n  \"SEX\"\n]\n\nCandidate features not yet selected:\n[\n  \"ESP\",\n  \"RELP\",\n  \"RAC1P\",\n  \"PUMA\",\n  \"ST\",\n  \"CIT\",\n  \"POWPUMA\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"RELP\",\"rationale\":\"Household relationship can add stable life-stage and household-role signal for commute patterns beyond age, marital status, and sex, without directly encoding geography or protected demographic shortcuts.\"}",
+      "input_tokens": 284,
+      "output_tokens": 430,
+      "total_tokens": 714
+    },
+    {
+      "step": 11,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"JWTR\",\n  \"OCCP\",\n  \"AGEP\",\n  \"SCHL\",\n  \"POVPIP\",\n  \"MAR\",\n  \"DIS\",\n  \"MIG\",\n  \"SEX\",\n  \"RELP\"\n]\n\nCandidate features not yet selected:\n[\n  \"ESP\",\n  \"RAC1P\",\n  \"PUMA\",\n  \"ST\",\n  \"CIT\",\n  \"POWPUMA\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"CIT\",\"rationale\":\"Citizenship status may add modest, semantically interpretable socioeconomic and labor-market signal while avoiding the explicit geographic leakage of ST/PUMA/POWPUMA and the brittle demographic shortcut risk of RAC1P.\"}",
+      "input_tokens": 284,
+      "output_tokens": 461,
+      "total_tokens": 745
+    },
+    {
+      "step": 12,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"JWTR\",\n  \"OCCP\",\n  \"AGEP\",\n  \"SCHL\",\n  \"POVPIP\",\n  \"MAR\",\n  \"DIS\",\n  \"MIG\",\n  \"SEX\",\n  \"RELP\",\n  \"CIT\"\n]\n\nCandidate features not yet selected:\n[\n  \"ESP\",\n  \"RAC1P\",\n  \"PUMA\",\n  \"ST\",\n  \"POWPUMA\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"RAC1P\",\"rationale\":\"Among remaining non-geographic options, race may add some stable signal through broad commuting and residential-segregation patterns, while ESP is mostly inapplicable and PUMA/ST/POWPUMA are brittle geographic identifiers.\"}",
+      "input_tokens": 284,
+      "output_tokens": 578,
+      "total_tokens": 862
+    },
+    {
+      "step": 13,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"JWTR\",\n  \"OCCP\",\n  \"AGEP\",\n  \"SCHL\",\n  \"POVPIP\",\n  \"MAR\",\n  \"DIS\",\n  \"MIG\",\n  \"SEX\",\n  \"RELP\",\n  \"CIT\",\n  \"RAC1P\"\n]\n\nCandidate features not yet selected:\n[\n  \"ESP\",\n  \"PUMA\",\n  \"ST\",\n  \"POWPUMA\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"ESP\",\"rationale\":\"Non-geographic household employment context with more stable semantic signal than PUMA/ST/POWPUMA, which mostly encode state-specific location artifacts.\"}",
+      "input_tokens": 284,
+      "output_tokens": 292,
+      "total_tokens": 576
+    },
+    {
+      "step": 14,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"JWTR\",\n  \"OCCP\",\n  \"AGEP\",\n  \"SCHL\",\n  \"POVPIP\",\n  \"MAR\",\n  \"DIS\",\n  \"MIG\",\n  \"SEX\",\n  \"RELP\",\n  \"CIT\",\n  \"RAC1P\",\n  \"ESP\"\n]\n\nCandidate features not yet selected:\n[\n  \"PUMA\",\n  \"ST\",\n  \"POWPUMA\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"POWPUMA\",\"rationale\":\"Place-of-work PUMA is the most directly commute-related remaining geographic feature, likely adding more stable signal about workplace location and commute patterns than residence PUMA or state, though it remains geography-sensitive.\"}",
+      "input_tokens": 284,
+      "output_tokens": 573,
+      "total_tokens": 857
+    },
+    {
+      "step": 15,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"JWTR\",\n  \"OCCP\",\n  \"AGEP\",\n  \"SCHL\",\n  \"POVPIP\",\n  \"MAR\",\n  \"DIS\",\n  \"MIG\",\n  \"SEX\",\n  \"RELP\",\n  \"CIT\",\n  \"RAC1P\",\n  \"ESP\",\n  \"POWPUMA\"\n]\n\nCandidate features not yet selected:\n[\n  \"PUMA\",\n  \"ST\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"PUMA\",\"rationale\":\"Residence PUMA can add origin-side commute information relative to POWPUMA, whereas ST is a coarser geographic shortcut with poorer out-of-state stability.\"}",
+      "input_tokens": 284,
+      "output_tokens": 545,
+      "total_tokens": 829
+    },
+    {
+      "step": 16,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"JWTR\",\n  \"OCCP\",\n  \"AGEP\",\n  \"SCHL\",\n  \"POVPIP\",\n  \"MAR\",\n  \"DIS\",\n  \"MIG\",\n  \"SEX\",\n  \"RELP\",\n  \"CIT\",\n  \"RAC1P\",\n  \"ESP\",\n  \"POWPUMA\",\n  \"PUMA\"\n]\n\nCandidate features not yet selected:\n[\n  \"ST\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"ST\",\"rationale\":\"Only remaining candidate; it may add marginal regional commute-pattern signal, but it is largely a geography/state shortcut and likely brittle for OOD generalization.\"}",
+      "input_tokens": 284,
+      "output_tokens": 91,
+      "total_tokens": 375
+    }
+  ]
+}

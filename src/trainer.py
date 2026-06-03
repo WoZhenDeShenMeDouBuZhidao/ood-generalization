@@ -7,6 +7,7 @@ from typing import Dict, List, Tuple
 from torch.utils.data import DataLoader, Dataset
 from src.mlp import MLP
 from src.loss import FeatureGradCELoss
+from src.metrics import binary_counts_from_logits, binary_f1_from_counts
 from tqdm import tqdm
 
 
@@ -27,7 +28,19 @@ class Trainer():
     
     def run_training(
         self, repeat_i
-    ) -> Tuple[int, Dict[str, List[float]], Dict[str, List[float]], List[float], List[float], List[float], Dict[str, List[float]], List[np.ndarray]]:
+    ) -> Tuple[
+        int,
+        Dict[str, List[float]],
+        Dict[str, List[float]],
+        List[float],
+        List[float],
+        List[float],
+        List[float],
+        List[float],
+        List[float],
+        Dict[str, List[float]],
+        List[np.ndarray],
+    ]:
         epoch = 0
         no_improve_epoch = 0
         best_val_acc = 0
@@ -35,11 +48,15 @@ class Trainer():
         train_losses = {}
         val_losses = {}
         train_accs, val_accs = [], []
+        train_f1s, val_f1s = [], []
         train_grads = {}
         for _ in tqdm(range(self.MAX_EPOCHS), desc=f"training repeat {repeat_i + 1}"):
             # training
             self.model.train()
             train_correct = 0
+            train_tp = 0
+            train_fp = 0
+            train_fn = 0
             train_loss_terms_sum = {}
             train_grad_terms_sum = {}
             for Xs, Ys in self.train_loader:
@@ -49,7 +66,11 @@ class Trainer():
                 loss.backward()
                 self.optimizer.step()
 
-                train_correct += (logits.argmax(dim=1) == Ys).sum()
+                batch_correct, batch_tp, batch_fp, batch_fn = binary_counts_from_logits(logits, Ys)
+                train_correct += batch_correct
+                train_tp += batch_tp.item()
+                train_fp += batch_fp.item()
+                train_fn += batch_fn.item()
                 for loss_name, loss_value in loss_terms.items():
                     if loss_name in train_loss_terms_sum:
                         train_loss_terms_sum[loss_name] += loss_value.detach() * Xs.size(0)
@@ -62,17 +83,25 @@ class Trainer():
                         train_grad_terms_sum[grad_name] = grad_value.detach() * Xs.size(0)
 
             train_acc = train_correct.item() / len(self.train)
+            train_f1 = binary_f1_from_counts(train_tp, train_fp, train_fn)
             
 
             # validation
             self.model.eval()
             val_correct = 0
+            val_tp = 0
+            val_fp = 0
+            val_fn = 0
             val_loss_terms_sum = {}
             for Xs, Ys in self.val_loader:
                 Xs, Ys = Xs.to(self.device, non_blocking=True), Ys.to(self.device, non_blocking=True)
                 logits, loss, loss_terms, _ = self.criterion(self.model, Xs, Ys)
 
-                val_correct += (logits.argmax(dim=1) == Ys).sum()
+                batch_correct, batch_tp, batch_fp, batch_fn = binary_counts_from_logits(logits, Ys)
+                val_correct += batch_correct
+                val_tp += batch_tp.item()
+                val_fp += batch_fp.item()
+                val_fn += batch_fn.item()
                 for loss_name, loss_value in loss_terms.items():
                     if loss_name in val_loss_terms_sum:
                         val_loss_terms_sum[loss_name] += loss_value.detach() * Xs.size(0)
@@ -80,6 +109,7 @@ class Trainer():
                         val_loss_terms_sum[loss_name] = loss_value.detach() * Xs.size(0)
 
             val_acc = val_correct.item() / len(self.val)
+            val_f1 = binary_f1_from_counts(val_tp, val_fp, val_fn)
 
 
             # track loss, acc
@@ -101,6 +131,8 @@ class Trainer():
             _append_epoch_terms(train_grads, train_grad_terms_sum, len(self.train))
             train_accs.append(train_acc)
             val_accs.append(val_acc)
+            train_f1s.append(train_f1)
+            val_f1s.append(val_f1)
 
 
             # save best model
@@ -119,6 +151,7 @@ class Trainer():
             self.model.load_state_dict(best_state)
             best_model = self.model
             test_state_accs = []
+            test_state_f1s = []
 
             batch_size = self.test_loaders[0].batch_size if self.test_loaders else 2048
             test_tensors = [
@@ -131,13 +164,21 @@ class Trainer():
 
             for X_test, Y_test in test_tensors:
                 test_correct = torch.zeros((), device=self.device, dtype=torch.long)
+                test_tp = 0
+                test_fp = 0
+                test_fn = 0
                 for start in range(0, X_test.size(0), batch_size):
                     Xs = X_test[start:start + batch_size]
                     Ys = Y_test[start:start + batch_size]
                     logits = best_model(Xs)
-                    test_correct += (logits.argmax(dim=1) == Ys).sum()
+                    batch_correct, batch_tp, batch_fp, batch_fn = binary_counts_from_logits(logits, Ys)
+                    test_correct += batch_correct
+                    test_tp += batch_tp.item()
+                    test_fp += batch_fp.item()
+                    test_fn += batch_fn.item()
 
                 test_state_accs.append(test_correct.item() / Y_test.numel())
+                test_state_f1s.append(binary_f1_from_counts(test_tp, test_fp, test_fn))
 
 
         # shap
@@ -159,4 +200,16 @@ class Trainer():
                     X_explain = shap.sample(test.X.detach().numpy(), min(2000, len(test)))
                     shap_values.append(explainer(X_explain).values)
 
-        return epoch, train_losses, val_losses, train_accs, val_accs, test_state_accs, train_grads, shap_values
+        return (
+            epoch,
+            train_losses,
+            val_losses,
+            train_accs,
+            val_accs,
+            train_f1s,
+            val_f1s,
+            test_state_accs,
+            test_state_f1s,
+            train_grads,
+            shap_values,
+        )

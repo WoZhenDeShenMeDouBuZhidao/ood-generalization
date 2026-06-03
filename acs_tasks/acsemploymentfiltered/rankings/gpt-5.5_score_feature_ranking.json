@@ -1,0 +1,1519 @@
+{
+  "model": "gpt-5.5",
+  "method": "score",
+  "temperature": 0.5,
+  "created_at": "2026-05-10T18:02:33",
+  "token_usage": {
+    "num_calls": 85,
+    "input_tokens": 47910,
+    "output_tokens": 24999,
+    "total_tokens": 72909
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature": "AGEP",
+        "score_mean": 0.842,
+        "score_std": 0.0312409987036266
+      },
+      {
+        "rank": 2,
+        "feature": "SCHL",
+        "score_mean": 0.832,
+        "score_std": 0.029257477676655572
+      },
+      {
+        "rank": 3,
+        "feature": "DIS",
+        "score_mean": 0.732,
+        "score_std": 0.02400000000000002
+      },
+      {
+        "rank": 4,
+        "feature": "DEYE",
+        "score_mean": 0.622,
+        "score_std": 0.05528109984434099
+      },
+      {
+        "rank": 5,
+        "feature": "DREM",
+        "score_mean": 0.618,
+        "score_std": 0.041182520563948
+      },
+      {
+        "rank": 6,
+        "feature": "MAR",
+        "score_mean": 0.524,
+        "score_std": 0.052000000000000025
+      },
+      {
+        "rank": 7,
+        "feature": "DEAR",
+        "score_mean": 0.516,
+        "score_std": 0.054990908339470075
+      },
+      {
+        "rank": 8,
+        "feature": "MIL",
+        "score_mean": 0.426,
+        "score_std": 0.04454211490264018
+      },
+      {
+        "rank": 9,
+        "feature": "RELP",
+        "score_mean": 0.39,
+        "score_std": 0.03949683531626301
+      },
+      {
+        "rank": 10,
+        "feature": "MIG",
+        "score_mean": 0.378,
+        "score_std": 0.0342928563989645
+      },
+      {
+        "rank": 11,
+        "feature": "CIT",
+        "score_mean": 0.31,
+        "score_std": 0.04898979485566355
+      },
+      {
+        "rank": 12,
+        "feature": "GCL",
+        "score_mean": 0.29,
+        "score_std": 0.04898979485566355
+      },
+      {
+        "rank": 13,
+        "feature": "SEX",
+        "score_mean": 0.27,
+        "score_std": 0.03999999999999999
+      },
+      {
+        "rank": 14,
+        "feature": "NATIVITY",
+        "score_mean": 0.23,
+        "score_std": 0.024494897427831775
+      },
+      {
+        "rank": 15,
+        "feature": "ESP",
+        "score_mean": 0.226,
+        "score_std": 0.030066592756745815
+      },
+      {
+        "rank": 16,
+        "feature": "ANC",
+        "score_mean": 0.114,
+        "score_std": 0.023323807579381198
+      },
+      {
+        "rank": 17,
+        "feature": "RAC1P",
+        "score_mean": 0.1,
+        "score_std": 0.012649110640673516
+      }
+    ],
+    "scores": [
+      {
+        "feature": "AGEP",
+        "score_mean": 0.842,
+        "score_std": 0.0312409987036266,
+        "samples": [
+          {
+            "task_summary": "Predict whether an ACS individual is employed based on person-level attributes after task-specific filtering.",
+            "feature": "AGEP",
+            "score": 0.85,
+            "rationale": "Age is strongly and consistently related to employment through schooling, prime working years, and retirement, and this relationship should transfer across states despite being a demographic attribute."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed among the filtered working-age population.",
+            "feature": "AGEP",
+            "score": 0.86,
+            "rationale": "Age is directly and stably related to employment through schooling, prime working years, and retirement patterns across states, though it is a demographic attribute and should be mildly penalized as a potential shortcut."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed in the filtered employment classification task.",
+            "feature": "AGEP",
+            "score": 0.86,
+            "rationale": "Age is directly and stably related to labor-force attachment across states through schooling, prime working years, and retirement, with little geographic encoding, though it is a demographic attribute so it should not receive a maximal score."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed versus not employed under the filtered ACS employment task definition.",
+            "feature": "AGEP",
+            "score": 0.86,
+            "rationale": "Age is directly and stably related to labor-force participation across states through schooling, prime working years, and retirement, with little geographic encoding, though it is a demographic attribute and may capture some shortcut effects."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed versus not employed under the filtered employment task population.",
+            "feature": "AGEP",
+            "score": 0.78,
+            "rationale": "Age has a strong, semantically stable relationship with employment across states due to schooling, prime working age, and retirement patterns, though it is a demographic attribute and can encode some cohort-related shortcuts."
+          }
+        ]
+      },
+      {
+        "feature": "SCHL",
+        "score_mean": 0.832,
+        "score_std": 0.029257477676655572,
+        "samples": [
+          {
+            "task_summary": "Predict whether an adult ACS respondent is employed in the civilian labor force.",
+            "feature": "SCHL",
+            "score": 0.85,
+            "rationale": "Educational attainment is a broadly meaningful and stable predictor of employment across states, with limited direct geographic encoding, though it may partly reflect socioeconomic and demographic inequalities."
+          },
+          {
+            "task_summary": "Predict whether an individual is employed from ACS person-level attributes.",
+            "feature": "SCHL",
+            "score": 0.82,
+            "rationale": "Educational attainment is directly and stably related to employability and labor-market participation across states, though it can partially reflect socioeconomic and demographic disparities."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed versus not employed among the task-defined filtered working-age population.",
+            "feature": "SCHL",
+            "score": 0.78,
+            "rationale": "Educational attainment is a broadly and semantically stable predictor of employment across states, though it can partially reflect socioeconomic and demographic disparities rather than purely causal employability."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed in the filtered employment population.",
+            "feature": "SCHL",
+            "score": 0.85,
+            "rationale": "Educational attainment is a direct, broadly stable predictor of employment prospects across states, though it can partly reflect socioeconomic and demographic disparities."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed versus not employed in the filtered employment population.",
+            "feature": "SCHL",
+            "score": 0.86,
+            "rationale": "Educational attainment is a broadly meaningful and relatively state-stable predictor of employment prospects, with less direct geographic encoding than location-like variables, though it can still reflect socioeconomic and demographic disparities."
+          }
+        ]
+      },
+      {
+        "feature": "MAR",
+        "score_mean": 0.524,
+        "score_std": 0.052000000000000025,
+        "samples": [
+          {
+            "task_summary": "Predict whether an ACS individual is employed under the filtered employment task population.",
+            "feature": "MAR",
+            "score": 0.42,
+            "rationale": "Marital status has some stable association with employment through household structure, age, and caregiving patterns, but it is an indirect demographic shortcut with culturally and state-varying correlations rather than a robust causal predictor."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed within the filtered employment population.",
+            "feature": "MAR",
+            "score": 0.55,
+            "rationale": "Marital status has moderately stable association with employment through household structure and life stage, but it is an indirect demographic shortcut and can reflect cultural or state-specific composition rather than causal employability."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed versus not employed under the filtered employment task population.",
+            "feature": "MAR",
+            "score": 0.55,
+            "rationale": "Marital status has moderately stable association with employment through life stage, household structure, and labor-force attachment, and is not a direct geography artifact, but it is partly a demographic shortcut with effects that can vary by age, sex, and state context."
+          },
+          {
+            "task_summary": "Predict whether an adult ACS respondent is employed, under the filtered ACS employment task definition.",
+            "feature": "MAR",
+            "score": 0.55,
+            "rationale": "Marital status has some stable semantic association with employment through age, household structure, and labor-force attachment, but it is partly a demographic shortcut correlated with gender, age, culture, and socioeconomic patterns, so its prior usefulness should be moderate rather than high."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed from personal demographic and socioeconomic attributes.",
+            "feature": "MAR",
+            "score": 0.55,
+            "rationale": "Marital status has plausible, fairly stable association with employment through household structure and life stage, but it is an indirect demographic shortcut with cultural and state-specific composition effects rather than a direct employment determinant."
+          }
+        ]
+      },
+      {
+        "feature": "SEX",
+        "score_mean": 0.27,
+        "score_std": 0.03999999999999999,
+        "samples": [
+          {
+            "task_summary": "Predict whether an ACS individual is employed under the filtered Folktables employment task definition.",
+            "feature": "SEX",
+            "score": 0.25,
+            "rationale": "SEX may have some stable marginal association with employment due to broad labor-market participation differences, but it is a sensitive demographic shortcut and may encode inequities rather than semantically robust employability."
+          },
+          {
+            "task_summary": "Predict whether an adult ACS respondent is employed from demographic and socioeconomic attributes.",
+            "feature": "SEX",
+            "score": 0.25,
+            "rationale": "Sex can be marginally predictive of employment due to persistent labor-market participation differences, but it is a sensitive demographic shortcut and may capture unfair or state-specific demographic artifacts rather than robust causal signal."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed under the filtered Folktables employment task definition.",
+            "feature": "SEX",
+            "score": 0.25,
+            "rationale": "SEX may have some stable association with employment due to labor-market participation differences, but it is a sensitive demographic shortcut and can reflect social bias rather than robust causal structure, so it should receive low prior importance."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed in the filtered employment population.",
+            "feature": "SEX",
+            "score": 0.25,
+            "rationale": "Sex may have some stable marginal association with employment due to labor-market disparities, but it is a sensitive demographic shortcut and not a causal or policy-robust predictor, so it should receive a low prior."
+          },
+          {
+            "task_summary": "Predict whether an adult ACS respondent is employed under the Folktables ACS employment filtering criteria.",
+            "feature": "SEX",
+            "score": 0.35,
+            "rationale": "Sex may have some stable marginal association with employment due broad labor-market disparities, but it is a sensitive demographic shortcut with ethical concerns and can reflect state-specific social and policy patterns rather than robust causal usefulness."
+          }
+        ]
+      },
+      {
+        "feature": "DIS",
+        "score_mean": 0.732,
+        "score_std": 0.02400000000000002,
+        "samples": [
+          {
+            "task_summary": "Predict whether an ACS respondent is employed in the filtered adult population.",
+            "feature": "DIS",
+            "score": 0.72,
+            "rationale": "Disability status is semantically and fairly stably related to employment across states, but it is a sensitive health/disability attribute and may act as a demographic shortcut, so its prior usefulness should be moderated."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed based on personal demographic and socioeconomic attributes.",
+            "feature": "DIS",
+            "score": 0.72,
+            "rationale": "Disability status is semantically and consistently related to employment capacity and labor-market participation across states, but it is a sensitive health-related attribute and may encode structural discrimination, so it should be useful but not maximally favored."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed in the filtered employment prediction population.",
+            "feature": "DIS",
+            "score": 0.78,
+            "rationale": "Disability status is semantically and stably related to employment capacity and labor-market participation across states, but it is a sensitive health-related attribute so it should not receive maximal prior weight."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed based on personal demographic and socioeconomic attributes.",
+            "feature": "DIS",
+            "score": 0.72,
+            "rationale": "Disability status is directly and stably related to employment capacity and labor-force participation across states, but it is also a sensitive health-related attribute and may partly encode demographic disadvantage, so it should receive a meaningful but not maximal prior."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed in the filtered employment classification task.",
+            "feature": "DIS",
+            "score": 0.72,
+            "rationale": "Disability status is directly and semantically related to employment capacity and labor-force participation, so it should be fairly stable across states, though it is a sensitive health-related attribute and may encode demographic disparities."
+          }
+        ]
+      },
+      {
+        "feature": "ESP",
+        "score_mean": 0.226,
+        "score_std": 0.030066592756745815,
+        "samples": [
+          {
+            "task_summary": "Predict whether an ACS individual is employed using personal and household attributes.",
+            "feature": "ESP",
+            "score": 0.25,
+            "rationale": "Employment status of parents is only applicable to dependent minors and is mostly missing or structural for adults, so it may weakly proxy age, dependency, and household socioeconomic context but is a brittle demographic shortcut with limited stable marginal usefulness across states."
+          },
+          {
+            "task_summary": "Predict whether an ACS respondent is employed versus not employed in the filtered ACS employment task.",
+            "feature": "ESP",
+            "score": 0.25,
+            "rationale": "ESP records parents' employment status and is mostly not applicable for adult respondents, so any signal is largely an age/household-composition shortcut with limited stable semantic relevance to an individual's employment across states."
+          },
+          {
+            "task_summary": "Predict whether an ACS respondent is employed versus not employed among the filtered employment-task population.",
+            "feature": "ESP",
+            "score": 0.2,
+            "rationale": "ESP records parents' employment status and is mostly relevant for own children in households; it may weakly proxy age, household structure, and socioeconomic context, but is not directly or stably predictive of the respondent's own employment across states and can encode brittle demographic artifacts."
+          },
+          {
+            "task_summary": "Predict whether an ACS person is employed in the filtered employment task.",
+            "feature": "ESP",
+            "score": 0.25,
+            "rationale": "ESP describes parents' employment status and is mostly relevant or non-missing for younger dependents, so it may weakly proxy youth, household structure, and socioeconomic context rather than stable individual employability; usefulness is limited and potentially brittle across states."
+          },
+          {
+            "task_summary": "Predict whether an ACS person is employed versus not employed among the filtered working-age population.",
+            "feature": "ESP",
+            "score": 0.18,
+            "rationale": "ESP records parents' employment status and is mostly applicable to minors/own children, so for this employment target it is only indirectly useful, largely missing or category-coded for most adults, and may act as a brittle proxy for age, household structure, and socioeconomic/demographic patterns rather than stable individual employability."
+          }
+        ]
+      },
+      {
+        "feature": "MIG",
+        "score_mean": 0.378,
+        "score_std": 0.0342928563989645,
+        "samples": [
+          {
+            "task_summary": "Predict whether an adult ACS respondent is employed under the Folktables ACS employment filtered task.",
+            "feature": "MIG",
+            "score": 0.35,
+            "rationale": "Migration status can have some stable association with employment through recent moves for work or instability, but it is an indirect proxy that may reflect state-specific mobility patterns and demographic/geographic artifacts rather than robust employability."
+          },
+          {
+            "task_summary": "Predict whether an adult is employed based on ACS person-level attributes.",
+            "feature": "MIG",
+            "score": 0.42,
+            "rationale": "Migration status in the past year can have some stable relationship to employment through job-related moves and labor-market attachment, but it is only indirectly predictive and may reflect local housing, student, or state-specific mobility patterns rather than robust employability."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed versus not employed under the filtered employment task definition.",
+            "feature": "MIG",
+            "score": 0.35,
+            "rationale": "Migration status may have some stable association with employment through job-related moves or residential instability, but it is indirect and can reflect state-specific mobility patterns or geographic artifacts rather than robust employability."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed.",
+            "feature": "MIG",
+            "score": 0.42,
+            "rationale": "Migration status has some plausible stable link to employment through recent job moves or disruption, but it is indirect and can reflect state-specific mobility patterns, nativity, age, and local economic artifacts rather than robust individual employability."
+          },
+          {
+            "task_summary": "Predict whether an adult ACS respondent is employed.",
+            "feature": "MIG",
+            "score": 0.35,
+            "rationale": "Mobility in the past year may have some stable relationship with employment through job-related moves or instability, but it is relatively indirect and can reflect state-specific migration patterns and geographic distribution shifts."
+          }
+        ]
+      },
+      {
+        "feature": "CIT",
+        "score_mean": 0.31,
+        "score_std": 0.04898979485566355,
+        "samples": [
+          {
+            "task_summary": "Predict whether an individual is employed from ACS person-level attributes.",
+            "feature": "CIT",
+            "score": 0.35,
+            "rationale": "Citizenship status can have some stable relationship to employment through work authorization and labor-market access, but it is also a sensitive demographic proxy tied to nativity, ethnicity, and state-specific immigrant composition, so its prior usefulness should be penalized."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed.",
+            "feature": "CIT",
+            "score": 0.35,
+            "rationale": "Citizenship status can have some stable association with labor-market access and employment eligibility, but it also encodes nativity/immigration demographics and state-specific population composition, making it a potentially brittle demographic shortcut."
+          },
+          {
+            "task_summary": "Predict whether an ACS respondent is employed among the filtered working-age population.",
+            "feature": "CIT",
+            "score": 0.25,
+            "rationale": "Citizenship status may have some stable association with employment eligibility and labor-market attachment, but it is a demographic/nativity shortcut strongly tied to immigrant composition and state-specific distributions, so its robust predictive value is limited."
+          },
+          {
+            "task_summary": "Predict whether an individual is employed from ACS person-level attributes in the filtered employment task.",
+            "feature": "CIT",
+            "score": 0.25,
+            "rationale": "Citizenship status may have some stable association with employment eligibility and labor-market access, but it is largely a demographic/immigration-status shortcut with state-specific composition effects, so its robust predictive usefulness should be penalized."
+          },
+          {
+            "task_summary": "Predict whether an ACS adult is employed in the filtered employment task.",
+            "feature": "CIT",
+            "score": 0.35,
+            "rationale": "Citizenship status can be marginally related to employment through work authorization and integration, but it is a demographic/nativity shortcut whose meaning and distributions vary by state and immigrant composition, so its stable causal usefulness is limited."
+          }
+        ]
+      },
+      {
+        "feature": "MIL",
+        "score_mean": 0.426,
+        "score_std": 0.04454211490264018,
+        "samples": [
+          {
+            "task_summary": "Predict whether an ACS individual is employed versus not employed under the Folktables ACSEmploymentFiltered definition.",
+            "feature": "MIL",
+            "score": 0.42,
+            "rationale": "Military service status has some semantic link to labor-force attachment, especially active duty or veteran status, but it can also reflect age, sex, veteran demographics, and state-specific military-base composition, making it only moderately stable for OOD generalization."
+          },
+          {
+            "task_summary": "Predict whether an ACS respondent is employed versus not employed.",
+            "feature": "MIL",
+            "score": 0.46,
+            "rationale": "Military service status has a real but indirect relationship to employment, especially for active-duty respondents and veterans, and should be fairly stable across states; however it also acts as an age/sex/veteran-status shortcut and may reflect state-specific military-base populations, so its OOD usefulness is only moderate."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed in the filtered employment prediction task.",
+            "feature": "MIL",
+            "score": 0.48,
+            "rationale": "Military service status has some stable semantic relationship to employment and labor-force attachment, especially for active duty or veterans, but it is also strongly entangled with age, sex, veteran demographics, and state-specific military-base populations, making it a moderately brittle shortcut for OOD generalization."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed under the Folktables ACSEmploymentFiltered definition.",
+            "feature": "MIL",
+            "score": 0.35,
+            "rationale": "Military service status has some semantic link to labor-force attachment, especially active-duty or veteran categories, but it can encode state-specific military-base presence and demographic shortcuts such as age and sex, making its marginal OOD-stable usefulness only modest."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed in the filtered Folktables employment task.",
+            "feature": "MIL",
+            "score": 0.42,
+            "rationale": "Military service status has some direct semantic relationship to labor-force attachment and employment, but it is also strongly entangled with age, sex, veteran demographics, and state-specific military presence, so its stable marginal usefulness is only moderate."
+          }
+        ]
+      },
+      {
+        "feature": "ANC",
+        "score_mean": 0.114,
+        "score_std": 0.023323807579381198,
+        "samples": [
+          {
+            "task_summary": "Predict whether an ACS individual is employed among the filtered working-age population.",
+            "feature": "ANC",
+            "score": 0.1,
+            "rationale": "ANC is an ancestry recode that mainly acts as a sensitive demographic/national-origin proxy and can encode state-specific population composition, so any employment signal is likely brittle and undesirable for OOD generalization."
+          },
+          {
+            "task_summary": "Predict whether an adult individual is employed using ACS person-level attributes.",
+            "feature": "ANC",
+            "score": 0.08,
+            "rationale": "Ancestry is a sensitive demographic and geography-correlated proxy with little direct semantic link to employment, so any marginal signal is likely from demographic shortcuts or state-specific population composition rather than stable predictive usefulness."
+          },
+          {
+            "task_summary": "Predict whether an adult ACS respondent is employed in the filtered employment task population.",
+            "feature": "ANC",
+            "score": 0.15,
+            "rationale": "ANC encodes ancestry/ethnic background, which may correlate with employment through demographic and geographic composition but is a sensitive demographic shortcut with weak causal relevance and likely brittle variation across states."
+          },
+          {
+            "task_summary": "Predict whether an adult ACS respondent is employed versus not employed.",
+            "feature": "ANC",
+            "score": 0.12,
+            "rationale": "ANC is an ancestry/ethnicity-related variable that may correlate with employment through demographic and regional composition, but it is a sensitive shortcut and likely state-specific rather than a stable semantic predictor."
+          },
+          {
+            "task_summary": "Predict whether an adult ACS respondent is employed in the filtered employment-status task.",
+            "feature": "ANC",
+            "score": 0.12,
+            "rationale": "Ancestry is a demographic proxy that can encode ethnicity, immigration history, and state-specific population composition; any employment correlation is likely shortcut-like and brittle rather than semantically stable."
+          }
+        ]
+      },
+      {
+        "feature": "NATIVITY",
+        "score_mean": 0.23,
+        "score_std": 0.024494897427831775,
+        "samples": [
+          {
+            "task_summary": "Predict whether an individual is employed based on ACS person-level attributes.",
+            "feature": "NATIVITY",
+            "score": 0.25,
+            "rationale": "Nativity may have some broad association with employment through immigration status and labor-market access, but it is a demographic shortcut with relationships that vary substantially by state, industry mix, and local immigrant populations, making it relatively brittle for OOD generalization."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed in the filtered Folktables employment task.",
+            "feature": "NATIVITY",
+            "score": 0.25,
+            "rationale": "Nativity may have some marginal association with employment, but it is a sensitive demographic proxy whose effect can vary substantially by state, immigrant composition, policy context, and local labor markets, making it a brittle shortcut for OOD generalization."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed in the filtered working-age population.",
+            "feature": "NATIVITY",
+            "score": 0.2,
+            "rationale": "Nativity may have some association with employment, but it is a demographic shortcut tied to immigration background and state-specific population composition, so its stable causal usefulness across states is limited."
+          },
+          {
+            "task_summary": "Predict whether an adult ACS respondent is employed versus not employed in the filtered employment population.",
+            "feature": "NATIVITY",
+            "score": 0.25,
+            "rationale": "Nativity may have some marginal association with employment through immigration-related labor-market patterns, but it is a demographic shortcut whose meaning and correlations vary substantially by state and immigrant composition, making it brittle for OOD generalization."
+          },
+          {
+            "task_summary": "Predict whether an adult individual is employed in the ACS employment task.",
+            "feature": "NATIVITY",
+            "score": 0.2,
+            "rationale": "Nativity may correlate with employment through immigration-related labor-market patterns, but it is a demographic shortcut with strong state-specific composition effects and limited causal or semantically stable predictive value across states."
+          }
+        ]
+      },
+      {
+        "feature": "RELP",
+        "score_mean": 0.39,
+        "score_std": 0.03949683531626301,
+        "samples": [
+          {
+            "task_summary": "Predict whether an ACS individual is employed under the filtered employment task definition.",
+            "feature": "RELP",
+            "score": 0.35,
+            "rationale": "Household relationship can reflect life stage and household role that are somewhat predictive of employment, but it is an indirect demographic shortcut correlated with age, marital status, family structure, and cultural/state-specific composition rather than a robust causal employment factor."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed from personal and household attributes.",
+            "feature": "RELP",
+            "score": 0.42,
+            "rationale": "Relationship to household reference person can stably reflect life stage and household role linked to employment, but it is an indirect demographic shortcut with possible family-structure and institutional-status artifacts rather than a causal labor-market predictor."
+          },
+          {
+            "task_summary": "Predict whether an ACS person is employed among the filtered working-age population.",
+            "feature": "RELP",
+            "score": 0.35,
+            "rationale": "Relationship to household head has some stable signal through household role, dependency, and life stage, but it is mostly an indirect demographic/household-structure proxy and may encode brittle family-composition differences across states."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed in the filtered Folktables employment task.",
+            "feature": "RELP",
+            "score": 0.45,
+            "rationale": "Relationship to household reference person can stably reflect life stage and household role associated with employment, but it is an indirect demographic shortcut and may capture family-structure artifacts rather than causal work capacity."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed among the filtered working-age population.",
+            "feature": "RELP",
+            "score": 0.38,
+            "rationale": "Household relationship can be moderately predictive of employment through stable life-stage and family-role patterns, but much of its signal is an indirect demographic shortcut and may duplicate age, marital, and household-composition effects rather than robust causal employability."
+          }
+        ]
+      },
+      {
+        "feature": "DEAR",
+        "score_mean": 0.516,
+        "score_std": 0.054990908339470075,
+        "samples": [
+          {
+            "task_summary": "Predict whether an adult ACS respondent is employed in the filtered employment classification task.",
+            "feature": "DEAR",
+            "score": 0.45,
+            "rationale": "Hearing difficulty is plausibly and fairly stably related to employment access across states, but it is a disability-related attribute and may act as a sensitive shortcut or proxy for age and health rather than broadly causal job-market information."
+          },
+          {
+            "task_summary": "Predict whether an adult is employed in the ACS employment filtered population.",
+            "feature": "DEAR",
+            "score": 0.55,
+            "rationale": "Hearing difficulty is plausibly and fairly consistently related to employment outcomes across states, but it is a disability indicator and may act as a sensitive demographic shortcut rather than a robust causal employment feature."
+          },
+          {
+            "task_summary": "Predict whether an adult is employed using ACS person-level attributes.",
+            "feature": "DEAR",
+            "score": 0.45,
+            "rationale": "DEAR indicates deafness or serious hearing difficulty, which can be stably related to employment through disability and accessibility constraints, but it is a sensitive health/disability attribute and may act as a demographic shortcut rather than a robust causal employment signal."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed based on personal and household attributes.",
+            "feature": "DEAR",
+            "score": 0.58,
+            "rationale": "Hearing difficulty is plausibly and fairly consistently related to employment barriers across states, but it is a disability-related attribute and may act as a sensitive shortcut rather than a broadly causal or policy-stable predictor."
+          },
+          {
+            "task_summary": "Predict whether an adult is employed from ACS person-level attributes.",
+            "feature": "DEAR",
+            "score": 0.55,
+            "rationale": "Hearing difficulty is plausibly and consistently related to employment capacity and workplace access across states, but it is a disability indicator and thus a sensitive attribute that may encode protected-group disparities rather than purely generalizable skill or labor-market information."
+          }
+        ]
+      },
+      {
+        "feature": "DEYE",
+        "score_mean": 0.622,
+        "score_std": 0.05528109984434099,
+        "samples": [
+          {
+            "task_summary": "Predict whether an ACS individual is employed versus not employed among the filtered working-age population.",
+            "feature": "DEYE",
+            "score": 0.55,
+            "rationale": "Vision difficulty is semantically related to employment capacity and should transfer across states, but it is a disability-related sensitive attribute with relatively low prevalence and may act as a demographic shortcut, so its prior usefulness is only moderate."
+          },
+          {
+            "task_summary": "Predict whether an adult is employed from ACS person-level attributes.",
+            "feature": "DEYE",
+            "score": 0.62,
+            "rationale": "Vision difficulty is plausibly and stably related to employment capacity and accommodations across states, but it is a disability indicator with fairness sensitivity and low prevalence, so it should not receive maximal prior weight."
+          },
+          {
+            "task_summary": "Predict whether an adult ACS respondent is employed versus not employed under the filtered ACS employment task definition.",
+            "feature": "DEYE",
+            "score": 0.72,
+            "rationale": "Vision difficulty is a disability-related variable with a plausible and fairly stable relationship to employment across states, though it is low-prevalence and partly sensitive, so it should not receive maximal prior weight."
+          },
+          {
+            "task_summary": "Predict whether an ACS respondent is employed in the filtered Folktables employment task.",
+            "feature": "DEYE",
+            "score": 0.6,
+            "rationale": "Vision difficulty can be semantically related to employment capacity and accessibility barriers in a way that should generalize across states, but it is a disability-related sensitive attribute and likely has limited marginal signal due to low prevalence and overlap with broader disability variables."
+          },
+          {
+            "task_summary": "Predict whether an adult is employed in the ACS employment filtered population.",
+            "feature": "DEYE",
+            "score": 0.62,
+            "rationale": "Vision difficulty is a direct functional limitation that can affect employment prospects and should be fairly stable across states, but it is a disability-related sensitive attribute with low prevalence and potential equity concerns."
+          }
+        ]
+      },
+      {
+        "feature": "DREM",
+        "score_mean": 0.618,
+        "score_std": 0.041182520563948,
+        "samples": [
+          {
+            "task_summary": "Predict whether an ACS individual is employed versus not employed in the filtered employment task population.",
+            "feature": "DREM",
+            "score": 0.68,
+            "rationale": "DREM indicates cognitive difficulty, which is semantically and fairly stably related to employment capacity across states, but it is a disability-related sensitive attribute and may encode inequitable demographic shortcuts."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed in the filtered employment classification task.",
+            "feature": "DREM",
+            "score": 0.55,
+            "rationale": "Cognitive difficulty is likely stably related to employment capacity across states, but it is a disability-related sensitive attribute and may act as a demographic shortcut, so its prior usefulness should be penalized."
+          },
+          {
+            "task_summary": "Predict whether an adult ACS respondent is employed based on personal and household attributes.",
+            "feature": "DREM",
+            "score": 0.62,
+            "rationale": "DREM indicates cognitive difficulty, which can be stably related to employment outcomes across states, but it is a sensitive disability-related attribute and may act as a demographic shortcut, so its prior usefulness should be moderated."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed versus not employed in the filtered employment population.",
+            "feature": "DREM",
+            "score": 0.62,
+            "rationale": "Cognitive difficulty is semantically related to employment capacity and barriers and should be fairly stable across states, but it is disability-related sensitive information and may act as a demographic shortcut."
+          },
+          {
+            "task_summary": "Predict whether an ACS respondent is employed in the filtered employment task population.",
+            "feature": "DREM",
+            "score": 0.62,
+            "rationale": "DREM indicates cognitive difficulty, which is plausibly and stably related to employment capacity across states, but it is a disability-related sensitive attribute with low prevalence and potential shortcut/fairness concerns."
+          }
+        ]
+      },
+      {
+        "feature": "RAC1P",
+        "score_mean": 0.1,
+        "score_std": 0.012649110640673516,
+        "samples": [
+          {
+            "task_summary": "Predict whether an ACS individual is employed versus not employed within the filtered employment population.",
+            "feature": "RAC1P",
+            "score": 0.1,
+            "rationale": "Race may correlate with employment through discrimination, socioeconomic history, and state composition, but it is a sensitive demographic shortcut with unstable, geography-dependent associations rather than a robust semantic predictor."
+          },
+          {
+            "task_summary": "Predict whether an adult ACS respondent is employed in the filtered employment classification task.",
+            "feature": "RAC1P",
+            "score": 0.08,
+            "rationale": "RAC1P encodes race, a sensitive demographic attribute whose association with employment is mostly a demographic shortcut reflecting structural and state-specific disparities rather than a stable semantic predictor."
+          },
+          {
+            "task_summary": "Predict whether an adult ACS respondent is employed from personal demographic and socioeconomic attributes.",
+            "feature": "RAC1P",
+            "score": 0.1,
+            "rationale": "Race may correlate with employment through social disparities, but it is a sensitive demographic shortcut with relationships that can vary across states and populations, so it has low stable semantic usefulness for OOD generalization."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed versus not employed among the filtered working-age population.",
+            "feature": "RAC1P",
+            "score": 0.12,
+            "rationale": "RAC1P encodes race, a sensitive demographic attribute that may reflect discrimination and state-specific population composition rather than stable causal employability, so its marginal predictive value is likely brittle and should be strongly penalized."
+          },
+          {
+            "task_summary": "Predict whether an individual is employed from ACS person-level attributes.",
+            "feature": "RAC1P",
+            "score": 0.1,
+            "rationale": "Race may correlate with employment through societal disparities, but it is a sensitive demographic shortcut with relationships that vary across states and offers limited stable semantic predictive value."
+          }
+        ]
+      },
+      {
+        "feature": "GCL",
+        "score_mean": 0.29,
+        "score_std": 0.04898979485566355,
+        "samples": [
+          {
+            "task_summary": "Predict whether an ACS individual is employed in the filtered employment population.",
+            "feature": "GCL",
+            "score": 0.35,
+            "rationale": "GCL captures grandparent co-residence/caregiving status, which may be modestly and fairly stably related to employment through age and household responsibilities, but it is sparse and partly a demographic/household-structure proxy rather than a direct labor-market predictor."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed versus not employed under the filtered employment task definition.",
+            "feature": "GCL",
+            "score": 0.35,
+            "rationale": "Grandparent living-with-grandchildren status may modestly reflect caregiving burdens and age/household structure related to employment, but it is sparse/conditional and partly a demographic-family shortcut rather than a broadly stable labor-market predictor."
+          },
+          {
+            "task_summary": "Predict whether an ACS person is employed versus not employed among the filtered employment-task population.",
+            "feature": "GCL",
+            "score": 0.25,
+            "rationale": "Grandparents living with grandchildren may weakly reflect age and caregiving constraints related to employment, but it is an indirect household-structure proxy with demographic and cultural variation across states, so its stable marginal usefulness is limited."
+          },
+          {
+            "task_summary": "Predict whether an ACS individual is employed versus not employed.",
+            "feature": "GCL",
+            "score": 0.25,
+            "rationale": "Grandparent living-with-grandchildren status may weakly reflect caregiving burden, age, and household structure relevant to employment, but it is sparse, demographic/family-status based, and likely much less stable than direct human-capital or disability variables."
+          },
+          {
+            "task_summary": "Predict whether an ACS person is employed in the filtered employment population.",
+            "feature": "GCL",
+            "score": 0.25,
+            "rationale": "Grandparent living-with-grandchildren status may weakly reflect caregiving and age-related labor-force constraints, but it is an indirect household-composition shortcut with state- and demographic-specific variation, so its stable marginal usefulness is limited."
+          }
+        ]
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "feature": "AGEP",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `AGEP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"AGEP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed based on person-level attributes after task-specific filtering.\",\"feature\":\"AGEP\",\"score\":0.85,\"rationale\":\"Age is strongly and consistently related to employment through schooling, prime working years, and retirement, and this relationship should transfer across states despite being a demographic attribute.\"}",
+      "input_tokens": 564,
+      "output_tokens": 208,
+      "total_tokens": 772
+    },
+    {
+      "feature": "AGEP",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `AGEP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"AGEP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed among the filtered working-age population.\",\n  \"feature\": \"AGEP\",\n  \"score\": 0.86,\n  \"rationale\": \"Age is directly and stably related to employment through schooling, prime working years, and retirement patterns across states, though it is a demographic attribute and should be mildly penalized as a potential shortcut.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 239,
+      "total_tokens": 803
+    },
+    {
+      "feature": "AGEP",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `AGEP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"AGEP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed in the filtered employment classification task.\",\n  \"feature\": \"AGEP\",\n  \"score\": 0.86,\n  \"rationale\": \"Age is directly and stably related to labor-force attachment across states through schooling, prime working years, and retirement, with little geographic encoding, though it is a demographic attribute so it should not receive a maximal score.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 218,
+      "total_tokens": 782
+    },
+    {
+      "feature": "AGEP",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `AGEP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"AGEP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed versus not employed under the filtered ACS employment task definition.\",\"feature\":\"AGEP\",\"score\":0.86,\"rationale\":\"Age is directly and stably related to labor-force participation across states through schooling, prime working years, and retirement, with little geographic encoding, though it is a demographic attribute and may capture some shortcut effects.\"}",
+      "input_tokens": 564,
+      "output_tokens": 228,
+      "total_tokens": 792
+    },
+    {
+      "feature": "AGEP",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `AGEP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"AGEP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed versus not employed under the filtered employment task population.\",\"feature\":\"AGEP\",\"score\":0.78,\"rationale\":\"Age has a strong, semantically stable relationship with employment across states due to schooling, prime working age, and retirement patterns, though it is a demographic attribute and can encode some cohort-related shortcuts.\"}",
+      "input_tokens": 564,
+      "output_tokens": 323,
+      "total_tokens": 887
+    },
+    {
+      "feature": "SCHL",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SCHL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SCHL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult ACS respondent is employed in the civilian labor force.\",\n  \"feature\": \"SCHL\",\n  \"score\": 0.85,\n  \"rationale\": \"Educational attainment is a broadly meaningful and stable predictor of employment across states, with limited direct geographic encoding, though it may partly reflect socioeconomic and demographic inequalities.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 155,
+      "total_tokens": 719
+    },
+    {
+      "feature": "SCHL",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SCHL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SCHL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual is employed from ACS person-level attributes.\",\n  \"feature\": \"SCHL\",\n  \"score\": 0.82,\n  \"rationale\": \"Educational attainment is directly and stably related to employability and labor-market participation across states, though it can partially reflect socioeconomic and demographic disparities.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 196,
+      "total_tokens": 760
+    },
+    {
+      "feature": "SCHL",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SCHL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SCHL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed versus not employed among the task-defined filtered working-age population.\",\"feature\":\"SCHL\",\"score\":0.78,\"rationale\":\"Educational attainment is a broadly and semantically stable predictor of employment across states, though it can partially reflect socioeconomic and demographic disparities rather than purely causal employability.\"}",
+      "input_tokens": 564,
+      "output_tokens": 209,
+      "total_tokens": 773
+    },
+    {
+      "feature": "SCHL",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SCHL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SCHL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed in the filtered employment population.\",\"feature\":\"SCHL\",\"score\":0.85,\"rationale\":\"Educational attainment is a direct, broadly stable predictor of employment prospects across states, though it can partly reflect socioeconomic and demographic disparities.\"}",
+      "input_tokens": 564,
+      "output_tokens": 244,
+      "total_tokens": 808
+    },
+    {
+      "feature": "SCHL",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SCHL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SCHL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed versus not employed in the filtered employment population.\",\"feature\":\"SCHL\",\"score\":0.86,\"rationale\":\"Educational attainment is a broadly meaningful and relatively state-stable predictor of employment prospects, with less direct geographic encoding than location-like variables, though it can still reflect socioeconomic and demographic disparities.\"}",
+      "input_tokens": 564,
+      "output_tokens": 196,
+      "total_tokens": 760
+    },
+    {
+      "feature": "MAR",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MAR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MAR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed under the filtered employment task population.\",\"feature\":\"MAR\",\"score\":0.42,\"rationale\":\"Marital status has some stable association with employment through household structure, age, and caregiving patterns, but it is an indirect demographic shortcut with culturally and state-varying correlations rather than a robust causal predictor.\"}",
+      "input_tokens": 562,
+      "output_tokens": 226,
+      "total_tokens": 788
+    },
+    {
+      "feature": "MAR",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MAR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MAR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed within the filtered employment population.\",\n  \"feature\": \"MAR\",\n  \"score\": 0.55,\n  \"rationale\": \"Marital status has moderately stable association with employment through household structure and life stage, but it is an indirect demographic shortcut and can reflect cultural or state-specific composition rather than causal employability.\"\n}",
+      "input_tokens": 562,
+      "output_tokens": 243,
+      "total_tokens": 805
+    },
+    {
+      "feature": "MAR",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MAR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MAR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed versus not employed under the filtered employment task population.\",\"feature\":\"MAR\",\"score\":0.55,\"rationale\":\"Marital status has moderately stable association with employment through life stage, household structure, and labor-force attachment, and is not a direct geography artifact, but it is partly a demographic shortcut with effects that can vary by age, sex, and state context.\"}",
+      "input_tokens": 562,
+      "output_tokens": 240,
+      "total_tokens": 802
+    },
+    {
+      "feature": "MAR",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MAR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MAR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an adult ACS respondent is employed, under the filtered ACS employment task definition.\",\"feature\":\"MAR\",\"score\":0.55,\"rationale\":\"Marital status has some stable semantic association with employment through age, household structure, and labor-force attachment, but it is partly a demographic shortcut correlated with gender, age, culture, and socioeconomic patterns, so its prior usefulness should be moderate rather than high.\"}",
+      "input_tokens": 562,
+      "output_tokens": 185,
+      "total_tokens": 747
+    },
+    {
+      "feature": "MAR",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MAR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MAR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed from personal demographic and socioeconomic attributes.\",\"feature\":\"MAR\",\"score\":0.55,\"rationale\":\"Marital status has plausible, fairly stable association with employment through household structure and life stage, but it is an indirect demographic shortcut with cultural and state-specific composition effects rather than a direct employment determinant.\"}",
+      "input_tokens": 562,
+      "output_tokens": 223,
+      "total_tokens": 785
+    },
+    {
+      "feature": "SEX",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SEX` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SEX\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed under the filtered Folktables employment task definition.\",\n  \"feature\": \"SEX\",\n  \"score\": 0.25,\n  \"rationale\": \"SEX may have some stable marginal association with employment due to broad labor-market participation differences, but it is a sensitive demographic shortcut and may encode inequities rather than semantically robust employability.\"\n}",
+      "input_tokens": 562,
+      "output_tokens": 261,
+      "total_tokens": 823
+    },
+    {
+      "feature": "SEX",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SEX` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SEX\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult ACS respondent is employed from demographic and socioeconomic attributes.\",\n  \"feature\": \"SEX\",\n  \"score\": 0.25,\n  \"rationale\": \"Sex can be marginally predictive of employment due to persistent labor-market participation differences, but it is a sensitive demographic shortcut and may capture unfair or state-specific demographic artifacts rather than robust causal signal.\"\n}",
+      "input_tokens": 562,
+      "output_tokens": 210,
+      "total_tokens": 772
+    },
+    {
+      "feature": "SEX",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SEX` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SEX\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed under the filtered Folktables employment task definition.\",\n  \"feature\": \"SEX\",\n  \"score\": 0.25,\n  \"rationale\": \"SEX may have some stable association with employment due to labor-market participation differences, but it is a sensitive demographic shortcut and can reflect social bias rather than robust causal structure, so it should receive low prior importance.\"\n}",
+      "input_tokens": 562,
+      "output_tokens": 226,
+      "total_tokens": 788
+    },
+    {
+      "feature": "SEX",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SEX` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SEX\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed in the filtered employment population.\",\n  \"feature\": \"SEX\",\n  \"score\": 0.25,\n  \"rationale\": \"Sex may have some stable marginal association with employment due to labor-market disparities, but it is a sensitive demographic shortcut and not a causal or policy-robust predictor, so it should receive a low prior.\"\n}",
+      "input_tokens": 562,
+      "output_tokens": 227,
+      "total_tokens": 789
+    },
+    {
+      "feature": "SEX",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SEX` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SEX\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult ACS respondent is employed under the Folktables ACS employment filtering criteria.\",\n  \"feature\": \"SEX\",\n  \"score\": 0.35,\n  \"rationale\": \"Sex may have some stable marginal association with employment due broad labor-market disparities, but it is a sensitive demographic shortcut with ethical concerns and can reflect state-specific social and policy patterns rather than robust causal usefulness.\"\n}",
+      "input_tokens": 562,
+      "output_tokens": 235,
+      "total_tokens": 797
+    },
+    {
+      "feature": "DIS",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DIS` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DIS\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS respondent is employed in the filtered adult population.\",\"feature\":\"DIS\",\"score\":0.72,\"rationale\":\"Disability status is semantically and fairly stably related to employment across states, but it is a sensitive health/disability attribute and may act as a demographic shortcut, so its prior usefulness should be moderated.\"}",
+      "input_tokens": 562,
+      "output_tokens": 494,
+      "total_tokens": 1056
+    },
+    {
+      "feature": "DIS",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DIS` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DIS\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed based on personal demographic and socioeconomic attributes.\",\"feature\":\"DIS\",\"score\":0.72,\"rationale\":\"Disability status is semantically and consistently related to employment capacity and labor-market participation across states, but it is a sensitive health-related attribute and may encode structural discrimination, so it should be useful but not maximally favored.\"}",
+      "input_tokens": 562,
+      "output_tokens": 211,
+      "total_tokens": 773
+    },
+    {
+      "feature": "DIS",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DIS` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DIS\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed in the filtered employment prediction population.\",\n  \"feature\": \"DIS\",\n  \"score\": 0.78,\n  \"rationale\": \"Disability status is semantically and stably related to employment capacity and labor-market participation across states, but it is a sensitive health-related attribute so it should not receive maximal prior weight.\"\n}",
+      "input_tokens": 562,
+      "output_tokens": 302,
+      "total_tokens": 864
+    },
+    {
+      "feature": "DIS",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DIS` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DIS\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed based on personal demographic and socioeconomic attributes.\",\"feature\":\"DIS\",\"score\":0.72,\"rationale\":\"Disability status is directly and stably related to employment capacity and labor-force participation across states, but it is also a sensitive health-related attribute and may partly encode demographic disadvantage, so it should receive a meaningful but not maximal prior.\"}",
+      "input_tokens": 562,
+      "output_tokens": 230,
+      "total_tokens": 792
+    },
+    {
+      "feature": "DIS",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DIS` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DIS\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed in the filtered employment classification task.\",\"feature\":\"DIS\",\"score\":0.72,\"rationale\":\"Disability status is directly and semantically related to employment capacity and labor-force participation, so it should be fairly stable across states, though it is a sensitive health-related attribute and may encode demographic disparities.\"}",
+      "input_tokens": 562,
+      "output_tokens": 298,
+      "total_tokens": 860
+    },
+    {
+      "feature": "ESP",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ESP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ESP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed using personal and household attributes.\",\n  \"feature\": \"ESP\",\n  \"score\": 0.25,\n  \"rationale\": \"Employment status of parents is only applicable to dependent minors and is mostly missing or structural for adults, so it may weakly proxy age, dependency, and household socioeconomic context but is a brittle demographic shortcut with limited stable marginal usefulness across states.\"\n}",
+      "input_tokens": 562,
+      "output_tokens": 443,
+      "total_tokens": 1005
+    },
+    {
+      "feature": "ESP",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ESP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ESP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS respondent is employed versus not employed in the filtered ACS employment task.\",\"feature\":\"ESP\",\"score\":0.25,\"rationale\":\"ESP records parents' employment status and is mostly not applicable for adult respondents, so any signal is largely an age/household-composition shortcut with limited stable semantic relevance to an individual's employment across states.\"}",
+      "input_tokens": 562,
+      "output_tokens": 478,
+      "total_tokens": 1040
+    },
+    {
+      "feature": "ESP",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ESP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ESP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS respondent is employed versus not employed among the filtered employment-task population.\",\"feature\":\"ESP\",\"score\":0.2,\"rationale\":\"ESP records parents' employment status and is mostly relevant for own children in households; it may weakly proxy age, household structure, and socioeconomic context, but is not directly or stably predictive of the respondent's own employment across states and can encode brittle demographic artifacts.\"}",
+      "input_tokens": 562,
+      "output_tokens": 334,
+      "total_tokens": 896
+    },
+    {
+      "feature": "ESP",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ESP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ESP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS person is employed in the filtered employment task.\",\"feature\":\"ESP\",\"score\":0.25,\"rationale\":\"ESP describes parents' employment status and is mostly relevant or non-missing for younger dependents, so it may weakly proxy youth, household structure, and socioeconomic context rather than stable individual employability; usefulness is limited and potentially brittle across states.\"}",
+      "input_tokens": 562,
+      "output_tokens": 580,
+      "total_tokens": 1142
+    },
+    {
+      "feature": "ESP",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ESP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ESP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS person is employed versus not employed among the filtered working-age population.\",\"feature\":\"ESP\",\"score\":0.18,\"rationale\":\"ESP records parents' employment status and is mostly applicable to minors/own children, so for this employment target it is only indirectly useful, largely missing or category-coded for most adults, and may act as a brittle proxy for age, household structure, and socioeconomic/demographic patterns rather than stable individual employability.\"}",
+      "input_tokens": 562,
+      "output_tokens": 619,
+      "total_tokens": 1181
+    },
+    {
+      "feature": "MIG",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MIG` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MIG\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult ACS respondent is employed under the Folktables ACS employment filtered task.\",\n  \"feature\": \"MIG\",\n  \"score\": 0.35,\n  \"rationale\": \"Migration status can have some stable association with employment through recent moves for work or instability, but it is an indirect proxy that may reflect state-specific mobility patterns and demographic/geographic artifacts rather than robust employability.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 276,
+      "total_tokens": 840
+    },
+    {
+      "feature": "MIG",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MIG` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MIG\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult is employed based on ACS person-level attributes.\",\n  \"feature\": \"MIG\",\n  \"score\": 0.42,\n  \"rationale\": \"Migration status in the past year can have some stable relationship to employment through job-related moves and labor-market attachment, but it is only indirectly predictive and may reflect local housing, student, or state-specific mobility patterns rather than robust employability.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 288,
+      "total_tokens": 852
+    },
+    {
+      "feature": "MIG",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MIG` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MIG\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed versus not employed under the filtered employment task definition.\",\"feature\":\"MIG\",\"score\":0.35,\"rationale\":\"Migration status may have some stable association with employment through job-related moves or residential instability, but it is indirect and can reflect state-specific mobility patterns or geographic artifacts rather than robust employability.\"}",
+      "input_tokens": 564,
+      "output_tokens": 237,
+      "total_tokens": 801
+    },
+    {
+      "feature": "MIG",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MIG` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MIG\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed.\",\n  \"feature\": \"MIG\",\n  \"score\": 0.42,\n  \"rationale\": \"Migration status has some plausible stable link to employment through recent job moves or disruption, but it is indirect and can reflect state-specific mobility patterns, nativity, age, and local economic artifacts rather than robust individual employability.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 323,
+      "total_tokens": 887
+    },
+    {
+      "feature": "MIG",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MIG` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MIG\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult ACS respondent is employed.\",\n  \"feature\": \"MIG\",\n  \"score\": 0.35,\n  \"rationale\": \"Mobility in the past year may have some stable relationship with employment through job-related moves or instability, but it is relatively indirect and can reflect state-specific migration patterns and geographic distribution shifts.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 262,
+      "total_tokens": 826
+    },
+    {
+      "feature": "CIT",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `CIT` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"CIT\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual is employed from ACS person-level attributes.\",\n  \"feature\": \"CIT\",\n  \"score\": 0.35,\n  \"rationale\": \"Citizenship status can have some stable relationship to employment through work authorization and labor-market access, but it is also a sensitive demographic proxy tied to nativity, ethnicity, and state-specific immigrant composition, so its prior usefulness should be penalized.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 266,
+      "total_tokens": 830
+    },
+    {
+      "feature": "CIT",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `CIT` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"CIT\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed.\",\n  \"feature\": \"CIT\",\n  \"score\": 0.35,\n  \"rationale\": \"Citizenship status can have some stable association with labor-market access and employment eligibility, but it also encodes nativity/immigration demographics and state-specific population composition, making it a potentially brittle demographic shortcut.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 333,
+      "total_tokens": 897
+    },
+    {
+      "feature": "CIT",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `CIT` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"CIT\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS respondent is employed among the filtered working-age population.\",\"feature\":\"CIT\",\"score\":0.25,\"rationale\":\"Citizenship status may have some stable association with employment eligibility and labor-market attachment, but it is a demographic/nativity shortcut strongly tied to immigrant composition and state-specific distributions, so its robust predictive value is limited.\"}",
+      "input_tokens": 564,
+      "output_tokens": 280,
+      "total_tokens": 844
+    },
+    {
+      "feature": "CIT",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `CIT` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"CIT\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an individual is employed from ACS person-level attributes in the filtered employment task.\",\"feature\":\"CIT\",\"score\":0.25,\"rationale\":\"Citizenship status may have some stable association with employment eligibility and labor-market access, but it is largely a demographic/immigration-status shortcut with state-specific composition effects, so its robust predictive usefulness should be penalized.\"}",
+      "input_tokens": 564,
+      "output_tokens": 264,
+      "total_tokens": 828
+    },
+    {
+      "feature": "CIT",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `CIT` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"CIT\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS adult is employed in the filtered employment task.\",\n  \"feature\": \"CIT\",\n  \"score\": 0.35,\n  \"rationale\": \"Citizenship status can be marginally related to employment through work authorization and integration, but it is a demographic/nativity shortcut whose meaning and distributions vary by state and immigrant composition, so its stable causal usefulness is limited.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 237,
+      "total_tokens": 801
+    },
+    {
+      "feature": "MIL",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MIL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MIL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed versus not employed under the Folktables ACSEmploymentFiltered definition.\",\"feature\":\"MIL\",\"score\":0.42,\"rationale\":\"Military service status has some semantic link to labor-force attachment, especially active duty or veteran status, but it can also reflect age, sex, veteran demographics, and state-specific military-base composition, making it only moderately stable for OOD generalization.\"}",
+      "input_tokens": 562,
+      "output_tokens": 583,
+      "total_tokens": 1145
+    },
+    {
+      "feature": "MIL",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MIL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MIL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS respondent is employed versus not employed.\",\"feature\":\"MIL\",\"score\":0.46,\"rationale\":\"Military service status has a real but indirect relationship to employment, especially for active-duty respondents and veterans, and should be fairly stable across states; however it also acts as an age/sex/veteran-status shortcut and may reflect state-specific military-base populations, so its OOD usefulness is only moderate.\"}",
+      "input_tokens": 562,
+      "output_tokens": 595,
+      "total_tokens": 1157
+    },
+    {
+      "feature": "MIL",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MIL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MIL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed in the filtered employment prediction task.\",\n  \"feature\": \"MIL\",\n  \"score\": 0.48,\n  \"rationale\": \"Military service status has some stable semantic relationship to employment and labor-force attachment, especially for active duty or veterans, but it is also strongly entangled with age, sex, veteran demographics, and state-specific military-base populations, making it a moderately brittle shortcut for OOD generalization.\"\n}",
+      "input_tokens": 562,
+      "output_tokens": 569,
+      "total_tokens": 1131
+    },
+    {
+      "feature": "MIL",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MIL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MIL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed under the Folktables ACSEmploymentFiltered definition.\",\"feature\":\"MIL\",\"score\":0.35,\"rationale\":\"Military service status has some semantic link to labor-force attachment, especially active-duty or veteran categories, but it can encode state-specific military-base presence and demographic shortcuts such as age and sex, making its marginal OOD-stable usefulness only modest.\"}",
+      "input_tokens": 562,
+      "output_tokens": 607,
+      "total_tokens": 1169
+    },
+    {
+      "feature": "MIL",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MIL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MIL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed in the filtered Folktables employment task.\",\"feature\":\"MIL\",\"score\":0.42,\"rationale\":\"Military service status has some direct semantic relationship to labor-force attachment and employment, but it is also strongly entangled with age, sex, veteran demographics, and state-specific military presence, so its stable marginal usefulness is only moderate.\"}",
+      "input_tokens": 562,
+      "output_tokens": 439,
+      "total_tokens": 1001
+    },
+    {
+      "feature": "ANC",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ANC` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ANC\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed among the filtered working-age population.\",\"feature\":\"ANC\",\"score\":0.1,\"rationale\":\"ANC is an ancestry recode that mainly acts as a sensitive demographic/national-origin proxy and can encode state-specific population composition, so any employment signal is likely brittle and undesirable for OOD generalization.\"}",
+      "input_tokens": 562,
+      "output_tokens": 197,
+      "total_tokens": 759
+    },
+    {
+      "feature": "ANC",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ANC` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ANC\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult individual is employed using ACS person-level attributes.\",\n  \"feature\": \"ANC\",\n  \"score\": 0.08,\n  \"rationale\": \"Ancestry is a sensitive demographic and geography-correlated proxy with little direct semantic link to employment, so any marginal signal is likely from demographic shortcuts or state-specific population composition rather than stable predictive usefulness.\"\n}",
+      "input_tokens": 562,
+      "output_tokens": 177,
+      "total_tokens": 739
+    },
+    {
+      "feature": "ANC",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ANC` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ANC\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult ACS respondent is employed in the filtered employment task population.\",\n  \"feature\": \"ANC\",\n  \"score\": 0.15,\n  \"rationale\": \"ANC encodes ancestry/ethnic background, which may correlate with employment through demographic and geographic composition but is a sensitive demographic shortcut with weak causal relevance and likely brittle variation across states.\"\n}",
+      "input_tokens": 562,
+      "output_tokens": 163,
+      "total_tokens": 725
+    },
+    {
+      "feature": "ANC",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ANC` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ANC\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an adult ACS respondent is employed versus not employed.\",\"feature\":\"ANC\",\"score\":0.12,\"rationale\":\"ANC is an ancestry/ethnicity-related variable that may correlate with employment through demographic and regional composition, but it is a sensitive shortcut and likely state-specific rather than a stable semantic predictor.\"}",
+      "input_tokens": 562,
+      "output_tokens": 240,
+      "total_tokens": 802
+    },
+    {
+      "feature": "ANC",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ANC` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ANC\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an adult ACS respondent is employed in the filtered employment-status task.\",\"feature\":\"ANC\",\"score\":0.12,\"rationale\":\"Ancestry is a demographic proxy that can encode ethnicity, immigration history, and state-specific population composition; any employment correlation is likely shortcut-like and brittle rather than semantically stable.\"}",
+      "input_tokens": 562,
+      "output_tokens": 232,
+      "total_tokens": 794
+    },
+    {
+      "feature": "NATIVITY",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `NATIVITY` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"NATIVITY\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual is employed based on ACS person-level attributes.\",\n  \"feature\": \"NATIVITY\",\n  \"score\": 0.25,\n  \"rationale\": \"Nativity may have some broad association with employment through immigration status and labor-market access, but it is a demographic shortcut with relationships that vary substantially by state, industry mix, and local immigrant populations, making it relatively brittle for OOD generalization.\"\n}",
+      "input_tokens": 566,
+      "output_tokens": 183,
+      "total_tokens": 749
+    },
+    {
+      "feature": "NATIVITY",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `NATIVITY` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"NATIVITY\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed in the filtered Folktables employment task.\",\"feature\":\"NATIVITY\",\"score\":0.25,\"rationale\":\"Nativity may have some marginal association with employment, but it is a sensitive demographic proxy whose effect can vary substantially by state, immigrant composition, policy context, and local labor markets, making it a brittle shortcut for OOD generalization.\"}",
+      "input_tokens": 566,
+      "output_tokens": 282,
+      "total_tokens": 848
+    },
+    {
+      "feature": "NATIVITY",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `NATIVITY` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"NATIVITY\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed in the filtered working-age population.\",\n  \"feature\": \"NATIVITY\",\n  \"score\": 0.2,\n  \"rationale\": \"Nativity may have some association with employment, but it is a demographic shortcut tied to immigration background and state-specific population composition, so its stable causal usefulness across states is limited.\"\n}",
+      "input_tokens": 566,
+      "output_tokens": 268,
+      "total_tokens": 834
+    },
+    {
+      "feature": "NATIVITY",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `NATIVITY` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"NATIVITY\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult ACS respondent is employed versus not employed in the filtered employment population.\",\n  \"feature\": \"NATIVITY\",\n  \"score\": 0.25,\n  \"rationale\": \"Nativity may have some marginal association with employment through immigration-related labor-market patterns, but it is a demographic shortcut whose meaning and correlations vary substantially by state and immigrant composition, making it brittle for OOD generalization.\"\n}",
+      "input_tokens": 566,
+      "output_tokens": 175,
+      "total_tokens": 741
+    },
+    {
+      "feature": "NATIVITY",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `NATIVITY` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"NATIVITY\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult individual is employed in the ACS employment task.\",\n  \"feature\": \"NATIVITY\",\n  \"score\": 0.2,\n  \"rationale\": \"Nativity may correlate with employment through immigration-related labor-market patterns, but it is a demographic shortcut with strong state-specific composition effects and limited causal or semantically stable predictive value across states.\"\n}",
+      "input_tokens": 566,
+      "output_tokens": 174,
+      "total_tokens": 740
+    },
+    {
+      "feature": "RELP",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RELP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RELP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed under the filtered employment task definition.\",\"feature\":\"RELP\",\"score\":0.35,\"rationale\":\"Household relationship can reflect life stage and household role that are somewhat predictive of employment, but it is an indirect demographic shortcut correlated with age, marital status, family structure, and cultural/state-specific composition rather than a robust causal employment factor.\"}",
+      "input_tokens": 564,
+      "output_tokens": 268,
+      "total_tokens": 832
+    },
+    {
+      "feature": "RELP",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RELP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RELP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed from personal and household attributes.\",\n  \"feature\": \"RELP\",\n  \"score\": 0.42,\n  \"rationale\": \"Relationship to household reference person can stably reflect life stage and household role linked to employment, but it is an indirect demographic shortcut with possible family-structure and institutional-status artifacts rather than a causal labor-market predictor.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 298,
+      "total_tokens": 862
+    },
+    {
+      "feature": "RELP",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RELP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RELP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS person is employed among the filtered working-age population.\",\n  \"feature\": \"RELP\",\n  \"score\": 0.35,\n  \"rationale\": \"Relationship to household head has some stable signal through household role, dependency, and life stage, but it is mostly an indirect demographic/household-structure proxy and may encode brittle family-composition differences across states.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 321,
+      "total_tokens": 885
+    },
+    {
+      "feature": "RELP",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RELP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RELP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed in the filtered Folktables employment task.\",\n  \"feature\": \"RELP\",\n  \"score\": 0.45,\n  \"rationale\": \"Relationship to household reference person can stably reflect life stage and household role associated with employment, but it is an indirect demographic shortcut and may capture family-structure artifacts rather than causal work capacity.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 223,
+      "total_tokens": 787
+    },
+    {
+      "feature": "RELP",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RELP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RELP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed among the filtered working-age population.\",\n  \"feature\": \"RELP\",\n  \"score\": 0.38,\n  \"rationale\": \"Household relationship can be moderately predictive of employment through stable life-stage and family-role patterns, but much of its signal is an indirect demographic shortcut and may duplicate age, marital, and household-composition effects rather than robust causal employability.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 360,
+      "total_tokens": 924
+    },
+    {
+      "feature": "DEAR",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DEAR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DEAR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult ACS respondent is employed in the filtered employment classification task.\",\n  \"feature\": \"DEAR\",\n  \"score\": 0.45,\n  \"rationale\": \"Hearing difficulty is plausibly and fairly stably related to employment access across states, but it is a disability-related attribute and may act as a sensitive shortcut or proxy for age and health rather than broadly causal job-market information.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 286,
+      "total_tokens": 850
+    },
+    {
+      "feature": "DEAR",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DEAR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DEAR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult is employed in the ACS employment filtered population.\",\n  \"feature\": \"DEAR\",\n  \"score\": 0.55,\n  \"rationale\": \"Hearing difficulty is plausibly and fairly consistently related to employment outcomes across states, but it is a disability indicator and may act as a sensitive demographic shortcut rather than a robust causal employment feature.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 204,
+      "total_tokens": 768
+    },
+    {
+      "feature": "DEAR",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DEAR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DEAR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult is employed using ACS person-level attributes.\",\n  \"feature\": \"DEAR\",\n  \"score\": 0.45,\n  \"rationale\": \"DEAR indicates deafness or serious hearing difficulty, which can be stably related to employment through disability and accessibility constraints, but it is a sensitive health/disability attribute and may act as a demographic shortcut rather than a robust causal employment signal.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 194,
+      "total_tokens": 758
+    },
+    {
+      "feature": "DEAR",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DEAR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DEAR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed based on personal and household attributes.\",\n  \"feature\": \"DEAR\",\n  \"score\": 0.58,\n  \"rationale\": \"Hearing difficulty is plausibly and fairly consistently related to employment barriers across states, but it is a disability-related attribute and may act as a sensitive shortcut rather than a broadly causal or policy-stable predictor.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 318,
+      "total_tokens": 882
+    },
+    {
+      "feature": "DEAR",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DEAR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DEAR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult is employed from ACS person-level attributes.\",\n  \"feature\": \"DEAR\",\n  \"score\": 0.55,\n  \"rationale\": \"Hearing difficulty is plausibly and consistently related to employment capacity and workplace access across states, but it is a disability indicator and thus a sensitive attribute that may encode protected-group disparities rather than purely generalizable skill or labor-market information.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 245,
+      "total_tokens": 809
+    },
+    {
+      "feature": "DEYE",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DEYE` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DEYE\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed versus not employed among the filtered working-age population.\",\"feature\":\"DEYE\",\"score\":0.55,\"rationale\":\"Vision difficulty is semantically related to employment capacity and should transfer across states, but it is a disability-related sensitive attribute with relatively low prevalence and may act as a demographic shortcut, so its prior usefulness is only moderate.\"}",
+      "input_tokens": 564,
+      "output_tokens": 278,
+      "total_tokens": 842
+    },
+    {
+      "feature": "DEYE",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DEYE` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DEYE\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult is employed from ACS person-level attributes.\",\n  \"feature\": \"DEYE\",\n  \"score\": 0.62,\n  \"rationale\": \"Vision difficulty is plausibly and stably related to employment capacity and accommodations across states, but it is a disability indicator with fairness sensitivity and low prevalence, so it should not receive maximal prior weight.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 254,
+      "total_tokens": 818
+    },
+    {
+      "feature": "DEYE",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DEYE` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DEYE\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult ACS respondent is employed versus not employed under the filtered ACS employment task definition.\",\n  \"feature\": \"DEYE\",\n  \"score\": 0.72,\n  \"rationale\": \"Vision difficulty is a disability-related variable with a plausible and fairly stable relationship to employment across states, though it is low-prevalence and partly sensitive, so it should not receive maximal prior weight.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 249,
+      "total_tokens": 813
+    },
+    {
+      "feature": "DEYE",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DEYE` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DEYE\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS respondent is employed in the filtered Folktables employment task.\",\n  \"feature\": \"DEYE\",\n  \"score\": 0.6,\n  \"rationale\": \"Vision difficulty can be semantically related to employment capacity and accessibility barriers in a way that should generalize across states, but it is a disability-related sensitive attribute and likely has limited marginal signal due to low prevalence and overlap with broader disability variables.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 353,
+      "total_tokens": 917
+    },
+    {
+      "feature": "DEYE",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DEYE` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DEYE\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an adult is employed in the ACS employment filtered population.\",\"feature\":\"DEYE\",\"score\":0.62,\"rationale\":\"Vision difficulty is a direct functional limitation that can affect employment prospects and should be fairly stable across states, but it is a disability-related sensitive attribute with low prevalence and potential equity concerns.\"}",
+      "input_tokens": 564,
+      "output_tokens": 274,
+      "total_tokens": 838
+    },
+    {
+      "feature": "DREM",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DREM` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DREM\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed versus not employed in the filtered employment task population.\",\"feature\":\"DREM\",\"score\":0.68,\"rationale\":\"DREM indicates cognitive difficulty, which is semantically and fairly stably related to employment capacity across states, but it is a disability-related sensitive attribute and may encode inequitable demographic shortcuts.\"}",
+      "input_tokens": 564,
+      "output_tokens": 337,
+      "total_tokens": 901
+    },
+    {
+      "feature": "DREM",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DREM` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DREM\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed in the filtered employment classification task.\",\n  \"feature\": \"DREM\",\n  \"score\": 0.55,\n  \"rationale\": \"Cognitive difficulty is likely stably related to employment capacity across states, but it is a disability-related sensitive attribute and may act as a demographic shortcut, so its prior usefulness should be penalized.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 278,
+      "total_tokens": 842
+    },
+    {
+      "feature": "DREM",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DREM` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DREM\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult ACS respondent is employed based on personal and household attributes.\",\n  \"feature\": \"DREM\",\n  \"score\": 0.62,\n  \"rationale\": \"DREM indicates cognitive difficulty, which can be stably related to employment outcomes across states, but it is a sensitive disability-related attribute and may act as a demographic shortcut, so its prior usefulness should be moderated.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 290,
+      "total_tokens": 854
+    },
+    {
+      "feature": "DREM",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DREM` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DREM\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed versus not employed in the filtered employment population.\",\n  \"feature\": \"DREM\",\n  \"score\": 0.62,\n  \"rationale\": \"Cognitive difficulty is semantically related to employment capacity and barriers and should be fairly stable across states, but it is disability-related sensitive information and may act as a demographic shortcut.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 435,
+      "total_tokens": 999
+    },
+    {
+      "feature": "DREM",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DREM` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DREM\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS respondent is employed in the filtered employment task population.\",\"feature\":\"DREM\",\"score\":0.62,\"rationale\":\"DREM indicates cognitive difficulty, which is plausibly and stably related to employment capacity across states, but it is a disability-related sensitive attribute with low prevalence and potential shortcut/fairness concerns.\"}",
+      "input_tokens": 564,
+      "output_tokens": 372,
+      "total_tokens": 936
+    },
+    {
+      "feature": "RAC1P",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RAC1P` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RAC1P\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed versus not employed within the filtered employment population.\",\"feature\":\"RAC1P\",\"score\":0.1,\"rationale\":\"Race may correlate with employment through discrimination, socioeconomic history, and state composition, but it is a sensitive demographic shortcut with unstable, geography-dependent associations rather than a robust semantic predictor.\"}",
+      "input_tokens": 568,
+      "output_tokens": 197,
+      "total_tokens": 765
+    },
+    {
+      "feature": "RAC1P",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RAC1P` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RAC1P\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an adult ACS respondent is employed in the filtered employment classification task.\",\"feature\":\"RAC1P\",\"score\":0.08,\"rationale\":\"RAC1P encodes race, a sensitive demographic attribute whose association with employment is mostly a demographic shortcut reflecting structural and state-specific disparities rather than a stable semantic predictor.\"}",
+      "input_tokens": 568,
+      "output_tokens": 195,
+      "total_tokens": 763
+    },
+    {
+      "feature": "RAC1P",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RAC1P` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RAC1P\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult ACS respondent is employed from personal demographic and socioeconomic attributes.\",\n  \"feature\": \"RAC1P\",\n  \"score\": 0.1,\n  \"rationale\": \"Race may correlate with employment through social disparities, but it is a sensitive demographic shortcut with relationships that can vary across states and populations, so it has low stable semantic usefulness for OOD generalization.\"\n}",
+      "input_tokens": 568,
+      "output_tokens": 194,
+      "total_tokens": 762
+    },
+    {
+      "feature": "RAC1P",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RAC1P` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RAC1P\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed versus not employed among the filtered working-age population.\",\"feature\":\"RAC1P\",\"score\":0.12,\"rationale\":\"RAC1P encodes race, a sensitive demographic attribute that may reflect discrimination and state-specific population composition rather than stable causal employability, so its marginal predictive value is likely brittle and should be strongly penalized.\"}",
+      "input_tokens": 568,
+      "output_tokens": 261,
+      "total_tokens": 829
+    },
+    {
+      "feature": "RAC1P",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RAC1P` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RAC1P\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual is employed from ACS person-level attributes.\",\n  \"feature\": \"RAC1P\",\n  \"score\": 0.1,\n  \"rationale\": \"Race may correlate with employment through societal disparities, but it is a sensitive demographic shortcut with relationships that vary across states and offers limited stable semantic predictive value.\"\n}",
+      "input_tokens": 568,
+      "output_tokens": 207,
+      "total_tokens": 775
+    },
+    {
+      "feature": "GCL",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `GCL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"GCL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed in the filtered employment population.\",\"feature\":\"GCL\",\"score\":0.35,\"rationale\":\"GCL captures grandparent co-residence/caregiving status, which may be modestly and fairly stably related to employment through age and household responsibilities, but it is sparse and partly a demographic/household-structure proxy rather than a direct labor-market predictor.\"}",
+      "input_tokens": 564,
+      "output_tokens": 438,
+      "total_tokens": 1002
+    },
+    {
+      "feature": "GCL",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `GCL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"GCL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed versus not employed under the filtered employment task definition.\",\n  \"feature\": \"GCL\",\n  \"score\": 0.35,\n  \"rationale\": \"Grandparent living-with-grandchildren status may modestly reflect caregiving burdens and age/household structure related to employment, but it is sparse/conditional and partly a demographic-family shortcut rather than a broadly stable labor-market predictor.\"\n}",
+      "input_tokens": 564,
+      "output_tokens": 397,
+      "total_tokens": 961
+    },
+    {
+      "feature": "GCL",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `GCL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"GCL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS person is employed versus not employed among the filtered employment-task population.\",\"feature\":\"GCL\",\"score\":0.25,\"rationale\":\"Grandparents living with grandchildren may weakly reflect age and caregiving constraints related to employment, but it is an indirect household-structure proxy with demographic and cultural variation across states, so its stable marginal usefulness is limited.\"}",
+      "input_tokens": 564,
+      "output_tokens": 494,
+      "total_tokens": 1058
+    },
+    {
+      "feature": "GCL",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `GCL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"GCL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS individual is employed versus not employed.\",\"feature\":\"GCL\",\"score\":0.25,\"rationale\":\"Grandparent living-with-grandchildren status may weakly reflect caregiving burden, age, and household structure relevant to employment, but it is sparse, demographic/family-status based, and likely much less stable than direct human-capital or disability variables.\"}",
+      "input_tokens": 564,
+      "output_tokens": 323,
+      "total_tokens": 887
+    },
+    {
+      "feature": "GCL",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemploymentfiltered`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `GCL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"GCL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS person is employed in the filtered employment population.\",\"feature\":\"GCL\",\"score\":0.25,\"rationale\":\"Grandparent living-with-grandchildren status may weakly reflect caregiving and age-related labor-force constraints, but it is an indirect household-composition shortcut with state- and demographic-specific variation, so its stable marginal usefulness is limited.\"}",
+      "input_tokens": 564,
+      "output_tokens": 325,
+      "total_tokens": 889
+    }
+  ],
+  "config": {
+    "score_samples": 5
+  }
+}

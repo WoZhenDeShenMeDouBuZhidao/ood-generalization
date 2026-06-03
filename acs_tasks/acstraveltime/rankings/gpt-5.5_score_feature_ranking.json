@@ -1,0 +1,1431 @@
+{
+  "model": "gpt-5.5",
+  "method": "score",
+  "temperature": 0.5,
+  "created_at": "2026-05-10T21:01:46",
+  "token_usage": {
+    "num_calls": 80,
+    "input_tokens": 45200,
+    "output_tokens": 23743,
+    "total_tokens": 68943
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature": "JWTR",
+        "score_mean": 0.838,
+        "score_std": 0.03487119154832538
+      },
+      {
+        "rank": 2,
+        "feature": "OCCP",
+        "score_mean": 0.622,
+        "score_std": 0.03919183588453088
+      },
+      {
+        "rank": 3,
+        "feature": "AGEP",
+        "score_mean": 0.386,
+        "score_std": 0.04586937976471887
+      },
+      {
+        "rank": 4,
+        "feature": "SCHL",
+        "score_mean": 0.378,
+        "score_std": 0.055999999999999994
+      },
+      {
+        "rank": 5,
+        "feature": "POVPIP",
+        "score_mean": 0.33599999999999997,
+        "score_std": 0.04454211490264017
+      },
+      {
+        "rank": 6,
+        "feature": "MAR",
+        "score_mean": 0.25,
+        "score_std": 0.0
+      },
+      {
+        "rank": 7,
+        "feature": "MIG",
+        "score_mean": 0.24,
+        "score_std": 0.019999999999999993
+      },
+      {
+        "rank": 8,
+        "feature": "RELP",
+        "score_mean": 0.24,
+        "score_std": 0.019999999999999993
+      },
+      {
+        "rank": 9,
+        "feature": "DIS",
+        "score_mean": 0.23,
+        "score_std": 0.027568097504180447
+      },
+      {
+        "rank": 10,
+        "feature": "SEX",
+        "score_mean": 0.154,
+        "score_std": 0.025768197453450256
+      },
+      {
+        "rank": 11,
+        "feature": "CIT",
+        "score_mean": 0.15,
+        "score_std": 0.0
+      },
+      {
+        "rank": 12,
+        "feature": "POWPUMA",
+        "score_mean": 0.12,
+        "score_std": 0.039999999999999994
+      },
+      {
+        "rank": 13,
+        "feature": "RAC1P",
+        "score_mean": 0.112,
+        "score_std": 0.009797958971132708
+      },
+      {
+        "rank": 14,
+        "feature": "ESP",
+        "score_mean": 0.08600000000000001,
+        "score_std": 0.023323807579381198
+      },
+      {
+        "rank": 15,
+        "feature": "PUMA",
+        "score_mean": 0.062,
+        "score_std": 0.024819347291981715
+      },
+      {
+        "rank": 16,
+        "feature": "ST",
+        "score_mean": 0.038,
+        "score_std": 0.009797958971132715
+      }
+    ],
+    "scores": [
+      {
+        "feature": "AGEP",
+        "score_mean": 0.386,
+        "score_std": 0.04586937976471887,
+        "samples": [
+          {
+            "task_summary": "Predict whether an individual's commute travel time to work exceeds the task threshold in ACS PUMS data.",
+            "feature": "AGEP",
+            "score": 0.35,
+            "rationale": "Age may capture stable life-cycle effects on commuting among workers, but its marginal signal is likely modest and partly a demographic shortcut rather than a direct determinant of travel time."
+          },
+          {
+            "task_summary": "Predict whether an ACS respondent has a long commute/travel time to work.",
+            "feature": "AGEP",
+            "score": 0.42,
+            "rationale": "Age can have some stable relationship to commute patterns through career stage and job constraints, but it is an indirect demographic proxy with likely weak marginal signal and possible shortcut effects rather than a robust causal predictor."
+          },
+          {
+            "task_summary": "Predict whether a working individual's commute travel time exceeds the task threshold for ACS travel time.",
+            "feature": "AGEP",
+            "score": 0.35,
+            "rationale": "Age may have a modest, broadly stable relationship with commuting through life stage, job tenure, and work patterns, but it is an individual demographic attribute with weak marginal causal connection to commute duration and can act as a brittle demographic shortcut across states."
+          },
+          {
+            "task_summary": "Predict whether a working individual's commute travel time exceeds the task threshold.",
+            "feature": "AGEP",
+            "score": 0.35,
+            "rationale": "Age may have some stable marginal relationship with commuting patterns through career stage and job type, but it is an indirect demographic proxy with limited semantic connection to travel time and possible shortcut behavior."
+          },
+          {
+            "task_summary": "Predict whether an individual's commute travel time to work exceeds the task threshold in ACS PUMS.",
+            "feature": "AGEP",
+            "score": 0.46,
+            "rationale": "Age has some stable semantic relationship to commuting via life stage, work arrangements, and residential/job choices, but it is a demographic proxy with only indirect predictive value and may capture shortcut patterns rather than causal commute factors."
+          }
+        ]
+      },
+      {
+        "feature": "SCHL",
+        "score_mean": 0.378,
+        "score_std": 0.055999999999999994,
+        "samples": [
+          {
+            "task_summary": "Predict whether a working adult has a long commute/travel time to work in the ACS travel-time task.",
+            "feature": "SCHL",
+            "score": 0.42,
+            "rationale": "Educational attainment can be modestly and stably related to commute patterns through occupation, income, and job location, but it is an indirect socioeconomic proxy and may capture demographic or state-specific labor-market artifacts rather than commute mechanics."
+          },
+          {
+            "task_summary": "Predict whether an employed adult has a long commute/travel time to work in the ACS PUMS acstraveltime task.",
+            "feature": "SCHL",
+            "score": 0.43,
+            "rationale": "Educational attainment can have some stable semantic link to occupation type, income, and residential/job-location patterns that affect commute time, but travel time is strongly driven by local geography and transportation infrastructure, and SCHL also risks acting as a demographic socioeconomic proxy rather than a direct causal predictor."
+          },
+          {
+            "task_summary": "Predict whether a working adult has a commute time above the task threshold.",
+            "feature": "SCHL",
+            "score": 0.42,
+            "rationale": "Educational attainment is a moderately stable proxy for job type, income, and work arrangements that can affect commute length, but its effect is indirect and may capture socioeconomic/demographic distributional shortcuts that vary by state."
+          },
+          {
+            "task_summary": "Predict whether a working adult has a commute travel time above the task threshold.",
+            "feature": "SCHL",
+            "score": 0.3,
+            "rationale": "Educational attainment may weakly proxy job type, income, and residential location, which can affect commute time, but it is indirect and partly a socioeconomic/demographic shortcut whose relationship may vary across states."
+          },
+          {
+            "task_summary": "Predict whether an individual's commute travel time to work exceeds the task threshold.",
+            "feature": "SCHL",
+            "score": 0.32,
+            "rationale": "Educational attainment may have a modest, semantically plausible link to job type, income, and commuting patterns, but it is only indirectly related to travel time and can act as a socioeconomic or demographic proxy with state-specific correlations."
+          }
+        ]
+      },
+      {
+        "feature": "MAR",
+        "score_mean": 0.25,
+        "score_std": 0.0,
+        "samples": [
+          {
+            "task_summary": "Predict whether a working individual's commute travel time exceeds the task threshold.",
+            "feature": "MAR",
+            "score": 0.25,
+            "rationale": "Marital status may weakly correlate with age, household structure, and residential location, which can affect commute time, but it is an indirect demographic shortcut with limited stable semantic connection to travel duration across states."
+          },
+          {
+            "task_summary": "Predict whether a working adult's commute travel time exceeds a task-defined threshold using ACS person-level attributes.",
+            "feature": "MAR",
+            "score": 0.25,
+            "rationale": "Marital status may weakly proxy life stage, household structure, and residential location choices that affect commute length, but it is an indirect demographic shortcut with limited causal relevance and likely state-specific correlations."
+          },
+          {
+            "task_summary": "Predict whether a worker's commute travel time exceeds the task threshold for ACS travel time.",
+            "feature": "MAR",
+            "score": 0.25,
+            "rationale": "Marital status may weakly proxy household structure, age, and residential choices that affect commuting, but it is an indirect demographic shortcut with limited semantic connection to travel time and uncertain stability across states."
+          },
+          {
+            "task_summary": "Predict whether a working individual has a long commute travel time to work.",
+            "feature": "MAR",
+            "score": 0.25,
+            "rationale": "Marital status may weakly correlate with household location and commuting patterns, but it is an indirect demographic shortcut with state- and life-stage-dependent associations rather than a semantically robust predictor."
+          },
+          {
+            "task_summary": "Predict whether an employed individual's commute to work is longer than a specified travel-time threshold.",
+            "feature": "MAR",
+            "score": 0.25,
+            "rationale": "Marital status may weakly correlate with commute length through household structure, age, and residential choices, but it is an indirect demographic attribute with limited causal connection and may encode brittle demographic or regional patterns across states."
+          }
+        ]
+      },
+      {
+        "feature": "SEX",
+        "score_mean": 0.154,
+        "score_std": 0.025768197453450256,
+        "samples": [
+          {
+            "task_summary": "Predict whether an ACS respondent's commute time to work exceeds the task threshold.",
+            "feature": "SEX",
+            "score": 0.15,
+            "rationale": "Sex may weakly correlate with commute patterns through labor-market and household-role differences, but it is a sensitive demographic shortcut with limited stable semantic relevance across states."
+          },
+          {
+            "task_summary": "Predict whether an individual's commute time to work exceeds a threshold in the ACS travel-time task.",
+            "feature": "SEX",
+            "score": 0.12,
+            "rationale": "SEX may have weak marginal correlation with commute patterns through labor-market and household-role differences, but it is a sensitive demographic shortcut with limited causal relevance and potentially unstable effects across states."
+          },
+          {
+            "task_summary": "Predict whether a working individual has a long commute/travel time to work in the ACS PUMS data.",
+            "feature": "SEX",
+            "score": 0.15,
+            "rationale": "Sex may have weak marginal correlation with commute patterns through labor-market and household-role differences, but it is a sensitive demographic shortcut with limited direct causal relevance and potentially unstable effects across states."
+          },
+          {
+            "task_summary": "Predict whether an individual's commute time to work exceeds a threshold in the ACS travel-time task.",
+            "feature": "SEX",
+            "score": 0.2,
+            "rationale": "SEX may have weak marginal correlation with commuting patterns through labor-market and household-role differences, but it is a sensitive demographic shortcut with limited causal relevance and potentially variable state-specific effects."
+          },
+          {
+            "task_summary": "Predict whether an employed person's commute travel time exceeds a threshold, typically 20 minutes.",
+            "feature": "SEX",
+            "score": 0.15,
+            "rationale": "SEX may have weak marginal correlation with commute time through labor-market and household-role patterns, but it is a sensitive demographic shortcut with limited stable semantic relevance and likely varies across states."
+          }
+        ]
+      },
+      {
+        "feature": "DIS",
+        "score_mean": 0.23,
+        "score_std": 0.027568097504180447,
+        "samples": [
+          {
+            "task_summary": "Predict whether a working individual's commute time exceeds the task threshold for travel time to work.",
+            "feature": "DIS",
+            "score": 0.25,
+            "rationale": "Disability status may have some stable association with commuting patterns through mobility constraints or job selection, but it is a sensitive health-related attribute and likely acts as a demographic shortcut rather than a direct, robust predictor of commute duration."
+          },
+          {
+            "task_summary": "Predict whether a person's commute travel time to work exceeds a specified threshold.",
+            "feature": "DIS",
+            "score": 0.25,
+            "rationale": "Disability status may have some stable relationship to commuting constraints and work arrangements, but it is a sensitive demographic/health attribute and only indirectly predictive, so it should receive a low prior weight."
+          },
+          {
+            "task_summary": "Predict whether a working person's commute travel time exceeds the task threshold for ACS travel time.",
+            "feature": "DIS",
+            "score": 0.25,
+            "rationale": "Disability status may have a modest, semantically plausible relationship to commute duration through mobility constraints and job/transport choices, but it is a sensitive health/demographic attribute and likely only weakly and indirectly predictive across states."
+          },
+          {
+            "task_summary": "Predict whether a working individual's commute travel time exceeds a threshold in the ACS travel-time task.",
+            "feature": "DIS",
+            "score": 0.18,
+            "rationale": "Disability status may have weak marginal association with commute length through work constraints or accommodations, but it is a sensitive health-related attribute and likely functions as a demographic shortcut rather than a stable semantic predictor across states."
+          },
+          {
+            "task_summary": "Predict whether a worker's commute travel time exceeds the task threshold for ACS respondents.",
+            "feature": "DIS",
+            "score": 0.22,
+            "rationale": "Disability status may have some stable marginal association with commuting patterns through work constraints or transportation access, but it is a sensitive demographic/health attribute and likely offers only indirect, potentially shortcut-like predictive signal rather than robust semantic causality."
+          }
+        ]
+      },
+      {
+        "feature": "ESP",
+        "score_mean": 0.08600000000000001,
+        "score_std": 0.023323807579381198,
+        "samples": [
+          {
+            "task_summary": "Predict whether a working individual's commute travel time exceeds the task threshold.",
+            "feature": "ESP",
+            "score": 0.12,
+            "rationale": "ESP records parents' employment status and is mostly relevant for children, making it only weakly and indirectly related to commute time for workers; it may act as a household or demographic shortcut rather than a stable semantic predictor across states."
+          },
+          {
+            "task_summary": "Predict whether a working ACS respondent has a long commute/travel time to work.",
+            "feature": "ESP",
+            "score": 0.08,
+            "rationale": "ESP encodes parental employment status mainly for children and is largely inapplicable or demographic/family-structure related for commuting workers, offering little stable semantic signal for commute time while risking brittle demographic shortcuts."
+          },
+          {
+            "task_summary": "Predict whether a working individual has a commute/travel time to work above the task threshold.",
+            "feature": "ESP",
+            "score": 0.08,
+            "rationale": "ESP is employment status of parents, mostly inapplicable or a household-demographic proxy for commuters, with little direct semantic link to commute duration and risk of brittle demographic shortcuts."
+          },
+          {
+            "task_summary": "Predict whether a working person's commute travel time exceeds the task threshold.",
+            "feature": "ESP",
+            "score": 0.1,
+            "rationale": "Employment status of parents is mostly inapplicable for adult commuters and mainly captures household/age-related demographic structure rather than a stable causal driver of commute time, making it weak and potentially shortcut-prone across states."
+          },
+          {
+            "task_summary": "Predict whether an employed person's commute travel time to work exceeds the task threshold.",
+            "feature": "ESP",
+            "score": 0.05,
+            "rationale": "ESP describes parents' employment status and is mostly inapplicable for adult commuters, so any signal is likely an age/household-structure shortcut rather than a stable semantic predictor of commute time across states."
+          }
+        ]
+      },
+      {
+        "feature": "MIG",
+        "score_mean": 0.24,
+        "score_std": 0.019999999999999993,
+        "samples": [
+          {
+            "task_summary": "Predict whether a worker has a long commute/travel time to work in the ACS travel-time task.",
+            "feature": "MIG",
+            "score": 0.25,
+            "rationale": "Migration status may weakly relate to commute choices after moving, but it is indirect and can encode geography, housing-market, age, and state-specific mobility artifacts rather than a stable semantic cause of travel time."
+          },
+          {
+            "task_summary": "Predict whether an individual's commute time to work exceeds the task threshold.",
+            "feature": "MIG",
+            "score": 0.25,
+            "rationale": "Recent migration status may weakly relate to commute length through housing/job changes, but it is an indirect proxy prone to demographic and state-specific mobility patterns rather than a stable semantic predictor."
+          },
+          {
+            "task_summary": "Predict whether a worker has a long commute time to work.",
+            "feature": "MIG",
+            "score": 0.25,
+            "rationale": "Mobility status may weakly relate to commute length through recent moves and job-housing changes, but it is indirect and can capture geography, housing-market, and demographic artifacts that may not transfer reliably across states."
+          },
+          {
+            "task_summary": "Predict whether an individual's commute travel time exceeds the task threshold for workers in ACS PUMS.",
+            "feature": "MIG",
+            "score": 0.25,
+            "rationale": "Migration status may weakly relate to commute patterns through recent moves and housing-job matching, but it is indirect and likely reflects state-specific mobility, housing-market, and demographic artifacts rather than stable travel-time mechanisms."
+          },
+          {
+            "task_summary": "Predict whether a working adult has a commute travel time above the task threshold.",
+            "feature": "MIG",
+            "score": 0.2,
+            "rationale": "Migration status may weakly relate to commute length through recent moves or residential instability, but it is not a direct semantic determinant of travel time and can capture state-specific mobility, housing-market, and demographic artifacts."
+          }
+        ]
+      },
+      {
+        "feature": "RELP",
+        "score_mean": 0.24,
+        "score_std": 0.019999999999999993,
+        "samples": [
+          {
+            "task_summary": "Predict whether an individual's commute travel time to work is long versus short in the ACS travel-time task.",
+            "feature": "RELP",
+            "score": 0.25,
+            "rationale": "Relationship to household reference person may weakly proxy life stage and household role, which can correlate with commuting, but it is only indirectly related to travel time and risks acting as a demographic or household-composition shortcut rather than a stable causal predictor across states."
+          },
+          {
+            "task_summary": "Predict whether an employed person's commute travel time exceeds a task-defined threshold.",
+            "feature": "RELP",
+            "score": 0.25,
+            "rationale": "Relationship to householder may weakly capture stable life-stage and household-role effects on commuting, but it is mostly an indirect demographic shortcut with limited semantic connection to travel time and potential brittleness across states."
+          },
+          {
+            "task_summary": "Predict whether an employed individual's commute time to work exceeds a task-defined threshold, typically long travel time.",
+            "feature": "RELP",
+            "score": 0.25,
+            "rationale": "Household relationship may weakly proxy life stage and household responsibilities that affect commuting, but it is indirect and can encode demographic/family-structure shortcuts with limited stable causal relevance across states."
+          },
+          {
+            "task_summary": "Predict whether an employed adult's commute travel time exceeds the task threshold for the ACS travel-time outcome.",
+            "feature": "RELP",
+            "score": 0.25,
+            "rationale": "Household relationship may weakly proxy life stage and household constraints that affect commuting, but it is indirect, demographic, and prone to shortcut correlations rather than stable causal predictive signal across states."
+          },
+          {
+            "task_summary": "Predict whether an employed individual's commute time to work exceeds the task threshold.",
+            "feature": "RELP",
+            "score": 0.2,
+            "rationale": "Relationship to householder may weakly proxy life stage and household role, which can correlate with commuting, but it is an indirect demographic shortcut with limited causal relevance and possible state-specific household-composition artifacts."
+          }
+        ]
+      },
+      {
+        "feature": "RAC1P",
+        "score_mean": 0.112,
+        "score_std": 0.009797958971132708,
+        "samples": [
+          {
+            "task_summary": "Predict whether a working adult has a long commute/travel time to work in the ACS travel-time task.",
+            "feature": "RAC1P",
+            "score": 0.1,
+            "rationale": "Race may correlate with commute through residential segregation, local labor markets, and state-specific demographics, but it is a sensitive demographic shortcut with weak semantic transport relevance and likely unstable OOD predictive value."
+          },
+          {
+            "task_summary": "Predict whether an employed person has a commute time above the ACS travel-time threshold.",
+            "feature": "RAC1P",
+            "score": 0.12,
+            "rationale": "RAC1P encodes race, a sensitive demographic attribute; while it may correlate with commute times through segregation and access disparities, it is not semantically causal and is likely to act as a brittle demographic/geographic shortcut across states."
+          },
+          {
+            "task_summary": "Predict whether an employed adult's usual travel time to work exceeds a threshold for the ACS commute-time task.",
+            "feature": "RAC1P",
+            "score": 0.1,
+            "rationale": "Race is a sensitive demographic attribute with limited direct semantic relevance to commute duration; any predictive signal likely reflects segregation, geography, socioeconomic confounding, or state-specific artifacts rather than stable transport behavior."
+          },
+          {
+            "task_summary": "Predict whether an individual's commute travel time to work is above the task threshold.",
+            "feature": "RAC1P",
+            "score": 0.12,
+            "rationale": "Race may correlate with commute time through residential segregation, occupation, and local infrastructure, but it is a sensitive demographic shortcut with state-specific correlations rather than a stable semantic predictor."
+          },
+          {
+            "task_summary": "Predict whether a working adult has a long commute travel time to work.",
+            "feature": "RAC1P",
+            "score": 0.12,
+            "rationale": "Race may correlate with commute length through segregation, housing, and labor-market disparities, but it is a sensitive demographic shortcut with relationships that vary substantially by state and geography rather than a stable semantic predictor."
+          }
+        ]
+      },
+      {
+        "feature": "PUMA",
+        "score_mean": 0.062,
+        "score_std": 0.024819347291981715,
+        "samples": [
+          {
+            "task_summary": "Predict whether an individual's commute to work exceeds the task's travel-time threshold.",
+            "feature": "PUMA",
+            "score": 0.05,
+            "rationale": "PUMA is a local geographic identifier whose codes are not semantically comparable across states; while it may capture commute patterns in-sample, it is likely a brittle geography artifact with poor stable OOD usefulness."
+          },
+          {
+            "task_summary": "Predict whether a worker's commute travel time exceeds a threshold for the ACS travel-time task.",
+            "feature": "PUMA",
+            "score": 0.03,
+            "rationale": "PUMA is a geographic identifier whose codes are state-specific and mostly capture local infrastructure, housing, and labor-market artifacts rather than portable individual-level predictors, so it is likely brittle for out-of-distribution generalization across states."
+          },
+          {
+            "task_summary": "Predict whether a worker has a long commute travel time to work.",
+            "feature": "PUMA",
+            "score": 0.05,
+            "rationale": "PUMA is a geographic identifier whose codes are state-specific and can capture local infrastructure or regional artifacts, making it brittle for out-of-distribution generalization across states despite possible in-state correlation with commute time."
+          },
+          {
+            "task_summary": "Predict whether a working adult has a long commute travel time to work.",
+            "feature": "PUMA",
+            "score": 0.1,
+            "rationale": "PUMA is a granular within-state geographic identifier whose codes are arbitrary and state-specific; although location can affect commute time, this feature is likely to encode brittle local artifacts rather than stable cross-state semantics."
+          },
+          {
+            "task_summary": "Predict whether an individual's commute time to work exceeds the task threshold for the ACS travel-time outcome.",
+            "feature": "PUMA",
+            "score": 0.08,
+            "rationale": "PUMA is a fine-grained geographic identifier that can strongly capture local commute infrastructure and urbanicity in-sample, but its codes are state-specific and likely encode brittle geography and demographic distribution artifacts rather than stable semantic predictors across states."
+          }
+        ]
+      },
+      {
+        "feature": "ST",
+        "score_mean": 0.038,
+        "score_std": 0.009797958971132715,
+        "samples": [
+          {
+            "task_summary": "Predict whether a worker's one-way commute time exceeds a threshold for the ACS travel-time task.",
+            "feature": "ST",
+            "score": 0.05,
+            "rationale": "State code can capture broad commuting-pattern differences but is a direct geography/domain identifier, likely to encode state-specific artifacts and generalize poorly to unseen states."
+          },
+          {
+            "task_summary": "Predict whether an individual's commute-to-work travel time exceeds the task threshold.",
+            "feature": "ST",
+            "score": 0.03,
+            "rationale": "State code can correlate with commute patterns through geography, infrastructure, and urbanization, but it is a direct location artifact likely to fail under state-level OOD shifts and offers little stable semantic predictive value."
+          },
+          {
+            "task_summary": "Predict whether an individual's commute travel time to work exceeds the task threshold in ACS PUMS.",
+            "feature": "ST",
+            "score": 0.05,
+            "rationale": "State code can correlate with commute patterns through geography and infrastructure, but it is a direct domain/geography identifier and likely captures brittle state-specific artifacts rather than stable individual-level predictive signal."
+          },
+          {
+            "task_summary": "Predict whether a working adult's commute travel time exceeds the ACSTravelTime threshold.",
+            "feature": "ST",
+            "score": 0.03,
+            "rationale": "State code is a direct geography/domain identifier that may capture state-specific commute patterns and sampling artifacts, but it is unlikely to provide stable semantic predictive value under out-of-distribution generalization across states."
+          },
+          {
+            "task_summary": "Predict whether a working adult's commute time to work exceeds the task threshold for long travel time.",
+            "feature": "ST",
+            "score": 0.03,
+            "rationale": "State code is a direct geographic identifier that may capture state-specific commute distributions and infrastructure artifacts, but is unlikely to provide stable semantic predictive value across unseen states."
+          }
+        ]
+      },
+      {
+        "feature": "CIT",
+        "score_mean": 0.15,
+        "score_std": 0.0,
+        "samples": [
+          {
+            "task_summary": "Predict whether an employed person has a long commute time to work.",
+            "feature": "CIT",
+            "score": 0.15,
+            "rationale": "Citizenship status may weakly correlate with commute through immigrant settlement, job, and housing patterns, but it is a demographic shortcut with state- and metro-specific artifacts rather than a stable semantic driver of travel time."
+          },
+          {
+            "task_summary": "Predict whether a working adult has a long commute/travel time to work.",
+            "feature": "CIT",
+            "score": 0.15,
+            "rationale": "Citizenship status has little direct causal connection to commute duration and mainly acts as a proxy for nativity, demographics, urban concentration, and state-specific immigrant settlement patterns, making it a brittle and sensitive shortcut."
+          },
+          {
+            "task_summary": "Predict whether a working adult has a long commute travel time to work in the ACS travel-time task.",
+            "feature": "CIT",
+            "score": 0.15,
+            "rationale": "Citizenship status may correlate with commute through urban residence and labor-market patterns, but it is a sensitive demographic shortcut with weak direct semantic relevance and likely state-specific distributional artifacts."
+          },
+          {
+            "task_summary": "Predict whether a working person's commute travel time exceeds a threshold, typically 20 minutes.",
+            "feature": "CIT",
+            "score": 0.15,
+            "rationale": "Citizenship status has little direct semantic link to commute duration and is likely to act as a demographic/geographic shortcut whose associations vary across states."
+          },
+          {
+            "task_summary": "Predict whether a worker has a long commute/travel time to work in the ACS travel-time task.",
+            "feature": "CIT",
+            "score": 0.15,
+            "rationale": "Citizenship status may weakly correlate with commute through labor-market and settlement patterns, but it is a demographic shortcut tied to immigration and geography rather than a stable semantic driver of travel time."
+          }
+        ]
+      },
+      {
+        "feature": "OCCP",
+        "score_mean": 0.622,
+        "score_std": 0.03919183588453088,
+        "samples": [
+          {
+            "task_summary": "Predict whether a working adult's usual travel time to work exceeds the task threshold.",
+            "feature": "OCCP",
+            "score": 0.58,
+            "rationale": "Occupation is semantically related to commuting patterns through worksite type, schedule, and urban job concentration, so it should have moderate cross-state signal, but it also reflects industry mix, socioeconomic status, occupational segregation, and state-specific labor geography, making it somewhat brittle."
+          },
+          {
+            "task_summary": "Predict whether a worker's commute travel time exceeds the task threshold for the ACS travel-time outcome.",
+            "feature": "OCCP",
+            "score": 0.65,
+            "rationale": "Occupation is plausibly and semantically related to commute length through job location, worksite type, schedules, and remote/work patterns, and many such effects should transfer across states; however it is high-cardinality and can proxy socioeconomic status, demographics, industry mix, and local labor-market geography, so its stable marginal usefulness is only moderate."
+          },
+          {
+            "task_summary": "Predict whether a working adult has a long commute/travel time to work.",
+            "feature": "OCCP",
+            "score": 0.58,
+            "rationale": "Occupation is semantically related to commute patterns through worksite type, schedule, and labor-market structure, and this relationship should partly transfer across states, but it also captures socioeconomic and demographic composition and can reflect state-specific job geography, so its stable marginal usefulness is moderate rather than high."
+          },
+          {
+            "task_summary": "Predict whether a working adult has a commute time above the task threshold for travel to work.",
+            "feature": "OCCP",
+            "score": 0.68,
+            "rationale": "Occupation is semantically related to commute patterns because job types differ in worksite constraints, schedules, and urban concentration, making it moderately stable across states; however, fine-grained occupation codes can also encode local labor-market structure and demographic or socioeconomic shortcuts, so it is not maximally robust."
+          },
+          {
+            "task_summary": "Predict whether an employed individual's commute travel time exceeds the task threshold.",
+            "feature": "OCCP",
+            "score": 0.62,
+            "rationale": "Occupation is semantically related to commute patterns and should retain some predictive value across states, but it is high-cardinality and can reflect local labor markets, socioeconomic status, and demographic composition, making it partly brittle for out-of-distribution generalization."
+          }
+        ]
+      },
+      {
+        "feature": "JWTR",
+        "score_mean": 0.838,
+        "score_std": 0.03487119154832538,
+        "samples": [
+          {
+            "task_summary": "Predict whether a worker's usual travel time to work exceeds a threshold for commute duration.",
+            "feature": "JWTR",
+            "score": 0.85,
+            "rationale": "Means of transportation to work is directly and semantically tied to commute duration, with generally stable patterns across states, though it may partially reflect urban/geographic infrastructure differences."
+          },
+          {
+            "task_summary": "Predict whether an individual's commute travel time to work exceeds the task threshold.",
+            "feature": "JWTR",
+            "score": 0.78,
+            "rationale": "Means of transportation to work is semantically and causally related to commute duration and should generalize reasonably across states, though it partly encodes urban infrastructure and geography such as transit availability."
+          },
+          {
+            "task_summary": "Predict whether an individual's commute travel time to work exceeds a threshold in the ACS travel-time task.",
+            "feature": "JWTR",
+            "score": 0.82,
+            "rationale": "JWTR records means of transportation to work, which is directly and semantically related to commute duration and should generalize reasonably across states, though some categories such as subway or ferry can encode urban/geographic state-specific artifacts."
+          },
+          {
+            "task_summary": "Predict whether an individual's commute travel time is long for the ACS travel-time-to-work task.",
+            "feature": "JWTR",
+            "score": 0.88,
+            "rationale": "Means of transportation to work is directly and semantically tied to commute duration, with effects like public transit or walking versus driving likely stable across states, though it can partially reflect urban/geographic context."
+          },
+          {
+            "task_summary": "Predict whether a working individual's commute time is long for the ACS travel-time outcome.",
+            "feature": "JWTR",
+            "score": 0.86,
+            "rationale": "Means of transportation to work is directly and semantically tied to commute duration, with broadly stable effects across states, though it may partly reflect urbanicity and local transit infrastructure."
+          }
+        ]
+      },
+      {
+        "feature": "POWPUMA",
+        "score_mean": 0.12,
+        "score_std": 0.039999999999999994,
+        "samples": [
+          {
+            "task_summary": "Predict whether a worker’s usual commute time exceeds the task threshold for travel time to work.",
+            "feature": "POWPUMA",
+            "score": 0.05,
+            "rationale": "Place-of-work PUMA is a highly state-specific geographic identifier with arbitrary codes; while commute time is geographically related, this feature mainly risks brittle location shortcuts rather than stable semantic prediction across states."
+          },
+          {
+            "task_summary": "Predict whether a worker's commute time exceeds the task threshold for travel time.",
+            "feature": "POWPUMA",
+            "score": 0.15,
+            "rationale": "Place-of-work PUMA can correlate with commute length through urban/job-center geography, but its codes are highly state- and region-specific and likely capture brittle geographic artifacts rather than portable semantic predictors."
+          },
+          {
+            "task_summary": "Predict whether a worker has a long commute travel time to work.",
+            "feature": "POWPUMA",
+            "score": 0.1,
+            "rationale": "POWPUMA is a workplace geographic area code whose numeric values are state-specific and likely capture local geography or distributional artifacts rather than a portable semantic predictor across states."
+          },
+          {
+            "task_summary": "Predict whether a working adult has a long commute/travel time to work in the ACS travel-time task.",
+            "feature": "POWPUMA",
+            "score": 0.15,
+            "rationale": "Place-of-work PUMA can correlate with commute times via urban form and job-center location, but it is a highly state/geography-specific code with brittle semantics across states and likely encodes local distributional artifacts rather than stable individual-level predictors."
+          },
+          {
+            "task_summary": "Predict whether a worker has a long commute travel time to work.",
+            "feature": "POWPUMA",
+            "score": 0.15,
+            "rationale": "POWPUMA identifies the place-of-work geographic area, which can correlate with commute time through local urban form and job centers but is highly state-specific and likely to encode brittle geographic artifacts rather than stable semantic predictors across states."
+          }
+        ]
+      },
+      {
+        "feature": "POVPIP",
+        "score_mean": 0.33599999999999997,
+        "score_std": 0.04454211490264017,
+        "samples": [
+          {
+            "task_summary": "Predict whether a working individual's commute travel time exceeds the task threshold in ACS travel-time data.",
+            "feature": "POVPIP",
+            "score": 0.38,
+            "rationale": "Poverty-to-income ratio can be modestly related to commute length through housing affordability, job access, and transportation options, but it is an indirect socioeconomic proxy with relationships that vary substantially by state, metro structure, and local cost of living."
+          },
+          {
+            "task_summary": "Predict whether a working adult has a long commute/travel time to work.",
+            "feature": "POVPIP",
+            "score": 0.35,
+            "rationale": "Income-to-poverty ratio may weakly capture stable socioeconomic constraints related to housing and commute options, but it is an indirect proxy with cost-of-living and state distribution artifacts and can encode demographic shortcuts."
+          },
+          {
+            "task_summary": "Predict whether an individual's commute-to-work travel time exceeds the task threshold in the ACS TravelTime setting.",
+            "feature": "POVPIP",
+            "score": 0.35,
+            "rationale": "Income-to-poverty ratio may have some stable relationship to commute options, residential location, and job access, but it is an indirect socioeconomic proxy that can encode demographic and state-specific housing/transportation patterns rather than robust travel-time mechanisms."
+          },
+          {
+            "task_summary": "Predict whether a worker has a long one-way commute time, typically over 20 minutes, using ACS person-level attributes.",
+            "feature": "POVPIP",
+            "score": 0.35,
+            "rationale": "Poverty-to-income ratio can weakly reflect stable factors like job access, transportation options, and residential sorting, but its relationship to commute time is highly mediated by local geography, housing markets, transit systems, and state-specific cost-of-living patterns, making it a brittle socioeconomic shortcut."
+          },
+          {
+            "task_summary": "Predict whether an employed adult has a long commute/travel time to work in the ACS PUMS data.",
+            "feature": "POVPIP",
+            "score": 0.25,
+            "rationale": "Poverty-to-income ratio may weakly reflect stable socioeconomic constraints related to commute distance or mode, but it is an indirect shortcut that can encode local cost-of-living, urbanization, and state-specific demographic patterns rather than semantic travel-time mechanisms."
+          }
+        ]
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "feature": "AGEP",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `AGEP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"AGEP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an individual's commute travel time to work exceeds the task threshold in ACS PUMS data.\",\"feature\":\"AGEP\",\"score\":0.35,\"rationale\":\"Age may capture stable life-cycle effects on commuting among workers, but its marginal signal is likely modest and partly a demographic shortcut rather than a direct determinant of travel time.\"}",
+      "input_tokens": 565,
+      "output_tokens": 292,
+      "total_tokens": 857
+    },
+    {
+      "feature": "AGEP",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `AGEP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"AGEP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an ACS respondent has a long commute/travel time to work.\",\"feature\":\"AGEP\",\"score\":0.42,\"rationale\":\"Age can have some stable relationship to commute patterns through career stage and job constraints, but it is an indirect demographic proxy with likely weak marginal signal and possible shortcut effects rather than a robust causal predictor.\"}",
+      "input_tokens": 565,
+      "output_tokens": 246,
+      "total_tokens": 811
+    },
+    {
+      "feature": "AGEP",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `AGEP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"AGEP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working individual's commute travel time exceeds the task threshold for ACS travel time.\",\"feature\":\"AGEP\",\"score\":0.35,\"rationale\":\"Age may have a modest, broadly stable relationship with commuting through life stage, job tenure, and work patterns, but it is an individual demographic attribute with weak marginal causal connection to commute duration and can act as a brittle demographic shortcut across states.\"}",
+      "input_tokens": 565,
+      "output_tokens": 287,
+      "total_tokens": 852
+    },
+    {
+      "feature": "AGEP",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `AGEP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"AGEP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether a working individual's commute travel time exceeds the task threshold.\",\n  \"feature\": \"AGEP\",\n  \"score\": 0.35,\n  \"rationale\": \"Age may have some stable marginal relationship with commuting patterns through career stage and job type, but it is an indirect demographic proxy with limited semantic connection to travel time and possible shortcut behavior.\"\n}",
+      "input_tokens": 565,
+      "output_tokens": 177,
+      "total_tokens": 742
+    },
+    {
+      "feature": "AGEP",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `AGEP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"AGEP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an individual's commute travel time to work exceeds the task threshold in ACS PUMS.\",\"feature\":\"AGEP\",\"score\":0.46,\"rationale\":\"Age has some stable semantic relationship to commuting via life stage, work arrangements, and residential/job choices, but it is a demographic proxy with only indirect predictive value and may capture shortcut patterns rather than causal commute factors.\"}",
+      "input_tokens": 565,
+      "output_tokens": 363,
+      "total_tokens": 928
+    },
+    {
+      "feature": "SCHL",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SCHL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SCHL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working adult has a long commute/travel time to work in the ACS travel-time task.\",\"feature\":\"SCHL\",\"score\":0.42,\"rationale\":\"Educational attainment can be modestly and stably related to commute patterns through occupation, income, and job location, but it is an indirect socioeconomic proxy and may capture demographic or state-specific labor-market artifacts rather than commute mechanics.\"}",
+      "input_tokens": 565,
+      "output_tokens": 217,
+      "total_tokens": 782
+    },
+    {
+      "feature": "SCHL",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SCHL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SCHL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an employed adult has a long commute/travel time to work in the ACS PUMS acstraveltime task.\",\"feature\":\"SCHL\",\"score\":0.43,\"rationale\":\"Educational attainment can have some stable semantic link to occupation type, income, and residential/job-location patterns that affect commute time, but travel time is strongly driven by local geography and transportation infrastructure, and SCHL also risks acting as a demographic socioeconomic proxy rather than a direct causal predictor.\"}",
+      "input_tokens": 565,
+      "output_tokens": 301,
+      "total_tokens": 866
+    },
+    {
+      "feature": "SCHL",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SCHL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SCHL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working adult has a commute time above the task threshold.\",\"feature\":\"SCHL\",\"score\":0.42,\"rationale\":\"Educational attainment is a moderately stable proxy for job type, income, and work arrangements that can affect commute length, but its effect is indirect and may capture socioeconomic/demographic distributional shortcuts that vary by state.\"}",
+      "input_tokens": 565,
+      "output_tokens": 214,
+      "total_tokens": 779
+    },
+    {
+      "feature": "SCHL",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SCHL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SCHL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether a working adult has a commute travel time above the task threshold.\",\n  \"feature\": \"SCHL\",\n  \"score\": 0.3,\n  \"rationale\": \"Educational attainment may weakly proxy job type, income, and residential location, which can affect commute time, but it is indirect and partly a socioeconomic/demographic shortcut whose relationship may vary across states.\"\n}",
+      "input_tokens": 565,
+      "output_tokens": 181,
+      "total_tokens": 746
+    },
+    {
+      "feature": "SCHL",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SCHL` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SCHL\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual's commute travel time to work exceeds the task threshold.\",\n  \"feature\": \"SCHL\",\n  \"score\": 0.32,\n  \"rationale\": \"Educational attainment may have a modest, semantically plausible link to job type, income, and commuting patterns, but it is only indirectly related to travel time and can act as a socioeconomic or demographic proxy with state-specific correlations.\"\n}",
+      "input_tokens": 565,
+      "output_tokens": 226,
+      "total_tokens": 791
+    },
+    {
+      "feature": "MAR",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MAR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MAR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether a working individual's commute travel time exceeds the task threshold.\",\n  \"feature\": \"MAR\",\n  \"score\": 0.25,\n  \"rationale\": \"Marital status may weakly correlate with age, household structure, and residential location, which can affect commute time, but it is an indirect demographic shortcut with limited stable semantic connection to travel duration across states.\"\n}",
+      "input_tokens": 563,
+      "output_tokens": 325,
+      "total_tokens": 888
+    },
+    {
+      "feature": "MAR",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MAR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MAR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether a working adult's commute travel time exceeds a task-defined threshold using ACS person-level attributes.\",\n  \"feature\": \"MAR\",\n  \"score\": 0.25,\n  \"rationale\": \"Marital status may weakly proxy life stage, household structure, and residential location choices that affect commute length, but it is an indirect demographic shortcut with limited causal relevance and likely state-specific correlations.\"\n}",
+      "input_tokens": 563,
+      "output_tokens": 206,
+      "total_tokens": 769
+    },
+    {
+      "feature": "MAR",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MAR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MAR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether a worker's commute travel time exceeds the task threshold for ACS travel time.\",\n  \"feature\": \"MAR\",\n  \"score\": 0.25,\n  \"rationale\": \"Marital status may weakly proxy household structure, age, and residential choices that affect commuting, but it is an indirect demographic shortcut with limited semantic connection to travel time and uncertain stability across states.\"\n}",
+      "input_tokens": 563,
+      "output_tokens": 321,
+      "total_tokens": 884
+    },
+    {
+      "feature": "MAR",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MAR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MAR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether a working individual has a long commute travel time to work.\",\n  \"feature\": \"MAR\",\n  \"score\": 0.25,\n  \"rationale\": \"Marital status may weakly correlate with household location and commuting patterns, but it is an indirect demographic shortcut with state- and life-stage-dependent associations rather than a semantically robust predictor.\"\n}",
+      "input_tokens": 563,
+      "output_tokens": 321,
+      "total_tokens": 884
+    },
+    {
+      "feature": "MAR",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MAR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MAR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an employed individual's commute to work is longer than a specified travel-time threshold.\",\n  \"feature\": \"MAR\",\n  \"score\": 0.25,\n  \"rationale\": \"Marital status may weakly correlate with commute length through household structure, age, and residential choices, but it is an indirect demographic attribute with limited causal connection and may encode brittle demographic or regional patterns across states.\"\n}",
+      "input_tokens": 563,
+      "output_tokens": 195,
+      "total_tokens": 758
+    },
+    {
+      "feature": "SEX",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SEX` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SEX\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS respondent's commute time to work exceeds the task threshold.\",\n  \"feature\": \"SEX\",\n  \"score\": 0.15,\n  \"rationale\": \"Sex may weakly correlate with commute patterns through labor-market and household-role differences, but it is a sensitive demographic shortcut with limited stable semantic relevance across states.\"\n}",
+      "input_tokens": 563,
+      "output_tokens": 299,
+      "total_tokens": 862
+    },
+    {
+      "feature": "SEX",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SEX` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SEX\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an individual's commute time to work exceeds a threshold in the ACS travel-time task.\",\"feature\":\"SEX\",\"score\":0.12,\"rationale\":\"SEX may have weak marginal correlation with commute patterns through labor-market and household-role differences, but it is a sensitive demographic shortcut with limited causal relevance and potentially unstable effects across states.\"}",
+      "input_tokens": 563,
+      "output_tokens": 164,
+      "total_tokens": 727
+    },
+    {
+      "feature": "SEX",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SEX` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SEX\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working individual has a long commute/travel time to work in the ACS PUMS data.\",\"feature\":\"SEX\",\"score\":0.15,\"rationale\":\"Sex may have weak marginal correlation with commute patterns through labor-market and household-role differences, but it is a sensitive demographic shortcut with limited direct causal relevance and potentially unstable effects across states.\"}",
+      "input_tokens": 563,
+      "output_tokens": 219,
+      "total_tokens": 782
+    },
+    {
+      "feature": "SEX",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SEX` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SEX\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual's commute time to work exceeds a threshold in the ACS travel-time task.\",\n  \"feature\": \"SEX\",\n  \"score\": 0.2,\n  \"rationale\": \"SEX may have weak marginal correlation with commuting patterns through labor-market and household-role differences, but it is a sensitive demographic shortcut with limited causal relevance and potentially variable state-specific effects.\"\n}",
+      "input_tokens": 563,
+      "output_tokens": 346,
+      "total_tokens": 909
+    },
+    {
+      "feature": "SEX",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `SEX` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"SEX\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an employed person's commute travel time exceeds a threshold, typically 20 minutes.\",\n  \"feature\": \"SEX\",\n  \"score\": 0.15,\n  \"rationale\": \"SEX may have weak marginal correlation with commute time through labor-market and household-role patterns, but it is a sensitive demographic shortcut with limited stable semantic relevance and likely varies across states.\"\n}",
+      "input_tokens": 563,
+      "output_tokens": 246,
+      "total_tokens": 809
+    },
+    {
+      "feature": "DIS",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DIS` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DIS\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working individual's commute time exceeds the task threshold for travel time to work.\",\"feature\":\"DIS\",\"score\":0.25,\"rationale\":\"Disability status may have some stable association with commuting patterns through mobility constraints or job selection, but it is a sensitive health-related attribute and likely acts as a demographic shortcut rather than a direct, robust predictor of commute duration.\"}",
+      "input_tokens": 563,
+      "output_tokens": 262,
+      "total_tokens": 825
+    },
+    {
+      "feature": "DIS",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DIS` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DIS\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether a person's commute travel time to work exceeds a specified threshold.\",\n  \"feature\": \"DIS\",\n  \"score\": 0.25,\n  \"rationale\": \"Disability status may have some stable relationship to commuting constraints and work arrangements, but it is a sensitive demographic/health attribute and only indirectly predictive, so it should receive a low prior weight.\"\n}",
+      "input_tokens": 563,
+      "output_tokens": 278,
+      "total_tokens": 841
+    },
+    {
+      "feature": "DIS",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DIS` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DIS\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working person's commute travel time exceeds the task threshold for ACS travel time.\",\"feature\":\"DIS\",\"score\":0.25,\"rationale\":\"Disability status may have a modest, semantically plausible relationship to commute duration through mobility constraints and job/transport choices, but it is a sensitive health/demographic attribute and likely only weakly and indirectly predictive across states.\"}",
+      "input_tokens": 563,
+      "output_tokens": 331,
+      "total_tokens": 894
+    },
+    {
+      "feature": "DIS",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DIS` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DIS\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working individual's commute travel time exceeds a threshold in the ACS travel-time task.\",\"feature\":\"DIS\",\"score\":0.18,\"rationale\":\"Disability status may have weak marginal association with commute length through work constraints or accommodations, but it is a sensitive health-related attribute and likely functions as a demographic shortcut rather than a stable semantic predictor across states.\"}",
+      "input_tokens": 563,
+      "output_tokens": 393,
+      "total_tokens": 956
+    },
+    {
+      "feature": "DIS",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `DIS` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"DIS\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a worker's commute travel time exceeds the task threshold for ACS respondents.\",\"feature\":\"DIS\",\"score\":0.22,\"rationale\":\"Disability status may have some stable marginal association with commuting patterns through work constraints or transportation access, but it is a sensitive demographic/health attribute and likely offers only indirect, potentially shortcut-like predictive signal rather than robust semantic causality.\"}",
+      "input_tokens": 563,
+      "output_tokens": 317,
+      "total_tokens": 880
+    },
+    {
+      "feature": "ESP",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ESP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ESP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether a working individual's commute travel time exceeds the task threshold.\",\n  \"feature\": \"ESP\",\n  \"score\": 0.12,\n  \"rationale\": \"ESP records parents' employment status and is mostly relevant for children, making it only weakly and indirectly related to commute time for workers; it may act as a household or demographic shortcut rather than a stable semantic predictor across states.\"\n}",
+      "input_tokens": 563,
+      "output_tokens": 481,
+      "total_tokens": 1044
+    },
+    {
+      "feature": "ESP",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ESP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ESP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working ACS respondent has a long commute/travel time to work.\",\"feature\":\"ESP\",\"score\":0.08,\"rationale\":\"ESP encodes parental employment status mainly for children and is largely inapplicable or demographic/family-structure related for commuting workers, offering little stable semantic signal for commute time while risking brittle demographic shortcuts.\"}",
+      "input_tokens": 563,
+      "output_tokens": 458,
+      "total_tokens": 1021
+    },
+    {
+      "feature": "ESP",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ESP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ESP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working individual has a commute/travel time to work above the task threshold.\",\"feature\":\"ESP\",\"score\":0.08,\"rationale\":\"ESP is employment status of parents, mostly inapplicable or a household-demographic proxy for commuters, with little direct semantic link to commute duration and risk of brittle demographic shortcuts.\"}",
+      "input_tokens": 563,
+      "output_tokens": 337,
+      "total_tokens": 900
+    },
+    {
+      "feature": "ESP",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ESP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ESP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether a working person's commute travel time exceeds the task threshold.\",\n  \"feature\": \"ESP\",\n  \"score\": 0.1,\n  \"rationale\": \"Employment status of parents is mostly inapplicable for adult commuters and mainly captures household/age-related demographic structure rather than a stable causal driver of commute time, making it weak and potentially shortcut-prone across states.\"\n}",
+      "input_tokens": 563,
+      "output_tokens": 443,
+      "total_tokens": 1006
+    },
+    {
+      "feature": "ESP",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ESP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ESP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an employed person's commute travel time to work exceeds the task threshold.\",\n  \"feature\": \"ESP\",\n  \"score\": 0.05,\n  \"rationale\": \"ESP describes parents' employment status and is mostly inapplicable for adult commuters, so any signal is likely an age/household-structure shortcut rather than a stable semantic predictor of commute time across states.\"\n}",
+      "input_tokens": 563,
+      "output_tokens": 546,
+      "total_tokens": 1109
+    },
+    {
+      "feature": "MIG",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MIG` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MIG\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a worker has a long commute/travel time to work in the ACS travel-time task.\",\"feature\":\"MIG\",\"score\":0.25,\"rationale\":\"Migration status may weakly relate to commute choices after moving, but it is indirect and can encode geography, housing-market, age, and state-specific mobility artifacts rather than a stable semantic cause of travel time.\"}",
+      "input_tokens": 565,
+      "output_tokens": 275,
+      "total_tokens": 840
+    },
+    {
+      "feature": "MIG",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MIG` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MIG\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an individual's commute time to work exceeds the task threshold.\",\"feature\":\"MIG\",\"score\":0.25,\"rationale\":\"Recent migration status may weakly relate to commute length through housing/job changes, but it is an indirect proxy prone to demographic and state-specific mobility patterns rather than a stable semantic predictor.\"}",
+      "input_tokens": 565,
+      "output_tokens": 292,
+      "total_tokens": 857
+    },
+    {
+      "feature": "MIG",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MIG` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MIG\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a worker has a long commute time to work.\",\"feature\":\"MIG\",\"score\":0.25,\"rationale\":\"Mobility status may weakly relate to commute length through recent moves and job-housing changes, but it is indirect and can capture geography, housing-market, and demographic artifacts that may not transfer reliably across states.\"}",
+      "input_tokens": 565,
+      "output_tokens": 357,
+      "total_tokens": 922
+    },
+    {
+      "feature": "MIG",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MIG` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MIG\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual's commute travel time exceeds the task threshold for workers in ACS PUMS.\",\n  \"feature\": \"MIG\",\n  \"score\": 0.25,\n  \"rationale\": \"Migration status may weakly relate to commute patterns through recent moves and housing-job matching, but it is indirect and likely reflects state-specific mobility, housing-market, and demographic artifacts rather than stable travel-time mechanisms.\"\n}",
+      "input_tokens": 565,
+      "output_tokens": 375,
+      "total_tokens": 940
+    },
+    {
+      "feature": "MIG",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `MIG` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"MIG\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether a working adult has a commute travel time above the task threshold.\",\n  \"feature\": \"MIG\",\n  \"score\": 0.2,\n  \"rationale\": \"Migration status may weakly relate to commute length through recent moves or residential instability, but it is not a direct semantic determinant of travel time and can capture state-specific mobility, housing-market, and demographic artifacts.\"\n}",
+      "input_tokens": 565,
+      "output_tokens": 210,
+      "total_tokens": 775
+    },
+    {
+      "feature": "RELP",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RELP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RELP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an individual's commute travel time to work is long versus short in the ACS travel-time task.\",\"feature\":\"RELP\",\"score\":0.25,\"rationale\":\"Relationship to household reference person may weakly proxy life stage and household role, which can correlate with commuting, but it is only indirectly related to travel time and risks acting as a demographic or household-composition shortcut rather than a stable causal predictor across states.\"}",
+      "input_tokens": 565,
+      "output_tokens": 418,
+      "total_tokens": 983
+    },
+    {
+      "feature": "RELP",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RELP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RELP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an employed person's commute travel time exceeds a task-defined threshold.\",\"feature\":\"RELP\",\"score\":0.25,\"rationale\":\"Relationship to householder may weakly capture stable life-stage and household-role effects on commuting, but it is mostly an indirect demographic shortcut with limited semantic connection to travel time and potential brittleness across states.\"}",
+      "input_tokens": 565,
+      "output_tokens": 196,
+      "total_tokens": 761
+    },
+    {
+      "feature": "RELP",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RELP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RELP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an employed individual's commute time to work exceeds a task-defined threshold, typically long travel time.\",\"feature\":\"RELP\",\"score\":0.25,\"rationale\":\"Household relationship may weakly proxy life stage and household responsibilities that affect commuting, but it is indirect and can encode demographic/family-structure shortcuts with limited stable causal relevance across states.\"}",
+      "input_tokens": 565,
+      "output_tokens": 306,
+      "total_tokens": 871
+    },
+    {
+      "feature": "RELP",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RELP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RELP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an employed adult's commute travel time exceeds the task threshold for the ACS travel-time outcome.\",\"feature\":\"RELP\",\"score\":0.25,\"rationale\":\"Household relationship may weakly proxy life stage and household constraints that affect commuting, but it is indirect, demographic, and prone to shortcut correlations rather than stable causal predictive signal across states.\"}",
+      "input_tokens": 565,
+      "output_tokens": 277,
+      "total_tokens": 842
+    },
+    {
+      "feature": "RELP",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RELP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RELP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an employed individual's commute time to work exceeds the task threshold.\",\"feature\":\"RELP\",\"score\":0.2,\"rationale\":\"Relationship to householder may weakly proxy life stage and household role, which can correlate with commuting, but it is an indirect demographic shortcut with limited causal relevance and possible state-specific household-composition artifacts.\"}",
+      "input_tokens": 565,
+      "output_tokens": 246,
+      "total_tokens": 811
+    },
+    {
+      "feature": "RAC1P",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RAC1P` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RAC1P\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working adult has a long commute/travel time to work in the ACS travel-time task.\",\"feature\":\"RAC1P\",\"score\":0.1,\"rationale\":\"Race may correlate with commute through residential segregation, local labor markets, and state-specific demographics, but it is a sensitive demographic shortcut with weak semantic transport relevance and likely unstable OOD predictive value.\"}",
+      "input_tokens": 569,
+      "output_tokens": 197,
+      "total_tokens": 766
+    },
+    {
+      "feature": "RAC1P",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RAC1P` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RAC1P\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an employed person has a commute time above the ACS travel-time threshold.\",\"feature\":\"RAC1P\",\"score\":0.12,\"rationale\":\"RAC1P encodes race, a sensitive demographic attribute; while it may correlate with commute times through segregation and access disparities, it is not semantically causal and is likely to act as a brittle demographic/geographic shortcut across states.\"}",
+      "input_tokens": 569,
+      "output_tokens": 299,
+      "total_tokens": 868
+    },
+    {
+      "feature": "RAC1P",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RAC1P` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RAC1P\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an employed adult's usual travel time to work exceeds a threshold for the ACS commute-time task.\",\"feature\":\"RAC1P\",\"score\":0.1,\"rationale\":\"Race is a sensitive demographic attribute with limited direct semantic relevance to commute duration; any predictive signal likely reflects segregation, geography, socioeconomic confounding, or state-specific artifacts rather than stable transport behavior.\"}",
+      "input_tokens": 569,
+      "output_tokens": 225,
+      "total_tokens": 794
+    },
+    {
+      "feature": "RAC1P",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RAC1P` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RAC1P\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual's commute travel time to work is above the task threshold.\",\n  \"feature\": \"RAC1P\",\n  \"score\": 0.12,\n  \"rationale\": \"Race may correlate with commute time through residential segregation, occupation, and local infrastructure, but it is a sensitive demographic shortcut with state-specific correlations rather than a stable semantic predictor.\"\n}",
+      "input_tokens": 569,
+      "output_tokens": 287,
+      "total_tokens": 856
+    },
+    {
+      "feature": "RAC1P",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `RAC1P` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"RAC1P\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether a working adult has a long commute travel time to work.\",\n  \"feature\": \"RAC1P\",\n  \"score\": 0.12,\n  \"rationale\": \"Race may correlate with commute length through segregation, housing, and labor-market disparities, but it is a sensitive demographic shortcut with relationships that vary substantially by state and geography rather than a stable semantic predictor.\"\n}",
+      "input_tokens": 569,
+      "output_tokens": 255,
+      "total_tokens": 824
+    },
+    {
+      "feature": "PUMA",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `PUMA` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"PUMA\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual's commute to work exceeds the task's travel-time threshold.\",\n  \"feature\": \"PUMA\",\n  \"score\": 0.05,\n  \"rationale\": \"PUMA is a local geographic identifier whose codes are not semantically comparable across states; while it may capture commute patterns in-sample, it is likely a brittle geography artifact with poor stable OOD usefulness.\"\n}",
+      "input_tokens": 565,
+      "output_tokens": 259,
+      "total_tokens": 824
+    },
+    {
+      "feature": "PUMA",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `PUMA` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"PUMA\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether a worker's commute travel time exceeds a threshold for the ACS travel-time task.\",\n  \"feature\": \"PUMA\",\n  \"score\": 0.03,\n  \"rationale\": \"PUMA is a geographic identifier whose codes are state-specific and mostly capture local infrastructure, housing, and labor-market artifacts rather than portable individual-level predictors, so it is likely brittle for out-of-distribution generalization across states.\"\n}",
+      "input_tokens": 565,
+      "output_tokens": 290,
+      "total_tokens": 855
+    },
+    {
+      "feature": "PUMA",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `PUMA` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"PUMA\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether a worker has a long commute travel time to work.\",\n  \"feature\": \"PUMA\",\n  \"score\": 0.05,\n  \"rationale\": \"PUMA is a geographic identifier whose codes are state-specific and can capture local infrastructure or regional artifacts, making it brittle for out-of-distribution generalization across states despite possible in-state correlation with commute time.\"\n}",
+      "input_tokens": 565,
+      "output_tokens": 313,
+      "total_tokens": 878
+    },
+    {
+      "feature": "PUMA",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `PUMA` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"PUMA\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether a working adult has a long commute travel time to work.\",\n  \"feature\": \"PUMA\",\n  \"score\": 0.1,\n  \"rationale\": \"PUMA is a granular within-state geographic identifier whose codes are arbitrary and state-specific; although location can affect commute time, this feature is likely to encode brittle local artifacts rather than stable cross-state semantics.\"\n}",
+      "input_tokens": 565,
+      "output_tokens": 185,
+      "total_tokens": 750
+    },
+    {
+      "feature": "PUMA",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `PUMA` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"PUMA\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an individual's commute time to work exceeds the task threshold for the ACS travel-time outcome.\",\"feature\":\"PUMA\",\"score\":0.08,\"rationale\":\"PUMA is a fine-grained geographic identifier that can strongly capture local commute infrastructure and urbanicity in-sample, but its codes are state-specific and likely encode brittle geography and demographic distribution artifacts rather than stable semantic predictors across states.\"}",
+      "input_tokens": 565,
+      "output_tokens": 328,
+      "total_tokens": 893
+    },
+    {
+      "feature": "ST",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ST` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ST\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a worker's one-way commute time exceeds a threshold for the ACS travel-time task.\",\"feature\":\"ST\",\"score\":0.05,\"rationale\":\"State code can capture broad commuting-pattern differences but is a direct geography/domain identifier, likely to encode state-specific artifacts and generalize poorly to unseen states.\"}",
+      "input_tokens": 563,
+      "output_tokens": 248,
+      "total_tokens": 811
+    },
+    {
+      "feature": "ST",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ST` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ST\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual's commute-to-work travel time exceeds the task threshold.\",\n  \"feature\": \"ST\",\n  \"score\": 0.03,\n  \"rationale\": \"State code can correlate with commute patterns through geography, infrastructure, and urbanization, but it is a direct location artifact likely to fail under state-level OOD shifts and offers little stable semantic predictive value.\"\n}",
+      "input_tokens": 563,
+      "output_tokens": 247,
+      "total_tokens": 810
+    },
+    {
+      "feature": "ST",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ST` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ST\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an individual's commute travel time to work exceeds the task threshold in ACS PUMS.\",\"feature\":\"ST\",\"score\":0.05,\"rationale\":\"State code can correlate with commute patterns through geography and infrastructure, but it is a direct domain/geography identifier and likely captures brittle state-specific artifacts rather than stable individual-level predictive signal.\"}",
+      "input_tokens": 563,
+      "output_tokens": 298,
+      "total_tokens": 861
+    },
+    {
+      "feature": "ST",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ST` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ST\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working adult's commute travel time exceeds the ACSTravelTime threshold.\",\"feature\":\"ST\",\"score\":0.03,\"rationale\":\"State code is a direct geography/domain identifier that may capture state-specific commute patterns and sampling artifacts, but it is unlikely to provide stable semantic predictive value under out-of-distribution generalization across states.\"}",
+      "input_tokens": 563,
+      "output_tokens": 216,
+      "total_tokens": 779
+    },
+    {
+      "feature": "ST",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `ST` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"ST\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working adult's commute time to work exceeds the task threshold for long travel time.\",\"feature\":\"ST\",\"score\":0.03,\"rationale\":\"State code is a direct geographic identifier that may capture state-specific commute distributions and infrastructure artifacts, but is unlikely to provide stable semantic predictive value across unseen states.\"}",
+      "input_tokens": 563,
+      "output_tokens": 380,
+      "total_tokens": 943
+    },
+    {
+      "feature": "CIT",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `CIT` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"CIT\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an employed person has a long commute time to work.\",\"feature\":\"CIT\",\"score\":0.15,\"rationale\":\"Citizenship status may weakly correlate with commute through immigrant settlement, job, and housing patterns, but it is a demographic shortcut with state- and metro-specific artifacts rather than a stable semantic driver of travel time.\"}",
+      "input_tokens": 565,
+      "output_tokens": 411,
+      "total_tokens": 976
+    },
+    {
+      "feature": "CIT",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `CIT` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"CIT\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working adult has a long commute/travel time to work.\",\"feature\":\"CIT\",\"score\":0.15,\"rationale\":\"Citizenship status has little direct causal connection to commute duration and mainly acts as a proxy for nativity, demographics, urban concentration, and state-specific immigrant settlement patterns, making it a brittle and sensitive shortcut.\"}",
+      "input_tokens": 565,
+      "output_tokens": 332,
+      "total_tokens": 897
+    },
+    {
+      "feature": "CIT",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `CIT` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"CIT\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working adult has a long commute travel time to work in the ACS travel-time task.\",\"feature\":\"CIT\",\"score\":0.15,\"rationale\":\"Citizenship status may correlate with commute through urban residence and labor-market patterns, but it is a sensitive demographic shortcut with weak direct semantic relevance and likely state-specific distributional artifacts.\"}",
+      "input_tokens": 565,
+      "output_tokens": 230,
+      "total_tokens": 795
+    },
+    {
+      "feature": "CIT",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `CIT` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"CIT\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working person's commute travel time exceeds a threshold, typically 20 minutes.\",\"feature\":\"CIT\",\"score\":0.15,\"rationale\":\"Citizenship status has little direct semantic link to commute duration and is likely to act as a demographic/geographic shortcut whose associations vary across states.\"}",
+      "input_tokens": 565,
+      "output_tokens": 374,
+      "total_tokens": 939
+    },
+    {
+      "feature": "CIT",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `CIT` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"CIT\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a worker has a long commute/travel time to work in the ACS travel-time task.\",\"feature\":\"CIT\",\"score\":0.15,\"rationale\":\"Citizenship status may weakly correlate with commute through labor-market and settlement patterns, but it is a demographic shortcut tied to immigration and geography rather than a stable semantic driver of travel time.\"}",
+      "input_tokens": 565,
+      "output_tokens": 217,
+      "total_tokens": 782
+    },
+    {
+      "feature": "OCCP",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `OCCP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"OCCP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working adult's usual travel time to work exceeds the task threshold.\",\"feature\":\"OCCP\",\"score\":0.58,\"rationale\":\"Occupation is semantically related to commuting patterns through worksite type, schedule, and urban job concentration, so it should have moderate cross-state signal, but it also reflects industry mix, socioeconomic status, occupational segregation, and state-specific labor geography, making it somewhat brittle.\"}",
+      "input_tokens": 567,
+      "output_tokens": 221,
+      "total_tokens": 788
+    },
+    {
+      "feature": "OCCP",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `OCCP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"OCCP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a worker's commute travel time exceeds the task threshold for the ACS travel-time outcome.\",\"feature\":\"OCCP\",\"score\":0.65,\"rationale\":\"Occupation is plausibly and semantically related to commute length through job location, worksite type, schedules, and remote/work patterns, and many such effects should transfer across states; however it is high-cardinality and can proxy socioeconomic status, demographics, industry mix, and local labor-market geography, so its stable marginal usefulness is only moderate.\"}",
+      "input_tokens": 567,
+      "output_tokens": 315,
+      "total_tokens": 882
+    },
+    {
+      "feature": "OCCP",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `OCCP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"OCCP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working adult has a long commute/travel time to work.\",\"feature\":\"OCCP\",\"score\":0.58,\"rationale\":\"Occupation is semantically related to commute patterns through worksite type, schedule, and labor-market structure, and this relationship should partly transfer across states, but it also captures socioeconomic and demographic composition and can reflect state-specific job geography, so its stable marginal usefulness is moderate rather than high.\"}",
+      "input_tokens": 567,
+      "output_tokens": 396,
+      "total_tokens": 963
+    },
+    {
+      "feature": "OCCP",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `OCCP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"OCCP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether a working adult has a commute time above the task threshold for travel to work.\",\n  \"feature\": \"OCCP\",\n  \"score\": 0.68,\n  \"rationale\": \"Occupation is semantically related to commute patterns because job types differ in worksite constraints, schedules, and urban concentration, making it moderately stable across states; however, fine-grained occupation codes can also encode local labor-market structure and demographic or socioeconomic shortcuts, so it is not maximally robust.\"\n}",
+      "input_tokens": 567,
+      "output_tokens": 434,
+      "total_tokens": 1001
+    },
+    {
+      "feature": "OCCP",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `OCCP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"OCCP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether an employed individual's commute travel time exceeds the task threshold.\",\n  \"feature\": \"OCCP\",\n  \"score\": 0.62,\n  \"rationale\": \"Occupation is semantically related to commute patterns and should retain some predictive value across states, but it is high-cardinality and can reflect local labor markets, socioeconomic status, and demographic composition, making it partly brittle for out-of-distribution generalization.\"\n}",
+      "input_tokens": 567,
+      "output_tokens": 301,
+      "total_tokens": 868
+    },
+    {
+      "feature": "JWTR",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `JWTR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"JWTR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a worker's usual travel time to work exceeds a threshold for commute duration.\",\"feature\":\"JWTR\",\"score\":0.85,\"rationale\":\"Means of transportation to work is directly and semantically tied to commute duration, with generally stable patterns across states, though it may partially reflect urban/geographic infrastructure differences.\"}",
+      "input_tokens": 565,
+      "output_tokens": 269,
+      "total_tokens": 834
+    },
+    {
+      "feature": "JWTR",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `JWTR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"JWTR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an individual's commute travel time to work exceeds the task threshold.\",\"feature\":\"JWTR\",\"score\":0.78,\"rationale\":\"Means of transportation to work is semantically and causally related to commute duration and should generalize reasonably across states, though it partly encodes urban infrastructure and geography such as transit availability.\"}",
+      "input_tokens": 565,
+      "output_tokens": 314,
+      "total_tokens": 879
+    },
+    {
+      "feature": "JWTR",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `JWTR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"JWTR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an individual's commute travel time to work exceeds a threshold in the ACS travel-time task.\",\"feature\":\"JWTR\",\"score\":0.82,\"rationale\":\"JWTR records means of transportation to work, which is directly and semantically related to commute duration and should generalize reasonably across states, though some categories such as subway or ferry can encode urban/geographic state-specific artifacts.\"}",
+      "input_tokens": 565,
+      "output_tokens": 213,
+      "total_tokens": 778
+    },
+    {
+      "feature": "JWTR",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `JWTR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"JWTR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an individual's commute travel time is long for the ACS travel-time-to-work task.\",\"feature\":\"JWTR\",\"score\":0.88,\"rationale\":\"Means of transportation to work is directly and semantically tied to commute duration, with effects like public transit or walking versus driving likely stable across states, though it can partially reflect urban/geographic context.\"}",
+      "input_tokens": 565,
+      "output_tokens": 272,
+      "total_tokens": 837
+    },
+    {
+      "feature": "JWTR",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `JWTR` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"JWTR\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working individual's commute time is long for the ACS travel-time outcome.\",\"feature\":\"JWTR\",\"score\":0.86,\"rationale\":\"Means of transportation to work is directly and semantically tied to commute duration, with broadly stable effects across states, though it may partly reflect urbanicity and local transit infrastructure.\"}",
+      "input_tokens": 565,
+      "output_tokens": 345,
+      "total_tokens": 910
+    },
+    {
+      "feature": "POWPUMA",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `POWPUMA` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"POWPUMA\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a worker’s usual commute time exceeds the task threshold for travel time to work.\",\"feature\":\"POWPUMA\",\"score\":0.05,\"rationale\":\"Place-of-work PUMA is a highly state-specific geographic identifier with arbitrary codes; while commute time is geographically related, this feature mainly risks brittle location shortcuts rather than stable semantic prediction across states.\"}",
+      "input_tokens": 567,
+      "output_tokens": 369,
+      "total_tokens": 936
+    },
+    {
+      "feature": "POWPUMA",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `POWPUMA` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"POWPUMA\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\n  \"task_summary\": \"Predict whether a worker's commute time exceeds the task threshold for travel time.\",\n  \"feature\": \"POWPUMA\",\n  \"score\": 0.15,\n  \"rationale\": \"Place-of-work PUMA can correlate with commute length through urban/job-center geography, but its codes are highly state- and region-specific and likely capture brittle geographic artifacts rather than portable semantic predictors.\"\n}",
+      "input_tokens": 567,
+      "output_tokens": 311,
+      "total_tokens": 878
+    },
+    {
+      "feature": "POWPUMA",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `POWPUMA` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"POWPUMA\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a worker has a long commute travel time to work.\",\"feature\":\"POWPUMA\",\"score\":0.1,\"rationale\":\"POWPUMA is a workplace geographic area code whose numeric values are state-specific and likely capture local geography or distributional artifacts rather than a portable semantic predictor across states.\"}",
+      "input_tokens": 567,
+      "output_tokens": 387,
+      "total_tokens": 954
+    },
+    {
+      "feature": "POWPUMA",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `POWPUMA` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"POWPUMA\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working adult has a long commute/travel time to work in the ACS travel-time task.\",\"feature\":\"POWPUMA\",\"score\":0.15,\"rationale\":\"Place-of-work PUMA can correlate with commute times via urban form and job-center location, but it is a highly state/geography-specific code with brittle semantics across states and likely encodes local distributional artifacts rather than stable individual-level predictors.\"}",
+      "input_tokens": 567,
+      "output_tokens": 231,
+      "total_tokens": 798
+    },
+    {
+      "feature": "POWPUMA",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `POWPUMA` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"POWPUMA\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a worker has a long commute travel time to work.\",\"feature\":\"POWPUMA\",\"score\":0.15,\"rationale\":\"POWPUMA identifies the place-of-work geographic area, which can correlate with commute time through local urban form and job centers but is highly state-specific and likely to encode brittle geographic artifacts rather than stable semantic predictors across states.\"}",
+      "input_tokens": 567,
+      "output_tokens": 169,
+      "total_tokens": 736
+    },
+    {
+      "feature": "POVPIP",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `POVPIP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"POVPIP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working individual's commute travel time exceeds the task threshold in ACS travel-time data.\",\"feature\":\"POVPIP\",\"score\":0.38,\"rationale\":\"Poverty-to-income ratio can be modestly related to commute length through housing affordability, job access, and transportation options, but it is an indirect socioeconomic proxy with relationships that vary substantially by state, metro structure, and local cost of living.\"}",
+      "input_tokens": 567,
+      "output_tokens": 263,
+      "total_tokens": 830
+    },
+    {
+      "feature": "POVPIP",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `POVPIP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"POVPIP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a working adult has a long commute/travel time to work.\",\"feature\":\"POVPIP\",\"score\":0.35,\"rationale\":\"Income-to-poverty ratio may weakly capture stable socioeconomic constraints related to housing and commute options, but it is an indirect proxy with cost-of-living and state distribution artifacts and can encode demographic shortcuts.\"}",
+      "input_tokens": 567,
+      "output_tokens": 365,
+      "total_tokens": 932
+    },
+    {
+      "feature": "POVPIP",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `POVPIP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"POVPIP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an individual's commute-to-work travel time exceeds the task threshold in the ACS TravelTime setting.\",\"feature\":\"POVPIP\",\"score\":0.35,\"rationale\":\"Income-to-poverty ratio may have some stable relationship to commute options, residential location, and job access, but it is an indirect socioeconomic proxy that can encode demographic and state-specific housing/transportation patterns rather than robust travel-time mechanisms.\"}",
+      "input_tokens": 567,
+      "output_tokens": 303,
+      "total_tokens": 870
+    },
+    {
+      "feature": "POVPIP",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `POVPIP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"POVPIP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether a worker has a long one-way commute time, typically over 20 minutes, using ACS person-level attributes.\",\"feature\":\"POVPIP\",\"score\":0.35,\"rationale\":\"Poverty-to-income ratio can weakly reflect stable factors like job access, transportation options, and residential sorting, but its relationship to commute time is highly mediated by local geography, housing markets, transit systems, and state-specific cost-of-living patterns, making it a brittle socioeconomic shortcut.\"}",
+      "input_tokens": 567,
+      "output_tokens": 433,
+      "total_tokens": 1000
+    },
+    {
+      "feature": "POVPIP",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore the feature `POVPIP` by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature\": \"POVPIP\",\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive demographic shortcuts and state/geography artifacts.",
+      "content": "{\"task_summary\":\"Predict whether an employed adult has a long commute/travel time to work in the ACS PUMS data.\",\"feature\":\"POVPIP\",\"score\":0.25,\"rationale\":\"Poverty-to-income ratio may weakly reflect stable socioeconomic constraints related to commute distance or mode, but it is an indirect shortcut that can encode local cost-of-living, urbanization, and state-specific demographic patterns rather than semantic travel-time mechanisms.\"}",
+      "input_tokens": 567,
+      "output_tokens": 297,
+      "total_tokens": 864
+    }
+  ],
+  "config": {
+    "score_samples": 5
+  }
+}

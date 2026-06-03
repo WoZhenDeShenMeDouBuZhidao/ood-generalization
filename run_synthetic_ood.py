@@ -1,6 +1,7 @@
 import torch
 from synthetic_ood.dataset import FEATURE_INDEX, SyntheticConfig
 from src.main import main
+from src.utils import print_results
 
 
 if __name__ == "__main__":
@@ -20,7 +21,6 @@ if __name__ == "__main__":
         4: 'noise_2',
         5: 'noise_3',
     }
-    REMOVED_FEATURE_INDICES = []
 
     TRAIN_BATCH = 256
     EVAL_BATCH = 2048
@@ -50,6 +50,7 @@ if __name__ == "__main__":
         "noise_2": 1.0,
         "noise_3": 1.0,
     }
+    REMOVED_FEATURE_INDICES = []
     REG_SCALE = 0.5
     LOSS_KWARGS = {
         "grad_scale":2.0,
@@ -61,7 +62,7 @@ if __name__ == "__main__":
     PLOT_SHAP = True
     PLOT_TEST_SHAP = False & PLOT_SHAP
 
-    ID_result, OOD_MEAN_result, OOD_WORST_result = main(
+    metrics = main(
         DATASET, TRAIN_VAL_GROUP, TEST_GROUPS,
         FEATURE_INDEX, REMOVED_FEATURE_INDICES, FEATURE_LOSS_WEIGHTS,
         TRAIN_BATCH=TRAIN_BATCH, EVAL_BATCH=EVAL_BATCH, LR=LR, REG_SCALE=REG_SCALE,
@@ -70,4 +71,4 @@ if __name__ == "__main__":
         MODEL_NAME=MODEL_NAME, LOSS_NAME=LOSS_NAME, LOSS_KWARGS=LOSS_KWARGS,
         device=device, MODEL_SEEDS=[9803, 38224, 8113, 4854, 98825]
     )
-    print(f"### Results:\n- ID: {ID_result:.4f}\n- OOD MEAN: {OOD_MEAN_result:.4f}\n- OOD WORST: {OOD_WORST_result:.4f}")
+    print_results(metrics)

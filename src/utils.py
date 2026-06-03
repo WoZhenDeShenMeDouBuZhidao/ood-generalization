@@ -1,11 +1,62 @@
 import os
 import random
-import datetime
 import torch
+from openai import OpenAI
 import numpy as np
-import matplotlib.pyplot as plt
-from typing import List, Dict
+from typing import Any, Dict, List, Tuple
+from src.paths import dataset_artifact_dir
 
+
+# Result formatting
+
+MetricSummary = Tuple[float, float]
+ExperimentMetrics = Tuple[
+    MetricSummary,
+    MetricSummary,
+    MetricSummary,
+    MetricSummary,
+    MetricSummary,
+    MetricSummary,
+    MetricSummary,
+    MetricSummary,
+]
+
+
+def metric_summary(value: float) -> MetricSummary:
+    return float(value), 0.0
+
+
+def format_metric(metric: MetricSummary) -> str:
+    mean, interval_range = metric
+    return f"{mean:.4f} +/- {interval_range:.4f}"
+
+
+def print_results(metrics: ExperimentMetrics) -> None:
+    (
+        acc_id,
+        acc_ood_mean,
+        acc_ood_worst,
+        acc_ood_std,
+        f1_id,
+        f1_ood_mean,
+        f1_ood_worst,
+        f1_ood_std,
+    ) = metrics
+    print(
+        f"### Accuracy Results:\n"
+        f"- ID: {format_metric(acc_id)}\n"
+        f"- OOD MEAN: {format_metric(acc_ood_mean)}\n"
+        f"- OOD WORST: {format_metric(acc_ood_worst)}\n"
+        f"- OOD STD: {format_metric(acc_ood_std)}\n"
+        f"### F1 Results:\n"
+        f"- ID: {format_metric(f1_id)}\n"
+        f"- OOD MEAN: {format_metric(f1_ood_mean)}\n"
+        f"- OOD WORST: {format_metric(f1_ood_worst)}\n"
+        f"- OOD STD: {format_metric(f1_ood_std)}"
+    )
+
+
+# Reproducibility
 
 def set_seeds(seed: int) -> None:
     random.seed(seed)
@@ -14,21 +65,56 @@ def set_seeds(seed: int) -> None:
     torch.cuda.manual_seed_all(seed)
 
 
+# LLM calls
+
+def call_llm(model_name: str, message: List[Dict[str, str]], temperature: float = 1e-5) -> Dict[str, Any]:
+    client = OpenAI(api_key=os.getenv('API_KEY'), base_url=os.getenv('API_URL'))
+    response = client.chat.completions.create(
+        model=model_name,
+        messages=message,
+        temperature=temperature,
+    )
+    usage = response.usage
+    input_tokens = getattr(usage, "prompt_tokens", None) if usage is not None else None
+    output_tokens = getattr(usage, "completion_tokens", None) if usage is not None else None
+    total_tokens = getattr(usage, "total_tokens", None) if usage is not None else None
+    return {
+        "content": response.choices[0].message.content,
+        "input_tokens": input_tokens,
+        "output_tokens": output_tokens,
+        "total_tokens": total_tokens,
+    }
+
+
+# Plotting
+
 def plot_training_curves(
-    dataset: str, ID_acc: float, OOD_MEAN_acc: float, OOD_WORST_acc: float,
+    dataset: str,
+    ID_acc: float, OOD_MEAN_acc: float, OOD_WORST_acc: float, OOD_STD_acc: float,
+    ID_f1: float, OOD_MEAN_f1: float, OOD_WORST_f1: float, OOD_STD_f1: float,
     FEATURE_INDEX: Dict[int, str], REMOVED_FEATURE_INDICES: List[str],
     repeat_i: int, EPOCH: int, PATIENCE: int,
     train_losses: Dict[str, List[float]], val_losses: Dict[str, List[float]],
     train_accs: List[float], val_accs: List[float],
+    train_f1s: List[float], val_f1s: List[float],
     train_grads: Dict[str, List[float]], date: str,
 ) -> None:
-    plot_path = f"./{dataset}/plots/curves"
+    import matplotlib.pyplot as plt
+
+    plot_path = dataset_artifact_dir(dataset) / "plots" / "curves"
     os.makedirs(plot_path, exist_ok=True)
 
     epochs = range(1, EPOCH + 1)
     best_epoch = EPOCH - PATIENCE
     fig = plt.figure(figsize=(22, 14))
-    fig.suptitle(f"ID: {ID_acc:.4f}, OOD MEAN: {OOD_MEAN_acc:.4f}, OOD WORST: {OOD_WORST_acc:.4f}")
+    fig.suptitle(
+        "ACC "
+        f"ID={ID_acc:.4f}, OOD MEAN={OOD_MEAN_acc:.4f}, "
+        f"OOD WORST={OOD_WORST_acc:.4f}, OOD STD={OOD_STD_acc:.4f} | "
+        "F1 "
+        f"ID={ID_f1:.4f}, OOD MEAN={OOD_MEAN_f1:.4f}, "
+        f"OOD WORST={OOD_WORST_f1:.4f}, OOD STD={OOD_STD_f1:.4f}"
+    )
     active_feature_names = [
         FEATURE_INDEX[idx]
         for idx in sorted(FEATURE_INDEX)
@@ -82,10 +168,12 @@ def plot_training_curves(
     plt.axvline(x=best_epoch, color='gray', linestyle='--')
     plt.plot(epochs, train_accs, label=f'Train Acc (best={train_accs[best_epoch]:.4f}, last={train_accs[-1]:.4f})')
     plt.plot(epochs, val_accs, label=f'Validation Acc (best={val_accs[best_epoch]:.4f}, last={val_accs[-1]:.4f})')
+    plt.plot(epochs, train_f1s, linestyle=':', label=f'Train F1 (best={train_f1s[best_epoch]:.4f}, last={train_f1s[-1]:.4f})')
+    plt.plot(epochs, val_f1s, linestyle=':', label=f'Validation F1 (best={val_f1s[best_epoch]:.4f}, last={val_f1s[-1]:.4f})')
     plt.xticks(range(0, EPOCH + 1, max(EPOCH // 10, 1)))
     plt.xlabel('Epoch')
-    plt.ylabel('Accuracy')
-    plt.title('Accuracy')
+    plt.ylabel('Metric')
+    plt.title('Accuracy / F1')
     plt.legend()
 
     plt.subplot(2,4,4)
@@ -120,7 +208,7 @@ def plot_training_curves(
     plt.tight_layout()
     rmfeature_names = ", ".join([FEATURE_INDEX[feat_i] for feat_i in REMOVED_FEATURE_INDICES])
     plot_name = "All features" if len(REMOVED_FEATURE_INDICES) == 0 else f"Remove {rmfeature_names}"
-    plt.savefig(f"{plot_path}/{plot_name} (repeat={repeat_i + 1}, datetime={date}).png")
+    plt.savefig(plot_path / f"{plot_name} (repeat={repeat_i + 1}, datetime={date}).png")
     plt.close()
 
 
@@ -128,7 +216,9 @@ def plot_accdelta_bars(
     dataset: str, rmfeature_accdelta: Dict[str, Dict[str, float]],
     ID_base: float, OOD_MEAN_base: float, OOD_WORST_base: float, REPEAT: int,
 ) -> None:
-    plot_path = f"./{dataset}/plots/accdelta"
+    import matplotlib.pyplot as plt
+
+    plot_path = dataset_artifact_dir(dataset) / "plots" / "accdelta"
     os.makedirs(plot_path, exist_ok=True)
     if not rmfeature_accdelta:
         return
@@ -179,7 +269,7 @@ def plot_accdelta_bars(
 
     ax.set_ylim(min(all_vals) - 3 * y_pad, max(all_vals) + 3 * y_pad)
     fig.tight_layout()
-    fig.savefig(f"{plot_path}/accdelta_bars_repeat{REPEAT}.png", dpi=200)
+    fig.savefig(plot_path / f"accdelta_bars_repeat{REPEAT}.png", dpi=200)
     plt.close(fig)
 
 
@@ -188,7 +278,9 @@ def plot_shap_values(
     FEATURE_INDEX: Dict[int, str], REMOVED_FEATURE_INDICES: List[int],
     shap_values: List[np.ndarray], repeat_i: int, date: str,
 ):
-    plot_path = f"./{dataset}/plots/shap"
+    import matplotlib.pyplot as plt
+
+    plot_path = dataset_artifact_dir(dataset) / "plots" / "shap"
     os.makedirs(plot_path, exist_ok=True)
 
     active_feature_names = [
@@ -243,5 +335,5 @@ def plot_shap_values(
 
         ax.set_xlim(0.0, max_val + 6 * x_pad if max_val > 0 else 1.0)
         fig.tight_layout()
-        fig.savefig(f"{plot_path}/shap_{state} (repeat={repeat_i + 1}, datetime={date}).png", dpi=200)
+        fig.savefig(plot_path / f"shap_{state} (repeat={repeat_i + 1}, datetime={date}).png", dpi=200)
         plt.close(fig)

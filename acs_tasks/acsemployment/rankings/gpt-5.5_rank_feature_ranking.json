@@ -1,0 +1,106 @@
+{
+  "model": "gpt-5.5",
+  "method": "rank",
+  "temperature": 0.0,
+  "created_at": "2026-05-10T17:32:33",
+  "token_usage": {
+    "num_calls": 1,
+    "input_tokens": 634,
+    "output_tokens": 1050,
+    "total_tokens": 1684
+  },
+  "response": {
+    "task_summary": "Predict whether an ACS individual is employed versus not employed.",
+    "ranking": [
+      {
+        "rank": 1,
+        "feature": "AGEP",
+        "rationale": "Employment participation varies strongly and consistently over the life cycle."
+      },
+      {
+        "rank": 2,
+        "feature": "DIS",
+        "rationale": "Overall disability status directly affects ability to work and is broadly portable across states."
+      },
+      {
+        "rank": 3,
+        "feature": "SCHL",
+        "rationale": "Educational attainment is a stable predictor of labor-market attachment."
+      },
+      {
+        "rank": 4,
+        "feature": "DREM",
+        "rationale": "Cognitive difficulty can substantially affect employability across locations."
+      },
+      {
+        "rank": 5,
+        "feature": "MAR",
+        "rationale": "Marital status captures household and life-stage factors related to employment."
+      },
+      {
+        "rank": 6,
+        "feature": "RELP",
+        "rationale": "Household relationship encodes life stage and dependency patterns relevant to work."
+      },
+      {
+        "rank": 7,
+        "feature": "MIL",
+        "rationale": "Military service status relates to labor-force status, though partly cohort- and sex-confounded."
+      },
+      {
+        "rank": 8,
+        "feature": "DEYE",
+        "rationale": "Vision difficulty may affect work capacity but is narrower than general disability."
+      },
+      {
+        "rank": 9,
+        "feature": "DEAR",
+        "rationale": "Hearing difficulty can affect employment but is generally less predictive than broader disability measures."
+      },
+      {
+        "rank": 10,
+        "feature": "MIG",
+        "rationale": "Recent mobility can correlate with job changes but may reflect local housing and state-specific patterns."
+      },
+      {
+        "rank": 11,
+        "feature": "CIT",
+        "rationale": "Citizenship can affect labor-market access but risks encoding immigrant and regional composition."
+      },
+      {
+        "rank": 12,
+        "feature": "NATIVITY",
+        "rationale": "Nativity is only indirectly related to employment and may encode geographic demographic artifacts."
+      },
+      {
+        "rank": 13,
+        "feature": "ESP",
+        "rationale": "Parental employment status is limited in applicability and may mostly capture household artifacts."
+      },
+      {
+        "rank": 14,
+        "feature": "SEX",
+        "rationale": "Sex is predictive through labor-market disparities but is a demographic shortcut rather than a robust semantic cause."
+      },
+      {
+        "rank": 15,
+        "feature": "RAC1P",
+        "rationale": "Race is predictive mainly through structural and regional disparities, making it brittle for OOD generalization."
+      },
+      {
+        "rank": 16,
+        "feature": "ANC",
+        "rationale": "Ancestry is weakly causal and likely to encode geography and population-composition artifacts."
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemployment`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nFeature list, in model input order:\n[\n  \"AGEP\",\n  \"SCHL\",\n  \"MAR\",\n  \"RELP\",\n  \"DIS\",\n  \"ESP\",\n  \"CIT\",\n  \"MIG\",\n  \"MIL\",\n  \"ANC\",\n  \"NATIVITY\",\n  \"DEAR\",\n  \"DEYE\",\n  \"DREM\",\n  \"SEX\",\n  \"RAC1P\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature\": \"FEATURE_NAME\",\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature exactly once in `ranking`.\n- Use ranks 1 through 16, with no duplicates.\n- Rank 1 is most important.\n- If two features seem similarly important, still break ties.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS individual is employed versus not employed.\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature\": \"AGEP\",\n      \"rationale\": \"Employment participation varies strongly and consistently over the life cycle.\"\n    },\n    {\n      \"rank\": 2,\n      \"feature\": \"DIS\",\n      \"rationale\": \"Overall disability status directly affects ability to work and is broadly portable across states.\"\n    },\n    {\n      \"rank\": 3,\n      \"feature\": \"SCHL\",\n      \"rationale\": \"Educational attainment is a stable predictor of labor-market attachment.\"\n    },\n    {\n      \"rank\": 4,\n      \"feature\": \"DREM\",\n      \"rationale\": \"Cognitive difficulty can substantially affect employability across locations.\"\n    },\n    {\n      \"rank\": 5,\n      \"feature\": \"MAR\",\n      \"rationale\": \"Marital status captures household and life-stage factors related to employment.\"\n    },\n    {\n      \"rank\": 6,\n      \"feature\": \"RELP\",\n      \"rationale\": \"Household relationship encodes life stage and dependency patterns relevant to work.\"\n    },\n    {\n      \"rank\": 7,\n      \"feature\": \"MIL\",\n      \"rationale\": \"Military service status relates to labor-force status, though partly cohort- and sex-confounded.\"\n    },\n    {\n      \"rank\": 8,\n      \"feature\": \"DEYE\",\n      \"rationale\": \"Vision difficulty may affect work capacity but is narrower than general disability.\"\n    },\n    {\n      \"rank\": 9,\n      \"feature\": \"DEAR\",\n      \"rationale\": \"Hearing difficulty can affect employment but is generally less predictive than broader disability measures.\"\n    },\n    {\n      \"rank\": 10,\n      \"feature\": \"MIG\",\n      \"rationale\": \"Recent mobility can correlate with job changes but may reflect local housing and state-specific patterns.\"\n    },\n    {\n      \"rank\": 11,\n      \"feature\": \"CIT\",\n      \"rationale\": \"Citizenship can affect labor-market access but risks encoding immigrant and regional composition.\"\n    },\n    {\n      \"rank\": 12,\n      \"feature\": \"NATIVITY\",\n      \"rationale\": \"Nativity is only indirectly related to employment and may encode geographic demographic artifacts.\"\n    },\n    {\n      \"rank\": 13,\n      \"feature\": \"ESP\",\n      \"rationale\": \"Parental employment status is limited in applicability and may mostly capture household artifacts.\"\n    },\n    {\n      \"rank\": 14,\n      \"feature\": \"SEX\",\n      \"rationale\": \"Sex is predictive through labor-market disparities but is a demographic shortcut rather than a robust semantic cause.\"\n    },\n    {\n      \"rank\": 15,\n      \"feature\": \"RAC1P\",\n      \"rationale\": \"Race is predictive mainly through structural and regional disparities, making it brittle for OOD generalization.\"\n    },\n    {\n      \"rank\": 16,\n      \"feature\": \"ANC\",\n      \"rationale\": \"Ancestry is weakly causal and likely to encode geography and population-composition artifacts.\"\n    }\n  ]\n}",
+      "input_tokens": 634,
+      "output_tokens": 1050,
+      "total_tokens": 1684
+    }
+  ]
+}

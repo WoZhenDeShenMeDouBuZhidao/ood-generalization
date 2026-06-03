@@ -1,0 +1,148 @@
+{
+  "model": "gpt-5.5",
+  "method": "seq",
+  "temperature": 0.0,
+  "created_at": "2026-05-10T17:21:41",
+  "token_usage": {
+    "num_calls": 10,
+    "input_tokens": 5949,
+    "output_tokens": 2259,
+    "total_tokens": 8208
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature": "OCCP",
+        "rationale": "Occupation is directly tied to earnings and should retain strong semantic predictive value across states, with less reliance on protected demographic shortcuts or explicit geography."
+      },
+      {
+        "rank": 2,
+        "feature": "WKHP",
+        "rationale": "Usual weekly hours worked adds strong, stable marginal signal for annual income beyond occupation and is not a geographic or demographic shortcut."
+      },
+      {
+        "rank": 3,
+        "feature": "SCHL",
+        "rationale": "Educational attainment is a strong, semantically stable predictor of income across states and adds substantial within-occupation and hours-worked signal without directly encoding geography or demographic shortcuts."
+      },
+      {
+        "rank": 4,
+        "feature": "AGEP",
+        "rationale": "Age captures career stage and experience, adding stable income-predictive value beyond occupation, hours, and education while being less geographically brittle than birthplace or demographic shortcut features."
+      },
+      {
+        "rank": 5,
+        "feature": "COW",
+        "rationale": "Class of worker adds stable labor-market information about employment sector/type beyond occupation, hours, education, and age, while avoiding stronger geographic or demographic shortcut effects."
+      },
+      {
+        "rank": 6,
+        "feature": "MAR",
+        "rationale": "Marital status has stable marginal predictive value for income through household and labor-market patterns, while being less geography-encoding than POBP and less of a demographic shortcut than SEX or RAC1P."
+      },
+      {
+        "rank": 7,
+        "feature": "RELP",
+        "rationale": "Household relationship provides stable socioeconomic context for income beyond occupation, hours, education, age, class of worker, and marital status, while avoiding geography-heavy or explicit race/sex shortcuts."
+      },
+      {
+        "rank": 8,
+        "feature": "SEX",
+        "rationale": "Adds stable income-related signal via broad labor-market wage and participation differences across states, while POBP is more geography/artifact-prone and RAC1P is a more brittle demographic shortcut."
+      },
+      {
+        "rank": 9,
+        "feature": "RAC1P",
+        "rationale": "Adds some stable marginal signal from broad demographic disparities, while POBP more directly encodes birthplace/geography and brittle state-specific artifacts."
+      },
+      {
+        "rank": 10,
+        "feature": "POBP",
+        "rationale": "Only remaining candidate; place of birth may add some socioeconomic signal but is a brittle demographic/geographic proxy with limited stable marginal value."
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "step": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[]\n\nCandidate features not yet selected:\n[\n  \"AGEP\",\n  \"COW\",\n  \"SCHL\",\n  \"MAR\",\n  \"OCCP\",\n  \"POBP\",\n  \"RELP\",\n  \"WKHP\",\n  \"SEX\",\n  \"RAC1P\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"OCCP\",\"rationale\":\"Occupation is directly tied to earnings and should retain strong semantic predictive value across states, with less reliance on protected demographic shortcuts or explicit geography.\"}",
+      "input_tokens": 594,
+      "output_tokens": 309,
+      "total_tokens": 903
+    },
+    {
+      "step": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"OCCP\"\n]\n\nCandidate features not yet selected:\n[\n  \"AGEP\",\n  \"COW\",\n  \"SCHL\",\n  \"MAR\",\n  \"POBP\",\n  \"RELP\",\n  \"WKHP\",\n  \"SEX\",\n  \"RAC1P\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"WKHP\",\"rationale\":\"Usual weekly hours worked adds strong, stable marginal signal for annual income beyond occupation and is not a geographic or demographic shortcut.\"}",
+      "input_tokens": 595,
+      "output_tokens": 356,
+      "total_tokens": 951
+    },
+    {
+      "step": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"OCCP\",\n  \"WKHP\"\n]\n\nCandidate features not yet selected:\n[\n  \"AGEP\",\n  \"COW\",\n  \"SCHL\",\n  \"MAR\",\n  \"POBP\",\n  \"RELP\",\n  \"SEX\",\n  \"RAC1P\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"SCHL\",\"rationale\":\"Educational attainment is a strong, semantically stable predictor of income across states and adds substantial within-occupation and hours-worked signal without directly encoding geography or demographic shortcuts.\"}",
+      "input_tokens": 595,
+      "output_tokens": 159,
+      "total_tokens": 754
+    },
+    {
+      "step": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"OCCP\",\n  \"WKHP\",\n  \"SCHL\"\n]\n\nCandidate features not yet selected:\n[\n  \"AGEP\",\n  \"COW\",\n  \"MAR\",\n  \"POBP\",\n  \"RELP\",\n  \"SEX\",\n  \"RAC1P\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"AGEP\",\"rationale\":\"Age captures career stage and experience, adding stable income-predictive value beyond occupation, hours, and education while being less geographically brittle than birthplace or demographic shortcut features.\"}",
+      "input_tokens": 595,
+      "output_tokens": 184,
+      "total_tokens": 779
+    },
+    {
+      "step": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"OCCP\",\n  \"WKHP\",\n  \"SCHL\",\n  \"AGEP\"\n]\n\nCandidate features not yet selected:\n[\n  \"COW\",\n  \"MAR\",\n  \"POBP\",\n  \"RELP\",\n  \"SEX\",\n  \"RAC1P\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\n  \"selected_feature\": \"COW\",\n  \"rationale\": \"Class of worker adds stable labor-market information about employment sector/type beyond occupation, hours, education, and age, while avoiding stronger geographic or demographic shortcut effects.\"\n}",
+      "input_tokens": 595,
+      "output_tokens": 185,
+      "total_tokens": 780
+    },
+    {
+      "step": 6,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"OCCP\",\n  \"WKHP\",\n  \"SCHL\",\n  \"AGEP\",\n  \"COW\"\n]\n\nCandidate features not yet selected:\n[\n  \"MAR\",\n  \"POBP\",\n  \"RELP\",\n  \"SEX\",\n  \"RAC1P\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\n  \"selected_feature\": \"MAR\",\n  \"rationale\": \"Marital status has stable marginal predictive value for income through household and labor-market patterns, while being less geography-encoding than POBP and less of a demographic shortcut than SEX or RAC1P.\"\n}",
+      "input_tokens": 595,
+      "output_tokens": 175,
+      "total_tokens": 770
+    },
+    {
+      "step": 7,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"OCCP\",\n  \"WKHP\",\n  \"SCHL\",\n  \"AGEP\",\n  \"COW\",\n  \"MAR\"\n]\n\nCandidate features not yet selected:\n[\n  \"POBP\",\n  \"RELP\",\n  \"SEX\",\n  \"RAC1P\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"RELP\",\"rationale\":\"Household relationship provides stable socioeconomic context for income beyond occupation, hours, education, age, class of worker, and marital status, while avoiding geography-heavy or explicit race/sex shortcuts.\"}",
+      "input_tokens": 595,
+      "output_tokens": 219,
+      "total_tokens": 814
+    },
+    {
+      "step": 8,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"OCCP\",\n  \"WKHP\",\n  \"SCHL\",\n  \"AGEP\",\n  \"COW\",\n  \"MAR\",\n  \"RELP\"\n]\n\nCandidate features not yet selected:\n[\n  \"POBP\",\n  \"SEX\",\n  \"RAC1P\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"SEX\",\"rationale\":\"Adds stable income-related signal via broad labor-market wage and participation differences across states, while POBP is more geography/artifact-prone and RAC1P is a more brittle demographic shortcut.\"}",
+      "input_tokens": 595,
+      "output_tokens": 183,
+      "total_tokens": 778
+    },
+    {
+      "step": 9,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"OCCP\",\n  \"WKHP\",\n  \"SCHL\",\n  \"AGEP\",\n  \"COW\",\n  \"MAR\",\n  \"RELP\",\n  \"SEX\"\n]\n\nCandidate features not yet selected:\n[\n  \"POBP\",\n  \"RAC1P\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"RAC1P\",\"rationale\":\"Adds some stable marginal signal from broad demographic disparities, while POBP more directly encodes birthplace/geography and brittle state-specific artifacts.\"}",
+      "input_tokens": 595,
+      "output_tokens": 389,
+      "total_tokens": 984
+    },
+    {
+      "step": 10,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  \"OCCP\",\n  \"WKHP\",\n  \"SCHL\",\n  \"AGEP\",\n  \"COW\",\n  \"MAR\",\n  \"RELP\",\n  \"SEX\",\n  \"RAC1P\"\n]\n\nCandidate features not yet selected:\n[\n  \"POBP\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature\": \"FEATURE_NAME\",\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature` must be exactly one feature from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.",
+      "content": "{\"selected_feature\":\"POBP\",\"rationale\":\"Only remaining candidate; place of birth may add some socioeconomic signal but is a brittle demographic/geographic proxy with limited stable marginal value.\"}",
+      "input_tokens": 595,
+      "output_tokens": 100,
+      "total_tokens": 695
+    }
+  ]
+}

@@ -2,12 +2,38 @@ import numpy as np
 import torch
 from torch.utils.data import Dataset
 from typing import Any, Dict, List, Optional, Tuple
-from folktables import ACSDataSource, ACSIncome
-data_source = ACSDataSource(survey_year='2018', horizon='1-Year', survey='person', root_dir="./acsincome/data")
+from folktables import (
+    ACSDataSource,
+    ACSEmployment,
+    ACSEmploymentFiltered,
+    ACSHealthInsurance,
+    ACSIncome,
+    ACSIncomePovertyRatio,
+    ACSMobility,
+    ACSPublicCoverage,
+    ACSTravelTime,
+)
 
 
-class ACSIncomeDataset(Dataset):
-    def __init__(self, X: List[float], Y: List[bool]):
+ACS_SURVEY_YEAR = "2018"
+ACS_HORIZON = "1-Year"
+ACS_SURVEY = "person"
+ACS_RAW_DATA_ROOT = "./acs_tasks/raw/data"
+
+ACS_TASKS = {
+    "acsincome": ACSIncome,
+    "acsemployment": ACSEmployment,
+    "acsemploymentfiltered": ACSEmploymentFiltered,
+    "acshealthinsurance": ACSHealthInsurance,
+    "acsincomepovertyratio": ACSIncomePovertyRatio,
+    "acsmobility": ACSMobility,
+    "acspubliccoverage": ACSPublicCoverage,
+    "acstraveltime": ACSTravelTime,
+}
+
+
+class ACSTaskDataset(Dataset):
+    def __init__(self, X: np.ndarray, Y: np.ndarray):
         self.X = torch.from_numpy(X).to(dtype=torch.float)
         self.Y = torch.from_numpy(Y).to(dtype=torch.long)
         self.n_samples = X.shape[0]
@@ -70,55 +96,61 @@ def _get_config_value(config: Optional[Any], key: str, default: Any) -> Any:
     return getattr(config, key, default)
 
 
-def acsincome_load_data(
+def acs_task_load_data(
+    task_name: str,
     removed_feature_indices: List[int],
     train_val_state: str,
     test_states: List[str],
     val_rate: float,
-    config: Optional[Any]=None,
-) -> Tuple[ACSIncomeDataset, ACSIncomeDataset, List[ACSIncomeDataset]]:
+    config: Optional[Any] = None,
+) -> Tuple[ACSTaskDataset, ACSTaskDataset, List[ACSTaskDataset]]:
+    if task_name not in ACS_TASKS:
+        raise ValueError(f"Unsupported ACS task_name: {task_name}")
+
+    task = ACS_TASKS[task_name]
     resampling = _get_config_value(config, "resampling", False)
     standardize = _get_config_value(config, "standardize", False)
+    data_source = ACSDataSource(
+        survey_year=ACS_SURVEY_YEAR,
+        horizon=ACS_HORIZON,
+        survey=ACS_SURVEY,
+        root_dir=ACS_RAW_DATA_ROOT,
+    )
 
-    # load
     acs_data = data_source.get_data(states=[train_val_state], download=True)
-    X_train_val, Y_train_val, _ = ACSIncome.df_to_numpy(acs_data)
+    X_train_val, Y_train_val, _ = task.df_to_numpy(acs_data)
     X_train_val = remove_feature(removed_feature_indices, X_train_val)
 
-    # shuffle
     indices = np.arange(X_train_val.shape[0])
     np.random.shuffle(indices)
     X_train_val, Y_train_val = X_train_val[indices], Y_train_val[indices]
 
-    # split
-    VAL_IDX = int(val_rate * len(indices))
-    X_train, X_val = X_train_val[VAL_IDX:], X_train_val[:VAL_IDX]
-    Y_train, Y_val = Y_train_val[VAL_IDX:], Y_train_val[:VAL_IDX]
+    val_idx = int(val_rate * len(indices))
+    X_train, X_val = X_train_val[val_idx:], X_train_val[:val_idx]
+    Y_train, Y_val = Y_train_val[val_idx:], Y_train_val[:val_idx]
 
-    # standardization
     stats = None
     if standardize:
         stats = _fit_standardization_stats(X_train)
         X_train = _standardize(X_train, stats)
         X_val = _standardize(X_val, stats)
 
-    # resampling
     if resampling:
-        print(f"ACSIncome train Y distribution before resampling: {_label_distribution(Y_train)}")
+        print(f"{task_name} train Y distribution before resampling: {_label_distribution(Y_train)}")
         X_train, Y_train = _balanced_oversample(X_train, Y_train)
-        print(f"ACSIncome train Y distribution after resampling: {_label_distribution(Y_train)}")
+        print(f"{task_name} train Y distribution after resampling: {_label_distribution(Y_train)}")
 
-    train = ACSIncomeDataset(X_train, Y_train)
-    val = ACSIncomeDataset(X_val, Y_val)
+    train = ACSTaskDataset(X_train, Y_train)
+    val = ACSTaskDataset(X_val, Y_val)
 
     tests = []
     for state in test_states:
         acs_data = data_source.get_data(states=[state], download=True)
-        X_test, Y_test, _ = ACSIncome.df_to_numpy(acs_data)
+        X_test, Y_test, _ = task.df_to_numpy(acs_data)
         X_test = remove_feature(removed_feature_indices, X_test)
         if standardize:
             X_test = _standardize(X_test, stats)
-        tests.append(ACSIncomeDataset(X_test, Y_test))
+        tests.append(ACSTaskDataset(X_test, Y_test))
 
     return train, val, tests
 
@@ -128,12 +160,12 @@ def acsincome_load_data_acc_upperbound_test(
     train_val_state: str,
     test_states: List[str],
     val_rate: float,
-    config: Optional[Any]=None,
-) -> Tuple[ACSIncomeDataset, ACSIncomeDataset, List[ACSIncomeDataset]]:
+    config: Optional[Any] = None,
+) -> Tuple[ACSTaskDataset, ACSTaskDataset, List[ACSTaskDataset]]:
     del train_val_state
     del val_rate
     train_data_per_state = int(_get_config_value(config, "train_data_per_state", 1000))
-    val_data_per_state = int(_get_config_value(config, "val_data_per_state", 1000))
+    val_data_per_state = int(_get_config_value(config, "val_data_per_state", 200))
     resampling = _get_config_value(config, "resampling", False)
     standardize = _get_config_value(config, "standardize", False)
     print_state_counts = _get_config_value(config, "print_state_counts", False)
@@ -145,6 +177,14 @@ def acsincome_load_data_acc_upperbound_test(
     if not test_states:
         raise ValueError("test_states must contain at least one state.")
 
+    data_source = ACSDataSource(
+        survey_year=ACS_SURVEY_YEAR,
+        horizon=ACS_HORIZON,
+        survey=ACS_SURVEY,
+        root_dir=ACS_RAW_DATA_ROOT,
+    )
+    task = ACS_TASKS["acsincome"]
+
     X_train_parts = []
     Y_train_parts = []
     X_val_parts = []
@@ -153,7 +193,7 @@ def acsincome_load_data_acc_upperbound_test(
 
     for state in test_states:
         acs_data = data_source.get_data(states=[state], download=True)
-        X_state, Y_state, _ = ACSIncome.df_to_numpy(acs_data)
+        X_state, Y_state, _ = task.df_to_numpy(acs_data)
         X_state = remove_feature(removed_feature_indices, X_state)
 
         used_data_per_state = train_data_per_state + val_data_per_state
@@ -218,11 +258,10 @@ def acsincome_load_data_acc_upperbound_test(
     Y_test_all = np.concatenate([Y_state_test for _, Y_state_test in per_state_test_parts], axis=0)
     print(f"ACSIncome acc upperbound test Y distribution: {_label_distribution(Y_test_all)}")
 
-    train = ACSIncomeDataset(X_train, Y_train)
-    val = ACSIncomeDataset(X_val, Y_val)
-    # Preserve per-state test metrics after the train/validation samples are removed.
+    train = ACSTaskDataset(X_train, Y_train)
+    val = ACSTaskDataset(X_val, Y_val)
     tests = [
-        ACSIncomeDataset(X_state_test, Y_state_test)
+        ACSTaskDataset(X_state_test, Y_state_test)
         for X_state_test, Y_state_test in per_state_test_parts
     ]
     return train, val, tests

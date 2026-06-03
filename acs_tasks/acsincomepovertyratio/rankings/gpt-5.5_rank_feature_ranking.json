@@ -1,0 +1,126 @@
+{
+  "model": "gpt-5.5",
+  "method": "rank",
+  "temperature": 0.0,
+  "created_at": "2026-05-10T18:35:13",
+  "token_usage": {
+    "num_calls": 1,
+    "input_tokens": 658,
+    "output_tokens": 1088,
+    "total_tokens": 1746
+  },
+  "response": {
+    "task_summary": "Predict an individual's income-to-poverty ratio category from ACS demographic, education, employment, and household variables.",
+    "ranking": [
+      {
+        "rank": 1,
+        "feature": "ESR",
+        "rationale": "Employment status is directly and stably related to income and poverty risk."
+      },
+      {
+        "rank": 2,
+        "feature": "WKHP",
+        "rationale": "Usual weekly work hours strongly reflect labor supply and earnings capacity."
+      },
+      {
+        "rank": 3,
+        "feature": "OCCP",
+        "rationale": "Occupation captures durable differences in wages and economic status across states."
+      },
+      {
+        "rank": 4,
+        "feature": "SCHL",
+        "rationale": "Educational attainment is a broadly transferable predictor of earnings and poverty."
+      },
+      {
+        "rank": 5,
+        "feature": "AGEP",
+        "rationale": "Age captures life-cycle labor-market participation and income patterns."
+      },
+      {
+        "rank": 6,
+        "feature": "DIS",
+        "rationale": "Overall disability status can affect employment, hours, and income stability."
+      },
+      {
+        "rank": 7,
+        "feature": "MAR",
+        "rationale": "Marital status relates to household resources and poverty thresholds in a fairly stable way."
+      },
+      {
+        "rank": 8,
+        "feature": "DREM",
+        "rationale": "Cognitive difficulty can materially affect work capacity and economic outcomes."
+      },
+      {
+        "rank": 9,
+        "feature": "MIL",
+        "rationale": "Military service can indicate work history, benefits, and income support."
+      },
+      {
+        "rank": 10,
+        "feature": "RELP",
+        "rationale": "Household relationship helps infer dependency and resource-sharing, but may encode household-composition shortcuts."
+      },
+      {
+        "rank": 11,
+        "feature": "DEAR",
+        "rationale": "Hearing difficulty may affect employment but is less directly predictive than broad disability or cognition."
+      },
+      {
+        "rank": 12,
+        "feature": "DEYE",
+        "rationale": "Vision difficulty can affect work opportunities, though its income signal is usually weaker."
+      },
+      {
+        "rank": 13,
+        "feature": "ESP",
+        "rationale": "Parental employment is important for children but less generally applicable across all individuals."
+      },
+      {
+        "rank": 14,
+        "feature": "GCL",
+        "rationale": "Grandparents living with grandchildren may indicate household economic structure but is narrow and context-dependent."
+      },
+      {
+        "rank": 15,
+        "feature": "SEX",
+        "rationale": "Sex is correlated with income through labor-market disparities but is a demographic shortcut to penalize."
+      },
+      {
+        "rank": 16,
+        "feature": "CIT",
+        "rationale": "Citizenship may correlate with labor access and benefits but risks encoding immigration and state-specific composition."
+      },
+      {
+        "rank": 17,
+        "feature": "NATIVITY",
+        "rationale": "Nativity is an indirect demographic marker with weaker causal connection and potential distribution shift."
+      },
+      {
+        "rank": 18,
+        "feature": "MIG",
+        "rationale": "Migration status can proxy local economic conditions and geography-specific artifacts."
+      },
+      {
+        "rank": 19,
+        "feature": "ANC",
+        "rationale": "Ancestry is mostly a demographic proxy and likely brittle across states."
+      },
+      {
+        "rank": 20,
+        "feature": "RAC1P",
+        "rationale": "Race is highly sensitive and may encode demographic or geographic shortcuts rather than transferable mechanisms."
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincomepovertyratio`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nFeature list, in model input order:\n[\n  \"AGEP\",\n  \"SCHL\",\n  \"MAR\",\n  \"SEX\",\n  \"DIS\",\n  \"ESP\",\n  \"MIG\",\n  \"CIT\",\n  \"MIL\",\n  \"ANC\",\n  \"NATIVITY\",\n  \"RELP\",\n  \"DEAR\",\n  \"DEYE\",\n  \"DREM\",\n  \"RAC1P\",\n  \"GCL\",\n  \"ESR\",\n  \"OCCP\",\n  \"WKHP\"\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature\": \"FEATURE_NAME\",\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature exactly once in `ranking`.\n- Use ranks 1 through 20, with no duplicates.\n- Rank 1 is most important.\n- If two features seem similarly important, still break ties.",
+      "content": "{\n  \"task_summary\": \"Predict an individual's income-to-poverty ratio category from ACS demographic, education, employment, and household variables.\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature\": \"ESR\",\n      \"rationale\": \"Employment status is directly and stably related to income and poverty risk.\"\n    },\n    {\n      \"rank\": 2,\n      \"feature\": \"WKHP\",\n      \"rationale\": \"Usual weekly work hours strongly reflect labor supply and earnings capacity.\"\n    },\n    {\n      \"rank\": 3,\n      \"feature\": \"OCCP\",\n      \"rationale\": \"Occupation captures durable differences in wages and economic status across states.\"\n    },\n    {\n      \"rank\": 4,\n      \"feature\": \"SCHL\",\n      \"rationale\": \"Educational attainment is a broadly transferable predictor of earnings and poverty.\"\n    },\n    {\n      \"rank\": 5,\n      \"feature\": \"AGEP\",\n      \"rationale\": \"Age captures life-cycle labor-market participation and income patterns.\"\n    },\n    {\n      \"rank\": 6,\n      \"feature\": \"DIS\",\n      \"rationale\": \"Overall disability status can affect employment, hours, and income stability.\"\n    },\n    {\n      \"rank\": 7,\n      \"feature\": \"MAR\",\n      \"rationale\": \"Marital status relates to household resources and poverty thresholds in a fairly stable way.\"\n    },\n    {\n      \"rank\": 8,\n      \"feature\": \"DREM\",\n      \"rationale\": \"Cognitive difficulty can materially affect work capacity and economic outcomes.\"\n    },\n    {\n      \"rank\": 9,\n      \"feature\": \"MIL\",\n      \"rationale\": \"Military service can indicate work history, benefits, and income support.\"\n    },\n    {\n      \"rank\": 10,\n      \"feature\": \"RELP\",\n      \"rationale\": \"Household relationship helps infer dependency and resource-sharing, but may encode household-composition shortcuts.\"\n    },\n    {\n      \"rank\": 11,\n      \"feature\": \"DEAR\",\n      \"rationale\": \"Hearing difficulty may affect employment but is less directly predictive than broad disability or cognition.\"\n    },\n    {\n      \"rank\": 12,\n      \"feature\": \"DEYE\",\n      \"rationale\": \"Vision difficulty can affect work opportunities, though its income signal is usually weaker.\"\n    },\n    {\n      \"rank\": 13,\n      \"feature\": \"ESP\",\n      \"rationale\": \"Parental employment is important for children but less generally applicable across all individuals.\"\n    },\n    {\n      \"rank\": 14,\n      \"feature\": \"GCL\",\n      \"rationale\": \"Grandparents living with grandchildren may indicate household economic structure but is narrow and context-dependent.\"\n    },\n    {\n      \"rank\": 15,\n      \"feature\": \"SEX\",\n      \"rationale\": \"Sex is correlated with income through labor-market disparities but is a demographic shortcut to penalize.\"\n    },\n    {\n      \"rank\": 16,\n      \"feature\": \"CIT\",\n      \"rationale\": \"Citizenship may correlate with labor access and benefits but risks encoding immigration and state-specific composition.\"\n    },\n    {\n      \"rank\": 17,\n      \"feature\": \"NATIVITY\",\n      \"rationale\": \"Nativity is an indirect demographic marker with weaker causal connection and potential distribution shift.\"\n    },\n    {\n      \"rank\": 18,\n      \"feature\": \"MIG\",\n      \"rationale\": \"Migration status can proxy local economic conditions and geography-specific artifacts.\"\n    },\n    {\n      \"rank\": 19,\n      \"feature\": \"ANC\",\n      \"rationale\": \"Ancestry is mostly a demographic proxy and likely brittle across states.\"\n    },\n    {\n      \"rank\": 20,\n      \"feature\": \"RAC1P\",\n      \"rationale\": \"Race is highly sensitive and may encode demographic or geographic shortcuts rather than transferable mechanisms.\"\n    }\n  ]\n}",
+      "input_tokens": 658,
+      "output_tokens": 1088,
+      "total_tokens": 1746
+    }
+  ]
+}

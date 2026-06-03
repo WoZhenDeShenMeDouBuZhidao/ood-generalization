@@ -391,6 +391,130 @@ class FirstLayerWeightCELoss(_ClassReweightedLossMixin, nn.Module):
         return logits, loss, loss_terms, grad_terms
 
 
+class LLMAttributionAlignedCELoss(_ClassReweightedLossMixin, nn.Module):
+    """
+    LAAT-style baseline: CrossEntropyLoss plus MSE alignment between normalized
+    input-gradient attribution and normalized LLM feature scores.
+    """
+
+    def __init__(
+        self,
+        FEATURE_INDEX: Dict[int, str],
+        REMOVED_FEATURE_INDICES: List[int],
+        FEATURE_LOSS_WEIGHTS: Dict[str, float],
+        reg_scale: float = 1.0,
+        device: str = "cuda",
+        eps: float = 1e-12,
+        reweighting: bool = False,
+    ):
+        super().__init__()
+        self.FEATURE_INDEX = FEATURE_INDEX
+        self.REMOVED_FEATURE_INDICES = set(REMOVED_FEATURE_INDICES)
+        self.FEATURE_LOSS_WEIGHTS = FEATURE_LOSS_WEIGHTS
+        self.reg_scale = reg_scale
+        self.device = device
+        self.eps = eps
+        self.reweighting = reweighting
+
+        orig_indices_sorted = sorted(self.FEATURE_INDEX.keys())
+        kept_orig_indices = [i for i in orig_indices_sorted if i not in self.REMOVED_FEATURE_INDICES]
+        self.curidx_to_name = [self.FEATURE_INDEX[i] for i in kept_orig_indices]
+
+        raw_feature_weights = torch.tensor(
+            [float(self.FEATURE_LOSS_WEIGHTS.get(feat_name, 0.0)) for feat_name in self.curidx_to_name],
+            device=self.device,
+            dtype=torch.float32,
+        )
+        target_scores = raw_feature_weights.clamp_min(0.0)
+        if float(target_scores.sum()) <= self.eps:
+            target_scores = torch.ones_like(target_scores)
+        self.target_probs = target_scores / target_scores.sum().clamp_min(self.eps)
+
+    def _gradient_attribution(self, logits: torch.Tensor, X: torch.Tensor) -> torch.Tensor:
+        logit_pos = logits[:, 1]
+        grads = torch.autograd.grad(
+            outputs=logit_pos.sum(),
+            inputs=X,
+            create_graph=True,
+            retain_graph=True,
+            only_inputs=True,
+        )[0]
+        return grads.pow(2).mean(dim=0).clamp_min(self.eps)
+
+    def _forward_unweighted(
+        self, model: nn.Module, X: torch.Tensor, Y: torch.Tensor,
+    ) -> Tuple[torch.Tensor, torch.Tensor, Dict[str, float], Dict[str, float]]:
+        if not X.requires_grad:
+            X = X.detach().requires_grad_(True)
+
+        logits = model(X)
+        ce = F.cross_entropy(logits, Y)
+        grad_l2 = self._gradient_attribution(logits, X)
+        grad_probs = grad_l2 / grad_l2.sum().clamp_min(self.eps)
+        attribution_mse_loss = F.mse_loss(grad_probs, self.target_probs)
+        loss = ce + self.reg_scale * attribution_mse_loss
+
+        loss_terms = {
+            "CE_loss": ce,
+            "attribution_mse_loss": self.reg_scale * attribution_mse_loss,
+            "total_loss": loss,
+        }
+        grad_terms = {"total_grad_l2": grad_l2.sum()}
+        for j, feat_name in enumerate(self.curidx_to_name):
+            grad_terms[f"{feat_name}_grad_l2"] = grad_l2[j]
+            grad_terms[f"{feat_name}_grad_prob"] = grad_probs[j]
+        return logits, loss, loss_terms, grad_terms
+
+    def _forward_reweighted(
+        self, model: nn.Module, X: torch.Tensor, Y: torch.Tensor,
+    ) -> Tuple[torch.Tensor, torch.Tensor, Dict[str, float], Dict[str, float]]:
+        if not X.requires_grad:
+            X = X.detach().requires_grad_(True)
+
+        logits = model(X)
+        class_indices = _get_present_class_indices(Y)
+        factor = _class_factor(class_indices)
+        ce = _mean_over_present_classes(
+            F.cross_entropy(logits, Y, reduction="none"),
+            class_indices,
+        )
+
+        logit_pos = logits[:, 1]
+        grads = torch.autograd.grad(
+            outputs=logit_pos.sum(),
+            inputs=X,
+            create_graph=True,
+            retain_graph=True,
+            only_inputs=True,
+        )[0]
+
+        grad_l2 = grads.new_zeros((grads.size(1),))
+        grad_probs = grads.new_zeros((grads.size(1),))
+        attribution_mse_loss = grads.new_zeros(())
+        for indices in class_indices:
+            class_grads = grads.index_select(0, indices)
+            class_grad_l2 = class_grads.pow(2).mean(dim=0).clamp_min(self.eps)
+            class_grad_probs = class_grad_l2 / class_grad_l2.sum().clamp_min(self.eps)
+            grad_l2 = grad_l2 + factor * class_grad_l2
+            grad_probs = grad_probs + factor * class_grad_probs
+            attribution_mse_loss = (
+                attribution_mse_loss
+                + factor * F.mse_loss(class_grad_probs, self.target_probs)
+            )
+
+        loss = ce + self.reg_scale * attribution_mse_loss
+        loss_terms = {
+            "CE_loss": ce,
+            "attribution_mse_loss": self.reg_scale * attribution_mse_loss,
+            "total_loss": loss,
+        }
+        grad_terms = {"total_grad_l2": grad_l2.sum()}
+        for j, feat_name in enumerate(self.curidx_to_name):
+            grad_terms[f"{feat_name}_grad_l2"] = grad_l2[j]
+            grad_terms[f"{feat_name}_grad_prob"] = grad_probs[j]
+        return logits, loss, loss_terms, grad_terms
+
+
 class FeatureImportanceTargetCELoss(_ClassReweightedLossMixin, nn.Module):
     """
     CrossEntropyLoss + target-distribution regularization on feature importance.
