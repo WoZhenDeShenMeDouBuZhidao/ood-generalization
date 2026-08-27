@@ -1,0 +1,232 @@
+# tableshift/acsfoodstamps score_all prompts
+
+## 1. score_all
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score every feature by stable predictive usefulness for this task, considered
+marginally and without seeing the downstream data.
+
+Feature cards, in model input order:
+[
+  {
+    "feature_id": 0,
+    "feature": "ENG",
+    "type": "categorical",
+    "description": "Ability to speak English",
+    "values": "00=less than 5 years old/speaks only English; 01=Very well; 02=Well; 03=Not well; 04=Not at all"
+  },
+  {
+    "feature_id": 1,
+    "feature": "FER",
+    "type": "categorical",
+    "description": "Gave birth to child within the past 12 months",
+    "values": "00=less than 15 years old or greater than 50 years or male; 01=Yes; 02=No"
+  },
+  {
+    "feature_id": 2,
+    "feature": "HUPAC",
+    "type": "categorical",
+    "description": "Household presence and age of children",
+    "values": "00=N/A (GQ/vacant); 01=With children under 6 years only; 02=With children 6 to 17 years only; 03=With children under 6 years and 6 to 17 years; 04=No children"
+  },
+  {
+    "feature_id": 3,
+    "feature": "WIF",
+    "type": "categorical",
+    "description": "Workers in family during the past 12 months",
+    "values": "0=No workers; 1=1 worker; 2=2 workers; 3=3 or more workers"
+  },
+  {
+    "feature_id": 4,
+    "feature": "NWLA",
+    "type": "categorical",
+    "description": "On layoff from work",
+    "values": "01=Yes; 02=No; 03=Did not report"
+  },
+  {
+    "feature_id": 5,
+    "feature": "NWLK",
+    "type": "categorical",
+    "description": "Looking for work",
+    "values": "01=Yes; 02=No; 03=Did not report"
+  },
+  {
+    "feature_id": 6,
+    "feature": "OCCP",
+    "type": "categorical",
+    "description": "Occupation"
+  },
+  {
+    "feature_id": 7,
+    "feature": "POBP",
+    "type": "categorical",
+    "description": "Place of birth"
+  },
+  {
+    "feature_id": 8,
+    "feature": "RELP",
+    "type": "categorical",
+    "description": "Relationship to reference person",
+    "values": "00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=..."
+  },
+  {
+    "feature_id": 9,
+    "feature": "WKHP",
+    "type": "integer",
+    "description": "Usual hours worked per week past 12 months"
+  },
+  {
+    "feature_id": 10,
+    "feature": "WKW",
+    "type": "integer",
+    "description": "Weeks worked during past 12 months"
+  },
+  {
+    "feature_id": 11,
+    "feature": "WRK",
+    "type": "categorical",
+    "description": "worked last week",
+    "values": "01=worked; 02=did not work"
+  },
+  {
+    "feature_id": 12,
+    "feature": "DIS",
+    "type": "categorical",
+    "description": "Disability status",
+    "values": "01=With a disability; 02=Without a disability"
+  },
+  {
+    "feature_id": 13,
+    "feature": "MIL",
+    "type": "categorical",
+    "description": "Military service",
+    "values": "00=N/A (less than 17 years old); 01=Now on active duty; 02=On active duty in the past, but not now; 03=Only on active duty for training in Reserves/National Guard; 04=Never served in the military"
+  },
+  {
+    "feature_id": 14,
+    "feature": "ANC",
+    "type": "categorical",
+    "description": "Ancestry",
+    "values": "1=Single; 2=Multiple; 3=Unclassified; 4=Not reported; 8=Ancestry suppressed for this group"
+  },
+  {
+    "feature_id": 15,
+    "feature": "NATIVITY",
+    "type": "categorical",
+    "description": "Nativity",
+    "values": "01=Native; 02=Foreign born"
+  },
+  {
+    "feature_id": 16,
+    "feature": "DEAR",
+    "type": "boolean_categorical",
+    "description": "Hearing difficulty",
+    "values": "01=Yes; 02=No"
+  },
+  {
+    "feature_id": 17,
+    "feature": "DEYE",
+    "type": "boolean_categorical",
+    "description": "Vision difficulty",
+    "values": "01=Yes; 02=No"
+  },
+  {
+    "feature_id": 18,
+    "feature": "DREM",
+    "type": "boolean_categorical",
+    "description": "Cognitive difficulty",
+    "values": "01=Yes; 02=No"
+  },
+  {
+    "feature_id": 19,
+    "feature": "PUBCOV",
+    "type": "categorical",
+    "description": "Public health coverage recode",
+    "values": "00=Without public health coverage; 01=With public health coverage"
+  },
+  {
+    "feature_id": 20,
+    "feature": "AGEP",
+    "type": "integer",
+    "description": "age in years"
+  },
+  {
+    "feature_id": 21,
+    "feature": "SEX",
+    "type": "categorical",
+    "description": "sex",
+    "values": "1=Male; 2=Female"
+  },
+  {
+    "feature_id": 22,
+    "feature": "ST",
+    "type": "categorical",
+    "description": "State"
+  },
+  {
+    "feature_id": 23,
+    "feature": "MAR",
+    "type": "categorical",
+    "description": "marital status",
+    "values": "1=Married; 2=Widowed; 3=Divorced; 4=Separated; 5=Never married or under 15 years old"
+  },
+  {
+    "feature_id": 24,
+    "feature": "CIT",
+    "type": "categorical",
+    "description": "citizenship status",
+    "values": "1=Born in the U.S.; 2=Born in Puerto Rico, Guam, the U.S. Virgin Islands, or the Northern Marianas; 3=Born abroad of American parent(s); 4=U.S. citizen by naturalization; 5=Not a citizen of the U.S."
+  },
+  {
+    "feature_id": 25,
+    "feature": "RAC1P",
+    "type": "categorical",
+    "description": "race",
+    "values": "1=White alone; 2=Black or African American alone; 3=American Indian alone; 4=Alaska Native alone; 5=American Indian and Alaska Native tribes specified; or American Indian or Alaska Native, not specified and no other races; 6=Asian alone; 7=Native Hawaiian a..."
+  },
+  {
+    "feature_id": 26,
+    "feature": "SCHL",
+    "type": "categorical",
+    "description": "Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 27,
+    "feature": "ACS_YEAR",
+    "type": "integer",
+    "description": "Year of survey"
+  }
+]
+
+Feature IDs to include exactly once:
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "scores": [
+    {
+      "feature_id": 0,
+      "score": 0.0,
+      "rationale": "short reason"
+    }
+  ]
+}
+
+Rules:
+- Include every feature_id exactly once in `scores`.
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- If two features seem similarly important, assign scores that still reflect your
+  best estimate of their relative stable usefulness.
+- `feature_id` is the authoritative identifier. Include each feature_id exactly
+  once and do not include feature names in the output.

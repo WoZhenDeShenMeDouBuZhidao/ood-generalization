@@ -1,0 +1,854 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "college_scorecard",
+  "model": "ce-grad-l2",
+  "method": "score",
+  "feature_space": "model",
+  "created_at": "2026-08-12T00:24:24",
+  "aggregation": {
+    "name": "normalized_mean",
+    "normalization": "per_repeat_sum_to_one",
+    "repeat_count": 5,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 101,
+        "feature": "main",
+        "score_mean": 0.19975099486739595,
+        "score_std": 0.010913129390020725
+      },
+      {
+        "rank": 2,
+        "feature_id": 115,
+        "feature": "sch_deg",
+        "score_mean": 0.13354574994059065,
+        "score_std": 0.01649005299006419
+      },
+      {
+        "rank": 3,
+        "feature_id": 52,
+        "feature": "PCIP49",
+        "score_mean": 0.1252453507066522,
+        "score_std": 0.016749387077713083
+      },
+      {
+        "rank": 4,
+        "feature_id": 35,
+        "feature": "PCIP25",
+        "score_mean": 0.11117006637075015,
+        "score_std": 0.008712436397706006
+      },
+      {
+        "rank": 5,
+        "feature_id": 38,
+        "feature": "PCIP29",
+        "score_mean": 0.10439899992936971,
+        "score_std": 0.011759389503483526
+      },
+      {
+        "rank": 6,
+        "feature_id": 42,
+        "feature": "PCIP39",
+        "score_mean": 0.06746345316009872,
+        "score_std": 0.016358281846586258
+      },
+      {
+        "rank": 7,
+        "feature_id": 14,
+        "feature": "HIGHDEG",
+        "score_mean": 0.03041719109604536,
+        "score_std": 0.00685430911122253
+      },
+      {
+        "rank": 8,
+        "feature_id": 44,
+        "feature": "PCIP41",
+        "score_mean": 0.02966187112313582,
+        "score_std": 0.01102985511185987
+      },
+      {
+        "rank": 9,
+        "feature_id": 21,
+        "feature": "PCIP04",
+        "score_mean": 0.0189853914883951,
+        "score_std": 0.003793024639051756
+      },
+      {
+        "rank": 10,
+        "feature_id": 22,
+        "feature": "PCIP05",
+        "score_mean": 0.012388839956651748,
+        "score_std": 0.0023281218113983693
+      },
+      {
+        "rank": 11,
+        "feature_id": 8,
+        "feature": "CCSIZSET",
+        "score_mean": 0.011106542549877047,
+        "score_std": 0.0040893021380494065
+      },
+      {
+        "rank": 12,
+        "feature_id": 18,
+        "feature": "NUMBRANCH",
+        "score_mean": 0.011038865301460046,
+        "score_std": 0.0020819771018337364
+      },
+      {
+        "rank": 13,
+        "feature_id": 13,
+        "feature": "HBCU",
+        "score_mean": 0.00957425606764987,
+        "score_std": 0.0036246257124139245
+      },
+      {
+        "rank": 14,
+        "feature_id": 117,
+        "feature": "veteran",
+        "score_mean": 0.007804053950873538,
+        "score_std": 0.0020085293096003174
+      },
+      {
+        "rank": 15,
+        "feature_id": 0,
+        "feature": "ACTCMMID",
+        "score_mean": 0.007156688859093488,
+        "score_std": 0.0012101609425557505
+      },
+      {
+        "rank": 16,
+        "feature_id": 51,
+        "feature": "PCIP48",
+        "score_mean": 0.006972312210882141,
+        "score_std": 0.0013680809590341867
+      },
+      {
+        "rank": 17,
+        "feature_id": 20,
+        "feature": "PCIP03",
+        "score_mean": 0.006437434364456285,
+        "score_std": 0.002039002192388933
+      },
+      {
+        "rank": 18,
+        "feature_id": 28,
+        "feature": "PCIP14",
+        "score_mean": 0.005362203301129087,
+        "score_std": 0.0005689934612249314
+      },
+      {
+        "rank": 19,
+        "feature_id": 12,
+        "feature": "DISTANCEONLY",
+        "score_mean": 0.005113351622664482,
+        "score_std": 0.0031859578766248223
+      },
+      {
+        "rank": 20,
+        "feature_id": 50,
+        "feature": "PCIP47",
+        "score_mean": 0.004162197918362906,
+        "score_std": 0.0011907446709555263
+      },
+      {
+        "rank": 21,
+        "feature_id": 19,
+        "feature": "PCIP01",
+        "score_mean": 0.004019028289456196,
+        "score_std": 0.0005555936550821859
+      },
+      {
+        "rank": 22,
+        "feature_id": 26,
+        "feature": "PCIP12",
+        "score_mean": 0.0038559664262629223,
+        "score_std": 0.001773592963188544
+      },
+      {
+        "rank": 23,
+        "feature_id": 31,
+        "feature": "PCIP19",
+        "score_mean": 0.0037786757031460583,
+        "score_std": 0.0008565353342126294
+      },
+      {
+        "rank": 24,
+        "feature_id": 9,
+        "feature": "CONTROL",
+        "score_mean": 0.003694531395705726,
+        "score_std": 0.000237198671117097
+      },
+      {
+        "rank": 25,
+        "feature_id": 24,
+        "feature": "PCIP10",
+        "score_mean": 0.0033763882578453424,
+        "score_std": 0.0006892738821593321
+      },
+      {
+        "rank": 26,
+        "feature_id": 114,
+        "feature": "region",
+        "score_mean": 0.003221428133343817,
+        "score_std": 0.000739872802826877
+      },
+      {
+        "rank": 27,
+        "feature_id": 49,
+        "feature": "PCIP46",
+        "score_mean": 0.003144293383417366,
+        "score_std": 0.0006053074427893115
+      },
+      {
+        "rank": 28,
+        "feature_id": 2,
+        "feature": "ACTMTMID",
+        "score_mean": 0.0028501411128177075,
+        "score_std": 0.0013646820014445323
+      },
+      {
+        "rank": 29,
+        "feature_id": 63,
+        "feature": "SATWRMID",
+        "score_mean": 0.00258986716875733,
+        "score_std": 0.0010015648183870885
+      },
+      {
+        "rank": 30,
+        "feature_id": 16,
+        "feature": "LOCALE",
+        "score_mean": 0.0025721603195395667,
+        "score_std": 0.0007853575797346479
+      },
+      {
+        "rank": 31,
+        "feature_id": 99,
+        "feature": "loan_ever",
+        "score_mean": 0.0024279596451717202,
+        "score_std": 0.000458681408530015
+      },
+      {
+        "rank": 32,
+        "feature_id": 66,
+        "feature": "TUITIONFEE_IN",
+        "score_mean": 0.002076953298017037,
+        "score_std": 0.0004059275131104405
+      },
+      {
+        "rank": 33,
+        "feature_id": 62,
+        "feature": "SATVRMID",
+        "score_mean": 0.0020200979159681947,
+        "score_std": 0.0003979725820906033
+      },
+      {
+        "rank": 34,
+        "feature_id": 3,
+        "feature": "ACTWRMID",
+        "score_mean": 0.0019766477829998097,
+        "score_std": 0.0007681908586110641
+      },
+      {
+        "rank": 35,
+        "feature_id": 98,
+        "feature": "first_gen",
+        "score_mean": 0.00189175584076643,
+        "score_std": 0.0005612899304924639
+      },
+      {
+        "rank": 36,
+        "feature_id": 23,
+        "feature": "PCIP09",
+        "score_mean": 0.001799806646080158,
+        "score_std": 0.00036426391480238725
+      },
+      {
+        "rank": 37,
+        "feature_id": 43,
+        "feature": "PCIP40",
+        "score_mean": 0.0017431701401500598,
+        "score_std": 0.0006338860476530328
+      },
+      {
+        "rank": 38,
+        "feature_id": 34,
+        "feature": "PCIP24",
+        "score_mean": 0.0016343752192583866,
+        "score_std": 0.0002441823898111401
+      },
+      {
+        "rank": 39,
+        "feature_id": 46,
+        "feature": "PCIP43",
+        "score_mean": 0.0014955908023510725,
+        "score_std": 0.00035845243770038607
+      },
+      {
+        "rank": 40,
+        "feature_id": 30,
+        "feature": "PCIP16",
+        "score_mean": 0.0013347835820797175,
+        "score_std": 0.0006825294411642363
+      },
+      {
+        "rank": 41,
+        "feature_id": 1,
+        "feature": "ACTENMID",
+        "score_mean": 0.0012925624504474557,
+        "score_std": 0.0006040080576329379
+      },
+      {
+        "rank": 42,
+        "feature_id": 41,
+        "feature": "PCIP38",
+        "score_mean": 0.0011955742011670097,
+        "score_std": 0.00019111678244157758
+      },
+      {
+        "rank": 43,
+        "feature_id": 39,
+        "feature": "PCIP30",
+        "score_mean": 0.0011923356587433668,
+        "score_std": 0.00013730290405338902
+      },
+      {
+        "rank": 44,
+        "feature_id": 29,
+        "feature": "PCIP15",
+        "score_mean": 0.0011204318198404517,
+        "score_std": 0.00026095276957464105
+      },
+      {
+        "rank": 45,
+        "feature_id": 45,
+        "feature": "PCIP42",
+        "score_mean": 0.0011110143565424787,
+        "score_std": 0.000316501904926097
+      },
+      {
+        "rank": 46,
+        "feature_id": 37,
+        "feature": "PCIP27",
+        "score_mean": 0.0010627285605979936,
+        "score_std": 0.00039805674826038886
+      },
+      {
+        "rank": 47,
+        "feature_id": 48,
+        "feature": "PCIP45",
+        "score_mean": 0.0010379555303223933,
+        "score_std": 0.0001337446562276987
+      },
+      {
+        "rank": 48,
+        "feature_id": 67,
+        "feature": "TUITIONFEE_OUT",
+        "score_mean": 0.0010181921389307922,
+        "score_std": 0.0001061077399842729
+      },
+      {
+        "rank": 49,
+        "feature_id": 59,
+        "feature": "PPTUG_EF",
+        "score_mean": 0.0010160502016843644,
+        "score_std": 0.00015014108138594192
+      },
+      {
+        "rank": 50,
+        "feature_id": 61,
+        "feature": "SATMTMID",
+        "score_mean": 0.0009558724779573131,
+        "score_std": 0.0002627017835129502
+      },
+      {
+        "rank": 51,
+        "feature_id": 69,
+        "feature": "UG",
+        "score_mean": 0.0009113968853764465,
+        "score_std": 0.00020590950406076486
+      },
+      {
+        "rank": 52,
+        "feature_id": 47,
+        "feature": "PCIP44",
+        "score_mean": 0.0008944136495277841,
+        "score_std": 9.898705981849253e-05
+      },
+      {
+        "rank": 53,
+        "feature_id": 40,
+        "feature": "PCIP31",
+        "score_mean": 0.0008915074990334812,
+        "score_std": 0.00027070964782924007
+      },
+      {
+        "rank": 54,
+        "feature_id": 85,
+        "feature": "UG_AIANOld",
+        "score_mean": 0.0008848240101326377,
+        "score_std": 0.00012562966979706686
+      },
+      {
+        "rank": 55,
+        "feature_id": 76,
+        "feature": "UGDS_BLACK",
+        "score_mean": 0.0007510610322162623,
+        "score_std": 0.00020929077146247802
+      },
+      {
+        "rank": 56,
+        "feature_id": 102,
+        "feature": "married",
+        "score_mean": 0.000710440080356781,
+        "score_std": 0.0003822163791549878
+      },
+      {
+        "rank": 57,
+        "feature_id": 53,
+        "feature": "PCIP50",
+        "score_mean": 0.0006928731125624598,
+        "score_std": 0.00013700196676604156
+      },
+      {
+        "rank": 58,
+        "feature_id": 103,
+        "feature": "md_faminc",
+        "score_mean": 0.0006832991587802914,
+        "score_std": 0.0002729768567789284
+      },
+      {
+        "rank": 59,
+        "feature_id": 56,
+        "feature": "PCIP54",
+        "score_mean": 0.0006829031648940686,
+        "score_std": 0.00027569943812002324
+      },
+      {
+        "rank": 60,
+        "feature_id": 80,
+        "feature": "UGDS_NHPI",
+        "score_mean": 0.0006795201624613062,
+        "score_std": 0.00015936238619162357
+      },
+      {
+        "rank": 61,
+        "feature_id": 94,
+        "feature": "agege24",
+        "score_mean": 0.0006593824419439913,
+        "score_std": 0.00036902624882211005
+      },
+      {
+        "rank": 62,
+        "feature_id": 100,
+        "feature": "locale2",
+        "score_mean": 0.0006383490253570049,
+        "score_std": 0.0006535419777695147
+      },
+      {
+        "rank": 63,
+        "feature_id": 33,
+        "feature": "PCIP23",
+        "score_mean": 0.0006239068213881361,
+        "score_std": 0.00021522572228378474
+      },
+      {
+        "rank": 64,
+        "feature_id": 90,
+        "feature": "UG_UNKN",
+        "score_mean": 0.0005976752391664997,
+        "score_std": 0.00018994477532365393
+      },
+      {
+        "rank": 65,
+        "feature_id": 72,
+        "feature": "UGDS_AIAN",
+        "score_mean": 0.0005912635954916241,
+        "score_std": 0.00013691412876543204
+      },
+      {
+        "rank": 66,
+        "feature_id": 75,
+        "feature": "UGDS_ASIAN",
+        "score_mean": 0.000584150234455378,
+        "score_std": 0.00019701321383364925
+      },
+      {
+        "rank": 67,
+        "feature_id": 32,
+        "feature": "PCIP22",
+        "score_mean": 0.0005791203438140059,
+        "score_std": 0.00013868986719863433
+      },
+      {
+        "rank": 68,
+        "feature_id": 60,
+        "feature": "PPTUG_EF2",
+        "score_mean": 0.0005757309316693833,
+        "score_std": 0.00023014431561888796
+      },
+      {
+        "rank": 69,
+        "feature_id": 112,
+        "feature": "pell_ever",
+        "score_mean": 0.0005714861769018063,
+        "score_std": 0.00014026450536970395
+      },
+      {
+        "rank": 70,
+        "feature_id": 104,
+        "feature": "median_hh_inc",
+        "score_mean": 0.0005480741093088357,
+        "score_std": 9.833774577915152e-05
+      },
+      {
+        "rank": 71,
+        "feature_id": 11,
+        "feature": "COSTT4_P",
+        "score_mean": 0.000546275920552695,
+        "score_std": 0.00029562197100419446
+      },
+      {
+        "rank": 72,
+        "feature_id": 89,
+        "feature": "UG_NRA",
+        "score_mean": 0.0005376622015088925,
+        "score_std": 0.00019828191645560316
+      },
+      {
+        "rank": 73,
+        "feature_id": 70,
+        "feature": "UGDS",
+        "score_mean": 0.0005207767362438282,
+        "score_std": 3.082340128181845e-05
+      },
+      {
+        "rank": 74,
+        "feature_id": 25,
+        "feature": "PCIP11",
+        "score_mean": 0.00046916643597655697,
+        "score_std": 6.742856837313251e-05
+      },
+      {
+        "rank": 75,
+        "feature_id": 27,
+        "feature": "PCIP13",
+        "score_mean": 0.00046768357642220986,
+        "score_std": 0.00010562032804471636
+      },
+      {
+        "rank": 76,
+        "feature_id": 36,
+        "feature": "PCIP26",
+        "score_mean": 0.0004599948555701907,
+        "score_std": 0.0001931077601502933
+      },
+      {
+        "rank": 77,
+        "feature_id": 71,
+        "feature": "UGDS_2MOR",
+        "score_mean": 0.0004421383959577997,
+        "score_std": 0.00021243690442898348
+      },
+      {
+        "rank": 78,
+        "feature_id": 83,
+        "feature": "UGDS_WHITE",
+        "score_mean": 0.0004411463783019678,
+        "score_std": 7.527692916351872e-05
+      },
+      {
+        "rank": 79,
+        "feature_id": 92,
+        "feature": "age_entry",
+        "score_mean": 0.0004379190847662428,
+        "score_std": 0.000455247745456959
+      },
+      {
+        "rank": 80,
+        "feature_id": 73,
+        "feature": "UGDS_AIANOld",
+        "score_mean": 0.00043279526069448784,
+        "score_std": 7.704322752447837e-05
+      },
+      {
+        "rank": 81,
+        "feature_id": 93,
+        "feature": "age_entry_sq",
+        "score_mean": 0.0004210869596560746,
+        "score_std": 0.00014548652238562427
+      },
+      {
+        "rank": 82,
+        "feature_id": 88,
+        "feature": "UG_HISPOld",
+        "score_mean": 0.00040698096783840196,
+        "score_std": 0.00013481271167827365
+      },
+      {
+        "rank": 83,
+        "feature_id": 65,
+        "feature": "TUITFTE",
+        "score_mean": 0.00038595910866496956,
+        "score_std": 0.0001269022840219424
+      },
+      {
+        "rank": 84,
+        "feature_id": 54,
+        "feature": "PCIP51",
+        "score_mean": 0.0003846052278190087,
+        "score_std": 8.39563587864945e-05
+      },
+      {
+        "rank": 85,
+        "feature_id": 55,
+        "feature": "PCIP52",
+        "score_mean": 0.0003815260752797464,
+        "score_std": 4.928658648836967e-05
+      },
+      {
+        "rank": 86,
+        "feature_id": 74,
+        "feature": "UGDS_API",
+        "score_mean": 0.000379282169288318,
+        "score_std": 9.077598631447269e-05
+      },
+      {
+        "rank": 87,
+        "feature_id": 17,
+        "feature": "NPT4_PROG",
+        "score_mean": 0.00037359024732650187,
+        "score_std": 0.00014845743866571617
+      },
+      {
+        "rank": 88,
+        "feature_id": 107,
+        "feature": "pct_black",
+        "score_mean": 0.0003597517793748885,
+        "score_std": 0.00025964302755147504
+      },
+      {
+        "rank": 89,
+        "feature_id": 96,
+        "feature": "faminc",
+        "score_mean": 0.0003484232687363658,
+        "score_std": 0.00022561274595554864
+      },
+      {
+        "rank": 90,
+        "feature_id": 108,
+        "feature": "pct_born_us",
+        "score_mean": 0.00034799984212259007,
+        "score_std": 0.00017351193702887943
+      },
+      {
+        "rank": 91,
+        "feature_id": 78,
+        "feature": "UGDS_HISP",
+        "score_mean": 0.00034771271474498804,
+        "score_std": 8.788739077518685e-05
+      },
+      {
+        "rank": 92,
+        "feature_id": 109,
+        "feature": "pct_grad_prof",
+        "score_mean": 0.0003380127511834995,
+        "score_std": 0.00011303095596019677
+      },
+      {
+        "rank": 93,
+        "feature_id": 97,
+        "feature": "female",
+        "score_mean": 0.0003315160196903288,
+        "score_std": 5.3910540241528e-05
+      },
+      {
+        "rank": 94,
+        "feature_id": 64,
+        "feature": "STABBR",
+        "score_mean": 0.00032630124033082954,
+        "score_std": 7.79592052361201e-05
+      },
+      {
+        "rank": 95,
+        "feature_id": 6,
+        "feature": "AVGFACSAL",
+        "score_mean": 0.00032034777949225537,
+        "score_std": 6.960637186557e-05
+      },
+      {
+        "rank": 96,
+        "feature_id": 7,
+        "feature": "AccredAgency",
+        "score_mean": 0.00031535824602323007,
+        "score_std": 8.478580237805536e-05
+      },
+      {
+        "rank": 97,
+        "feature_id": 4,
+        "feature": "ADM_RATE",
+        "score_mean": 0.0003131796711118023,
+        "score_std": 4.041560708917628e-05
+      },
+      {
+        "rank": 98,
+        "feature_id": 95,
+        "feature": "dependent",
+        "score_mean": 0.00031232065105404937,
+        "score_std": 0.00012785130559965746
+      },
+      {
+        "rank": 99,
+        "feature_id": 111,
+        "feature": "pct_white",
+        "score_mean": 0.00030828779961952513,
+        "score_std": 8.122385460434541e-05
+      },
+      {
+        "rank": 100,
+        "feature_id": 77,
+        "feature": "UGDS_BLACKNH",
+        "score_mean": 0.00029975731203661594,
+        "score_std": 6.764714422510557e-05
+      },
+      {
+        "rank": 101,
+        "feature_id": 86,
+        "feature": "UG_API",
+        "score_mean": 0.00029765808294297645,
+        "score_std": 5.1446363414384186e-05
+      },
+      {
+        "rank": 102,
+        "feature_id": 68,
+        "feature": "TUITIONFEE_PROG",
+        "score_mean": 0.0002955719608798201,
+        "score_std": 9.543253603894555e-05
+      },
+      {
+        "rank": 103,
+        "feature_id": 82,
+        "feature": "UGDS_UNKN",
+        "score_mean": 0.000293646559080763,
+        "score_std": 6.284970394238715e-05
+      },
+      {
+        "rank": 104,
+        "feature_id": 91,
+        "feature": "UG_WHITENH",
+        "score_mean": 0.00028437537004804365,
+        "score_std": 8.071465113373726e-05
+      },
+      {
+        "rank": 105,
+        "feature_id": 84,
+        "feature": "UGDS_WHITENH",
+        "score_mean": 0.00027365845785132996,
+        "score_std": 7.82388791366561e-05
+      },
+      {
+        "rank": 106,
+        "feature_id": 105,
+        "feature": "pct_asian",
+        "score_mean": 0.0002713041906638928,
+        "score_std": 6.782058835242585e-05
+      },
+      {
+        "rank": 107,
+        "feature_id": 15,
+        "feature": "INEXPFTE",
+        "score_mean": 0.0002660269813927228,
+        "score_std": 4.944824465745016e-05
+      },
+      {
+        "rank": 108,
+        "feature_id": 57,
+        "feature": "PCTPELL",
+        "score_mean": 0.000254428698506339,
+        "score_std": 6.115409431271975e-05
+      },
+      {
+        "rank": 109,
+        "feature_id": 5,
+        "feature": "ADM_RATE_ALL",
+        "score_mean": 0.00023502403657350997,
+        "score_std": 5.6291548259958944e-05
+      },
+      {
+        "rank": 110,
+        "feature_id": 81,
+        "feature": "UGDS_NRA",
+        "score_mean": 0.00023412802537105688,
+        "score_std": 3.6702366219541605e-05
+      },
+      {
+        "rank": 111,
+        "feature_id": 106,
+        "feature": "pct_ba",
+        "score_mean": 0.00023214040099036457,
+        "score_std": 5.018024205015683e-05
+      },
+      {
+        "rank": 112,
+        "feature_id": 113,
+        "feature": "poverty_rate",
+        "score_mean": 0.00022286496114731395,
+        "score_std": 3.3896582179877286e-05
+      },
+      {
+        "rank": 113,
+        "feature_id": 87,
+        "feature": "UG_BLACKNH",
+        "score_mean": 0.00021293284420099832,
+        "score_std": 6.076890594252366e-05
+      },
+      {
+        "rank": 114,
+        "feature_id": 110,
+        "feature": "pct_hispanic",
+        "score_mean": 0.00021197240448327378,
+        "score_std": 6.779858436077969e-05
+      },
+      {
+        "rank": 115,
+        "feature_id": 116,
+        "feature": "unemp_rate",
+        "score_mean": 0.00019663475720700733,
+        "score_std": 5.870751870324834e-05
+      },
+      {
+        "rank": 116,
+        "feature_id": 79,
+        "feature": "UGDS_HISPOld",
+        "score_mean": 0.00015943033573190144,
+        "score_std": 1.8564804849288908e-05
+      },
+      {
+        "rank": 117,
+        "feature_id": 58,
+        "feature": "PFTFAC",
+        "score_mean": 0.00015070626830450954,
+        "score_std": 2.6771402156453912e-05
+      },
+      {
+        "rank": 118,
+        "feature_id": 10,
+        "feature": "COSTT4_A",
+        "score_mean": 0.00013640606749457568,
+        "score_std": 4.0370075428442024e-05
+      }
+    ]
+  }
+}

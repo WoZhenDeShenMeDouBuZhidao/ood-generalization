@@ -1,0 +1,168 @@
+{
+  "benchmark": "acs",
+  "dataset": "acsincomepovertyratio",
+  "model": "ce-grad-l2",
+  "method": "score",
+  "feature_space": "semantic",
+  "created_at": "2026-08-12T00:24:22",
+  "aggregation": {
+    "name": "normalized_mean",
+    "normalization": "per_repeat_sum_to_one",
+    "repeat_count": 5,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 11,
+        "feature": "RELP",
+        "score_mean": 0.13528693618407167,
+        "score_std": 0.048307334205678856
+      },
+      {
+        "rank": 2,
+        "feature_id": 2,
+        "feature": "MAR",
+        "score_mean": 0.13292404370010175,
+        "score_std": 0.029589612440165027
+      },
+      {
+        "rank": 3,
+        "feature_id": 6,
+        "feature": "MIG",
+        "score_mean": 0.1200583449756892,
+        "score_std": 0.029134727720649678
+      },
+      {
+        "rank": 4,
+        "feature_id": 5,
+        "feature": "ESP",
+        "score_mean": 0.11018730619764545,
+        "score_std": 0.019875254000095734
+      },
+      {
+        "rank": 5,
+        "feature_id": 8,
+        "feature": "MIL",
+        "score_mean": 0.08852466380536586,
+        "score_std": 0.013536942908847539
+      },
+      {
+        "rank": 6,
+        "feature_id": 13,
+        "feature": "DEYE",
+        "score_mean": 0.08656187752957675,
+        "score_std": 0.005634506084587017
+      },
+      {
+        "rank": 7,
+        "feature_id": 4,
+        "feature": "DIS",
+        "score_mean": 0.07431440287093405,
+        "score_std": 0.021411561410906787
+      },
+      {
+        "rank": 8,
+        "feature_id": 1,
+        "feature": "SCHL",
+        "score_mean": 0.05634000135439419,
+        "score_std": 0.004644654507362624
+      },
+      {
+        "rank": 9,
+        "feature_id": 17,
+        "feature": "ESR",
+        "score_mean": 0.04624217368082035,
+        "score_std": 0.0076634868691987735
+      },
+      {
+        "rank": 10,
+        "feature_id": 10,
+        "feature": "NATIVITY",
+        "score_mean": 0.04095123779133866,
+        "score_std": 0.02137781857084692
+      },
+      {
+        "rank": 11,
+        "feature_id": 7,
+        "feature": "CIT",
+        "score_mean": 0.027231633436478487,
+        "score_std": 0.008569880948932653
+      },
+      {
+        "rank": 12,
+        "feature_id": 9,
+        "feature": "ANC",
+        "score_mean": 0.022426707597706715,
+        "score_std": 0.004510618372364358
+      },
+      {
+        "rank": 13,
+        "feature_id": 16,
+        "feature": "GCL",
+        "score_mean": 0.02124859590999589,
+        "score_std": 0.019977634451227792
+      },
+      {
+        "rank": 14,
+        "feature_id": 3,
+        "feature": "SEX",
+        "score_mean": 0.015760848113790492,
+        "score_std": 0.005208157004301739
+      },
+      {
+        "rank": 15,
+        "feature_id": 14,
+        "feature": "DREM",
+        "score_mean": 0.010634713510210517,
+        "score_std": 0.003738055624935934
+      },
+      {
+        "rank": 16,
+        "feature_id": 12,
+        "feature": "DEAR",
+        "score_mean": 0.005625909196585529,
+        "score_std": 0.003434855890275118
+      },
+      {
+        "rank": 17,
+        "feature_id": 0,
+        "feature": "AGEP",
+        "score_mean": 0.002223732190809219,
+        "score_std": 0.0002981573754330588
+      },
+      {
+        "rank": 18,
+        "feature_id": 19,
+        "feature": "WKHP",
+        "score_mean": 0.0020333550666694756,
+        "score_std": 0.00046548541160398204
+      },
+      {
+        "rank": 19,
+        "feature_id": 15,
+        "feature": "RAC1P",
+        "score_mean": 0.0014234815442757392,
+        "score_std": 0.0008323703967964664
+      },
+      {
+        "rank": 20,
+        "feature_id": 18,
+        "feature": "OCCP",
+        "score_mean": 3.53435399844691e-08,
+        "score_std": 1.0949309369327233e-08
+      }
+    ]
+  }
+}

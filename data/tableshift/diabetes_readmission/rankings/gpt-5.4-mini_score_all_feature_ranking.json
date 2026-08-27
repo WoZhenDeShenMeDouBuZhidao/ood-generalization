@@ -1,0 +1,2403 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "diabetes_readmission",
+  "model": "gpt-5.4-mini",
+  "method": "score_all",
+  "temperature": 0.5,
+  "created_at": "2026-06-09T16:47:25",
+  "token_usage": {
+    "num_calls": 5,
+    "input_tokens": 14325,
+    "output_tokens": 9721,
+    "total_tokens": 24046
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 5,
+        "feature": "discharge_disposition_id",
+        "score_mean": 0.35400000000000004,
+        "score_std": 0.10071742649611339
+      },
+      {
+        "rank": 2,
+        "feature_id": 14,
+        "feature": "number_inpatient",
+        "score_mean": 0.338,
+        "score_std": 0.14878171930717832
+      },
+      {
+        "rank": 3,
+        "feature_id": 20,
+        "feature": "A1Cresult",
+        "score_mean": 0.3,
+        "score_std": 0.08786353054595518
+      },
+      {
+        "rank": 4,
+        "feature_id": 12,
+        "feature": "number_outpatient",
+        "score_mean": 0.298,
+        "score_std": 0.15038616957685969
+      },
+      {
+        "rank": 5,
+        "feature_id": 6,
+        "feature": "time_in_hospital",
+        "score_mean": 0.276,
+        "score_std": 0.11620671237067161
+      },
+      {
+        "rank": 6,
+        "feature_id": 11,
+        "feature": "num_medications",
+        "score_mean": 0.272,
+        "score_std": 0.10533755265810955
+      },
+      {
+        "rank": 7,
+        "feature_id": 13,
+        "feature": "number_emergency",
+        "score_mean": 0.266,
+        "score_std": 0.13558761005342634
+      },
+      {
+        "rank": 8,
+        "feature_id": 2,
+        "feature": "age",
+        "score_mean": 0.236,
+        "score_std": 0.0932952303175248
+      },
+      {
+        "rank": 9,
+        "feature_id": 9,
+        "feature": "num_lab_procedures",
+        "score_mean": 0.224,
+        "score_std": 0.09243376006633075
+      },
+      {
+        "rank": 10,
+        "feature_id": 18,
+        "feature": "number_diagnoses",
+        "score_mean": 0.224,
+        "score_std": 0.11568923891183656
+      },
+      {
+        "rank": 11,
+        "feature_id": 38,
+        "feature": "insulin",
+        "score_mean": 0.216,
+        "score_std": 0.07812809993849845
+      },
+      {
+        "rank": 12,
+        "feature_id": 15,
+        "feature": "diag_1",
+        "score_mean": 0.188,
+        "score_std": 0.08657944328765345
+      },
+      {
+        "rank": 13,
+        "feature_id": 21,
+        "feature": "metformin",
+        "score_mean": 0.17600000000000002,
+        "score_std": 0.07310266752998826
+      },
+      {
+        "rank": 14,
+        "feature_id": 19,
+        "feature": "max_glu_serum",
+        "score_mean": 0.156,
+        "score_std": 0.04841487374764082
+      },
+      {
+        "rank": 15,
+        "feature_id": 10,
+        "feature": "num_procedures",
+        "score_mean": 0.156,
+        "score_std": 0.0662117814289874
+      },
+      {
+        "rank": 16,
+        "feature_id": 16,
+        "feature": "diag_2",
+        "score_mean": 0.148,
+        "score_std": 0.07678541528180986
+      },
+      {
+        "rank": 17,
+        "feature_id": 4,
+        "feature": "admission_type_id",
+        "score_mean": 0.144,
+        "score_std": 0.029393876913398138
+      },
+      {
+        "rank": 18,
+        "feature_id": 45,
+        "feature": "diabetesMed",
+        "score_mean": 0.144,
+        "score_std": 0.030066592756745822
+      },
+      {
+        "rank": 19,
+        "feature_id": 44,
+        "feature": "change",
+        "score_mean": 0.138,
+        "score_std": 0.0581033561853358
+      },
+      {
+        "rank": 20,
+        "feature_id": 17,
+        "feature": "diag_3",
+        "score_mean": 0.128,
+        "score_std": 0.06675327707311456
+      },
+      {
+        "rank": 21,
+        "feature_id": 28,
+        "feature": "glyburide",
+        "score_mean": 0.1,
+        "score_std": 0.03162277660168379
+      },
+      {
+        "rank": 22,
+        "feature_id": 27,
+        "feature": "glipizide",
+        "score_mean": 0.098,
+        "score_std": 0.027856776554368235
+      },
+      {
+        "rank": 23,
+        "feature_id": 25,
+        "feature": "glimepiride",
+        "score_mean": 0.08800000000000001,
+        "score_std": 0.027856776554368242
+      },
+      {
+        "rank": 24,
+        "feature_id": 0,
+        "feature": "race",
+        "score_mean": 0.088,
+        "score_std": 0.03310589071449369
+      },
+      {
+        "rank": 25,
+        "feature_id": 30,
+        "feature": "pioglitazone",
+        "score_mean": 0.076,
+        "score_std": 0.02416609194718914
+      },
+      {
+        "rank": 26,
+        "feature_id": 31,
+        "feature": "rosiglitazone",
+        "score_mean": 0.076,
+        "score_std": 0.02416609194718914
+      },
+      {
+        "rank": 27,
+        "feature_id": 22,
+        "feature": "repaglinide",
+        "score_mean": 0.074,
+        "score_std": 0.02497999199359359
+      },
+      {
+        "rank": 28,
+        "feature_id": 8,
+        "feature": "medical_specialty",
+        "score_mean": 0.064,
+        "score_std": 0.019595917942265426
+      },
+      {
+        "rank": 29,
+        "feature_id": 23,
+        "feature": "nateglinide",
+        "score_mean": 0.060000000000000005,
+        "score_std": 0.020976176963403034
+      },
+      {
+        "rank": 30,
+        "feature_id": 1,
+        "feature": "gender",
+        "score_mean": 0.054,
+        "score_std": 0.013564659966250536
+      },
+      {
+        "rank": 31,
+        "feature_id": 32,
+        "feature": "acarbose",
+        "score_mean": 0.046,
+        "score_std": 0.017435595774162694
+      },
+      {
+        "rank": 32,
+        "feature_id": 39,
+        "feature": "glyburide-metformin",
+        "score_mean": 0.041999999999999996,
+        "score_std": 0.023999999999999997
+      },
+      {
+        "rank": 33,
+        "feature_id": 24,
+        "feature": "chlorpropamide",
+        "score_mean": 0.034,
+        "score_std": 0.013564659966250536
+      },
+      {
+        "rank": 34,
+        "feature_id": 7,
+        "feature": "payer_code",
+        "score_mean": 0.034,
+        "score_std": 0.01019803902718557
+      },
+      {
+        "rank": 35,
+        "feature_id": 33,
+        "feature": "miglitol",
+        "score_mean": 0.026000000000000002,
+        "score_std": 0.012000000000000002
+      },
+      {
+        "rank": 36,
+        "feature_id": 3,
+        "feature": "weight",
+        "score_mean": 0.024,
+        "score_std": 0.007999999999999998
+      },
+      {
+        "rank": 37,
+        "feature_id": 40,
+        "feature": "glipizide-metformin",
+        "score_mean": 0.022,
+        "score_std": 0.009797958971132713
+      },
+      {
+        "rank": 38,
+        "feature_id": 26,
+        "feature": "acetohexamide",
+        "score_mean": 0.01,
+        "score_std": 0.0
+      },
+      {
+        "rank": 39,
+        "feature_id": 41,
+        "feature": "glimepiride-pioglitazone",
+        "score_mean": 0.01,
+        "score_std": 0.006324555320336759
+      },
+      {
+        "rank": 40,
+        "feature_id": 43,
+        "feature": "metformin-pioglitazone",
+        "score_mean": 0.01,
+        "score_std": 0.006324555320336759
+      },
+      {
+        "rank": 41,
+        "feature_id": 42,
+        "feature": "metformin-rosiglitazone",
+        "score_mean": 0.01,
+        "score_std": 0.006324555320336759
+      },
+      {
+        "rank": 42,
+        "feature_id": 29,
+        "feature": "tolbutamide",
+        "score_mean": 0.01,
+        "score_std": 0.0
+      },
+      {
+        "rank": 43,
+        "feature_id": 35,
+        "feature": "tolazamide",
+        "score_mean": 0.008,
+        "score_std": 0.004
+      },
+      {
+        "rank": 44,
+        "feature_id": 34,
+        "feature": "troglitazone",
+        "score_mean": 0.006,
+        "score_std": 0.004898979485566357
+      },
+      {
+        "rank": 45,
+        "feature_id": 37,
+        "feature": "citoglipton",
+        "score_mean": 0.0,
+        "score_std": 0.0
+      },
+      {
+        "rank": 46,
+        "feature_id": 36,
+        "feature": "examide",
+        "score_mean": 0.0,
+        "score_std": 0.0
+      }
+    ],
+    "scores": [
+      {
+        "feature_id": 0,
+        "feature": "race",
+        "score_mean": 0.088,
+        "score_std": 0.03310589071449369,
+        "sample_scores": [
+          0.08,
+          0.15,
+          0.08,
+          0.08,
+          0.05
+        ]
+      },
+      {
+        "feature_id": 1,
+        "feature": "gender",
+        "score_mean": 0.054,
+        "score_std": 0.013564659966250536,
+        "sample_scores": [
+          0.05,
+          0.08,
+          0.05,
+          0.05,
+          0.04
+        ]
+      },
+      {
+        "feature_id": 2,
+        "feature": "age",
+        "score_mean": 0.236,
+        "score_std": 0.0932952303175248,
+        "sample_scores": [
+          0.18,
+          0.42,
+          0.18,
+          0.22,
+          0.18
+        ]
+      },
+      {
+        "feature_id": 3,
+        "feature": "weight",
+        "score_mean": 0.024,
+        "score_std": 0.007999999999999998,
+        "sample_scores": [
+          0.03,
+          0.03,
+          0.03,
+          0.01,
+          0.02
+        ]
+      },
+      {
+        "feature_id": 4,
+        "feature": "admission_type_id",
+        "score_mean": 0.144,
+        "score_std": 0.029393876913398138,
+        "sample_scores": [
+          0.12,
+          0.18,
+          0.12,
+          0.18,
+          0.12
+        ]
+      },
+      {
+        "feature_id": 5,
+        "feature": "discharge_disposition_id",
+        "score_mean": 0.35400000000000004,
+        "score_std": 0.10071742649611339,
+        "sample_scores": [
+          0.28,
+          0.55,
+          0.32,
+          0.34,
+          0.28
+        ]
+      },
+      {
+        "feature_id": 6,
+        "feature": "time_in_hospital",
+        "score_mean": 0.276,
+        "score_std": 0.11620671237067161,
+        "sample_scores": [
+          0.16,
+          0.5,
+          0.24,
+          0.24,
+          0.24
+        ]
+      },
+      {
+        "feature_id": 7,
+        "feature": "payer_code",
+        "score_mean": 0.034,
+        "score_std": 0.01019803902718557,
+        "sample_scores": [
+          0.04,
+          0.05,
+          0.02,
+          0.03,
+          0.03
+        ]
+      },
+      {
+        "feature_id": 8,
+        "feature": "medical_specialty",
+        "score_mean": 0.064,
+        "score_std": 0.019595917942265426,
+        "sample_scores": [
+          0.06,
+          0.1,
+          0.04,
+          0.06,
+          0.06
+        ]
+      },
+      {
+        "feature_id": 9,
+        "feature": "num_lab_procedures",
+        "score_mean": 0.224,
+        "score_std": 0.09243376006633075,
+        "sample_scores": [
+          0.14,
+          0.4,
+          0.22,
+          0.2,
+          0.16
+        ]
+      },
+      {
+        "feature_id": 10,
+        "feature": "num_procedures",
+        "score_mean": 0.156,
+        "score_std": 0.0662117814289874,
+        "sample_scores": [
+          0.1,
+          0.28,
+          0.16,
+          0.14,
+          0.1
+        ]
+      },
+      {
+        "feature_id": 11,
+        "feature": "num_medications",
+        "score_mean": 0.272,
+        "score_std": 0.10533755265810955,
+        "sample_scores": [
+          0.15,
+          0.46,
+          0.28,
+          0.27,
+          0.2
+        ]
+      },
+      {
+        "feature_id": 12,
+        "feature": "number_outpatient",
+        "score_mean": 0.298,
+        "score_std": 0.15038616957685969,
+        "sample_scores": [
+          0.17,
+          0.58,
+          0.27,
+          0.3,
+          0.17
+        ]
+      },
+      {
+        "feature_id": 13,
+        "feature": "number_emergency",
+        "score_mean": 0.266,
+        "score_std": 0.13558761005342634,
+        "sample_scores": [
+          0.16,
+          0.52,
+          0.25,
+          0.26,
+          0.14
+        ]
+      },
+      {
+        "feature_id": 14,
+        "feature": "number_inpatient",
+        "score_mean": 0.338,
+        "score_std": 0.14878171930717832,
+        "sample_scores": [
+          0.21,
+          0.62,
+          0.31,
+          0.33,
+          0.22
+        ]
+      },
+      {
+        "feature_id": 15,
+        "feature": "diag_1",
+        "score_mean": 0.188,
+        "score_std": 0.08657944328765345,
+        "sample_scores": [
+          0.13,
+          0.36,
+          0.14,
+          0.16,
+          0.15
+        ]
+      },
+      {
+        "feature_id": 16,
+        "feature": "diag_2",
+        "score_mean": 0.148,
+        "score_std": 0.07678541528180986,
+        "sample_scores": [
+          0.11,
+          0.3,
+          0.1,
+          0.13,
+          0.1
+        ]
+      },
+      {
+        "feature_id": 17,
+        "feature": "diag_3",
+        "score_mean": 0.128,
+        "score_std": 0.06675327707311456,
+        "sample_scores": [
+          0.1,
+          0.26,
+          0.09,
+          0.11,
+          0.08
+        ]
+      },
+      {
+        "feature_id": 18,
+        "feature": "number_diagnoses",
+        "score_mean": 0.224,
+        "score_std": 0.11568923891183656,
+        "sample_scores": [
+          0.12,
+          0.44,
+          0.2,
+          0.23,
+          0.13
+        ]
+      },
+      {
+        "feature_id": 19,
+        "feature": "max_glu_serum",
+        "score_mean": 0.156,
+        "score_std": 0.04841487374764082,
+        "sample_scores": [
+          0.09,
+          0.22,
+          0.11,
+          0.18,
+          0.18
+        ]
+      },
+      {
+        "feature_id": 20,
+        "feature": "A1Cresult",
+        "score_mean": 0.3,
+        "score_std": 0.08786353054595518,
+        "sample_scores": [
+          0.22,
+          0.47,
+          0.26,
+          0.29,
+          0.26
+        ]
+      },
+      {
+        "feature_id": 21,
+        "feature": "metformin",
+        "score_mean": 0.17600000000000002,
+        "score_std": 0.07310266752998826,
+        "sample_scores": [
+          0.14,
+          0.31,
+          0.17,
+          0.17,
+          0.09
+        ]
+      },
+      {
+        "feature_id": 22,
+        "feature": "repaglinide",
+        "score_mean": 0.074,
+        "score_std": 0.02497999199359359,
+        "sample_scores": [
+          0.06,
+          0.12,
+          0.06,
+          0.08,
+          0.05
+        ]
+      },
+      {
+        "feature_id": 23,
+        "feature": "nateglinide",
+        "score_mean": 0.060000000000000005,
+        "score_std": 0.020976176963403034,
+        "sample_scores": [
+          0.05,
+          0.1,
+          0.05,
+          0.06,
+          0.04
+        ]
+      },
+      {
+        "feature_id": 24,
+        "feature": "chlorpropamide",
+        "score_mean": 0.034,
+        "score_std": 0.013564659966250536,
+        "sample_scores": [
+          0.03,
+          0.06,
+          0.03,
+          0.02,
+          0.03
+        ]
+      },
+      {
+        "feature_id": 25,
+        "feature": "glimepiride",
+        "score_mean": 0.08800000000000001,
+        "score_std": 0.027856776554368242,
+        "sample_scores": [
+          0.07,
+          0.14,
+          0.08,
+          0.09,
+          0.06
+        ]
+      },
+      {
+        "feature_id": 26,
+        "feature": "acetohexamide",
+        "score_mean": 0.01,
+        "score_std": 0.0,
+        "sample_scores": [
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01
+        ]
+      },
+      {
+        "feature_id": 27,
+        "feature": "glipizide",
+        "score_mean": 0.098,
+        "score_std": 0.027856776554368235,
+        "sample_scores": [
+          0.08,
+          0.15,
+          0.09,
+          0.1,
+          0.07
+        ]
+      },
+      {
+        "feature_id": 28,
+        "feature": "glyburide",
+        "score_mean": 0.1,
+        "score_std": 0.03162277660168379,
+        "sample_scores": [
+          0.08,
+          0.16,
+          0.09,
+          0.1,
+          0.07
+        ]
+      },
+      {
+        "feature_id": 29,
+        "feature": "tolbutamide",
+        "score_mean": 0.01,
+        "score_std": 0.0,
+        "sample_scores": [
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01
+        ]
+      },
+      {
+        "feature_id": 30,
+        "feature": "pioglitazone",
+        "score_mean": 0.076,
+        "score_std": 0.02416609194718914,
+        "sample_scores": [
+          0.06,
+          0.12,
+          0.07,
+          0.08,
+          0.05
+        ]
+      },
+      {
+        "feature_id": 31,
+        "feature": "rosiglitazone",
+        "score_mean": 0.076,
+        "score_std": 0.02416609194718914,
+        "sample_scores": [
+          0.06,
+          0.12,
+          0.07,
+          0.08,
+          0.05
+        ]
+      },
+      {
+        "feature_id": 32,
+        "feature": "acarbose",
+        "score_mean": 0.046,
+        "score_std": 0.017435595774162694,
+        "sample_scores": [
+          0.04,
+          0.08,
+          0.04,
+          0.04,
+          0.03
+        ]
+      },
+      {
+        "feature_id": 33,
+        "feature": "miglitol",
+        "score_mean": 0.026000000000000002,
+        "score_std": 0.012000000000000002,
+        "sample_scores": [
+          0.02,
+          0.05,
+          0.02,
+          0.02,
+          0.02
+        ]
+      },
+      {
+        "feature_id": 34,
+        "feature": "troglitazone",
+        "score_mean": 0.006,
+        "score_std": 0.004898979485566357,
+        "sample_scores": [
+          0.01,
+          0.0,
+          0.0,
+          0.01,
+          0.01
+        ]
+      },
+      {
+        "feature_id": 35,
+        "feature": "tolazamide",
+        "score_mean": 0.008,
+        "score_std": 0.004,
+        "sample_scores": [
+          0.01,
+          0.0,
+          0.01,
+          0.01,
+          0.01
+        ]
+      },
+      {
+        "feature_id": 36,
+        "feature": "examide",
+        "score_mean": 0.0,
+        "score_std": 0.0,
+        "sample_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "feature_id": 37,
+        "feature": "citoglipton",
+        "score_mean": 0.0,
+        "score_std": 0.0,
+        "sample_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "feature_id": 38,
+        "feature": "insulin",
+        "score_mean": 0.216,
+        "score_std": 0.07812809993849845,
+        "sample_scores": [
+          0.16,
+          0.34,
+          0.23,
+          0.24,
+          0.11
+        ]
+      },
+      {
+        "feature_id": 39,
+        "feature": "glyburide-metformin",
+        "score_mean": 0.041999999999999996,
+        "score_std": 0.023999999999999997,
+        "sample_scores": [
+          0.03,
+          0.09,
+          0.03,
+          0.03,
+          0.03
+        ]
+      },
+      {
+        "feature_id": 40,
+        "feature": "glipizide-metformin",
+        "score_mean": 0.022,
+        "score_std": 0.009797958971132713,
+        "sample_scores": [
+          0.02,
+          0.04,
+          0.01,
+          0.02,
+          0.02
+        ]
+      },
+      {
+        "feature_id": 41,
+        "feature": "glimepiride-pioglitazone",
+        "score_mean": 0.01,
+        "score_std": 0.006324555320336759,
+        "sample_scores": [
+          0.01,
+          0.02,
+          0.0,
+          0.01,
+          0.01
+        ]
+      },
+      {
+        "feature_id": 42,
+        "feature": "metformin-rosiglitazone",
+        "score_mean": 0.01,
+        "score_std": 0.006324555320336759,
+        "sample_scores": [
+          0.01,
+          0.02,
+          0.0,
+          0.01,
+          0.01
+        ]
+      },
+      {
+        "feature_id": 43,
+        "feature": "metformin-pioglitazone",
+        "score_mean": 0.01,
+        "score_std": 0.006324555320336759,
+        "sample_scores": [
+          0.01,
+          0.02,
+          0.0,
+          0.01,
+          0.01
+        ]
+      },
+      {
+        "feature_id": 44,
+        "feature": "change",
+        "score_mean": 0.138,
+        "score_std": 0.0581033561853358,
+        "sample_scores": [
+          0.09,
+          0.24,
+          0.12,
+          0.16,
+          0.08
+        ]
+      },
+      {
+        "feature_id": 45,
+        "feature": "diabetesMed",
+        "score_mean": 0.144,
+        "score_std": 0.030066592756745822,
+        "sample_scores": [
+          0.13,
+          0.2,
+          0.15,
+          0.12,
+          0.12
+        ]
+      }
+    ],
+    "samples": [
+      {
+        "task_summary": "Predict whether a diabetes hospital encounter will end in readmission, using encounter history, severity, and treatment-related signals that should generalize across domains.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.08,
+            "rationale": "Demographic signal may correlate with care patterns, but is a weak and potentially brittle shortcut.",
+            "feature": "race"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.05,
+            "rationale": "Mostly a proxy for population mix and care differences; limited stable causal relevance.",
+            "feature": "gender"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.18,
+            "rationale": "Age is a robust risk factor for readmission and illness burden across settings.",
+            "feature": "age"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.03,
+            "rationale": "Often missing and weakly informative; can reflect data collection artifacts more than stable risk.",
+            "feature": "weight"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.12,
+            "rationale": "Admission type reflects acuity and planned vs emergency care, which can generalize moderately well.",
+            "feature": "admission_type_id"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.28,
+            "rationale": "Discharge disposition is strongly tied to post-acute support and near-term readmission risk.",
+            "feature": "discharge_disposition_id"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.16,
+            "rationale": "Longer stays usually indicate greater severity or complications, useful beyond the source domain.",
+            "feature": "time_in_hospital"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.04,
+            "rationale": "Insurance/payer information is a demographic and institutional proxy that may not transfer well.",
+            "feature": "payer_code"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.06,
+            "rationale": "Specialty can reflect case mix and practice style, but is somewhat site-specific and brittle.",
+            "feature": "medical_specialty"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.14,
+            "rationale": "Lab intensity is a reasonable proxy for clinical complexity and monitoring needs.",
+            "feature": "num_lab_procedures"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.1,
+            "rationale": "Procedural burden can indicate severity, though it is noisier than core utilization measures.",
+            "feature": "num_procedures"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.15,
+            "rationale": "Medication count captures treatment complexity and comorbidity burden in a fairly stable way.",
+            "feature": "num_medications"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.17,
+            "rationale": "Prior outpatient utilization is a strong, general marker of chronic disease management needs.",
+            "feature": "number_outpatient"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.16,
+            "rationale": "Recent emergency use is a robust indicator of instability and future acute care risk.",
+            "feature": "number_emergency"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.21,
+            "rationale": "Prior inpatient visits are highly predictive of future readmission and reflect persistent illness burden.",
+            "feature": "number_inpatient"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.13,
+            "rationale": "Primary diagnosis gives stable information about underlying condition and expected trajectory.",
+            "feature": "diag_1"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.11,
+            "rationale": "Secondary diagnosis adds comorbidity context that is generally predictive across domains.",
+            "feature": "diag_2"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.1,
+            "rationale": "Additional diagnosis information helps capture overall complexity, though with diminishing returns.",
+            "feature": "diag_3"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.12,
+            "rationale": "Number of diagnoses is a compact severity/comorbidity proxy with decent stability.",
+            "feature": "number_diagnoses"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.09,
+            "rationale": "Glucose lab result is clinically relevant, but often sparse and subject to testing policy differences.",
+            "feature": "max_glu_serum"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.22,
+            "rationale": "HbA1c is a strong, semantically meaningful measure of diabetes control and should transfer well.",
+            "feature": "A1Cresult"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.14,
+            "rationale": "Metformin change reflects treatment adjustment in response to glycemic control and is clinically grounded.",
+            "feature": "metformin"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.06,
+            "rationale": "Medication-specific change is informative but sparse and less stable than broader treatment signals.",
+            "feature": "repaglinide"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.05,
+            "rationale": "Sparse drug-specific signal with limited prevalence and likely weak marginal utility.",
+            "feature": "nateglinide"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.03,
+            "rationale": "Very rare medication feature; likely too sparse to be reliable across domains.",
+            "feature": "chlorpropamide"
+          },
+          {
+            "feature_id": 25,
+            "score": 0.07,
+            "rationale": "Drug-change information can reflect diabetes management intensity, but is medication-specific and noisy.",
+            "feature": "glimepiride"
+          },
+          {
+            "feature_id": 26,
+            "score": 0.01,
+            "rationale": "Extremely rare and unlikely to provide stable predictive value.",
+            "feature": "acetohexamide"
+          },
+          {
+            "feature_id": 27,
+            "score": 0.08,
+            "rationale": "Common diabetes medication adjustment can indicate treatment escalation and disease severity.",
+            "feature": "glipizide"
+          },
+          {
+            "feature_id": 28,
+            "score": 0.08,
+            "rationale": "Another common medication adjustment with modest stable relevance to glycemic management.",
+            "feature": "glyburide"
+          },
+          {
+            "feature_id": 29,
+            "score": 0.01,
+            "rationale": "Rare drug feature with little expected stable signal.",
+            "feature": "tolbutamide"
+          },
+          {
+            "feature_id": 30,
+            "score": 0.06,
+            "rationale": "Treatment change may matter, but this specific drug is less central and more site-dependent.",
+            "feature": "pioglitazone"
+          },
+          {
+            "feature_id": 31,
+            "score": 0.06,
+            "rationale": "Moderately informative treatment adjustment, though not as robust as core utilization or HbA1c.",
+            "feature": "rosiglitazone"
+          },
+          {
+            "feature_id": 32,
+            "score": 0.04,
+            "rationale": "Sparse medication change with limited expected marginal utility.",
+            "feature": "acarbose"
+          },
+          {
+            "feature_id": 33,
+            "score": 0.02,
+            "rationale": "Very sparse and likely unstable across domains.",
+            "feature": "miglitol"
+          },
+          {
+            "feature_id": 34,
+            "score": 0.01,
+            "rationale": "Extremely rare medication feature; likely negligible stable value.",
+            "feature": "troglitazone"
+          },
+          {
+            "feature_id": 35,
+            "score": 0.01,
+            "rationale": "Rare and unlikely to generalize usefully.",
+            "feature": "tolazamide"
+          },
+          {
+            "feature_id": 36,
+            "score": 0.0,
+            "rationale": "Appears essentially non-informative or near-constant in practice.",
+            "feature": "examide"
+          },
+          {
+            "feature_id": 37,
+            "score": 0.0,
+            "rationale": "Appears essentially non-informative or near-constant in practice.",
+            "feature": "citoglipton"
+          },
+          {
+            "feature_id": 38,
+            "score": 0.16,
+            "rationale": "Insulin treatment is a strong, clinically meaningful marker of diabetes severity and management.",
+            "feature": "insulin"
+          },
+          {
+            "feature_id": 39,
+            "score": 0.03,
+            "rationale": "Combination drug feature is sparse and likely unstable.",
+            "feature": "glyburide-metformin"
+          },
+          {
+            "feature_id": 40,
+            "score": 0.02,
+            "rationale": "Rare combination medication feature with limited expected robustness.",
+            "feature": "glipizide-metformin"
+          },
+          {
+            "feature_id": 41,
+            "score": 0.01,
+            "rationale": "Very rare and unlikely to be reliably predictive.",
+            "feature": "glimepiride-pioglitazone"
+          },
+          {
+            "feature_id": 42,
+            "score": 0.01,
+            "rationale": "Very rare and unlikely to be reliably predictive.",
+            "feature": "metformin-rosiglitazone"
+          },
+          {
+            "feature_id": 43,
+            "score": 0.01,
+            "rationale": "Very rare and unlikely to be reliably predictive.",
+            "feature": "metformin-pioglitazone"
+          },
+          {
+            "feature_id": 44,
+            "score": 0.09,
+            "rationale": "Any medication change is a broad treatment-intensity signal, though somewhat policy-dependent.",
+            "feature": "change"
+          },
+          {
+            "feature_id": 45,
+            "score": 0.13,
+            "rationale": "Diabetes medication prescription is clinically relevant and generally stable, but less specific than HbA1c.",
+            "feature": "diabetesMed"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a diabetic patient will be readmitted after the hospital encounter using pre- and during-encounter clinical information.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.15,
+            "rationale": "Demographic signal may correlate with care patterns, but is a weak and potentially biased shortcut.",
+            "feature": "race"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.08,
+            "rationale": "Gender is usually only weakly related to readmission and is not a robust clinical predictor.",
+            "feature": "gender"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.42,
+            "rationale": "Age is a stable risk factor for hospitalization and readmission across domains.",
+            "feature": "age"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.03,
+            "rationale": "Weight is often missing and noisy in this dataset, so it is unlikely to be a stable predictor.",
+            "feature": "weight"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.18,
+            "rationale": "Admission type reflects care setting and severity, but can also encode hospital workflow differences.",
+            "feature": "admission_type_id"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.55,
+            "rationale": "Discharge disposition strongly reflects post-acute care needs and near-term readmission risk.",
+            "feature": "discharge_disposition_id"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.5,
+            "rationale": "Longer stays generally indicate greater illness severity and care complexity, which are stable risk signals.",
+            "feature": "time_in_hospital"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.05,
+            "rationale": "Payer code is mostly a socioeconomic or administrative proxy and is brittle across domains.",
+            "feature": "payer_code"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.1,
+            "rationale": "Medical specialty may capture treatment context, but it is partly institutional and less stable.",
+            "feature": "medical_specialty"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.4,
+            "rationale": "Lab intensity is a reasonable proxy for acute illness burden and monitoring needs.",
+            "feature": "num_lab_procedures"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.28,
+            "rationale": "Procedural intensity can reflect severity and complexity, though it is less directly tied to readmission.",
+            "feature": "num_procedures"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.46,
+            "rationale": "Medication count captures treatment complexity and chronic disease burden, which are fairly stable predictors.",
+            "feature": "num_medications"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.58,
+            "rationale": "Prior outpatient utilization is a strong, domain-stable marker of chronic disease management and risk.",
+            "feature": "number_outpatient"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.52,
+            "rationale": "Recent emergency use is a strong signal of instability and future utilization risk.",
+            "feature": "number_emergency"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.62,
+            "rationale": "Prior inpatient utilization is one of the strongest stable indicators of future readmission risk.",
+            "feature": "number_inpatient"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.36,
+            "rationale": "Primary diagnosis is clinically relevant and often predictive, though some codes may be sparse or noisy.",
+            "feature": "diag_1"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.3,
+            "rationale": "Secondary diagnosis adds comorbidity information and is useful, but usually less informative than the primary diagnosis.",
+            "feature": "diag_2"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.26,
+            "rationale": "Additional diagnosis contributes comorbidity burden, but with diminishing marginal value.",
+            "feature": "diag_3"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.44,
+            "rationale": "Number of diagnoses is a stable proxy for multimorbidity and encounter complexity.",
+            "feature": "number_diagnoses"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.22,
+            "rationale": "Glucose serum results are clinically meaningful, but availability and measurement patterns can be inconsistent.",
+            "feature": "max_glu_serum"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.47,
+            "rationale": "HbA1c is a strong, semantically grounded marker of diabetes control and should generalize well.",
+            "feature": "A1Cresult"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.31,
+            "rationale": "Metformin change reflects treatment adjustment, which can relate to disease control and follow-up risk.",
+            "feature": "metformin"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.12,
+            "rationale": "Repaglinide change is medication-specific and likely sparse, so its stable signal is limited.",
+            "feature": "repaglinide"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.1,
+            "rationale": "Nateglinide change is sparse and likely weak as a generalizable predictor.",
+            "feature": "nateglinide"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.06,
+            "rationale": "Chlorpropamide change is rare and unlikely to provide robust stable signal.",
+            "feature": "chlorpropamide"
+          },
+          {
+            "feature_id": 25,
+            "score": 0.14,
+            "rationale": "Glimepiride change may indicate treatment intensity, but is still a narrow medication-specific cue.",
+            "feature": "glimepiride"
+          },
+          {
+            "feature_id": 26,
+            "score": 0.01,
+            "rationale": "Acetohexamide change is extremely rare and unlikely to generalize.",
+            "feature": "acetohexamide"
+          },
+          {
+            "feature_id": 27,
+            "score": 0.15,
+            "rationale": "Glipizide change can reflect diabetes management decisions, but remains medication-specific.",
+            "feature": "glipizide"
+          },
+          {
+            "feature_id": 28,
+            "score": 0.16,
+            "rationale": "Glyburide change may capture treatment adjustment, though it is not broadly informative by itself.",
+            "feature": "glyburide"
+          },
+          {
+            "feature_id": 29,
+            "score": 0.01,
+            "rationale": "Tolbutamide change is rare and offers little stable predictive value.",
+            "feature": "tolbutamide"
+          },
+          {
+            "feature_id": 30,
+            "score": 0.12,
+            "rationale": "Pioglitazone change is somewhat informative about therapy changes, but only weakly so.",
+            "feature": "pioglitazone"
+          },
+          {
+            "feature_id": 31,
+            "score": 0.12,
+            "rationale": "Rosiglitazone change is medication-specific and likely sparse, limiting robustness.",
+            "feature": "rosiglitazone"
+          },
+          {
+            "feature_id": 32,
+            "score": 0.08,
+            "rationale": "Acarbose change is uncommon and unlikely to be a stable predictor.",
+            "feature": "acarbose"
+          },
+          {
+            "feature_id": 33,
+            "score": 0.05,
+            "rationale": "Miglitol change is rare and probably not useful beyond noise.",
+            "feature": "miglitol"
+          },
+          {
+            "feature_id": 34,
+            "score": 0.0,
+            "rationale": "Troglitazone is obsolete/rare, so it should contribute essentially no stable signal.",
+            "feature": "troglitazone"
+          },
+          {
+            "feature_id": 35,
+            "score": 0.0,
+            "rationale": "Tolazamide is rare and not a reliable predictor.",
+            "feature": "tolazamide"
+          },
+          {
+            "feature_id": 36,
+            "score": 0.0,
+            "rationale": "Examide appears non-informative or effectively absent, so it should be near zero.",
+            "feature": "examide"
+          },
+          {
+            "feature_id": 37,
+            "score": 0.0,
+            "rationale": "Citoglipton appears non-informative or effectively absent, so it should be near zero.",
+            "feature": "citoglipton"
+          },
+          {
+            "feature_id": 38,
+            "score": 0.34,
+            "rationale": "Insulin change is clinically meaningful and often reflects severity and glycemic management.",
+            "feature": "insulin"
+          },
+          {
+            "feature_id": 39,
+            "score": 0.09,
+            "rationale": "Combination glyburide-metformin change is sparse and medication-specific, so usefulness is limited.",
+            "feature": "glyburide-metformin"
+          },
+          {
+            "feature_id": 40,
+            "score": 0.04,
+            "rationale": "Combination glipizide-metformin change is rare and weakly generalizable.",
+            "feature": "glipizide-metformin"
+          },
+          {
+            "feature_id": 41,
+            "score": 0.02,
+            "rationale": "Combination glimepiride-pioglitazone change is very rare and unlikely to be stable.",
+            "feature": "glimepiride-pioglitazone"
+          },
+          {
+            "feature_id": 42,
+            "score": 0.02,
+            "rationale": "Combination metformin-rosiglitazone change is very rare and likely brittle.",
+            "feature": "metformin-rosiglitazone"
+          },
+          {
+            "feature_id": 43,
+            "score": 0.02,
+            "rationale": "Combination metformin-pioglitazone change is very rare and likely brittle.",
+            "feature": "metformin-pioglitazone"
+          },
+          {
+            "feature_id": 44,
+            "score": 0.24,
+            "rationale": "Any medication change is a coarse treatment-intensity signal, but less informative than the specific drugs.",
+            "feature": "change"
+          },
+          {
+            "feature_id": 45,
+            "score": 0.2,
+            "rationale": "Having diabetes medication prescribed is relevant, but it is a broad and somewhat redundant treatment indicator.",
+            "feature": "diabetesMed"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a diabetes hospitalization encounter will result in readmission, using only pre- and in-encounter clinical information that should generalize across domains.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.08,
+            "rationale": "Demographic signal can correlate with readmission but is a weak and potentially non-stable shortcut.",
+            "feature": "race"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.05,
+            "rationale": "Gender may have minor association with utilization patterns, but it is not a robust clinical predictor.",
+            "feature": "gender"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.18,
+            "rationale": "Age is a stable risk factor for complications, comorbidity burden, and readmission.",
+            "feature": "age"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.03,
+            "rationale": "Weight is often missing and only weakly informative here; likely brittle across sites.",
+            "feature": "weight"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.12,
+            "rationale": "Admission type reflects acuity and care pathway, which can matter but may vary by hospital practice.",
+            "feature": "admission_type_id"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.32,
+            "rationale": "Discharge disposition is strongly tied to post-discharge support and short-term readmission risk.",
+            "feature": "discharge_disposition_id"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.24,
+            "rationale": "Longer stays generally indicate greater illness severity and care complexity, which are stable predictors.",
+            "feature": "time_in_hospital"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.02,
+            "rationale": "Payer code is a strong socioeconomic proxy and domain artifact, so it is not a reliable stable feature.",
+            "feature": "payer_code"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.04,
+            "rationale": "Medical specialty can reflect severity and treatment context, but it is highly site-dependent.",
+            "feature": "medical_specialty"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.22,
+            "rationale": "Lab intensity is a good proxy for illness burden and monitoring needs, with reasonable stability.",
+            "feature": "num_lab_procedures"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.16,
+            "rationale": "Procedure count captures intervention complexity and acuity, though it is somewhat care-pattern dependent.",
+            "feature": "num_procedures"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.28,
+            "rationale": "Medication count is a strong proxy for treatment complexity and comorbidity burden.",
+            "feature": "num_medications"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.27,
+            "rationale": "Prior outpatient utilization is a stable indicator of chronic disease management and follow-up needs.",
+            "feature": "number_outpatient"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.25,
+            "rationale": "Prior emergency visits reflect instability and poor control, which are predictive across settings.",
+            "feature": "number_emergency"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.31,
+            "rationale": "Prior inpatient utilization is one of the strongest stable indicators of future readmission risk.",
+            "feature": "number_inpatient"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.14,
+            "rationale": "Primary diagnosis captures underlying condition and severity, but coding variation limits stability.",
+            "feature": "diag_1"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.1,
+            "rationale": "Secondary diagnosis adds comorbidity information, though it is noisier than the primary diagnosis.",
+            "feature": "diag_2"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.09,
+            "rationale": "Additional diagnosis information can help with comorbidity burden, but marginal utility is modest.",
+            "feature": "diag_3"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.2,
+            "rationale": "More diagnoses usually indicates greater complexity and chronic disease burden.",
+            "feature": "number_diagnoses"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.11,
+            "rationale": "Glucose level is clinically relevant, but missingness and measurement practices can reduce stability.",
+            "feature": "max_glu_serum"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.26,
+            "rationale": "HbA1c is a direct, semantically meaningful marker of diabetes control and should generalize well.",
+            "feature": "A1Cresult"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.17,
+            "rationale": "Metformin treatment change reflects diabetes management intensity and response to control.",
+            "feature": "metformin"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.06,
+            "rationale": "This medication-specific change is usually sparse and less broadly informative.",
+            "feature": "repaglinide"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.05,
+            "rationale": "Sparse medication indicator with limited expected stable signal.",
+            "feature": "nateglinide"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.03,
+            "rationale": "Rare medication change with little generalizable predictive value.",
+            "feature": "chlorpropamide"
+          },
+          {
+            "feature_id": 25,
+            "score": 0.08,
+            "rationale": "Can reflect treatment adjustment, but effect is likely modest and medication-specific.",
+            "feature": "glimepiride"
+          },
+          {
+            "feature_id": 26,
+            "score": 0.01,
+            "rationale": "Extremely rare and unlikely to provide stable signal.",
+            "feature": "acetohexamide"
+          },
+          {
+            "feature_id": 27,
+            "score": 0.09,
+            "rationale": "Common diabetes drug change can indicate management intensity and glycemic instability.",
+            "feature": "glipizide"
+          },
+          {
+            "feature_id": 28,
+            "score": 0.09,
+            "rationale": "Another common drug change with some treatment-intensity signal.",
+            "feature": "glyburide"
+          },
+          {
+            "feature_id": 29,
+            "score": 0.01,
+            "rationale": "Very rare medication, so expected utility is minimal and brittle.",
+            "feature": "tolbutamide"
+          },
+          {
+            "feature_id": 30,
+            "score": 0.07,
+            "rationale": "Treatment adjustment may help, but this is a weaker and more practice-dependent signal.",
+            "feature": "pioglitazone"
+          },
+          {
+            "feature_id": 31,
+            "score": 0.07,
+            "rationale": "Similar to other medication changes, with modest stable value.",
+            "feature": "rosiglitazone"
+          },
+          {
+            "feature_id": 32,
+            "score": 0.04,
+            "rationale": "Sparse medication change with limited generalizable usefulness.",
+            "feature": "acarbose"
+          },
+          {
+            "feature_id": 33,
+            "score": 0.02,
+            "rationale": "Rare medication and likely too sparse to be robust.",
+            "feature": "miglitol"
+          },
+          {
+            "feature_id": 34,
+            "score": 0.0,
+            "rationale": "Nearly unusable due to extreme rarity.",
+            "feature": "troglitazone"
+          },
+          {
+            "feature_id": 35,
+            "score": 0.01,
+            "rationale": "Rare and expected to contribute little stable predictive information.",
+            "feature": "tolazamide"
+          },
+          {
+            "feature_id": 36,
+            "score": 0.0,
+            "rationale": "Likely a near-constant or extremely rare code, so not useful.",
+            "feature": "examide"
+          },
+          {
+            "feature_id": 37,
+            "score": 0.0,
+            "rationale": "Likely a near-constant or extremely rare code, so not useful.",
+            "feature": "citoglipton"
+          },
+          {
+            "feature_id": 38,
+            "score": 0.23,
+            "rationale": "Insulin use/change is a strong marker of diabetes severity and treatment escalation.",
+            "feature": "insulin"
+          },
+          {
+            "feature_id": 39,
+            "score": 0.03,
+            "rationale": "Combination drug change is sparse and less stable across sites.",
+            "feature": "glyburide-metformin"
+          },
+          {
+            "feature_id": 40,
+            "score": 0.01,
+            "rationale": "Very sparse combination therapy feature with little expected signal.",
+            "feature": "glipizide-metformin"
+          },
+          {
+            "feature_id": 41,
+            "score": 0.0,
+            "rationale": "Extremely rare and unlikely to generalize.",
+            "feature": "glimepiride-pioglitazone"
+          },
+          {
+            "feature_id": 42,
+            "score": 0.0,
+            "rationale": "Extremely rare and unlikely to generalize.",
+            "feature": "metformin-rosiglitazone"
+          },
+          {
+            "feature_id": 43,
+            "score": 0.0,
+            "rationale": "Extremely rare and unlikely to generalize.",
+            "feature": "metformin-pioglitazone"
+          },
+          {
+            "feature_id": 44,
+            "score": 0.12,
+            "rationale": "Any medication change is a broad treatment-intensity signal, though somewhat coarse.",
+            "feature": "change"
+          },
+          {
+            "feature_id": 45,
+            "score": 0.15,
+            "rationale": "Diabetes medication prescribed indicates active treatment and disease management, with moderate stable value.",
+            "feature": "diabetesMed"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a diabetes patient will be readmitted after the hospital encounter.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.08,
+            "rationale": "Demographic proxy with limited direct causal stability; may capture access disparities more than readmission risk.",
+            "feature": "race"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.05,
+            "rationale": "Weak and often indirect signal for readmission; likely small stable effect.",
+            "feature": "gender"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.22,
+            "rationale": "Age is a robust health-status proxy and usually generalizes reasonably across domains.",
+            "feature": "age"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.01,
+            "rationale": "Weight is sparse and often missing; usually brittle and weakly informative here.",
+            "feature": "weight"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.18,
+            "rationale": "Admission type reflects acute severity and care pathway, which can be predictive across settings.",
+            "feature": "admission_type_id"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.34,
+            "rationale": "Discharge disposition strongly encodes post-acute care needs and near-term readmission risk.",
+            "feature": "discharge_disposition_id"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.24,
+            "rationale": "Longer stays often indicate greater illness severity and care complexity, which can generalize.",
+            "feature": "time_in_hospital"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.03,
+            "rationale": "Payer code is a strong socioeconomic/domain marker and likely brittle across shifts.",
+            "feature": "payer_code"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.06,
+            "rationale": "Specialty may reflect care setting and severity, but is noisy and domain-dependent.",
+            "feature": "medical_specialty"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.2,
+            "rationale": "Lab intensity is a stable proxy for illness complexity and monitoring needs.",
+            "feature": "num_lab_procedures"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.14,
+            "rationale": "Procedural burden can indicate complexity, though it is less directly tied to readmission.",
+            "feature": "num_procedures"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.27,
+            "rationale": "Medication count captures treatment complexity and chronic disease burden, usually stable.",
+            "feature": "num_medications"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.3,
+            "rationale": "Prior outpatient utilization is a strong, stable marker of chronic management intensity.",
+            "feature": "number_outpatient"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.26,
+            "rationale": "Prior emergency use is a robust indicator of instability and future acute care needs.",
+            "feature": "number_emergency"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.33,
+            "rationale": "Prior inpatient use is one of the strongest stable predictors of future readmission.",
+            "feature": "number_inpatient"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.16,
+            "rationale": "Primary diagnosis is clinically meaningful and often generalizes, though coding granularity varies.",
+            "feature": "diag_1"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.13,
+            "rationale": "Secondary diagnosis adds comorbidity information and is moderately stable.",
+            "feature": "diag_2"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.11,
+            "rationale": "Additional diagnosis contributes comorbidity burden but with diminishing marginal value.",
+            "feature": "diag_3"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.23,
+            "rationale": "Number of diagnoses is a compact severity/comorbidity proxy with good expected stability.",
+            "feature": "number_diagnoses"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.18,
+            "rationale": "Glucose control is clinically relevant, but missingness and test-ordering patterns can be uneven.",
+            "feature": "max_glu_serum"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.29,
+            "rationale": "HbA1c is a strong, semantically direct measure of diabetes control and likely stable.",
+            "feature": "A1Cresult"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.17,
+            "rationale": "Metformin change reflects treatment adjustment and disease management, with moderate stability.",
+            "feature": "metformin"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.08,
+            "rationale": "Specific drug change is useful but more sparse and less consistently informative.",
+            "feature": "repaglinide"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.06,
+            "rationale": "Sparse medication-specific signal with limited generalizable predictive value.",
+            "feature": "nateglinide"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.02,
+            "rationale": "Very rare medication indicator; likely too sparse to be stable.",
+            "feature": "chlorpropamide"
+          },
+          {
+            "feature_id": 25,
+            "score": 0.09,
+            "rationale": "Medication-specific adjustment can help, but effect is modest and somewhat treatment-policy dependent.",
+            "feature": "glimepiride"
+          },
+          {
+            "feature_id": 26,
+            "score": 0.01,
+            "rationale": "Extremely rare and likely uninformative in a stable way.",
+            "feature": "acetohexamide"
+          },
+          {
+            "feature_id": 27,
+            "score": 0.1,
+            "rationale": "Common diabetes drug change can reflect regimen intensity and control.",
+            "feature": "glipizide"
+          },
+          {
+            "feature_id": 28,
+            "score": 0.1,
+            "rationale": "Common diabetes drug change can reflect regimen intensity and control.",
+            "feature": "glyburide"
+          },
+          {
+            "feature_id": 29,
+            "score": 0.01,
+            "rationale": "Rare medication; likely brittle and low utility.",
+            "feature": "tolbutamide"
+          },
+          {
+            "feature_id": 30,
+            "score": 0.08,
+            "rationale": "Treatment adjustment signal is clinically relevant but not highly stable.",
+            "feature": "pioglitazone"
+          },
+          {
+            "feature_id": 31,
+            "score": 0.08,
+            "rationale": "Treatment adjustment signal is clinically relevant but not highly stable.",
+            "feature": "rosiglitazone"
+          },
+          {
+            "feature_id": 32,
+            "score": 0.04,
+            "rationale": "Less common agent; limited marginal stable signal.",
+            "feature": "acarbose"
+          },
+          {
+            "feature_id": 33,
+            "score": 0.02,
+            "rationale": "Rare medication and likely sparse.",
+            "feature": "miglitol"
+          },
+          {
+            "feature_id": 34,
+            "score": 0.01,
+            "rationale": "Very rare historical drug; likely not useful.",
+            "feature": "troglitazone"
+          },
+          {
+            "feature_id": 35,
+            "score": 0.01,
+            "rationale": "Very rare medication indicator with minimal stable value.",
+            "feature": "tolazamide"
+          },
+          {
+            "feature_id": 36,
+            "score": 0.0,
+            "rationale": "Effectively a constant/near-constant rare code; not useful.",
+            "feature": "examide"
+          },
+          {
+            "feature_id": 37,
+            "score": 0.0,
+            "rationale": "Effectively a constant/near-constant rare code; not useful.",
+            "feature": "citoglipton"
+          },
+          {
+            "feature_id": 38,
+            "score": 0.24,
+            "rationale": "Insulin use/change is a strong marker of diabetes severity and treatment intensity.",
+            "feature": "insulin"
+          },
+          {
+            "feature_id": 39,
+            "score": 0.03,
+            "rationale": "Combination therapy is sparse and may reflect local prescribing patterns.",
+            "feature": "glyburide-metformin"
+          },
+          {
+            "feature_id": 40,
+            "score": 0.02,
+            "rationale": "Very sparse combination drug indicator with limited stable utility.",
+            "feature": "glipizide-metformin"
+          },
+          {
+            "feature_id": 41,
+            "score": 0.01,
+            "rationale": "Extremely rare combination therapy code; likely uninformative.",
+            "feature": "glimepiride-pioglitazone"
+          },
+          {
+            "feature_id": 42,
+            "score": 0.01,
+            "rationale": "Extremely rare combination therapy code; likely uninformative.",
+            "feature": "metformin-rosiglitazone"
+          },
+          {
+            "feature_id": 43,
+            "score": 0.01,
+            "rationale": "Extremely rare combination therapy code; likely uninformative.",
+            "feature": "metformin-pioglitazone"
+          },
+          {
+            "feature_id": 44,
+            "score": 0.16,
+            "rationale": "Any medication change captures treatment response and care intensity, moderately stable.",
+            "feature": "change"
+          },
+          {
+            "feature_id": 45,
+            "score": 0.12,
+            "rationale": "Diabetes medication prescription indicates active management, though it is broad and less specific.",
+            "feature": "diabetesMed"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a diabetes hospital encounter will end in readmission, using only pre- and during-encounter clinical information that should generalize across domains.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.05,
+            "rationale": "Demographic attribute with limited stable causal relevance and risk of shortcut bias.",
+            "feature": "race"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.04,
+            "rationale": "Weakly predictive at best and mostly a demographic shortcut.",
+            "feature": "gender"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.18,
+            "rationale": "Age is clinically meaningful and usually stable for readmission risk.",
+            "feature": "age"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.02,
+            "rationale": "Often missing and only indirectly related to diabetes severity; brittle signal.",
+            "feature": "weight"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.12,
+            "rationale": "Admission urgency reflects acute severity and care context, which can generalize moderately well.",
+            "feature": "admission_type_id"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.28,
+            "rationale": "Discharge destination strongly reflects illness severity and post-discharge support needs.",
+            "feature": "discharge_disposition_id"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.24,
+            "rationale": "Length of stay is a robust proxy for encounter complexity and severity.",
+            "feature": "time_in_hospital"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.03,
+            "rationale": "Insurance/payer code is domain- and policy-dependent, making it brittle and potentially confounded.",
+            "feature": "payer_code"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.06,
+            "rationale": "Provider specialty can matter clinically but is noisy and site-dependent.",
+            "feature": "medical_specialty"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.16,
+            "rationale": "Lab utilization reflects illness complexity and monitoring intensity.",
+            "feature": "num_lab_procedures"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.1,
+            "rationale": "Procedural burden is a moderate proxy for acuity and complexity.",
+            "feature": "num_procedures"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.2,
+            "rationale": "Medication count captures treatment intensity and comorbidity burden.",
+            "feature": "num_medications"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.17,
+            "rationale": "Prior outpatient utilization is a stable marker of chronic disease management and access.",
+            "feature": "number_outpatient"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.14,
+            "rationale": "Prior emergency use indicates instability and future utilization risk.",
+            "feature": "number_emergency"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.22,
+            "rationale": "Prior inpatient use is a strong, stable indicator of disease severity and recurrence risk.",
+            "feature": "number_inpatient"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.15,
+            "rationale": "Primary diagnosis captures the main clinical reason for admission and should generalize reasonably.",
+            "feature": "diag_1"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.1,
+            "rationale": "Secondary diagnosis adds comorbidity information but is noisier than the primary diagnosis.",
+            "feature": "diag_2"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.08,
+            "rationale": "Additional diagnosis provides some comorbidity signal but with diminishing returns.",
+            "feature": "diag_3"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.13,
+            "rationale": "Total diagnosis count is a useful proxy for multimorbidity and complexity.",
+            "feature": "number_diagnoses"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.18,
+            "rationale": "Glucose serum status is directly tied to glycemic control, a core stable predictor.",
+            "feature": "max_glu_serum"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.26,
+            "rationale": "HbA1c is one of the most clinically meaningful and stable indicators of diabetes control.",
+            "feature": "A1Cresult"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.09,
+            "rationale": "Medication adjustment can reflect treatment response, but is partly practice-pattern dependent.",
+            "feature": "metformin"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.05,
+            "rationale": "Specific drug change is weak and likely sparse, with limited stable signal.",
+            "feature": "repaglinide"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.04,
+            "rationale": "Specific drug change is sparse and unlikely to generalize strongly.",
+            "feature": "nateglinide"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.03,
+            "rationale": "Rare medication with minimal expected stable predictive value.",
+            "feature": "chlorpropamide"
+          },
+          {
+            "feature_id": 25,
+            "score": 0.06,
+            "rationale": "Specific diabetes drug change may reflect management intensity, but is noisy.",
+            "feature": "glimepiride"
+          },
+          {
+            "feature_id": 26,
+            "score": 0.01,
+            "rationale": "Extremely rare and not a robust predictor.",
+            "feature": "acetohexamide"
+          },
+          {
+            "feature_id": 27,
+            "score": 0.07,
+            "rationale": "Common diabetes drug adjustment can indicate care intensity, though practice-dependent.",
+            "feature": "glipizide"
+          },
+          {
+            "feature_id": 28,
+            "score": 0.07,
+            "rationale": "Common diabetes drug adjustment has some treatment-response signal but limited stability.",
+            "feature": "glyburide"
+          },
+          {
+            "feature_id": 29,
+            "score": 0.01,
+            "rationale": "Very rare medication and unlikely to be useful.",
+            "feature": "tolbutamide"
+          },
+          {
+            "feature_id": 30,
+            "score": 0.05,
+            "rationale": "Can reflect chronic disease management, but is only modestly informative.",
+            "feature": "pioglitazone"
+          },
+          {
+            "feature_id": 31,
+            "score": 0.05,
+            "rationale": "Similar to other medication changes, with limited but plausible treatment signal.",
+            "feature": "rosiglitazone"
+          },
+          {
+            "feature_id": 32,
+            "score": 0.03,
+            "rationale": "Rare medication and weak stable signal.",
+            "feature": "acarbose"
+          },
+          {
+            "feature_id": 33,
+            "score": 0.02,
+            "rationale": "Rare medication with little expected generalizable value.",
+            "feature": "miglitol"
+          },
+          {
+            "feature_id": 34,
+            "score": 0.01,
+            "rationale": "Extremely rare and not likely predictive in a stable way.",
+            "feature": "troglitazone"
+          },
+          {
+            "feature_id": 35,
+            "score": 0.01,
+            "rationale": "Extremely rare and not likely predictive in a stable way.",
+            "feature": "tolazamide"
+          },
+          {
+            "feature_id": 36,
+            "score": 0.0,
+            "rationale": "Likely a near-constant or non-informative rare code; no stable utility.",
+            "feature": "examide"
+          },
+          {
+            "feature_id": 37,
+            "score": 0.0,
+            "rationale": "Likely a near-constant or non-informative rare code; no stable utility.",
+            "feature": "citoglipton"
+          },
+          {
+            "feature_id": 38,
+            "score": 0.11,
+            "rationale": "Insulin treatment change is clinically relevant and often reflects glycemic severity.",
+            "feature": "insulin"
+          },
+          {
+            "feature_id": 39,
+            "score": 0.03,
+            "rationale": "Combination drug change is sparse and likely unstable.",
+            "feature": "glyburide-metformin"
+          },
+          {
+            "feature_id": 40,
+            "score": 0.02,
+            "rationale": "Rare combination drug with little expected stable signal.",
+            "feature": "glipizide-metformin"
+          },
+          {
+            "feature_id": 41,
+            "score": 0.01,
+            "rationale": "Very rare combination drug and not a robust predictor.",
+            "feature": "glimepiride-pioglitazone"
+          },
+          {
+            "feature_id": 42,
+            "score": 0.01,
+            "rationale": "Very rare combination drug and not a robust predictor.",
+            "feature": "metformin-rosiglitazone"
+          },
+          {
+            "feature_id": 43,
+            "score": 0.01,
+            "rationale": "Very rare combination drug and not a robust predictor.",
+            "feature": "metformin-pioglitazone"
+          },
+          {
+            "feature_id": 44,
+            "score": 0.08,
+            "rationale": "Overall medication change captures treatment response, but can be policy- and site-dependent.",
+            "feature": "change"
+          },
+          {
+            "feature_id": 45,
+            "score": 0.12,
+            "rationale": "Whether diabetes medication was prescribed is clinically relevant, though partly redundant with other treatment features.",
+            "feature": "diabetesMed"
+          }
+        ]
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `diabetes_readmission`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"race\",\n    \"type\": \"categorical\",\n    \"description\": \"Nominal. Values: Caucasian, Asian, African American, Hispanic, and other\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"gender\",\n    \"type\": \"categorical\",\n    \"description\": \"Nominal. Values: male, female, and unknown/invalid.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"age\",\n    \"type\": \"categorical\",\n    \"description\": \"Nominal. Grouped in 10-year intervals: [0, 10), [10, 20), . . ., [90, 100)\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"weight\",\n    \"type\": \"categorical\",\n    \"description\": \"Weight in pounds. Grouped in 25-pound intervals.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"admission_type_id\",\n    \"type\": \"categorical\",\n    \"description\": \"Admission type\",\n    \"values\": \"1=Emergency; 2=Urgent; 3=Elective; 4=Newborn; 5=Not Available; 6=NULL; 7=Trauma Center; 8=Not Mapped\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"discharge_disposition_id\",\n    \"type\": \"categorical\",\n    \"description\": \"Discharge type\",\n    \"values\": \"1=Discharged to home; 2=Discharged/transferred to another short term hospital; 3=Discharged/transferred to SNF; 4=Discharged/transferred to ICF; 5=Discharged/transferred to another type of inpatient care institution; 6=Discharged/transferred to home with ho...\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"time_in_hospital\",\n    \"type\": \"continuous\",\n    \"description\": \"Count of days beween admission and discharge\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"payer_code\",\n    \"type\": \"categorical\",\n    \"description\": \"Payer code\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"medical_specialty\",\n    \"type\": \"categorical\",\n    \"description\": \"Medical specialty of the admitting physician\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"num_lab_procedures\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of lab tests performed during the encounter\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"num_procedures\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of procedures (other than lab tests) performed during the encounter\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"num_medications\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of distinct generic drugs administered during the encounter\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"number_outpatient\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of outpatient visits of the patient in the year preceding the encounter\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"number_emergency\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of emergency visits of the patient in the year preceding the encounter\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"number_inpatient\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of inpatient visits of the patient in the year preceding the encounter\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"diag_1\",\n    \"type\": \"categorical\",\n    \"description\": \"Primary diagnosis\",\n    \"values\": \"1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec...\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"diag_2\",\n    \"type\": \"categorical\",\n    \"description\": \"Secondary diagnosis\",\n    \"values\": \"1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec...\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"diag_3\",\n    \"type\": \"categorical\",\n    \"description\": \"Additional secondary diagnosis\",\n    \"values\": \"1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec...\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"number_diagnoses\",\n    \"type\": \"continuous\",\n    \"description\": \"Total number of diagnoses\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"max_glu_serum\",\n    \"type\": \"categorical\",\n    \"description\": \"Max glucose serum\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"A1Cresult\",\n    \"type\": \"categorical\",\n    \"description\": \"Hemoglobin A1c test result\",\n    \"note\": \"From original citation: Hemoglobin A1c (HbA1c) is an important measure of glucose control, which is widely applied to measure performance of diabetes care. (See documentation link.)\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"metformin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in metformin medication\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"repaglinide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in repaglinide medication\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"nateglinide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in nateglinide medication\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"chlorpropamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in chlorpropamide medication\"\n  },\n  {\n    \"feature_id\": 25,\n    \"feature\": \"glimepiride\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glimepiride medication\"\n  },\n  {\n    \"feature_id\": 26,\n    \"feature\": \"acetohexamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in acetohexamide medication\"\n  },\n  {\n    \"feature_id\": 27,\n    \"feature\": \"glipizide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glipizide medication\"\n  },\n  {\n    \"feature_id\": 28,\n    \"feature\": \"glyburide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glyburide medication\"\n  },\n  {\n    \"feature_id\": 29,\n    \"feature\": \"tolbutamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in tolbutamide medication\"\n  },\n  {\n    \"feature_id\": 30,\n    \"feature\": \"pioglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in pioglitazone medication\"\n  },\n  {\n    \"feature_id\": 31,\n    \"feature\": \"rosiglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in rosiglitazone medication\"\n  },\n  {\n    \"feature_id\": 32,\n    \"feature\": \"acarbose\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in acarbose medication\"\n  },\n  {\n    \"feature_id\": 33,\n    \"feature\": \"miglitol\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in miglitol medication\"\n  },\n  {\n    \"feature_id\": 34,\n    \"feature\": \"troglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in troglitazone medication\"\n  },\n  {\n    \"feature_id\": 35,\n    \"feature\": \"tolazamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in tolazamide medication\"\n  },\n  {\n    \"feature_id\": 36,\n    \"feature\": \"examide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in examide medication\"\n  },\n  {\n    \"feature_id\": 37,\n    \"feature\": \"citoglipton\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in citoglipton medication\"\n  },\n  {\n    \"feature_id\": 38,\n    \"feature\": \"insulin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in insulin medication\"\n  },\n  {\n    \"feature_id\": 39,\n    \"feature\": \"glyburide-metformin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glyburide-metformin medication\"\n  },\n  {\n    \"feature_id\": 40,\n    \"feature\": \"glipizide-metformin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glipizide-metformin medication\"\n  },\n  {\n    \"feature_id\": 41,\n    \"feature\": \"glimepiride-pioglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glimepiride-pioglitazone medication\"\n  },\n  {\n    \"feature_id\": 42,\n    \"feature\": \"metformin-rosiglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in metformin-rosiglitazone medication\"\n  },\n  {\n    \"feature_id\": 43,\n    \"feature\": \"metformin-pioglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in metformin-pioglitazone medication\"\n  },\n  {\n    \"feature_id\": 44,\n    \"feature\": \"change\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in any medication\"\n  },\n  {\n    \"feature_id\": 45,\n    \"feature\": \"diabetesMed\",\n    \"type\": \"categorical\",\n    \"description\": \"Diabetes medication prescribed\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a diabetes hospital encounter will end in readmission, using encounter history, severity, and treatment-related signals that should generalize across domains.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.08,\n      \"rationale\": \"Demographic signal may correlate with care patterns, but is a weak and potentially brittle shortcut.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.05,\n      \"rationale\": \"Mostly a proxy for population mix and care differences; limited stable causal relevance.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.18,\n      \"rationale\": \"Age is a robust risk factor for readmission and illness burden across settings.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.03,\n      \"rationale\": \"Often missing and weakly informative; can reflect data collection artifacts more than stable risk.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.12,\n      \"rationale\": \"Admission type reflects acuity and planned vs emergency care, which can generalize moderately well.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.28,\n      \"rationale\": \"Discharge disposition is strongly tied to post-acute support and near-term readmission risk.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.16,\n      \"rationale\": \"Longer stays usually indicate greater severity or complications, useful beyond the source domain.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.04,\n      \"rationale\": \"Insurance/payer information is a demographic and institutional proxy that may not transfer well.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.06,\n      \"rationale\": \"Specialty can reflect case mix and practice style, but is somewhat site-specific and brittle.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.14,\n      \"rationale\": \"Lab intensity is a reasonable proxy for clinical complexity and monitoring needs.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.10,\n      \"rationale\": \"Procedural burden can indicate severity, though it is noisier than core utilization measures.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.15,\n      \"rationale\": \"Medication count captures treatment complexity and comorbidity burden in a fairly stable way.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.17,\n      \"rationale\": \"Prior outpatient utilization is a strong, general marker of chronic disease management needs.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.16,\n      \"rationale\": \"Recent emergency use is a robust indicator of instability and future acute care risk.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.21,\n      \"rationale\": \"Prior inpatient visits are highly predictive of future readmission and reflect persistent illness burden.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.13,\n      \"rationale\": \"Primary diagnosis gives stable information about underlying condition and expected trajectory.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.11,\n      \"rationale\": \"Secondary diagnosis adds comorbidity context that is generally predictive across domains.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.10,\n      \"rationale\": \"Additional diagnosis information helps capture overall complexity, though with diminishing returns.\"\n    },\n    {\n      \"feature_id\": 18,\n      \"score\": 0.12,\n      \"rationale\": \"Number of diagnoses is a compact severity/comorbidity proxy with decent stability.\"\n    },\n    {\n      \"feature_id\": 19,\n      \"score\": 0.09,\n      \"rationale\": \"Glucose lab result is clinically relevant, but often sparse and subject to testing policy differences.\"\n    },\n    {\n      \"feature_id\": 20,\n      \"score\": 0.22,\n      \"rationale\": \"HbA1c is a strong, semantically meaningful measure of diabetes control and should transfer well.\"\n    },\n    {\n      \"feature_id\": 21,\n      \"score\": 0.14,\n      \"rationale\": \"Metformin change reflects treatment adjustment in response to glycemic control and is clinically grounded.\"\n    },\n    {\n      \"feature_id\": 22,\n      \"score\": 0.06,\n      \"rationale\": \"Medication-specific change is informative but sparse and less stable than broader treatment signals.\"\n    },\n    {\n      \"feature_id\": 23,\n      \"score\": 0.05,\n      \"rationale\": \"Sparse drug-specific signal with limited prevalence and likely weak marginal utility.\"\n    },\n    {\n      \"feature_id\": 24,\n      \"score\": 0.03,\n      \"rationale\": \"Very rare medication feature; likely too sparse to be reliable across domains.\"\n    },\n    {\n      \"feature_id\": 25,\n      \"score\": 0.07,\n      \"rationale\": \"Drug-change information can reflect diabetes management intensity, but is medication-specific and noisy.\"\n    },\n    {\n      \"feature_id\": 26,\n      \"score\": 0.01,\n      \"rationale\": \"Extremely rare and unlikely to provide stable predictive value.\"\n    },\n    {\n      \"feature_id\": 27,\n      \"score\": 0.08,\n      \"rationale\": \"Common diabetes medication adjustment can indicate treatment escalation and disease severity.\"\n    },\n    {\n      \"feature_id\": 28,\n      \"score\": 0.08,\n      \"rationale\": \"Another common medication adjustment with modest stable relevance to glycemic management.\"\n    },\n    {\n      \"feature_id\": 29,\n      \"score\": 0.01,\n      \"rationale\": \"Rare drug feature with little expected stable signal.\"\n    },\n    {\n      \"feature_id\": 30,\n      \"score\": 0.06,\n      \"rationale\": \"Treatment change may matter, but this specific drug is less central and more site-dependent.\"\n    },\n    {\n      \"feature_id\": 31,\n      \"score\": 0.06,\n      \"rationale\": \"Moderately informative treatment adjustment, though not as robust as core utilization or HbA1c.\"\n    },\n    {\n      \"feature_id\": 32,\n      \"score\": 0.04,\n      \"rationale\": \"Sparse medication change with limited expected marginal utility.\"\n    },\n    {\n      \"feature_id\": 33,\n      \"score\": 0.02,\n      \"rationale\": \"Very sparse and likely unstable across domains.\"\n    },\n    {\n      \"feature_id\": 34,\n      \"score\": 0.01,\n      \"rationale\": \"Extremely rare medication feature; likely negligible stable value.\"\n    },\n    {\n      \"feature_id\": 35,\n      \"score\": 0.01,\n      \"rationale\": \"Rare and unlikely to generalize usefully.\"\n    },\n    {\n      \"feature_id\": 36,\n      \"score\": 0.00,\n      \"rationale\": \"Appears essentially non-informative or near-constant in practice.\"\n    },\n    {\n      \"feature_id\": 37,\n      \"score\": 0.00,\n      \"rationale\": \"Appears essentially non-informative or near-constant in practice.\"\n    },\n    {\n      \"feature_id\": 38,\n      \"score\": 0.16,\n      \"rationale\": \"Insulin treatment is a strong, clinically meaningful marker of diabetes severity and management.\"\n    },\n    {\n      \"feature_id\": 39,\n      \"score\": 0.03,\n      \"rationale\": \"Combination drug feature is sparse and likely unstable.\"\n    },\n    {\n      \"feature_id\": 40,\n      \"score\": 0.02,\n      \"rationale\": \"Rare combination medication feature with limited expected robustness.\"\n    },\n    {\n      \"feature_id\": 41,\n      \"score\": 0.01,\n      \"rationale\": \"Very rare and unlikely to be reliably predictive.\"\n    },\n    {\n      \"feature_id\": 42,\n      \"score\": 0.01,\n      \"rationale\": \"Very rare and unlikely to be reliably predictive.\"\n    },\n    {\n      \"feature_id\": 43,\n      \"score\": 0.01,\n      \"rationale\": \"Very rare and unlikely to be reliably predictive.\"\n    },\n    {\n      \"feature_id\": 44,\n      \"score\": 0.09,\n      \"rationale\": \"Any medication change is a broad treatment-intensity signal, though somewhat policy-dependent.\"\n    },\n    {\n      \"feature_id\": 45,\n      \"score\": 0.13,\n      \"rationale\": \"Diabetes medication prescription is clinically relevant and generally stable, but less specific than HbA1c.\"\n    }\n  ]\n}",
+      "input_tokens": 2865,
+      "output_tokens": 1943,
+      "total_tokens": 4808,
+      "response_id": "resp_0d7af9558cfe72fc006a27d2e580fc8198bacc340445fa2737",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `diabetes_readmission`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"race\",\n    \"type\": \"categorical\",\n    \"description\": \"Nominal. Values: Caucasian, Asian, African American, Hispanic, and other\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"gender\",\n    \"type\": \"categorical\",\n    \"description\": \"Nominal. Values: male, female, and unknown/invalid.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"age\",\n    \"type\": \"categorical\",\n    \"description\": \"Nominal. Grouped in 10-year intervals: [0, 10), [10, 20), . . ., [90, 100)\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"weight\",\n    \"type\": \"categorical\",\n    \"description\": \"Weight in pounds. Grouped in 25-pound intervals.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"admission_type_id\",\n    \"type\": \"categorical\",\n    \"description\": \"Admission type\",\n    \"values\": \"1=Emergency; 2=Urgent; 3=Elective; 4=Newborn; 5=Not Available; 6=NULL; 7=Trauma Center; 8=Not Mapped\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"discharge_disposition_id\",\n    \"type\": \"categorical\",\n    \"description\": \"Discharge type\",\n    \"values\": \"1=Discharged to home; 2=Discharged/transferred to another short term hospital; 3=Discharged/transferred to SNF; 4=Discharged/transferred to ICF; 5=Discharged/transferred to another type of inpatient care institution; 6=Discharged/transferred to home with ho...\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"time_in_hospital\",\n    \"type\": \"continuous\",\n    \"description\": \"Count of days beween admission and discharge\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"payer_code\",\n    \"type\": \"categorical\",\n    \"description\": \"Payer code\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"medical_specialty\",\n    \"type\": \"categorical\",\n    \"description\": \"Medical specialty of the admitting physician\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"num_lab_procedures\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of lab tests performed during the encounter\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"num_procedures\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of procedures (other than lab tests) performed during the encounter\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"num_medications\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of distinct generic drugs administered during the encounter\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"number_outpatient\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of outpatient visits of the patient in the year preceding the encounter\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"number_emergency\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of emergency visits of the patient in the year preceding the encounter\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"number_inpatient\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of inpatient visits of the patient in the year preceding the encounter\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"diag_1\",\n    \"type\": \"categorical\",\n    \"description\": \"Primary diagnosis\",\n    \"values\": \"1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec...\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"diag_2\",\n    \"type\": \"categorical\",\n    \"description\": \"Secondary diagnosis\",\n    \"values\": \"1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec...\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"diag_3\",\n    \"type\": \"categorical\",\n    \"description\": \"Additional secondary diagnosis\",\n    \"values\": \"1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec...\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"number_diagnoses\",\n    \"type\": \"continuous\",\n    \"description\": \"Total number of diagnoses\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"max_glu_serum\",\n    \"type\": \"categorical\",\n    \"description\": \"Max glucose serum\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"A1Cresult\",\n    \"type\": \"categorical\",\n    \"description\": \"Hemoglobin A1c test result\",\n    \"note\": \"From original citation: Hemoglobin A1c (HbA1c) is an important measure of glucose control, which is widely applied to measure performance of diabetes care. (See documentation link.)\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"metformin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in metformin medication\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"repaglinide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in repaglinide medication\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"nateglinide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in nateglinide medication\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"chlorpropamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in chlorpropamide medication\"\n  },\n  {\n    \"feature_id\": 25,\n    \"feature\": \"glimepiride\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glimepiride medication\"\n  },\n  {\n    \"feature_id\": 26,\n    \"feature\": \"acetohexamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in acetohexamide medication\"\n  },\n  {\n    \"feature_id\": 27,\n    \"feature\": \"glipizide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glipizide medication\"\n  },\n  {\n    \"feature_id\": 28,\n    \"feature\": \"glyburide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glyburide medication\"\n  },\n  {\n    \"feature_id\": 29,\n    \"feature\": \"tolbutamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in tolbutamide medication\"\n  },\n  {\n    \"feature_id\": 30,\n    \"feature\": \"pioglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in pioglitazone medication\"\n  },\n  {\n    \"feature_id\": 31,\n    \"feature\": \"rosiglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in rosiglitazone medication\"\n  },\n  {\n    \"feature_id\": 32,\n    \"feature\": \"acarbose\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in acarbose medication\"\n  },\n  {\n    \"feature_id\": 33,\n    \"feature\": \"miglitol\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in miglitol medication\"\n  },\n  {\n    \"feature_id\": 34,\n    \"feature\": \"troglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in troglitazone medication\"\n  },\n  {\n    \"feature_id\": 35,\n    \"feature\": \"tolazamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in tolazamide medication\"\n  },\n  {\n    \"feature_id\": 36,\n    \"feature\": \"examide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in examide medication\"\n  },\n  {\n    \"feature_id\": 37,\n    \"feature\": \"citoglipton\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in citoglipton medication\"\n  },\n  {\n    \"feature_id\": 38,\n    \"feature\": \"insulin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in insulin medication\"\n  },\n  {\n    \"feature_id\": 39,\n    \"feature\": \"glyburide-metformin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glyburide-metformin medication\"\n  },\n  {\n    \"feature_id\": 40,\n    \"feature\": \"glipizide-metformin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glipizide-metformin medication\"\n  },\n  {\n    \"feature_id\": 41,\n    \"feature\": \"glimepiride-pioglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glimepiride-pioglitazone medication\"\n  },\n  {\n    \"feature_id\": 42,\n    \"feature\": \"metformin-rosiglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in metformin-rosiglitazone medication\"\n  },\n  {\n    \"feature_id\": 43,\n    \"feature\": \"metformin-pioglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in metformin-pioglitazone medication\"\n  },\n  {\n    \"feature_id\": 44,\n    \"feature\": \"change\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in any medication\"\n  },\n  {\n    \"feature_id\": 45,\n    \"feature\": \"diabetesMed\",\n    \"type\": \"categorical\",\n    \"description\": \"Diabetes medication prescribed\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a diabetic patient will be readmitted after the hospital encounter using pre- and during-encounter clinical information.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.15,\n      \"rationale\": \"Demographic signal may correlate with care patterns, but is a weak and potentially biased shortcut.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.08,\n      \"rationale\": \"Gender is usually only weakly related to readmission and is not a robust clinical predictor.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.42,\n      \"rationale\": \"Age is a stable risk factor for hospitalization and readmission across domains.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.03,\n      \"rationale\": \"Weight is often missing and noisy in this dataset, so it is unlikely to be a stable predictor.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.18,\n      \"rationale\": \"Admission type reflects care setting and severity, but can also encode hospital workflow differences.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.55,\n      \"rationale\": \"Discharge disposition strongly reflects post-acute care needs and near-term readmission risk.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.50,\n      \"rationale\": \"Longer stays generally indicate greater illness severity and care complexity, which are stable risk signals.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.05,\n      \"rationale\": \"Payer code is mostly a socioeconomic or administrative proxy and is brittle across domains.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.10,\n      \"rationale\": \"Medical specialty may capture treatment context, but it is partly institutional and less stable.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.40,\n      \"rationale\": \"Lab intensity is a reasonable proxy for acute illness burden and monitoring needs.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.28,\n      \"rationale\": \"Procedural intensity can reflect severity and complexity, though it is less directly tied to readmission.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.46,\n      \"rationale\": \"Medication count captures treatment complexity and chronic disease burden, which are fairly stable predictors.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.58,\n      \"rationale\": \"Prior outpatient utilization is a strong, domain-stable marker of chronic disease management and risk.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.52,\n      \"rationale\": \"Recent emergency use is a strong signal of instability and future utilization risk.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.62,\n      \"rationale\": \"Prior inpatient utilization is one of the strongest stable indicators of future readmission risk.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.36,\n      \"rationale\": \"Primary diagnosis is clinically relevant and often predictive, though some codes may be sparse or noisy.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.30,\n      \"rationale\": \"Secondary diagnosis adds comorbidity information and is useful, but usually less informative than the primary diagnosis.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.26,\n      \"rationale\": \"Additional diagnosis contributes comorbidity burden, but with diminishing marginal value.\"\n    },\n    {\n      \"feature_id\": 18,\n      \"score\": 0.44,\n      \"rationale\": \"Number of diagnoses is a stable proxy for multimorbidity and encounter complexity.\"\n    },\n    {\n      \"feature_id\": 19,\n      \"score\": 0.22,\n      \"rationale\": \"Glucose serum results are clinically meaningful, but availability and measurement patterns can be inconsistent.\"\n    },\n    {\n      \"feature_id\": 20,\n      \"score\": 0.47,\n      \"rationale\": \"HbA1c is a strong, semantically grounded marker of diabetes control and should generalize well.\"\n    },\n    {\n      \"feature_id\": 21,\n      \"score\": 0.31,\n      \"rationale\": \"Metformin change reflects treatment adjustment, which can relate to disease control and follow-up risk.\"\n    },\n    {\n      \"feature_id\": 22,\n      \"score\": 0.12,\n      \"rationale\": \"Repaglinide change is medication-specific and likely sparse, so its stable signal is limited.\"\n    },\n    {\n      \"feature_id\": 23,\n      \"score\": 0.10,\n      \"rationale\": \"Nateglinide change is sparse and likely weak as a generalizable predictor.\"\n    },\n    {\n      \"feature_id\": 24,\n      \"score\": 0.06,\n      \"rationale\": \"Chlorpropamide change is rare and unlikely to provide robust stable signal.\"\n    },\n    {\n      \"feature_id\": 25,\n      \"score\": 0.14,\n      \"rationale\": \"Glimepiride change may indicate treatment intensity, but is still a narrow medication-specific cue.\"\n    },\n    {\n      \"feature_id\": 26,\n      \"score\": 0.01,\n      \"rationale\": \"Acetohexamide change is extremely rare and unlikely to generalize.\"\n    },\n    {\n      \"feature_id\": 27,\n      \"score\": 0.15,\n      \"rationale\": \"Glipizide change can reflect diabetes management decisions, but remains medication-specific.\"\n    },\n    {\n      \"feature_id\": 28,\n      \"score\": 0.16,\n      \"rationale\": \"Glyburide change may capture treatment adjustment, though it is not broadly informative by itself.\"\n    },\n    {\n      \"feature_id\": 29,\n      \"score\": 0.01,\n      \"rationale\": \"Tolbutamide change is rare and offers little stable predictive value.\"\n    },\n    {\n      \"feature_id\": 30,\n      \"score\": 0.12,\n      \"rationale\": \"Pioglitazone change is somewhat informative about therapy changes, but only weakly so.\"\n    },\n    {\n      \"feature_id\": 31,\n      \"score\": 0.12,\n      \"rationale\": \"Rosiglitazone change is medication-specific and likely sparse, limiting robustness.\"\n    },\n    {\n      \"feature_id\": 32,\n      \"score\": 0.08,\n      \"rationale\": \"Acarbose change is uncommon and unlikely to be a stable predictor.\"\n    },\n    {\n      \"feature_id\": 33,\n      \"score\": 0.05,\n      \"rationale\": \"Miglitol change is rare and probably not useful beyond noise.\"\n    },\n    {\n      \"feature_id\": 34,\n      \"score\": 0.00,\n      \"rationale\": \"Troglitazone is obsolete/rare, so it should contribute essentially no stable signal.\"\n    },\n    {\n      \"feature_id\": 35,\n      \"score\": 0.00,\n      \"rationale\": \"Tolazamide is rare and not a reliable predictor.\"\n    },\n    {\n      \"feature_id\": 36,\n      \"score\": 0.00,\n      \"rationale\": \"Examide appears non-informative or effectively absent, so it should be near zero.\"\n    },\n    {\n      \"feature_id\": 37,\n      \"score\": 0.00,\n      \"rationale\": \"Citoglipton appears non-informative or effectively absent, so it should be near zero.\"\n    },\n    {\n      \"feature_id\": 38,\n      \"score\": 0.34,\n      \"rationale\": \"Insulin change is clinically meaningful and often reflects severity and glycemic management.\"\n    },\n    {\n      \"feature_id\": 39,\n      \"score\": 0.09,\n      \"rationale\": \"Combination glyburide-metformin change is sparse and medication-specific, so usefulness is limited.\"\n    },\n    {\n      \"feature_id\": 40,\n      \"score\": 0.04,\n      \"rationale\": \"Combination glipizide-metformin change is rare and weakly generalizable.\"\n    },\n    {\n      \"feature_id\": 41,\n      \"score\": 0.02,\n      \"rationale\": \"Combination glimepiride-pioglitazone change is very rare and unlikely to be stable.\"\n    },\n    {\n      \"feature_id\": 42,\n      \"score\": 0.02,\n      \"rationale\": \"Combination metformin-rosiglitazone change is very rare and likely brittle.\"\n    },\n    {\n      \"feature_id\": 43,\n      \"score\": 0.02,\n      \"rationale\": \"Combination metformin-pioglitazone change is very rare and likely brittle.\"\n    },\n    {\n      \"feature_id\": 44,\n      \"score\": 0.24,\n      \"rationale\": \"Any medication change is a coarse treatment-intensity signal, but less informative than the specific drugs.\"\n    },\n    {\n      \"feature_id\": 45,\n      \"score\": 0.20,\n      \"rationale\": \"Having diabetes medication prescribed is relevant, but it is a broad and somewhat redundant treatment indicator.\"\n    }\n  ]\n}",
+      "input_tokens": 2865,
+      "output_tokens": 2059,
+      "total_tokens": 4924,
+      "response_id": "resp_0ffa79054564ab0a006a27d2f03220819a98eac5e1c64a53b3",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `diabetes_readmission`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"race\",\n    \"type\": \"categorical\",\n    \"description\": \"Nominal. Values: Caucasian, Asian, African American, Hispanic, and other\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"gender\",\n    \"type\": \"categorical\",\n    \"description\": \"Nominal. Values: male, female, and unknown/invalid.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"age\",\n    \"type\": \"categorical\",\n    \"description\": \"Nominal. Grouped in 10-year intervals: [0, 10), [10, 20), . . ., [90, 100)\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"weight\",\n    \"type\": \"categorical\",\n    \"description\": \"Weight in pounds. Grouped in 25-pound intervals.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"admission_type_id\",\n    \"type\": \"categorical\",\n    \"description\": \"Admission type\",\n    \"values\": \"1=Emergency; 2=Urgent; 3=Elective; 4=Newborn; 5=Not Available; 6=NULL; 7=Trauma Center; 8=Not Mapped\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"discharge_disposition_id\",\n    \"type\": \"categorical\",\n    \"description\": \"Discharge type\",\n    \"values\": \"1=Discharged to home; 2=Discharged/transferred to another short term hospital; 3=Discharged/transferred to SNF; 4=Discharged/transferred to ICF; 5=Discharged/transferred to another type of inpatient care institution; 6=Discharged/transferred to home with ho...\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"time_in_hospital\",\n    \"type\": \"continuous\",\n    \"description\": \"Count of days beween admission and discharge\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"payer_code\",\n    \"type\": \"categorical\",\n    \"description\": \"Payer code\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"medical_specialty\",\n    \"type\": \"categorical\",\n    \"description\": \"Medical specialty of the admitting physician\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"num_lab_procedures\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of lab tests performed during the encounter\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"num_procedures\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of procedures (other than lab tests) performed during the encounter\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"num_medications\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of distinct generic drugs administered during the encounter\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"number_outpatient\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of outpatient visits of the patient in the year preceding the encounter\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"number_emergency\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of emergency visits of the patient in the year preceding the encounter\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"number_inpatient\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of inpatient visits of the patient in the year preceding the encounter\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"diag_1\",\n    \"type\": \"categorical\",\n    \"description\": \"Primary diagnosis\",\n    \"values\": \"1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec...\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"diag_2\",\n    \"type\": \"categorical\",\n    \"description\": \"Secondary diagnosis\",\n    \"values\": \"1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec...\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"diag_3\",\n    \"type\": \"categorical\",\n    \"description\": \"Additional secondary diagnosis\",\n    \"values\": \"1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec...\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"number_diagnoses\",\n    \"type\": \"continuous\",\n    \"description\": \"Total number of diagnoses\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"max_glu_serum\",\n    \"type\": \"categorical\",\n    \"description\": \"Max glucose serum\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"A1Cresult\",\n    \"type\": \"categorical\",\n    \"description\": \"Hemoglobin A1c test result\",\n    \"note\": \"From original citation: Hemoglobin A1c (HbA1c) is an important measure of glucose control, which is widely applied to measure performance of diabetes care. (See documentation link.)\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"metformin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in metformin medication\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"repaglinide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in repaglinide medication\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"nateglinide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in nateglinide medication\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"chlorpropamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in chlorpropamide medication\"\n  },\n  {\n    \"feature_id\": 25,\n    \"feature\": \"glimepiride\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glimepiride medication\"\n  },\n  {\n    \"feature_id\": 26,\n    \"feature\": \"acetohexamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in acetohexamide medication\"\n  },\n  {\n    \"feature_id\": 27,\n    \"feature\": \"glipizide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glipizide medication\"\n  },\n  {\n    \"feature_id\": 28,\n    \"feature\": \"glyburide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glyburide medication\"\n  },\n  {\n    \"feature_id\": 29,\n    \"feature\": \"tolbutamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in tolbutamide medication\"\n  },\n  {\n    \"feature_id\": 30,\n    \"feature\": \"pioglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in pioglitazone medication\"\n  },\n  {\n    \"feature_id\": 31,\n    \"feature\": \"rosiglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in rosiglitazone medication\"\n  },\n  {\n    \"feature_id\": 32,\n    \"feature\": \"acarbose\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in acarbose medication\"\n  },\n  {\n    \"feature_id\": 33,\n    \"feature\": \"miglitol\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in miglitol medication\"\n  },\n  {\n    \"feature_id\": 34,\n    \"feature\": \"troglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in troglitazone medication\"\n  },\n  {\n    \"feature_id\": 35,\n    \"feature\": \"tolazamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in tolazamide medication\"\n  },\n  {\n    \"feature_id\": 36,\n    \"feature\": \"examide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in examide medication\"\n  },\n  {\n    \"feature_id\": 37,\n    \"feature\": \"citoglipton\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in citoglipton medication\"\n  },\n  {\n    \"feature_id\": 38,\n    \"feature\": \"insulin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in insulin medication\"\n  },\n  {\n    \"feature_id\": 39,\n    \"feature\": \"glyburide-metformin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glyburide-metformin medication\"\n  },\n  {\n    \"feature_id\": 40,\n    \"feature\": \"glipizide-metformin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glipizide-metformin medication\"\n  },\n  {\n    \"feature_id\": 41,\n    \"feature\": \"glimepiride-pioglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glimepiride-pioglitazone medication\"\n  },\n  {\n    \"feature_id\": 42,\n    \"feature\": \"metformin-rosiglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in metformin-rosiglitazone medication\"\n  },\n  {\n    \"feature_id\": 43,\n    \"feature\": \"metformin-pioglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in metformin-pioglitazone medication\"\n  },\n  {\n    \"feature_id\": 44,\n    \"feature\": \"change\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in any medication\"\n  },\n  {\n    \"feature_id\": 45,\n    \"feature\": \"diabetesMed\",\n    \"type\": \"categorical\",\n    \"description\": \"Diabetes medication prescribed\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a diabetes hospitalization encounter will result in readmission, using only pre- and in-encounter clinical information that should generalize across domains.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.08,\n      \"rationale\": \"Demographic signal can correlate with readmission but is a weak and potentially non-stable shortcut.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.05,\n      \"rationale\": \"Gender may have minor association with utilization patterns, but it is not a robust clinical predictor.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.18,\n      \"rationale\": \"Age is a stable risk factor for complications, comorbidity burden, and readmission.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.03,\n      \"rationale\": \"Weight is often missing and only weakly informative here; likely brittle across sites.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.12,\n      \"rationale\": \"Admission type reflects acuity and care pathway, which can matter but may vary by hospital practice.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.32,\n      \"rationale\": \"Discharge disposition is strongly tied to post-discharge support and short-term readmission risk.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.24,\n      \"rationale\": \"Longer stays generally indicate greater illness severity and care complexity, which are stable predictors.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.02,\n      \"rationale\": \"Payer code is a strong socioeconomic proxy and domain artifact, so it is not a reliable stable feature.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.04,\n      \"rationale\": \"Medical specialty can reflect severity and treatment context, but it is highly site-dependent.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.22,\n      \"rationale\": \"Lab intensity is a good proxy for illness burden and monitoring needs, with reasonable stability.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.16,\n      \"rationale\": \"Procedure count captures intervention complexity and acuity, though it is somewhat care-pattern dependent.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.28,\n      \"rationale\": \"Medication count is a strong proxy for treatment complexity and comorbidity burden.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.27,\n      \"rationale\": \"Prior outpatient utilization is a stable indicator of chronic disease management and follow-up needs.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.25,\n      \"rationale\": \"Prior emergency visits reflect instability and poor control, which are predictive across settings.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.31,\n      \"rationale\": \"Prior inpatient utilization is one of the strongest stable indicators of future readmission risk.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.14,\n      \"rationale\": \"Primary diagnosis captures underlying condition and severity, but coding variation limits stability.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.10,\n      \"rationale\": \"Secondary diagnosis adds comorbidity information, though it is noisier than the primary diagnosis.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.09,\n      \"rationale\": \"Additional diagnosis information can help with comorbidity burden, but marginal utility is modest.\"\n    },\n    {\n      \"feature_id\": 18,\n      \"score\": 0.20,\n      \"rationale\": \"More diagnoses usually indicates greater complexity and chronic disease burden.\"\n    },\n    {\n      \"feature_id\": 19,\n      \"score\": 0.11,\n      \"rationale\": \"Glucose level is clinically relevant, but missingness and measurement practices can reduce stability.\"\n    },\n    {\n      \"feature_id\": 20,\n      \"score\": 0.26,\n      \"rationale\": \"HbA1c is a direct, semantically meaningful marker of diabetes control and should generalize well.\"\n    },\n    {\n      \"feature_id\": 21,\n      \"score\": 0.17,\n      \"rationale\": \"Metformin treatment change reflects diabetes management intensity and response to control.\"\n    },\n    {\n      \"feature_id\": 22,\n      \"score\": 0.06,\n      \"rationale\": \"This medication-specific change is usually sparse and less broadly informative.\"\n    },\n    {\n      \"feature_id\": 23,\n      \"score\": 0.05,\n      \"rationale\": \"Sparse medication indicator with limited expected stable signal.\"\n    },\n    {\n      \"feature_id\": 24,\n      \"score\": 0.03,\n      \"rationale\": \"Rare medication change with little generalizable predictive value.\"\n    },\n    {\n      \"feature_id\": 25,\n      \"score\": 0.08,\n      \"rationale\": \"Can reflect treatment adjustment, but effect is likely modest and medication-specific.\"\n    },\n    {\n      \"feature_id\": 26,\n      \"score\": 0.01,\n      \"rationale\": \"Extremely rare and unlikely to provide stable signal.\"\n    },\n    {\n      \"feature_id\": 27,\n      \"score\": 0.09,\n      \"rationale\": \"Common diabetes drug change can indicate management intensity and glycemic instability.\"\n    },\n    {\n      \"feature_id\": 28,\n      \"score\": 0.09,\n      \"rationale\": \"Another common drug change with some treatment-intensity signal.\"\n    },\n    {\n      \"feature_id\": 29,\n      \"score\": 0.01,\n      \"rationale\": \"Very rare medication, so expected utility is minimal and brittle.\"\n    },\n    {\n      \"feature_id\": 30,\n      \"score\": 0.07,\n      \"rationale\": \"Treatment adjustment may help, but this is a weaker and more practice-dependent signal.\"\n    },\n    {\n      \"feature_id\": 31,\n      \"score\": 0.07,\n      \"rationale\": \"Similar to other medication changes, with modest stable value.\"\n    },\n    {\n      \"feature_id\": 32,\n      \"score\": 0.04,\n      \"rationale\": \"Sparse medication change with limited generalizable usefulness.\"\n    },\n    {\n      \"feature_id\": 33,\n      \"score\": 0.02,\n      \"rationale\": \"Rare medication and likely too sparse to be robust.\"\n    },\n    {\n      \"feature_id\": 34,\n      \"score\": 0.00,\n      \"rationale\": \"Nearly unusable due to extreme rarity.\"\n    },\n    {\n      \"feature_id\": 35,\n      \"score\": 0.01,\n      \"rationale\": \"Rare and expected to contribute little stable predictive information.\"\n    },\n    {\n      \"feature_id\": 36,\n      \"score\": 0.00,\n      \"rationale\": \"Likely a near-constant or extremely rare code, so not useful.\"\n    },\n    {\n      \"feature_id\": 37,\n      \"score\": 0.00,\n      \"rationale\": \"Likely a near-constant or extremely rare code, so not useful.\"\n    },\n    {\n      \"feature_id\": 38,\n      \"score\": 0.23,\n      \"rationale\": \"Insulin use/change is a strong marker of diabetes severity and treatment escalation.\"\n    },\n    {\n      \"feature_id\": 39,\n      \"score\": 0.03,\n      \"rationale\": \"Combination drug change is sparse and less stable across sites.\"\n    },\n    {\n      \"feature_id\": 40,\n      \"score\": 0.01,\n      \"rationale\": \"Very sparse combination therapy feature with little expected signal.\"\n    },\n    {\n      \"feature_id\": 41,\n      \"score\": 0.00,\n      \"rationale\": \"Extremely rare and unlikely to generalize.\"\n    },\n    {\n      \"feature_id\": 42,\n      \"score\": 0.00,\n      \"rationale\": \"Extremely rare and unlikely to generalize.\"\n    },\n    {\n      \"feature_id\": 43,\n      \"score\": 0.00,\n      \"rationale\": \"Extremely rare and unlikely to generalize.\"\n    },\n    {\n      \"feature_id\": 44,\n      \"score\": 0.12,\n      \"rationale\": \"Any medication change is a broad treatment-intensity signal, though somewhat coarse.\"\n    },\n    {\n      \"feature_id\": 45,\n      \"score\": 0.15,\n      \"rationale\": \"Diabetes medication prescribed indicates active treatment and disease management, with moderate stable value.\"\n    }\n  ]\n}",
+      "input_tokens": 2865,
+      "output_tokens": 1939,
+      "total_tokens": 4804,
+      "response_id": "resp_080bae99e66376f9006a27d2fd36e0819ab7cf1f3a2e43f92f",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `diabetes_readmission`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"race\",\n    \"type\": \"categorical\",\n    \"description\": \"Nominal. Values: Caucasian, Asian, African American, Hispanic, and other\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"gender\",\n    \"type\": \"categorical\",\n    \"description\": \"Nominal. Values: male, female, and unknown/invalid.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"age\",\n    \"type\": \"categorical\",\n    \"description\": \"Nominal. Grouped in 10-year intervals: [0, 10), [10, 20), . . ., [90, 100)\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"weight\",\n    \"type\": \"categorical\",\n    \"description\": \"Weight in pounds. Grouped in 25-pound intervals.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"admission_type_id\",\n    \"type\": \"categorical\",\n    \"description\": \"Admission type\",\n    \"values\": \"1=Emergency; 2=Urgent; 3=Elective; 4=Newborn; 5=Not Available; 6=NULL; 7=Trauma Center; 8=Not Mapped\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"discharge_disposition_id\",\n    \"type\": \"categorical\",\n    \"description\": \"Discharge type\",\n    \"values\": \"1=Discharged to home; 2=Discharged/transferred to another short term hospital; 3=Discharged/transferred to SNF; 4=Discharged/transferred to ICF; 5=Discharged/transferred to another type of inpatient care institution; 6=Discharged/transferred to home with ho...\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"time_in_hospital\",\n    \"type\": \"continuous\",\n    \"description\": \"Count of days beween admission and discharge\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"payer_code\",\n    \"type\": \"categorical\",\n    \"description\": \"Payer code\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"medical_specialty\",\n    \"type\": \"categorical\",\n    \"description\": \"Medical specialty of the admitting physician\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"num_lab_procedures\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of lab tests performed during the encounter\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"num_procedures\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of procedures (other than lab tests) performed during the encounter\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"num_medications\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of distinct generic drugs administered during the encounter\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"number_outpatient\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of outpatient visits of the patient in the year preceding the encounter\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"number_emergency\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of emergency visits of the patient in the year preceding the encounter\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"number_inpatient\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of inpatient visits of the patient in the year preceding the encounter\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"diag_1\",\n    \"type\": \"categorical\",\n    \"description\": \"Primary diagnosis\",\n    \"values\": \"1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec...\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"diag_2\",\n    \"type\": \"categorical\",\n    \"description\": \"Secondary diagnosis\",\n    \"values\": \"1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec...\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"diag_3\",\n    \"type\": \"categorical\",\n    \"description\": \"Additional secondary diagnosis\",\n    \"values\": \"1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec...\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"number_diagnoses\",\n    \"type\": \"continuous\",\n    \"description\": \"Total number of diagnoses\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"max_glu_serum\",\n    \"type\": \"categorical\",\n    \"description\": \"Max glucose serum\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"A1Cresult\",\n    \"type\": \"categorical\",\n    \"description\": \"Hemoglobin A1c test result\",\n    \"note\": \"From original citation: Hemoglobin A1c (HbA1c) is an important measure of glucose control, which is widely applied to measure performance of diabetes care. (See documentation link.)\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"metformin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in metformin medication\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"repaglinide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in repaglinide medication\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"nateglinide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in nateglinide medication\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"chlorpropamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in chlorpropamide medication\"\n  },\n  {\n    \"feature_id\": 25,\n    \"feature\": \"glimepiride\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glimepiride medication\"\n  },\n  {\n    \"feature_id\": 26,\n    \"feature\": \"acetohexamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in acetohexamide medication\"\n  },\n  {\n    \"feature_id\": 27,\n    \"feature\": \"glipizide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glipizide medication\"\n  },\n  {\n    \"feature_id\": 28,\n    \"feature\": \"glyburide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glyburide medication\"\n  },\n  {\n    \"feature_id\": 29,\n    \"feature\": \"tolbutamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in tolbutamide medication\"\n  },\n  {\n    \"feature_id\": 30,\n    \"feature\": \"pioglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in pioglitazone medication\"\n  },\n  {\n    \"feature_id\": 31,\n    \"feature\": \"rosiglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in rosiglitazone medication\"\n  },\n  {\n    \"feature_id\": 32,\n    \"feature\": \"acarbose\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in acarbose medication\"\n  },\n  {\n    \"feature_id\": 33,\n    \"feature\": \"miglitol\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in miglitol medication\"\n  },\n  {\n    \"feature_id\": 34,\n    \"feature\": \"troglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in troglitazone medication\"\n  },\n  {\n    \"feature_id\": 35,\n    \"feature\": \"tolazamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in tolazamide medication\"\n  },\n  {\n    \"feature_id\": 36,\n    \"feature\": \"examide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in examide medication\"\n  },\n  {\n    \"feature_id\": 37,\n    \"feature\": \"citoglipton\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in citoglipton medication\"\n  },\n  {\n    \"feature_id\": 38,\n    \"feature\": \"insulin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in insulin medication\"\n  },\n  {\n    \"feature_id\": 39,\n    \"feature\": \"glyburide-metformin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glyburide-metformin medication\"\n  },\n  {\n    \"feature_id\": 40,\n    \"feature\": \"glipizide-metformin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glipizide-metformin medication\"\n  },\n  {\n    \"feature_id\": 41,\n    \"feature\": \"glimepiride-pioglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glimepiride-pioglitazone medication\"\n  },\n  {\n    \"feature_id\": 42,\n    \"feature\": \"metformin-rosiglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in metformin-rosiglitazone medication\"\n  },\n  {\n    \"feature_id\": 43,\n    \"feature\": \"metformin-pioglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in metformin-pioglitazone medication\"\n  },\n  {\n    \"feature_id\": 44,\n    \"feature\": \"change\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in any medication\"\n  },\n  {\n    \"feature_id\": 45,\n    \"feature\": \"diabetesMed\",\n    \"type\": \"categorical\",\n    \"description\": \"Diabetes medication prescribed\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a diabetes patient will be readmitted after the hospital encounter.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.08,\n      \"rationale\": \"Demographic proxy with limited direct causal stability; may capture access disparities more than readmission risk.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.05,\n      \"rationale\": \"Weak and often indirect signal for readmission; likely small stable effect.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.22,\n      \"rationale\": \"Age is a robust health-status proxy and usually generalizes reasonably across domains.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.01,\n      \"rationale\": \"Weight is sparse and often missing; usually brittle and weakly informative here.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.18,\n      \"rationale\": \"Admission type reflects acute severity and care pathway, which can be predictive across settings.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.34,\n      \"rationale\": \"Discharge disposition strongly encodes post-acute care needs and near-term readmission risk.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.24,\n      \"rationale\": \"Longer stays often indicate greater illness severity and care complexity, which can generalize.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.03,\n      \"rationale\": \"Payer code is a strong socioeconomic/domain marker and likely brittle across shifts.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.06,\n      \"rationale\": \"Specialty may reflect care setting and severity, but is noisy and domain-dependent.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.20,\n      \"rationale\": \"Lab intensity is a stable proxy for illness complexity and monitoring needs.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.14,\n      \"rationale\": \"Procedural burden can indicate complexity, though it is less directly tied to readmission.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.27,\n      \"rationale\": \"Medication count captures treatment complexity and chronic disease burden, usually stable.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.30,\n      \"rationale\": \"Prior outpatient utilization is a strong, stable marker of chronic management intensity.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.26,\n      \"rationale\": \"Prior emergency use is a robust indicator of instability and future acute care needs.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.33,\n      \"rationale\": \"Prior inpatient use is one of the strongest stable predictors of future readmission.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.16,\n      \"rationale\": \"Primary diagnosis is clinically meaningful and often generalizes, though coding granularity varies.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.13,\n      \"rationale\": \"Secondary diagnosis adds comorbidity information and is moderately stable.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.11,\n      \"rationale\": \"Additional diagnosis contributes comorbidity burden but with diminishing marginal value.\"\n    },\n    {\n      \"feature_id\": 18,\n      \"score\": 0.23,\n      \"rationale\": \"Number of diagnoses is a compact severity/comorbidity proxy with good expected stability.\"\n    },\n    {\n      \"feature_id\": 19,\n      \"score\": 0.18,\n      \"rationale\": \"Glucose control is clinically relevant, but missingness and test-ordering patterns can be uneven.\"\n    },\n    {\n      \"feature_id\": 20,\n      \"score\": 0.29,\n      \"rationale\": \"HbA1c is a strong, semantically direct measure of diabetes control and likely stable.\"\n    },\n    {\n      \"feature_id\": 21,\n      \"score\": 0.17,\n      \"rationale\": \"Metformin change reflects treatment adjustment and disease management, with moderate stability.\"\n    },\n    {\n      \"feature_id\": 22,\n      \"score\": 0.08,\n      \"rationale\": \"Specific drug change is useful but more sparse and less consistently informative.\"\n    },\n    {\n      \"feature_id\": 23,\n      \"score\": 0.06,\n      \"rationale\": \"Sparse medication-specific signal with limited generalizable predictive value.\"\n    },\n    {\n      \"feature_id\": 24,\n      \"score\": 0.02,\n      \"rationale\": \"Very rare medication indicator; likely too sparse to be stable.\"\n    },\n    {\n      \"feature_id\": 25,\n      \"score\": 0.09,\n      \"rationale\": \"Medication-specific adjustment can help, but effect is modest and somewhat treatment-policy dependent.\"\n    },\n    {\n      \"feature_id\": 26,\n      \"score\": 0.01,\n      \"rationale\": \"Extremely rare and likely uninformative in a stable way.\"\n    },\n    {\n      \"feature_id\": 27,\n      \"score\": 0.10,\n      \"rationale\": \"Common diabetes drug change can reflect regimen intensity and control.\"\n    },\n    {\n      \"feature_id\": 28,\n      \"score\": 0.10,\n      \"rationale\": \"Common diabetes drug change can reflect regimen intensity and control.\"\n    },\n    {\n      \"feature_id\": 29,\n      \"score\": 0.01,\n      \"rationale\": \"Rare medication; likely brittle and low utility.\"\n    },\n    {\n      \"feature_id\": 30,\n      \"score\": 0.08,\n      \"rationale\": \"Treatment adjustment signal is clinically relevant but not highly stable.\"\n    },\n    {\n      \"feature_id\": 31,\n      \"score\": 0.08,\n      \"rationale\": \"Treatment adjustment signal is clinically relevant but not highly stable.\"\n    },\n    {\n      \"feature_id\": 32,\n      \"score\": 0.04,\n      \"rationale\": \"Less common agent; limited marginal stable signal.\"\n    },\n    {\n      \"feature_id\": 33,\n      \"score\": 0.02,\n      \"rationale\": \"Rare medication and likely sparse.\"\n    },\n    {\n      \"feature_id\": 34,\n      \"score\": 0.01,\n      \"rationale\": \"Very rare historical drug; likely not useful.\"\n    },\n    {\n      \"feature_id\": 35,\n      \"score\": 0.01,\n      \"rationale\": \"Very rare medication indicator with minimal stable value.\"\n    },\n    {\n      \"feature_id\": 36,\n      \"score\": 0.00,\n      \"rationale\": \"Effectively a constant/near-constant rare code; not useful.\"\n    },\n    {\n      \"feature_id\": 37,\n      \"score\": 0.00,\n      \"rationale\": \"Effectively a constant/near-constant rare code; not useful.\"\n    },\n    {\n      \"feature_id\": 38,\n      \"score\": 0.24,\n      \"rationale\": \"Insulin use/change is a strong marker of diabetes severity and treatment intensity.\"\n    },\n    {\n      \"feature_id\": 39,\n      \"score\": 0.03,\n      \"rationale\": \"Combination therapy is sparse and may reflect local prescribing patterns.\"\n    },\n    {\n      \"feature_id\": 40,\n      \"score\": 0.02,\n      \"rationale\": \"Very sparse combination drug indicator with limited stable utility.\"\n    },\n    {\n      \"feature_id\": 41,\n      \"score\": 0.01,\n      \"rationale\": \"Extremely rare combination therapy code; likely uninformative.\"\n    },\n    {\n      \"feature_id\": 42,\n      \"score\": 0.01,\n      \"rationale\": \"Extremely rare combination therapy code; likely uninformative.\"\n    },\n    {\n      \"feature_id\": 43,\n      \"score\": 0.01,\n      \"rationale\": \"Extremely rare combination therapy code; likely uninformative.\"\n    },\n    {\n      \"feature_id\": 44,\n      \"score\": 0.16,\n      \"rationale\": \"Any medication change captures treatment response and care intensity, moderately stable.\"\n    },\n    {\n      \"feature_id\": 45,\n      \"score\": 0.12,\n      \"rationale\": \"Diabetes medication prescription indicates active management, though it is broad and less specific.\"\n    }\n  ]\n}",
+      "input_tokens": 2865,
+      "output_tokens": 1896,
+      "total_tokens": 4761,
+      "response_id": "resp_0f0896b65b67fea4006a27d308e4b481998864b92b2e270983",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `diabetes_readmission`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"race\",\n    \"type\": \"categorical\",\n    \"description\": \"Nominal. Values: Caucasian, Asian, African American, Hispanic, and other\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"gender\",\n    \"type\": \"categorical\",\n    \"description\": \"Nominal. Values: male, female, and unknown/invalid.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"age\",\n    \"type\": \"categorical\",\n    \"description\": \"Nominal. Grouped in 10-year intervals: [0, 10), [10, 20), . . ., [90, 100)\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"weight\",\n    \"type\": \"categorical\",\n    \"description\": \"Weight in pounds. Grouped in 25-pound intervals.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"admission_type_id\",\n    \"type\": \"categorical\",\n    \"description\": \"Admission type\",\n    \"values\": \"1=Emergency; 2=Urgent; 3=Elective; 4=Newborn; 5=Not Available; 6=NULL; 7=Trauma Center; 8=Not Mapped\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"discharge_disposition_id\",\n    \"type\": \"categorical\",\n    \"description\": \"Discharge type\",\n    \"values\": \"1=Discharged to home; 2=Discharged/transferred to another short term hospital; 3=Discharged/transferred to SNF; 4=Discharged/transferred to ICF; 5=Discharged/transferred to another type of inpatient care institution; 6=Discharged/transferred to home with ho...\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"time_in_hospital\",\n    \"type\": \"continuous\",\n    \"description\": \"Count of days beween admission and discharge\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"payer_code\",\n    \"type\": \"categorical\",\n    \"description\": \"Payer code\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"medical_specialty\",\n    \"type\": \"categorical\",\n    \"description\": \"Medical specialty of the admitting physician\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"num_lab_procedures\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of lab tests performed during the encounter\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"num_procedures\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of procedures (other than lab tests) performed during the encounter\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"num_medications\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of distinct generic drugs administered during the encounter\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"number_outpatient\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of outpatient visits of the patient in the year preceding the encounter\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"number_emergency\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of emergency visits of the patient in the year preceding the encounter\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"number_inpatient\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of inpatient visits of the patient in the year preceding the encounter\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"diag_1\",\n    \"type\": \"categorical\",\n    \"description\": \"Primary diagnosis\",\n    \"values\": \"1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec...\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"diag_2\",\n    \"type\": \"categorical\",\n    \"description\": \"Secondary diagnosis\",\n    \"values\": \"1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec...\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"diag_3\",\n    \"type\": \"categorical\",\n    \"description\": \"Additional secondary diagnosis\",\n    \"values\": \"1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec...\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"number_diagnoses\",\n    \"type\": \"continuous\",\n    \"description\": \"Total number of diagnoses\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"max_glu_serum\",\n    \"type\": \"categorical\",\n    \"description\": \"Max glucose serum\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"A1Cresult\",\n    \"type\": \"categorical\",\n    \"description\": \"Hemoglobin A1c test result\",\n    \"note\": \"From original citation: Hemoglobin A1c (HbA1c) is an important measure of glucose control, which is widely applied to measure performance of diabetes care. (See documentation link.)\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"metformin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in metformin medication\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"repaglinide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in repaglinide medication\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"nateglinide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in nateglinide medication\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"chlorpropamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in chlorpropamide medication\"\n  },\n  {\n    \"feature_id\": 25,\n    \"feature\": \"glimepiride\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glimepiride medication\"\n  },\n  {\n    \"feature_id\": 26,\n    \"feature\": \"acetohexamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in acetohexamide medication\"\n  },\n  {\n    \"feature_id\": 27,\n    \"feature\": \"glipizide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glipizide medication\"\n  },\n  {\n    \"feature_id\": 28,\n    \"feature\": \"glyburide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glyburide medication\"\n  },\n  {\n    \"feature_id\": 29,\n    \"feature\": \"tolbutamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in tolbutamide medication\"\n  },\n  {\n    \"feature_id\": 30,\n    \"feature\": \"pioglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in pioglitazone medication\"\n  },\n  {\n    \"feature_id\": 31,\n    \"feature\": \"rosiglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in rosiglitazone medication\"\n  },\n  {\n    \"feature_id\": 32,\n    \"feature\": \"acarbose\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in acarbose medication\"\n  },\n  {\n    \"feature_id\": 33,\n    \"feature\": \"miglitol\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in miglitol medication\"\n  },\n  {\n    \"feature_id\": 34,\n    \"feature\": \"troglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in troglitazone medication\"\n  },\n  {\n    \"feature_id\": 35,\n    \"feature\": \"tolazamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in tolazamide medication\"\n  },\n  {\n    \"feature_id\": 36,\n    \"feature\": \"examide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in examide medication\"\n  },\n  {\n    \"feature_id\": 37,\n    \"feature\": \"citoglipton\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in citoglipton medication\"\n  },\n  {\n    \"feature_id\": 38,\n    \"feature\": \"insulin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in insulin medication\"\n  },\n  {\n    \"feature_id\": 39,\n    \"feature\": \"glyburide-metformin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glyburide-metformin medication\"\n  },\n  {\n    \"feature_id\": 40,\n    \"feature\": \"glipizide-metformin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glipizide-metformin medication\"\n  },\n  {\n    \"feature_id\": 41,\n    \"feature\": \"glimepiride-pioglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glimepiride-pioglitazone medication\"\n  },\n  {\n    \"feature_id\": 42,\n    \"feature\": \"metformin-rosiglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in metformin-rosiglitazone medication\"\n  },\n  {\n    \"feature_id\": 43,\n    \"feature\": \"metformin-pioglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in metformin-pioglitazone medication\"\n  },\n  {\n    \"feature_id\": 44,\n    \"feature\": \"change\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in any medication\"\n  },\n  {\n    \"feature_id\": 45,\n    \"feature\": \"diabetesMed\",\n    \"type\": \"categorical\",\n    \"description\": \"Diabetes medication prescribed\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a diabetes hospital encounter will end in readmission, using only pre- and during-encounter clinical information that should generalize across domains.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.05,\n      \"rationale\": \"Demographic attribute with limited stable causal relevance and risk of shortcut bias.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.04,\n      \"rationale\": \"Weakly predictive at best and mostly a demographic shortcut.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.18,\n      \"rationale\": \"Age is clinically meaningful and usually stable for readmission risk.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.02,\n      \"rationale\": \"Often missing and only indirectly related to diabetes severity; brittle signal.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.12,\n      \"rationale\": \"Admission urgency reflects acute severity and care context, which can generalize moderately well.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.28,\n      \"rationale\": \"Discharge destination strongly reflects illness severity and post-discharge support needs.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.24,\n      \"rationale\": \"Length of stay is a robust proxy for encounter complexity and severity.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.03,\n      \"rationale\": \"Insurance/payer code is domain- and policy-dependent, making it brittle and potentially confounded.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.06,\n      \"rationale\": \"Provider specialty can matter clinically but is noisy and site-dependent.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.16,\n      \"rationale\": \"Lab utilization reflects illness complexity and monitoring intensity.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.10,\n      \"rationale\": \"Procedural burden is a moderate proxy for acuity and complexity.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.20,\n      \"rationale\": \"Medication count captures treatment intensity and comorbidity burden.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.17,\n      \"rationale\": \"Prior outpatient utilization is a stable marker of chronic disease management and access.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.14,\n      \"rationale\": \"Prior emergency use indicates instability and future utilization risk.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.22,\n      \"rationale\": \"Prior inpatient use is a strong, stable indicator of disease severity and recurrence risk.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.15,\n      \"rationale\": \"Primary diagnosis captures the main clinical reason for admission and should generalize reasonably.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.10,\n      \"rationale\": \"Secondary diagnosis adds comorbidity information but is noisier than the primary diagnosis.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.08,\n      \"rationale\": \"Additional diagnosis provides some comorbidity signal but with diminishing returns.\"\n    },\n    {\n      \"feature_id\": 18,\n      \"score\": 0.13,\n      \"rationale\": \"Total diagnosis count is a useful proxy for multimorbidity and complexity.\"\n    },\n    {\n      \"feature_id\": 19,\n      \"score\": 0.18,\n      \"rationale\": \"Glucose serum status is directly tied to glycemic control, a core stable predictor.\"\n    },\n    {\n      \"feature_id\": 20,\n      \"score\": 0.26,\n      \"rationale\": \"HbA1c is one of the most clinically meaningful and stable indicators of diabetes control.\"\n    },\n    {\n      \"feature_id\": 21,\n      \"score\": 0.09,\n      \"rationale\": \"Medication adjustment can reflect treatment response, but is partly practice-pattern dependent.\"\n    },\n    {\n      \"feature_id\": 22,\n      \"score\": 0.05,\n      \"rationale\": \"Specific drug change is weak and likely sparse, with limited stable signal.\"\n    },\n    {\n      \"feature_id\": 23,\n      \"score\": 0.04,\n      \"rationale\": \"Specific drug change is sparse and unlikely to generalize strongly.\"\n    },\n    {\n      \"feature_id\": 24,\n      \"score\": 0.03,\n      \"rationale\": \"Rare medication with minimal expected stable predictive value.\"\n    },\n    {\n      \"feature_id\": 25,\n      \"score\": 0.06,\n      \"rationale\": \"Specific diabetes drug change may reflect management intensity, but is noisy.\"\n    },\n    {\n      \"feature_id\": 26,\n      \"score\": 0.01,\n      \"rationale\": \"Extremely rare and not a robust predictor.\"\n    },\n    {\n      \"feature_id\": 27,\n      \"score\": 0.07,\n      \"rationale\": \"Common diabetes drug adjustment can indicate care intensity, though practice-dependent.\"\n    },\n    {\n      \"feature_id\": 28,\n      \"score\": 0.07,\n      \"rationale\": \"Common diabetes drug adjustment has some treatment-response signal but limited stability.\"\n    },\n    {\n      \"feature_id\": 29,\n      \"score\": 0.01,\n      \"rationale\": \"Very rare medication and unlikely to be useful.\"\n    },\n    {\n      \"feature_id\": 30,\n      \"score\": 0.05,\n      \"rationale\": \"Can reflect chronic disease management, but is only modestly informative.\"\n    },\n    {\n      \"feature_id\": 31,\n      \"score\": 0.05,\n      \"rationale\": \"Similar to other medication changes, with limited but plausible treatment signal.\"\n    },\n    {\n      \"feature_id\": 32,\n      \"score\": 0.03,\n      \"rationale\": \"Rare medication and weak stable signal.\"\n    },\n    {\n      \"feature_id\": 33,\n      \"score\": 0.02,\n      \"rationale\": \"Rare medication with little expected generalizable value.\"\n    },\n    {\n      \"feature_id\": 34,\n      \"score\": 0.01,\n      \"rationale\": \"Extremely rare and not likely predictive in a stable way.\"\n    },\n    {\n      \"feature_id\": 35,\n      \"score\": 0.01,\n      \"rationale\": \"Extremely rare and not likely predictive in a stable way.\"\n    },\n    {\n      \"feature_id\": 36,\n      \"score\": 0.00,\n      \"rationale\": \"Likely a near-constant or non-informative rare code; no stable utility.\"\n    },\n    {\n      \"feature_id\": 37,\n      \"score\": 0.00,\n      \"rationale\": \"Likely a near-constant or non-informative rare code; no stable utility.\"\n    },\n    {\n      \"feature_id\": 38,\n      \"score\": 0.11,\n      \"rationale\": \"Insulin treatment change is clinically relevant and often reflects glycemic severity.\"\n    },\n    {\n      \"feature_id\": 39,\n      \"score\": 0.03,\n      \"rationale\": \"Combination drug change is sparse and likely unstable.\"\n    },\n    {\n      \"feature_id\": 40,\n      \"score\": 0.02,\n      \"rationale\": \"Rare combination drug with little expected stable signal.\"\n    },\n    {\n      \"feature_id\": 41,\n      \"score\": 0.01,\n      \"rationale\": \"Very rare combination drug and not a robust predictor.\"\n    },\n    {\n      \"feature_id\": 42,\n      \"score\": 0.01,\n      \"rationale\": \"Very rare combination drug and not a robust predictor.\"\n    },\n    {\n      \"feature_id\": 43,\n      \"score\": 0.01,\n      \"rationale\": \"Very rare combination drug and not a robust predictor.\"\n    },\n    {\n      \"feature_id\": 44,\n      \"score\": 0.08,\n      \"rationale\": \"Overall medication change captures treatment response, but can be policy- and site-dependent.\"\n    },\n    {\n      \"feature_id\": 45,\n      \"score\": 0.12,\n      \"rationale\": \"Whether diabetes medication was prescribed is clinically relevant, though partly redundant with other treatment features.\"\n    }\n  ]\n}",
+      "input_tokens": 2865,
+      "output_tokens": 1884,
+      "total_tokens": 4749,
+      "response_id": "resp_047bb8f50f60ab3a006a27d3131dd4819882fa0883f73c0f62",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/tableshift/diabetes_readmission/rankings/score_all_prompt.txt",
+  "config": {
+    "score_samples": 5
+  }
+}

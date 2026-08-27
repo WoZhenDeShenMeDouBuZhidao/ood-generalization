@@ -1,0 +1,343 @@
+{
+  "benchmark": "whyshift",
+  "dataset": "accident",
+  "model": "ce-grad-l2",
+  "method": "score",
+  "feature_space": "model",
+  "created_at": "2026-08-12T00:24:22",
+  "aggregation": {
+    "name": "normalized_mean",
+    "normalization": "per_repeat_sum_to_one",
+    "repeat_count": 5,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 0,
+        "feature": "Distance(mi)",
+        "score_mean": 0.5094842212803232,
+        "score_std": 0.07206271170393778
+      },
+      {
+        "rank": 2,
+        "feature_id": 19,
+        "feature": "Year",
+        "score_mean": 0.24706489919234126,
+        "score_std": 0.06748219732213023
+      },
+      {
+        "rank": 3,
+        "feature_id": 18,
+        "feature": "Traffic_Signal",
+        "score_mean": 0.016859123315706253,
+        "score_std": 0.0069924975408872225
+      },
+      {
+        "rank": 4,
+        "feature_id": 1,
+        "feature": "Temperature(F)",
+        "score_mean": 0.016723025888077687,
+        "score_std": 0.0032134613751002186
+      },
+      {
+        "rank": 5,
+        "feature_id": 14,
+        "feature": "Roundabout",
+        "score_mean": 0.013531191519743527,
+        "score_std": 0.010355793739465836
+      },
+      {
+        "rank": 6,
+        "feature_id": 9,
+        "feature": "Crossing",
+        "score_mean": 0.012224374038173638,
+        "score_std": 0.006158091730719189
+      },
+      {
+        "rank": 7,
+        "feature_id": 16,
+        "feature": "Stop",
+        "score_mean": 0.01045266816115511,
+        "score_std": 0.0037864959706272083
+      },
+      {
+        "rank": 8,
+        "feature_id": 20,
+        "feature": "Month",
+        "score_mean": 0.009671791942458263,
+        "score_std": 0.000897190008294596
+      },
+      {
+        "rank": 9,
+        "feature_id": 42,
+        "feature": "Weather_Condition_Tornado",
+        "score_mean": 0.008086286866993388,
+        "score_std": 0.002171666498673799
+      },
+      {
+        "rank": 10,
+        "feature_id": 38,
+        "feature": "Weather_Condition_Sand",
+        "score_mean": 0.007203923194295999,
+        "score_std": 0.0012890691710964856
+      },
+      {
+        "rank": 11,
+        "feature_id": 21,
+        "feature": "Weekday",
+        "score_mean": 0.006771276834660755,
+        "score_std": 0.0016982038859802726
+      },
+      {
+        "rank": 12,
+        "feature_id": 2,
+        "feature": "Humidity(%)",
+        "score_mean": 0.006578297166144396,
+        "score_std": 0.0009137008944640482
+      },
+      {
+        "rank": 13,
+        "feature_id": 13,
+        "feature": "Railway",
+        "score_mean": 0.00618005022930061,
+        "score_std": 0.0015620539098513881
+      },
+      {
+        "rank": 14,
+        "feature_id": 23,
+        "feature": "Hour",
+        "score_mean": 0.006072100018658635,
+        "score_std": 0.0013511264923729892
+      },
+      {
+        "rank": 15,
+        "feature_id": 3,
+        "feature": "Pressure(in)",
+        "score_mean": 0.00598755350710213,
+        "score_std": 0.0016199287361082534
+      },
+      {
+        "rank": 16,
+        "feature_id": 44,
+        "feature": "Civil_Twilight_Night",
+        "score_mean": 0.005805172743373622,
+        "score_std": 0.0014203906017049243
+      },
+      {
+        "rank": 17,
+        "feature_id": 36,
+        "feature": "Weather_Condition_Hail",
+        "score_mean": 0.005313515453870354,
+        "score_std": 0.0017903630812462314
+      },
+      {
+        "rank": 18,
+        "feature_id": 30,
+        "feature": "Wind_Direction_SE",
+        "score_mean": 0.005211893529440968,
+        "score_std": 0.0014402718632271275
+      },
+      {
+        "rank": 19,
+        "feature_id": 32,
+        "feature": "Wind_Direction_Variable",
+        "score_mean": 0.005048969078217147,
+        "score_std": 0.0015670905921839375
+      },
+      {
+        "rank": 20,
+        "feature_id": 11,
+        "feature": "Junction",
+        "score_mean": 0.004935072545797529,
+        "score_std": 0.0008116163780611033
+      },
+      {
+        "rank": 21,
+        "feature_id": 5,
+        "feature": "Wind_Speed(mph)",
+        "score_mean": 0.004681549702223707,
+        "score_std": 0.0015650731153974268
+      },
+      {
+        "rank": 22,
+        "feature_id": 31,
+        "feature": "Wind_Direction_SW",
+        "score_mean": 0.004669370737008431,
+        "score_std": 0.001774763314102151
+      },
+      {
+        "rank": 23,
+        "feature_id": 15,
+        "feature": "Station",
+        "score_mean": 0.004662850256986593,
+        "score_std": 0.0010253601752009051
+      },
+      {
+        "rank": 24,
+        "feature_id": 7,
+        "feature": "Amenity",
+        "score_mean": 0.004556444995648296,
+        "score_std": 0.002648024395289227
+      },
+      {
+        "rank": 25,
+        "feature_id": 6,
+        "feature": "Precipitation(in)",
+        "score_mean": 0.004403051125859914,
+        "score_std": 0.0018053463635665232
+      },
+      {
+        "rank": 26,
+        "feature_id": 37,
+        "feature": "Weather_Condition_Rain",
+        "score_mean": 0.0043946548009108815,
+        "score_std": 0.0019720793369114964
+      },
+      {
+        "rank": 27,
+        "feature_id": 43,
+        "feature": "Weather_Condition_Windy",
+        "score_mean": 0.004393283475158782,
+        "score_std": 0.0008266740686813713
+      },
+      {
+        "rank": 28,
+        "feature_id": 4,
+        "feature": "Visibility(mi)",
+        "score_mean": 0.004154753058817816,
+        "score_std": 0.001355067275877669
+      },
+      {
+        "rank": 29,
+        "feature_id": 40,
+        "feature": "Weather_Condition_Snow",
+        "score_mean": 0.0041029573878576895,
+        "score_std": 0.001534405100979868
+      },
+      {
+        "rank": 30,
+        "feature_id": 35,
+        "feature": "Weather_Condition_Fog",
+        "score_mean": 0.004002849510910287,
+        "score_std": 0.00031797412092002915
+      },
+      {
+        "rank": 31,
+        "feature_id": 10,
+        "feature": "Give_Way",
+        "score_mean": 0.0037425214816965064,
+        "score_std": 0.0012579615501697456
+      },
+      {
+        "rank": 32,
+        "feature_id": 28,
+        "feature": "Wind_Direction_NW",
+        "score_mean": 0.0037420614685698913,
+        "score_std": 0.0007886343992890338
+      },
+      {
+        "rank": 33,
+        "feature_id": 39,
+        "feature": "Weather_Condition_Smoke",
+        "score_mean": 0.0037290516272827793,
+        "score_std": 0.0014536007784185531
+      },
+      {
+        "rank": 34,
+        "feature_id": 29,
+        "feature": "Wind_Direction_S",
+        "score_mean": 0.003681552828591827,
+        "score_std": 0.0012053243464200812
+      },
+      {
+        "rank": 35,
+        "feature_id": 8,
+        "feature": "Bump",
+        "score_mean": 0.0036126001502678343,
+        "score_std": 0.0007168177141249034
+      },
+      {
+        "rank": 36,
+        "feature_id": 25,
+        "feature": "Wind_Direction_E",
+        "score_mean": 0.003497664391032715,
+        "score_std": 0.0009504591325494929
+      },
+      {
+        "rank": 37,
+        "feature_id": 22,
+        "feature": "Day",
+        "score_mean": 0.0034018231179076897,
+        "score_std": 0.0007818187406137631
+      },
+      {
+        "rank": 38,
+        "feature_id": 33,
+        "feature": "Wind_Direction_W",
+        "score_mean": 0.0032038069866660995,
+        "score_std": 0.0004651241601403374
+      },
+      {
+        "rank": 39,
+        "feature_id": 34,
+        "feature": "Weather_Condition_Cloudy",
+        "score_mean": 0.003094854226602553,
+        "score_std": 0.00045199335631180524
+      },
+      {
+        "rank": 40,
+        "feature_id": 27,
+        "feature": "Wind_Direction_NE",
+        "score_mean": 0.0030056074895203817,
+        "score_std": 0.0006378969334829028
+      },
+      {
+        "rank": 41,
+        "feature_id": 26,
+        "feature": "Wind_Direction_N",
+        "score_mean": 0.002782068158497762,
+        "score_std": 0.00043862533377161933
+      },
+      {
+        "rank": 42,
+        "feature_id": 41,
+        "feature": "Weather_Condition_Thunderstorm",
+        "score_mean": 0.002337345119834938,
+        "score_std": 0.0010162056166814631
+      },
+      {
+        "rank": 43,
+        "feature_id": 24,
+        "feature": "Minute",
+        "score_mean": 0.002335558098099489,
+        "score_std": 0.0005226808844447955
+      },
+      {
+        "rank": 44,
+        "feature_id": 12,
+        "feature": "No_Exit",
+        "score_mean": 0.002321987978481942,
+        "score_std": 0.0008267761673032871
+      },
+      {
+        "rank": 45,
+        "feature_id": 17,
+        "feature": "Traffic_Calming",
+        "score_mean": 0.0022843253197307374,
+        "score_std": 0.0006908228359771898
+      }
+    ]
+  }
+}

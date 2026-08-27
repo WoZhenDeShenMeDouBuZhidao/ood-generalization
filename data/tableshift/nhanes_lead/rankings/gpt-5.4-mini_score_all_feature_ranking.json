@@ -1,0 +1,453 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "nhanes_lead",
+  "model": "gpt-5.4-mini",
+  "method": "score_all",
+  "temperature": 0.5,
+  "created_at": "2026-06-09T16:49:49",
+  "token_usage": {
+    "num_calls": 5,
+    "input_tokens": 3615,
+    "output_tokens": 1915,
+    "total_tokens": 5530
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 3,
+        "feature": "RIDAGEYR",
+        "score_mean": 0.55,
+        "score_std": 0.128062484748657
+      },
+      {
+        "rank": 2,
+        "feature_id": 2,
+        "feature": "DMDEDUC2",
+        "score_mean": 0.332,
+        "score_std": 0.064
+      },
+      {
+        "rank": 3,
+        "feature_id": 6,
+        "feature": "RIDRETH_merged",
+        "score_mean": 0.29,
+        "score_std": 0.06260990336999411
+      },
+      {
+        "rank": 4,
+        "feature_id": 5,
+        "feature": "DMDMARTL",
+        "score_mean": 0.164,
+        "score_std": 0.03440930106817051
+      },
+      {
+        "rank": 5,
+        "feature_id": 1,
+        "feature": "DMDBORN4",
+        "score_mean": 0.128,
+        "score_std": 0.04489988864128729
+      },
+      {
+        "rank": 6,
+        "feature_id": 0,
+        "feature": "nhanes_year",
+        "score_mean": 0.11599999999999999,
+        "score_std": 0.03666060555964672
+      },
+      {
+        "rank": 7,
+        "feature_id": 4,
+        "feature": "RIAGENDR",
+        "score_mean": 0.09,
+        "score_std": 0.023664319132398463
+      }
+    ],
+    "scores": [
+      {
+        "feature_id": 0,
+        "feature": "nhanes_year",
+        "score_mean": 0.11599999999999999,
+        "score_std": 0.03666060555964672,
+        "sample_scores": [
+          0.08,
+          0.12,
+          0.18,
+          0.08,
+          0.12
+        ]
+      },
+      {
+        "feature_id": 1,
+        "feature": "DMDBORN4",
+        "score_mean": 0.128,
+        "score_std": 0.04489988864128729,
+        "sample_scores": [
+          0.18,
+          0.08,
+          0.08,
+          0.12,
+          0.18
+        ]
+      },
+      {
+        "feature_id": 2,
+        "feature": "DMDEDUC2",
+        "score_mean": 0.332,
+        "score_std": 0.064,
+        "sample_scores": [
+          0.34,
+          0.34,
+          0.34,
+          0.22,
+          0.42
+        ]
+      },
+      {
+        "feature_id": 3,
+        "feature": "RIDAGEYR",
+        "score_mean": 0.55,
+        "score_std": 0.128062484748657,
+        "sample_scores": [
+          0.42,
+          0.44,
+          0.56,
+          0.78,
+          0.55
+        ]
+      },
+      {
+        "feature_id": 4,
+        "feature": "RIAGENDR",
+        "score_mean": 0.09,
+        "score_std": 0.023664319132398463,
+        "sample_scores": [
+          0.12,
+          0.05,
+          0.1,
+          0.1,
+          0.08
+        ]
+      },
+      {
+        "feature_id": 5,
+        "feature": "DMDMARTL",
+        "score_mean": 0.164,
+        "score_std": 0.03440930106817051,
+        "sample_scores": [
+          0.22,
+          0.18,
+          0.12,
+          0.14,
+          0.16
+        ]
+      },
+      {
+        "feature_id": 6,
+        "feature": "RIDRETH_merged",
+        "score_mean": 0.29,
+        "score_std": 0.06260990336999411,
+        "sample_scores": [
+          0.38,
+          0.22,
+          0.22,
+          0.3,
+          0.33
+        ]
+      }
+    ],
+    "samples": [
+      {
+        "task_summary": "Predicting lead exposure status in NHANES from demographic and survey covariates, emphasizing stable population-level predictors rather than year-specific artifacts.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.08,
+            "rationale": "Survey year is likely a domain marker and may capture temporal drift rather than stable causal signal.",
+            "feature": "nhanes_year"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.18,
+            "rationale": "Country of birth can relate to long-term exposure patterns, but it is also a sensitive demographic proxy with limited direct stability.",
+            "feature": "DMDBORN4"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.34,
+            "rationale": "Education can proxy socioeconomic status and housing/environmental risk, offering moderate stable predictive value.",
+            "feature": "DMDEDUC2"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.42,
+            "rationale": "Age is a robust demographic correlate of cumulative exposure and life-course risk, generally stable across domains.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.12,
+            "rationale": "Gender may have weak indirect associations but is usually a brittle shortcut for this kind of environmental outcome.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.22,
+            "rationale": "Marital status can reflect age and socioeconomic context, but the relationship to lead exposure is indirect and unstable.",
+            "feature": "DMDMARTL"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.38,
+            "rationale": "Race/ethnicity often correlates with structural exposure disparities and can be predictive, though it is a sensitive proxy and may shift across domains.",
+            "feature": "RIDRETH_merged"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a participant has elevated lead-related outcome risk in NHANES using demographic and survey covariates that should generalize across years.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.12,
+            "rationale": "Survey year can capture secular exposure trends, but it is also a domain marker and may not generalize well.",
+            "feature": "nhanes_year"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.08,
+            "rationale": "Country of birth may weakly relate to exposure history, but it is a sensitive demographic shortcut and likely unstable.",
+            "feature": "DMDBORN4"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.34,
+            "rationale": "Education is a durable proxy for socioeconomic conditions that affect exposure risk and is moderately stable.",
+            "feature": "DMDEDUC2"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.44,
+            "rationale": "Age is a strong, broadly stable predictor of cumulative lead exposure and related risk patterns.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.05,
+            "rationale": "Gender may have only weak indirect associations with exposure and is not a robust causal predictor here.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.18,
+            "rationale": "Marital status can proxy household structure and age, but the signal is indirect and likely brittle.",
+            "feature": "DMDMARTL"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.22,
+            "rationale": "Race/ethnicity may correlate with long-run exposure disparities, but it is a sensitive shortcut and may not transfer cleanly.",
+            "feature": "RIDRETH_merged"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether the NHANES participant has elevated lead-related outcome risk from demographic and survey covariates in a way that should generalize across years.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.18,
+            "rationale": "Survey year can capture secular exposure trends, but it is a domain marker and may not transfer well.",
+            "feature": "nhanes_year"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.08,
+            "rationale": "Country of birth may weakly relate to exposure history, but it is a sensitive proxy and likely brittle across domains.",
+            "feature": "DMDBORN4"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.34,
+            "rationale": "Education is a stable socioeconomic proxy that can correlate with long-term environmental exposure and health risk.",
+            "feature": "DMDEDUC2"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.56,
+            "rationale": "Age is a strong, generally stable predictor of cumulative exposure and cohort effects.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.1,
+            "rationale": "Gender may have only modest indirect associations and is not a primary causal driver here.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.12,
+            "rationale": "Marital status is a weak proxy for life stage or socioeconomic context, with limited stable predictive value.",
+            "feature": "DMDMARTL"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.22,
+            "rationale": "Race/ethnicity can proxy structural exposure differences, but it is sensitive and may encode spurious shortcuts.",
+            "feature": "RIDRETH_merged"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predicting the nhanes_lead target from demographic and survey covariates in a way that should generalize across NHANES waves.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.08,
+            "rationale": "Survey year can capture secular trends, but it is also a domain indicator and may not transfer well across splits.",
+            "feature": "nhanes_year"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.12,
+            "rationale": "Country of birth may relate to exposure patterns, but it is a coarse proxy and can be unstable across cohorts.",
+            "feature": "DMDBORN4"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.22,
+            "rationale": "Education is a plausible stable proxy for long-term socioeconomic and environmental exposure differences.",
+            "feature": "DMDEDUC2"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.78,
+            "rationale": "Age is a strong, semantically meaningful predictor of cumulative lead exposure and should remain useful across domains.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.1,
+            "rationale": "Gender may have modest associations through exposure patterns, but it is usually a weak and indirect signal.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.14,
+            "rationale": "Marital status can proxy household and socioeconomic context, but the relationship to lead is indirect and brittle.",
+            "feature": "DMDMARTL"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.3,
+            "rationale": "Race/ethnicity often correlates with persistent exposure disparities, but it is a sensitive demographic shortcut and less causally stable.",
+            "feature": "RIDRETH_merged"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predicting lead-related outcome in NHANES using demographic and survey covariates, with emphasis on features that generalize stably across years and subpopulations.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.12,
+            "rationale": "Survey year can capture secular trends in exposure and measurement, but it is a domain marker and may not generalize well.",
+            "feature": "nhanes_year"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.18,
+            "rationale": "Country of birth may relate to exposure history and housing/immigration context, but it is a sensitive proxy with limited stable causal signal.",
+            "feature": "DMDBORN4"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.42,
+            "rationale": "Education is a relatively stable socioeconomic proxy that can track long-term exposure risk and health behavior across domains.",
+            "feature": "DMDEDUC2"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.55,
+            "rationale": "Age is a broadly stable predictor of cumulative exposure and life-course risk, likely useful across train/test shifts.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.08,
+            "rationale": "Gender may have some association with exposure patterns, but expected signal is weak and often indirect.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.16,
+            "rationale": "Marital status is a noisy socioeconomic proxy with some correlation to age and household context, but limited stable direct relevance.",
+            "feature": "DMDMARTL"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.33,
+            "rationale": "Race/ethnicity can reflect structural exposure differences and housing patterns, but it is also a sensitive shortcut that may be brittle across domains.",
+            "feature": "RIDRETH_merged"
+          }
+        ]
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DMDBORN4\",\n    \"type\": \"categorical\",\n    \"description\": \"country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DMDEDUC2\",\n    \"type\": \"categorical\",\n    \"description\": \"highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"RIDAGEYR\",\n    \"type\": \"continuous\",\n    \"description\": \"age in years\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"RIAGENDR\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"DMDMARTL\",\n    \"type\": \"categorical\",\n    \"description\": \"marital status\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RIDRETH_merged\",\n    \"type\": \"categorical\",\n    \"description\": \"race and hispanic origin\",\n    \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predicting lead exposure status in NHANES from demographic and survey covariates, emphasizing stable population-level predictors rather than year-specific artifacts.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.08,\n      \"rationale\": \"Survey year is likely a domain marker and may capture temporal drift rather than stable causal signal.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.18,\n      \"rationale\": \"Country of birth can relate to long-term exposure patterns, but it is also a sensitive demographic proxy with limited direct stability.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.34,\n      \"rationale\": \"Education can proxy socioeconomic status and housing/environmental risk, offering moderate stable predictive value.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.42,\n      \"rationale\": \"Age is a robust demographic correlate of cumulative exposure and life-course risk, generally stable across domains.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.12,\n      \"rationale\": \"Gender may have weak indirect associations but is usually a brittle shortcut for this kind of environmental outcome.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.22,\n      \"rationale\": \"Marital status can reflect age and socioeconomic context, but the relationship to lead exposure is indirect and unstable.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.38,\n      \"rationale\": \"Race/ethnicity often correlates with structural exposure disparities and can be predictive, though it is a sensitive proxy and may shift across domains.\"\n    }\n  ]\n}",
+      "input_tokens": 723,
+      "output_tokens": 382,
+      "total_tokens": 1105,
+      "response_id": "resp_0424d6acc4ed994e006a27d39eb5ec819aad5ddf7bf6a772ba",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DMDBORN4\",\n    \"type\": \"categorical\",\n    \"description\": \"country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DMDEDUC2\",\n    \"type\": \"categorical\",\n    \"description\": \"highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"RIDAGEYR\",\n    \"type\": \"continuous\",\n    \"description\": \"age in years\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"RIAGENDR\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"DMDMARTL\",\n    \"type\": \"categorical\",\n    \"description\": \"marital status\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RIDRETH_merged\",\n    \"type\": \"categorical\",\n    \"description\": \"race and hispanic origin\",\n    \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a participant has elevated lead-related outcome risk in NHANES using demographic and survey covariates that should generalize across years.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.12,\n      \"rationale\": \"Survey year can capture secular exposure trends, but it is also a domain marker and may not generalize well.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.08,\n      \"rationale\": \"Country of birth may weakly relate to exposure history, but it is a sensitive demographic shortcut and likely unstable.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.34,\n      \"rationale\": \"Education is a durable proxy for socioeconomic conditions that affect exposure risk and is moderately stable.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.44,\n      \"rationale\": \"Age is a strong, broadly stable predictor of cumulative lead exposure and related risk patterns.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.05,\n      \"rationale\": \"Gender may have only weak indirect associations with exposure and is not a robust causal predictor here.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.18,\n      \"rationale\": \"Marital status can proxy household structure and age, but the signal is indirect and likely brittle.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.22,\n      \"rationale\": \"Race/ethnicity may correlate with long-run exposure disparities, but it is a sensitive shortcut and may not transfer cleanly.\"\n    }\n  ]\n}",
+      "input_tokens": 723,
+      "output_tokens": 376,
+      "total_tokens": 1099,
+      "response_id": "resp_0ab46188cdc71314006a27d3a1d3d88199a6911bb1037b152c",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DMDBORN4\",\n    \"type\": \"categorical\",\n    \"description\": \"country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DMDEDUC2\",\n    \"type\": \"categorical\",\n    \"description\": \"highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"RIDAGEYR\",\n    \"type\": \"continuous\",\n    \"description\": \"age in years\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"RIAGENDR\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"DMDMARTL\",\n    \"type\": \"categorical\",\n    \"description\": \"marital status\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RIDRETH_merged\",\n    \"type\": \"categorical\",\n    \"description\": \"race and hispanic origin\",\n    \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether the NHANES participant has elevated lead-related outcome risk from demographic and survey covariates in a way that should generalize across years.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.18,\n      \"rationale\": \"Survey year can capture secular exposure trends, but it is a domain marker and may not transfer well.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.08,\n      \"rationale\": \"Country of birth may weakly relate to exposure history, but it is a sensitive proxy and likely brittle across domains.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.34,\n      \"rationale\": \"Education is a stable socioeconomic proxy that can correlate with long-term environmental exposure and health risk.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.56,\n      \"rationale\": \"Age is a strong, generally stable predictor of cumulative exposure and cohort effects.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.10,\n      \"rationale\": \"Gender may have only modest indirect associations and is not a primary causal driver here.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.12,\n      \"rationale\": \"Marital status is a weak proxy for life stage or socioeconomic context, with limited stable predictive value.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.22,\n      \"rationale\": \"Race/ethnicity can proxy structural exposure differences, but it is sensitive and may encode spurious shortcuts.\"\n    }\n  ]\n}",
+      "input_tokens": 723,
+      "output_tokens": 371,
+      "total_tokens": 1094,
+      "response_id": "resp_06401c5c157f0c1d006a27d3a49404819a91bdd3509807fb72",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DMDBORN4\",\n    \"type\": \"categorical\",\n    \"description\": \"country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DMDEDUC2\",\n    \"type\": \"categorical\",\n    \"description\": \"highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"RIDAGEYR\",\n    \"type\": \"continuous\",\n    \"description\": \"age in years\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"RIAGENDR\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"DMDMARTL\",\n    \"type\": \"categorical\",\n    \"description\": \"marital status\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RIDRETH_merged\",\n    \"type\": \"categorical\",\n    \"description\": \"race and hispanic origin\",\n    \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predicting the nhanes_lead target from demographic and survey covariates in a way that should generalize across NHANES waves.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.08,\n      \"rationale\": \"Survey year can capture secular trends, but it is also a domain indicator and may not transfer well across splits.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.12,\n      \"rationale\": \"Country of birth may relate to exposure patterns, but it is a coarse proxy and can be unstable across cohorts.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.22,\n      \"rationale\": \"Education is a plausible stable proxy for long-term socioeconomic and environmental exposure differences.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.78,\n      \"rationale\": \"Age is a strong, semantically meaningful predictor of cumulative lead exposure and should remain useful across domains.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.10,\n      \"rationale\": \"Gender may have modest associations through exposure patterns, but it is usually a weak and indirect signal.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.14,\n      \"rationale\": \"Marital status can proxy household and socioeconomic context, but the relationship to lead is indirect and brittle.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.30,\n      \"rationale\": \"Race/ethnicity often correlates with persistent exposure disparities, but it is a sensitive demographic shortcut and less causally stable.\"\n    }\n  ]\n}",
+      "input_tokens": 723,
+      "output_tokens": 385,
+      "total_tokens": 1108,
+      "response_id": "resp_0e38e1a16bf439ea006a27d3a762d8819884df70824ce7fa4f",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DMDBORN4\",\n    \"type\": \"categorical\",\n    \"description\": \"country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DMDEDUC2\",\n    \"type\": \"categorical\",\n    \"description\": \"highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"RIDAGEYR\",\n    \"type\": \"continuous\",\n    \"description\": \"age in years\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"RIAGENDR\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"DMDMARTL\",\n    \"type\": \"categorical\",\n    \"description\": \"marital status\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RIDRETH_merged\",\n    \"type\": \"categorical\",\n    \"description\": \"race and hispanic origin\",\n    \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predicting lead-related outcome in NHANES using demographic and survey covariates, with emphasis on features that generalize stably across years and subpopulations.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.12,\n      \"rationale\": \"Survey year can capture secular trends in exposure and measurement, but it is a domain marker and may not generalize well.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.18,\n      \"rationale\": \"Country of birth may relate to exposure history and housing/immigration context, but it is a sensitive proxy with limited stable causal signal.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.42,\n      \"rationale\": \"Education is a relatively stable socioeconomic proxy that can track long-term exposure risk and health behavior across domains.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.55,\n      \"rationale\": \"Age is a broadly stable predictor of cumulative exposure and life-course risk, likely useful across train/test shifts.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.08,\n      \"rationale\": \"Gender may have some association with exposure patterns, but expected signal is weak and often indirect.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.16,\n      \"rationale\": \"Marital status is a noisy socioeconomic proxy with some correlation to age and household context, but limited stable direct relevance.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.33,\n      \"rationale\": \"Race/ethnicity can reflect structural exposure differences and housing patterns, but it is also a sensitive shortcut that may be brittle across domains.\"\n    }\n  ]\n}",
+      "input_tokens": 723,
+      "output_tokens": 401,
+      "total_tokens": 1124,
+      "response_id": "resp_0960882ba8a3a519006a27d3aa244c819a97398c38324ff741",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/tableshift/nhanes_lead/rankings/score_all_prompt.txt",
+  "config": {
+    "score_samples": 5
+  }
+}

@@ -1,0 +1,190 @@
+# acs/acsmobility score_all prompts
+
+## 1. score_all
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acsmobility`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score every feature by stable predictive usefulness for this task, considered
+marginally and without seeing the downstream data.
+
+Feature cards, in model input order:
+[
+  {
+    "feature_id": 0,
+    "feature": "AGEP",
+    "type": "integer",
+    "description": "Age of the person in years.",
+    "values": "ACS age code; older ages may be topcoded."
+  },
+  {
+    "feature_id": 1,
+    "feature": "SCHL",
+    "type": "ordinal_categorical",
+    "description": "Educational attainment.",
+    "values": "ACS education level code; larger codes generally indicate more education."
+  },
+  {
+    "feature_id": 2,
+    "feature": "MAR",
+    "type": "categorical",
+    "description": "Marital status.",
+    "values": "ACS marital status code."
+  },
+  {
+    "feature_id": 3,
+    "feature": "SEX",
+    "type": "categorical",
+    "description": "Sex reported in ACS.",
+    "values": "1=male, 2=female."
+  },
+  {
+    "feature_id": 4,
+    "feature": "DIS",
+    "type": "boolean_categorical",
+    "description": "Disability recode.",
+    "values": "1=with a disability, 2=without a disability."
+  },
+  {
+    "feature_id": 5,
+    "feature": "ESP",
+    "type": "categorical",
+    "description": "Employment status of parents.",
+    "values": "ACS family/parent employment code, mainly defined for children."
+  },
+  {
+    "feature_id": 6,
+    "feature": "CIT",
+    "type": "categorical",
+    "description": "Citizenship status.",
+    "values": "US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen."
+  },
+  {
+    "feature_id": 7,
+    "feature": "MIL",
+    "type": "categorical",
+    "description": "Military service status.",
+    "values": "ACS military service category."
+  },
+  {
+    "feature_id": 8,
+    "feature": "ANC",
+    "type": "categorical",
+    "description": "Ancestry recode.",
+    "values": "ACS ancestry category."
+  },
+  {
+    "feature_id": 9,
+    "feature": "NATIVITY",
+    "type": "categorical",
+    "description": "Nativity recode.",
+    "values": "Native-born or foreign-born."
+  },
+  {
+    "feature_id": 10,
+    "feature": "RELP",
+    "type": "categorical",
+    "description": "Relationship to householder.",
+    "values": "ACS household relationship code."
+  },
+  {
+    "feature_id": 11,
+    "feature": "DEAR",
+    "type": "boolean_categorical",
+    "description": "Hearing difficulty.",
+    "values": "1=yes, 2=no."
+  },
+  {
+    "feature_id": 12,
+    "feature": "DEYE",
+    "type": "boolean_categorical",
+    "description": "Vision difficulty.",
+    "values": "1=yes, 2=no."
+  },
+  {
+    "feature_id": 13,
+    "feature": "DREM",
+    "type": "boolean_categorical",
+    "description": "Cognitive difficulty remembering, concentrating, or making decisions.",
+    "values": "1=yes, 2=no."
+  },
+  {
+    "feature_id": 14,
+    "feature": "RAC1P",
+    "type": "categorical",
+    "description": "Detailed race recode.",
+    "values": "ACS race category code."
+  },
+  {
+    "feature_id": 15,
+    "feature": "GCL",
+    "type": "categorical",
+    "description": "Grandparents living with grandchildren and responsibility status.",
+    "values": "ACS grandparent care category."
+  },
+  {
+    "feature_id": 16,
+    "feature": "COW",
+    "type": "categorical",
+    "description": "Class of worker.",
+    "values": "ACS employment class code, such as private, government, self-employed, or unpaid family worker."
+  },
+  {
+    "feature_id": 17,
+    "feature": "ESR",
+    "type": "categorical",
+    "description": "Employment status recode.",
+    "values": "Employed, unemployed, armed forces, or not in labor force categories."
+  },
+  {
+    "feature_id": 18,
+    "feature": "WKHP",
+    "type": "integer",
+    "description": "Usual hours worked per week during the past 12 months.",
+    "values": "0 or positive weekly work hours."
+  },
+  {
+    "feature_id": 19,
+    "feature": "JWMNP",
+    "type": "integer",
+    "description": "Travel time to work in minutes.",
+    "values": "Number of commuting minutes."
+  },
+  {
+    "feature_id": 20,
+    "feature": "PINCP",
+    "type": "continuous",
+    "description": "Total person's income.",
+    "values": "Dollar income amount; may be negative, zero, or positive."
+  }
+]
+
+Feature IDs to include exactly once:
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "scores": [
+    {
+      "feature_id": 0,
+      "score": 0.0,
+      "rationale": "short reason"
+    }
+  ]
+}
+
+Rules:
+- Include every feature_id exactly once in `scores`.
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- If two features seem similarly important, assign scores that still reflect your
+  best estimate of their relative stable usefulness.
+- `feature_id` is the authoritative identifier. Include each feature_id exactly
+  once and do not include feature names in the output.

@@ -1,0 +1,1126 @@
+{
+  "benchmark": "acs",
+  "dataset": "acsincome",
+  "model": "gpt-5.4-mini",
+  "method": "score",
+  "temperature": 0.5,
+  "created_at": "2026-06-09T15:34:45",
+  "token_usage": {
+    "num_calls": 50,
+    "input_tokens": 14705,
+    "output_tokens": 4808,
+    "total_tokens": 19513
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 7,
+        "feature": "WKHP",
+        "score_mean": 0.92,
+        "score_std": 0.016733200530681485
+      },
+      {
+        "rank": 2,
+        "feature_id": 2,
+        "feature": "SCHL",
+        "score_mean": 0.918,
+        "score_std": 0.00979795897113272
+      },
+      {
+        "rank": 3,
+        "feature_id": 0,
+        "feature": "AGEP",
+        "score_mean": 0.884,
+        "score_std": 0.014966629547095779
+      },
+      {
+        "rank": 4,
+        "feature_id": 4,
+        "feature": "OCCP",
+        "score_mean": 0.876,
+        "score_std": 0.014966629547095779
+      },
+      {
+        "rank": 5,
+        "feature_id": 3,
+        "feature": "MAR",
+        "score_mean": 0.708,
+        "score_std": 0.05153639490690051
+      },
+      {
+        "rank": 6,
+        "feature_id": 1,
+        "feature": "COW",
+        "score_mean": 0.626,
+        "score_std": 0.05425863986500212
+      },
+      {
+        "rank": 7,
+        "feature_id": 6,
+        "feature": "RELP",
+        "score_mean": 0.228,
+        "score_std": 0.05878775382679628
+      },
+      {
+        "rank": 8,
+        "feature_id": 8,
+        "feature": "SEX",
+        "score_mean": 0.208,
+        "score_std": 0.03919183588453086
+      },
+      {
+        "rank": 9,
+        "feature_id": 9,
+        "feature": "RAC1P",
+        "score_mean": 0.124,
+        "score_std": 0.031999999999999994
+      },
+      {
+        "rank": 10,
+        "feature_id": 5,
+        "feature": "POBP",
+        "score_mean": 0.088,
+        "score_std": 0.015999999999999997
+      }
+    ],
+    "scores": [
+      {
+        "feature_id": 0,
+        "feature": "AGEP",
+        "score_mean": 0.884,
+        "score_std": 0.014966629547095779,
+        "samples": [
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the task threshold using ACS person-level survey features.",
+            "feature_id": 0,
+            "score": 0.88,
+            "rationale": "Age is a broadly stable socioeconomic predictor of income across states, reflecting career stage, experience, and retirement effects rather than geography-specific artifacts.",
+            "feature": "AGEP"
+          },
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the ACS task threshold using demographic and household survey features.",
+            "feature_id": 0,
+            "score": 0.86,
+            "rationale": "Age is a strong, broadly stable predictor of income across states because it proxies labor-market experience and life stage rather than local geography; it is not a brittle shortcut, though the relationship is nonlinear and can vary somewhat by population mix.",
+            "feature": "AGEP"
+          },
+          {
+            "task_summary": "Predict whether an individual's income exceeds the ACS task threshold using demographic and household survey features.",
+            "feature_id": 0,
+            "score": 0.88,
+            "rationale": "Age is a broadly stable predictor of income across states because it tracks labor-market experience, career stage, and retirement, with relatively little dependence on geography or survey artifacts.",
+            "feature": "AGEP"
+          },
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the ACS task threshold using demographic and household survey features.",
+            "feature_id": 0,
+            "score": 0.9,
+            "rationale": "Age is a strong, broadly stable predictor of income because earnings typically rise with work experience and then plateau, and this relationship should generalize reasonably well across states without relying on geography-specific artifacts.",
+            "feature": "AGEP"
+          },
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the ACS income threshold using demographic and household survey features.",
+            "feature_id": 0,
+            "score": 0.9,
+            "rationale": "Age is a strong, broadly stable predictor of income across states because it captures life-cycle earnings patterns, labor-market attachment, and retirement effects without relying on geography or state-specific artifacts.",
+            "feature": "AGEP"
+          }
+        ]
+      },
+      {
+        "feature_id": 1,
+        "feature": "COW",
+        "score_mean": 0.626,
+        "score_std": 0.05425863986500212,
+        "samples": [
+          {
+            "task_summary": "Predict whether an individual’s annual income exceeds the ACS task threshold using household and personal attributes.",
+            "feature_id": 1,
+            "score": 0.62,
+            "rationale": "Class of worker is a reasonably stable proxy for income level because employment sector and self-employment status often correlate with pay across states, but it is only moderately predictive and can shift with local labor-market composition and state-specific public-sector prevalence.",
+            "feature": "COW"
+          },
+          {
+            "task_summary": "Predict whether an individual's income exceeds the ACS task threshold using demographic and employment-related survey features.",
+            "feature_id": 1,
+            "score": 0.55,
+            "rationale": "Class of worker is moderately useful because employment type is broadly related to income across states, but it is only an indirect proxy and can vary with local labor-market composition and sector mix, making it less stable than core human-capital features.",
+            "feature": "COW"
+          },
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the ACS task threshold using survey features.",
+            "feature_id": 1,
+            "score": 0.72,
+            "rationale": "Class of worker is a broadly meaningful labor-market signal that is likely to generalize across states, since employment type correlates with income in a stable way. It is less brittle than geography-linked variables, though some state-specific public-sector or industry mix differences may still affect it.",
+            "feature": "COW"
+          },
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the ACS income threshold from demographic, employment, and household attributes.",
+            "feature_id": 1,
+            "score": 0.62,
+            "rationale": "Employment class is generally informative for income and should transfer reasonably across states, since private, government, self-employed, and unpaid family work reflect stable labor-market differences. It is less brittle than geography-linked variables, but still partly proxies occupation, industry, and local labor structure, so it should be useful without being overly dominant.",
+            "feature": "COW"
+          },
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the ACS task threshold using demographic and employment-related survey features.",
+            "feature_id": 1,
+            "score": 0.62,
+            "rationale": "Class of worker is a reasonably stable labor-market signal across states, since private, government, and self-employment status often correlate with earnings. It is less likely than geography or state-specific policy variables to encode brittle shortcuts, though its predictive power is only moderate and can vary with local industry mix.",
+            "feature": "COW"
+          }
+        ]
+      },
+      {
+        "feature_id": 2,
+        "feature": "SCHL",
+        "score_mean": 0.918,
+        "score_std": 0.00979795897113272,
+        "samples": [
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the ACS task threshold using survey features.",
+            "feature_id": 2,
+            "score": 0.9,
+            "rationale": "Educational attainment is a strong, broadly stable predictor of income across states and is less likely than geography or local labor-market proxies to be a brittle shortcut.",
+            "feature": "SCHL"
+          },
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the ACS task threshold using demographic and socioeconomic survey features.",
+            "feature_id": 2,
+            "score": 0.92,
+            "rationale": "Educational attainment is a broadly stable, causally related predictor of income across states and over time, with strong semantic meaning and limited reliance on geography-specific artifacts.",
+            "feature": "SCHL"
+          },
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the ACS task threshold using demographic and household survey features.",
+            "feature_id": 2,
+            "score": 0.92,
+            "rationale": "Educational attainment is a strong, broadly stable predictor of income across states and is less likely than geography or local labor-market proxies to be a brittle shortcut.",
+            "feature": "SCHL"
+          },
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the ACS income threshold from demographic and household survey features.",
+            "feature_id": 2,
+            "score": 0.92,
+            "rationale": "Educational attainment is a strong, broadly stable predictor of income across states and is semantically linked to earnings potential rather than geography-specific artifacts, so it should generalize well.",
+            "feature": "SCHL"
+          },
+          {
+            "task_summary": "Predict whether an adult’s income exceeds the ACS task threshold using demographic and household survey features.",
+            "feature_id": 2,
+            "score": 0.93,
+            "rationale": "Educational attainment is a strong, broadly stable predictor of income across states and reflects durable human capital rather than a geography-specific shortcut.",
+            "feature": "SCHL"
+          }
+        ]
+      },
+      {
+        "feature_id": 3,
+        "feature": "MAR",
+        "score_mean": 0.708,
+        "score_std": 0.05153639490690051,
+        "samples": [
+          {
+            "task_summary": "Predict whether an individual’s annual income exceeds the ACS threshold using survey features from the current year.",
+            "feature_id": 3,
+            "score": 0.62,
+            "rationale": "Marital status is a broadly stable socioeconomic correlate of income across states, reflecting household structure and life stage rather than local geography; it can help predict earnings, but it is only moderately informative and may vary with age and demographic composition.",
+            "feature": "MAR"
+          },
+          {
+            "task_summary": "Predict whether an individual’s annual income exceeds the ACS task threshold using demographic and household survey features.",
+            "feature_id": 3,
+            "score": 0.78,
+            "rationale": "Marital status is a broadly stable socioeconomic signal that often correlates with age, household structure, and labor-market attachment across states, so it should generalize reasonably well; it is not a direct geographic shortcut, though its predictive strength may vary somewhat by population composition.",
+            "feature": "MAR"
+          },
+          {
+            "task_summary": "Predict whether an individual’s annual income exceeds the ACS task threshold using demographic and household survey features.",
+            "feature_id": 3,
+            "score": 0.7,
+            "rationale": "Marital status is a broadly stable socioeconomic correlate of income across states, reflecting household formation, dual-earner status, and life stage. It is not a geography-specific artifact, though its predictive strength is moderate and can vary with age and other demographics.",
+            "feature": "MAR"
+          },
+          {
+            "task_summary": "Predict whether an individual’s annual income exceeds $50,000 from ACS demographic and household features.",
+            "feature_id": 3,
+            "score": 0.72,
+            "rationale": "Marital status is a fairly stable socioeconomic signal across states and is often predictive of income through household structure, dual-earner effects, and life stage, while being less geography-specific than many other ACS variables.",
+            "feature": "MAR"
+          },
+          {
+            "task_summary": "Predict whether an individual’s annual income exceeds $50,000 from ACS survey features.",
+            "feature_id": 3,
+            "score": 0.72,
+            "rationale": "Marital status is a broadly stable socioeconomic signal that often correlates with age, household structure, and labor-market attachment, so it can help predict income across states without being a direct geography shortcut.",
+            "feature": "MAR"
+          }
+        ]
+      },
+      {
+        "feature_id": 4,
+        "feature": "OCCP",
+        "score_mean": 0.876,
+        "score_std": 0.014966629547095779,
+        "samples": [
+          {
+            "task_summary": "Predict whether an individual’s income exceeds $50K from ACS survey features.",
+            "feature_id": 4,
+            "score": 0.86,
+            "rationale": "Occupation is a strong, semantically meaningful proxy for earnings that should generalize reasonably across states, though detailed codes can still reflect local labor-market composition and some state-specific occupational mix.",
+            "feature": "OCCP"
+          },
+          {
+            "task_summary": "Predict whether an individual's income exceeds the ACS threshold from survey features.",
+            "feature_id": 4,
+            "score": 0.88,
+            "rationale": "Occupation is a strong, semantically meaningful driver of income and tends to generalize across states better than geography or local artifacts, though detailed codes can still reflect regional labor-market composition and some occupation-income relationships may shift over time.",
+            "feature": "OCCP"
+          },
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the ACS threshold using demographic and employment-related survey features.",
+            "feature_id": 4,
+            "score": 0.86,
+            "rationale": "Occupation is a strong, semantically meaningful proxy for earnings and tends to generalize across states better than geography- or policy-linked variables, though detailed codes can still reflect local labor-market composition and some occupation-income noise.",
+            "feature": "OCCP"
+          },
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the ACS threshold using person-level survey features.",
+            "feature_id": 4,
+            "score": 0.88,
+            "rationale": "Occupation is a strong, semantically meaningful predictor of income and tends to generalize across states better than geography- or state-specific proxies, though detailed codes can still reflect local labor-market composition and some instability.",
+            "feature": "OCCP"
+          },
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the ACS task threshold using demographic and socioeconomic survey features.",
+            "feature_id": 4,
+            "score": 0.9,
+            "rationale": "Occupation is a strong, semantically meaningful proxy for earnings and tends to generalize well across states, though detailed category distributions can vary somewhat by local labor markets.",
+            "feature": "OCCP"
+          }
+        ]
+      },
+      {
+        "feature_id": 5,
+        "feature": "POBP",
+        "score_mean": 0.088,
+        "score_std": 0.015999999999999997,
+        "samples": [
+          {
+            "task_summary": "Predict whether an adult’s income exceeds $50K from ACS household and person attributes.",
+            "feature_id": 5,
+            "score": 0.08,
+            "rationale": "Birthplace can correlate with income through broad immigration and nativity patterns, but it is a sensitive proxy for ethnicity/geography and is likely to be brittle across states and populations, so it should have low stable importance.",
+            "feature": "POBP"
+          },
+          {
+            "task_summary": "Predict whether an adult’s income exceeds the ACS threshold using survey and demographic features from the current year’s household record.",
+            "feature_id": 5,
+            "score": 0.08,
+            "rationale": "Place of birth can correlate with income through broad immigration and nativity patterns, but it is a weak, highly indirect proxy and often captures geography, ethnicity, and state-specific population mix rather than stable causal signal for cross-state generalization.",
+            "feature": "POBP"
+          },
+          {
+            "task_summary": "Predict whether an adult’s income exceeds the ACS threshold, using survey features from the current household and person record.",
+            "feature_id": 5,
+            "score": 0.08,
+            "rationale": "Place of birth can correlate with income through broad migration and nativity patterns, but it is a weak and brittle proxy that often reflects geography, immigration composition, and state-specific demographics rather than a stable causal relationship, so it should be heavily downweighted.",
+            "feature": "POBP"
+          },
+          {
+            "task_summary": "Predict whether an adult's income exceeds $50K from ACS survey features.",
+            "feature_id": 5,
+            "score": 0.12,
+            "rationale": "Place of birth can correlate with income through long-run socioeconomic factors, but it is a weak and brittle proxy that often captures geography, immigration status, and state-specific composition rather than stable causal signal, so it should be heavily downweighted for cross-state generalization.",
+            "feature": "POBP"
+          },
+          {
+            "task_summary": "Predict whether an adult’s income exceeds the ACS threshold in the Folktables acsincome task.",
+            "feature_id": 5,
+            "score": 0.08,
+            "rationale": "Place of birth can correlate with income through broad migration and nativity patterns, but it is a weak and brittle proxy that often reflects geography, ethnicity, and state-specific composition rather than stable causal drivers of earnings.",
+            "feature": "POBP"
+          }
+        ]
+      },
+      {
+        "feature_id": 6,
+        "feature": "RELP",
+        "score_mean": 0.228,
+        "score_std": 0.05878775382679628,
+        "samples": [
+          {
+            "task_summary": "Predict whether an adult's income exceeds the ACS threshold using household and demographic survey features.",
+            "feature_id": 6,
+            "score": 0.18,
+            "rationale": "Household relationship can correlate with income through broad life-stage and household-structure patterns, but it is a weak and potentially brittle proxy that varies across states and local housing markets, so its stable marginal usefulness is limited.",
+            "feature": "RELP"
+          },
+          {
+            "task_summary": "Predict whether an individual’s annual income exceeds $50,000 from ACS survey features.",
+            "feature_id": 6,
+            "score": 0.34,
+            "rationale": "Household relationship can reflect broad life-stage and household-structure patterns that are somewhat predictive of income, but it is also strongly tied to demographics, family composition, and state-specific housing patterns, making it a relatively brittle proxy rather than a stable causal signal.",
+            "feature": "RELP"
+          },
+          {
+            "task_summary": "Predict whether an adult's income exceeds the ACS threshold using household and demographic survey features.",
+            "feature_id": 6,
+            "score": 0.22,
+            "rationale": "Household relationship can correlate with income through stable life-stage patterns, but it is a weak and potentially brittle proxy that varies with family structure, age composition, and state-specific household demographics rather than directly reflecting earning capacity.",
+            "feature": "RELP"
+          },
+          {
+            "task_summary": "Predict whether an individual’s annual income exceeds the ACS threshold using survey and household attributes.",
+            "feature_id": 6,
+            "score": 0.22,
+            "rationale": "Household relationship can correlate with age, family stage, and living arrangement, which are mildly informative for income, but it is also a demographic/household-structure proxy that varies across states and populations and is not a stable direct driver of earnings.",
+            "feature": "RELP"
+          },
+          {
+            "task_summary": "Predict whether an individual’s annual income exceeds $50,000 from ACS survey features.",
+            "feature_id": 6,
+            "score": 0.18,
+            "rationale": "Household relationship can weakly proxy age, marital/family status, and household composition, which relate to income, but it is not a direct economic signal and can vary substantially across states and household structures, making it a brittle shortcut.",
+            "feature": "RELP"
+          }
+        ]
+      },
+      {
+        "feature_id": 7,
+        "feature": "WKHP",
+        "score_mean": 0.92,
+        "score_std": 0.016733200530681485,
+        "samples": [
+          {
+            "task_summary": "Predict whether an individual's annual income exceeds $50,000 from ACS survey features.",
+            "feature_id": 7,
+            "score": 0.92,
+            "rationale": "Usual weekly hours worked is a direct, broadly stable proxy for labor supply and job attachment, which strongly relates to annual income across states without relying on geography or brittle local artifacts.",
+            "feature": "WKHP"
+          },
+          {
+            "task_summary": "Predict whether an individual’s household income exceeds the task threshold from ACS survey features.",
+            "feature_id": 7,
+            "score": 0.91,
+            "rationale": "Usual weekly hours worked is a direct, broadly stable proxy for labor supply and earnings potential across states, with strong semantic relevance to income and little reliance on geography-specific artifacts.",
+            "feature": "WKHP"
+          },
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the ACS task threshold using demographic and employment-related survey features.",
+            "feature_id": 7,
+            "score": 0.95,
+            "rationale": "Usual weekly hours worked is a direct, semantically stable indicator of labor supply and earnings potential across states, with strong predictive value and little reliance on geography or brittle local artifacts.",
+            "feature": "WKHP"
+          },
+          {
+            "task_summary": "Predict whether an individual's annual income exceeds the ACS task threshold using survey and demographic features.",
+            "feature_id": 7,
+            "score": 0.92,
+            "rationale": "Usual weekly hours worked is a direct, broadly causal driver of annual earnings and should remain predictive across states with relatively stable semantics, with little risk of geography-specific leakage.",
+            "feature": "WKHP"
+          },
+          {
+            "task_summary": "Predict whether an individual’s annual income exceeds the ACS threshold using demographic and employment-related survey features.",
+            "feature_id": 7,
+            "score": 0.9,
+            "rationale": "Usual weekly hours worked is a direct, broadly stable proxy for labor supply and earnings across states, making it strongly predictive of income without relying on geography or state-specific artifacts.",
+            "feature": "WKHP"
+          }
+        ]
+      },
+      {
+        "feature_id": 8,
+        "feature": "SEX",
+        "score_mean": 0.208,
+        "score_std": 0.03919183588453086,
+        "samples": [
+          {
+            "task_summary": "Predict whether an individual’s annual income exceeds the ACS threshold using demographic, education, and employment-related survey features.",
+            "feature_id": 8,
+            "score": 0.18,
+            "rationale": "Sex can correlate with income through broad labor-market patterns and occupational sorting, but it is a sensitive attribute and a relatively weak, non-causal shortcut that may vary across states and subpopulations, so it should receive low stable importance.",
+            "feature": "SEX"
+          },
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the ACS task threshold using demographic and household survey features.",
+            "feature_id": 8,
+            "score": 0.22,
+            "rationale": "Sex can have a modest, broadly stable association with income through persistent labor-market patterns, but it is a sensitive attribute and a weak proxy that should be downweighted because much of its predictive signal is indirect and may reflect structural bias rather than portable semantics.",
+            "feature": "SEX"
+          },
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the ACS threshold for the acsincome task.",
+            "feature_id": 8,
+            "score": 0.18,
+            "rationale": "Sex can correlate with income through broad labor-market and occupation patterns, but it is a sensitive attribute and its relationship is mediated by changing social and policy context, making it only weakly and inconsistently useful for stable cross-state generalization.",
+            "feature": "SEX"
+          },
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the ACS income threshold using demographic, education, and work-related survey features.",
+            "feature_id": 8,
+            "score": 0.18,
+            "rationale": "Sex can correlate with income through persistent labor-market patterns, so it has some predictive value, but it is a sensitive demographic attribute and its relationship to income is not a stable causal signal across states or subpopulations, making it a weak prior feature for OOD generalization.",
+            "feature": "SEX"
+          },
+          {
+            "task_summary": "Predict whether an individual’s income exceeds the ACS threshold using demographic, education, and employment-related survey features.",
+            "feature_id": 8,
+            "score": 0.28,
+            "rationale": "Sex can correlate with income through broad labor-market patterns that often persist across states, but it is a sensitive attribute and a weak, non-causal proxy that risks encoding historical inequities rather than stable task-relevant signal.",
+            "feature": "SEX"
+          }
+        ]
+      },
+      {
+        "feature_id": 9,
+        "feature": "RAC1P",
+        "score_mean": 0.124,
+        "score_std": 0.031999999999999994,
+        "samples": [
+          {
+            "task_summary": "Predict whether an individual’s annual income exceeds $50,000 from ACS survey features.",
+            "feature_id": 9,
+            "score": 0.12,
+            "rationale": "Race can correlate with income through broad structural inequalities, but it is a sensitive attribute and often acts as a shortcut that may not transfer stably across states; it is useful only weakly and with substantial risk of encoding demographic bias rather than robust signal.",
+            "feature": "RAC1P"
+          },
+          {
+            "task_summary": "Predict whether an individual’s annual income exceeds $50,000 from ACS PUMS survey features.",
+            "feature_id": 9,
+            "score": 0.08,
+            "rationale": "Race can correlate with income through structural inequities, but it is a sensitive attribute and a brittle shortcut that is not semantically causal or reliably stable across states; it should be heavily downweighted for out-of-distribution generalization.",
+            "feature": "RAC1P"
+          },
+          {
+            "task_summary": "Predict whether an individual’s annual income exceeds $50,000 from ACS person-level survey features.",
+            "feature_id": 9,
+            "score": 0.18,
+            "rationale": "Race can correlate with income through persistent structural inequalities, but it is a sensitive attribute and often acts as a demographic shortcut that may shift across states; its predictive signal is therefore limited and not reliably stable for out-of-distribution generalization.",
+            "feature": "RAC1P"
+          },
+          {
+            "task_summary": "Predict whether an individual’s annual income exceeds $50,000 from ACS survey features.",
+            "feature_id": 9,
+            "score": 0.12,
+            "rationale": "Race can correlate with income through persistent structural inequities, but it is a sensitive attribute and a brittle shortcut that may not generalize well across states or policy contexts; it is less semantically stable than occupation, education, or work-related features.",
+            "feature": "RAC1P"
+          },
+          {
+            "task_summary": "Predict whether an individual’s annual income exceeds the ACS threshold using demographic and household survey features.",
+            "feature_id": 9,
+            "score": 0.12,
+            "rationale": "Race can correlate with income through persistent structural inequality, but it is a sensitive attribute and a brittle shortcut that may shift across states and populations, so it has limited stable marginal usefulness for OOD generalization.",
+            "feature": "RAC1P"
+          }
+        ]
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "feature_id": 0,
+      "feature": "AGEP",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"AGEP\",\n  \"type\": \"integer\",\n  \"description\": \"Age of the person in years.\",\n  \"values\": \"ACS age code; older ages may be topcoded.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual’s income exceeds the task threshold using ACS person-level survey features.\",\"feature_id\":0,\"score\":0.88,\"rationale\":\"Age is a broadly stable socioeconomic predictor of income across states, reflecting career stage, experience, and retirement effects rather than geography-specific artifacts.\"}",
+      "input_tokens": 297,
+      "output_tokens": 67,
+      "total_tokens": 364,
+      "response_id": "resp_0e7ae0f9324b3553006a27c1b16b7c8198953faba916559f57",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 0,
+      "feature": "AGEP",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"AGEP\",\n  \"type\": \"integer\",\n  \"description\": \"Age of the person in years.\",\n  \"values\": \"ACS age code; older ages may be topcoded.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s income exceeds the ACS task threshold using demographic and household survey features.\",\n  \"feature_id\": 0,\n  \"score\": 0.86,\n  \"rationale\": \"Age is a strong, broadly stable predictor of income across states because it proxies labor-market experience and life stage rather than local geography; it is not a brittle shortcut, though the relationship is nonlinear and can vary somewhat by population mix.\"\n}",
+      "input_tokens": 297,
+      "output_tokens": 99,
+      "total_tokens": 396,
+      "response_id": "resp_0abe9010daf78f09006a27c1b32d88819a8d05dbe74bfddd06",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 0,
+      "feature": "AGEP",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"AGEP\",\n  \"type\": \"integer\",\n  \"description\": \"Age of the person in years.\",\n  \"values\": \"ACS age code; older ages may be topcoded.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual's income exceeds the ACS task threshold using demographic and household survey features.\",\n  \"feature_id\": 0,\n  \"score\": 0.88,\n  \"rationale\": \"Age is a broadly stable predictor of income across states because it tracks labor-market experience, career stage, and retirement, with relatively little dependence on geography or survey artifacts.\"\n}",
+      "input_tokens": 297,
+      "output_tokens": 85,
+      "total_tokens": 382,
+      "response_id": "resp_084750cdbe452f9d006a27c1b4c6dc819a90c3ae4b794fd97a",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 0,
+      "feature": "AGEP",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"AGEP\",\n  \"type\": \"integer\",\n  \"description\": \"Age of the person in years.\",\n  \"values\": \"ACS age code; older ages may be topcoded.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual’s income exceeds the ACS task threshold using demographic and household survey features.\",\"feature_id\":0,\"score\":0.9,\"rationale\":\"Age is a strong, broadly stable predictor of income because earnings typically rise with work experience and then plateau, and this relationship should generalize reasonably well across states without relying on geography-specific artifacts.\"}",
+      "input_tokens": 297,
+      "output_tokens": 85,
+      "total_tokens": 382,
+      "response_id": "resp_09005a3751f6df36006a27c1b6975c819bb55bae9633d88094",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 0,
+      "feature": "AGEP",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"AGEP\",\n  \"type\": \"integer\",\n  \"description\": \"Age of the person in years.\",\n  \"values\": \"ACS age code; older ages may be topcoded.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s income exceeds the ACS income threshold using demographic and household survey features.\",\n  \"feature_id\": 0,\n  \"score\": 0.9,\n  \"rationale\": \"Age is a strong, broadly stable predictor of income across states because it captures life-cycle earnings patterns, labor-market attachment, and retirement effects without relying on geography or state-specific artifacts.\"\n}",
+      "input_tokens": 297,
+      "output_tokens": 89,
+      "total_tokens": 386,
+      "response_id": "resp_0a11c27e8a5b653c006a27c1b9dc6c8198880785712b28ada7",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 1,
+      "feature": "COW",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"COW\",\n  \"type\": \"categorical\",\n  \"description\": \"Class of worker.\",\n  \"values\": \"ACS employment class code, such as private, government, self-employed, or unpaid family worker.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s annual income exceeds the ACS task threshold using household and personal attributes.\",\n  \"feature_id\": 1,\n  \"score\": 0.62,\n  \"rationale\": \"Class of worker is a reasonably stable proxy for income level because employment sector and self-employment status often correlate with pay across states, but it is only moderately predictive and can shift with local labor-market composition and state-specific public-sector prevalence.\"\n}",
+      "input_tokens": 303,
+      "output_tokens": 106,
+      "total_tokens": 409,
+      "response_id": "resp_03283b1101d03485006a27c1bb5a34819bb51ba9442731ae44",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 1,
+      "feature": "COW",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"COW\",\n  \"type\": \"categorical\",\n  \"description\": \"Class of worker.\",\n  \"values\": \"ACS employment class code, such as private, government, self-employed, or unpaid family worker.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual's income exceeds the ACS task threshold using demographic and employment-related survey features.\",\n  \"feature_id\": 1,\n  \"score\": 0.55,\n  \"rationale\": \"Class of worker is moderately useful because employment type is broadly related to income across states, but it is only an indirect proxy and can vary with local labor-market composition and sector mix, making it less stable than core human-capital features.\"\n}",
+      "input_tokens": 303,
+      "output_tokens": 106,
+      "total_tokens": 409,
+      "response_id": "resp_0659409e0ef0e413006a27c1bdd21881998cca8ed5ccc7bc54",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 1,
+      "feature": "COW",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"COW\",\n  \"type\": \"categorical\",\n  \"description\": \"Class of worker.\",\n  \"values\": \"ACS employment class code, such as private, government, self-employed, or unpaid family worker.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s income exceeds the ACS task threshold using survey features.\",\n  \"feature_id\": 1,\n  \"score\": 0.72,\n  \"rationale\": \"Class of worker is a broadly meaningful labor-market signal that is likely to generalize across states, since employment type correlates with income in a stable way. It is less brittle than geography-linked variables, though some state-specific public-sector or industry mix differences may still affect it.\"\n}",
+      "input_tokens": 303,
+      "output_tokens": 105,
+      "total_tokens": 408,
+      "response_id": "resp_00f7274aa45e7b3e006a27c1bf86c4819ba7e790a1f7ced514",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 1,
+      "feature": "COW",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"COW\",\n  \"type\": \"categorical\",\n  \"description\": \"Class of worker.\",\n  \"values\": \"ACS employment class code, such as private, government, self-employed, or unpaid family worker.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s income exceeds the ACS income threshold from demographic, employment, and household attributes.\",\n  \"feature_id\": 1,\n  \"score\": 0.62,\n  \"rationale\": \"Employment class is generally informative for income and should transfer reasonably across states, since private, government, self-employed, and unpaid family work reflect stable labor-market differences. It is less brittle than geography-linked variables, but still partly proxies occupation, industry, and local labor structure, so it should be useful without being overly dominant.\"\n}",
+      "input_tokens": 303,
+      "output_tokens": 119,
+      "total_tokens": 422,
+      "response_id": "resp_08883a00be353eca006a27c1c10cbc819bb5a4e99884c663bb",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 1,
+      "feature": "COW",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"COW\",\n  \"type\": \"categorical\",\n  \"description\": \"Class of worker.\",\n  \"values\": \"ACS employment class code, such as private, government, self-employed, or unpaid family worker.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s income exceeds the ACS task threshold using demographic and employment-related survey features.\",\n  \"feature_id\": 1,\n  \"score\": 0.62,\n  \"rationale\": \"Class of worker is a reasonably stable labor-market signal across states, since private, government, and self-employment status often correlate with earnings. It is less likely than geography or state-specific policy variables to encode brittle shortcuts, though its predictive power is only moderate and can vary with local industry mix.\"\n}",
+      "input_tokens": 303,
+      "output_tokens": 113,
+      "total_tokens": 416,
+      "response_id": "resp_0df9b3c0fb54dbf3006a27c1c2bc048199be897c0106c435cb",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 2,
+      "feature": "SCHL",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"SCHL\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Educational attainment.\",\n  \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s income exceeds the ACS task threshold using survey features.\",\n  \"feature_id\": 2,\n  \"score\": 0.9,\n  \"rationale\": \"Educational attainment is a strong, broadly stable predictor of income across states and is less likely than geography or local labor-market proxies to be a brittle shortcut.\"\n}",
+      "input_tokens": 296,
+      "output_tokens": 80,
+      "total_tokens": 376,
+      "response_id": "resp_0353539903db65e6006a27c1c65644819b9b2577d143fa1e9b",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 2,
+      "feature": "SCHL",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"SCHL\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Educational attainment.\",\n  \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s income exceeds the ACS task threshold using demographic and socioeconomic survey features.\",\n  \"feature_id\": 2,\n  \"score\": 0.92,\n  \"rationale\": \"Educational attainment is a broadly stable, causally related predictor of income across states and over time, with strong semantic meaning and limited reliance on geography-specific artifacts.\"\n}",
+      "input_tokens": 296,
+      "output_tokens": 84,
+      "total_tokens": 380,
+      "response_id": "resp_0d4505f48ecd1672006a27c1c80198819a845b817d50daa2b9",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 2,
+      "feature": "SCHL",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"SCHL\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Educational attainment.\",\n  \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual’s income exceeds the ACS task threshold using demographic and household survey features.\",\"feature_id\":2,\"score\":0.92,\"rationale\":\"Educational attainment is a strong, broadly stable predictor of income across states and is less likely than geography or local labor-market proxies to be a brittle shortcut.\"}",
+      "input_tokens": 296,
+      "output_tokens": 77,
+      "total_tokens": 373,
+      "response_id": "resp_0df4caf01f094693006a27c1caa64881998ab4148744b0d77f",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 2,
+      "feature": "SCHL",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"SCHL\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Educational attainment.\",\n  \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s income exceeds the ACS income threshold from demographic and household survey features.\",\n  \"feature_id\": 2,\n  \"score\": 0.92,\n  \"rationale\": \"Educational attainment is a strong, broadly stable predictor of income across states and is semantically linked to earnings potential rather than geography-specific artifacts, so it should generalize well.\"\n}",
+      "input_tokens": 296,
+      "output_tokens": 87,
+      "total_tokens": 383,
+      "response_id": "resp_0c05a17463902de7006a27c1cc596c819a90d031b2cf00d82c",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 2,
+      "feature": "SCHL",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"SCHL\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Educational attainment.\",\n  \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult’s income exceeds the ACS task threshold using demographic and household survey features.\",\"feature_id\":2,\"score\":0.93,\"rationale\":\"Educational attainment is a strong, broadly stable predictor of income across states and reflects durable human capital rather than a geography-specific shortcut.\"}",
+      "input_tokens": 296,
+      "output_tokens": 72,
+      "total_tokens": 368,
+      "response_id": "resp_0b84dbfa38535752006a27c1ce003081998486b06f3727f5d5",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 3,
+      "feature": "MAR",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"MAR\",\n  \"type\": \"categorical\",\n  \"description\": \"Marital status.\",\n  \"values\": \"ACS marital status code.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s annual income exceeds the ACS threshold using survey features from the current year.\",\n  \"feature_id\": 3,\n  \"score\": 0.62,\n  \"rationale\": \"Marital status is a broadly stable socioeconomic correlate of income across states, reflecting household structure and life stage rather than local geography; it can help predict earnings, but it is only moderately informative and may vary with age and demographic composition.\"\n}",
+      "input_tokens": 288,
+      "output_tokens": 106,
+      "total_tokens": 394,
+      "response_id": "resp_0f789dc71dc6987c006a27c1cfd88c819989d1d774687c5a45",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 3,
+      "feature": "MAR",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"MAR\",\n  \"type\": \"categorical\",\n  \"description\": \"Marital status.\",\n  \"values\": \"ACS marital status code.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual’s annual income exceeds the ACS task threshold using demographic and household survey features.\",\"feature_id\":3,\"score\":0.78,\"rationale\":\"Marital status is a broadly stable socioeconomic signal that often correlates with age, household structure, and labor-market attachment across states, so it should generalize reasonably well; it is not a direct geographic shortcut, though its predictive strength may vary somewhat by population composition.\"}",
+      "input_tokens": 288,
+      "output_tokens": 101,
+      "total_tokens": 389,
+      "response_id": "resp_024252074fef12bc006a27c1d1c7b481988f6da46a91be9f4c",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 3,
+      "feature": "MAR",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"MAR\",\n  \"type\": \"categorical\",\n  \"description\": \"Marital status.\",\n  \"values\": \"ACS marital status code.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s annual income exceeds the ACS task threshold using demographic and household survey features.\",\n  \"feature_id\": 3,\n  \"score\": 0.7,\n  \"rationale\": \"Marital status is a broadly stable socioeconomic correlate of income across states, reflecting household formation, dual-earner status, and life stage. It is not a geography-specific artifact, though its predictive strength is moderate and can vary with age and other demographics.\"\n}",
+      "input_tokens": 288,
+      "output_tokens": 110,
+      "total_tokens": 398,
+      "response_id": "resp_0d0de78b9f577250006a27c1d42c70819893326f83a128ee09",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 3,
+      "feature": "MAR",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"MAR\",\n  \"type\": \"categorical\",\n  \"description\": \"Marital status.\",\n  \"values\": \"ACS marital status code.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s annual income exceeds $50,000 from ACS demographic and household features.\",\n  \"feature_id\": 3,\n  \"score\": 0.72,\n  \"rationale\": \"Marital status is a fairly stable socioeconomic signal across states and is often predictive of income through household structure, dual-earner effects, and life stage, while being less geography-specific than many other ACS variables.\"\n}",
+      "input_tokens": 288,
+      "output_tokens": 101,
+      "total_tokens": 389,
+      "response_id": "resp_05d686341674712d006a27c1d60bfc819aab71c4d98e481082",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 3,
+      "feature": "MAR",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"MAR\",\n  \"type\": \"categorical\",\n  \"description\": \"Marital status.\",\n  \"values\": \"ACS marital status code.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s annual income exceeds $50,000 from ACS survey features.\",\n  \"feature_id\": 3,\n  \"score\": 0.72,\n  \"rationale\": \"Marital status is a broadly stable socioeconomic signal that often correlates with age, household structure, and labor-market attachment, so it can help predict income across states without being a direct geography shortcut.\"\n}",
+      "input_tokens": 288,
+      "output_tokens": 97,
+      "total_tokens": 385,
+      "response_id": "resp_0ab74e6695775447006a27c1dc01b88199af4214fc4e762544",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 4,
+      "feature": "OCCP",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"OCCP\",\n  \"type\": \"categorical\",\n  \"description\": \"Occupation code.\",\n  \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual’s income exceeds $50K from ACS survey features.\",\"feature_id\":4,\"score\":0.86,\"rationale\":\"Occupation is a strong, semantically meaningful proxy for earnings that should generalize reasonably across states, though detailed codes can still reflect local labor-market composition and some state-specific occupational mix.\"}",
+      "input_tokens": 293,
+      "output_tokens": 74,
+      "total_tokens": 367,
+      "response_id": "resp_0f1864e64fc9cec8006a27c1ddba8c819bb0b3550cb9368437",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 4,
+      "feature": "OCCP",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"OCCP\",\n  \"type\": \"categorical\",\n  \"description\": \"Occupation code.\",\n  \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual's income exceeds the ACS threshold from survey features.\",\n  \"feature_id\": 4,\n  \"score\": 0.88,\n  \"rationale\": \"Occupation is a strong, semantically meaningful driver of income and tends to generalize across states better than geography or local artifacts, though detailed codes can still reflect regional labor-market composition and some occupation-income relationships may shift over time.\"\n}",
+      "input_tokens": 293,
+      "output_tokens": 99,
+      "total_tokens": 392,
+      "response_id": "resp_0550c6a727d45fa2006a27c1e0907c819991e5c9323ef93d28",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 4,
+      "feature": "OCCP",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"OCCP\",\n  \"type\": \"categorical\",\n  \"description\": \"Occupation code.\",\n  \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual’s income exceeds the ACS threshold using demographic and employment-related survey features.\",\"feature_id\":4,\"score\":0.86,\"rationale\":\"Occupation is a strong, semantically meaningful proxy for earnings and tends to generalize across states better than geography- or policy-linked variables, though detailed codes can still reflect local labor-market composition and some occupation-income noise.\"}",
+      "input_tokens": 293,
+      "output_tokens": 84,
+      "total_tokens": 377,
+      "response_id": "resp_00331e0f1cd8c52a006a27c1e275348199b652cf52d8b1c9ce",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 4,
+      "feature": "OCCP",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"OCCP\",\n  \"type\": \"categorical\",\n  \"description\": \"Occupation code.\",\n  \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual’s income exceeds the ACS threshold using person-level survey features.\",\"feature_id\":4,\"score\":0.88,\"rationale\":\"Occupation is a strong, semantically meaningful predictor of income and tends to generalize across states better than geography- or state-specific proxies, though detailed codes can still reflect local labor-market composition and some instability.\"}",
+      "input_tokens": 293,
+      "output_tokens": 80,
+      "total_tokens": 373,
+      "response_id": "resp_0cd0eb20af866f55006a27c1e425c4819b858907c89bf07aaa",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 4,
+      "feature": "OCCP",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"OCCP\",\n  \"type\": \"categorical\",\n  \"description\": \"Occupation code.\",\n  \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s income exceeds the ACS task threshold using demographic and socioeconomic survey features.\",\n  \"feature_id\": 4,\n  \"score\": 0.9,\n  \"rationale\": \"Occupation is a strong, semantically meaningful proxy for earnings and tends to generalize well across states, though detailed category distributions can vary somewhat by local labor markets.\"\n}",
+      "input_tokens": 293,
+      "output_tokens": 85,
+      "total_tokens": 378,
+      "response_id": "resp_040de2b1a843b4a9006a27c1e5cbcc8198b0c17fae249adad0",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 5,
+      "feature": "POBP",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"POBP\",\n  \"type\": \"categorical\",\n  \"description\": \"Place of birth.\",\n  \"values\": \"Geographic birthplace recode.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult’s income exceeds $50K from ACS household and person attributes.\",\n  \"feature_id\": 5,\n  \"score\": 0.08,\n  \"rationale\": \"Birthplace can correlate with income through broad immigration and nativity patterns, but it is a sensitive proxy for ethnicity/geography and is likely to be brittle across states and populations, so it should have low stable importance.\"\n}",
+      "input_tokens": 290,
+      "output_tokens": 101,
+      "total_tokens": 391,
+      "response_id": "resp_00b557408fdcd69a006a27c1e77f6c819bad6aea9077addb09",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 5,
+      "feature": "POBP",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"POBP\",\n  \"type\": \"categorical\",\n  \"description\": \"Place of birth.\",\n  \"values\": \"Geographic birthplace recode.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult’s income exceeds the ACS threshold using survey and demographic features from the current year’s household record.\",\"feature_id\":5,\"score\":0.08,\"rationale\":\"Place of birth can correlate with income through broad immigration and nativity patterns, but it is a weak, highly indirect proxy and often captures geography, ethnicity, and state-specific population mix rather than stable causal signal for cross-state generalization.\"}",
+      "input_tokens": 290,
+      "output_tokens": 99,
+      "total_tokens": 389,
+      "response_id": "resp_0b77a6302c35c099006a27c1e938fc819898d823121a295291",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 5,
+      "feature": "POBP",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"POBP\",\n  \"type\": \"categorical\",\n  \"description\": \"Place of birth.\",\n  \"values\": \"Geographic birthplace recode.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult’s income exceeds the ACS threshold, using survey features from the current household and person record.\",\"feature_id\":5,\"score\":0.08,\"rationale\":\"Place of birth can correlate with income through broad migration and nativity patterns, but it is a weak and brittle proxy that often reflects geography, immigration composition, and state-specific demographics rather than a stable causal relationship, so it should be heavily downweighted.\"}",
+      "input_tokens": 290,
+      "output_tokens": 101,
+      "total_tokens": 391,
+      "response_id": "resp_0c39d7997ed25784006a27c1eaf24c819b95b18494f012195a",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 5,
+      "feature": "POBP",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"POBP\",\n  \"type\": \"categorical\",\n  \"description\": \"Place of birth.\",\n  \"values\": \"Geographic birthplace recode.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult's income exceeds $50K from ACS survey features.\",\n  \"feature_id\": 5,\n  \"score\": 0.12,\n  \"rationale\": \"Place of birth can correlate with income through long-run socioeconomic factors, but it is a weak and brittle proxy that often captures geography, immigration status, and state-specific composition rather than stable causal signal, so it should be heavily downweighted for cross-state generalization.\"\n}",
+      "input_tokens": 290,
+      "output_tokens": 108,
+      "total_tokens": 398,
+      "response_id": "resp_0f1a5697677b6d85006a27c1ecb090819b9ca871423773fce2",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 5,
+      "feature": "POBP",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"POBP\",\n  \"type\": \"categorical\",\n  \"description\": \"Place of birth.\",\n  \"values\": \"Geographic birthplace recode.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult’s income exceeds the ACS threshold in the Folktables acsincome task.\",\"feature_id\":5,\"score\":0.08,\"rationale\":\"Place of birth can correlate with income through broad migration and nativity patterns, but it is a weak and brittle proxy that often reflects geography, ethnicity, and state-specific composition rather than stable causal drivers of earnings.\"}",
+      "input_tokens": 290,
+      "output_tokens": 91,
+      "total_tokens": 381,
+      "response_id": "resp_042b5ef0f7530061006a27c1efaa308199b4b3b47798d22ac4",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 6,
+      "feature": "RELP",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"RELP\",\n  \"type\": \"categorical\",\n  \"description\": \"Relationship to householder.\",\n  \"values\": \"ACS household relationship code.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult's income exceeds the ACS threshold using household and demographic survey features.\",\n  \"feature_id\": 6,\n  \"score\": 0.18,\n  \"rationale\": \"Household relationship can correlate with income through broad life-stage and household-structure patterns, but it is a weak and potentially brittle proxy that varies across states and local housing markets, so its stable marginal usefulness is limited.\"\n}",
+      "input_tokens": 290,
+      "output_tokens": 101,
+      "total_tokens": 391,
+      "response_id": "resp_00fd1aa33f5ae366006a27c1f159108199b6129142902cfad0",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 6,
+      "feature": "RELP",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"RELP\",\n  \"type\": \"categorical\",\n  \"description\": \"Relationship to householder.\",\n  \"values\": \"ACS household relationship code.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s annual income exceeds $50,000 from ACS survey features.\",\n  \"feature_id\": 6,\n  \"score\": 0.34,\n  \"rationale\": \"Household relationship can reflect broad life-stage and household-structure patterns that are somewhat predictive of income, but it is also strongly tied to demographics, family composition, and state-specific housing patterns, making it a relatively brittle proxy rather than a stable causal signal.\"\n}",
+      "input_tokens": 290,
+      "output_tokens": 109,
+      "total_tokens": 399,
+      "response_id": "resp_04b0d20a2a372f07006a27c1f35bd4819aab18f233deb72901",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 6,
+      "feature": "RELP",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"RELP\",\n  \"type\": \"categorical\",\n  \"description\": \"Relationship to householder.\",\n  \"values\": \"ACS household relationship code.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult's income exceeds the ACS threshold using household and demographic survey features.\",\n  \"feature_id\": 6,\n  \"score\": 0.22,\n  \"rationale\": \"Household relationship can correlate with income through stable life-stage patterns, but it is a weak and potentially brittle proxy that varies with family structure, age composition, and state-specific household demographics rather than directly reflecting earning capacity.\"\n}",
+      "input_tokens": 290,
+      "output_tokens": 101,
+      "total_tokens": 391,
+      "response_id": "resp_0b954e74f2fe76c3006a27c1f5d5588199ab4ba64d56285b2f",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 6,
+      "feature": "RELP",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"RELP\",\n  \"type\": \"categorical\",\n  \"description\": \"Relationship to householder.\",\n  \"values\": \"ACS household relationship code.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual’s annual income exceeds the ACS threshold using survey and household attributes.\",\"feature_id\":6,\"score\":0.22,\"rationale\":\"Household relationship can correlate with age, family stage, and living arrangement, which are mildly informative for income, but it is also a demographic/household-structure proxy that varies across states and populations and is not a stable direct driver of earnings.\"}",
+      "input_tokens": 290,
+      "output_tokens": 96,
+      "total_tokens": 386,
+      "response_id": "resp_01a82b492a4c4349006a27c1f8a3c08198aeab79cb718f46a8",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 6,
+      "feature": "RELP",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"RELP\",\n  \"type\": \"categorical\",\n  \"description\": \"Relationship to householder.\",\n  \"values\": \"ACS household relationship code.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s annual income exceeds $50,000 from ACS survey features.\",\n  \"feature_id\": 6,\n  \"score\": 0.18,\n  \"rationale\": \"Household relationship can weakly proxy age, marital/family status, and household composition, which relate to income, but it is not a direct economic signal and can vary substantially across states and household structures, making it a brittle shortcut.\"\n}",
+      "input_tokens": 290,
+      "output_tokens": 105,
+      "total_tokens": 395,
+      "response_id": "resp_0da03e7d9680ccf7006a27c1fa8c7c819b99627515d2706d38",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 7,
+      "feature": "WKHP",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 7,\n  \"feature\": \"WKHP\",\n  \"type\": \"integer\",\n  \"description\": \"Usual hours worked per week during the past 12 months.\",\n  \"values\": \"0 or positive weekly work hours.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 7,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual's annual income exceeds $50,000 from ACS survey features.\",\n  \"feature_id\": 7,\n  \"score\": 0.92,\n  \"rationale\": \"Usual weekly hours worked is a direct, broadly stable proxy for labor supply and job attachment, which strongly relates to annual income across states without relying on geography or brittle local artifacts.\"\n}",
+      "input_tokens": 299,
+      "output_tokens": 87,
+      "total_tokens": 386,
+      "response_id": "resp_0eee81986a876ae4006a27c1fc11648199acd5fe6c5c6ae982",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 7,
+      "feature": "WKHP",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 7,\n  \"feature\": \"WKHP\",\n  \"type\": \"integer\",\n  \"description\": \"Usual hours worked per week during the past 12 months.\",\n  \"values\": \"0 or positive weekly work hours.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 7,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual’s household income exceeds the task threshold from ACS survey features.\",\"feature_id\":7,\"score\":0.91,\"rationale\":\"Usual weekly hours worked is a direct, broadly stable proxy for labor supply and earnings potential across states, with strong semantic relevance to income and little reliance on geography-specific artifacts.\"}",
+      "input_tokens": 299,
+      "output_tokens": 80,
+      "total_tokens": 379,
+      "response_id": "resp_0438dcf13c2f9c55006a27c1fd9628819aba82aafa851abe1c",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 7,
+      "feature": "WKHP",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 7,\n  \"feature\": \"WKHP\",\n  \"type\": \"integer\",\n  \"description\": \"Usual hours worked per week during the past 12 months.\",\n  \"values\": \"0 or positive weekly work hours.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 7,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual’s income exceeds the ACS task threshold using demographic and employment-related survey features.\",\"feature_id\":7,\"score\":0.95,\"rationale\":\"Usual weekly hours worked is a direct, semantically stable indicator of labor supply and earnings potential across states, with strong predictive value and little reliance on geography or brittle local artifacts.\"}",
+      "input_tokens": 299,
+      "output_tokens": 84,
+      "total_tokens": 383,
+      "response_id": "resp_0815605e71cd6dc3006a27c1ff12f08199b6c578b51b4344f6",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 7,
+      "feature": "WKHP",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 7,\n  \"feature\": \"WKHP\",\n  \"type\": \"integer\",\n  \"description\": \"Usual hours worked per week during the past 12 months.\",\n  \"values\": \"0 or positive weekly work hours.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 7,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual's annual income exceeds the ACS task threshold using survey and demographic features.\",\"feature_id\":7,\"score\":0.92,\"rationale\":\"Usual weekly hours worked is a direct, broadly causal driver of annual earnings and should remain predictive across states with relatively stable semantics, with little risk of geography-specific leakage.\"}",
+      "input_tokens": 299,
+      "output_tokens": 80,
+      "total_tokens": 379,
+      "response_id": "resp_0414374e09703a49006a27c20157388198874b8c8f7ddd374f",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 7,
+      "feature": "WKHP",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 7,\n  \"feature\": \"WKHP\",\n  \"type\": \"integer\",\n  \"description\": \"Usual hours worked per week during the past 12 months.\",\n  \"values\": \"0 or positive weekly work hours.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 7,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s annual income exceeds the ACS threshold using demographic and employment-related survey features.\",\n  \"feature_id\": 7,\n  \"score\": 0.9,\n  \"rationale\": \"Usual weekly hours worked is a direct, broadly stable proxy for labor supply and earnings across states, making it strongly predictive of income without relying on geography or state-specific artifacts.\"\n}",
+      "input_tokens": 299,
+      "output_tokens": 89,
+      "total_tokens": 388,
+      "response_id": "resp_0433a84a9405f623006a27c202e6b08199affdd280d8e3d103",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 8,
+      "feature": "SEX",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 8,\n  \"feature\": \"SEX\",\n  \"type\": \"categorical\",\n  \"description\": \"Sex reported in ACS.\",\n  \"values\": \"1=male, 2=female.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 8,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s annual income exceeds the ACS threshold using demographic, education, and employment-related survey features.\",\n  \"feature_id\": 8,\n  \"score\": 0.18,\n  \"rationale\": \"Sex can correlate with income through broad labor-market patterns and occupational sorting, but it is a sensitive attribute and a relatively weak, non-causal shortcut that may vary across states and subpopulations, so it should receive low stable importance.\"\n}",
+      "input_tokens": 293,
+      "output_tokens": 110,
+      "total_tokens": 403,
+      "response_id": "resp_02bebc59d8736c8b006a27c2046200819a8c2da8a178a8072f",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 8,
+      "feature": "SEX",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 8,\n  \"feature\": \"SEX\",\n  \"type\": \"categorical\",\n  \"description\": \"Sex reported in ACS.\",\n  \"values\": \"1=male, 2=female.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 8,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s income exceeds the ACS task threshold using demographic and household survey features.\",\n  \"feature_id\": 8,\n  \"score\": 0.22,\n  \"rationale\": \"Sex can have a modest, broadly stable association with income through persistent labor-market patterns, but it is a sensitive attribute and a weak proxy that should be downweighted because much of its predictive signal is indirect and may reflect structural bias rather than portable semantics.\"\n}",
+      "input_tokens": 293,
+      "output_tokens": 109,
+      "total_tokens": 402,
+      "response_id": "resp_03b774ecd056eab7006a27c20646dc819b953bc5c0826d8b03",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 8,
+      "feature": "SEX",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 8,\n  \"feature\": \"SEX\",\n  \"type\": \"categorical\",\n  \"description\": \"Sex reported in ACS.\",\n  \"values\": \"1=male, 2=female.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 8,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s income exceeds the ACS threshold for the acsincome task.\",\n  \"feature_id\": 8,\n  \"score\": 0.18,\n  \"rationale\": \"Sex can correlate with income through broad labor-market and occupation patterns, but it is a sensitive attribute and its relationship is mediated by changing social and policy context, making it only weakly and inconsistently useful for stable cross-state generalization.\"\n}",
+      "input_tokens": 293,
+      "output_tokens": 105,
+      "total_tokens": 398,
+      "response_id": "resp_0d1c5c048a896708006a27c207cca4819ba4611b3289b78663",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 8,
+      "feature": "SEX",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 8,\n  \"feature\": \"SEX\",\n  \"type\": \"categorical\",\n  \"description\": \"Sex reported in ACS.\",\n  \"values\": \"1=male, 2=female.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 8,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s income exceeds the ACS income threshold using demographic, education, and work-related survey features.\",\n  \"feature_id\": 8,\n  \"score\": 0.18,\n  \"rationale\": \"Sex can correlate with income through persistent labor-market patterns, so it has some predictive value, but it is a sensitive demographic attribute and its relationship to income is not a stable causal signal across states or subpopulations, making it a weak prior feature for OOD generalization.\"\n}",
+      "input_tokens": 293,
+      "output_tokens": 118,
+      "total_tokens": 411,
+      "response_id": "resp_006f176a61271f62006a27c209729481988999a491e1385f5c",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 8,
+      "feature": "SEX",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 8,\n  \"feature\": \"SEX\",\n  \"type\": \"categorical\",\n  \"description\": \"Sex reported in ACS.\",\n  \"values\": \"1=male, 2=female.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 8,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s income exceeds the ACS threshold using demographic, education, and employment-related survey features.\",\n  \"feature_id\": 8,\n  \"score\": 0.28,\n  \"rationale\": \"Sex can correlate with income through broad labor-market patterns that often persist across states, but it is a sensitive attribute and a weak, non-causal proxy that risks encoding historical inequities rather than stable task-relevant signal.\"\n}",
+      "input_tokens": 293,
+      "output_tokens": 106,
+      "total_tokens": 399,
+      "response_id": "resp_0d54dcc224435712006a27c20b27388198b0ce16897bb9cd1d",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 9,
+      "feature": "RAC1P",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 9,\n  \"feature\": \"RAC1P\",\n  \"type\": \"categorical\",\n  \"description\": \"Detailed race recode.\",\n  \"values\": \"ACS race category code.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 9,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s annual income exceeds $50,000 from ACS survey features.\",\n  \"feature_id\": 9,\n  \"score\": 0.12,\n  \"rationale\": \"Race can correlate with income through broad structural inequalities, but it is a sensitive attribute and often acts as a shortcut that may not transfer stably across states; it is useful only weakly and with substantial risk of encoding demographic bias rather than robust signal.\"\n}",
+      "input_tokens": 292,
+      "output_tokens": 108,
+      "total_tokens": 400,
+      "response_id": "resp_03ff660afa48d5e2006a27c20cd24c8199952cddfa1b5bc5ed",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 9,
+      "feature": "RAC1P",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 9,\n  \"feature\": \"RAC1P\",\n  \"type\": \"categorical\",\n  \"description\": \"Detailed race recode.\",\n  \"values\": \"ACS race category code.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 9,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s annual income exceeds $50,000 from ACS PUMS survey features.\",\n  \"feature_id\": 9,\n  \"score\": 0.08,\n  \"rationale\": \"Race can correlate with income through structural inequities, but it is a sensitive attribute and a brittle shortcut that is not semantically causal or reliably stable across states; it should be heavily downweighted for out-of-distribution generalization.\"\n}",
+      "input_tokens": 292,
+      "output_tokens": 101,
+      "total_tokens": 393,
+      "response_id": "resp_007ce5f305f869e7006a27c20ef08c8198a86a5889260d9ec4",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 9,
+      "feature": "RAC1P",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 9,\n  \"feature\": \"RAC1P\",\n  \"type\": \"categorical\",\n  \"description\": \"Detailed race recode.\",\n  \"values\": \"ACS race category code.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 9,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s annual income exceeds $50,000 from ACS person-level survey features.\",\n  \"feature_id\": 9,\n  \"score\": 0.18,\n  \"rationale\": \"Race can correlate with income through persistent structural inequalities, but it is a sensitive attribute and often acts as a demographic shortcut that may shift across states; its predictive signal is therefore limited and not reliably stable for out-of-distribution generalization.\"\n}",
+      "input_tokens": 292,
+      "output_tokens": 107,
+      "total_tokens": 399,
+      "response_id": "resp_00f80da629500417006a27c210c8b48198b4a24904bf03a435",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 9,
+      "feature": "RAC1P",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 9,\n  \"feature\": \"RAC1P\",\n  \"type\": \"categorical\",\n  \"description\": \"Detailed race recode.\",\n  \"values\": \"ACS race category code.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 9,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s annual income exceeds $50,000 from ACS survey features.\",\n  \"feature_id\": 9,\n  \"score\": 0.12,\n  \"rationale\": \"Race can correlate with income through persistent structural inequities, but it is a sensitive attribute and a brittle shortcut that may not generalize well across states or policy contexts; it is less semantically stable than occupation, education, or work-related features.\"\n}",
+      "input_tokens": 292,
+      "output_tokens": 107,
+      "total_tokens": 399,
+      "response_id": "resp_01a6099e439c004a006a27c21296e48198bb4b8189b28f069a",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 9,
+      "feature": "RAC1P",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 9,\n  \"feature\": \"RAC1P\",\n  \"type\": \"categorical\",\n  \"description\": \"Detailed race recode.\",\n  \"values\": \"ACS race category code.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 9,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual’s annual income exceeds the ACS threshold using demographic and household survey features.\",\n  \"feature_id\": 9,\n  \"score\": 0.12,\n  \"rationale\": \"Race can correlate with income through persistent structural inequality, but it is a sensitive attribute and a brittle shortcut that may shift across states and populations, so it has limited stable marginal usefulness for OOD generalization.\"\n}",
+      "input_tokens": 292,
+      "output_tokens": 94,
+      "total_tokens": 386,
+      "response_id": "resp_0d448e6107a17db6006a27c21460088198baac0935dbfedfe2",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/acs/acsincome/rankings/score_prompt.txt",
+  "config": {
+    "score_samples": 5
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "benchmark": "acs",
+  "dataset": "acsmobility",
+  "model": "ce-grad-l2",
+  "method": "score",
+  "feature_space": "semantic",
+  "created_at": "2026-08-12T00:24:22",
+  "aggregation": {
+    "name": "normalized_mean",
+    "normalization": "per_repeat_sum_to_one",
+    "repeat_count": 5,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 10,
+        "feature": "RELP",
+        "score_mean": 0.24725054896583046,
+        "score_std": 0.10474886818898937
+      },
+      {
+        "rank": 2,
+        "feature_id": 4,
+        "feature": "DIS",
+        "score_mean": 0.13427493639008212,
+        "score_std": 0.08365228111928177
+      },
+      {
+        "rank": 3,
+        "feature_id": 11,
+        "feature": "DEAR",
+        "score_mean": 0.09903680750084995,
+        "score_std": 0.03759403077880549
+      },
+      {
+        "rank": 4,
+        "feature_id": 1,
+        "feature": "SCHL",
+        "score_mean": 0.08369828838701525,
+        "score_std": 0.045460496911026035
+      },
+      {
+        "rank": 5,
+        "feature_id": 8,
+        "feature": "ANC",
+        "score_mean": 0.07059834514865948,
+        "score_std": 0.03922362508254215
+      },
+      {
+        "rank": 6,
+        "feature_id": 16,
+        "feature": "COW",
+        "score_mean": 0.06120816083064199,
+        "score_std": 0.05975822525681062
+      },
+      {
+        "rank": 7,
+        "feature_id": 7,
+        "feature": "MIL",
+        "score_mean": 0.04448838823643133,
+        "score_std": 0.02339466653311671
+      },
+      {
+        "rank": 8,
+        "feature_id": 6,
+        "feature": "CIT",
+        "score_mean": 0.03637761358889627,
+        "score_std": 0.03637732870676469
+      },
+      {
+        "rank": 9,
+        "feature_id": 0,
+        "feature": "AGEP",
+        "score_mean": 0.0323867476936247,
+        "score_std": 0.013076218486459136
+      },
+      {
+        "rank": 10,
+        "feature_id": 12,
+        "feature": "DEYE",
+        "score_mean": 0.028797256300043927,
+        "score_std": 0.01876053881085035
+      },
+      {
+        "rank": 11,
+        "feature_id": 15,
+        "feature": "GCL",
+        "score_mean": 0.02495541656114837,
+        "score_std": 0.022077564792016103
+      },
+      {
+        "rank": 12,
+        "feature_id": 9,
+        "feature": "NATIVITY",
+        "score_mean": 0.02270360304206012,
+        "score_std": 0.01595401829204864
+      },
+      {
+        "rank": 13,
+        "feature_id": 3,
+        "feature": "SEX",
+        "score_mean": 0.0217155289546724,
+        "score_std": 0.02378011668141469
+      },
+      {
+        "rank": 14,
+        "feature_id": 17,
+        "feature": "ESR",
+        "score_mean": 0.017821617332475406,
+        "score_std": 0.01220056666639657
+      },
+      {
+        "rank": 15,
+        "feature_id": 14,
+        "feature": "RAC1P",
+        "score_mean": 0.01731044305898154,
+        "score_std": 0.014267658466910532
+      },
+      {
+        "rank": 16,
+        "feature_id": 2,
+        "feature": "MAR",
+        "score_mean": 0.01529334655327208,
+        "score_std": 0.011633419809534626
+      },
+      {
+        "rank": 17,
+        "feature_id": 13,
+        "feature": "DREM",
+        "score_mean": 0.01493109911461336,
+        "score_std": 0.007342622442305745
+      },
+      {
+        "rank": 18,
+        "feature_id": 18,
+        "feature": "WKHP",
+        "score_mean": 0.013400911866960455,
+        "score_std": 0.008302979561390079
+      },
+      {
+        "rank": 19,
+        "feature_id": 5,
+        "feature": "ESP",
+        "score_mean": 0.008904925068795583,
+        "score_std": 0.010385019382996838
+      },
+      {
+        "rank": 20,
+        "feature_id": 19,
+        "feature": "JWMNP",
+        "score_mean": 0.004845977756757802,
+        "score_std": 0.00426515796916324
+      },
+      {
+        "rank": 21,
+        "feature_id": 20,
+        "feature": "PINCP",
+        "score_mean": 3.764818740326038e-08,
+        "score_std": 3.003763313003802e-08
+      }
+    ]
+  }
+}

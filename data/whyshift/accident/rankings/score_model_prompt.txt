@@ -1,0 +1,1664 @@
+# whyshift/accident score prompts
+
+## 1. feature_id=0 feature=Distance(mi)
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 0,
+  "feature": "Distance(mi)",
+  "type": "continuous",
+  "description": "Distance affected by the accident.",
+  "values": "Miles."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 0,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 2. feature_id=1 feature=Temperature(F)
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 1,
+  "feature": "Temperature(F)",
+  "type": "continuous",
+  "description": "Weather temperature near the accident.",
+  "values": "Degrees Fahrenheit."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 1,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 3. feature_id=2 feature=Humidity(%)
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 2,
+  "feature": "Humidity(%)",
+  "type": "continuous",
+  "description": "Weather humidity near the accident.",
+  "values": "Percentage."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 2,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 4. feature_id=3 feature=Pressure(in)
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 3,
+  "feature": "Pressure(in)",
+  "type": "continuous",
+  "description": "Atmospheric pressure near the accident.",
+  "values": "Inches."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 3,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 5. feature_id=4 feature=Visibility(mi)
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 4,
+  "feature": "Visibility(mi)",
+  "type": "continuous",
+  "description": "Weather visibility near the accident.",
+  "values": "Miles."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 4,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 6. feature_id=5 feature=Wind_Speed(mph)
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 5,
+  "feature": "Wind_Speed(mph)",
+  "type": "continuous",
+  "description": "Wind speed near the accident.",
+  "values": "Miles per hour."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 5,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 7. feature_id=6 feature=Precipitation(in)
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 6,
+  "feature": "Precipitation(in)",
+  "type": "continuous",
+  "description": "Precipitation near the accident.",
+  "values": "Inches."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 6,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 8. feature_id=7 feature=Amenity
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 7,
+  "feature": "Amenity",
+  "type": "boolean",
+  "description": "Whether an amenity point of interest is nearby.",
+  "values": "0=false, 1=true."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 7,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 9. feature_id=8 feature=Bump
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 8,
+  "feature": "Bump",
+  "type": "boolean",
+  "description": "Whether a road bump is nearby.",
+  "values": "0=false, 1=true."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 8,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 10. feature_id=9 feature=Crossing
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 9,
+  "feature": "Crossing",
+  "type": "boolean",
+  "description": "Whether a crossing is nearby.",
+  "values": "0=false, 1=true."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 9,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 11. feature_id=10 feature=Give_Way
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 10,
+  "feature": "Give_Way",
+  "type": "boolean",
+  "description": "Whether a give-way sign is nearby.",
+  "values": "0=false, 1=true."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 10,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 12. feature_id=11 feature=Junction
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 11,
+  "feature": "Junction",
+  "type": "boolean",
+  "description": "Whether a road junction is nearby.",
+  "values": "0=false, 1=true."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 11,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 13. feature_id=12 feature=No_Exit
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 12,
+  "feature": "No_Exit",
+  "type": "boolean",
+  "description": "Whether a no-exit road feature is nearby.",
+  "values": "0=false, 1=true."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 12,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 14. feature_id=13 feature=Railway
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 13,
+  "feature": "Railway",
+  "type": "boolean",
+  "description": "Whether a railway feature is nearby.",
+  "values": "0=false, 1=true."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 13,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 15. feature_id=14 feature=Roundabout
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 14,
+  "feature": "Roundabout",
+  "type": "boolean",
+  "description": "Whether a roundabout is nearby.",
+  "values": "0=false, 1=true."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 14,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 16. feature_id=15 feature=Station
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 15,
+  "feature": "Station",
+  "type": "boolean",
+  "description": "Whether a station point of interest is nearby.",
+  "values": "0=false, 1=true."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 15,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 17. feature_id=16 feature=Stop
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 16,
+  "feature": "Stop",
+  "type": "boolean",
+  "description": "Whether a stop sign is nearby.",
+  "values": "0=false, 1=true."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 16,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 18. feature_id=17 feature=Traffic_Calming
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 17,
+  "feature": "Traffic_Calming",
+  "type": "boolean",
+  "description": "Whether a traffic-calming feature is nearby.",
+  "values": "0=false, 1=true."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 17,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 19. feature_id=18 feature=Traffic_Signal
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 18,
+  "feature": "Traffic_Signal",
+  "type": "boolean",
+  "description": "Whether a traffic signal is nearby.",
+  "values": "0=false, 1=true."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 18,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 20. feature_id=19 feature=Year
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 19,
+  "feature": "Year",
+  "type": "ordinal_categorical",
+  "description": "Accident year."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 19,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 21. feature_id=20 feature=Month
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 20,
+  "feature": "Month",
+  "type": "ordinal_categorical",
+  "description": "Accident month.",
+  "values": "1-12."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 20,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 22. feature_id=21 feature=Weekday
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 21,
+  "feature": "Weekday",
+  "type": "ordinal_categorical",
+  "description": "Accident day of week."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 21,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 23. feature_id=22 feature=Day
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 22,
+  "feature": "Day",
+  "type": "ordinal_categorical",
+  "description": "Accident day of month.",
+  "values": "1-31."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 22,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 24. feature_id=23 feature=Hour
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 23,
+  "feature": "Hour",
+  "type": "ordinal_categorical",
+  "description": "Accident hour of day.",
+  "values": "0-23."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 23,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 25. feature_id=24 feature=Minute
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 24,
+  "feature": "Minute",
+  "type": "integer",
+  "description": "Accident minute within the hour.",
+  "values": "0-59."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 24,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 26. feature_id=25 feature=Wind_Direction_E
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 25,
+  "feature": "Wind_Direction_E",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Wind_Direction_E` derived from semantic feature `Wind_Direction`. Interpret this column as the encoded model input for that derived category/value. Wind direction category near the accident.",
+  "values": "Grouped one-hot model columns: E, N, NE, NW, S, SE, SW, Variable, W."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 25,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 27. feature_id=26 feature=Wind_Direction_N
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 26,
+  "feature": "Wind_Direction_N",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Wind_Direction_N` derived from semantic feature `Wind_Direction`. Interpret this column as the encoded model input for that derived category/value. Wind direction category near the accident.",
+  "values": "Grouped one-hot model columns: E, N, NE, NW, S, SE, SW, Variable, W."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 26,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 28. feature_id=27 feature=Wind_Direction_NE
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 27,
+  "feature": "Wind_Direction_NE",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Wind_Direction_NE` derived from semantic feature `Wind_Direction`. Interpret this column as the encoded model input for that derived category/value. Wind direction category near the accident.",
+  "values": "Grouped one-hot model columns: E, N, NE, NW, S, SE, SW, Variable, W."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 27,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 29. feature_id=28 feature=Wind_Direction_NW
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 28,
+  "feature": "Wind_Direction_NW",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Wind_Direction_NW` derived from semantic feature `Wind_Direction`. Interpret this column as the encoded model input for that derived category/value. Wind direction category near the accident.",
+  "values": "Grouped one-hot model columns: E, N, NE, NW, S, SE, SW, Variable, W."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 28,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 30. feature_id=29 feature=Wind_Direction_S
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 29,
+  "feature": "Wind_Direction_S",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Wind_Direction_S` derived from semantic feature `Wind_Direction`. Interpret this column as the encoded model input for that derived category/value. Wind direction category near the accident.",
+  "values": "Grouped one-hot model columns: E, N, NE, NW, S, SE, SW, Variable, W."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 29,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 31. feature_id=30 feature=Wind_Direction_SE
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 30,
+  "feature": "Wind_Direction_SE",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Wind_Direction_SE` derived from semantic feature `Wind_Direction`. Interpret this column as the encoded model input for that derived category/value. Wind direction category near the accident.",
+  "values": "Grouped one-hot model columns: E, N, NE, NW, S, SE, SW, Variable, W."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 30,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 32. feature_id=31 feature=Wind_Direction_SW
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 31,
+  "feature": "Wind_Direction_SW",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Wind_Direction_SW` derived from semantic feature `Wind_Direction`. Interpret this column as the encoded model input for that derived category/value. Wind direction category near the accident.",
+  "values": "Grouped one-hot model columns: E, N, NE, NW, S, SE, SW, Variable, W."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 31,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 33. feature_id=32 feature=Wind_Direction_Variable
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 32,
+  "feature": "Wind_Direction_Variable",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Wind_Direction_Variable` derived from semantic feature `Wind_Direction`. Interpret this column as the encoded model input for that derived category/value. Wind direction category near the accident.",
+  "values": "Grouped one-hot model columns: E, N, NE, NW, S, SE, SW, Variable, W."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 32,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 34. feature_id=33 feature=Wind_Direction_W
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 33,
+  "feature": "Wind_Direction_W",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Wind_Direction_W` derived from semantic feature `Wind_Direction`. Interpret this column as the encoded model input for that derived category/value. Wind direction category near the accident.",
+  "values": "Grouped one-hot model columns: E, N, NE, NW, S, SE, SW, Variable, W."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 33,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 35. feature_id=34 feature=Weather_Condition_Cloudy
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 34,
+  "feature": "Weather_Condition_Cloudy",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Weather_Condition_Cloudy` derived from semantic feature `Weather_Condition`. Interpret this column as the encoded model input for that derived category/value. Weather condition category near the accident.",
+  "values": "Grouped one-hot model columns such as Cloudy, Fog, Rain, Snow, Thunderstorm, Windy."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 34,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 36. feature_id=35 feature=Weather_Condition_Fog
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 35,
+  "feature": "Weather_Condition_Fog",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Weather_Condition_Fog` derived from semantic feature `Weather_Condition`. Interpret this column as the encoded model input for that derived category/value. Weather condition category near the accident.",
+  "values": "Grouped one-hot model columns such as Cloudy, Fog, Rain, Snow, Thunderstorm, Windy."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 35,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 37. feature_id=36 feature=Weather_Condition_Hail
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 36,
+  "feature": "Weather_Condition_Hail",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Weather_Condition_Hail` derived from semantic feature `Weather_Condition`. Interpret this column as the encoded model input for that derived category/value. Weather condition category near the accident.",
+  "values": "Grouped one-hot model columns such as Cloudy, Fog, Rain, Snow, Thunderstorm, Windy."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 36,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 38. feature_id=37 feature=Weather_Condition_Rain
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 37,
+  "feature": "Weather_Condition_Rain",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Weather_Condition_Rain` derived from semantic feature `Weather_Condition`. Interpret this column as the encoded model input for that derived category/value. Weather condition category near the accident.",
+  "values": "Grouped one-hot model columns such as Cloudy, Fog, Rain, Snow, Thunderstorm, Windy."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 37,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 39. feature_id=38 feature=Weather_Condition_Sand
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 38,
+  "feature": "Weather_Condition_Sand",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Weather_Condition_Sand` derived from semantic feature `Weather_Condition`. Interpret this column as the encoded model input for that derived category/value. Weather condition category near the accident.",
+  "values": "Grouped one-hot model columns such as Cloudy, Fog, Rain, Snow, Thunderstorm, Windy."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 38,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 40. feature_id=39 feature=Weather_Condition_Smoke
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 39,
+  "feature": "Weather_Condition_Smoke",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Weather_Condition_Smoke` derived from semantic feature `Weather_Condition`. Interpret this column as the encoded model input for that derived category/value. Weather condition category near the accident.",
+  "values": "Grouped one-hot model columns such as Cloudy, Fog, Rain, Snow, Thunderstorm, Windy."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 39,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 41. feature_id=40 feature=Weather_Condition_Snow
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 40,
+  "feature": "Weather_Condition_Snow",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Weather_Condition_Snow` derived from semantic feature `Weather_Condition`. Interpret this column as the encoded model input for that derived category/value. Weather condition category near the accident.",
+  "values": "Grouped one-hot model columns such as Cloudy, Fog, Rain, Snow, Thunderstorm, Windy."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 40,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 42. feature_id=41 feature=Weather_Condition_Thunderstorm
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 41,
+  "feature": "Weather_Condition_Thunderstorm",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Weather_Condition_Thunderstorm` derived from semantic feature `Weather_Condition`. Interpret this column as the encoded model input for that derived category/value. Weather condition category near the accident.",
+  "values": "Grouped one-hot model columns such as Cloudy, Fog, Rain, Snow, Thunderstorm, Windy."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 41,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 43. feature_id=42 feature=Weather_Condition_Tornado
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 42,
+  "feature": "Weather_Condition_Tornado",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Weather_Condition_Tornado` derived from semantic feature `Weather_Condition`. Interpret this column as the encoded model input for that derived category/value. Weather condition category near the accident.",
+  "values": "Grouped one-hot model columns such as Cloudy, Fog, Rain, Snow, Thunderstorm, Windy."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 42,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 44. feature_id=43 feature=Weather_Condition_Windy
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 43,
+  "feature": "Weather_Condition_Windy",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Weather_Condition_Windy` derived from semantic feature `Weather_Condition`. Interpret this column as the encoded model input for that derived category/value. Weather condition category near the accident.",
+  "values": "Grouped one-hot model columns such as Cloudy, Fog, Rain, Snow, Thunderstorm, Windy."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 43,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 45. feature_id=44 feature=Civil_Twilight_Night
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `whyshift` benchmark dataset `accident`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 44,
+  "feature": "Civil_Twilight_Night",
+  "type": "encoded_model_feature",
+  "description": "Model feature `Civil_Twilight_Night` derived from semantic feature `Civil_Twilight`. Interpret this column as the encoded model input for that derived category/value. Whether the accident occurred during civil twilight day or night.",
+  "values": "Grouped one-hot model columns; current model column indicates Night."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 44,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.

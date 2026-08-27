@@ -1,0 +1,903 @@
+{
+  "benchmark": "acs",
+  "dataset": "acsemployment",
+  "model": "gpt-5.4-mini",
+  "method": "score_all",
+  "temperature": 0.5,
+  "created_at": "2026-06-09T15:38:40",
+  "token_usage": {
+    "num_calls": 5,
+    "input_tokens": 5965,
+    "output_tokens": 3921,
+    "total_tokens": 9886
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 0,
+        "feature": "AGEP",
+        "score_mean": 0.9359999999999999,
+        "score_std": 0.02799999999999998
+      },
+      {
+        "rank": 2,
+        "feature_id": 1,
+        "feature": "SCHL",
+        "score_mean": 0.922,
+        "score_std": 0.015999999999999976
+      },
+      {
+        "rank": 3,
+        "feature_id": 4,
+        "feature": "DIS",
+        "score_mean": 0.72,
+        "score_std": 0.05932958789676532
+      },
+      {
+        "rank": 4,
+        "feature_id": 13,
+        "feature": "DREM",
+        "score_mean": 0.56,
+        "score_std": 0.07155417527999326
+      },
+      {
+        "rank": 5,
+        "feature_id": 2,
+        "feature": "MAR",
+        "score_mean": 0.52,
+        "score_std": 0.047749345545253286
+      },
+      {
+        "rank": 6,
+        "feature_id": 11,
+        "feature": "DEAR",
+        "score_mean": 0.516,
+        "score_std": 0.07578918128598568
+      },
+      {
+        "rank": 7,
+        "feature_id": 12,
+        "feature": "DEYE",
+        "score_mean": 0.468,
+        "score_std": 0.0863481325796916
+      },
+      {
+        "rank": 8,
+        "feature_id": 14,
+        "feature": "SEX",
+        "score_mean": 0.398,
+        "score_std": 0.14891608375189028
+      },
+      {
+        "rank": 9,
+        "feature_id": 3,
+        "feature": "RELP",
+        "score_mean": 0.37,
+        "score_std": 0.027568097504180447
+      },
+      {
+        "rank": 10,
+        "feature_id": 6,
+        "feature": "CIT",
+        "score_mean": 0.252,
+        "score_std": 0.09173875952943772
+      },
+      {
+        "rank": 11,
+        "feature_id": 10,
+        "feature": "NATIVITY",
+        "score_mean": 0.226,
+        "score_std": 0.09243376006633075
+      },
+      {
+        "rank": 12,
+        "feature_id": 7,
+        "feature": "MIG",
+        "score_mean": 0.16999999999999998,
+        "score_std": 0.033466401061363026
+      },
+      {
+        "rank": 13,
+        "feature_id": 15,
+        "feature": "RAC1P",
+        "score_mean": 0.168,
+        "score_std": 0.056
+      },
+      {
+        "rank": 14,
+        "feature_id": 8,
+        "feature": "MIL",
+        "score_mean": 0.112,
+        "score_std": 0.009797958971132708
+      },
+      {
+        "rank": 15,
+        "feature_id": 9,
+        "feature": "ANC",
+        "score_mean": 0.08,
+        "score_std": 0.0
+      },
+      {
+        "rank": 16,
+        "feature_id": 5,
+        "feature": "ESP",
+        "score_mean": 0.05,
+        "score_std": 0.0
+      }
+    ],
+    "scores": [
+      {
+        "feature_id": 0,
+        "feature": "AGEP",
+        "score_mean": 0.9359999999999999,
+        "score_std": 0.02799999999999998,
+        "sample_scores": [
+          0.95,
+          0.95,
+          0.95,
+          0.88,
+          0.95
+        ]
+      },
+      {
+        "feature_id": 1,
+        "feature": "SCHL",
+        "score_mean": 0.922,
+        "score_std": 0.015999999999999976,
+        "sample_scores": [
+          0.92,
+          0.92,
+          0.9,
+          0.95,
+          0.92
+        ]
+      },
+      {
+        "feature_id": 2,
+        "feature": "MAR",
+        "score_mean": 0.52,
+        "score_std": 0.047749345545253286,
+        "sample_scores": [
+          0.48,
+          0.54,
+          0.55,
+          0.58,
+          0.45
+        ]
+      },
+      {
+        "feature_id": 3,
+        "feature": "RELP",
+        "score_mean": 0.37,
+        "score_std": 0.027568097504180447,
+        "sample_scores": [
+          0.35,
+          0.38,
+          0.35,
+          0.42,
+          0.35
+        ]
+      },
+      {
+        "feature_id": 4,
+        "feature": "DIS",
+        "score_mean": 0.72,
+        "score_std": 0.05932958789676532,
+        "sample_scores": [
+          0.72,
+          0.78,
+          0.7,
+          0.62,
+          0.78
+        ]
+      },
+      {
+        "feature_id": 5,
+        "feature": "ESP",
+        "score_mean": 0.05,
+        "score_std": 0.0,
+        "sample_scores": [
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.05
+        ]
+      },
+      {
+        "feature_id": 6,
+        "feature": "CIT",
+        "score_mean": 0.252,
+        "score_std": 0.09173875952943772,
+        "sample_scores": [
+          0.18,
+          0.42,
+          0.2,
+          0.28,
+          0.18
+        ]
+      },
+      {
+        "feature_id": 7,
+        "feature": "MIG",
+        "score_mean": 0.16999999999999998,
+        "score_std": 0.033466401061363026,
+        "sample_scores": [
+          0.12,
+          0.18,
+          0.15,
+          0.18,
+          0.22
+        ]
+      },
+      {
+        "feature_id": 8,
+        "feature": "MIL",
+        "score_mean": 0.112,
+        "score_std": 0.009797958971132708,
+        "sample_scores": [
+          0.1,
+          0.12,
+          0.1,
+          0.12,
+          0.12
+        ]
+      },
+      {
+        "feature_id": 9,
+        "feature": "ANC",
+        "score_mean": 0.08,
+        "score_std": 0.0,
+        "sample_scores": [
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08
+        ]
+      },
+      {
+        "feature_id": 10,
+        "feature": "NATIVITY",
+        "score_mean": 0.226,
+        "score_std": 0.09243376006633075,
+        "sample_scores": [
+          0.16,
+          0.4,
+          0.18,
+          0.24,
+          0.15
+        ]
+      },
+      {
+        "feature_id": 11,
+        "feature": "DEAR",
+        "score_mean": 0.516,
+        "score_std": 0.07578918128598568,
+        "sample_scores": [
+          0.55,
+          0.62,
+          0.45,
+          0.41,
+          0.55
+        ]
+      },
+      {
+        "feature_id": 12,
+        "feature": "DEYE",
+        "score_mean": 0.468,
+        "score_std": 0.0863481325796916,
+        "sample_scores": [
+          0.52,
+          0.58,
+          0.4,
+          0.34,
+          0.5
+        ]
+      },
+      {
+        "feature_id": 13,
+        "feature": "DREM",
+        "score_mean": 0.56,
+        "score_std": 0.07155417527999326,
+        "sample_scores": [
+          0.6,
+          0.66,
+          0.5,
+          0.46,
+          0.58
+        ]
+      },
+      {
+        "feature_id": 14,
+        "feature": "SEX",
+        "score_mean": 0.398,
+        "score_std": 0.14891608375189028,
+        "sample_scores": [
+          0.28,
+          0.44,
+          0.65,
+          0.22,
+          0.4
+        ]
+      },
+      {
+        "feature_id": 15,
+        "feature": "RAC1P",
+        "score_mean": 0.168,
+        "score_std": 0.056,
+        "sample_scores": [
+          0.22,
+          0.1,
+          0.22,
+          0.1,
+          0.2
+        ]
+      }
+    ],
+    "samples": [
+      {
+        "task_summary": "Predict whether an ACS person is employed using demographic, household, and disability-related attributes that should generalize across states.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.95,
+            "rationale": "Age is a strong, stable predictor of labor force participation and employment across states.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.92,
+            "rationale": "Education is one of the most robust predictors of employment and is broadly portable across geographies.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.48,
+            "rationale": "Marital status has some stable association with employment, but it is indirect and weaker than core human-capital features.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.35,
+            "rationale": "Household relationship can proxy life stage and family role, but it is less directly tied to employment and can be noisy.",
+            "feature": "RELP"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.72,
+            "rationale": "Disability status is a meaningful and fairly stable predictor of employment, though it is sensitive and may vary in measurement.",
+            "feature": "DIS"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.05,
+            "rationale": "Employment status of parents is mainly relevant for children and is not a stable predictor for the target population.",
+            "feature": "ESP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.18,
+            "rationale": "Citizenship can correlate with employment, but it is also a demographic proxy and may reflect state-specific composition rather than causal stability.",
+            "feature": "CIT"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.12,
+            "rationale": "Recent mobility may capture job-related moves, but it is noisy and can encode geography and local migration patterns.",
+            "feature": "MIG"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.1,
+            "rationale": "Military service has some labor-market relevance but is sparse and not a broadly stable predictor.",
+            "feature": "MIL"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.08,
+            "rationale": "Ancestry is a weak proxy that is more likely to encode demographic and regional artifacts than stable employment signal.",
+            "feature": "ANC"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.16,
+            "rationale": "Nativity is somewhat predictive through labor-market integration, but it is a demographic shortcut with limited stable causal value.",
+            "feature": "NATIVITY"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.55,
+            "rationale": "Hearing difficulty can affect employability and is a reasonably stable health-related predictor.",
+            "feature": "DEAR"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.52,
+            "rationale": "Vision difficulty is similarly a stable functional limitation that can affect employment.",
+            "feature": "DEYE"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.6,
+            "rationale": "Cognitive difficulty is often strongly related to employment status and should generalize better than demographic proxies.",
+            "feature": "DREM"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.28,
+            "rationale": "Sex has persistent association with employment but is a sensitive demographic attribute and can reflect structural bias.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.22,
+            "rationale": "Race may carry signal through structural labor-market differences, but it is a sensitive proxy and less desirable for stable generalization.",
+            "feature": "RAC1P"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether an ACS person is employed using demographic, household, and disability-related attributes that may generalize across states.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.95,
+            "rationale": "Age is a strong, broadly stable predictor of employment across states.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.92,
+            "rationale": "Education strongly and consistently relates to employment prospects.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.54,
+            "rationale": "Marital status has some stable correlation with labor force participation but is indirect.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.38,
+            "rationale": "Household relationship can proxy life stage and caregiving, but is less directly predictive and more composition-dependent.",
+            "feature": "RELP"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.78,
+            "rationale": "Disability status is a meaningful and fairly stable predictor of employment barriers.",
+            "feature": "DIS"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.05,
+            "rationale": "Primarily defined for children, so it is weakly relevant and likely noisy for this adult employment task.",
+            "feature": "ESP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.42,
+            "rationale": "Citizenship can affect labor market access, but it is also a sensitive proxy with state-varying composition.",
+            "feature": "CIT"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.18,
+            "rationale": "Mobility status may reflect instability, but it is more geographically and state-distribution dependent.",
+            "feature": "MIG"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.12,
+            "rationale": "Military service has limited general predictive value for employment and can be sparse.",
+            "feature": "MIL"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.08,
+            "rationale": "Ancestry is a weak and potentially brittle demographic shortcut with little direct causal relation.",
+            "feature": "ANC"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.4,
+            "rationale": "Nativity captures some labor-market-relevant differences but is partly redundant with citizenship and can be a sensitive proxy.",
+            "feature": "NATIVITY"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.62,
+            "rationale": "Hearing difficulty can affect employability and is relatively stable across states.",
+            "feature": "DEAR"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.58,
+            "rationale": "Vision difficulty is a stable functional limitation relevant to employment.",
+            "feature": "DEYE"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.66,
+            "rationale": "Cognitive difficulty is a strong, broadly stable indicator of employment barriers.",
+            "feature": "DREM"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.44,
+            "rationale": "Sex has persistent association with employment but is a sensitive demographic shortcut and not a direct cause.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.1,
+            "rationale": "Race is a sensitive proxy whose association with employment is often mediated by structural and state-specific factors rather than stable individual prediction.",
+            "feature": "RAC1P"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether an ACS person is employed using demographic, household, and disability-related attributes that should generalize across states.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.95,
+            "rationale": "Age is one of the strongest stable predictors of labor force participation and employment.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.9,
+            "rationale": "Education is highly predictive of employment and tends to generalize well across states.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.55,
+            "rationale": "Marital status has some stable association with employment but is only moderately informative.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.35,
+            "rationale": "Household relationship can proxy life stage and dependency, but it is indirect and less stable.",
+            "feature": "RELP"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.7,
+            "rationale": "Disability status is a meaningful and fairly stable predictor of employment likelihood.",
+            "feature": "DIS"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.05,
+            "rationale": "This variable is mainly defined for children and is not broadly relevant to adult employment prediction.",
+            "feature": "ESP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.2,
+            "rationale": "Citizenship can matter for labor market access, but it is sensitive and may vary in state composition.",
+            "feature": "CIT"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.15,
+            "rationale": "Recent mobility may weakly relate to employment, but it is noisy and can reflect geographic artifacts.",
+            "feature": "MIG"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.1,
+            "rationale": "Military service is only weakly and indirectly related to current employment for the general population.",
+            "feature": "MIL"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.08,
+            "rationale": "Ancestry is mostly a demographic proxy and is prone to capturing population composition rather than stable employment signal.",
+            "feature": "ANC"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.18,
+            "rationale": "Nativity has some stable relation to labor market outcomes, but it is a sensitive proxy and not strongly causal.",
+            "feature": "NATIVITY"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.45,
+            "rationale": "Hearing difficulty can affect employability and is a relatively stable functional limitation signal.",
+            "feature": "DEAR"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.4,
+            "rationale": "Vision difficulty is a stable health-related predictor of employment, though less central than age or education.",
+            "feature": "DEYE"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.5,
+            "rationale": "Cognitive difficulty is a meaningful and stable indicator of employment barriers.",
+            "feature": "DREM"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.65,
+            "rationale": "Sex has a strong association with employment patterns, though it is a sensitive demographic feature and may encode societal bias.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.22,
+            "rationale": "Race can correlate with employment through structural factors, but it is a sensitive shortcut and less robust across states.",
+            "feature": "RAC1P"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether an ACS person is employed using demographic, education, health, and household context features.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.88,
+            "rationale": "Age is a strong, broadly stable predictor of labor force participation and employment across states.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.95,
+            "rationale": "Education is one of the most stable and informative predictors of employment status.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.58,
+            "rationale": "Marital status has moderate predictive value through life-stage and household structure, but is less direct than age or education.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.42,
+            "rationale": "Household relationship can proxy life stage and dependency, but is noisier and more composition-dependent across states.",
+            "feature": "RELP"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.62,
+            "rationale": "Disability status is a meaningful and fairly stable correlate of employment, though it is sensitive and not determinative.",
+            "feature": "DIS"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.05,
+            "rationale": "This is mainly defined for children and is only weakly relevant to employment for the target population.",
+            "feature": "ESP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.28,
+            "rationale": "Citizenship can affect employment access, but it also reflects sensitive demographic and geography-linked composition differences.",
+            "feature": "CIT"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.18,
+            "rationale": "Mobility status may capture recent migration or housing instability, but it is relatively brittle and state-dependent.",
+            "feature": "MIG"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.12,
+            "rationale": "Military service has limited direct relevance for general employment prediction and can be sparse and population-specific.",
+            "feature": "MIL"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.08,
+            "rationale": "Ancestry is a weak proxy that is likely to encode demographic and regional shortcuts rather than stable employment signal.",
+            "feature": "ANC"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.24,
+            "rationale": "Nativity is somewhat predictive through labor market integration, but it is a sensitive proxy with uneven state distributions.",
+            "feature": "NATIVITY"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.41,
+            "rationale": "Hearing difficulty can affect employability in a stable way, though the effect is moderate and health-related.",
+            "feature": "DEAR"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.34,
+            "rationale": "Vision difficulty is relevant to employment capacity, but usually less informative than age, education, or broader disability.",
+            "feature": "DEYE"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.46,
+            "rationale": "Cognitive difficulty is a meaningful predictor of employment limitations and tends to generalize better than geography-linked features.",
+            "feature": "DREM"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.22,
+            "rationale": "Sex has some association with employment patterns, but it is a sensitive attribute and may capture societal bias more than task-relevant signal.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.1,
+            "rationale": "Race is a sensitive attribute and often acts as a proxy for structural and regional differences rather than stable causal employment signal.",
+            "feature": "RAC1P"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether an ACS person is employed using demographic, household, and disability-related features that may generalize across states.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.95,
+            "rationale": "Age is a strong, stable predictor of labor force participation and employment across states.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.92,
+            "rationale": "Educational attainment is one of the most robust predictors of employment and is broadly portable across geographies.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.45,
+            "rationale": "Marital status has some association with employment but is mostly indirect and can vary with local demographics.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.35,
+            "rationale": "Household relationship can proxy life stage and family structure, but it is less directly tied to employment and more context-dependent.",
+            "feature": "RELP"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.78,
+            "rationale": "Disability status is a meaningful and fairly stable predictor of employment, though it is sensitive and may reflect structural barriers.",
+            "feature": "DIS"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.05,
+            "rationale": "Employment status of parents is mainly relevant for children and is not a stable or broadly applicable predictor for this adult employment task.",
+            "feature": "ESP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.18,
+            "rationale": "Citizenship can affect employment access, but it is a sensitive proxy for legal status and can be brittle across states and populations.",
+            "feature": "CIT"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.22,
+            "rationale": "Recent mobility may correlate with employment transitions, but it is noisy and can encode geographic movement artifacts.",
+            "feature": "MIG"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.12,
+            "rationale": "Military service has some labor-market relevance but is a niche and weakly portable signal for general employment prediction.",
+            "feature": "MIL"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.08,
+            "rationale": "Ancestry is mostly a demographic proxy with limited direct relation to employment and higher risk of shortcut learning.",
+            "feature": "ANC"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.15,
+            "rationale": "Nativity can matter for labor-market participation, but it is a sensitive proxy and less stable than core human-capital features.",
+            "feature": "NATIVITY"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.55,
+            "rationale": "Hearing difficulty is a relevant functional limitation that can affect employment, with moderate cross-state stability.",
+            "feature": "DEAR"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.5,
+            "rationale": "Vision difficulty is similarly relevant to employability, though the signal is moderate and can be mediated by occupation mix.",
+            "feature": "DEYE"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.58,
+            "rationale": "Cognitive difficulty is a meaningful predictor of employment status and tends to generalize, though it is sensitive and imperfectly measured.",
+            "feature": "DREM"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.4,
+            "rationale": "Sex has persistent labor-market associations but is a sensitive demographic shortcut and should be downweighted for OOD robustness.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.2,
+            "rationale": "Race can correlate with employment through structural factors, but it is a sensitive proxy and risks learning state-specific disparities rather than portable signal.",
+            "feature": "RAC1P"
+          }
+        ]
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemployment`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DIS\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Disability recode.\",\n    \"values\": \"1=with a disability, 2=without a disability.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"ESP\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status of parents.\",\n    \"values\": \"ACS family/parent employment code, mainly defined for children.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"CIT\",\n    \"type\": \"categorical\",\n    \"description\": \"Citizenship status.\",\n    \"values\": \"US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"MIG\",\n    \"type\": \"categorical\",\n    \"description\": \"Mobility status one year ago.\",\n    \"values\": \"Whether and where the person lived one year ago.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"MIL\",\n    \"type\": \"categorical\",\n    \"description\": \"Military service status.\",\n    \"values\": \"ACS military service category.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"ANC\",\n    \"type\": \"categorical\",\n    \"description\": \"Ancestry recode.\",\n    \"values\": \"ACS ancestry category.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"NATIVITY\",\n    \"type\": \"categorical\",\n    \"description\": \"Nativity recode.\",\n    \"values\": \"Native-born or foreign-born.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"DEAR\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Hearing difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DEYE\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Vision difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"DREM\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Cognitive difficulty remembering, concentrating, or making decisions.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS person is employed using demographic, household, and disability-related attributes that should generalize across states.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.95,\n      \"rationale\": \"Age is a strong, stable predictor of labor force participation and employment across states.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.92,\n      \"rationale\": \"Education is one of the most robust predictors of employment and is broadly portable across geographies.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.48,\n      \"rationale\": \"Marital status has some stable association with employment, but it is indirect and weaker than core human-capital features.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.35,\n      \"rationale\": \"Household relationship can proxy life stage and family role, but it is less directly tied to employment and can be noisy.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.72,\n      \"rationale\": \"Disability status is a meaningful and fairly stable predictor of employment, though it is sensitive and may vary in measurement.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.05,\n      \"rationale\": \"Employment status of parents is mainly relevant for children and is not a stable predictor for the target population.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.18,\n      \"rationale\": \"Citizenship can correlate with employment, but it is also a demographic proxy and may reflect state-specific composition rather than causal stability.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.12,\n      \"rationale\": \"Recent mobility may capture job-related moves, but it is noisy and can encode geography and local migration patterns.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.10,\n      \"rationale\": \"Military service has some labor-market relevance but is sparse and not a broadly stable predictor.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.08,\n      \"rationale\": \"Ancestry is a weak proxy that is more likely to encode demographic and regional artifacts than stable employment signal.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.16,\n      \"rationale\": \"Nativity is somewhat predictive through labor-market integration, but it is a demographic shortcut with limited stable causal value.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.55,\n      \"rationale\": \"Hearing difficulty can affect employability and is a reasonably stable health-related predictor.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.52,\n      \"rationale\": \"Vision difficulty is similarly a stable functional limitation that can affect employment.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.60,\n      \"rationale\": \"Cognitive difficulty is often strongly related to employment status and should generalize better than demographic proxies.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.28,\n      \"rationale\": \"Sex has persistent association with employment but is a sensitive demographic attribute and can reflect structural bias.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.22,\n      \"rationale\": \"Race may carry signal through structural labor-market differences, but it is a sensitive proxy and less desirable for stable generalization.\"\n    }\n  ]\n}",
+      "input_tokens": 1193,
+      "output_tokens": 796,
+      "total_tokens": 1989,
+      "response_id": "resp_0d32772ded778d58006a27c2e28f6881988f8c3dd00e0e71c3",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemployment`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DIS\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Disability recode.\",\n    \"values\": \"1=with a disability, 2=without a disability.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"ESP\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status of parents.\",\n    \"values\": \"ACS family/parent employment code, mainly defined for children.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"CIT\",\n    \"type\": \"categorical\",\n    \"description\": \"Citizenship status.\",\n    \"values\": \"US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"MIG\",\n    \"type\": \"categorical\",\n    \"description\": \"Mobility status one year ago.\",\n    \"values\": \"Whether and where the person lived one year ago.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"MIL\",\n    \"type\": \"categorical\",\n    \"description\": \"Military service status.\",\n    \"values\": \"ACS military service category.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"ANC\",\n    \"type\": \"categorical\",\n    \"description\": \"Ancestry recode.\",\n    \"values\": \"ACS ancestry category.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"NATIVITY\",\n    \"type\": \"categorical\",\n    \"description\": \"Nativity recode.\",\n    \"values\": \"Native-born or foreign-born.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"DEAR\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Hearing difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DEYE\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Vision difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"DREM\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Cognitive difficulty remembering, concentrating, or making decisions.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS person is employed using demographic, household, and disability-related attributes that may generalize across states.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.95,\n      \"rationale\": \"Age is a strong, broadly stable predictor of employment across states.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.92,\n      \"rationale\": \"Education strongly and consistently relates to employment prospects.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.54,\n      \"rationale\": \"Marital status has some stable correlation with labor force participation but is indirect.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.38,\n      \"rationale\": \"Household relationship can proxy life stage and caregiving, but is less directly predictive and more composition-dependent.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.78,\n      \"rationale\": \"Disability status is a meaningful and fairly stable predictor of employment barriers.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.05,\n      \"rationale\": \"Primarily defined for children, so it is weakly relevant and likely noisy for this adult employment task.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.42,\n      \"rationale\": \"Citizenship can affect labor market access, but it is also a sensitive proxy with state-varying composition.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.18,\n      \"rationale\": \"Mobility status may reflect instability, but it is more geographically and state-distribution dependent.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.12,\n      \"rationale\": \"Military service has limited general predictive value for employment and can be sparse.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.08,\n      \"rationale\": \"Ancestry is a weak and potentially brittle demographic shortcut with little direct causal relation.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.40,\n      \"rationale\": \"Nativity captures some labor-market-relevant differences but is partly redundant with citizenship and can be a sensitive proxy.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.62,\n      \"rationale\": \"Hearing difficulty can affect employability and is relatively stable across states.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.58,\n      \"rationale\": \"Vision difficulty is a stable functional limitation relevant to employment.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.66,\n      \"rationale\": \"Cognitive difficulty is a strong, broadly stable indicator of employment barriers.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.44,\n      \"rationale\": \"Sex has persistent association with employment but is a sensitive demographic shortcut and not a direct cause.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.10,\n      \"rationale\": \"Race is a sensitive proxy whose association with employment is often mediated by structural and state-specific factors rather than stable individual prediction.\"\n    }\n  ]\n}",
+      "input_tokens": 1193,
+      "output_tokens": 742,
+      "total_tokens": 1935,
+      "response_id": "resp_0d9246d514debf1a006a27c2e94854819884ff33cbd8e4bbc7",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemployment`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DIS\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Disability recode.\",\n    \"values\": \"1=with a disability, 2=without a disability.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"ESP\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status of parents.\",\n    \"values\": \"ACS family/parent employment code, mainly defined for children.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"CIT\",\n    \"type\": \"categorical\",\n    \"description\": \"Citizenship status.\",\n    \"values\": \"US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"MIG\",\n    \"type\": \"categorical\",\n    \"description\": \"Mobility status one year ago.\",\n    \"values\": \"Whether and where the person lived one year ago.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"MIL\",\n    \"type\": \"categorical\",\n    \"description\": \"Military service status.\",\n    \"values\": \"ACS military service category.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"ANC\",\n    \"type\": \"categorical\",\n    \"description\": \"Ancestry recode.\",\n    \"values\": \"ACS ancestry category.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"NATIVITY\",\n    \"type\": \"categorical\",\n    \"description\": \"Nativity recode.\",\n    \"values\": \"Native-born or foreign-born.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"DEAR\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Hearing difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DEYE\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Vision difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"DREM\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Cognitive difficulty remembering, concentrating, or making decisions.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS person is employed using demographic, household, and disability-related attributes that should generalize across states.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.95,\n      \"rationale\": \"Age is one of the strongest stable predictors of labor force participation and employment.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.9,\n      \"rationale\": \"Education is highly predictive of employment and tends to generalize well across states.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.55,\n      \"rationale\": \"Marital status has some stable association with employment but is only moderately informative.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.35,\n      \"rationale\": \"Household relationship can proxy life stage and dependency, but it is indirect and less stable.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.7,\n      \"rationale\": \"Disability status is a meaningful and fairly stable predictor of employment likelihood.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.05,\n      \"rationale\": \"This variable is mainly defined for children and is not broadly relevant to adult employment prediction.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.2,\n      \"rationale\": \"Citizenship can matter for labor market access, but it is sensitive and may vary in state composition.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.15,\n      \"rationale\": \"Recent mobility may weakly relate to employment, but it is noisy and can reflect geographic artifacts.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.1,\n      \"rationale\": \"Military service is only weakly and indirectly related to current employment for the general population.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.08,\n      \"rationale\": \"Ancestry is mostly a demographic proxy and is prone to capturing population composition rather than stable employment signal.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.18,\n      \"rationale\": \"Nativity has some stable relation to labor market outcomes, but it is a sensitive proxy and not strongly causal.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.45,\n      \"rationale\": \"Hearing difficulty can affect employability and is a relatively stable functional limitation signal.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.4,\n      \"rationale\": \"Vision difficulty is a stable health-related predictor of employment, though less central than age or education.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.5,\n      \"rationale\": \"Cognitive difficulty is a meaningful and stable indicator of employment barriers.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.65,\n      \"rationale\": \"Sex has a strong association with employment patterns, though it is a sensitive demographic feature and may encode societal bias.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.22,\n      \"rationale\": \"Race can correlate with employment through structural factors, but it is a sensitive shortcut and less robust across states.\"\n    }\n  ]\n}",
+      "input_tokens": 1193,
+      "output_tokens": 759,
+      "total_tokens": 1952,
+      "response_id": "resp_08f1b34c9ec43de8006a27c2ee764c819a864f46100d994209",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemployment`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DIS\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Disability recode.\",\n    \"values\": \"1=with a disability, 2=without a disability.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"ESP\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status of parents.\",\n    \"values\": \"ACS family/parent employment code, mainly defined for children.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"CIT\",\n    \"type\": \"categorical\",\n    \"description\": \"Citizenship status.\",\n    \"values\": \"US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"MIG\",\n    \"type\": \"categorical\",\n    \"description\": \"Mobility status one year ago.\",\n    \"values\": \"Whether and where the person lived one year ago.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"MIL\",\n    \"type\": \"categorical\",\n    \"description\": \"Military service status.\",\n    \"values\": \"ACS military service category.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"ANC\",\n    \"type\": \"categorical\",\n    \"description\": \"Ancestry recode.\",\n    \"values\": \"ACS ancestry category.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"NATIVITY\",\n    \"type\": \"categorical\",\n    \"description\": \"Nativity recode.\",\n    \"values\": \"Native-born or foreign-born.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"DEAR\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Hearing difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DEYE\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Vision difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"DREM\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Cognitive difficulty remembering, concentrating, or making decisions.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS person is employed using demographic, education, health, and household context features.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.88,\n      \"rationale\": \"Age is a strong, broadly stable predictor of labor force participation and employment across states.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.95,\n      \"rationale\": \"Education is one of the most stable and informative predictors of employment status.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.58,\n      \"rationale\": \"Marital status has moderate predictive value through life-stage and household structure, but is less direct than age or education.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.42,\n      \"rationale\": \"Household relationship can proxy life stage and dependency, but is noisier and more composition-dependent across states.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.62,\n      \"rationale\": \"Disability status is a meaningful and fairly stable correlate of employment, though it is sensitive and not determinative.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.05,\n      \"rationale\": \"This is mainly defined for children and is only weakly relevant to employment for the target population.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.28,\n      \"rationale\": \"Citizenship can affect employment access, but it also reflects sensitive demographic and geography-linked composition differences.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.18,\n      \"rationale\": \"Mobility status may capture recent migration or housing instability, but it is relatively brittle and state-dependent.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.12,\n      \"rationale\": \"Military service has limited direct relevance for general employment prediction and can be sparse and population-specific.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.08,\n      \"rationale\": \"Ancestry is a weak proxy that is likely to encode demographic and regional shortcuts rather than stable employment signal.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.24,\n      \"rationale\": \"Nativity is somewhat predictive through labor market integration, but it is a sensitive proxy with uneven state distributions.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.41,\n      \"rationale\": \"Hearing difficulty can affect employability in a stable way, though the effect is moderate and health-related.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.34,\n      \"rationale\": \"Vision difficulty is relevant to employment capacity, but usually less informative than age, education, or broader disability.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.46,\n      \"rationale\": \"Cognitive difficulty is a meaningful predictor of employment limitations and tends to generalize better than geography-linked features.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.22,\n      \"rationale\": \"Sex has some association with employment patterns, but it is a sensitive attribute and may capture societal bias more than task-relevant signal.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.10,\n      \"rationale\": \"Race is a sensitive attribute and often acts as a proxy for structural and regional differences rather than stable causal employment signal.\"\n    }\n  ]\n}",
+      "input_tokens": 1193,
+      "output_tokens": 799,
+      "total_tokens": 1992,
+      "response_id": "resp_0515ea357d3d7319006a27c2f3acc08199892518a5f0f606b3",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsemployment`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DIS\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Disability recode.\",\n    \"values\": \"1=with a disability, 2=without a disability.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"ESP\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status of parents.\",\n    \"values\": \"ACS family/parent employment code, mainly defined for children.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"CIT\",\n    \"type\": \"categorical\",\n    \"description\": \"Citizenship status.\",\n    \"values\": \"US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"MIG\",\n    \"type\": \"categorical\",\n    \"description\": \"Mobility status one year ago.\",\n    \"values\": \"Whether and where the person lived one year ago.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"MIL\",\n    \"type\": \"categorical\",\n    \"description\": \"Military service status.\",\n    \"values\": \"ACS military service category.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"ANC\",\n    \"type\": \"categorical\",\n    \"description\": \"Ancestry recode.\",\n    \"values\": \"ACS ancestry category.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"NATIVITY\",\n    \"type\": \"categorical\",\n    \"description\": \"Nativity recode.\",\n    \"values\": \"Native-born or foreign-born.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"DEAR\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Hearing difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DEYE\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Vision difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"DREM\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Cognitive difficulty remembering, concentrating, or making decisions.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ACS person is employed using demographic, household, and disability-related features that may generalize across states.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.95,\n      \"rationale\": \"Age is a strong, stable predictor of labor force participation and employment across states.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.92,\n      \"rationale\": \"Educational attainment is one of the most robust predictors of employment and is broadly portable across geographies.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.45,\n      \"rationale\": \"Marital status has some association with employment but is mostly indirect and can vary with local demographics.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.35,\n      \"rationale\": \"Household relationship can proxy life stage and family structure, but it is less directly tied to employment and more context-dependent.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.78,\n      \"rationale\": \"Disability status is a meaningful and fairly stable predictor of employment, though it is sensitive and may reflect structural barriers.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.05,\n      \"rationale\": \"Employment status of parents is mainly relevant for children and is not a stable or broadly applicable predictor for this adult employment task.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.18,\n      \"rationale\": \"Citizenship can affect employment access, but it is a sensitive proxy for legal status and can be brittle across states and populations.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.22,\n      \"rationale\": \"Recent mobility may correlate with employment transitions, but it is noisy and can encode geographic movement artifacts.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.12,\n      \"rationale\": \"Military service has some labor-market relevance but is a niche and weakly portable signal for general employment prediction.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.08,\n      \"rationale\": \"Ancestry is mostly a demographic proxy with limited direct relation to employment and higher risk of shortcut learning.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.15,\n      \"rationale\": \"Nativity can matter for labor-market participation, but it is a sensitive proxy and less stable than core human-capital features.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.55,\n      \"rationale\": \"Hearing difficulty is a relevant functional limitation that can affect employment, with moderate cross-state stability.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.50,\n      \"rationale\": \"Vision difficulty is similarly relevant to employability, though the signal is moderate and can be mediated by occupation mix.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.58,\n      \"rationale\": \"Cognitive difficulty is a meaningful predictor of employment status and tends to generalize, though it is sensitive and imperfectly measured.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.40,\n      \"rationale\": \"Sex has persistent labor-market associations but is a sensitive demographic shortcut and should be downweighted for OOD robustness.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.20,\n      \"rationale\": \"Race can correlate with employment through structural factors, but it is a sensitive proxy and risks learning state-specific disparities rather than portable signal.\"\n    }\n  ]\n}",
+      "input_tokens": 1193,
+      "output_tokens": 825,
+      "total_tokens": 2018,
+      "response_id": "resp_055c1c6bff8e4f7c006a27c2fa6ee08198a20d88b02548a179",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/acs/acsemployment/rankings/score_all_prompt.txt",
+  "config": {
+    "score_samples": 5
+  }
+}

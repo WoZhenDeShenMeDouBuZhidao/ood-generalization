@@ -1,0 +1,1353 @@
+{
+  "benchmark": "acs",
+  "dataset": "acshealthinsurance",
+  "model": "gpt-5.4",
+  "method": "score_all",
+  "temperature": 0.5,
+  "created_at": "2026-06-09T18:33:27",
+  "token_usage": {
+    "num_calls": 5,
+    "input_tokens": 8545,
+    "output_tokens": 6088,
+    "total_tokens": 14633
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 21,
+        "feature": "PINCP",
+        "score_mean": 0.922,
+        "score_std": 0.02315167380558042
+      },
+      {
+        "rank": 2,
+        "feature_id": 22,
+        "feature": "ESR",
+        "score_mean": 0.898,
+        "score_std": 0.022271057451320107
+      },
+      {
+        "rank": 3,
+        "feature_id": 0,
+        "feature": "AGEP",
+        "score_mean": 0.868,
+        "score_std": 0.024819347291981736
+      },
+      {
+        "rank": 4,
+        "feature_id": 1,
+        "feature": "SCHL",
+        "score_mean": 0.714,
+        "score_std": 0.01200000000000001
+      },
+      {
+        "rank": 5,
+        "feature_id": 6,
+        "feature": "CIT",
+        "score_mean": 0.702,
+        "score_std": 0.03429285639896448
+      },
+      {
+        "rank": 6,
+        "feature_id": 4,
+        "feature": "DIS",
+        "score_mean": 0.55,
+        "score_std": 0.05366563145999495
+      },
+      {
+        "rank": 7,
+        "feature_id": 10,
+        "feature": "NATIVITY",
+        "score_mean": 0.55,
+        "score_std": 0.032863353450309954
+      },
+      {
+        "rank": 8,
+        "feature_id": 2,
+        "feature": "MAR",
+        "score_mean": 0.54,
+        "score_std": 0.03794733192202054
+      },
+      {
+        "rank": 9,
+        "feature_id": 8,
+        "feature": "MIL",
+        "score_mean": 0.424,
+        "score_std": 0.01959591794226544
+      },
+      {
+        "rank": 10,
+        "feature_id": 13,
+        "feature": "DREM",
+        "score_mean": 0.368,
+        "score_std": 0.044452221541785734
+      },
+      {
+        "rank": 11,
+        "feature_id": 11,
+        "feature": "DEAR",
+        "score_mean": 0.33,
+        "score_std": 0.039999999999999994
+      },
+      {
+        "rank": 12,
+        "feature_id": 7,
+        "feature": "MIG",
+        "score_mean": 0.316,
+        "score_std": 0.031999999999999994
+      },
+      {
+        "rank": 13,
+        "feature_id": 12,
+        "feature": "DEYE",
+        "score_mean": 0.314,
+        "score_std": 0.04498888751680798
+      },
+      {
+        "rank": 14,
+        "feature_id": 5,
+        "feature": "ESP",
+        "score_mean": 0.25,
+        "score_std": 0.07099295739719541
+      },
+      {
+        "rank": 15,
+        "feature_id": 24,
+        "feature": "FER",
+        "score_mean": 0.24600000000000002,
+        "score_std": 0.030724582991474438
+      },
+      {
+        "rank": 16,
+        "feature_id": 3,
+        "feature": "SEX",
+        "score_mean": 0.24,
+        "score_std": 0.021908902300206652
+      },
+      {
+        "rank": 17,
+        "feature_id": 9,
+        "feature": "ANC",
+        "score_mean": 0.128,
+        "score_std": 0.016000000000000004
+      },
+      {
+        "rank": 18,
+        "feature_id": 16,
+        "feature": "RACBLK",
+        "score_mean": 0.112,
+        "score_std": 0.022271057451320086
+      },
+      {
+        "rank": 19,
+        "feature_id": 14,
+        "feature": "RACAIAN",
+        "score_mean": 0.1,
+        "score_std": 0.022803508501982764
+      },
+      {
+        "rank": 20,
+        "feature_id": 15,
+        "feature": "RACASN",
+        "score_mean": 0.1,
+        "score_std": 0.02190890230020665
+      },
+      {
+        "rank": 21,
+        "feature_id": 20,
+        "feature": "RACWHT",
+        "score_mean": 0.1,
+        "score_std": 0.02190890230020665
+      },
+      {
+        "rank": 22,
+        "feature_id": 19,
+        "feature": "RACSOR",
+        "score_mean": 0.08800000000000001,
+        "score_std": 0.02227105745132009
+      },
+      {
+        "rank": 23,
+        "feature_id": 17,
+        "feature": "RACNH",
+        "score_mean": 0.062,
+        "score_std": 0.019390719429665318
+      },
+      {
+        "rank": 24,
+        "feature_id": 18,
+        "feature": "RACPI",
+        "score_mean": 0.062,
+        "score_std": 0.019390719429665318
+      },
+      {
+        "rank": 25,
+        "feature_id": 23,
+        "feature": "ST",
+        "score_mean": 0.0,
+        "score_std": 0.0
+      }
+    ],
+    "scores": [
+      {
+        "feature_id": 0,
+        "feature": "AGEP",
+        "score_mean": 0.868,
+        "score_std": 0.024819347291981736,
+        "sample_scores": [
+          0.83,
+          0.86,
+          0.9,
+          0.86,
+          0.89
+        ]
+      },
+      {
+        "feature_id": 1,
+        "feature": "SCHL",
+        "score_mean": 0.714,
+        "score_std": 0.01200000000000001,
+        "sample_scores": [
+          0.7,
+          0.7,
+          0.73,
+          0.72,
+          0.72
+        ]
+      },
+      {
+        "feature_id": 2,
+        "feature": "MAR",
+        "score_mean": 0.54,
+        "score_std": 0.03794733192202054,
+        "sample_scores": [
+          0.48,
+          0.52,
+          0.58,
+          0.58,
+          0.54
+        ]
+      },
+      {
+        "feature_id": 3,
+        "feature": "SEX",
+        "score_mean": 0.24,
+        "score_std": 0.021908902300206652,
+        "sample_scores": [
+          0.22,
+          0.24,
+          0.22,
+          0.24,
+          0.28
+        ]
+      },
+      {
+        "feature_id": 4,
+        "feature": "DIS",
+        "score_mean": 0.55,
+        "score_std": 0.05366563145999495,
+        "sample_scores": [
+          0.52,
+          0.58,
+          0.64,
+          0.52,
+          0.49
+        ]
+      },
+      {
+        "feature_id": 5,
+        "feature": "ESP",
+        "score_mean": 0.25,
+        "score_std": 0.07099295739719541,
+        "sample_scores": [
+          0.18,
+          0.18,
+          0.34,
+          0.33,
+          0.22
+        ]
+      },
+      {
+        "feature_id": 6,
+        "feature": "CIT",
+        "score_mean": 0.702,
+        "score_std": 0.03429285639896448,
+        "sample_scores": [
+          0.76,
+          0.72,
+          0.67,
+          0.69,
+          0.67
+        ]
+      },
+      {
+        "feature_id": 7,
+        "feature": "MIG",
+        "score_mean": 0.316,
+        "score_std": 0.031999999999999994,
+        "sample_scores": [
+          0.28,
+          0.33,
+          0.29,
+          0.37,
+          0.31
+        ]
+      },
+      {
+        "feature_id": 8,
+        "feature": "MIL",
+        "score_mean": 0.424,
+        "score_std": 0.01959591794226544,
+        "sample_scores": [
+          0.41,
+          0.41,
+          0.46,
+          0.43,
+          0.41
+        ]
+      },
+      {
+        "feature_id": 9,
+        "feature": "ANC",
+        "score_mean": 0.128,
+        "score_std": 0.016000000000000004,
+        "sample_scores": [
+          0.12,
+          0.12,
+          0.12,
+          0.16,
+          0.12
+        ]
+      },
+      {
+        "feature_id": 10,
+        "feature": "NATIVITY",
+        "score_mean": 0.55,
+        "score_std": 0.032863353450309954,
+        "sample_scores": [
+          0.58,
+          0.55,
+          0.49,
+          0.55,
+          0.58
+        ]
+      },
+      {
+        "feature_id": 11,
+        "feature": "DEAR",
+        "score_mean": 0.33,
+        "score_std": 0.039999999999999994,
+        "sample_scores": [
+          0.3,
+          0.36,
+          0.38,
+          0.34,
+          0.27
+        ]
+      },
+      {
+        "feature_id": 12,
+        "feature": "DEYE",
+        "score_mean": 0.314,
+        "score_std": 0.04498888751680798,
+        "sample_scores": [
+          0.29,
+          0.34,
+          0.37,
+          0.33,
+          0.24
+        ]
+      },
+      {
+        "feature_id": 13,
+        "feature": "DREM",
+        "score_mean": 0.368,
+        "score_std": 0.044452221541785734,
+        "sample_scores": [
+          0.34,
+          0.39,
+          0.43,
+          0.38,
+          0.3
+        ]
+      },
+      {
+        "feature_id": 14,
+        "feature": "RACAIAN",
+        "score_mean": 0.1,
+        "score_std": 0.022803508501982764,
+        "sample_scores": [
+          0.08,
+          0.08,
+          0.09,
+          0.14,
+          0.11
+        ]
+      },
+      {
+        "feature_id": 15,
+        "feature": "RACASN",
+        "score_mean": 0.1,
+        "score_std": 0.02190890230020665,
+        "sample_scores": [
+          0.08,
+          0.08,
+          0.1,
+          0.14,
+          0.1
+        ]
+      },
+      {
+        "feature_id": 16,
+        "feature": "RACBLK",
+        "score_mean": 0.112,
+        "score_std": 0.022271057451320086,
+        "sample_scores": [
+          0.09,
+          0.09,
+          0.11,
+          0.15,
+          0.12
+        ]
+      },
+      {
+        "feature_id": 17,
+        "feature": "RACNH",
+        "score_mean": 0.062,
+        "score_std": 0.019390719429665318,
+        "sample_scores": [
+          0.05,
+          0.05,
+          0.05,
+          0.1,
+          0.06
+        ]
+      },
+      {
+        "feature_id": 18,
+        "feature": "RACPI",
+        "score_mean": 0.062,
+        "score_std": 0.019390719429665318,
+        "sample_scores": [
+          0.05,
+          0.05,
+          0.05,
+          0.1,
+          0.06
+        ]
+      },
+      {
+        "feature_id": 19,
+        "feature": "RACSOR",
+        "score_mean": 0.08800000000000001,
+        "score_std": 0.02227105745132009,
+        "sample_scores": [
+          0.07,
+          0.07,
+          0.08,
+          0.13,
+          0.09
+        ]
+      },
+      {
+        "feature_id": 20,
+        "feature": "RACWHT",
+        "score_mean": 0.1,
+        "score_std": 0.02190890230020665,
+        "sample_scores": [
+          0.08,
+          0.08,
+          0.1,
+          0.14,
+          0.1
+        ]
+      },
+      {
+        "feature_id": 21,
+        "feature": "PINCP",
+        "score_mean": 0.922,
+        "score_std": 0.02315167380558042,
+        "sample_scores": [
+          0.9,
+          0.91,
+          0.95,
+          0.9,
+          0.95
+        ]
+      },
+      {
+        "feature_id": 22,
+        "feature": "ESR",
+        "score_mean": 0.898,
+        "score_std": 0.022271057451320107,
+        "sample_scores": [
+          0.88,
+          0.88,
+          0.92,
+          0.88,
+          0.93
+        ]
+      },
+      {
+        "feature_id": 23,
+        "feature": "ST",
+        "score_mean": 0.0,
+        "score_std": 0.0,
+        "sample_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "feature_id": 24,
+        "feature": "FER",
+        "score_mean": 0.24600000000000002,
+        "score_std": 0.030724582991474438,
+        "sample_scores": [
+          0.2,
+          0.22,
+          0.27,
+          0.28,
+          0.26
+        ]
+      }
+    ],
+    "samples": [
+      {
+        "task_summary": "Predict whether a person has health insurance coverage using ACS demographic, socioeconomic, and household-related attributes.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.83,
+            "rationale": "Age is a strong, broadly stable driver of insurance coverage through eligibility, dependency, and life-stage effects across states.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.7,
+            "rationale": "Education is a robust proxy for socioeconomic status and job quality, which generally predicts insurance coverage across geographies.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.48,
+            "rationale": "Marital status is moderately informative via household pooling, spousal coverage, and family structure, though less direct than age or income.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.22,
+            "rationale": "Sex has some association with coverage patterns but is relatively weak and risks encoding demographic shortcuts rather than stable mechanisms.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.52,
+            "rationale": "Disability status can affect public insurance eligibility and labor force attachment, making it moderately stable and relevant.",
+            "feature": "DIS"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.18,
+            "rationale": "Parental employment can matter for children’s coverage but is narrowly applicable and less uniformly useful across the full sample.",
+            "feature": "ESP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.76,
+            "rationale": "Citizenship status strongly and stably affects insurance access and eligibility, especially for noncitizens versus citizens.",
+            "feature": "CIT"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.28,
+            "rationale": "Recent mobility may correlate with coverage disruptions, but effects are indirect and can vary with local conditions.",
+            "feature": "MIG"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.41,
+            "rationale": "Military service status can indicate access to VA or TRICARE-related coverage, giving moderate but not universal predictive value.",
+            "feature": "MIL"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.12,
+            "rationale": "Ancestry is a weak and potentially brittle demographic proxy with limited direct semantic connection to insurance status.",
+            "feature": "ANC"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.58,
+            "rationale": "Nativity captures broad differences in eligibility and labor-market integration, though it overlaps with citizenship and can encode demographic shortcuts.",
+            "feature": "NATIVITY"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.3,
+            "rationale": "Hearing difficulty may modestly track disability-related eligibility and age, but adds limited stable signal beyond other health and disability variables.",
+            "feature": "DEAR"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.29,
+            "rationale": "Vision difficulty has a similar moderate-to-weak relationship through disability and age, with limited incremental stable usefulness.",
+            "feature": "DEYE"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.34,
+            "rationale": "Cognitive difficulty may be somewhat more predictive than other impairment indicators because it relates to disability eligibility and labor-force detachment.",
+            "feature": "DREM"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.08,
+            "rationale": "Race indicators can correlate with coverage through structural inequities, but they are sensitive and prone to unstable demographic shortcutting across states.",
+            "feature": "RACAIAN"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.08,
+            "rationale": "Race indicators can correlate with coverage through structural inequities, but they are sensitive and prone to unstable demographic shortcutting across states.",
+            "feature": "RACASN"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.09,
+            "rationale": "Race indicators can correlate with coverage through structural inequities, but they are sensitive and prone to unstable demographic shortcutting across states.",
+            "feature": "RACBLK"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.05,
+            "rationale": "This race indicator is highly sparse and likely especially brittle across states, with little stable marginal utility.",
+            "feature": "RACNH"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.05,
+            "rationale": "This race indicator is highly sparse and likely especially brittle across states, with little stable marginal utility.",
+            "feature": "RACPI"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.07,
+            "rationale": "Some-other-race status may correlate with coverage through reporting and demographic composition, but it is a sensitive shortcut with weak direct semantics.",
+            "feature": "RACSOR"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.08,
+            "rationale": "Race indicators can correlate with coverage through structural inequities, but they are sensitive and prone to unstable demographic shortcutting across states.",
+            "feature": "RACWHT"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.9,
+            "rationale": "Personal income is one of the most direct and stable predictors of insurance coverage through affordability, employment quality, and public-program eligibility.",
+            "feature": "PINCP"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.88,
+            "rationale": "Employment status is a highly stable predictor because employer-sponsored insurance and labor-force attachment are central mechanisms for coverage.",
+            "feature": "ESR"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.0,
+            "rationale": "State code directly encodes the domain and likely captures state-specific policy and distributional artifacts, so it should be heavily penalized for OOD generalization.",
+            "feature": "ST"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.2,
+            "rationale": "Recent childbirth can affect insurance through pregnancy-related coverage and household transitions, but applies narrowly and may be state-policy sensitive.",
+            "feature": "FER"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a person has health insurance coverage from ACS demographic and socioeconomic attributes, aiming for relationships that generalize across states.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.86,
+            "rationale": "Age is a strong, broadly stable driver of insurance through child eligibility, young-adult transitions, work attachment, and Medicare eligibility.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.7,
+            "rationale": "Education is a robust cross-state proxy for socioeconomic status and job quality, both strongly related to insurance coverage.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.52,
+            "rationale": "Marital status can matter via spouse coverage and household structure, but effects are weaker and partly mediated by age and income.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.24,
+            "rationale": "Sex has some real association with coverage patterns but is relatively weak and risks encoding demographic shortcuts rather than stable mechanisms.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.58,
+            "rationale": "Disability status is meaningfully related to public insurance eligibility and labor-force attachment, with fairly stable semantics across states.",
+            "feature": "DIS"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.18,
+            "rationale": "Parental employment mainly applies to children and is less broadly useful marginally across the full population.",
+            "feature": "ESP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.72,
+            "rationale": "Citizenship status is a strong and semantically direct predictor because eligibility and take-up of coverage differ systematically by citizenship.",
+            "feature": "CIT"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.33,
+            "rationale": "Recent mobility may correlate with coverage disruptions, but it is indirect and can reflect state-specific migration patterns.",
+            "feature": "MIG"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.41,
+            "rationale": "Military service can indicate access to VA or TRICARE-related coverage, though relevance is limited to a smaller subgroup.",
+            "feature": "MIL"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.12,
+            "rationale": "Ancestry is a weak and potentially brittle cultural or geographic proxy rather than a stable direct cause of insurance status.",
+            "feature": "ANC"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.55,
+            "rationale": "Nativity captures broad differences in eligibility and access, but much of its signal overlaps with citizenship and can reflect demographic composition.",
+            "feature": "NATIVITY"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.36,
+            "rationale": "Hearing difficulty may correlate with disability-related public coverage and age, but adds only moderate stable marginal signal.",
+            "feature": "DEAR"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.34,
+            "rationale": "Vision difficulty has similar moderate relevance through disability and age, but is not as directly predictive as core socioeconomic variables.",
+            "feature": "DEYE"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.39,
+            "rationale": "Cognitive difficulty is somewhat more informative than other functional limitations because it can strongly affect work and public program eligibility.",
+            "feature": "DREM"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.08,
+            "rationale": "Race indicators can correlate with insurance through structural inequities, but they are sensitive and prone to encoding demographic shortcuts and state composition.",
+            "feature": "RACAIAN"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.08,
+            "rationale": "Race indicators can correlate with insurance through structural inequities, but they are sensitive and prone to encoding demographic shortcuts and state composition.",
+            "feature": "RACASN"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.09,
+            "rationale": "Race indicators can correlate with insurance through structural inequities, but they are sensitive and prone to encoding demographic shortcuts and state composition.",
+            "feature": "RACBLK"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.05,
+            "rationale": "This race indicator is especially sparse and likely to act as a brittle subgroup or geography proxy rather than stable general signal.",
+            "feature": "RACNH"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.05,
+            "rationale": "This race indicator is especially sparse and likely to act as a brittle subgroup or geography proxy rather than stable general signal.",
+            "feature": "RACPI"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.07,
+            "rationale": "Some-other-race status may track reporting patterns and local demographics more than stable mechanisms of insurance coverage.",
+            "feature": "RACSOR"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.08,
+            "rationale": "Race indicators can correlate with insurance through structural inequities, but they are sensitive and prone to encoding demographic shortcuts and state composition.",
+            "feature": "RACWHT"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.91,
+            "rationale": "Personal income is one of the strongest stable predictors because insurance access and public-program eligibility are tightly linked to economic resources.",
+            "feature": "PINCP"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.88,
+            "rationale": "Employment status is highly predictive across states because employer-sponsored coverage and labor-force attachment are central mechanisms for insurance.",
+            "feature": "ESR"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.0,
+            "rationale": "State directly encodes the domain and would create severe shortcutting and poor out-of-distribution generalization.",
+            "feature": "ST"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.22,
+            "rationale": "Recent childbirth can affect insurance through pregnancy-related coverage, but it is narrow in scope and partly captured by age and sex.",
+            "feature": "FER"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a person has health insurance coverage using individual ACS characteristics while favoring signals that should generalize across states.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.9,
+            "rationale": "Age is a strong and broadly stable determinant of insurance through child eligibility, working-age coverage patterns, and near-elderly/elderly public coverage.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.73,
+            "rationale": "Education is a robust cross-state proxy for labor-market attachment, income, and access to employer-sponsored insurance.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.58,
+            "rationale": "Marital status is moderately predictive through spousal coverage and household structure, with fairly stable semantics across states.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.22,
+            "rationale": "Sex has some association with coverage patterns but is weaker and risks acting as a demographic shortcut rather than a core causal signal.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.64,
+            "rationale": "Disability status is meaningfully related to public insurance eligibility and healthcare need in a way that should generalize.",
+            "feature": "DIS"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.34,
+            "rationale": "Parental employment can matter for dependent coverage, especially for children, but applicability is limited and coding is niche.",
+            "feature": "ESP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.67,
+            "rationale": "Citizenship status strongly affects eligibility and take-up of public and private coverage and should remain predictive across states.",
+            "feature": "CIT"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.29,
+            "rationale": "Recent mobility may correlate with temporary coverage disruption, but effects are indirect and can vary with local migration patterns.",
+            "feature": "MIG"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.46,
+            "rationale": "Military service status is relevant because veterans and active-duty-related populations have distinctive coverage pathways, though it is not universal.",
+            "feature": "MIL"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.12,
+            "rationale": "Ancestry is a weak, socially mediated proxy that is likely to encode brittle demographic composition rather than stable insurance mechanisms.",
+            "feature": "ANC"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.49,
+            "rationale": "Nativity captures broad differences in eligibility, labor-market position, and access, but overlaps with citizenship and can reflect demographic shortcuts.",
+            "feature": "NATIVITY"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.38,
+            "rationale": "Hearing difficulty may modestly predict coverage through disability-related need and program eligibility, but adds limited unique stable signal.",
+            "feature": "DEAR"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.37,
+            "rationale": "Vision difficulty has similar moderate relevance via disability and healthcare need, though likely redundant with broader disability measures.",
+            "feature": "DEYE"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.43,
+            "rationale": "Cognitive difficulty is somewhat more informative than other functional limitations because it can track disability-related public coverage pathways.",
+            "feature": "DREM"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.09,
+            "rationale": "This race indicator may correlate with coverage disparities but is highly sensitive and vulnerable to state-specific demographic composition effects.",
+            "feature": "RACAIAN"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.1,
+            "rationale": "This race indicator is mostly a demographic shortcut with unstable transport across states despite some association with coverage disparities.",
+            "feature": "RACASN"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.11,
+            "rationale": "This race indicator may predict observed disparities but is not a stable mechanistic feature and risks encoding structural state-specific patterns.",
+            "feature": "RACBLK"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.05,
+            "rationale": "This race indicator is sparse and highly geography-linked, making it especially brittle for out-of-state generalization.",
+            "feature": "RACNH"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.05,
+            "rationale": "This race indicator is sparse and likely to reflect localized demographic artifacts more than stable predictive structure.",
+            "feature": "RACPI"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.08,
+            "rationale": "This race indicator may capture reporting heterogeneity and demographic composition rather than portable insurance determinants.",
+            "feature": "RACSOR"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.1,
+            "rationale": "This race indicator can correlate with coverage rates but is primarily a sensitive demographic shortcut with limited stable causal meaning.",
+            "feature": "RACWHT"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.95,
+            "rationale": "Personal income is one of the strongest broadly stable predictors because insurance access and public-program eligibility are tightly tied to resources.",
+            "feature": "PINCP"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.92,
+            "rationale": "Employment status is a core determinant of employer-sponsored insurance and economic attachment, making it highly predictive across states.",
+            "feature": "ESR"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.0,
+            "rationale": "State directly encodes geography and likely the train-test domain, so it is a classic brittle shortcut for out-of-distribution generalization.",
+            "feature": "ST"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.27,
+            "rationale": "Recent childbirth can affect insurance through pregnancy-related coverage and family status, but applies narrowly and may be state-policy sensitive.",
+            "feature": "FER"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a person has health insurance coverage from ACS demographic, socioeconomic, and household-related attributes.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.86,
+            "rationale": "Age is a strong, broadly stable driver of insurance through child coverage, working-age employment patterns, and near-elderly/elderly public coverage eligibility.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.72,
+            "rationale": "Education is a robust cross-state proxy for job quality, income stability, and ability to obtain coverage, with relatively stable semantics.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.58,
+            "rationale": "Marital status often affects access to spousal or family coverage and household stability, though effects are weaker than age or income.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.24,
+            "rationale": "Sex may correlate with coverage through labor force and family patterns, but it is a relatively weak predictor and risks demographic shortcutting.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.52,
+            "rationale": "Disability status is meaningfully related to public insurance eligibility and labor market attachment, with reasonably stable semantics across states.",
+            "feature": "DIS"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.33,
+            "rationale": "Parental employment can matter for children's coverage, but it is only relevant for a subset of people and may be noisy outside that group.",
+            "feature": "ESP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.69,
+            "rationale": "Citizenship status is strongly tied to eligibility and take-up of public and employer coverage in a way that is generally stable across states.",
+            "feature": "CIT"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.37,
+            "rationale": "Recent mobility can affect continuity of coverage and administrative enrollment, but it may also capture state-specific migration patterns.",
+            "feature": "MIG"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.43,
+            "rationale": "Military service status can indicate access to VA, TRICARE, or related coverage, though its relevance is limited to a smaller subgroup.",
+            "feature": "MIL"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.16,
+            "rationale": "Ancestry is a coarse cultural and demographic proxy with substantial risk of encoding brittle group-specific patterns rather than stable causal signal.",
+            "feature": "ANC"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.55,
+            "rationale": "Nativity is relevant to eligibility, labor market position, and enrollment barriers, but overlaps with citizenship and can act as a demographic shortcut.",
+            "feature": "NATIVITY"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.34,
+            "rationale": "Hearing difficulty may modestly predict insurance through disability-related eligibility and health needs, but adds limited unique stable signal.",
+            "feature": "DEAR"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.33,
+            "rationale": "Vision difficulty has some stable association with disability and healthcare need, but likely contributes only modestly beyond broader disability indicators.",
+            "feature": "DEYE"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.38,
+            "rationale": "Cognitive difficulty can relate to disability-based coverage and reduced employment, offering somewhat stronger signal than narrower impairment indicators.",
+            "feature": "DREM"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.14,
+            "rationale": "Race indicators can correlate with insurance due to structural inequities, but they are sensitive and prone to shortcutting and state-specific composition shifts.",
+            "feature": "RACAIAN"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.14,
+            "rationale": "Race indicators can correlate with insurance due to structural inequities, but they are sensitive and prone to shortcutting and state-specific composition shifts.",
+            "feature": "RACASN"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.15,
+            "rationale": "Race indicators can correlate with insurance due to structural inequities, but they are sensitive and prone to shortcutting and state-specific composition shifts.",
+            "feature": "RACBLK"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.1,
+            "rationale": "This race indicator is highly sparse and likely to encode unstable geographic composition more than broadly transportable predictive signal.",
+            "feature": "RACNH"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.1,
+            "rationale": "This race indicator is highly sparse and likely to encode unstable geographic composition more than broadly transportable predictive signal.",
+            "feature": "RACPI"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.13,
+            "rationale": "Some-other-race status may correlate with coverage gaps, but it is sensitive and likely to reflect shifting demographic composition across states.",
+            "feature": "RACSOR"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.14,
+            "rationale": "Race indicators can correlate with insurance due to structural inequities, but they are sensitive and prone to shortcutting and state-specific composition shifts.",
+            "feature": "RACWHT"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.9,
+            "rationale": "Personal income is one of the most stable and directly relevant predictors of insurance access, affordability, and public-program eligibility.",
+            "feature": "PINCP"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.88,
+            "rationale": "Employment status is a core determinant of employer-sponsored insurance and strongly predicts coverage in a broadly stable way.",
+            "feature": "ESR"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.0,
+            "rationale": "State directly encodes the domain and policy environment, making it a high-risk shortcut for out-of-distribution generalization.",
+            "feature": "ST"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.28,
+            "rationale": "Recent childbirth can affect insurance through pregnancy-related coverage and family enrollment, but applies narrowly and may be entangled with sex and age.",
+            "feature": "FER"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a person has health insurance coverage from ACS demographic and socioeconomic attributes, aiming for relationships that generalize across states.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.89,
+            "rationale": "Age is a strong, broadly stable driver of insurance eligibility and coverage patterns across states.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.72,
+            "rationale": "Education is a robust socioeconomic predictor of employment quality, income, and insurance take-up across states.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.54,
+            "rationale": "Marital status is moderately useful because spouse-linked coverage and household structure affect insurance access.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.28,
+            "rationale": "Sex has some association with coverage through labor force and family patterns, but effects are weaker and less direct.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.49,
+            "rationale": "Disability status can affect public coverage eligibility and labor market attachment in a fairly stable way.",
+            "feature": "DIS"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.22,
+            "rationale": "Parent employment status is mainly relevant for children and is less broadly informative across the full sample.",
+            "feature": "ESP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.67,
+            "rationale": "Citizenship status is a strong predictor because eligibility, take-up, and employer coverage differ systematically by citizenship.",
+            "feature": "CIT"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.31,
+            "rationale": "Recent mobility may correlate with temporary coverage disruption, but it is indirect and can reflect state-specific migration patterns.",
+            "feature": "MIG"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.41,
+            "rationale": "Military service can predict access to VA, TRICARE, or related coverage, though only for a limited subpopulation.",
+            "feature": "MIL"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.12,
+            "rationale": "Ancestry is a sensitive, high-cardinality proxy with likely brittle state-specific composition effects rather than stable causal signal.",
+            "feature": "ANC"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.58,
+            "rationale": "Nativity captures broad differences in eligibility, labor market position, and coverage access that should generalize reasonably well.",
+            "feature": "NATIVITY"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.27,
+            "rationale": "Hearing difficulty may weakly indicate disability-related coverage pathways, but adds limited stable information beyond disability.",
+            "feature": "DEAR"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.24,
+            "rationale": "Vision difficulty is a weak secondary disability signal with limited marginal value for insurance status.",
+            "feature": "DEYE"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.3,
+            "rationale": "Cognitive difficulty may modestly predict public coverage eligibility and reduced labor force attachment.",
+            "feature": "DREM"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.11,
+            "rationale": "Race indicators can correlate with coverage due to structural inequities, but they are sensitive and prone to demographic shortcutting.",
+            "feature": "RACAIAN"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.1,
+            "rationale": "Race indicators may carry predictive signal but are likely to encode subgroup composition and geography rather than stable mechanisms.",
+            "feature": "RACASN"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.12,
+            "rationale": "This race indicator may predict disparities in coverage, yet it is sensitive and vulnerable to shortcut learning across states.",
+            "feature": "RACBLK"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.06,
+            "rationale": "Very sparse race-category indicator is likely unstable and highly geography-dependent in addition to being sensitive.",
+            "feature": "RACNH"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.06,
+            "rationale": "Very sparse race-category indicator is likely unstable and highly geography-dependent in addition to being sensitive.",
+            "feature": "RACPI"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.09,
+            "rationale": "Some-other-race status may correlate with coverage gaps, but it is a sensitive proxy and likely brittle across states.",
+            "feature": "RACSOR"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.1,
+            "rationale": "White race indicator may carry disparity-related signal, but it is still a sensitive demographic shortcut with limited OOD reliability.",
+            "feature": "RACWHT"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.95,
+            "rationale": "Personal income is one of the most stable and directly relevant predictors of insurance affordability, eligibility, and job quality.",
+            "feature": "PINCP"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.93,
+            "rationale": "Employment status is a core determinant of employer-sponsored coverage and strongly predicts insurance status across states.",
+            "feature": "ESR"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.0,
+            "rationale": "State directly encodes the domain and invites severe shortcutting to state-specific policy and distribution differences.",
+            "feature": "ST"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.26,
+            "rationale": "Recent childbirth can affect insurance through pregnancy-related coverage and household changes, but applies narrowly and unevenly.",
+            "feature": "FER"
+          }
+        ]
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acshealthinsurance`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DIS\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Disability recode.\",\n    \"values\": \"1=with a disability, 2=without a disability.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"ESP\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status of parents.\",\n    \"values\": \"ACS family/parent employment code, mainly defined for children.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"CIT\",\n    \"type\": \"categorical\",\n    \"description\": \"Citizenship status.\",\n    \"values\": \"US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"MIG\",\n    \"type\": \"categorical\",\n    \"description\": \"Mobility status one year ago.\",\n    \"values\": \"Whether and where the person lived one year ago.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"MIL\",\n    \"type\": \"categorical\",\n    \"description\": \"Military service status.\",\n    \"values\": \"ACS military service category.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"ANC\",\n    \"type\": \"categorical\",\n    \"description\": \"Ancestry recode.\",\n    \"values\": \"ACS ancestry category.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"NATIVITY\",\n    \"type\": \"categorical\",\n    \"description\": \"Nativity recode.\",\n    \"values\": \"Native-born or foreign-born.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"DEAR\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Hearing difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DEYE\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Vision difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"DREM\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Cognitive difficulty remembering, concentrating, or making decisions.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"RACAIAN\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"American Indian or Alaska Native race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"RACASN\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Asian race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"RACBLK\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Black or African American race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"RACNH\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Native Hawaiian race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"RACPI\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Pacific Islander race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"RACSOR\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Some other race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"RACWHT\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"White race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"PINCP\",\n    \"type\": \"continuous\",\n    \"description\": \"Total person's income.\",\n    \"values\": \"Dollar income amount; may be negative, zero, or positive.\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"ESR\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status recode.\",\n    \"values\": \"Employed, unemployed, armed forces, or not in labor force categories.\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"ST\",\n    \"type\": \"categorical\",\n    \"description\": \"State code.\",\n    \"values\": \"Geographic state identifier; likely encodes train/test domain.\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"FER\",\n    \"type\": \"categorical\",\n    \"description\": \"Gave birth to a child within the past 12 months.\",\n    \"values\": \"ACS fertility code; includes not applicable categories.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\"task_summary\":\"Predict whether a person has health insurance coverage using ACS demographic, socioeconomic, and household-related attributes.\",\"scores\":[{\"feature_id\":0,\"score\":0.83,\"rationale\":\"Age is a strong, broadly stable driver of insurance coverage through eligibility, dependency, and life-stage effects across states.\"},{\"feature_id\":1,\"score\":0.7,\"rationale\":\"Education is a robust proxy for socioeconomic status and job quality, which generally predicts insurance coverage across geographies.\"},{\"feature_id\":2,\"score\":0.48,\"rationale\":\"Marital status is moderately informative via household pooling, spousal coverage, and family structure, though less direct than age or income.\"},{\"feature_id\":3,\"score\":0.22,\"rationale\":\"Sex has some association with coverage patterns but is relatively weak and risks encoding demographic shortcuts rather than stable mechanisms.\"},{\"feature_id\":4,\"score\":0.52,\"rationale\":\"Disability status can affect public insurance eligibility and labor force attachment, making it moderately stable and relevant.\"},{\"feature_id\":5,\"score\":0.18,\"rationale\":\"Parental employment can matter for children’s coverage but is narrowly applicable and less uniformly useful across the full sample.\"},{\"feature_id\":6,\"score\":0.76,\"rationale\":\"Citizenship status strongly and stably affects insurance access and eligibility, especially for noncitizens versus citizens.\"},{\"feature_id\":7,\"score\":0.28,\"rationale\":\"Recent mobility may correlate with coverage disruptions, but effects are indirect and can vary with local conditions.\"},{\"feature_id\":8,\"score\":0.41,\"rationale\":\"Military service status can indicate access to VA or TRICARE-related coverage, giving moderate but not universal predictive value.\"},{\"feature_id\":9,\"score\":0.12,\"rationale\":\"Ancestry is a weak and potentially brittle demographic proxy with limited direct semantic connection to insurance status.\"},{\"feature_id\":10,\"score\":0.58,\"rationale\":\"Nativity captures broad differences in eligibility and labor-market integration, though it overlaps with citizenship and can encode demographic shortcuts.\"},{\"feature_id\":11,\"score\":0.3,\"rationale\":\"Hearing difficulty may modestly track disability-related eligibility and age, but adds limited stable signal beyond other health and disability variables.\"},{\"feature_id\":12,\"score\":0.29,\"rationale\":\"Vision difficulty has a similar moderate-to-weak relationship through disability and age, with limited incremental stable usefulness.\"},{\"feature_id\":13,\"score\":0.34,\"rationale\":\"Cognitive difficulty may be somewhat more predictive than other impairment indicators because it relates to disability eligibility and labor-force detachment.\"},{\"feature_id\":14,\"score\":0.08,\"rationale\":\"Race indicators can correlate with coverage through structural inequities, but they are sensitive and prone to unstable demographic shortcutting across states.\"},{\"feature_id\":15,\"score\":0.08,\"rationale\":\"Race indicators can correlate with coverage through structural inequities, but they are sensitive and prone to unstable demographic shortcutting across states.\"},{\"feature_id\":16,\"score\":0.09,\"rationale\":\"Race indicators can correlate with coverage through structural inequities, but they are sensitive and prone to unstable demographic shortcutting across states.\"},{\"feature_id\":17,\"score\":0.05,\"rationale\":\"This race indicator is highly sparse and likely especially brittle across states, with little stable marginal utility.\"},{\"feature_id\":18,\"score\":0.05,\"rationale\":\"This race indicator is highly sparse and likely especially brittle across states, with little stable marginal utility.\"},{\"feature_id\":19,\"score\":0.07,\"rationale\":\"Some-other-race status may correlate with coverage through reporting and demographic composition, but it is a sensitive shortcut with weak direct semantics.\"},{\"feature_id\":20,\"score\":0.08,\"rationale\":\"Race indicators can correlate with coverage through structural inequities, but they are sensitive and prone to unstable demographic shortcutting across states.\"},{\"feature_id\":21,\"score\":0.9,\"rationale\":\"Personal income is one of the most direct and stable predictors of insurance coverage through affordability, employment quality, and public-program eligibility.\"},{\"feature_id\":22,\"score\":0.88,\"rationale\":\"Employment status is a highly stable predictor because employer-sponsored insurance and labor-force attachment are central mechanisms for coverage.\"},{\"feature_id\":23,\"score\":0.0,\"rationale\":\"State code directly encodes the domain and likely captures state-specific policy and distributional artifacts, so it should be heavily penalized for OOD generalization.\"},{\"feature_id\":24,\"score\":0.2,\"rationale\":\"Recent childbirth can affect insurance through pregnancy-related coverage and household transitions, but applies narrowly and may be state-policy sensitive.\"}]}",
+      "input_tokens": 1709,
+      "output_tokens": 980,
+      "total_tokens": 2689,
+      "response_id": "resp_01f3165f0b08a26e006a27eba4baf8819abd7246ed724e377d",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acshealthinsurance`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DIS\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Disability recode.\",\n    \"values\": \"1=with a disability, 2=without a disability.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"ESP\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status of parents.\",\n    \"values\": \"ACS family/parent employment code, mainly defined for children.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"CIT\",\n    \"type\": \"categorical\",\n    \"description\": \"Citizenship status.\",\n    \"values\": \"US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"MIG\",\n    \"type\": \"categorical\",\n    \"description\": \"Mobility status one year ago.\",\n    \"values\": \"Whether and where the person lived one year ago.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"MIL\",\n    \"type\": \"categorical\",\n    \"description\": \"Military service status.\",\n    \"values\": \"ACS military service category.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"ANC\",\n    \"type\": \"categorical\",\n    \"description\": \"Ancestry recode.\",\n    \"values\": \"ACS ancestry category.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"NATIVITY\",\n    \"type\": \"categorical\",\n    \"description\": \"Nativity recode.\",\n    \"values\": \"Native-born or foreign-born.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"DEAR\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Hearing difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DEYE\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Vision difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"DREM\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Cognitive difficulty remembering, concentrating, or making decisions.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"RACAIAN\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"American Indian or Alaska Native race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"RACASN\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Asian race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"RACBLK\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Black or African American race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"RACNH\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Native Hawaiian race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"RACPI\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Pacific Islander race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"RACSOR\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Some other race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"RACWHT\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"White race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"PINCP\",\n    \"type\": \"continuous\",\n    \"description\": \"Total person's income.\",\n    \"values\": \"Dollar income amount; may be negative, zero, or positive.\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"ESR\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status recode.\",\n    \"values\": \"Employed, unemployed, armed forces, or not in labor force categories.\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"ST\",\n    \"type\": \"categorical\",\n    \"description\": \"State code.\",\n    \"values\": \"Geographic state identifier; likely encodes train/test domain.\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"FER\",\n    \"type\": \"categorical\",\n    \"description\": \"Gave birth to a child within the past 12 months.\",\n    \"values\": \"ACS fertility code; includes not applicable categories.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a person has health insurance coverage from ACS demographic and socioeconomic attributes, aiming for relationships that generalize across states.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.86,\n      \"rationale\": \"Age is a strong, broadly stable driver of insurance through child eligibility, young-adult transitions, work attachment, and Medicare eligibility.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.7,\n      \"rationale\": \"Education is a robust cross-state proxy for socioeconomic status and job quality, both strongly related to insurance coverage.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.52,\n      \"rationale\": \"Marital status can matter via spouse coverage and household structure, but effects are weaker and partly mediated by age and income.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.24,\n      \"rationale\": \"Sex has some real association with coverage patterns but is relatively weak and risks encoding demographic shortcuts rather than stable mechanisms.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.58,\n      \"rationale\": \"Disability status is meaningfully related to public insurance eligibility and labor-force attachment, with fairly stable semantics across states.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.18,\n      \"rationale\": \"Parental employment mainly applies to children and is less broadly useful marginally across the full population.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.72,\n      \"rationale\": \"Citizenship status is a strong and semantically direct predictor because eligibility and take-up of coverage differ systematically by citizenship.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.33,\n      \"rationale\": \"Recent mobility may correlate with coverage disruptions, but it is indirect and can reflect state-specific migration patterns.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.41,\n      \"rationale\": \"Military service can indicate access to VA or TRICARE-related coverage, though relevance is limited to a smaller subgroup.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.12,\n      \"rationale\": \"Ancestry is a weak and potentially brittle cultural or geographic proxy rather than a stable direct cause of insurance status.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.55,\n      \"rationale\": \"Nativity captures broad differences in eligibility and access, but much of its signal overlaps with citizenship and can reflect demographic composition.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.36,\n      \"rationale\": \"Hearing difficulty may correlate with disability-related public coverage and age, but adds only moderate stable marginal signal.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.34,\n      \"rationale\": \"Vision difficulty has similar moderate relevance through disability and age, but is not as directly predictive as core socioeconomic variables.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.39,\n      \"rationale\": \"Cognitive difficulty is somewhat more informative than other functional limitations because it can strongly affect work and public program eligibility.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.08,\n      \"rationale\": \"Race indicators can correlate with insurance through structural inequities, but they are sensitive and prone to encoding demographic shortcuts and state composition.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.08,\n      \"rationale\": \"Race indicators can correlate with insurance through structural inequities, but they are sensitive and prone to encoding demographic shortcuts and state composition.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.09,\n      \"rationale\": \"Race indicators can correlate with insurance through structural inequities, but they are sensitive and prone to encoding demographic shortcuts and state composition.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.05,\n      \"rationale\": \"This race indicator is especially sparse and likely to act as a brittle subgroup or geography proxy rather than stable general signal.\"\n    },\n    {\n      \"feature_id\": 18,\n      \"score\": 0.05,\n      \"rationale\": \"This race indicator is especially sparse and likely to act as a brittle subgroup or geography proxy rather than stable general signal.\"\n    },\n    {\n      \"feature_id\": 19,\n      \"score\": 0.07,\n      \"rationale\": \"Some-other-race status may track reporting patterns and local demographics more than stable mechanisms of insurance coverage.\"\n    },\n    {\n      \"feature_id\": 20,\n      \"score\": 0.08,\n      \"rationale\": \"Race indicators can correlate with insurance through structural inequities, but they are sensitive and prone to encoding demographic shortcuts and state composition.\"\n    },\n    {\n      \"feature_id\": 21,\n      \"score\": 0.91,\n      \"rationale\": \"Personal income is one of the strongest stable predictors because insurance access and public-program eligibility are tightly linked to economic resources.\"\n    },\n    {\n      \"feature_id\": 22,\n      \"score\": 0.88,\n      \"rationale\": \"Employment status is highly predictive across states because employer-sponsored coverage and labor-force attachment are central mechanisms for insurance.\"\n    },\n    {\n      \"feature_id\": 23,\n      \"score\": 0.0,\n      \"rationale\": \"State directly encodes the domain and would create severe shortcutting and poor out-of-distribution generalization.\"\n    },\n    {\n      \"feature_id\": 24,\n      \"score\": 0.22,\n      \"rationale\": \"Recent childbirth can affect insurance through pregnancy-related coverage, but it is narrow in scope and partly captured by age and sex.\"\n    }\n  ]\n}",
+      "input_tokens": 1709,
+      "output_tokens": 1287,
+      "total_tokens": 2996,
+      "response_id": "resp_0f5f765272c3b046006a27ebb2fda08198910d4dc27be0f724",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acshealthinsurance`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DIS\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Disability recode.\",\n    \"values\": \"1=with a disability, 2=without a disability.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"ESP\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status of parents.\",\n    \"values\": \"ACS family/parent employment code, mainly defined for children.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"CIT\",\n    \"type\": \"categorical\",\n    \"description\": \"Citizenship status.\",\n    \"values\": \"US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"MIG\",\n    \"type\": \"categorical\",\n    \"description\": \"Mobility status one year ago.\",\n    \"values\": \"Whether and where the person lived one year ago.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"MIL\",\n    \"type\": \"categorical\",\n    \"description\": \"Military service status.\",\n    \"values\": \"ACS military service category.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"ANC\",\n    \"type\": \"categorical\",\n    \"description\": \"Ancestry recode.\",\n    \"values\": \"ACS ancestry category.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"NATIVITY\",\n    \"type\": \"categorical\",\n    \"description\": \"Nativity recode.\",\n    \"values\": \"Native-born or foreign-born.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"DEAR\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Hearing difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DEYE\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Vision difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"DREM\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Cognitive difficulty remembering, concentrating, or making decisions.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"RACAIAN\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"American Indian or Alaska Native race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"RACASN\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Asian race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"RACBLK\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Black or African American race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"RACNH\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Native Hawaiian race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"RACPI\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Pacific Islander race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"RACSOR\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Some other race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"RACWHT\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"White race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"PINCP\",\n    \"type\": \"continuous\",\n    \"description\": \"Total person's income.\",\n    \"values\": \"Dollar income amount; may be negative, zero, or positive.\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"ESR\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status recode.\",\n    \"values\": \"Employed, unemployed, armed forces, or not in labor force categories.\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"ST\",\n    \"type\": \"categorical\",\n    \"description\": \"State code.\",\n    \"values\": \"Geographic state identifier; likely encodes train/test domain.\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"FER\",\n    \"type\": \"categorical\",\n    \"description\": \"Gave birth to a child within the past 12 months.\",\n    \"values\": \"ACS fertility code; includes not applicable categories.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a person has health insurance coverage using individual ACS characteristics while favoring signals that should generalize across states.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.9,\n      \"rationale\": \"Age is a strong and broadly stable determinant of insurance through child eligibility, working-age coverage patterns, and near-elderly/elderly public coverage.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.73,\n      \"rationale\": \"Education is a robust cross-state proxy for labor-market attachment, income, and access to employer-sponsored insurance.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.58,\n      \"rationale\": \"Marital status is moderately predictive through spousal coverage and household structure, with fairly stable semantics across states.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.22,\n      \"rationale\": \"Sex has some association with coverage patterns but is weaker and risks acting as a demographic shortcut rather than a core causal signal.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.64,\n      \"rationale\": \"Disability status is meaningfully related to public insurance eligibility and healthcare need in a way that should generalize.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.34,\n      \"rationale\": \"Parental employment can matter for dependent coverage, especially for children, but applicability is limited and coding is niche.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.67,\n      \"rationale\": \"Citizenship status strongly affects eligibility and take-up of public and private coverage and should remain predictive across states.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.29,\n      \"rationale\": \"Recent mobility may correlate with temporary coverage disruption, but effects are indirect and can vary with local migration patterns.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.46,\n      \"rationale\": \"Military service status is relevant because veterans and active-duty-related populations have distinctive coverage pathways, though it is not universal.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.12,\n      \"rationale\": \"Ancestry is a weak, socially mediated proxy that is likely to encode brittle demographic composition rather than stable insurance mechanisms.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.49,\n      \"rationale\": \"Nativity captures broad differences in eligibility, labor-market position, and access, but overlaps with citizenship and can reflect demographic shortcuts.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.38,\n      \"rationale\": \"Hearing difficulty may modestly predict coverage through disability-related need and program eligibility, but adds limited unique stable signal.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.37,\n      \"rationale\": \"Vision difficulty has similar moderate relevance via disability and healthcare need, though likely redundant with broader disability measures.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.43,\n      \"rationale\": \"Cognitive difficulty is somewhat more informative than other functional limitations because it can track disability-related public coverage pathways.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.09,\n      \"rationale\": \"This race indicator may correlate with coverage disparities but is highly sensitive and vulnerable to state-specific demographic composition effects.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.1,\n      \"rationale\": \"This race indicator is mostly a demographic shortcut with unstable transport across states despite some association with coverage disparities.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.11,\n      \"rationale\": \"This race indicator may predict observed disparities but is not a stable mechanistic feature and risks encoding structural state-specific patterns.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.05,\n      \"rationale\": \"This race indicator is sparse and highly geography-linked, making it especially brittle for out-of-state generalization.\"\n    },\n    {\n      \"feature_id\": 18,\n      \"score\": 0.05,\n      \"rationale\": \"This race indicator is sparse and likely to reflect localized demographic artifacts more than stable predictive structure.\"\n    },\n    {\n      \"feature_id\": 19,\n      \"score\": 0.08,\n      \"rationale\": \"This race indicator may capture reporting heterogeneity and demographic composition rather than portable insurance determinants.\"\n    },\n    {\n      \"feature_id\": 20,\n      \"score\": 0.1,\n      \"rationale\": \"This race indicator can correlate with coverage rates but is primarily a sensitive demographic shortcut with limited stable causal meaning.\"\n    },\n    {\n      \"feature_id\": 21,\n      \"score\": 0.95,\n      \"rationale\": \"Personal income is one of the strongest broadly stable predictors because insurance access and public-program eligibility are tightly tied to resources.\"\n    },\n    {\n      \"feature_id\": 22,\n      \"score\": 0.92,\n      \"rationale\": \"Employment status is a core determinant of employer-sponsored insurance and economic attachment, making it highly predictive across states.\"\n    },\n    {\n      \"feature_id\": 23,\n      \"score\": 0.0,\n      \"rationale\": \"State directly encodes geography and likely the train-test domain, so it is a classic brittle shortcut for out-of-distribution generalization.\"\n    },\n    {\n      \"feature_id\": 24,\n      \"score\": 0.27,\n      \"rationale\": \"Recent childbirth can affect insurance through pregnancy-related coverage and family status, but applies narrowly and may be state-policy sensitive.\"\n    }\n  ]\n}",
+      "input_tokens": 1709,
+      "output_tokens": 1271,
+      "total_tokens": 2980,
+      "response_id": "resp_0ecc4732e5f6ed72006a27ebc27dcc8199be9968312e72059b",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acshealthinsurance`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DIS\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Disability recode.\",\n    \"values\": \"1=with a disability, 2=without a disability.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"ESP\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status of parents.\",\n    \"values\": \"ACS family/parent employment code, mainly defined for children.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"CIT\",\n    \"type\": \"categorical\",\n    \"description\": \"Citizenship status.\",\n    \"values\": \"US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"MIG\",\n    \"type\": \"categorical\",\n    \"description\": \"Mobility status one year ago.\",\n    \"values\": \"Whether and where the person lived one year ago.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"MIL\",\n    \"type\": \"categorical\",\n    \"description\": \"Military service status.\",\n    \"values\": \"ACS military service category.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"ANC\",\n    \"type\": \"categorical\",\n    \"description\": \"Ancestry recode.\",\n    \"values\": \"ACS ancestry category.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"NATIVITY\",\n    \"type\": \"categorical\",\n    \"description\": \"Nativity recode.\",\n    \"values\": \"Native-born or foreign-born.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"DEAR\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Hearing difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DEYE\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Vision difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"DREM\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Cognitive difficulty remembering, concentrating, or making decisions.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"RACAIAN\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"American Indian or Alaska Native race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"RACASN\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Asian race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"RACBLK\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Black or African American race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"RACNH\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Native Hawaiian race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"RACPI\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Pacific Islander race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"RACSOR\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Some other race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"RACWHT\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"White race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"PINCP\",\n    \"type\": \"continuous\",\n    \"description\": \"Total person's income.\",\n    \"values\": \"Dollar income amount; may be negative, zero, or positive.\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"ESR\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status recode.\",\n    \"values\": \"Employed, unemployed, armed forces, or not in labor force categories.\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"ST\",\n    \"type\": \"categorical\",\n    \"description\": \"State code.\",\n    \"values\": \"Geographic state identifier; likely encodes train/test domain.\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"FER\",\n    \"type\": \"categorical\",\n    \"description\": \"Gave birth to a child within the past 12 months.\",\n    \"values\": \"ACS fertility code; includes not applicable categories.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a person has health insurance coverage from ACS demographic, socioeconomic, and household-related attributes.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.86,\n      \"rationale\": \"Age is a strong, broadly stable driver of insurance through child coverage, working-age employment patterns, and near-elderly/elderly public coverage eligibility.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.72,\n      \"rationale\": \"Education is a robust cross-state proxy for job quality, income stability, and ability to obtain coverage, with relatively stable semantics.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.58,\n      \"rationale\": \"Marital status often affects access to spousal or family coverage and household stability, though effects are weaker than age or income.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.24,\n      \"rationale\": \"Sex may correlate with coverage through labor force and family patterns, but it is a relatively weak predictor and risks demographic shortcutting.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.52,\n      \"rationale\": \"Disability status is meaningfully related to public insurance eligibility and labor market attachment, with reasonably stable semantics across states.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.33,\n      \"rationale\": \"Parental employment can matter for children's coverage, but it is only relevant for a subset of people and may be noisy outside that group.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.69,\n      \"rationale\": \"Citizenship status is strongly tied to eligibility and take-up of public and employer coverage in a way that is generally stable across states.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.37,\n      \"rationale\": \"Recent mobility can affect continuity of coverage and administrative enrollment, but it may also capture state-specific migration patterns.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.43,\n      \"rationale\": \"Military service status can indicate access to VA, TRICARE, or related coverage, though its relevance is limited to a smaller subgroup.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.16,\n      \"rationale\": \"Ancestry is a coarse cultural and demographic proxy with substantial risk of encoding brittle group-specific patterns rather than stable causal signal.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.55,\n      \"rationale\": \"Nativity is relevant to eligibility, labor market position, and enrollment barriers, but overlaps with citizenship and can act as a demographic shortcut.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.34,\n      \"rationale\": \"Hearing difficulty may modestly predict insurance through disability-related eligibility and health needs, but adds limited unique stable signal.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.33,\n      \"rationale\": \"Vision difficulty has some stable association with disability and healthcare need, but likely contributes only modestly beyond broader disability indicators.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.38,\n      \"rationale\": \"Cognitive difficulty can relate to disability-based coverage and reduced employment, offering somewhat stronger signal than narrower impairment indicators.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.14,\n      \"rationale\": \"Race indicators can correlate with insurance due to structural inequities, but they are sensitive and prone to shortcutting and state-specific composition shifts.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.14,\n      \"rationale\": \"Race indicators can correlate with insurance due to structural inequities, but they are sensitive and prone to shortcutting and state-specific composition shifts.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.15,\n      \"rationale\": \"Race indicators can correlate with insurance due to structural inequities, but they are sensitive and prone to shortcutting and state-specific composition shifts.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.1,\n      \"rationale\": \"This race indicator is highly sparse and likely to encode unstable geographic composition more than broadly transportable predictive signal.\"\n    },\n    {\n      \"feature_id\": 18,\n      \"score\": 0.1,\n      \"rationale\": \"This race indicator is highly sparse and likely to encode unstable geographic composition more than broadly transportable predictive signal.\"\n    },\n    {\n      \"feature_id\": 19,\n      \"score\": 0.13,\n      \"rationale\": \"Some-other-race status may correlate with coverage gaps, but it is sensitive and likely to reflect shifting demographic composition across states.\"\n    },\n    {\n      \"feature_id\": 20,\n      \"score\": 0.14,\n      \"rationale\": \"Race indicators can correlate with insurance due to structural inequities, but they are sensitive and prone to shortcutting and state-specific composition shifts.\"\n    },\n    {\n      \"feature_id\": 21,\n      \"score\": 0.9,\n      \"rationale\": \"Personal income is one of the most stable and directly relevant predictors of insurance access, affordability, and public-program eligibility.\"\n    },\n    {\n      \"feature_id\": 22,\n      \"score\": 0.88,\n      \"rationale\": \"Employment status is a core determinant of employer-sponsored insurance and strongly predicts coverage in a broadly stable way.\"\n    },\n    {\n      \"feature_id\": 23,\n      \"score\": 0.0,\n      \"rationale\": \"State directly encodes the domain and policy environment, making it a high-risk shortcut for out-of-distribution generalization.\"\n    },\n    {\n      \"feature_id\": 24,\n      \"score\": 0.28,\n      \"rationale\": \"Recent childbirth can affect insurance through pregnancy-related coverage and family enrollment, but applies narrowly and may be entangled with sex and age.\"\n    }\n  ]\n}",
+      "input_tokens": 1709,
+      "output_tokens": 1332,
+      "total_tokens": 3041,
+      "response_id": "resp_093d599bf1fb2b68006a27ebd44de0819a8a09825825747d3b",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acshealthinsurance`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DIS\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Disability recode.\",\n    \"values\": \"1=with a disability, 2=without a disability.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"ESP\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status of parents.\",\n    \"values\": \"ACS family/parent employment code, mainly defined for children.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"CIT\",\n    \"type\": \"categorical\",\n    \"description\": \"Citizenship status.\",\n    \"values\": \"US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"MIG\",\n    \"type\": \"categorical\",\n    \"description\": \"Mobility status one year ago.\",\n    \"values\": \"Whether and where the person lived one year ago.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"MIL\",\n    \"type\": \"categorical\",\n    \"description\": \"Military service status.\",\n    \"values\": \"ACS military service category.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"ANC\",\n    \"type\": \"categorical\",\n    \"description\": \"Ancestry recode.\",\n    \"values\": \"ACS ancestry category.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"NATIVITY\",\n    \"type\": \"categorical\",\n    \"description\": \"Nativity recode.\",\n    \"values\": \"Native-born or foreign-born.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"DEAR\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Hearing difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DEYE\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Vision difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"DREM\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Cognitive difficulty remembering, concentrating, or making decisions.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"RACAIAN\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"American Indian or Alaska Native race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"RACASN\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Asian race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"RACBLK\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Black or African American race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"RACNH\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Native Hawaiian race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"RACPI\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Pacific Islander race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"RACSOR\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Some other race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"RACWHT\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"White race recode indicator.\",\n    \"values\": \"Race indicator code.\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"PINCP\",\n    \"type\": \"continuous\",\n    \"description\": \"Total person's income.\",\n    \"values\": \"Dollar income amount; may be negative, zero, or positive.\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"ESR\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status recode.\",\n    \"values\": \"Employed, unemployed, armed forces, or not in labor force categories.\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"ST\",\n    \"type\": \"categorical\",\n    \"description\": \"State code.\",\n    \"values\": \"Geographic state identifier; likely encodes train/test domain.\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"FER\",\n    \"type\": \"categorical\",\n    \"description\": \"Gave birth to a child within the past 12 months.\",\n    \"values\": \"ACS fertility code; includes not applicable categories.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a person has health insurance coverage from ACS demographic and socioeconomic attributes, aiming for relationships that generalize across states.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.89,\n      \"rationale\": \"Age is a strong, broadly stable driver of insurance eligibility and coverage patterns across states.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.72,\n      \"rationale\": \"Education is a robust socioeconomic predictor of employment quality, income, and insurance take-up across states.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.54,\n      \"rationale\": \"Marital status is moderately useful because spouse-linked coverage and household structure affect insurance access.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.28,\n      \"rationale\": \"Sex has some association with coverage through labor force and family patterns, but effects are weaker and less direct.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.49,\n      \"rationale\": \"Disability status can affect public coverage eligibility and labor market attachment in a fairly stable way.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.22,\n      \"rationale\": \"Parent employment status is mainly relevant for children and is less broadly informative across the full sample.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.67,\n      \"rationale\": \"Citizenship status is a strong predictor because eligibility, take-up, and employer coverage differ systematically by citizenship.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.31,\n      \"rationale\": \"Recent mobility may correlate with temporary coverage disruption, but it is indirect and can reflect state-specific migration patterns.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.41,\n      \"rationale\": \"Military service can predict access to VA, TRICARE, or related coverage, though only for a limited subpopulation.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.12,\n      \"rationale\": \"Ancestry is a sensitive, high-cardinality proxy with likely brittle state-specific composition effects rather than stable causal signal.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.58,\n      \"rationale\": \"Nativity captures broad differences in eligibility, labor market position, and coverage access that should generalize reasonably well.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.27,\n      \"rationale\": \"Hearing difficulty may weakly indicate disability-related coverage pathways, but adds limited stable information beyond disability.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.24,\n      \"rationale\": \"Vision difficulty is a weak secondary disability signal with limited marginal value for insurance status.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.30,\n      \"rationale\": \"Cognitive difficulty may modestly predict public coverage eligibility and reduced labor force attachment.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.11,\n      \"rationale\": \"Race indicators can correlate with coverage due to structural inequities, but they are sensitive and prone to demographic shortcutting.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.10,\n      \"rationale\": \"Race indicators may carry predictive signal but are likely to encode subgroup composition and geography rather than stable mechanisms.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.12,\n      \"rationale\": \"This race indicator may predict disparities in coverage, yet it is sensitive and vulnerable to shortcut learning across states.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.06,\n      \"rationale\": \"Very sparse race-category indicator is likely unstable and highly geography-dependent in addition to being sensitive.\"\n    },\n    {\n      \"feature_id\": 18,\n      \"score\": 0.06,\n      \"rationale\": \"Very sparse race-category indicator is likely unstable and highly geography-dependent in addition to being sensitive.\"\n    },\n    {\n      \"feature_id\": 19,\n      \"score\": 0.09,\n      \"rationale\": \"Some-other-race status may correlate with coverage gaps, but it is a sensitive proxy and likely brittle across states.\"\n    },\n    {\n      \"feature_id\": 20,\n      \"score\": 0.10,\n      \"rationale\": \"White race indicator may carry disparity-related signal, but it is still a sensitive demographic shortcut with limited OOD reliability.\"\n    },\n    {\n      \"feature_id\": 21,\n      \"score\": 0.95,\n      \"rationale\": \"Personal income is one of the most stable and directly relevant predictors of insurance affordability, eligibility, and job quality.\"\n    },\n    {\n      \"feature_id\": 22,\n      \"score\": 0.93,\n      \"rationale\": \"Employment status is a core determinant of employer-sponsored coverage and strongly predicts insurance status across states.\"\n    },\n    {\n      \"feature_id\": 23,\n      \"score\": 0.0,\n      \"rationale\": \"State directly encodes the domain and invites severe shortcutting to state-specific policy and distribution differences.\"\n    },\n    {\n      \"feature_id\": 24,\n      \"score\": 0.26,\n      \"rationale\": \"Recent childbirth can affect insurance through pregnancy-related coverage and household changes, but applies narrowly and unevenly.\"\n    }\n  ]\n}",
+      "input_tokens": 1709,
+      "output_tokens": 1218,
+      "total_tokens": 2927,
+      "response_id": "resp_0a340a93c6620742006a27ebe6e910819a89d6a22be7ca8e13",
+      "response_model": "gpt-5.4-2026-03-05"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/acs/acshealthinsurance/rankings/score_all_prompt.txt",
+  "config": {
+    "score_samples": 5
+  }
+}

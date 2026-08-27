@@ -1,0 +1,140 @@
+{
+  "benchmark": "acs",
+  "dataset": "acstraveltime",
+  "model": "ce-grad-l2",
+  "method": "score",
+  "feature_space": "semantic",
+  "created_at": "2026-08-12T00:24:22",
+  "aggregation": {
+    "name": "normalized_mean",
+    "normalization": "per_repeat_sum_to_one",
+    "repeat_count": 5,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 13,
+        "feature": "JWTR",
+        "score_mean": 0.46621579346930087,
+        "score_std": 0.1182496615381288
+      },
+      {
+        "rank": 2,
+        "feature_id": 3,
+        "feature": "SEX",
+        "score_mean": 0.34472295775869305,
+        "score_std": 0.07646249531207003
+      },
+      {
+        "rank": 3,
+        "feature_id": 4,
+        "feature": "DIS",
+        "score_mean": 0.07984690040730381,
+        "score_std": 0.06630567473011262
+      },
+      {
+        "rank": 4,
+        "feature_id": 2,
+        "feature": "MAR",
+        "score_mean": 0.046933312073624965,
+        "score_std": 0.029823963364634543
+      },
+      {
+        "rank": 5,
+        "feature_id": 5,
+        "feature": "ESP",
+        "score_mean": 0.017724772594470466,
+        "score_std": 0.0062741882214560505
+      },
+      {
+        "rank": 6,
+        "feature_id": 11,
+        "feature": "CIT",
+        "score_mean": 0.017324876866465288,
+        "score_std": 0.013948841270887389
+      },
+      {
+        "rank": 7,
+        "feature_id": 6,
+        "feature": "MIG",
+        "score_mean": 0.01504230430364889,
+        "score_std": 0.01694454375049007
+      },
+      {
+        "rank": 8,
+        "feature_id": 8,
+        "feature": "RAC1P",
+        "score_mean": 0.0052949712771249696,
+        "score_std": 0.004342784394558073
+      },
+      {
+        "rank": 9,
+        "feature_id": 1,
+        "feature": "SCHL",
+        "score_mean": 0.004625931553899036,
+        "score_std": 0.0025496464961839945
+      },
+      {
+        "rank": 10,
+        "feature_id": 0,
+        "feature": "AGEP",
+        "score_mean": 0.0011396890437657303,
+        "score_std": 0.0005299711735777569
+      },
+      {
+        "rank": 11,
+        "feature_id": 7,
+        "feature": "RELP",
+        "score_mean": 0.00111979949657247,
+        "score_std": 0.0005142441327247968
+      },
+      {
+        "rank": 12,
+        "feature_id": 15,
+        "feature": "POVPIP",
+        "score_mean": 8.356323503328197e-06,
+        "score_std": 2.5682084449665336e-06
+      },
+      {
+        "rank": 13,
+        "feature_id": 12,
+        "feature": "OCCP",
+        "score_mean": 3.348316271149567e-07,
+        "score_std": 4.579479891182528e-08
+      },
+      {
+        "rank": 14,
+        "feature_id": 9,
+        "feature": "PUMA",
+        "score_mean": 0.0,
+        "score_std": 0.0
+      },
+      {
+        "rank": 15,
+        "feature_id": 10,
+        "feature": "ST",
+        "score_mean": 0.0,
+        "score_std": 0.0
+      },
+      {
+        "rank": 16,
+        "feature_id": 14,
+        "feature": "POWPUMA",
+        "score_mean": 0.0,
+        "score_std": 0.0
+      }
+    ]
+  }
+}

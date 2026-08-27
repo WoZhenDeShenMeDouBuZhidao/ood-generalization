@@ -1,0 +1,1353 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "brfss_diabetes",
+  "model": "gpt-5.4-mini",
+  "method": "score_all",
+  "temperature": 0.5,
+  "created_at": "2026-06-09T17:15:26",
+  "token_usage": {
+    "num_calls": 5,
+    "input_tokens": 14265,
+    "output_tokens": 5787,
+    "total_tokens": 20052
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 4,
+        "feature": "BMI5",
+        "score_mean": 0.908,
+        "score_std": 0.04354308211415447
+      },
+      {
+        "rank": 2,
+        "feature_id": 5,
+        "feature": "BMI5CAT",
+        "score_mean": 0.884,
+        "score_std": 0.0467332857821917
+      },
+      {
+        "rank": 3,
+        "feature_id": 1,
+        "feature": "HIGH_BLOOD_PRESS",
+        "score_mean": 0.858,
+        "score_std": 0.027129319932501096
+      },
+      {
+        "rank": 4,
+        "feature_id": 3,
+        "feature": "TOLDHI",
+        "score_mean": 0.842,
+        "score_std": 0.03919183588453085
+      },
+      {
+        "rank": 5,
+        "feature_id": 0,
+        "feature": "PHYSHLTH",
+        "score_mean": 0.696,
+        "score_std": 0.05851495535331118
+      },
+      {
+        "rank": 6,
+        "feature_id": 20,
+        "feature": "MENTHLTH",
+        "score_mean": 0.644,
+        "score_std": 0.05571355310873646
+      },
+      {
+        "rank": 7,
+        "feature_id": 2,
+        "feature": "CHOL_CHK_PAST_5_YEARS",
+        "score_mean": 0.64,
+        "score_std": 0.06292853089020908
+      },
+      {
+        "rank": 8,
+        "feature_id": 9,
+        "feature": "MICHD",
+        "score_mean": 0.5680000000000001,
+        "score_std": 0.13481839637082174
+      },
+      {
+        "rank": 9,
+        "feature_id": 8,
+        "feature": "CVDSTRK3",
+        "score_mean": 0.494,
+        "score_std": 0.10575443253121827
+      },
+      {
+        "rank": 10,
+        "feature_id": 6,
+        "feature": "SMOKE100",
+        "score_mean": 0.41200000000000003,
+        "score_std": 0.09019977827023745
+      },
+      {
+        "rank": 11,
+        "feature_id": 7,
+        "feature": "SMOKDAY2",
+        "score_mean": 0.386,
+        "score_std": 0.0783836717690617
+      },
+      {
+        "rank": 12,
+        "feature_id": 15,
+        "feature": "INCOME",
+        "score_mean": 0.376,
+        "score_std": 0.0649923072370877
+      },
+      {
+        "rank": 13,
+        "feature_id": 17,
+        "feature": "CHECKUP1",
+        "score_mean": 0.364,
+        "score_std": 0.0976933979345585
+      },
+      {
+        "rank": 14,
+        "feature_id": 14,
+        "feature": "TOTINDA",
+        "score_mean": 0.314,
+        "score_std": 0.07889233169326408
+      },
+      {
+        "rank": 15,
+        "feature_id": 19,
+        "feature": "HEALTH_COV",
+        "score_mean": 0.302,
+        "score_std": 0.04261455150532503
+      },
+      {
+        "rank": 16,
+        "feature_id": 23,
+        "feature": "MEDCOST",
+        "score_mean": 0.302,
+        "score_std": 0.06881860213634101
+      },
+      {
+        "rank": 17,
+        "feature_id": 18,
+        "feature": "EDUCA",
+        "score_mean": 0.24400000000000002,
+        "score_std": 0.02939387691339814
+      },
+      {
+        "rank": 18,
+        "feature_id": 11,
+        "feature": "VEG_ONCE_PER_DAY",
+        "score_mean": 0.22,
+        "score_std": 0.045607017003965515
+      },
+      {
+        "rank": 19,
+        "feature_id": 10,
+        "feature": "FRUIT_ONCE_PER_DAY",
+        "score_mean": 0.20400000000000001,
+        "score_std": 0.042708313008125255
+      },
+      {
+        "rank": 20,
+        "feature_id": 12,
+        "feature": "DRNK_PER_WEEK",
+        "score_mean": 0.186,
+        "score_std": 0.07364781055808788
+      },
+      {
+        "rank": 21,
+        "feature_id": 13,
+        "feature": "RFBING5",
+        "score_mean": 0.18,
+        "score_std": 0.047328638264796934
+      },
+      {
+        "rank": 22,
+        "feature_id": 16,
+        "feature": "MARITAL",
+        "score_mean": 0.168,
+        "score_std": 0.04308131845707603
+      },
+      {
+        "rank": 23,
+        "feature_id": 24,
+        "feature": "SEX",
+        "score_mean": 0.104,
+        "score_std": 0.02939387691339814
+      },
+      {
+        "rank": 24,
+        "feature_id": 21,
+        "feature": "IYEAR",
+        "score_mean": 0.08600000000000001,
+        "score_std": 0.023323807579381198
+      },
+      {
+        "rank": 25,
+        "feature_id": 22,
+        "feature": "STATE",
+        "score_mean": 0.074,
+        "score_std": 0.017435595774162697
+      }
+    ],
+    "scores": [
+      {
+        "feature_id": 0,
+        "feature": "PHYSHLTH",
+        "score_mean": 0.696,
+        "score_std": 0.05851495535331118,
+        "sample_scores": [
+          0.72,
+          0.72,
+          0.58,
+          0.74,
+          0.72
+        ]
+      },
+      {
+        "feature_id": 1,
+        "feature": "HIGH_BLOOD_PRESS",
+        "score_mean": 0.858,
+        "score_std": 0.027129319932501096,
+        "sample_scores": [
+          0.88,
+          0.88,
+          0.82,
+          0.88,
+          0.83
+        ]
+      },
+      {
+        "feature_id": 2,
+        "feature": "CHOL_CHK_PAST_5_YEARS",
+        "score_mean": 0.64,
+        "score_std": 0.06292853089020908,
+        "sample_scores": [
+          0.62,
+          0.74,
+          0.67,
+          0.62,
+          0.55
+        ]
+      },
+      {
+        "feature_id": 3,
+        "feature": "TOLDHI",
+        "score_mean": 0.842,
+        "score_std": 0.03919183588453085,
+        "sample_scores": [
+          0.84,
+          0.9,
+          0.78,
+          0.83,
+          0.86
+        ]
+      },
+      {
+        "feature_id": 4,
+        "feature": "BMI5",
+        "score_mean": 0.908,
+        "score_std": 0.04354308211415447,
+        "sample_scores": [
+          0.97,
+          0.86,
+          0.88,
+          0.95,
+          0.88
+        ]
+      },
+      {
+        "feature_id": 5,
+        "feature": "BMI5CAT",
+        "score_mean": 0.884,
+        "score_std": 0.0467332857821917,
+        "sample_scores": [
+          0.95,
+          0.84,
+          0.86,
+          0.93,
+          0.84
+        ]
+      },
+      {
+        "feature_id": 6,
+        "feature": "SMOKE100",
+        "score_mean": 0.41200000000000003,
+        "score_std": 0.09019977827023745,
+        "sample_scores": [
+          0.45,
+          0.55,
+          0.42,
+          0.28,
+          0.36
+        ]
+      },
+      {
+        "feature_id": 7,
+        "feature": "SMOKDAY2",
+        "score_mean": 0.386,
+        "score_std": 0.0783836717690617,
+        "sample_scores": [
+          0.4,
+          0.52,
+          0.38,
+          0.35,
+          0.28
+        ]
+      },
+      {
+        "feature_id": 8,
+        "feature": "CVDSTRK3",
+        "score_mean": 0.494,
+        "score_std": 0.10575443253121827,
+        "sample_scores": [
+          0.58,
+          0.58,
+          0.35,
+          0.38,
+          0.58
+        ]
+      },
+      {
+        "feature_id": 9,
+        "feature": "MICHD",
+        "score_mean": 0.5680000000000001,
+        "score_std": 0.13481839637082174,
+        "sample_scores": [
+          0.66,
+          0.62,
+          0.4,
+          0.42,
+          0.74
+        ]
+      },
+      {
+        "feature_id": 10,
+        "feature": "FRUIT_ONCE_PER_DAY",
+        "score_mean": 0.20400000000000001,
+        "score_std": 0.042708313008125255,
+        "sample_scores": [
+          0.22,
+          0.28,
+          0.18,
+          0.16,
+          0.18
+        ]
+      },
+      {
+        "feature_id": 11,
+        "feature": "VEG_ONCE_PER_DAY",
+        "score_mean": 0.22,
+        "score_std": 0.045607017003965515,
+        "sample_scores": [
+          0.24,
+          0.3,
+          0.18,
+          0.18,
+          0.2
+        ]
+      },
+      {
+        "feature_id": 12,
+        "feature": "DRNK_PER_WEEK",
+        "score_mean": 0.186,
+        "score_std": 0.07364781055808788,
+        "sample_scores": [
+          0.18,
+          0.33,
+          0.14,
+          0.14,
+          0.14
+        ]
+      },
+      {
+        "feature_id": 13,
+        "feature": "RFBING5",
+        "score_mean": 0.18,
+        "score_std": 0.047328638264796934,
+        "sample_scores": [
+          0.2,
+          0.26,
+          0.16,
+          0.12,
+          0.16
+        ]
+      },
+      {
+        "feature_id": 14,
+        "feature": "TOTINDA",
+        "score_mean": 0.314,
+        "score_std": 0.07889233169326408,
+        "sample_scores": [
+          0.34,
+          0.44,
+          0.24,
+          0.22,
+          0.33
+        ]
+      },
+      {
+        "feature_id": 15,
+        "feature": "INCOME",
+        "score_mean": 0.376,
+        "score_std": 0.0649923072370877,
+        "sample_scores": [
+          0.3,
+          0.4,
+          0.46,
+          0.3,
+          0.42
+        ]
+      },
+      {
+        "feature_id": 16,
+        "feature": "MARITAL",
+        "score_mean": 0.168,
+        "score_std": 0.04308131845707603,
+        "sample_scores": [
+          0.14,
+          0.18,
+          0.2,
+          0.1,
+          0.22
+        ]
+      },
+      {
+        "feature_id": 17,
+        "feature": "CHECKUP1",
+        "score_mean": 0.364,
+        "score_std": 0.0976933979345585,
+        "sample_scores": [
+          0.46,
+          0.5,
+          0.3,
+          0.25,
+          0.31
+        ]
+      },
+      {
+        "feature_id": 18,
+        "feature": "EDUCA",
+        "score_mean": 0.24400000000000002,
+        "score_std": 0.02939387691339814,
+        "sample_scores": [
+          0.26,
+          0.22,
+          0.28,
+          0.2,
+          0.26
+        ]
+      },
+      {
+        "feature_id": 19,
+        "feature": "HEALTH_COV",
+        "score_mean": 0.302,
+        "score_std": 0.04261455150532503,
+        "sample_scores": [
+          0.33,
+          0.36,
+          0.31,
+          0.27,
+          0.24
+        ]
+      },
+      {
+        "feature_id": 20,
+        "feature": "MENTHLTH",
+        "score_mean": 0.644,
+        "score_std": 0.05571355310873646,
+        "sample_scores": [
+          0.64,
+          0.68,
+          0.54,
+          0.7,
+          0.66
+        ]
+      },
+      {
+        "feature_id": 21,
+        "feature": "IYEAR",
+        "score_mean": 0.08600000000000001,
+        "score_std": 0.023323807579381198,
+        "sample_scores": [
+          0.05,
+          0.08,
+          0.12,
+          0.08,
+          0.1
+        ]
+      },
+      {
+        "feature_id": 22,
+        "feature": "STATE",
+        "score_mean": 0.074,
+        "score_std": 0.017435595774162697,
+        "sample_scores": [
+          0.08,
+          0.06,
+          0.1,
+          0.05,
+          0.08
+        ]
+      },
+      {
+        "feature_id": 23,
+        "feature": "MEDCOST",
+        "score_mean": 0.302,
+        "score_std": 0.06881860213634101,
+        "sample_scores": [
+          0.41,
+          0.34,
+          0.22,
+          0.24,
+          0.3
+        ]
+      },
+      {
+        "feature_id": 24,
+        "feature": "SEX",
+        "score_mean": 0.104,
+        "score_std": 0.02939387691339814,
+        "sample_scores": [
+          0.12,
+          0.14,
+          0.08,
+          0.06,
+          0.12
+        ]
+      }
+    ],
+    "samples": [
+      {
+        "task_summary": "Predict whether a respondent has diabetes from BRFSS survey and health-history features in a way that should generalize across domains.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.72,
+            "rationale": "Poor physical health days is a robust diabetes correlate and likely generalizes across settings.",
+            "feature": "PHYSHLTH"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.88,
+            "rationale": "Hypertension is a strong, clinically stable comorbidity associated with diabetes risk.",
+            "feature": "HIGH_BLOOD_PRESS"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.62,
+            "rationale": "Recent cholesterol screening reflects preventive care and risk burden, but is somewhat care-access dependent.",
+            "feature": "CHOL_CHK_PAST_5_YEARS"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.84,
+            "rationale": "History of high cholesterol is a durable metabolic risk marker with good cross-domain relevance.",
+            "feature": "TOLDHI"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.97,
+            "rationale": "BMI is one of the strongest and most stable predictors of diabetes across populations.",
+            "feature": "BMI5"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.95,
+            "rationale": "BMI category captures the same core obesity signal in a more coarse but still highly stable way.",
+            "feature": "BMI5CAT"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.45,
+            "rationale": "Smoking history is relevant but only moderately predictive for diabetes and less direct than metabolic factors.",
+            "feature": "SMOKE100"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.4,
+            "rationale": "Current smoking status adds some health-behavior signal, but is weaker and more domain-sensitive than core clinical features.",
+            "feature": "SMOKDAY2"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.58,
+            "rationale": "Stroke history indicates vascular disease and comorbidity burden, but is less directly tied to diabetes than obesity or hypertension.",
+            "feature": "CVDSTRK3"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.66,
+            "rationale": "Coronary heart disease or MI is a stable cardiovascular comorbidity associated with diabetes.",
+            "feature": "MICHD"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.22,
+            "rationale": "Fruit intake is a weak proxy for diet quality and often noisy across survey domains.",
+            "feature": "FRUIT_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.24,
+            "rationale": "Vegetable intake is similarly a weak, noisy lifestyle proxy with limited marginal stability.",
+            "feature": "VEG_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.18,
+            "rationale": "Alcohol quantity is only loosely related to diabetes and is prone to measurement noise and domain shift.",
+            "feature": "DRNK_PER_WEEK"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.2,
+            "rationale": "Binge drinking is a behavioral proxy with limited direct predictive value for diabetes.",
+            "feature": "RFBING5"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.34,
+            "rationale": "Physical activity is relevant to diabetes risk, but self-report noise and heterogeneity reduce stability.",
+            "feature": "TOTINDA"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.3,
+            "rationale": "Income captures socioeconomic risk and access to care, but is a demographic shortcut and less semantically direct.",
+            "feature": "INCOME"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.14,
+            "rationale": "Marital status is a weak demographic proxy with limited stable causal relevance.",
+            "feature": "MARITAL"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.46,
+            "rationale": "Routine checkup timing reflects healthcare engagement and access, giving moderate but indirect predictive signal.",
+            "feature": "CHECKUP1"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.26,
+            "rationale": "Education is a socioeconomic proxy that may correlate with diabetes but is a brittle shortcut.",
+            "feature": "EDUCA"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.33,
+            "rationale": "Health coverage reflects access and age-related structure, useful but partly domain- and policy-dependent.",
+            "feature": "HEALTH_COV"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.64,
+            "rationale": "Mental health burden is associated with chronic disease and can be a reasonably stable health-status marker.",
+            "feature": "MENTHLTH"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.05,
+            "rationale": "Survey year is a domain identifier and should be strongly downweighted for OOD generalization.",
+            "feature": "IYEAR"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.08,
+            "rationale": "State is highly domain-specific and likely captures geography-specific prevalence and sampling artifacts.",
+            "feature": "STATE"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.41,
+            "rationale": "Cost-related unmet care is informative about access and disease management, but is indirect and policy-sensitive.",
+            "feature": "MEDCOST"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.12,
+            "rationale": "Sex has some epidemiologic association but is a sensitive demographic attribute and only modestly predictive.",
+            "feature": "SEX"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a respondent has diabetes from BRFSS survey features, favoring stable health-risk indicators over demographic or domain-specific shortcuts.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.72,
+            "rationale": "General self-reported poor physical health is a strong, stable correlate of diabetes burden and complications.",
+            "feature": "PHYSHLTH"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.88,
+            "rationale": "High blood pressure is a robust comorbidity and broadly predictive across populations.",
+            "feature": "HIGH_BLOOD_PRESS"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.74,
+            "rationale": "Cholesterol screening history reflects preventive care and risk management, indirectly informative but less direct.",
+            "feature": "CHOL_CHK_PAST_5_YEARS"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.9,
+            "rationale": "Prior high cholesterol is a strong metabolic risk marker with durable predictive value.",
+            "feature": "TOLDHI"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.86,
+            "rationale": "BMI is a core, stable risk factor for diabetes and usually generalizes well.",
+            "feature": "BMI5"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.84,
+            "rationale": "BMI category captures the same risk signal as BMI with slightly less granularity but good stability.",
+            "feature": "BMI5CAT"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.55,
+            "rationale": "Smoking history is relevant to health risk but only moderately predictive for diabetes specifically.",
+            "feature": "SMOKE100"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.52,
+            "rationale": "Current smoking status adds some behavioral signal, but it is noisier and less directly tied to diabetes.",
+            "feature": "SMOKDAY2"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.58,
+            "rationale": "Stroke history reflects vascular disease burden, which can co-occur with diabetes, but is more downstream.",
+            "feature": "CVDSTRK3"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.62,
+            "rationale": "Coronary heart disease or MI is a meaningful comorbidity and relatively stable health indicator.",
+            "feature": "MICHD"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.28,
+            "rationale": "Fruit intake is a weak lifestyle proxy with limited direct signal and likely survey noise.",
+            "feature": "FRUIT_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.3,
+            "rationale": "Vegetable intake is similarly a weak, indirect lifestyle marker with modest stable usefulness.",
+            "feature": "VEG_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.33,
+            "rationale": "Alcohol quantity may correlate with health behavior, but the relationship to diabetes is inconsistent.",
+            "feature": "DRNK_PER_WEEK"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.26,
+            "rationale": "Binge drinking is a brittle behavioral proxy with limited stable predictive value for diabetes.",
+            "feature": "RFBING5"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.44,
+            "rationale": "Physical activity is a plausible protective factor, but self-report noise and heterogeneity reduce reliability.",
+            "feature": "TOTINDA"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.4,
+            "rationale": "Income captures socioeconomic status and access, which can matter, but it is a demographic shortcut and domain-sensitive.",
+            "feature": "INCOME"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.18,
+            "rationale": "Marital status is only weakly related to diabetes and is likely to act as a demographic shortcut.",
+            "feature": "MARITAL"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.5,
+            "rationale": "Routine checkup timing reflects healthcare engagement and access, offering moderate stable signal.",
+            "feature": "CHECKUP1"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.22,
+            "rationale": "Education is a broad socioeconomic proxy with limited direct biological relevance and shortcut risk.",
+            "feature": "EDUCA"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.36,
+            "rationale": "Health coverage can proxy access and age-related eligibility, but is domain- and policy-sensitive.",
+            "feature": "HEALTH_COV"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.68,
+            "rationale": "Poor mental health days are a stable general health burden marker that can accompany chronic disease.",
+            "feature": "MENTHLTH"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.08,
+            "rationale": "Survey year is a domain identifier and likely captures temporal artifacts rather than causal risk.",
+            "feature": "IYEAR"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.06,
+            "rationale": "State is a strong domain/location identifier and a brittle shortcut with poor out-of-domain stability.",
+            "feature": "STATE"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.34,
+            "rationale": "Cost-related care avoidance reflects access barriers and unmet need, but is somewhat policy- and domain-dependent.",
+            "feature": "MEDCOST"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.14,
+            "rationale": "Sex has some epidemiologic association but is a sensitive demographic attribute and weak standalone predictor.",
+            "feature": "SEX"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a respondent has diabetes using BRFSS survey features, favoring stable health risk factors over domain-specific shortcuts.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.58,
+            "rationale": "General self-reported poor physical health is plausibly linked to diabetes and usually stable across domains.",
+            "feature": "PHYSHLTH"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.82,
+            "rationale": "Hypertension is a strong, clinically meaningful comorbidity and tends to generalize well.",
+            "feature": "HIGH_BLOOD_PRESS"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.67,
+            "rationale": "Recent cholesterol screening history reflects healthcare engagement and cardiometabolic risk, though somewhat indirect.",
+            "feature": "CHOL_CHK_PAST_5_YEARS"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.78,
+            "rationale": "High cholesterol history is a strong metabolic risk marker that should remain predictive across settings.",
+            "feature": "TOLDHI"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.88,
+            "rationale": "BMI is a core, stable risk factor for diabetes and one of the most useful general predictors.",
+            "feature": "BMI5"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.86,
+            "rationale": "BMI category captures obesity status, a robust diabetes risk signal with good cross-domain stability.",
+            "feature": "BMI5CAT"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.42,
+            "rationale": "Smoking history is relevant to health risk but only moderately informative for diabetes specifically.",
+            "feature": "SMOKE100"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.38,
+            "rationale": "Current smoking status adds some signal but is weaker and more behaviorally noisy than core metabolic factors.",
+            "feature": "SMOKDAY2"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.35,
+            "rationale": "Stroke history is related to vascular disease and diabetes, but it is less direct and less common.",
+            "feature": "CVDSTRK3"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.4,
+            "rationale": "Coronary heart disease or MI is clinically related to diabetes, but it is a downstream comorbidity rather than a primary risk factor.",
+            "feature": "MICHD"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.18,
+            "rationale": "Fruit intake is a broad lifestyle proxy with weak and noisy marginal association to diabetes.",
+            "feature": "FRUIT_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.18,
+            "rationale": "Vegetable intake is similarly a weak lifestyle proxy and unlikely to be strongly stable on its own.",
+            "feature": "VEG_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.14,
+            "rationale": "Alcohol quantity has inconsistent links to diabetes and is often noisy, so stable usefulness is limited.",
+            "feature": "DRNK_PER_WEEK"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.16,
+            "rationale": "Binge drinking may capture risk behavior but is only weakly and inconsistently tied to diabetes.",
+            "feature": "RFBING5"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.24,
+            "rationale": "Physical activity is a meaningful protective factor, though self-report noise and modest effect size limit it.",
+            "feature": "TOTINDA"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.46,
+            "rationale": "Income is a useful socioeconomic proxy for long-run health risk, but it can be a brittle shortcut across domains.",
+            "feature": "INCOME"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.2,
+            "rationale": "Marital status is only a weak demographic proxy and likely captures confounding rather than direct disease risk.",
+            "feature": "MARITAL"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.3,
+            "rationale": "Routine checkup timing reflects healthcare access and monitoring, which can correlate with diagnosis and risk.",
+            "feature": "CHECKUP1"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.28,
+            "rationale": "Education is a stable socioeconomic indicator, but its relation to diabetes is indirect and potentially confounded.",
+            "feature": "EDUCA"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.31,
+            "rationale": "Insurance coverage is a healthcare-access proxy that may help, though it is not a direct biological predictor.",
+            "feature": "HEALTH_COV"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.54,
+            "rationale": "Poor mental health days can correlate with chronic disease burden and self-management challenges, with moderate stability.",
+            "feature": "MENTHLTH"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.12,
+            "rationale": "Survey year is a domain/time identifier and risks learning temporal artifacts rather than disease-relevant structure.",
+            "feature": "IYEAR"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.1,
+            "rationale": "State is a strong domain identifier and demographic/geographic shortcut that is brittle for OOD generalization.",
+            "feature": "STATE"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.22,
+            "rationale": "Cost-related access barriers can correlate with diagnosis and management, but may also encode system-specific artifacts.",
+            "feature": "MEDCOST"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.08,
+            "rationale": "Sex is a sensitive demographic attribute with limited direct predictive value and potential shortcut risk.",
+            "feature": "SEX"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a respondent has diabetes using BRFSS survey, prioritizing stable health-risk and chronic-condition signals over demographic or domain-specific shortcuts.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.74,
+            "rationale": "General self-reported poor physical health is a strong, stable symptom burden signal.",
+            "feature": "PHYSHLTH"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.88,
+            "rationale": "Hypertension is a well-established, broadly predictive comorbidity for diabetes across domains.",
+            "feature": "HIGH_BLOOD_PRESS"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.62,
+            "rationale": "Cholesterol screening history is moderately predictive through healthcare engagement and risk management, but less direct.",
+            "feature": "CHOL_CHK_PAST_5_YEARS"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.83,
+            "rationale": "High blood cholesterol is a stable metabolic/cardiovascular risk marker linked to diabetes.",
+            "feature": "TOLDHI"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.95,
+            "rationale": "BMI is one of the strongest and most stable predictors of diabetes risk.",
+            "feature": "BMI5"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.93,
+            "rationale": "BMI category closely tracks obesity-related diabetes risk and is robust across settings.",
+            "feature": "BMI5CAT"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.28,
+            "rationale": "Smoking history is related to health risk but only weakly and indirectly predictive for diabetes.",
+            "feature": "SMOKE100"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.35,
+            "rationale": "Current smoking status adds some behavioral risk signal, but is not a strong diabetes predictor.",
+            "feature": "SMOKDAY2"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.38,
+            "rationale": "Stroke history reflects vascular disease burden and can correlate with diabetes, but is less direct.",
+            "feature": "CVDSTRK3"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.42,
+            "rationale": "Coronary heart disease or MI is a meaningful chronic disease marker associated with diabetes.",
+            "feature": "MICHD"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.16,
+            "rationale": "Fruit intake is a weak lifestyle proxy and likely noisy across survey domains.",
+            "feature": "FRUIT_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.18,
+            "rationale": "Vegetable intake is a weak diet-quality proxy with limited stable marginal value.",
+            "feature": "VEG_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.14,
+            "rationale": "Alcohol quantity is noisy and only weakly related to diabetes risk in a stable way.",
+            "feature": "DRNK_PER_WEEK"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.12,
+            "rationale": "Binge drinking is behaviorally relevant but generally a brittle and weak diabetes predictor.",
+            "feature": "RFBING5"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.22,
+            "rationale": "Physical activity is a meaningful risk factor, but self-report noise limits stability.",
+            "feature": "TOTINDA"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.3,
+            "rationale": "Income captures socioeconomic risk and access patterns, but is a demographic shortcut with domain shift risk.",
+            "feature": "INCOME"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.1,
+            "rationale": "Marital status is only a weak proxy for age/lifestyle and is not a robust causal signal.",
+            "feature": "MARITAL"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.25,
+            "rationale": "Routine checkup frequency reflects healthcare access and chronic disease management, moderately useful but indirect.",
+            "feature": "CHECKUP1"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.2,
+            "rationale": "Education is a socioeconomic proxy with some predictive value but substantial shortcut and shift risk.",
+            "feature": "EDUCA"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.27,
+            "rationale": "Insurance coverage relates to access and diagnosis probability, but may be unstable across domains.",
+            "feature": "HEALTH_COV"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.7,
+            "rationale": "Poor mental health days can correlate with chronic illness burden and overall health status.",
+            "feature": "MENTHLTH"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.08,
+            "rationale": "Survey year is a domain identifier and should be heavily downweighted for OOD generalization.",
+            "feature": "IYEAR"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.05,
+            "rationale": "State is a strong domain/geography identifier and likely encodes spurious regional artifacts.",
+            "feature": "STATE"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.24,
+            "rationale": "Cost-related care avoidance indicates access barriers and may correlate with undiagnosed diabetes.",
+            "feature": "MEDCOST"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.06,
+            "rationale": "Sex can matter biologically but is also a demographic shortcut with limited stable marginal gain.",
+            "feature": "SEX"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a respondent has diabetes using survey, health, and demographic features from BRFSS.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.72,
+            "rationale": "General poor physical health is a stable proxy for chronic disease burden and diabetes-related morbidity.",
+            "feature": "PHYSHLTH"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.83,
+            "rationale": "Hypertension is a strong, semantically durable comorbidity associated with diabetes risk.",
+            "feature": "HIGH_BLOOD_PRESS"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.55,
+            "rationale": "Screening history reflects access and risk management, but is less direct and can shift with healthcare behavior.",
+            "feature": "CHOL_CHK_PAST_5_YEARS"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.86,
+            "rationale": "High cholesterol history is a robust metabolic comorbidity closely tied to diabetes.",
+            "feature": "TOLDHI"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.88,
+            "rationale": "BMI is one of the strongest stable predictors of diabetes risk across domains.",
+            "feature": "BMI5"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.84,
+            "rationale": "BMI category is highly predictive and usually more stable than raw continuous encoding, though partly redundant with BMI.",
+            "feature": "BMI5CAT"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.36,
+            "rationale": "Smoking history is relevant to health risk but only weakly and indirectly predictive of diabetes.",
+            "feature": "SMOKE100"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.28,
+            "rationale": "Current smoking status adds limited stable signal beyond smoking history and is behaviorally noisy.",
+            "feature": "SMOKDAY2"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.58,
+            "rationale": "Stroke history reflects vascular disease burden and is moderately informative for diabetes.",
+            "feature": "CVDSTRK3"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.74,
+            "rationale": "Coronary heart disease or MI is a strong downstream cardiovascular comorbidity linked to diabetes.",
+            "feature": "MICHD"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.18,
+            "rationale": "Fruit intake is a weak lifestyle proxy with substantial measurement noise and limited direct predictive power.",
+            "feature": "FRUIT_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.2,
+            "rationale": "Vegetable intake is similarly weak and likely too coarse to contribute much stable signal.",
+            "feature": "VEG_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.14,
+            "rationale": "Alcohol quantity is noisy and only weakly related to diabetes in a stable way.",
+            "feature": "DRNK_PER_WEEK"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.16,
+            "rationale": "Binge drinking is a broad behavioral marker with limited direct and stable association to diabetes.",
+            "feature": "RFBING5"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.33,
+            "rationale": "Physical activity is a meaningful metabolic risk factor, but self-report noise and coarse coding reduce stability.",
+            "feature": "TOTINDA"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.42,
+            "rationale": "Income can proxy access and lifestyle, but it is a demographic shortcut and less semantically direct than health measures.",
+            "feature": "INCOME"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.22,
+            "rationale": "Marital status may weakly correlate with health behavior and age, but is mostly a brittle demographic proxy.",
+            "feature": "MARITAL"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.31,
+            "rationale": "Recent checkup frequency captures healthcare engagement and access, offering modest stable signal.",
+            "feature": "CHECKUP1"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.26,
+            "rationale": "Education is a socioeconomic proxy with indirect association to diabetes and potential domain sensitivity.",
+            "feature": "EDUCA"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.24,
+            "rationale": "Insurance coverage reflects access and age structure more than diabetes biology, so it is only modestly useful.",
+            "feature": "HEALTH_COV"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.66,
+            "rationale": "Poor mental health days can correlate with chronic illness burden and self-management challenges, giving moderate stable signal.",
+            "feature": "MENTHLTH"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.1,
+            "rationale": "Survey year is a domain indicator and risks capturing temporal shifts rather than stable disease predictors.",
+            "feature": "IYEAR"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.08,
+            "rationale": "State is a strong domain identifier and likely encodes sampling, policy, and regional artifacts rather than generalizable biology.",
+            "feature": "STATE"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.3,
+            "rationale": "Cost-related unmet care reflects access barriers that can matter, but it is indirect and potentially domain-sensitive.",
+            "feature": "MEDCOST"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.12,
+            "rationale": "Sex has some epidemiologic relevance but is a sensitive demographic feature and usually only modestly predictive here.",
+            "feature": "SEX"
+          }
+        ]
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `brfss_diabetes`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"PHYSHLTH\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of days during the past 30 days where physical health was not good\",\n    \"note\": \"Values: 1 - 30 Number of days, 88 None, 77 Don’t know/Not sure, 99 Refused, BLANK Not asked or Missing\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"HIGH_BLOOD_PRESS\",\n    \"type\": \"categorical\",\n    \"description\": \"(Ever told) you have high blood pressure\",\n    \"values\": \"1.0=No; 2.0=Yes; 9.0=Don’t know/Not Sure/Refused/Missing\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"CHOL_CHK_PAST_5_YEARS\",\n    \"type\": \"categorical\",\n    \"description\": \"Time since last blooc cholesterol check\",\n    \"values\": \"1.0=Never; 2.0=Within the past year (anytime less than 12 months ago); 3.0=Within the past 2 years (more than 1 year but less than 2 years ago); 4.0=Within the past 5 years (more than 2 years but less than 5 years ago); 5.0=5 or more years ago; 7.0=Don’t kn...\",\n    \"note\": \"Aligned version of 'CHOLCHK*' features from 2015-2021; see _align_chol_chk() below..\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"TOLDHI\",\n    \"type\": \"categorical\",\n    \"description\": \"Ever been told you have high blood cholesterol\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"BMI5\",\n    \"type\": \"continuous\",\n    \"description\": \"Body Mass Index (BMI)\",\n    \"note\": \"Values: 1 - 9999 1 or greater - Notes: WTKG3/(HTM4*HTM4) (Has 2 implied decimal places); BLANK: Don’t know/Refused/Missing.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"BMI5CAT\",\n    \"type\": \"categorical\",\n    \"description\": \"Body Mass Index (BMI) category\",\n    \"values\": \"1.0=Underweight (BMI < 1850); 2.0=Normal Weight (1850 <= BMI < 2500); 3.0=Overweight (2500 <= BMI < 3000); 4.0=Obese (3000 <= BMI < 9999)\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"SMOKE100\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Answer to the question 'Have you smoked at least 100 cigarettes in your entire life?'\",\n    \"values\": \"1.0=Yes; 2.0=No\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"SMOKDAY2\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Do you now smoke cigarettes every day, some days, or not at all?'\",\n    \"values\": \"1.0=Every day; 2.0=Some days; 3.0=Not at all; 7.0=Don´t Know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"CVDSTRK3\",\n    \"type\": \"categorical\",\n    \"description\": \"Ever had a stroke, or been told you had a stroke\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"MICHD\",\n    \"type\": \"categorical\",\n    \"description\": \"Reports of coronary heart disease (CHD) or myocardial infarction (MI)\",\n    \"values\": \"1.0=Reported having myocardial infarction or coronary heart disease; 2.0=Did not report having myocardial infarction or coronary heart disease\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"FRUIT_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Fruit consumption\",\n    \"values\": \"1.0=Consumed fruit one or more times per day; 2.0=Consumed fruit less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"VEG_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Vegetable consumption\",\n    \"values\": \"1.0=Consumed vegetables one or more times per day; 2.0=Consumed vegetables less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DRNK_PER_WEEK\",\n    \"type\": \"continuous\",\n    \"description\": \"Total number of alcoholic beverages consumed per week\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"RFBING5\",\n    \"type\": \"categorical\",\n    \"description\": \"Respondent is binge drinker\",\n    \"values\": \"1.0=No; 2.0=Yes; 9.0=Don't know/Refused/Missing\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"TOTINDA\",\n    \"type\": \"categorical\",\n    \"description\": \"Physical activity or exercise during the past 30 days other than their regular job\",\n    \"values\": \"1.0=Had physical activity or exercise in last 30 days; 2.0=No physical activity or exercise in last 30 days\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"INCOME\",\n    \"type\": \"categorical\",\n    \"description\": \"Annual household income from all sources\",\n    \"values\": \"1.0=Less than $10,000; 2.0=Less than $15,000 ($10,000 to less than $15,000); 3.0=Less than $20,000 ($15,000 to less than $20,000); 4.0=Less than $25,000 ($20,000 to less than $25,000); 5.0=Less than $35,000 ($25,000 to less than $35,000); 6.0=Less than $50,...\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"MARITAL\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status\",\n    \"values\": \"1.0=Married; 2.0=Divorced; 3.0=Widowed; 4.0=Separated; 5.0=Never married; 6.0=A member of an unmarried couple; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"CHECKUP1\",\n    \"type\": \"categorical\",\n    \"description\": \"Time since last visit to the doctor for a checkup\",\n    \"values\": \"1.0=Within past year (anytime < 12 months ago); 2.0=Within past 2 years (1 year but < 2 years ago); 3.0=Within past 5 years (2 years but < 5 years ago); 4.0=5 or more years ago; 7.0=Don’t know/Not sure; 8.0=Never; 9.0=Refuse\",\n    \"note\": \"Question: About how long has it been since you last visited a doctor for a routine checkup? [A routine checkup is a general physical exam, not an exam for a specific injury, illness, or condition.]\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"EDUCA\",\n    \"type\": \"categorical\",\n    \"description\": \"Highest grade or year of school completed\",\n    \"values\": \"1.0=Never attended school or only kindergarten; 2.0=Grades 1 through 8 (Elementary); 3.0=Grades 9 through 11 (Some high school); 4.0=Grade 12 or GED (High school graduate); 5.0=College 1 year to 3 years (Some college or technical school); 6.0=College 4 year...\",\n    \"note\": \"Question: What is the highest grade or year of school you completed?\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"HEALTH_COV\",\n    \"type\": \"categorical\",\n    \"description\": \"Current health care coverage\",\n    \"values\": \"1.0=Have health care coverage; 2.0=Do not have health care coverage; 9.0=Not aged 18-64, Don’t know/Not Sure, Refused or Missing\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"MENTHLTH\",\n    \"type\": \"continuous\",\n    \"description\": \"Answer to the question 'for how many days during the past 30 days was your mental health not good?'\",\n    \"note\": \"Values: 1 - 30: Number of days, 88: None, 77: Don’t know/Not sure, 99: Refused.\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"IYEAR\",\n    \"type\": \"continuous\",\n    \"description\": \"Survey year\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"STATE\",\n    \"type\": \"categorical\",\n    \"description\": \"State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"MEDCOST\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?'\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don't know/not sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex of respondent\",\n    \"values\": \"1=Male; 2=Female\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a respondent has diabetes from BRFSS survey and health-history features in a way that should generalize across domains.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.72,\n      \"rationale\": \"Poor physical health days is a robust diabetes correlate and likely generalizes across settings.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.88,\n      \"rationale\": \"Hypertension is a strong, clinically stable comorbidity associated with diabetes risk.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.62,\n      \"rationale\": \"Recent cholesterol screening reflects preventive care and risk burden, but is somewhat care-access dependent.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.84,\n      \"rationale\": \"History of high cholesterol is a durable metabolic risk marker with good cross-domain relevance.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.97,\n      \"rationale\": \"BMI is one of the strongest and most stable predictors of diabetes across populations.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.95,\n      \"rationale\": \"BMI category captures the same core obesity signal in a more coarse but still highly stable way.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.45,\n      \"rationale\": \"Smoking history is relevant but only moderately predictive for diabetes and less direct than metabolic factors.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.40,\n      \"rationale\": \"Current smoking status adds some health-behavior signal, but is weaker and more domain-sensitive than core clinical features.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.58,\n      \"rationale\": \"Stroke history indicates vascular disease and comorbidity burden, but is less directly tied to diabetes than obesity or hypertension.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.66,\n      \"rationale\": \"Coronary heart disease or MI is a stable cardiovascular comorbidity associated with diabetes.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.22,\n      \"rationale\": \"Fruit intake is a weak proxy for diet quality and often noisy across survey domains.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.24,\n      \"rationale\": \"Vegetable intake is similarly a weak, noisy lifestyle proxy with limited marginal stability.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.18,\n      \"rationale\": \"Alcohol quantity is only loosely related to diabetes and is prone to measurement noise and domain shift.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.20,\n      \"rationale\": \"Binge drinking is a behavioral proxy with limited direct predictive value for diabetes.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.34,\n      \"rationale\": \"Physical activity is relevant to diabetes risk, but self-report noise and heterogeneity reduce stability.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.30,\n      \"rationale\": \"Income captures socioeconomic risk and access to care, but is a demographic shortcut and less semantically direct.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.14,\n      \"rationale\": \"Marital status is a weak demographic proxy with limited stable causal relevance.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.46,\n      \"rationale\": \"Routine checkup timing reflects healthcare engagement and access, giving moderate but indirect predictive signal.\"\n    },\n    {\n      \"feature_id\": 18,\n      \"score\": 0.26,\n      \"rationale\": \"Education is a socioeconomic proxy that may correlate with diabetes but is a brittle shortcut.\"\n    },\n    {\n      \"feature_id\": 19,\n      \"score\": 0.33,\n      \"rationale\": \"Health coverage reflects access and age-related structure, useful but partly domain- and policy-dependent.\"\n    },\n    {\n      \"feature_id\": 20,\n      \"score\": 0.64,\n      \"rationale\": \"Mental health burden is associated with chronic disease and can be a reasonably stable health-status marker.\"\n    },\n    {\n      \"feature_id\": 21,\n      \"score\": 0.05,\n      \"rationale\": \"Survey year is a domain identifier and should be strongly downweighted for OOD generalization.\"\n    },\n    {\n      \"feature_id\": 22,\n      \"score\": 0.08,\n      \"rationale\": \"State is highly domain-specific and likely captures geography-specific prevalence and sampling artifacts.\"\n    },\n    {\n      \"feature_id\": 23,\n      \"score\": 0.41,\n      \"rationale\": \"Cost-related unmet care is informative about access and disease management, but is indirect and policy-sensitive.\"\n    },\n    {\n      \"feature_id\": 24,\n      \"score\": 0.12,\n      \"rationale\": \"Sex has some epidemiologic association but is a sensitive demographic attribute and only modestly predictive.\"\n    }\n  ]\n}",
+      "input_tokens": 2853,
+      "output_tokens": 1154,
+      "total_tokens": 4007,
+      "response_id": "resp_0073e3a589c87dcf006a27d98af6bc819a9fbc7d48c0542c6a",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `brfss_diabetes`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"PHYSHLTH\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of days during the past 30 days where physical health was not good\",\n    \"note\": \"Values: 1 - 30 Number of days, 88 None, 77 Don’t know/Not sure, 99 Refused, BLANK Not asked or Missing\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"HIGH_BLOOD_PRESS\",\n    \"type\": \"categorical\",\n    \"description\": \"(Ever told) you have high blood pressure\",\n    \"values\": \"1.0=No; 2.0=Yes; 9.0=Don’t know/Not Sure/Refused/Missing\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"CHOL_CHK_PAST_5_YEARS\",\n    \"type\": \"categorical\",\n    \"description\": \"Time since last blooc cholesterol check\",\n    \"values\": \"1.0=Never; 2.0=Within the past year (anytime less than 12 months ago); 3.0=Within the past 2 years (more than 1 year but less than 2 years ago); 4.0=Within the past 5 years (more than 2 years but less than 5 years ago); 5.0=5 or more years ago; 7.0=Don’t kn...\",\n    \"note\": \"Aligned version of 'CHOLCHK*' features from 2015-2021; see _align_chol_chk() below..\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"TOLDHI\",\n    \"type\": \"categorical\",\n    \"description\": \"Ever been told you have high blood cholesterol\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"BMI5\",\n    \"type\": \"continuous\",\n    \"description\": \"Body Mass Index (BMI)\",\n    \"note\": \"Values: 1 - 9999 1 or greater - Notes: WTKG3/(HTM4*HTM4) (Has 2 implied decimal places); BLANK: Don’t know/Refused/Missing.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"BMI5CAT\",\n    \"type\": \"categorical\",\n    \"description\": \"Body Mass Index (BMI) category\",\n    \"values\": \"1.0=Underweight (BMI < 1850); 2.0=Normal Weight (1850 <= BMI < 2500); 3.0=Overweight (2500 <= BMI < 3000); 4.0=Obese (3000 <= BMI < 9999)\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"SMOKE100\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Answer to the question 'Have you smoked at least 100 cigarettes in your entire life?'\",\n    \"values\": \"1.0=Yes; 2.0=No\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"SMOKDAY2\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Do you now smoke cigarettes every day, some days, or not at all?'\",\n    \"values\": \"1.0=Every day; 2.0=Some days; 3.0=Not at all; 7.0=Don´t Know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"CVDSTRK3\",\n    \"type\": \"categorical\",\n    \"description\": \"Ever had a stroke, or been told you had a stroke\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"MICHD\",\n    \"type\": \"categorical\",\n    \"description\": \"Reports of coronary heart disease (CHD) or myocardial infarction (MI)\",\n    \"values\": \"1.0=Reported having myocardial infarction or coronary heart disease; 2.0=Did not report having myocardial infarction or coronary heart disease\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"FRUIT_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Fruit consumption\",\n    \"values\": \"1.0=Consumed fruit one or more times per day; 2.0=Consumed fruit less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"VEG_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Vegetable consumption\",\n    \"values\": \"1.0=Consumed vegetables one or more times per day; 2.0=Consumed vegetables less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DRNK_PER_WEEK\",\n    \"type\": \"continuous\",\n    \"description\": \"Total number of alcoholic beverages consumed per week\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"RFBING5\",\n    \"type\": \"categorical\",\n    \"description\": \"Respondent is binge drinker\",\n    \"values\": \"1.0=No; 2.0=Yes; 9.0=Don't know/Refused/Missing\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"TOTINDA\",\n    \"type\": \"categorical\",\n    \"description\": \"Physical activity or exercise during the past 30 days other than their regular job\",\n    \"values\": \"1.0=Had physical activity or exercise in last 30 days; 2.0=No physical activity or exercise in last 30 days\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"INCOME\",\n    \"type\": \"categorical\",\n    \"description\": \"Annual household income from all sources\",\n    \"values\": \"1.0=Less than $10,000; 2.0=Less than $15,000 ($10,000 to less than $15,000); 3.0=Less than $20,000 ($15,000 to less than $20,000); 4.0=Less than $25,000 ($20,000 to less than $25,000); 5.0=Less than $35,000 ($25,000 to less than $35,000); 6.0=Less than $50,...\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"MARITAL\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status\",\n    \"values\": \"1.0=Married; 2.0=Divorced; 3.0=Widowed; 4.0=Separated; 5.0=Never married; 6.0=A member of an unmarried couple; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"CHECKUP1\",\n    \"type\": \"categorical\",\n    \"description\": \"Time since last visit to the doctor for a checkup\",\n    \"values\": \"1.0=Within past year (anytime < 12 months ago); 2.0=Within past 2 years (1 year but < 2 years ago); 3.0=Within past 5 years (2 years but < 5 years ago); 4.0=5 or more years ago; 7.0=Don’t know/Not sure; 8.0=Never; 9.0=Refuse\",\n    \"note\": \"Question: About how long has it been since you last visited a doctor for a routine checkup? [A routine checkup is a general physical exam, not an exam for a specific injury, illness, or condition.]\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"EDUCA\",\n    \"type\": \"categorical\",\n    \"description\": \"Highest grade or year of school completed\",\n    \"values\": \"1.0=Never attended school or only kindergarten; 2.0=Grades 1 through 8 (Elementary); 3.0=Grades 9 through 11 (Some high school); 4.0=Grade 12 or GED (High school graduate); 5.0=College 1 year to 3 years (Some college or technical school); 6.0=College 4 year...\",\n    \"note\": \"Question: What is the highest grade or year of school you completed?\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"HEALTH_COV\",\n    \"type\": \"categorical\",\n    \"description\": \"Current health care coverage\",\n    \"values\": \"1.0=Have health care coverage; 2.0=Do not have health care coverage; 9.0=Not aged 18-64, Don’t know/Not Sure, Refused or Missing\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"MENTHLTH\",\n    \"type\": \"continuous\",\n    \"description\": \"Answer to the question 'for how many days during the past 30 days was your mental health not good?'\",\n    \"note\": \"Values: 1 - 30: Number of days, 88: None, 77: Don’t know/Not sure, 99: Refused.\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"IYEAR\",\n    \"type\": \"continuous\",\n    \"description\": \"Survey year\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"STATE\",\n    \"type\": \"categorical\",\n    \"description\": \"State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"MEDCOST\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?'\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don't know/not sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex of respondent\",\n    \"values\": \"1=Male; 2=Female\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a respondent has diabetes from BRFSS survey features, favoring stable health-risk indicators over demographic or domain-specific shortcuts.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.72,\n      \"rationale\": \"General self-reported poor physical health is a strong, stable correlate of diabetes burden and complications.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.88,\n      \"rationale\": \"High blood pressure is a robust comorbidity and broadly predictive across populations.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.74,\n      \"rationale\": \"Cholesterol screening history reflects preventive care and risk management, indirectly informative but less direct.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.90,\n      \"rationale\": \"Prior high cholesterol is a strong metabolic risk marker with durable predictive value.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.86,\n      \"rationale\": \"BMI is a core, stable risk factor for diabetes and usually generalizes well.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.84,\n      \"rationale\": \"BMI category captures the same risk signal as BMI with slightly less granularity but good stability.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.55,\n      \"rationale\": \"Smoking history is relevant to health risk but only moderately predictive for diabetes specifically.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.52,\n      \"rationale\": \"Current smoking status adds some behavioral signal, but it is noisier and less directly tied to diabetes.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.58,\n      \"rationale\": \"Stroke history reflects vascular disease burden, which can co-occur with diabetes, but is more downstream.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.62,\n      \"rationale\": \"Coronary heart disease or MI is a meaningful comorbidity and relatively stable health indicator.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.28,\n      \"rationale\": \"Fruit intake is a weak lifestyle proxy with limited direct signal and likely survey noise.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.30,\n      \"rationale\": \"Vegetable intake is similarly a weak, indirect lifestyle marker with modest stable usefulness.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.33,\n      \"rationale\": \"Alcohol quantity may correlate with health behavior, but the relationship to diabetes is inconsistent.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.26,\n      \"rationale\": \"Binge drinking is a brittle behavioral proxy with limited stable predictive value for diabetes.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.44,\n      \"rationale\": \"Physical activity is a plausible protective factor, but self-report noise and heterogeneity reduce reliability.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.40,\n      \"rationale\": \"Income captures socioeconomic status and access, which can matter, but it is a demographic shortcut and domain-sensitive.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.18,\n      \"rationale\": \"Marital status is only weakly related to diabetes and is likely to act as a demographic shortcut.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.50,\n      \"rationale\": \"Routine checkup timing reflects healthcare engagement and access, offering moderate stable signal.\"\n    },\n    {\n      \"feature_id\": 18,\n      \"score\": 0.22,\n      \"rationale\": \"Education is a broad socioeconomic proxy with limited direct biological relevance and shortcut risk.\"\n    },\n    {\n      \"feature_id\": 19,\n      \"score\": 0.36,\n      \"rationale\": \"Health coverage can proxy access and age-related eligibility, but is domain- and policy-sensitive.\"\n    },\n    {\n      \"feature_id\": 20,\n      \"score\": 0.68,\n      \"rationale\": \"Poor mental health days are a stable general health burden marker that can accompany chronic disease.\"\n    },\n    {\n      \"feature_id\": 21,\n      \"score\": 0.08,\n      \"rationale\": \"Survey year is a domain identifier and likely captures temporal artifacts rather than causal risk.\"\n    },\n    {\n      \"feature_id\": 22,\n      \"score\": 0.06,\n      \"rationale\": \"State is a strong domain/location identifier and a brittle shortcut with poor out-of-domain stability.\"\n    },\n    {\n      \"feature_id\": 23,\n      \"score\": 0.34,\n      \"rationale\": \"Cost-related care avoidance reflects access barriers and unmet need, but is somewhat policy- and domain-dependent.\"\n    },\n    {\n      \"feature_id\": 24,\n      \"score\": 0.14,\n      \"rationale\": \"Sex has some epidemiologic association but is a sensitive demographic attribute and weak standalone predictor.\"\n    }\n  ]\n}",
+      "input_tokens": 2853,
+      "output_tokens": 1153,
+      "total_tokens": 4006,
+      "response_id": "resp_02e9e1b63f53f61a006a27d992fecc819987dcacf92febaed3",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `brfss_diabetes`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"PHYSHLTH\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of days during the past 30 days where physical health was not good\",\n    \"note\": \"Values: 1 - 30 Number of days, 88 None, 77 Don’t know/Not sure, 99 Refused, BLANK Not asked or Missing\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"HIGH_BLOOD_PRESS\",\n    \"type\": \"categorical\",\n    \"description\": \"(Ever told) you have high blood pressure\",\n    \"values\": \"1.0=No; 2.0=Yes; 9.0=Don’t know/Not Sure/Refused/Missing\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"CHOL_CHK_PAST_5_YEARS\",\n    \"type\": \"categorical\",\n    \"description\": \"Time since last blooc cholesterol check\",\n    \"values\": \"1.0=Never; 2.0=Within the past year (anytime less than 12 months ago); 3.0=Within the past 2 years (more than 1 year but less than 2 years ago); 4.0=Within the past 5 years (more than 2 years but less than 5 years ago); 5.0=5 or more years ago; 7.0=Don’t kn...\",\n    \"note\": \"Aligned version of 'CHOLCHK*' features from 2015-2021; see _align_chol_chk() below..\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"TOLDHI\",\n    \"type\": \"categorical\",\n    \"description\": \"Ever been told you have high blood cholesterol\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"BMI5\",\n    \"type\": \"continuous\",\n    \"description\": \"Body Mass Index (BMI)\",\n    \"note\": \"Values: 1 - 9999 1 or greater - Notes: WTKG3/(HTM4*HTM4) (Has 2 implied decimal places); BLANK: Don’t know/Refused/Missing.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"BMI5CAT\",\n    \"type\": \"categorical\",\n    \"description\": \"Body Mass Index (BMI) category\",\n    \"values\": \"1.0=Underweight (BMI < 1850); 2.0=Normal Weight (1850 <= BMI < 2500); 3.0=Overweight (2500 <= BMI < 3000); 4.0=Obese (3000 <= BMI < 9999)\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"SMOKE100\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Answer to the question 'Have you smoked at least 100 cigarettes in your entire life?'\",\n    \"values\": \"1.0=Yes; 2.0=No\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"SMOKDAY2\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Do you now smoke cigarettes every day, some days, or not at all?'\",\n    \"values\": \"1.0=Every day; 2.0=Some days; 3.0=Not at all; 7.0=Don´t Know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"CVDSTRK3\",\n    \"type\": \"categorical\",\n    \"description\": \"Ever had a stroke, or been told you had a stroke\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"MICHD\",\n    \"type\": \"categorical\",\n    \"description\": \"Reports of coronary heart disease (CHD) or myocardial infarction (MI)\",\n    \"values\": \"1.0=Reported having myocardial infarction or coronary heart disease; 2.0=Did not report having myocardial infarction or coronary heart disease\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"FRUIT_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Fruit consumption\",\n    \"values\": \"1.0=Consumed fruit one or more times per day; 2.0=Consumed fruit less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"VEG_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Vegetable consumption\",\n    \"values\": \"1.0=Consumed vegetables one or more times per day; 2.0=Consumed vegetables less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DRNK_PER_WEEK\",\n    \"type\": \"continuous\",\n    \"description\": \"Total number of alcoholic beverages consumed per week\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"RFBING5\",\n    \"type\": \"categorical\",\n    \"description\": \"Respondent is binge drinker\",\n    \"values\": \"1.0=No; 2.0=Yes; 9.0=Don't know/Refused/Missing\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"TOTINDA\",\n    \"type\": \"categorical\",\n    \"description\": \"Physical activity or exercise during the past 30 days other than their regular job\",\n    \"values\": \"1.0=Had physical activity or exercise in last 30 days; 2.0=No physical activity or exercise in last 30 days\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"INCOME\",\n    \"type\": \"categorical\",\n    \"description\": \"Annual household income from all sources\",\n    \"values\": \"1.0=Less than $10,000; 2.0=Less than $15,000 ($10,000 to less than $15,000); 3.0=Less than $20,000 ($15,000 to less than $20,000); 4.0=Less than $25,000 ($20,000 to less than $25,000); 5.0=Less than $35,000 ($25,000 to less than $35,000); 6.0=Less than $50,...\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"MARITAL\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status\",\n    \"values\": \"1.0=Married; 2.0=Divorced; 3.0=Widowed; 4.0=Separated; 5.0=Never married; 6.0=A member of an unmarried couple; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"CHECKUP1\",\n    \"type\": \"categorical\",\n    \"description\": \"Time since last visit to the doctor for a checkup\",\n    \"values\": \"1.0=Within past year (anytime < 12 months ago); 2.0=Within past 2 years (1 year but < 2 years ago); 3.0=Within past 5 years (2 years but < 5 years ago); 4.0=5 or more years ago; 7.0=Don’t know/Not sure; 8.0=Never; 9.0=Refuse\",\n    \"note\": \"Question: About how long has it been since you last visited a doctor for a routine checkup? [A routine checkup is a general physical exam, not an exam for a specific injury, illness, or condition.]\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"EDUCA\",\n    \"type\": \"categorical\",\n    \"description\": \"Highest grade or year of school completed\",\n    \"values\": \"1.0=Never attended school or only kindergarten; 2.0=Grades 1 through 8 (Elementary); 3.0=Grades 9 through 11 (Some high school); 4.0=Grade 12 or GED (High school graduate); 5.0=College 1 year to 3 years (Some college or technical school); 6.0=College 4 year...\",\n    \"note\": \"Question: What is the highest grade or year of school you completed?\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"HEALTH_COV\",\n    \"type\": \"categorical\",\n    \"description\": \"Current health care coverage\",\n    \"values\": \"1.0=Have health care coverage; 2.0=Do not have health care coverage; 9.0=Not aged 18-64, Don’t know/Not Sure, Refused or Missing\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"MENTHLTH\",\n    \"type\": \"continuous\",\n    \"description\": \"Answer to the question 'for how many days during the past 30 days was your mental health not good?'\",\n    \"note\": \"Values: 1 - 30: Number of days, 88: None, 77: Don’t know/Not sure, 99: Refused.\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"IYEAR\",\n    \"type\": \"continuous\",\n    \"description\": \"Survey year\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"STATE\",\n    \"type\": \"categorical\",\n    \"description\": \"State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"MEDCOST\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?'\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don't know/not sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex of respondent\",\n    \"values\": \"1=Male; 2=Female\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a respondent has diabetes using BRFSS survey features, favoring stable health risk factors over domain-specific shortcuts.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.58,\n      \"rationale\": \"General self-reported poor physical health is plausibly linked to diabetes and usually stable across domains.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.82,\n      \"rationale\": \"Hypertension is a strong, clinically meaningful comorbidity and tends to generalize well.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.67,\n      \"rationale\": \"Recent cholesterol screening history reflects healthcare engagement and cardiometabolic risk, though somewhat indirect.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.78,\n      \"rationale\": \"High cholesterol history is a strong metabolic risk marker that should remain predictive across settings.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.88,\n      \"rationale\": \"BMI is a core, stable risk factor for diabetes and one of the most useful general predictors.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.86,\n      \"rationale\": \"BMI category captures obesity status, a robust diabetes risk signal with good cross-domain stability.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.42,\n      \"rationale\": \"Smoking history is relevant to health risk but only moderately informative for diabetes specifically.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.38,\n      \"rationale\": \"Current smoking status adds some signal but is weaker and more behaviorally noisy than core metabolic factors.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.35,\n      \"rationale\": \"Stroke history is related to vascular disease and diabetes, but it is less direct and less common.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.40,\n      \"rationale\": \"Coronary heart disease or MI is clinically related to diabetes, but it is a downstream comorbidity rather than a primary risk factor.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.18,\n      \"rationale\": \"Fruit intake is a broad lifestyle proxy with weak and noisy marginal association to diabetes.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.18,\n      \"rationale\": \"Vegetable intake is similarly a weak lifestyle proxy and unlikely to be strongly stable on its own.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.14,\n      \"rationale\": \"Alcohol quantity has inconsistent links to diabetes and is often noisy, so stable usefulness is limited.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.16,\n      \"rationale\": \"Binge drinking may capture risk behavior but is only weakly and inconsistently tied to diabetes.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.24,\n      \"rationale\": \"Physical activity is a meaningful protective factor, though self-report noise and modest effect size limit it.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.46,\n      \"rationale\": \"Income is a useful socioeconomic proxy for long-run health risk, but it can be a brittle shortcut across domains.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.20,\n      \"rationale\": \"Marital status is only a weak demographic proxy and likely captures confounding rather than direct disease risk.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.30,\n      \"rationale\": \"Routine checkup timing reflects healthcare access and monitoring, which can correlate with diagnosis and risk.\"\n    },\n    {\n      \"feature_id\": 18,\n      \"score\": 0.28,\n      \"rationale\": \"Education is a stable socioeconomic indicator, but its relation to diabetes is indirect and potentially confounded.\"\n    },\n    {\n      \"feature_id\": 19,\n      \"score\": 0.31,\n      \"rationale\": \"Insurance coverage is a healthcare-access proxy that may help, though it is not a direct biological predictor.\"\n    },\n    {\n      \"feature_id\": 20,\n      \"score\": 0.54,\n      \"rationale\": \"Poor mental health days can correlate with chronic disease burden and self-management challenges, with moderate stability.\"\n    },\n    {\n      \"feature_id\": 21,\n      \"score\": 0.12,\n      \"rationale\": \"Survey year is a domain/time identifier and risks learning temporal artifacts rather than disease-relevant structure.\"\n    },\n    {\n      \"feature_id\": 22,\n      \"score\": 0.10,\n      \"rationale\": \"State is a strong domain identifier and demographic/geographic shortcut that is brittle for OOD generalization.\"\n    },\n    {\n      \"feature_id\": 23,\n      \"score\": 0.22,\n      \"rationale\": \"Cost-related access barriers can correlate with diagnosis and management, but may also encode system-specific artifacts.\"\n    },\n    {\n      \"feature_id\": 24,\n      \"score\": 0.08,\n      \"rationale\": \"Sex is a sensitive demographic attribute with limited direct predictive value and potential shortcut risk.\"\n    }\n  ]\n}",
+      "input_tokens": 2853,
+      "output_tokens": 1188,
+      "total_tokens": 4041,
+      "response_id": "resp_000c91fe1e5ed792006a27d99a1cc88199ad388fd0fc312c72",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `brfss_diabetes`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"PHYSHLTH\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of days during the past 30 days where physical health was not good\",\n    \"note\": \"Values: 1 - 30 Number of days, 88 None, 77 Don’t know/Not sure, 99 Refused, BLANK Not asked or Missing\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"HIGH_BLOOD_PRESS\",\n    \"type\": \"categorical\",\n    \"description\": \"(Ever told) you have high blood pressure\",\n    \"values\": \"1.0=No; 2.0=Yes; 9.0=Don’t know/Not Sure/Refused/Missing\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"CHOL_CHK_PAST_5_YEARS\",\n    \"type\": \"categorical\",\n    \"description\": \"Time since last blooc cholesterol check\",\n    \"values\": \"1.0=Never; 2.0=Within the past year (anytime less than 12 months ago); 3.0=Within the past 2 years (more than 1 year but less than 2 years ago); 4.0=Within the past 5 years (more than 2 years but less than 5 years ago); 5.0=5 or more years ago; 7.0=Don’t kn...\",\n    \"note\": \"Aligned version of 'CHOLCHK*' features from 2015-2021; see _align_chol_chk() below..\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"TOLDHI\",\n    \"type\": \"categorical\",\n    \"description\": \"Ever been told you have high blood cholesterol\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"BMI5\",\n    \"type\": \"continuous\",\n    \"description\": \"Body Mass Index (BMI)\",\n    \"note\": \"Values: 1 - 9999 1 or greater - Notes: WTKG3/(HTM4*HTM4) (Has 2 implied decimal places); BLANK: Don’t know/Refused/Missing.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"BMI5CAT\",\n    \"type\": \"categorical\",\n    \"description\": \"Body Mass Index (BMI) category\",\n    \"values\": \"1.0=Underweight (BMI < 1850); 2.0=Normal Weight (1850 <= BMI < 2500); 3.0=Overweight (2500 <= BMI < 3000); 4.0=Obese (3000 <= BMI < 9999)\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"SMOKE100\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Answer to the question 'Have you smoked at least 100 cigarettes in your entire life?'\",\n    \"values\": \"1.0=Yes; 2.0=No\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"SMOKDAY2\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Do you now smoke cigarettes every day, some days, or not at all?'\",\n    \"values\": \"1.0=Every day; 2.0=Some days; 3.0=Not at all; 7.0=Don´t Know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"CVDSTRK3\",\n    \"type\": \"categorical\",\n    \"description\": \"Ever had a stroke, or been told you had a stroke\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"MICHD\",\n    \"type\": \"categorical\",\n    \"description\": \"Reports of coronary heart disease (CHD) or myocardial infarction (MI)\",\n    \"values\": \"1.0=Reported having myocardial infarction or coronary heart disease; 2.0=Did not report having myocardial infarction or coronary heart disease\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"FRUIT_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Fruit consumption\",\n    \"values\": \"1.0=Consumed fruit one or more times per day; 2.0=Consumed fruit less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"VEG_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Vegetable consumption\",\n    \"values\": \"1.0=Consumed vegetables one or more times per day; 2.0=Consumed vegetables less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DRNK_PER_WEEK\",\n    \"type\": \"continuous\",\n    \"description\": \"Total number of alcoholic beverages consumed per week\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"RFBING5\",\n    \"type\": \"categorical\",\n    \"description\": \"Respondent is binge drinker\",\n    \"values\": \"1.0=No; 2.0=Yes; 9.0=Don't know/Refused/Missing\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"TOTINDA\",\n    \"type\": \"categorical\",\n    \"description\": \"Physical activity or exercise during the past 30 days other than their regular job\",\n    \"values\": \"1.0=Had physical activity or exercise in last 30 days; 2.0=No physical activity or exercise in last 30 days\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"INCOME\",\n    \"type\": \"categorical\",\n    \"description\": \"Annual household income from all sources\",\n    \"values\": \"1.0=Less than $10,000; 2.0=Less than $15,000 ($10,000 to less than $15,000); 3.0=Less than $20,000 ($15,000 to less than $20,000); 4.0=Less than $25,000 ($20,000 to less than $25,000); 5.0=Less than $35,000 ($25,000 to less than $35,000); 6.0=Less than $50,...\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"MARITAL\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status\",\n    \"values\": \"1.0=Married; 2.0=Divorced; 3.0=Widowed; 4.0=Separated; 5.0=Never married; 6.0=A member of an unmarried couple; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"CHECKUP1\",\n    \"type\": \"categorical\",\n    \"description\": \"Time since last visit to the doctor for a checkup\",\n    \"values\": \"1.0=Within past year (anytime < 12 months ago); 2.0=Within past 2 years (1 year but < 2 years ago); 3.0=Within past 5 years (2 years but < 5 years ago); 4.0=5 or more years ago; 7.0=Don’t know/Not sure; 8.0=Never; 9.0=Refuse\",\n    \"note\": \"Question: About how long has it been since you last visited a doctor for a routine checkup? [A routine checkup is a general physical exam, not an exam for a specific injury, illness, or condition.]\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"EDUCA\",\n    \"type\": \"categorical\",\n    \"description\": \"Highest grade or year of school completed\",\n    \"values\": \"1.0=Never attended school or only kindergarten; 2.0=Grades 1 through 8 (Elementary); 3.0=Grades 9 through 11 (Some high school); 4.0=Grade 12 or GED (High school graduate); 5.0=College 1 year to 3 years (Some college or technical school); 6.0=College 4 year...\",\n    \"note\": \"Question: What is the highest grade or year of school you completed?\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"HEALTH_COV\",\n    \"type\": \"categorical\",\n    \"description\": \"Current health care coverage\",\n    \"values\": \"1.0=Have health care coverage; 2.0=Do not have health care coverage; 9.0=Not aged 18-64, Don’t know/Not Sure, Refused or Missing\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"MENTHLTH\",\n    \"type\": \"continuous\",\n    \"description\": \"Answer to the question 'for how many days during the past 30 days was your mental health not good?'\",\n    \"note\": \"Values: 1 - 30: Number of days, 88: None, 77: Don’t know/Not sure, 99: Refused.\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"IYEAR\",\n    \"type\": \"continuous\",\n    \"description\": \"Survey year\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"STATE\",\n    \"type\": \"categorical\",\n    \"description\": \"State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"MEDCOST\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?'\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don't know/not sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex of respondent\",\n    \"values\": \"1=Male; 2=Female\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a respondent has diabetes using BRFSS survey, prioritizing stable health-risk and chronic-condition signals over demographic or domain-specific shortcuts.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.74,\n      \"rationale\": \"General self-reported poor physical health is a strong, stable symptom burden signal.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.88,\n      \"rationale\": \"Hypertension is a well-established, broadly predictive comorbidity for diabetes across domains.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.62,\n      \"rationale\": \"Cholesterol screening history is moderately predictive through healthcare engagement and risk management, but less direct.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.83,\n      \"rationale\": \"High blood cholesterol is a stable metabolic/cardiovascular risk marker linked to diabetes.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.95,\n      \"rationale\": \"BMI is one of the strongest and most stable predictors of diabetes risk.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.93,\n      \"rationale\": \"BMI category closely tracks obesity-related diabetes risk and is robust across settings.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.28,\n      \"rationale\": \"Smoking history is related to health risk but only weakly and indirectly predictive for diabetes.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.35,\n      \"rationale\": \"Current smoking status adds some behavioral risk signal, but is not a strong diabetes predictor.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.38,\n      \"rationale\": \"Stroke history reflects vascular disease burden and can correlate with diabetes, but is less direct.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.42,\n      \"rationale\": \"Coronary heart disease or MI is a meaningful chronic disease marker associated with diabetes.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.16,\n      \"rationale\": \"Fruit intake is a weak lifestyle proxy and likely noisy across survey domains.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.18,\n      \"rationale\": \"Vegetable intake is a weak diet-quality proxy with limited stable marginal value.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.14,\n      \"rationale\": \"Alcohol quantity is noisy and only weakly related to diabetes risk in a stable way.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.12,\n      \"rationale\": \"Binge drinking is behaviorally relevant but generally a brittle and weak diabetes predictor.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.22,\n      \"rationale\": \"Physical activity is a meaningful risk factor, but self-report noise limits stability.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.30,\n      \"rationale\": \"Income captures socioeconomic risk and access patterns, but is a demographic shortcut with domain shift risk.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.10,\n      \"rationale\": \"Marital status is only a weak proxy for age/lifestyle and is not a robust causal signal.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.25,\n      \"rationale\": \"Routine checkup frequency reflects healthcare access and chronic disease management, moderately useful but indirect.\"\n    },\n    {\n      \"feature_id\": 18,\n      \"score\": 0.20,\n      \"rationale\": \"Education is a socioeconomic proxy with some predictive value but substantial shortcut and shift risk.\"\n    },\n    {\n      \"feature_id\": 19,\n      \"score\": 0.27,\n      \"rationale\": \"Insurance coverage relates to access and diagnosis probability, but may be unstable across domains.\"\n    },\n    {\n      \"feature_id\": 20,\n      \"score\": 0.70,\n      \"rationale\": \"Poor mental health days can correlate with chronic illness burden and overall health status.\"\n    },\n    {\n      \"feature_id\": 21,\n      \"score\": 0.08,\n      \"rationale\": \"Survey year is a domain identifier and should be heavily downweighted for OOD generalization.\"\n    },\n    {\n      \"feature_id\": 22,\n      \"score\": 0.05,\n      \"rationale\": \"State is a strong domain/geography identifier and likely encodes spurious regional artifacts.\"\n    },\n    {\n      \"feature_id\": 23,\n      \"score\": 0.24,\n      \"rationale\": \"Cost-related care avoidance indicates access barriers and may correlate with undiagnosed diabetes.\"\n    },\n    {\n      \"feature_id\": 24,\n      \"score\": 0.06,\n      \"rationale\": \"Sex can matter biologically but is also a demographic shortcut with limited stable marginal gain.\"\n    }\n  ]\n}",
+      "input_tokens": 2853,
+      "output_tokens": 1133,
+      "total_tokens": 3986,
+      "response_id": "resp_0e9d0cd008c74842006a27d9a181ac819aa3f5e7c9914e3552",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `brfss_diabetes`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"PHYSHLTH\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of days during the past 30 days where physical health was not good\",\n    \"note\": \"Values: 1 - 30 Number of days, 88 None, 77 Don’t know/Not sure, 99 Refused, BLANK Not asked or Missing\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"HIGH_BLOOD_PRESS\",\n    \"type\": \"categorical\",\n    \"description\": \"(Ever told) you have high blood pressure\",\n    \"values\": \"1.0=No; 2.0=Yes; 9.0=Don’t know/Not Sure/Refused/Missing\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"CHOL_CHK_PAST_5_YEARS\",\n    \"type\": \"categorical\",\n    \"description\": \"Time since last blooc cholesterol check\",\n    \"values\": \"1.0=Never; 2.0=Within the past year (anytime less than 12 months ago); 3.0=Within the past 2 years (more than 1 year but less than 2 years ago); 4.0=Within the past 5 years (more than 2 years but less than 5 years ago); 5.0=5 or more years ago; 7.0=Don’t kn...\",\n    \"note\": \"Aligned version of 'CHOLCHK*' features from 2015-2021; see _align_chol_chk() below..\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"TOLDHI\",\n    \"type\": \"categorical\",\n    \"description\": \"Ever been told you have high blood cholesterol\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"BMI5\",\n    \"type\": \"continuous\",\n    \"description\": \"Body Mass Index (BMI)\",\n    \"note\": \"Values: 1 - 9999 1 or greater - Notes: WTKG3/(HTM4*HTM4) (Has 2 implied decimal places); BLANK: Don’t know/Refused/Missing.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"BMI5CAT\",\n    \"type\": \"categorical\",\n    \"description\": \"Body Mass Index (BMI) category\",\n    \"values\": \"1.0=Underweight (BMI < 1850); 2.0=Normal Weight (1850 <= BMI < 2500); 3.0=Overweight (2500 <= BMI < 3000); 4.0=Obese (3000 <= BMI < 9999)\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"SMOKE100\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Answer to the question 'Have you smoked at least 100 cigarettes in your entire life?'\",\n    \"values\": \"1.0=Yes; 2.0=No\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"SMOKDAY2\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Do you now smoke cigarettes every day, some days, or not at all?'\",\n    \"values\": \"1.0=Every day; 2.0=Some days; 3.0=Not at all; 7.0=Don´t Know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"CVDSTRK3\",\n    \"type\": \"categorical\",\n    \"description\": \"Ever had a stroke, or been told you had a stroke\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"MICHD\",\n    \"type\": \"categorical\",\n    \"description\": \"Reports of coronary heart disease (CHD) or myocardial infarction (MI)\",\n    \"values\": \"1.0=Reported having myocardial infarction or coronary heart disease; 2.0=Did not report having myocardial infarction or coronary heart disease\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"FRUIT_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Fruit consumption\",\n    \"values\": \"1.0=Consumed fruit one or more times per day; 2.0=Consumed fruit less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"VEG_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Vegetable consumption\",\n    \"values\": \"1.0=Consumed vegetables one or more times per day; 2.0=Consumed vegetables less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DRNK_PER_WEEK\",\n    \"type\": \"continuous\",\n    \"description\": \"Total number of alcoholic beverages consumed per week\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"RFBING5\",\n    \"type\": \"categorical\",\n    \"description\": \"Respondent is binge drinker\",\n    \"values\": \"1.0=No; 2.0=Yes; 9.0=Don't know/Refused/Missing\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"TOTINDA\",\n    \"type\": \"categorical\",\n    \"description\": \"Physical activity or exercise during the past 30 days other than their regular job\",\n    \"values\": \"1.0=Had physical activity or exercise in last 30 days; 2.0=No physical activity or exercise in last 30 days\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"INCOME\",\n    \"type\": \"categorical\",\n    \"description\": \"Annual household income from all sources\",\n    \"values\": \"1.0=Less than $10,000; 2.0=Less than $15,000 ($10,000 to less than $15,000); 3.0=Less than $20,000 ($15,000 to less than $20,000); 4.0=Less than $25,000 ($20,000 to less than $25,000); 5.0=Less than $35,000 ($25,000 to less than $35,000); 6.0=Less than $50,...\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"MARITAL\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status\",\n    \"values\": \"1.0=Married; 2.0=Divorced; 3.0=Widowed; 4.0=Separated; 5.0=Never married; 6.0=A member of an unmarried couple; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"CHECKUP1\",\n    \"type\": \"categorical\",\n    \"description\": \"Time since last visit to the doctor for a checkup\",\n    \"values\": \"1.0=Within past year (anytime < 12 months ago); 2.0=Within past 2 years (1 year but < 2 years ago); 3.0=Within past 5 years (2 years but < 5 years ago); 4.0=5 or more years ago; 7.0=Don’t know/Not sure; 8.0=Never; 9.0=Refuse\",\n    \"note\": \"Question: About how long has it been since you last visited a doctor for a routine checkup? [A routine checkup is a general physical exam, not an exam for a specific injury, illness, or condition.]\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"EDUCA\",\n    \"type\": \"categorical\",\n    \"description\": \"Highest grade or year of school completed\",\n    \"values\": \"1.0=Never attended school or only kindergarten; 2.0=Grades 1 through 8 (Elementary); 3.0=Grades 9 through 11 (Some high school); 4.0=Grade 12 or GED (High school graduate); 5.0=College 1 year to 3 years (Some college or technical school); 6.0=College 4 year...\",\n    \"note\": \"Question: What is the highest grade or year of school you completed?\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"HEALTH_COV\",\n    \"type\": \"categorical\",\n    \"description\": \"Current health care coverage\",\n    \"values\": \"1.0=Have health care coverage; 2.0=Do not have health care coverage; 9.0=Not aged 18-64, Don’t know/Not Sure, Refused or Missing\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"MENTHLTH\",\n    \"type\": \"continuous\",\n    \"description\": \"Answer to the question 'for how many days during the past 30 days was your mental health not good?'\",\n    \"note\": \"Values: 1 - 30: Number of days, 88: None, 77: Don’t know/Not sure, 99: Refused.\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"IYEAR\",\n    \"type\": \"continuous\",\n    \"description\": \"Survey year\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"STATE\",\n    \"type\": \"categorical\",\n    \"description\": \"State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"MEDCOST\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?'\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don't know/not sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex of respondent\",\n    \"values\": \"1=Male; 2=Female\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a respondent has diabetes using survey, health, and demographic features from BRFSS.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.72,\n      \"rationale\": \"General poor physical health is a stable proxy for chronic disease burden and diabetes-related morbidity.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.83,\n      \"rationale\": \"Hypertension is a strong, semantically durable comorbidity associated with diabetes risk.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.55,\n      \"rationale\": \"Screening history reflects access and risk management, but is less direct and can shift with healthcare behavior.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.86,\n      \"rationale\": \"High cholesterol history is a robust metabolic comorbidity closely tied to diabetes.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.88,\n      \"rationale\": \"BMI is one of the strongest stable predictors of diabetes risk across domains.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.84,\n      \"rationale\": \"BMI category is highly predictive and usually more stable than raw continuous encoding, though partly redundant with BMI.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.36,\n      \"rationale\": \"Smoking history is relevant to health risk but only weakly and indirectly predictive of diabetes.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.28,\n      \"rationale\": \"Current smoking status adds limited stable signal beyond smoking history and is behaviorally noisy.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.58,\n      \"rationale\": \"Stroke history reflects vascular disease burden and is moderately informative for diabetes.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.74,\n      \"rationale\": \"Coronary heart disease or MI is a strong downstream cardiovascular comorbidity linked to diabetes.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.18,\n      \"rationale\": \"Fruit intake is a weak lifestyle proxy with substantial measurement noise and limited direct predictive power.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.20,\n      \"rationale\": \"Vegetable intake is similarly weak and likely too coarse to contribute much stable signal.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.14,\n      \"rationale\": \"Alcohol quantity is noisy and only weakly related to diabetes in a stable way.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.16,\n      \"rationale\": \"Binge drinking is a broad behavioral marker with limited direct and stable association to diabetes.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.33,\n      \"rationale\": \"Physical activity is a meaningful metabolic risk factor, but self-report noise and coarse coding reduce stability.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.42,\n      \"rationale\": \"Income can proxy access and lifestyle, but it is a demographic shortcut and less semantically direct than health measures.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.22,\n      \"rationale\": \"Marital status may weakly correlate with health behavior and age, but is mostly a brittle demographic proxy.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.31,\n      \"rationale\": \"Recent checkup frequency captures healthcare engagement and access, offering modest stable signal.\"\n    },\n    {\n      \"feature_id\": 18,\n      \"score\": 0.26,\n      \"rationale\": \"Education is a socioeconomic proxy with indirect association to diabetes and potential domain sensitivity.\"\n    },\n    {\n      \"feature_id\": 19,\n      \"score\": 0.24,\n      \"rationale\": \"Insurance coverage reflects access and age structure more than diabetes biology, so it is only modestly useful.\"\n    },\n    {\n      \"feature_id\": 20,\n      \"score\": 0.66,\n      \"rationale\": \"Poor mental health days can correlate with chronic illness burden and self-management challenges, giving moderate stable signal.\"\n    },\n    {\n      \"feature_id\": 21,\n      \"score\": 0.10,\n      \"rationale\": \"Survey year is a domain indicator and risks capturing temporal shifts rather than stable disease predictors.\"\n    },\n    {\n      \"feature_id\": 22,\n      \"score\": 0.08,\n      \"rationale\": \"State is a strong domain identifier and likely encodes sampling, policy, and regional artifacts rather than generalizable biology.\"\n    },\n    {\n      \"feature_id\": 23,\n      \"score\": 0.30,\n      \"rationale\": \"Cost-related unmet care reflects access barriers that can matter, but it is indirect and potentially domain-sensitive.\"\n    },\n    {\n      \"feature_id\": 24,\n      \"score\": 0.12,\n      \"rationale\": \"Sex has some epidemiologic relevance but is a sensitive demographic feature and usually only modestly predictive here.\"\n    }\n  ]\n}",
+      "input_tokens": 2853,
+      "output_tokens": 1159,
+      "total_tokens": 4012,
+      "response_id": "resp_00a691576aace574006a27d9a85aa4819b9b7b4899e622c19c",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/tableshift/brfss_diabetes/rankings/score_all_prompt.txt",
+  "config": {
+    "score_samples": 5
+  }
+}

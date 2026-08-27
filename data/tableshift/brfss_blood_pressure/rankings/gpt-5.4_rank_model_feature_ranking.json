@@ -1,0 +1,632 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "brfss_blood_pressure",
+  "model": "gpt-5.4",
+  "method": "rank",
+  "feature_space": "model",
+  "temperature": 0.0,
+  "created_at": "2026-06-29T11:09:54",
+  "token_usage": {
+    "num_calls": 1,
+    "input_tokens": 15397,
+    "output_tokens": 3722,
+    "total_tokens": 19119
+  },
+  "response": {
+    "task_summary": "Predict whether a respondent has high blood pressure/hypertension using BRFSS survey features while favoring stable clinical and behavioral risk factors over domain-identifying variables.",
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 0,
+        "rationale": "Age is one of the strongest and most stable risk factors for hypertension across domains.",
+        "feature": "AGEG5YR"
+      },
+      {
+        "rank": 2,
+        "feature_id": 7,
+        "rationale": "Diabetes is a clinically meaningful comorbidity strongly associated with hypertension.",
+        "feature": "DIABETES"
+      },
+      {
+        "rank": 3,
+        "feature_id": 30,
+        "rationale": "Sex has a robust physiological relationship with blood pressure risk.",
+        "feature": "SEX"
+      },
+      {
+        "rank": 4,
+        "feature_id": 94,
+        "rationale": "Recent physical activity is a broadly stable behavioral predictor of cardiovascular health.",
+        "feature": "TOTINDA_10"
+      },
+      {
+        "rank": 5,
+        "feature_id": 95,
+        "rationale": "The complementary physical inactivity indicator is also strongly relevant to hypertension risk.",
+        "feature": "TOTINDA_20"
+      },
+      {
+        "rank": 6,
+        "feature_id": 25,
+        "rationale": "Poverty captures socioeconomic stress and healthcare access effects that plausibly generalize.",
+        "feature": "POVERTY"
+      },
+      {
+        "rank": 7,
+        "feature_id": 8,
+        "rationale": "Alcohol consumption per week is a direct behavioral risk factor for elevated blood pressure.",
+        "feature": "DRNK_PER_WEEK"
+      },
+      {
+        "rank": 8,
+        "feature_id": 37,
+        "rationale": "Lifetime smoking exposure is a meaningful cardiovascular risk marker.",
+        "feature": "SMOKE100_10"
+      },
+      {
+        "rank": 9,
+        "feature_id": 38,
+        "rationale": "The complementary lifetime non-smoker indicator helps encode stable smoking history.",
+        "feature": "SMOKE100_20"
+      },
+      {
+        "rank": 10,
+        "feature_id": 31,
+        "rationale": "Current daily smoking status is behaviorally relevant to hypertension and vascular risk.",
+        "feature": "SMOKDAY2_10"
+      },
+      {
+        "rank": 11,
+        "feature_id": 33,
+        "rationale": "Current non-smoking status helps distinguish present smoking behavior with plausible generalization.",
+        "feature": "SMOKDAY2_30"
+      },
+      {
+        "rank": 12,
+        "feature_id": 32,
+        "rationale": "Some-days smoking is still a meaningful cardiovascular behavior signal.",
+        "feature": "SMOKDAY2_20"
+      },
+      {
+        "rank": 13,
+        "feature_id": 97,
+        "rationale": "Vegetable consumption is a stable diet-quality proxy related to blood pressure.",
+        "feature": "VEG_ONCE_PER_DAY_10"
+      },
+      {
+        "rank": 14,
+        "feature_id": 98,
+        "rationale": "Low vegetable consumption is likewise informative as an adverse diet indicator.",
+        "feature": "VEG_ONCE_PER_DAY_20"
+      },
+      {
+        "rank": 15,
+        "feature_id": 18,
+        "rationale": "Fruit consumption is a generalizable diet-quality feature with plausible hypertension relevance.",
+        "feature": "FRUIT_ONCE_PER_DAY_10"
+      },
+      {
+        "rank": 16,
+        "feature_id": 19,
+        "rationale": "Low fruit consumption complements diet-quality information relevant to blood pressure.",
+        "feature": "FRUIT_ONCE_PER_DAY_20"
+      },
+      {
+        "rank": 17,
+        "feature_id": 27,
+        "rationale": "Binge drinking status captures harmful alcohol patterning beyond weekly totals.",
+        "feature": "RFBING5_10"
+      },
+      {
+        "rank": 18,
+        "feature_id": 28,
+        "rationale": "The complementary binge-drinker indicator is similarly behaviorally relevant.",
+        "feature": "RFBING5_20"
+      },
+      {
+        "rank": 19,
+        "feature_id": 22,
+        "rationale": "Foregone medical care due to cost reflects access barriers linked to unmanaged hypertension.",
+        "feature": "MEDCOST_10"
+      },
+      {
+        "rank": 20,
+        "feature_id": 23,
+        "rationale": "The complementary no-cost-barrier indicator still carries useful access information.",
+        "feature": "MEDCOST_20"
+      },
+      {
+        "rank": 21,
+        "feature_id": 26,
+        "rationale": "Race may reflect structural risk differences but is also vulnerable to shortcut learning, so moderate priority.",
+        "feature": "PRACE1"
+      },
+      {
+        "rank": 22,
+        "feature_id": 16,
+        "rationale": "Unable-to-work status may proxy poor health burden relevant to hypertension.",
+        "feature": "EMPLOY1_80"
+      },
+      {
+        "rank": 23,
+        "feature_id": 15,
+        "rationale": "Retired status often tracks older age and health status, though partly redundant with age.",
+        "feature": "EMPLOY1_70"
+      },
+      {
+        "rank": 24,
+        "feature_id": 13,
+        "rationale": "Homemaker status may weakly reflect lifestyle and socioeconomic patterns related to health.",
+        "feature": "EMPLOY1_50"
+      },
+      {
+        "rank": 25,
+        "feature_id": 9,
+        "rationale": "Employment for wages provides some socioeconomic and routine-related signal but is less direct.",
+        "feature": "EMPLOY1_10"
+      },
+      {
+        "rank": 26,
+        "feature_id": 10,
+        "rationale": "Self-employment may weakly capture socioeconomic and stress-related differences.",
+        "feature": "EMPLOY1_20"
+      },
+      {
+        "rank": 27,
+        "feature_id": 11,
+        "rationale": "Long-term unemployment may proxy chronic stress and poorer health.",
+        "feature": "EMPLOY1_30"
+      },
+      {
+        "rank": 28,
+        "feature_id": 12,
+        "rationale": "Short-term unemployment may carry weaker but still plausible socioeconomic signal.",
+        "feature": "EMPLOY1_40"
+      },
+      {
+        "rank": 29,
+        "feature_id": 14,
+        "rationale": "Student status is mostly age-related and less directly tied to hypertension.",
+        "feature": "EMPLOY1_60"
+      },
+      {
+        "rank": 30,
+        "feature_id": 4,
+        "rationale": "Skin cancer history may weakly proxy age and healthcare contact but is not a core hypertension factor.",
+        "feature": "CHCSCNCR_10"
+      },
+      {
+        "rank": 31,
+        "feature_id": 5,
+        "rationale": "Absence of skin cancer offers limited complementary health-history information.",
+        "feature": "CHCSCNCR_20"
+      },
+      {
+        "rank": 32,
+        "feature_id": 1,
+        "rationale": "Other cancer history may weakly reflect age and comorbidity burden.",
+        "feature": "CHCOCNCR_10"
+      },
+      {
+        "rank": 33,
+        "feature_id": 2,
+        "rationale": "No other cancer is only weakly informative as a complementary health-history marker.",
+        "feature": "CHCOCNCR_20"
+      },
+      {
+        "rank": 34,
+        "feature_id": 96,
+        "rationale": "Missingness on physical activity may encode survey process more than health, but could still correlate with risk.",
+        "feature": "TOTINDA_nan"
+      },
+      {
+        "rank": 35,
+        "feature_id": 29,
+        "rationale": "Missing binge-drinking status is mostly a response artifact with limited stable value.",
+        "feature": "RFBING5_nan"
+      },
+      {
+        "rank": 36,
+        "feature_id": 20,
+        "rationale": "Missing fruit-consumption status is mainly a survey-response artifact.",
+        "feature": "FRUIT_ONCE_PER_DAY_nan"
+      },
+      {
+        "rank": 37,
+        "feature_id": 99,
+        "rationale": "Missing vegetable-consumption status is mostly process noise rather than semantic risk.",
+        "feature": "VEG_ONCE_PER_DAY_nan"
+      },
+      {
+        "rank": 38,
+        "feature_id": 24,
+        "rationale": "Missing medical-cost response may weakly reflect disengagement but is not semantically robust.",
+        "feature": "MEDCOST_nan"
+      },
+      {
+        "rank": 39,
+        "feature_id": 39,
+        "rationale": "Missing lifetime smoking history is mostly a data artifact.",
+        "feature": "SMOKE100_nan"
+      },
+      {
+        "rank": 40,
+        "feature_id": 34,
+        "rationale": "Don't-know smoking response is less semantically meaningful than substantive smoking categories.",
+        "feature": "SMOKDAY2_70"
+      },
+      {
+        "rank": 41,
+        "feature_id": 35,
+        "rationale": "Refused smoking response is primarily a response-style artifact.",
+        "feature": "SMOKDAY2_90"
+      },
+      {
+        "rank": 42,
+        "feature_id": 17,
+        "rationale": "Missing employment status is mostly survey-process information.",
+        "feature": "EMPLOY1_nan"
+      },
+      {
+        "rank": 43,
+        "feature_id": 6,
+        "rationale": "Missing skin-cancer status is weak and likely non-transportable.",
+        "feature": "CHCSCNCR_nan"
+      },
+      {
+        "rank": 44,
+        "feature_id": 3,
+        "rationale": "Missing other-cancer status is similarly weak and process-driven.",
+        "feature": "CHCOCNCR_nan"
+      },
+      {
+        "rank": 45,
+        "feature_id": 36,
+        "rationale": "Not-asked smoking status is heavily tied to questionnaire flow rather than underlying hypertension risk.",
+        "feature": "SMOKDAY2_NOTASKED_MISSING"
+      },
+      {
+        "rank": 46,
+        "feature_id": 21,
+        "rationale": "Survey year can encode temporal shifts and benchmark split structure rather than stable biology.",
+        "feature": "IYEAR"
+      },
+      {
+        "rank": 47,
+        "feature_id": 40,
+        "rationale": "State identity is a strong domain indicator and should be heavily penalized for OOD generalization.",
+        "feature": "STATE_10"
+      },
+      {
+        "rank": 48,
+        "feature_id": 41,
+        "rationale": "State dummy mainly captures geography-specific prevalence and policy artifacts.",
+        "feature": "STATE_100"
+      },
+      {
+        "rank": 49,
+        "feature_id": 42,
+        "rationale": "State dummy is domain-identifying rather than semantically causal.",
+        "feature": "STATE_110"
+      },
+      {
+        "rank": 50,
+        "feature_id": 43,
+        "rationale": "State dummy likely harms transportability across domains.",
+        "feature": "STATE_120"
+      },
+      {
+        "rank": 51,
+        "feature_id": 44,
+        "rationale": "State dummy mostly reflects benchmark environment membership.",
+        "feature": "STATE_130"
+      },
+      {
+        "rank": 52,
+        "feature_id": 45,
+        "rationale": "State dummy is a brittle geographic shortcut.",
+        "feature": "STATE_150"
+      },
+      {
+        "rank": 53,
+        "feature_id": 46,
+        "rationale": "State dummy captures local distribution artifacts more than individual risk.",
+        "feature": "STATE_160"
+      },
+      {
+        "rank": 54,
+        "feature_id": 47,
+        "rationale": "State dummy is not expected to generalize causally.",
+        "feature": "STATE_170"
+      },
+      {
+        "rank": 55,
+        "feature_id": 48,
+        "rationale": "State dummy is a domain label proxy.",
+        "feature": "STATE_180"
+      },
+      {
+        "rank": 56,
+        "feature_id": 49,
+        "rationale": "State dummy likely encodes environment-specific prevalence.",
+        "feature": "STATE_190"
+      },
+      {
+        "rank": 57,
+        "feature_id": 50,
+        "rationale": "State dummy is a brittle shortcut feature.",
+        "feature": "STATE_20"
+      },
+      {
+        "rank": 58,
+        "feature_id": 51,
+        "rationale": "State dummy should be deprioritized for OOD robustness.",
+        "feature": "STATE_200"
+      },
+      {
+        "rank": 59,
+        "feature_id": 52,
+        "rationale": "State dummy mainly identifies geography rather than physiology.",
+        "feature": "STATE_210"
+      },
+      {
+        "rank": 60,
+        "feature_id": 53,
+        "rationale": "State dummy is likely to overfit domain-specific patterns.",
+        "feature": "STATE_220"
+      },
+      {
+        "rank": 61,
+        "feature_id": 54,
+        "rationale": "State dummy has low causal transportability.",
+        "feature": "STATE_230"
+      },
+      {
+        "rank": 62,
+        "feature_id": 55,
+        "rationale": "State dummy is mostly an environment marker.",
+        "feature": "STATE_240"
+      },
+      {
+        "rank": 63,
+        "feature_id": 56,
+        "rationale": "State dummy likely captures local healthcare and sampling artifacts.",
+        "feature": "STATE_250"
+      },
+      {
+        "rank": 64,
+        "feature_id": 57,
+        "rationale": "State dummy is not a stable individual-level predictor.",
+        "feature": "STATE_260"
+      },
+      {
+        "rank": 65,
+        "feature_id": 58,
+        "rationale": "State dummy is heavily domain-specific.",
+        "feature": "STATE_270"
+      },
+      {
+        "rank": 66,
+        "feature_id": 59,
+        "rationale": "State dummy should be strongly penalized in this benchmark setting.",
+        "feature": "STATE_280"
+      },
+      {
+        "rank": 67,
+        "feature_id": 60,
+        "rationale": "State dummy is a geographic shortcut rather than a semantic risk factor.",
+        "feature": "STATE_290"
+      },
+      {
+        "rank": 68,
+        "feature_id": 61,
+        "rationale": "State dummy mostly reflects environment membership.",
+        "feature": "STATE_300"
+      },
+      {
+        "rank": 69,
+        "feature_id": 62,
+        "rationale": "State dummy is unlikely to transfer across held-out domains.",
+        "feature": "STATE_310"
+      },
+      {
+        "rank": 70,
+        "feature_id": 63,
+        "rationale": "State dummy captures regional artifacts more than causal signal.",
+        "feature": "STATE_320"
+      },
+      {
+        "rank": 71,
+        "feature_id": 64,
+        "rationale": "State dummy is a brittle proxy for domain.",
+        "feature": "STATE_330"
+      },
+      {
+        "rank": 72,
+        "feature_id": 65,
+        "rationale": "State dummy should receive low prior importance for OOD prediction.",
+        "feature": "STATE_340"
+      },
+      {
+        "rank": 73,
+        "feature_id": 66,
+        "rationale": "State dummy is mostly non-transportable geography information.",
+        "feature": "STATE_350"
+      },
+      {
+        "rank": 74,
+        "feature_id": 67,
+        "rationale": "State dummy likely induces shortcut learning.",
+        "feature": "STATE_360"
+      },
+      {
+        "rank": 75,
+        "feature_id": 68,
+        "rationale": "State dummy is weakly semantic and strongly domain-identifying.",
+        "feature": "STATE_370"
+      },
+      {
+        "rank": 76,
+        "feature_id": 69,
+        "rationale": "State dummy mainly reflects local prevalence differences.",
+        "feature": "STATE_380"
+      },
+      {
+        "rank": 77,
+        "feature_id": 70,
+        "rationale": "State dummy is not desirable for robust generalization.",
+        "feature": "STATE_390"
+      },
+      {
+        "rank": 78,
+        "feature_id": 71,
+        "rationale": "State dummy is a benchmark split shortcut.",
+        "feature": "STATE_40"
+      },
+      {
+        "rank": 79,
+        "feature_id": 72,
+        "rationale": "State dummy has low value outside the observed environments.",
+        "feature": "STATE_400"
+      },
+      {
+        "rank": 80,
+        "feature_id": 73,
+        "rationale": "State dummy is primarily a domain identifier.",
+        "feature": "STATE_410"
+      },
+      {
+        "rank": 81,
+        "feature_id": 74,
+        "rationale": "State dummy likely overfits geography-specific artifacts.",
+        "feature": "STATE_420"
+      },
+      {
+        "rank": 82,
+        "feature_id": 75,
+        "rationale": "State dummy is not semantically stable across domains.",
+        "feature": "STATE_440"
+      },
+      {
+        "rank": 83,
+        "feature_id": 76,
+        "rationale": "State dummy should be strongly downweighted for OOD use.",
+        "feature": "STATE_450"
+      },
+      {
+        "rank": 84,
+        "feature_id": 77,
+        "rationale": "State dummy mostly encodes environment membership.",
+        "feature": "STATE_460"
+      },
+      {
+        "rank": 85,
+        "feature_id": 78,
+        "rationale": "State dummy is a brittle geographic proxy.",
+        "feature": "STATE_470"
+      },
+      {
+        "rank": 86,
+        "feature_id": 79,
+        "rationale": "State dummy captures regional distribution shift rather than stable risk.",
+        "feature": "STATE_480"
+      },
+      {
+        "rank": 87,
+        "feature_id": 80,
+        "rationale": "State dummy is low-priority due to shortcut risk.",
+        "feature": "STATE_490"
+      },
+      {
+        "rank": 88,
+        "feature_id": 81,
+        "rationale": "State dummy is mainly domain-identifying information.",
+        "feature": "STATE_50"
+      },
+      {
+        "rank": 89,
+        "feature_id": 82,
+        "rationale": "State dummy is unlikely to generalize causally.",
+        "feature": "STATE_500"
+      },
+      {
+        "rank": 90,
+        "feature_id": 83,
+        "rationale": "State dummy mostly reflects local sampling and policy context.",
+        "feature": "STATE_510"
+      },
+      {
+        "rank": 91,
+        "feature_id": 84,
+        "rationale": "State dummy is a non-robust shortcut feature.",
+        "feature": "STATE_530"
+      },
+      {
+        "rank": 92,
+        "feature_id": 85,
+        "rationale": "State dummy should be penalized as geography-specific artifact.",
+        "feature": "STATE_540"
+      },
+      {
+        "rank": 93,
+        "feature_id": 86,
+        "rationale": "State dummy has little stable semantic value for individual prediction.",
+        "feature": "STATE_550"
+      },
+      {
+        "rank": 94,
+        "feature_id": 87,
+        "rationale": "State dummy is mostly environment metadata.",
+        "feature": "STATE_560"
+      },
+      {
+        "rank": 95,
+        "feature_id": 88,
+        "rationale": "State dummy is a brittle domain proxy.",
+        "feature": "STATE_60"
+      },
+      {
+        "rank": 96,
+        "feature_id": 89,
+        "rationale": "State dummy likely harms out-of-domain robustness.",
+        "feature": "STATE_660"
+      },
+      {
+        "rank": 97,
+        "feature_id": 90,
+        "rationale": "State dummy is strongly domain-identifying and weakly causal.",
+        "feature": "STATE_720"
+      },
+      {
+        "rank": 98,
+        "feature_id": 91,
+        "rationale": "State dummy mostly captures geography-specific artifacts.",
+        "feature": "STATE_780"
+      },
+      {
+        "rank": 99,
+        "feature_id": 92,
+        "rationale": "State dummy is among the least transportable features.",
+        "feature": "STATE_80"
+      },
+      {
+        "rank": 100,
+        "feature_id": 93,
+        "rationale": "State dummy is the clearest domain identifier and least desirable for OOD generalization.",
+        "feature": "STATE_90"
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `brfss_blood_pressure`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEG5YR\",\n    \"type\": \"categorical\",\n    \"description\": \"Age group\",\n    \"values\": \"1.0=Age 18 to 24; 2.0=Age 25 to 29; 3.0=Age 30 to 34; 4.0=Age 35 to 39; 5.0=Age 40 to 44; 6.0=Age 45 to 49; 7.0=Age 50 to 54; 8.0=Age 55 to 59; 9.0=Age 60 to 64; 10.0=Age 65 to 69; 11.0=Age 70 to 74; 12.0=Age 75 to 79; ... (+2 more)\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"CHCOCNCR_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `CHCOCNCR_10` derived from semantic feature `CHCOCNCR`. Interpret this column as the encoded model input for that derived category/value. Have any other types of cancer or ever told you have any other types of cancer\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"CHCOCNCR_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `CHCOCNCR_20` derived from semantic feature `CHCOCNCR`. Interpret this column as the encoded model input for that derived category/value. Have any other types of cancer or ever told you have any other types of cancer\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"CHCOCNCR_nan\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `CHCOCNCR_nan` derived from semantic feature `CHCOCNCR`. Interpret this column as the encoded model input for that derived category/value. Have any other types of cancer or ever told you have any other types of cancer\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"CHCSCNCR_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `CHCSCNCR_10` derived from semantic feature `CHCSCNCR`. Interpret this column as the encoded model input for that derived category/value. Have skin cancer or ever told you have skin cancer\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"CHCSCNCR_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `CHCSCNCR_20` derived from semantic feature `CHCSCNCR`. Interpret this column as the encoded model input for that derived category/value. Have skin cancer or ever told you have skin cancer\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"CHCSCNCR_nan\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `CHCSCNCR_nan` derived from semantic feature `CHCSCNCR`. Interpret this column as the encoded model input for that derived category/value. Have skin cancer or ever told you have skin cancer\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"DIABETES\",\n    \"type\": \"categorical\",\n    \"description\": \"Have diabetes or ever been told you have diabetes\",\n    \"values\": \"1.0=Yes; 2.0=Yes, but female told only during pregnancy; 3.0=No; 4.0=No, pre-diabetes or borderline diabetes; 7.0=Don’t know/Not Sure; 9.0=Refused, BLANK Not asked or Missing\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"DRNK_PER_WEEK\",\n    \"type\": \"continuous\",\n    \"description\": \"Total number of alcoholic beverages consumed per week\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"EMPLOY1_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `EMPLOY1_10` derived from semantic feature `EMPLOY1`. Interpret this column as the encoded model input for that derived category/value. Current employment status\",\n    \"values\": \"1.0=Employed for wages; 2.0=Self-employed; 3.0=Out of work for 1 year or more; 4.0=Out of work for less than 1 year; 5.0=A homemaker; 6.0=A student; 7.0=Retired; 8.0=Unable to work; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"EMPLOY1_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `EMPLOY1_20` derived from semantic feature `EMPLOY1`. Interpret this column as the encoded model input for that derived category/value. Current employment status\",\n    \"values\": \"1.0=Employed for wages; 2.0=Self-employed; 3.0=Out of work for 1 year or more; 4.0=Out of work for less than 1 year; 5.0=A homemaker; 6.0=A student; 7.0=Retired; 8.0=Unable to work; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"EMPLOY1_30\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `EMPLOY1_30` derived from semantic feature `EMPLOY1`. Interpret this column as the encoded model input for that derived category/value. Current employment status\",\n    \"values\": \"1.0=Employed for wages; 2.0=Self-employed; 3.0=Out of work for 1 year or more; 4.0=Out of work for less than 1 year; 5.0=A homemaker; 6.0=A student; 7.0=Retired; 8.0=Unable to work; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"EMPLOY1_40\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `EMPLOY1_40` derived from semantic feature `EMPLOY1`. Interpret this column as the encoded model input for that derived category/value. Current employment status\",\n    \"values\": \"1.0=Employed for wages; 2.0=Self-employed; 3.0=Out of work for 1 year or more; 4.0=Out of work for less than 1 year; 5.0=A homemaker; 6.0=A student; 7.0=Retired; 8.0=Unable to work; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"EMPLOY1_50\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `EMPLOY1_50` derived from semantic feature `EMPLOY1`. Interpret this column as the encoded model input for that derived category/value. Current employment status\",\n    \"values\": \"1.0=Employed for wages; 2.0=Self-employed; 3.0=Out of work for 1 year or more; 4.0=Out of work for less than 1 year; 5.0=A homemaker; 6.0=A student; 7.0=Retired; 8.0=Unable to work; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"EMPLOY1_60\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `EMPLOY1_60` derived from semantic feature `EMPLOY1`. Interpret this column as the encoded model input for that derived category/value. Current employment status\",\n    \"values\": \"1.0=Employed for wages; 2.0=Self-employed; 3.0=Out of work for 1 year or more; 4.0=Out of work for less than 1 year; 5.0=A homemaker; 6.0=A student; 7.0=Retired; 8.0=Unable to work; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"EMPLOY1_70\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `EMPLOY1_70` derived from semantic feature `EMPLOY1`. Interpret this column as the encoded model input for that derived category/value. Current employment status\",\n    \"values\": \"1.0=Employed for wages; 2.0=Self-employed; 3.0=Out of work for 1 year or more; 4.0=Out of work for less than 1 year; 5.0=A homemaker; 6.0=A student; 7.0=Retired; 8.0=Unable to work; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"EMPLOY1_80\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `EMPLOY1_80` derived from semantic feature `EMPLOY1`. Interpret this column as the encoded model input for that derived category/value. Current employment status\",\n    \"values\": \"1.0=Employed for wages; 2.0=Self-employed; 3.0=Out of work for 1 year or more; 4.0=Out of work for less than 1 year; 5.0=A homemaker; 6.0=A student; 7.0=Retired; 8.0=Unable to work; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"EMPLOY1_nan\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `EMPLOY1_nan` derived from semantic feature `EMPLOY1`. Interpret this column as the encoded model input for that derived category/value. Current employment status\",\n    \"values\": \"1.0=Employed for wages; 2.0=Self-employed; 3.0=Out of work for 1 year or more; 4.0=Out of work for less than 1 year; 5.0=A homemaker; 6.0=A student; 7.0=Retired; 8.0=Unable to work; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"FRUIT_ONCE_PER_DAY_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `FRUIT_ONCE_PER_DAY_10` derived from semantic feature `FRUIT_ONCE_PER_DAY`. Interpret this column as the encoded model input for that derived category/value. Fruit consumption\",\n    \"values\": \"1.0=Consumed fruit one or more times per day; 2.0=Consumed fruit less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"FRUIT_ONCE_PER_DAY_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `FRUIT_ONCE_PER_DAY_20` derived from semantic feature `FRUIT_ONCE_PER_DAY`. Interpret this column as the encoded model input for that derived category/value. Fruit consumption\",\n    \"values\": \"1.0=Consumed fruit one or more times per day; 2.0=Consumed fruit less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"FRUIT_ONCE_PER_DAY_nan\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `FRUIT_ONCE_PER_DAY_nan` derived from semantic feature `FRUIT_ONCE_PER_DAY`. Interpret this column as the encoded model input for that derived category/value. Fruit consumption\",\n    \"values\": \"1.0=Consumed fruit one or more times per day; 2.0=Consumed fruit less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"IYEAR\",\n    \"type\": \"continuous\",\n    \"description\": \"Survey year\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"MEDCOST_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `MEDCOST_10` derived from semantic feature `MEDCOST`. Interpret this column as the encoded model input for that derived category/value. Answer to the question 'Was there a time in the past 12 months when you needed to see a doctor but could no...\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don't know/not sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"MEDCOST_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `MEDCOST_20` derived from semantic feature `MEDCOST`. Interpret this column as the encoded model input for that derived category/value. Answer to the question 'Was there a time in the past 12 months when you needed to see a doctor but could no...\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don't know/not sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"MEDCOST_nan\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `MEDCOST_nan` derived from semantic feature `MEDCOST`. Interpret this column as the encoded model input for that derived category/value. Answer to the question 'Was there a time in the past 12 months when you needed to see a doctor but could n...\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don't know/not sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 25,\n    \"feature\": \"POVERTY\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Binary indicator for whether an individuals' income falls below the 2021 poverty guideline for family of four\",\n    \"values\": \"1.0=Yes; 0.0=No\"\n  },\n  {\n    \"feature_id\": 26,\n    \"feature\": \"PRACE1\",\n    \"type\": \"categorical\",\n    \"description\": \"Preferred race category\",\n    \"values\": \"1.0=White; 2.0=Black or African American; 3.0=American Indian or Alaskan Native; 4.0=Asian; 5.0=Native Hawaiian or other Pacific Islander; 6.0=Other race; 7.0=No preferred race; 8.0=Multiracial but preferred race not answered; 77.0=Don’t know/Not sure; 9.0=...\"\n  },\n  {\n    \"feature_id\": 27,\n    \"feature\": \"RFBING5_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `RFBING5_10` derived from semantic feature `RFBING5`. Interpret this column as the encoded model input for that derived category/value. Respondent is binge drinker\",\n    \"values\": \"1.0=No; 2.0=Yes; 9.0=Don't know/Refused/Missing\"\n  },\n  {\n    \"feature_id\": 28,\n    \"feature\": \"RFBING5_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `RFBING5_20` derived from semantic feature `RFBING5`. Interpret this column as the encoded model input for that derived category/value. Respondent is binge drinker\",\n    \"values\": \"1.0=No; 2.0=Yes; 9.0=Don't know/Refused/Missing\"\n  },\n  {\n    \"feature_id\": 29,\n    \"feature\": \"RFBING5_nan\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `RFBING5_nan` derived from semantic feature `RFBING5`. Interpret this column as the encoded model input for that derived category/value. Respondent is binge drinker\",\n    \"values\": \"1.0=No; 2.0=Yes; 9.0=Don't know/Refused/Missing\"\n  },\n  {\n    \"feature_id\": 30,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex of respondent\",\n    \"values\": \"1=Male; 2=Female\"\n  },\n  {\n    \"feature_id\": 31,\n    \"feature\": \"SMOKDAY2_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `SMOKDAY2_10` derived from semantic feature `SMOKDAY2`. Interpret this column as the encoded model input for that derived category/value. Answer to the question 'Do you now smoke cigarettes every day, some days, or not at all?'\",\n    \"values\": \"1.0=Every day; 2.0=Some days; 3.0=Not at all; 7.0=Don´t Know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 32,\n    \"feature\": \"SMOKDAY2_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `SMOKDAY2_20` derived from semantic feature `SMOKDAY2`. Interpret this column as the encoded model input for that derived category/value. Answer to the question 'Do you now smoke cigarettes every day, some days, or not at all?'\",\n    \"values\": \"1.0=Every day; 2.0=Some days; 3.0=Not at all; 7.0=Don´t Know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 33,\n    \"feature\": \"SMOKDAY2_30\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `SMOKDAY2_30` derived from semantic feature `SMOKDAY2`. Interpret this column as the encoded model input for that derived category/value. Answer to the question 'Do you now smoke cigarettes every day, some days, or not at all?'\",\n    \"values\": \"1.0=Every day; 2.0=Some days; 3.0=Not at all; 7.0=Don´t Know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 34,\n    \"feature\": \"SMOKDAY2_70\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `SMOKDAY2_70` derived from semantic feature `SMOKDAY2`. Interpret this column as the encoded model input for that derived category/value. Answer to the question 'Do you now smoke cigarettes every day, some days, or not at all?'\",\n    \"values\": \"1.0=Every day; 2.0=Some days; 3.0=Not at all; 7.0=Don´t Know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 35,\n    \"feature\": \"SMOKDAY2_90\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `SMOKDAY2_90` derived from semantic feature `SMOKDAY2`. Interpret this column as the encoded model input for that derived category/value. Answer to the question 'Do you now smoke cigarettes every day, some days, or not at all?'\",\n    \"values\": \"1.0=Every day; 2.0=Some days; 3.0=Not at all; 7.0=Don´t Know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 36,\n    \"feature\": \"SMOKDAY2_NOTASKED_MISSING\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `SMOKDAY2_NOTASKED_MISSING` derived from semantic feature `SMOKDAY2`. Interpret this column as the encoded model input for that derived category/value. Answer to the question 'Do you now smoke cigarettes every day, some days, or not at all?'\",\n    \"values\": \"1.0=Every day; 2.0=Some days; 3.0=Not at all; 7.0=Don´t Know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 37,\n    \"feature\": \"SMOKE100_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `SMOKE100_10` derived from semantic feature `SMOKE100`. Interpret this column as the encoded model input for that derived category/value. Answer to the question 'Have you smoked at least 100 cigarettes in your entire life?'\",\n    \"values\": \"1.0=Yes; 2.0=No\"\n  },\n  {\n    \"feature_id\": 38,\n    \"feature\": \"SMOKE100_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `SMOKE100_20` derived from semantic feature `SMOKE100`. Interpret this column as the encoded model input for that derived category/value. Answer to the question 'Have you smoked at least 100 cigarettes in your entire life?'\",\n    \"values\": \"1.0=Yes; 2.0=No\"\n  },\n  {\n    \"feature_id\": 39,\n    \"feature\": \"SMOKE100_nan\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `SMOKE100_nan` derived from semantic feature `SMOKE100`. Interpret this column as the encoded model input for that derived category/value. Answer to the question 'Have you smoked at least 100 cigarettes in your entire life?'\",\n    \"values\": \"1.0=Yes; 2.0=No\"\n  },\n  {\n    \"feature_id\": 40,\n    \"feature\": \"STATE_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_10` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 41,\n    \"feature\": \"STATE_100\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_100` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 42,\n    \"feature\": \"STATE_110\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_110` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 43,\n    \"feature\": \"STATE_120\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_120` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 44,\n    \"feature\": \"STATE_130\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_130` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 45,\n    \"feature\": \"STATE_150\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_150` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 46,\n    \"feature\": \"STATE_160\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_160` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 47,\n    \"feature\": \"STATE_170\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_170` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 48,\n    \"feature\": \"STATE_180\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_180` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 49,\n    \"feature\": \"STATE_190\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_190` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 50,\n    \"feature\": \"STATE_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_20` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 51,\n    \"feature\": \"STATE_200\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_200` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 52,\n    \"feature\": \"STATE_210\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_210` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 53,\n    \"feature\": \"STATE_220\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_220` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 54,\n    \"feature\": \"STATE_230\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_230` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 55,\n    \"feature\": \"STATE_240\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_240` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 56,\n    \"feature\": \"STATE_250\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_250` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 57,\n    \"feature\": \"STATE_260\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_260` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 58,\n    \"feature\": \"STATE_270\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_270` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 59,\n    \"feature\": \"STATE_280\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_280` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 60,\n    \"feature\": \"STATE_290\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_290` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 61,\n    \"feature\": \"STATE_300\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_300` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 62,\n    \"feature\": \"STATE_310\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_310` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 63,\n    \"feature\": \"STATE_320\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_320` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 64,\n    \"feature\": \"STATE_330\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_330` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 65,\n    \"feature\": \"STATE_340\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_340` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 66,\n    \"feature\": \"STATE_350\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_350` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 67,\n    \"feature\": \"STATE_360\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_360` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 68,\n    \"feature\": \"STATE_370\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_370` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 69,\n    \"feature\": \"STATE_380\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_380` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 70,\n    \"feature\": \"STATE_390\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_390` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 71,\n    \"feature\": \"STATE_40\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_40` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 72,\n    \"feature\": \"STATE_400\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_400` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 73,\n    \"feature\": \"STATE_410\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_410` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 74,\n    \"feature\": \"STATE_420\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_420` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 75,\n    \"feature\": \"STATE_440\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_440` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 76,\n    \"feature\": \"STATE_450\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_450` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 77,\n    \"feature\": \"STATE_460\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_460` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 78,\n    \"feature\": \"STATE_470\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_470` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 79,\n    \"feature\": \"STATE_480\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_480` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 80,\n    \"feature\": \"STATE_490\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_490` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 81,\n    \"feature\": \"STATE_50\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_50` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 82,\n    \"feature\": \"STATE_500\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_500` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 83,\n    \"feature\": \"STATE_510\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_510` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 84,\n    \"feature\": \"STATE_530\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_530` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 85,\n    \"feature\": \"STATE_540\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_540` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 86,\n    \"feature\": \"STATE_550\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_550` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 87,\n    \"feature\": \"STATE_560\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_560` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 88,\n    \"feature\": \"STATE_60\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_60` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 89,\n    \"feature\": \"STATE_660\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_660` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 90,\n    \"feature\": \"STATE_720\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_720` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 91,\n    \"feature\": \"STATE_780\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_780` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 92,\n    \"feature\": \"STATE_80\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_80` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 93,\n    \"feature\": \"STATE_90\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `STATE_90` derived from semantic feature `STATE`. Interpret this column as the encoded model input for that derived category/value. State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 94,\n    \"feature\": \"TOTINDA_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `TOTINDA_10` derived from semantic feature `TOTINDA`. Interpret this column as the encoded model input for that derived category/value. Physical activity or exercise during the past 30 days other than their regular job\",\n    \"values\": \"1.0=Had physical activity or exercise in last 30 days; 2.0=No physical activity or exercise in last 30 days\"\n  },\n  {\n    \"feature_id\": 95,\n    \"feature\": \"TOTINDA_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `TOTINDA_20` derived from semantic feature `TOTINDA`. Interpret this column as the encoded model input for that derived category/value. Physical activity or exercise during the past 30 days other than their regular job\",\n    \"values\": \"1.0=Had physical activity or exercise in last 30 days; 2.0=No physical activity or exercise in last 30 days\"\n  },\n  {\n    \"feature_id\": 96,\n    \"feature\": \"TOTINDA_nan\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `TOTINDA_nan` derived from semantic feature `TOTINDA`. Interpret this column as the encoded model input for that derived category/value. Physical activity or exercise during the past 30 days other than their regular job\",\n    \"values\": \"1.0=Had physical activity or exercise in last 30 days; 2.0=No physical activity or exercise in last 30 days\"\n  },\n  {\n    \"feature_id\": 97,\n    \"feature\": \"VEG_ONCE_PER_DAY_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `VEG_ONCE_PER_DAY_10` derived from semantic feature `VEG_ONCE_PER_DAY`. Interpret this column as the encoded model input for that derived category/value. Vegetable consumption\",\n    \"values\": \"1.0=Consumed vegetables one or more times per day; 2.0=Consumed vegetables less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 98,\n    \"feature\": \"VEG_ONCE_PER_DAY_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `VEG_ONCE_PER_DAY_20` derived from semantic feature `VEG_ONCE_PER_DAY`. Interpret this column as the encoded model input for that derived category/value. Vegetable consumption\",\n    \"values\": \"1.0=Consumed vegetables one or more times per day; 2.0=Consumed vegetables less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 99,\n    \"feature\": \"VEG_ONCE_PER_DAY_nan\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `VEG_ONCE_PER_DAY_nan` derived from semantic feature `VEG_ONCE_PER_DAY`. Interpret this column as the encoded model input for that derived category/value. Vegetable consumption\",\n    \"values\": \"1.0=Consumed vegetables one or more times per day; 2.0=Consumed vegetables less than one time per day; 9.0=Don't know, refused or missing values\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature_id\": 0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `ranking`.\n- Use ranks 1 through 100, with no duplicates.\n- Rank 1 is most important.\n- If two features seem similarly important, still break ties.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a respondent has high blood pressure/hypertension using BRFSS survey features while favoring stable clinical and behavioral risk factors over domain-identifying variables.\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature_id\": 0,\n      \"rationale\": \"Age is one of the strongest and most stable risk factors for hypertension across domains.\"\n    },\n    {\n      \"rank\": 2,\n      \"feature_id\": 7,\n      \"rationale\": \"Diabetes is a clinically meaningful comorbidity strongly associated with hypertension.\"\n    },\n    {\n      \"rank\": 3,\n      \"feature_id\": 30,\n      \"rationale\": \"Sex has a robust physiological relationship with blood pressure risk.\"\n    },\n    {\n      \"rank\": 4,\n      \"feature_id\": 94,\n      \"rationale\": \"Recent physical activity is a broadly stable behavioral predictor of cardiovascular health.\"\n    },\n    {\n      \"rank\": 5,\n      \"feature_id\": 95,\n      \"rationale\": \"The complementary physical inactivity indicator is also strongly relevant to hypertension risk.\"\n    },\n    {\n      \"rank\": 6,\n      \"feature_id\": 25,\n      \"rationale\": \"Poverty captures socioeconomic stress and healthcare access effects that plausibly generalize.\"\n    },\n    {\n      \"rank\": 7,\n      \"feature_id\": 8,\n      \"rationale\": \"Alcohol consumption per week is a direct behavioral risk factor for elevated blood pressure.\"\n    },\n    {\n      \"rank\": 8,\n      \"feature_id\": 37,\n      \"rationale\": \"Lifetime smoking exposure is a meaningful cardiovascular risk marker.\"\n    },\n    {\n      \"rank\": 9,\n      \"feature_id\": 38,\n      \"rationale\": \"The complementary lifetime non-smoker indicator helps encode stable smoking history.\"\n    },\n    {\n      \"rank\": 10,\n      \"feature_id\": 31,\n      \"rationale\": \"Current daily smoking status is behaviorally relevant to hypertension and vascular risk.\"\n    },\n    {\n      \"rank\": 11,\n      \"feature_id\": 33,\n      \"rationale\": \"Current non-smoking status helps distinguish present smoking behavior with plausible generalization.\"\n    },\n    {\n      \"rank\": 12,\n      \"feature_id\": 32,\n      \"rationale\": \"Some-days smoking is still a meaningful cardiovascular behavior signal.\"\n    },\n    {\n      \"rank\": 13,\n      \"feature_id\": 97,\n      \"rationale\": \"Vegetable consumption is a stable diet-quality proxy related to blood pressure.\"\n    },\n    {\n      \"rank\": 14,\n      \"feature_id\": 98,\n      \"rationale\": \"Low vegetable consumption is likewise informative as an adverse diet indicator.\"\n    },\n    {\n      \"rank\": 15,\n      \"feature_id\": 18,\n      \"rationale\": \"Fruit consumption is a generalizable diet-quality feature with plausible hypertension relevance.\"\n    },\n    {\n      \"rank\": 16,\n      \"feature_id\": 19,\n      \"rationale\": \"Low fruit consumption complements diet-quality information relevant to blood pressure.\"\n    },\n    {\n      \"rank\": 17,\n      \"feature_id\": 27,\n      \"rationale\": \"Binge drinking status captures harmful alcohol patterning beyond weekly totals.\"\n    },\n    {\n      \"rank\": 18,\n      \"feature_id\": 28,\n      \"rationale\": \"The complementary binge-drinker indicator is similarly behaviorally relevant.\"\n    },\n    {\n      \"rank\": 19,\n      \"feature_id\": 22,\n      \"rationale\": \"Foregone medical care due to cost reflects access barriers linked to unmanaged hypertension.\"\n    },\n    {\n      \"rank\": 20,\n      \"feature_id\": 23,\n      \"rationale\": \"The complementary no-cost-barrier indicator still carries useful access information.\"\n    },\n    {\n      \"rank\": 21,\n      \"feature_id\": 26,\n      \"rationale\": \"Race may reflect structural risk differences but is also vulnerable to shortcut learning, so moderate priority.\"\n    },\n    {\n      \"rank\": 22,\n      \"feature_id\": 16,\n      \"rationale\": \"Unable-to-work status may proxy poor health burden relevant to hypertension.\"\n    },\n    {\n      \"rank\": 23,\n      \"feature_id\": 15,\n      \"rationale\": \"Retired status often tracks older age and health status, though partly redundant with age.\"\n    },\n    {\n      \"rank\": 24,\n      \"feature_id\": 13,\n      \"rationale\": \"Homemaker status may weakly reflect lifestyle and socioeconomic patterns related to health.\"\n    },\n    {\n      \"rank\": 25,\n      \"feature_id\": 9,\n      \"rationale\": \"Employment for wages provides some socioeconomic and routine-related signal but is less direct.\"\n    },\n    {\n      \"rank\": 26,\n      \"feature_id\": 10,\n      \"rationale\": \"Self-employment may weakly capture socioeconomic and stress-related differences.\"\n    },\n    {\n      \"rank\": 27,\n      \"feature_id\": 11,\n      \"rationale\": \"Long-term unemployment may proxy chronic stress and poorer health.\"\n    },\n    {\n      \"rank\": 28,\n      \"feature_id\": 12,\n      \"rationale\": \"Short-term unemployment may carry weaker but still plausible socioeconomic signal.\"\n    },\n    {\n      \"rank\": 29,\n      \"feature_id\": 14,\n      \"rationale\": \"Student status is mostly age-related and less directly tied to hypertension.\"\n    },\n    {\n      \"rank\": 30,\n      \"feature_id\": 4,\n      \"rationale\": \"Skin cancer history may weakly proxy age and healthcare contact but is not a core hypertension factor.\"\n    },\n    {\n      \"rank\": 31,\n      \"feature_id\": 5,\n      \"rationale\": \"Absence of skin cancer offers limited complementary health-history information.\"\n    },\n    {\n      \"rank\": 32,\n      \"feature_id\": 1,\n      \"rationale\": \"Other cancer history may weakly reflect age and comorbidity burden.\"\n    },\n    {\n      \"rank\": 33,\n      \"feature_id\": 2,\n      \"rationale\": \"No other cancer is only weakly informative as a complementary health-history marker.\"\n    },\n    {\n      \"rank\": 34,\n      \"feature_id\": 96,\n      \"rationale\": \"Missingness on physical activity may encode survey process more than health, but could still correlate with risk.\"\n    },\n    {\n      \"rank\": 35,\n      \"feature_id\": 29,\n      \"rationale\": \"Missing binge-drinking status is mostly a response artifact with limited stable value.\"\n    },\n    {\n      \"rank\": 36,\n      \"feature_id\": 20,\n      \"rationale\": \"Missing fruit-consumption status is mainly a survey-response artifact.\"\n    },\n    {\n      \"rank\": 37,\n      \"feature_id\": 99,\n      \"rationale\": \"Missing vegetable-consumption status is mostly process noise rather than semantic risk.\"\n    },\n    {\n      \"rank\": 38,\n      \"feature_id\": 24,\n      \"rationale\": \"Missing medical-cost response may weakly reflect disengagement but is not semantically robust.\"\n    },\n    {\n      \"rank\": 39,\n      \"feature_id\": 39,\n      \"rationale\": \"Missing lifetime smoking history is mostly a data artifact.\"\n    },\n    {\n      \"rank\": 40,\n      \"feature_id\": 34,\n      \"rationale\": \"Don't-know smoking response is less semantically meaningful than substantive smoking categories.\"\n    },\n    {\n      \"rank\": 41,\n      \"feature_id\": 35,\n      \"rationale\": \"Refused smoking response is primarily a response-style artifact.\"\n    },\n    {\n      \"rank\": 42,\n      \"feature_id\": 17,\n      \"rationale\": \"Missing employment status is mostly survey-process information.\"\n    },\n    {\n      \"rank\": 43,\n      \"feature_id\": 6,\n      \"rationale\": \"Missing skin-cancer status is weak and likely non-transportable.\"\n    },\n    {\n      \"rank\": 44,\n      \"feature_id\": 3,\n      \"rationale\": \"Missing other-cancer status is similarly weak and process-driven.\"\n    },\n    {\n      \"rank\": 45,\n      \"feature_id\": 36,\n      \"rationale\": \"Not-asked smoking status is heavily tied to questionnaire flow rather than underlying hypertension risk.\"\n    },\n    {\n      \"rank\": 46,\n      \"feature_id\": 21,\n      \"rationale\": \"Survey year can encode temporal shifts and benchmark split structure rather than stable biology.\"\n    },\n    {\n      \"rank\": 47,\n      \"feature_id\": 40,\n      \"rationale\": \"State identity is a strong domain indicator and should be heavily penalized for OOD generalization.\"\n    },\n    {\n      \"rank\": 48,\n      \"feature_id\": 41,\n      \"rationale\": \"State dummy mainly captures geography-specific prevalence and policy artifacts.\"\n    },\n    {\n      \"rank\": 49,\n      \"feature_id\": 42,\n      \"rationale\": \"State dummy is domain-identifying rather than semantically causal.\"\n    },\n    {\n      \"rank\": 50,\n      \"feature_id\": 43,\n      \"rationale\": \"State dummy likely harms transportability across domains.\"\n    },\n    {\n      \"rank\": 51,\n      \"feature_id\": 44,\n      \"rationale\": \"State dummy mostly reflects benchmark environment membership.\"\n    },\n    {\n      \"rank\": 52,\n      \"feature_id\": 45,\n      \"rationale\": \"State dummy is a brittle geographic shortcut.\"\n    },\n    {\n      \"rank\": 53,\n      \"feature_id\": 46,\n      \"rationale\": \"State dummy captures local distribution artifacts more than individual risk.\"\n    },\n    {\n      \"rank\": 54,\n      \"feature_id\": 47,\n      \"rationale\": \"State dummy is not expected to generalize causally.\"\n    },\n    {\n      \"rank\": 55,\n      \"feature_id\": 48,\n      \"rationale\": \"State dummy is a domain label proxy.\"\n    },\n    {\n      \"rank\": 56,\n      \"feature_id\": 49,\n      \"rationale\": \"State dummy likely encodes environment-specific prevalence.\"\n    },\n    {\n      \"rank\": 57,\n      \"feature_id\": 50,\n      \"rationale\": \"State dummy is a brittle shortcut feature.\"\n    },\n    {\n      \"rank\": 58,\n      \"feature_id\": 51,\n      \"rationale\": \"State dummy should be deprioritized for OOD robustness.\"\n    },\n    {\n      \"rank\": 59,\n      \"feature_id\": 52,\n      \"rationale\": \"State dummy mainly identifies geography rather than physiology.\"\n    },\n    {\n      \"rank\": 60,\n      \"feature_id\": 53,\n      \"rationale\": \"State dummy is likely to overfit domain-specific patterns.\"\n    },\n    {\n      \"rank\": 61,\n      \"feature_id\": 54,\n      \"rationale\": \"State dummy has low causal transportability.\"\n    },\n    {\n      \"rank\": 62,\n      \"feature_id\": 55,\n      \"rationale\": \"State dummy is mostly an environment marker.\"\n    },\n    {\n      \"rank\": 63,\n      \"feature_id\": 56,\n      \"rationale\": \"State dummy likely captures local healthcare and sampling artifacts.\"\n    },\n    {\n      \"rank\": 64,\n      \"feature_id\": 57,\n      \"rationale\": \"State dummy is not a stable individual-level predictor.\"\n    },\n    {\n      \"rank\": 65,\n      \"feature_id\": 58,\n      \"rationale\": \"State dummy is heavily domain-specific.\"\n    },\n    {\n      \"rank\": 66,\n      \"feature_id\": 59,\n      \"rationale\": \"State dummy should be strongly penalized in this benchmark setting.\"\n    },\n    {\n      \"rank\": 67,\n      \"feature_id\": 60,\n      \"rationale\": \"State dummy is a geographic shortcut rather than a semantic risk factor.\"\n    },\n    {\n      \"rank\": 68,\n      \"feature_id\": 61,\n      \"rationale\": \"State dummy mostly reflects environment membership.\"\n    },\n    {\n      \"rank\": 69,\n      \"feature_id\": 62,\n      \"rationale\": \"State dummy is unlikely to transfer across held-out domains.\"\n    },\n    {\n      \"rank\": 70,\n      \"feature_id\": 63,\n      \"rationale\": \"State dummy captures regional artifacts more than causal signal.\"\n    },\n    {\n      \"rank\": 71,\n      \"feature_id\": 64,\n      \"rationale\": \"State dummy is a brittle proxy for domain.\"\n    },\n    {\n      \"rank\": 72,\n      \"feature_id\": 65,\n      \"rationale\": \"State dummy should receive low prior importance for OOD prediction.\"\n    },\n    {\n      \"rank\": 73,\n      \"feature_id\": 66,\n      \"rationale\": \"State dummy is mostly non-transportable geography information.\"\n    },\n    {\n      \"rank\": 74,\n      \"feature_id\": 67,\n      \"rationale\": \"State dummy likely induces shortcut learning.\"\n    },\n    {\n      \"rank\": 75,\n      \"feature_id\": 68,\n      \"rationale\": \"State dummy is weakly semantic and strongly domain-identifying.\"\n    },\n    {\n      \"rank\": 76,\n      \"feature_id\": 69,\n      \"rationale\": \"State dummy mainly reflects local prevalence differences.\"\n    },\n    {\n      \"rank\": 77,\n      \"feature_id\": 70,\n      \"rationale\": \"State dummy is not desirable for robust generalization.\"\n    },\n    {\n      \"rank\": 78,\n      \"feature_id\": 71,\n      \"rationale\": \"State dummy is a benchmark split shortcut.\"\n    },\n    {\n      \"rank\": 79,\n      \"feature_id\": 72,\n      \"rationale\": \"State dummy has low value outside the observed environments.\"\n    },\n    {\n      \"rank\": 80,\n      \"feature_id\": 73,\n      \"rationale\": \"State dummy is primarily a domain identifier.\"\n    },\n    {\n      \"rank\": 81,\n      \"feature_id\": 74,\n      \"rationale\": \"State dummy likely overfits geography-specific artifacts.\"\n    },\n    {\n      \"rank\": 82,\n      \"feature_id\": 75,\n      \"rationale\": \"State dummy is not semantically stable across domains.\"\n    },\n    {\n      \"rank\": 83,\n      \"feature_id\": 76,\n      \"rationale\": \"State dummy should be strongly downweighted for OOD use.\"\n    },\n    {\n      \"rank\": 84,\n      \"feature_id\": 77,\n      \"rationale\": \"State dummy mostly encodes environment membership.\"\n    },\n    {\n      \"rank\": 85,\n      \"feature_id\": 78,\n      \"rationale\": \"State dummy is a brittle geographic proxy.\"\n    },\n    {\n      \"rank\": 86,\n      \"feature_id\": 79,\n      \"rationale\": \"State dummy captures regional distribution shift rather than stable risk.\"\n    },\n    {\n      \"rank\": 87,\n      \"feature_id\": 80,\n      \"rationale\": \"State dummy is low-priority due to shortcut risk.\"\n    },\n    {\n      \"rank\": 88,\n      \"feature_id\": 81,\n      \"rationale\": \"State dummy is mainly domain-identifying information.\"\n    },\n    {\n      \"rank\": 89,\n      \"feature_id\": 82,\n      \"rationale\": \"State dummy is unlikely to generalize causally.\"\n    },\n    {\n      \"rank\": 90,\n      \"feature_id\": 83,\n      \"rationale\": \"State dummy mostly reflects local sampling and policy context.\"\n    },\n    {\n      \"rank\": 91,\n      \"feature_id\": 84,\n      \"rationale\": \"State dummy is a non-robust shortcut feature.\"\n    },\n    {\n      \"rank\": 92,\n      \"feature_id\": 85,\n      \"rationale\": \"State dummy should be penalized as geography-specific artifact.\"\n    },\n    {\n      \"rank\": 93,\n      \"feature_id\": 86,\n      \"rationale\": \"State dummy has little stable semantic value for individual prediction.\"\n    },\n    {\n      \"rank\": 94,\n      \"feature_id\": 87,\n      \"rationale\": \"State dummy is mostly environment metadata.\"\n    },\n    {\n      \"rank\": 95,\n      \"feature_id\": 88,\n      \"rationale\": \"State dummy is a brittle domain proxy.\"\n    },\n    {\n      \"rank\": 96,\n      \"feature_id\": 89,\n      \"rationale\": \"State dummy likely harms out-of-domain robustness.\"\n    },\n    {\n      \"rank\": 97,\n      \"feature_id\": 90,\n      \"rationale\": \"State dummy is strongly domain-identifying and weakly causal.\"\n    },\n    {\n      \"rank\": 98,\n      \"feature_id\": 91,\n      \"rationale\": \"State dummy mostly captures geography-specific artifacts.\"\n    },\n    {\n      \"rank\": 99,\n      \"feature_id\": 92,\n      \"rationale\": \"State dummy is among the least transportable features.\"\n    },\n    {\n      \"rank\": 100,\n      \"feature_id\": 93,\n      \"rationale\": \"State dummy is the clearest domain identifier and least desirable for OOD generalization.\"\n    }\n  ]\n}",
+      "input_tokens": 15397,
+      "output_tokens": 3722,
+      "total_tokens": 19119,
+      "response_id": "resp_037707bb622f2f5c006a41e1ea90a08194a953bd8f45ae3ded",
+      "response_model": "gpt-5.4-2026-03-05"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/tableshift/brfss_blood_pressure/rankings/rank_model_prompt.txt"
+}

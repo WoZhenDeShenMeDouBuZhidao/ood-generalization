@@ -1,0 +1,1003 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "brfss_blood_pressure",
+  "model": "gpt-5.4",
+  "method": "score_all",
+  "temperature": 0.5,
+  "created_at": "2026-06-09T21:17:32",
+  "token_usage": {
+    "num_calls": 5,
+    "input_tokens": 10300,
+    "output_tokens": 3891,
+    "total_tokens": 14191
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 0,
+        "feature": "AGEG5YR",
+        "score_mean": 0.95,
+        "score_std": 0.0
+      },
+      {
+        "rank": 2,
+        "feature_id": 10,
+        "feature": "DIABETES",
+        "score_mean": 0.878,
+        "score_std": 0.0040000000000000036
+      },
+      {
+        "rank": 3,
+        "feature_id": 17,
+        "feature": "SEX",
+        "score_mean": 0.524,
+        "score_std": 0.05817215828899594
+      },
+      {
+        "rank": 4,
+        "feature_id": 5,
+        "feature": "TOTINDA",
+        "score_mean": 0.486,
+        "score_std": 0.04176122603564222
+      },
+      {
+        "rank": 5,
+        "feature_id": 12,
+        "feature": "EMPLOY1",
+        "score_mean": 0.384,
+        "score_std": 0.031368774282716234
+      },
+      {
+        "rank": 6,
+        "feature_id": 3,
+        "feature": "DRNK_PER_WEEK",
+        "score_mean": 0.38,
+        "score_std": 0.03346640106136301
+      },
+      {
+        "rank": 7,
+        "feature_id": 11,
+        "feature": "POVERTY",
+        "score_mean": 0.374,
+        "score_std": 0.026532998322843192
+      },
+      {
+        "rank": 8,
+        "feature_id": 4,
+        "feature": "RFBING5",
+        "score_mean": 0.35000000000000003,
+        "score_std": 0.035777087639996645
+      },
+      {
+        "rank": 9,
+        "feature_id": 2,
+        "feature": "VEG_ONCE_PER_DAY",
+        "score_mean": 0.32,
+        "score_std": 0.021908902300206645
+      },
+      {
+        "rank": 10,
+        "feature_id": 7,
+        "feature": "SMOKDAY2",
+        "score_mean": 0.314,
+        "score_std": 0.02059126028197402
+      },
+      {
+        "rank": 11,
+        "feature_id": 6,
+        "feature": "SMOKE100",
+        "score_mean": 0.302,
+        "score_std": 0.0256124969497314
+      },
+      {
+        "rank": 12,
+        "feature_id": 1,
+        "feature": "FRUIT_ONCE_PER_DAY",
+        "score_mean": 0.29000000000000004,
+        "score_std": 0.019999999999999993
+      },
+      {
+        "rank": 13,
+        "feature_id": 15,
+        "feature": "MEDCOST",
+        "score_mean": 0.248,
+        "score_std": 0.023151673805580458
+      },
+      {
+        "rank": 14,
+        "feature_id": 16,
+        "feature": "PRACE1",
+        "score_mean": 0.196,
+        "score_std": 0.01959591794226543
+      },
+      {
+        "rank": 15,
+        "feature_id": 9,
+        "feature": "CHCOCNCR",
+        "score_mean": 0.14,
+        "score_std": 0.021908902300206645
+      },
+      {
+        "rank": 16,
+        "feature_id": 8,
+        "feature": "CHCSCNCR",
+        "score_mean": 0.08800000000000001,
+        "score_std": 0.009797958971132715
+      },
+      {
+        "rank": 17,
+        "feature_id": 13,
+        "feature": "IYEAR",
+        "score_mean": 0.02,
+        "score_std": 0.0
+      },
+      {
+        "rank": 18,
+        "feature_id": 14,
+        "feature": "STATE",
+        "score_mean": 0.008,
+        "score_std": 0.004
+      }
+    ],
+    "scores": [
+      {
+        "feature_id": 0,
+        "feature": "AGEG5YR",
+        "score_mean": 0.95,
+        "score_std": 0.0,
+        "sample_scores": [
+          0.95,
+          0.95,
+          0.95,
+          0.95,
+          0.95
+        ]
+      },
+      {
+        "feature_id": 1,
+        "feature": "FRUIT_ONCE_PER_DAY",
+        "score_mean": 0.29000000000000004,
+        "score_std": 0.019999999999999993,
+        "sample_scores": [
+          0.28,
+          0.28,
+          0.28,
+          0.28,
+          0.33
+        ]
+      },
+      {
+        "feature_id": 2,
+        "feature": "VEG_ONCE_PER_DAY",
+        "score_mean": 0.32,
+        "score_std": 0.021908902300206645,
+        "sample_scores": [
+          0.32,
+          0.3,
+          0.32,
+          0.3,
+          0.36
+        ]
+      },
+      {
+        "feature_id": 3,
+        "feature": "DRNK_PER_WEEK",
+        "score_mean": 0.38,
+        "score_std": 0.03346640106136301,
+        "sample_scores": [
+          0.34,
+          0.42,
+          0.36,
+          0.36,
+          0.42
+        ]
+      },
+      {
+        "feature_id": 4,
+        "feature": "RFBING5",
+        "score_mean": 0.35000000000000003,
+        "score_std": 0.035777087639996645,
+        "sample_scores": [
+          0.3,
+          0.38,
+          0.34,
+          0.33,
+          0.4
+        ]
+      },
+      {
+        "feature_id": 5,
+        "feature": "TOTINDA",
+        "score_mean": 0.486,
+        "score_std": 0.04176122603564222,
+        "sample_scores": [
+          0.48,
+          0.5,
+          0.48,
+          0.42,
+          0.55
+        ]
+      },
+      {
+        "feature_id": 6,
+        "feature": "SMOKE100",
+        "score_mean": 0.302,
+        "score_std": 0.0256124969497314,
+        "sample_scores": [
+          0.26,
+          0.34,
+          0.3,
+          0.31,
+          0.3
+        ]
+      },
+      {
+        "feature_id": 7,
+        "feature": "SMOKDAY2",
+        "score_mean": 0.314,
+        "score_std": 0.02059126028197402,
+        "sample_scores": [
+          0.29,
+          0.32,
+          0.33,
+          0.29,
+          0.34
+        ]
+      },
+      {
+        "feature_id": 8,
+        "feature": "CHCSCNCR",
+        "score_mean": 0.08800000000000001,
+        "score_std": 0.009797958971132715,
+        "sample_scores": [
+          0.08,
+          0.08,
+          0.1,
+          0.08,
+          0.1
+        ]
+      },
+      {
+        "feature_id": 9,
+        "feature": "CHCOCNCR",
+        "score_mean": 0.14,
+        "score_std": 0.021908902300206645,
+        "sample_scores": [
+          0.12,
+          0.12,
+          0.18,
+          0.14,
+          0.14
+        ]
+      },
+      {
+        "feature_id": 10,
+        "feature": "DIABETES",
+        "score_mean": 0.878,
+        "score_std": 0.0040000000000000036,
+        "sample_scores": [
+          0.88,
+          0.88,
+          0.88,
+          0.87,
+          0.88
+        ]
+      },
+      {
+        "feature_id": 11,
+        "feature": "POVERTY",
+        "score_mean": 0.374,
+        "score_std": 0.026532998322843192,
+        "sample_scores": [
+          0.36,
+          0.36,
+          0.4,
+          0.34,
+          0.41
+        ]
+      },
+      {
+        "feature_id": 12,
+        "feature": "EMPLOY1",
+        "score_mean": 0.384,
+        "score_std": 0.031368774282716234,
+        "sample_scores": [
+          0.41,
+          0.33,
+          0.42,
+          0.38,
+          0.38
+        ]
+      },
+      {
+        "feature_id": 13,
+        "feature": "IYEAR",
+        "score_mean": 0.02,
+        "score_std": 0.0,
+        "sample_scores": [
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02
+        ]
+      },
+      {
+        "feature_id": 14,
+        "feature": "STATE",
+        "score_mean": 0.008,
+        "score_std": 0.004,
+        "sample_scores": [
+          0.01,
+          0.01,
+          0.01,
+          0.0,
+          0.01
+        ]
+      },
+      {
+        "feature_id": 15,
+        "feature": "MEDCOST",
+        "score_mean": 0.248,
+        "score_std": 0.023151673805580458,
+        "sample_scores": [
+          0.22,
+          0.22,
+          0.27,
+          0.27,
+          0.26
+        ]
+      },
+      {
+        "feature_id": 16,
+        "feature": "PRACE1",
+        "score_mean": 0.196,
+        "score_std": 0.01959591794226543,
+        "sample_scores": [
+          0.18,
+          0.18,
+          0.22,
+          0.18,
+          0.22
+        ]
+      },
+      {
+        "feature_id": 17,
+        "feature": "SEX",
+        "score_mean": 0.524,
+        "score_std": 0.05817215828899594,
+        "sample_scores": [
+          0.58,
+          0.58,
+          0.55,
+          0.44,
+          0.47
+        ]
+      }
+    ],
+    "samples": [
+      {
+        "task_summary": "Predict whether a BRFSS respondent has high blood pressure / hypertension from survey features in a way that generalizes across domains such as states and years.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.95,
+            "rationale": "Age is one of the strongest and most stable risk factors for hypertension across populations and time.",
+            "feature": "AGEG5YR"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.28,
+            "rationale": "Fruit intake has a plausible but modest relationship to blood pressure and is noisy in self-report.",
+            "feature": "FRUIT_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.32,
+            "rationale": "Vegetable intake is modestly and plausibly protective for hypertension, but self-report and coarse coding limit stability.",
+            "feature": "VEG_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.34,
+            "rationale": "Alcohol consumption is a known hypertension risk factor, though self-report and nonlinear effects reduce robustness.",
+            "feature": "DRNK_PER_WEEK"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.3,
+            "rationale": "Binge drinking is relevant to blood pressure but is a coarse behavioral proxy with reporting noise.",
+            "feature": "RFBING5"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.48,
+            "rationale": "Physical inactivity is a fairly stable cardiovascular risk factor and should transfer reasonably well across domains.",
+            "feature": "TOTINDA"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.26,
+            "rationale": "Ever-smoking status has some association with cardiovascular risk but is weaker and less specific for hypertension than other factors.",
+            "feature": "SMOKE100"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.29,
+            "rationale": "Current smoking may carry some predictive signal, but effects on hypertension are mixed and behavior is self-reported.",
+            "feature": "SMOKDAY2"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.08,
+            "rationale": "Skin cancer history is not a direct stable predictor of hypertension and may mostly reflect age or healthcare access.",
+            "feature": "CHCSCNCR"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.12,
+            "rationale": "Other cancer history may correlate indirectly through age and comorbidity, but it is not a core stable driver of hypertension.",
+            "feature": "CHCOCNCR"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.88,
+            "rationale": "Diabetes is a strong, clinically meaningful comorbidity of hypertension and should remain highly predictive across domains.",
+            "feature": "DIABETES"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.36,
+            "rationale": "Poverty captures socioeconomic risk and access patterns that relate to hypertension, but it can also encode domain-specific structure.",
+            "feature": "POVERTY"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.41,
+            "rationale": "Employment status can reflect age, disability, stress, and socioeconomic conditions relevant to hypertension, though somewhat confounded.",
+            "feature": "EMPLOY1"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.02,
+            "rationale": "Survey year is primarily a domain identifier and risks exploiting temporal shifts rather than stable health relationships.",
+            "feature": "IYEAR"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.01,
+            "rationale": "State is a strong domain identifier likely to encode spurious geographic prevalence differences rather than portable individual risk.",
+            "feature": "STATE"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.22,
+            "rationale": "Medical cost barrier may weakly relate through healthcare access and diagnosis patterns, but it risks access-related shortcutting.",
+            "feature": "MEDCOST"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.18,
+            "rationale": "Race can correlate with hypertension prevalence, but much of the signal may reflect social and domain-specific structure rather than stable causal biology.",
+            "feature": "PRACE1"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.58,
+            "rationale": "Sex has a real and fairly stable association with hypertension risk, though weaker than age or diabetes.",
+            "feature": "SEX"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a respondent has ever been told they have high blood pressure/hypertension from BRFSS health, behavior, and demographic variables.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.95,
+            "rationale": "Age is one of the strongest and most stable risk factors for hypertension across populations and time.",
+            "feature": "AGEG5YR"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.28,
+            "rationale": "Fruit intake is weakly related to cardiovascular health but self-reported diet is noisy and only modestly predictive marginally.",
+            "feature": "FRUIT_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.3,
+            "rationale": "Vegetable intake has a plausible stable link to blood pressure through diet quality, but the coarse self-report makes it only modestly useful.",
+            "feature": "VEG_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.42,
+            "rationale": "Alcohol consumption has a biologically plausible association with hypertension, though self-report and nonlinear effects limit stability.",
+            "feature": "DRNK_PER_WEEK"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.38,
+            "rationale": "Binge drinking is relevant to blood pressure risk but is behaviorally noisy and less consistently predictive than age or diabetes.",
+            "feature": "RFBING5"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.5,
+            "rationale": "Physical inactivity is a stable cardiovascular risk factor and should generalize reasonably well despite self-report noise.",
+            "feature": "TOTINDA"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.34,
+            "rationale": "Ever-smoking captures long-term tobacco exposure with some cardiovascular relevance, but its marginal link to hypertension is moderate.",
+            "feature": "SMOKE100"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.32,
+            "rationale": "Current smoking status may add some risk information, but effects on hypertension are mixed and reporting can be brittle.",
+            "feature": "SMOKDAY2"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.08,
+            "rationale": "Skin cancer history is not a direct hypertension risk factor and likely acts mostly through age or healthcare access proxies.",
+            "feature": "CHCSCNCR"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.12,
+            "rationale": "Other cancer history may weakly proxy age and comorbidity burden, but it is not a stable direct predictor of hypertension.",
+            "feature": "CHCOCNCR"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.88,
+            "rationale": "Diabetes is a strong, clinically meaningful comorbidity with hypertension and should remain predictive across domains.",
+            "feature": "DIABETES"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.36,
+            "rationale": "Poverty relates to hypertension through chronic stress, diet, and care access, but socioeconomic effects can shift across domains.",
+            "feature": "POVERTY"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.33,
+            "rationale": "Employment status may proxy age, disability, and socioeconomic status, but it is heterogeneous and somewhat domain-dependent.",
+            "feature": "EMPLOY1"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.02,
+            "rationale": "Survey year is primarily a domain identifier and risks capturing temporal shifts rather than stable individual risk.",
+            "feature": "IYEAR"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.01,
+            "rationale": "State is a strong domain identifier that may encode spurious geographic prevalence and policy differences rather than stable physiology.",
+            "feature": "STATE"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.22,
+            "rationale": "Unable to afford care may weakly reflect access and diagnosis patterns, but it risks measuring ascertainment rather than underlying hypertension.",
+            "feature": "MEDCOST"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.18,
+            "rationale": "Race can correlate with hypertension prevalence via structural factors, but it is a sensitive shortcut and less desirable for robust OOD generalization.",
+            "feature": "PRACE1"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.58,
+            "rationale": "Sex has a real and fairly stable association with blood pressure risk, though weaker than age or diabetes.",
+            "feature": "SEX"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a respondent has high blood pressure / hypertension from BRFSS health, behavior, and demographic variables in a way that generalizes across domains such as state and year.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.95,
+            "rationale": "Age is one of the strongest and most stable risk factors for hypertension across populations and time.",
+            "feature": "AGEG5YR"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.28,
+            "rationale": "Fruit intake has some plausible association with cardiovascular health but is self-reported, coarse, and only weakly predictive marginally.",
+            "feature": "FRUIT_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.32,
+            "rationale": "Vegetable intake is plausibly related to blood pressure through diet quality, but the measure is coarse and likely only modestly predictive on its own.",
+            "feature": "VEG_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.36,
+            "rationale": "Alcohol consumption can affect blood pressure, but self-report noise and nonlinear effects reduce stable marginal usefulness.",
+            "feature": "DRNK_PER_WEEK"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.34,
+            "rationale": "Binge drinking is a relevant cardiovascular risk behavior, though episodic self-report makes it less stable than core clinical risk factors.",
+            "feature": "RFBING5"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.48,
+            "rationale": "Physical inactivity is a broadly stable hypertension risk factor and should transfer reasonably well across domains.",
+            "feature": "TOTINDA"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.3,
+            "rationale": "Lifetime smoking history has some cardiovascular relevance but is a weaker direct predictor of hypertension than age or diabetes.",
+            "feature": "SMOKE100"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.33,
+            "rationale": "Current smoking status may carry some signal, but associations with hypertension are weaker and more behaviorally confounded.",
+            "feature": "SMOKDAY2"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.1,
+            "rationale": "Skin cancer history is not a direct stable predictor of hypertension and may mostly reflect age, healthcare access, or geography.",
+            "feature": "CHCSCNCR"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.18,
+            "rationale": "Other cancer history may weakly correlate through age and comorbidity burden, but it is not a robust direct predictor.",
+            "feature": "CHCOCNCR"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.88,
+            "rationale": "Diabetes is a strong, clinically meaningful, and stable comorbidity associated with hypertension.",
+            "feature": "DIABETES"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.4,
+            "rationale": "Poverty captures socioeconomic risk and care environment that can relate to hypertension, though it may vary somewhat by domain and policy context.",
+            "feature": "POVERTY"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.42,
+            "rationale": "Employment status can reflect age, disability, stress, and socioeconomic status, giving moderate but partly confounded signal.",
+            "feature": "EMPLOY1"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.02,
+            "rationale": "Survey year is primarily a domain identifier and should be heavily penalized for out-of-distribution generalization.",
+            "feature": "IYEAR"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.01,
+            "rationale": "State is a strong domain identifier and likely encourages shortcut learning rather than stable individual-level prediction.",
+            "feature": "STATE"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.27,
+            "rationale": "Cost barriers to care may correlate with diagnosis and disease management, but much of the signal is indirect and domain-sensitive.",
+            "feature": "MEDCOST"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.22,
+            "rationale": "Race can correlate with hypertension prevalence through structural and social factors, but it is a sensitive shortcut and less desirable for robust generalization.",
+            "feature": "PRACE1"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.55,
+            "rationale": "Sex has a real and fairly stable relationship with blood pressure risk profiles, though weaker than age or diabetes.",
+            "feature": "SEX"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a BRFSS respondent has high blood pressure / hypertension from survey features in a way that generalizes across domains such as states and years.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.95,
+            "rationale": "Age is one of the strongest and most stable risk factors for hypertension across populations and time.",
+            "feature": "AGEG5YR"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.28,
+            "rationale": "Fruit intake relates weakly to cardiovascular health but self-report is noisy and effects are modest marginally.",
+            "feature": "FRUIT_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.3,
+            "rationale": "Vegetable intake is plausibly protective for blood pressure yet coarse self-report makes it only moderately useful.",
+            "feature": "VEG_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.36,
+            "rationale": "Alcohol consumption has a real physiological link to blood pressure, though reporting error and nonlinear effects limit stability.",
+            "feature": "DRNK_PER_WEEK"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.33,
+            "rationale": "Binge drinking is relevant to hypertension risk but is behaviorally noisy and less consistently predictive than age or diabetes.",
+            "feature": "RFBING5"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.42,
+            "rationale": "Physical inactivity is a stable cardiovascular risk factor and should generalize reasonably well despite self-report noise.",
+            "feature": "TOTINDA"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.31,
+            "rationale": "Lifetime smoking history has some association with cardiovascular risk but is a weaker marginal predictor of hypertension.",
+            "feature": "SMOKE100"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.29,
+            "rationale": "Current smoking status may add some signal but is behaviorally noisy and not as directly tied to hypertension as other factors.",
+            "feature": "SMOKDAY2"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.08,
+            "rationale": "Skin cancer history is not directly related to hypertension and any association is likely confounded or demographic.",
+            "feature": "CHCSCNCR"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.14,
+            "rationale": "Other cancer history may correlate with age and health status but is not a stable direct predictor of hypertension.",
+            "feature": "CHCOCNCR"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.87,
+            "rationale": "Diabetes is strongly and consistently associated with hypertension through shared metabolic risk and comorbidity.",
+            "feature": "DIABETES"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.34,
+            "rationale": "Poverty captures social determinants affecting hypertension risk, but it can also reflect domain and demographic structure.",
+            "feature": "POVERTY"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.38,
+            "rationale": "Employment status can proxy age, disability, stress, and socioeconomic status, giving moderate but somewhat shortcut-prone signal.",
+            "feature": "EMPLOY1"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.02,
+            "rationale": "Survey year is primarily a domain identifier and should be heavily penalized for out-of-distribution generalization.",
+            "feature": "IYEAR"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.0,
+            "rationale": "State is a direct domain identifier and likely to encode spurious geographic prevalence differences rather than stable individual risk.",
+            "feature": "STATE"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.27,
+            "rationale": "Cost barriers to care may correlate with diagnosis and chronic disease burden, but also reflect access and reporting artifacts.",
+            "feature": "MEDCOST"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.18,
+            "rationale": "Race can correlate with hypertension prevalence via structural factors, but it is sensitive and risks demographic shortcutting.",
+            "feature": "PRACE1"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.44,
+            "rationale": "Sex has a biologically and epidemiologically stable relationship with blood pressure, though less predictive than age or diabetes.",
+            "feature": "SEX"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether an adult respondent has high blood pressure / hypertension from BRFSS survey features in a way that generalizes across domains such as states and years.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.95,
+            "rationale": "Age is one of the strongest and most stable risk factors for hypertension across populations.",
+            "feature": "AGEG5YR"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.33,
+            "rationale": "Fruit intake is plausibly related to cardiovascular health but self-report is noisy and marginal signal is modest.",
+            "feature": "FRUIT_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.36,
+            "rationale": "Vegetable intake has a plausible stable association with blood pressure, though coarse self-report limits strength.",
+            "feature": "VEG_ONCE_PER_DAY"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.42,
+            "rationale": "Alcohol consumption can affect blood pressure, but the relationship is heterogeneous and self-reported intake is noisy.",
+            "feature": "DRNK_PER_WEEK"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.4,
+            "rationale": "Binge drinking is a relevant cardiovascular risk behavior with some stable signal, though less direct than age or diabetes.",
+            "feature": "RFBING5"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.55,
+            "rationale": "Physical inactivity is a broadly stable risk factor for hypertension and should transfer reasonably well across domains.",
+            "feature": "TOTINDA"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.3,
+            "rationale": "Lifetime smoking history has some cardiovascular relevance but is only indirectly tied to hypertension.",
+            "feature": "SMOKE100"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.34,
+            "rationale": "Current smoking status may add modest health-risk information, but its marginal relation to hypertension is weaker and can vary.",
+            "feature": "SMOKDAY2"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.1,
+            "rationale": "Skin cancer history is not a direct stable predictor of hypertension and likely reflects age or healthcare utilization instead.",
+            "feature": "CHCSCNCR"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.14,
+            "rationale": "Other cancer history may weakly track age and comorbidity but is not a direct or robust hypertension predictor.",
+            "feature": "CHCOCNCR"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.88,
+            "rationale": "Diabetes is a strong, clinically meaningful comorbidity with hypertension and should remain predictive across domains.",
+            "feature": "DIABETES"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.41,
+            "rationale": "Poverty captures stable social determinants linked to hypertension, but it also risks demographic shortcutting and domain dependence.",
+            "feature": "POVERTY"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.38,
+            "rationale": "Employment status may reflect age, disability, stress, and socioeconomic conditions, giving moderate but partly indirect signal.",
+            "feature": "EMPLOY1"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.02,
+            "rationale": "Survey year is primarily a domain identifier and should be heavily penalized for out-of-distribution generalization.",
+            "feature": "IYEAR"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.01,
+            "rationale": "State is a strong domain identifier and likely encodes spurious geographic prevalence differences rather than stable individual risk.",
+            "feature": "STATE"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.26,
+            "rationale": "Unable to see a doctor because of cost may correlate with untreated hypertension and socioeconomic disadvantage, but is indirect and access-dependent.",
+            "feature": "MEDCOST"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.22,
+            "rationale": "Race can correlate with hypertension prevalence through structural and biological pathways, but it is a sensitive shortcut with portability concerns.",
+            "feature": "PRACE1"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.47,
+            "rationale": "Sex has a real and fairly stable association with blood pressure risk, though weaker than age or diabetes.",
+            "feature": "SEX"
+          }
+        ]
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `brfss_blood_pressure`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEG5YR\",\n    \"type\": \"categorical\",\n    \"description\": \"Age group\",\n    \"values\": \"1.0=Age 18 to 24; 2.0=Age 25 to 29; 3.0=Age 30 to 34; 4.0=Age 35 to 39; 5.0=Age 40 to 44; 6.0=Age 45 to 49; 7.0=Age 50 to 54; 8.0=Age 55 to 59; 9.0=Age 60 to 64; 10.0=Age 65 to 69; 11.0=Age 70 to 74; 12.0=Age 75 to 79; ... (+2 more)\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"FRUIT_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Fruit consumption\",\n    \"values\": \"1.0=Consumed fruit one or more times per day; 2.0=Consumed fruit less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"VEG_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Vegetable consumption\",\n    \"values\": \"1.0=Consumed vegetables one or more times per day; 2.0=Consumed vegetables less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"DRNK_PER_WEEK\",\n    \"type\": \"continuous\",\n    \"description\": \"Total number of alcoholic beverages consumed per week\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"RFBING5\",\n    \"type\": \"categorical\",\n    \"description\": \"Respondent is binge drinker\",\n    \"values\": \"1.0=No; 2.0=Yes; 9.0=Don't know/Refused/Missing\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"TOTINDA\",\n    \"type\": \"categorical\",\n    \"description\": \"Physical activity or exercise during the past 30 days other than their regular job\",\n    \"values\": \"1.0=Had physical activity or exercise in last 30 days; 2.0=No physical activity or exercise in last 30 days\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"SMOKE100\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Answer to the question 'Have you smoked at least 100 cigarettes in your entire life?'\",\n    \"values\": \"1.0=Yes; 2.0=No\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"SMOKDAY2\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Do you now smoke cigarettes every day, some days, or not at all?'\",\n    \"values\": \"1.0=Every day; 2.0=Some days; 3.0=Not at all; 7.0=Don´t Know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"CHCSCNCR\",\n    \"type\": \"categorical\",\n    \"description\": \"Have skin cancer or ever told you have skin cancer\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"CHCOCNCR\",\n    \"type\": \"categorical\",\n    \"description\": \"Have any other types of cancer or ever told you have any other types of cancer\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"DIABETES\",\n    \"type\": \"categorical\",\n    \"description\": \"Have diabetes or ever been told you have diabetes\",\n    \"values\": \"1.0=Yes; 2.0=Yes, but female told only during pregnancy; 3.0=No; 4.0=No, pre-diabetes or borderline diabetes; 7.0=Don’t know/Not Sure; 9.0=Refused, BLANK Not asked or Missing\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"POVERTY\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Binary indicator for whether an individuals' income falls below the 2021 poverty guideline for family of four\",\n    \"values\": \"1.0=Yes; 0.0=No\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"EMPLOY1\",\n    \"type\": \"categorical\",\n    \"description\": \"Current employment status\",\n    \"values\": \"1.0=Employed for wages; 2.0=Self-employed; 3.0=Out of work for 1 year or more; 4.0=Out of work for less than 1 year; 5.0=A homemaker; 6.0=A student; 7.0=Retired; 8.0=Unable to work; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"IYEAR\",\n    \"type\": \"continuous\",\n    \"description\": \"Survey year\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"STATE\",\n    \"type\": \"categorical\",\n    \"description\": \"State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"MEDCOST\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?'\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don't know/not sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"PRACE1\",\n    \"type\": \"categorical\",\n    \"description\": \"Preferred race category\",\n    \"values\": \"1.0=White; 2.0=Black or African American; 3.0=American Indian or Alaskan Native; 4.0=Asian; 5.0=Native Hawaiian or other Pacific Islander; 6.0=Other race; 7.0=No preferred race; 8.0=Multiracial but preferred race not answered; 77.0=Don’t know/Not sure; 9.0=...\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex of respondent\",\n    \"values\": \"1=Male; 2=Female\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\"task_summary\":\"Predict whether a BRFSS respondent has high blood pressure / hypertension from survey features in a way that generalizes across domains such as states and years.\",\"scores\":[{\"feature_id\":0,\"score\":0.95,\"rationale\":\"Age is one of the strongest and most stable risk factors for hypertension across populations and time.\"},{\"feature_id\":1,\"score\":0.28,\"rationale\":\"Fruit intake has a plausible but modest relationship to blood pressure and is noisy in self-report.\"},{\"feature_id\":2,\"score\":0.32,\"rationale\":\"Vegetable intake is modestly and plausibly protective for hypertension, but self-report and coarse coding limit stability.\"},{\"feature_id\":3,\"score\":0.34,\"rationale\":\"Alcohol consumption is a known hypertension risk factor, though self-report and nonlinear effects reduce robustness.\"},{\"feature_id\":4,\"score\":0.30,\"rationale\":\"Binge drinking is relevant to blood pressure but is a coarse behavioral proxy with reporting noise.\"},{\"feature_id\":5,\"score\":0.48,\"rationale\":\"Physical inactivity is a fairly stable cardiovascular risk factor and should transfer reasonably well across domains.\"},{\"feature_id\":6,\"score\":0.26,\"rationale\":\"Ever-smoking status has some association with cardiovascular risk but is weaker and less specific for hypertension than other factors.\"},{\"feature_id\":7,\"score\":0.29,\"rationale\":\"Current smoking may carry some predictive signal, but effects on hypertension are mixed and behavior is self-reported.\"},{\"feature_id\":8,\"score\":0.08,\"rationale\":\"Skin cancer history is not a direct stable predictor of hypertension and may mostly reflect age or healthcare access.\"},{\"feature_id\":9,\"score\":0.12,\"rationale\":\"Other cancer history may correlate indirectly through age and comorbidity, but it is not a core stable driver of hypertension.\"},{\"feature_id\":10,\"score\":0.88,\"rationale\":\"Diabetes is a strong, clinically meaningful comorbidity of hypertension and should remain highly predictive across domains.\"},{\"feature_id\":11,\"score\":0.36,\"rationale\":\"Poverty captures socioeconomic risk and access patterns that relate to hypertension, but it can also encode domain-specific structure.\"},{\"feature_id\":12,\"score\":0.41,\"rationale\":\"Employment status can reflect age, disability, stress, and socioeconomic conditions relevant to hypertension, though somewhat confounded.\"},{\"feature_id\":13,\"score\":0.02,\"rationale\":\"Survey year is primarily a domain identifier and risks exploiting temporal shifts rather than stable health relationships.\"},{\"feature_id\":14,\"score\":0.01,\"rationale\":\"State is a strong domain identifier likely to encode spurious geographic prevalence differences rather than portable individual risk.\"},{\"feature_id\":15,\"score\":0.22,\"rationale\":\"Medical cost barrier may weakly relate through healthcare access and diagnosis patterns, but it risks access-related shortcutting.\"},{\"feature_id\":16,\"score\":0.18,\"rationale\":\"Race can correlate with hypertension prevalence, but much of the signal may reflect social and domain-specific structure rather than stable causal biology.\"},{\"feature_id\":17,\"score\":0.58,\"rationale\":\"Sex has a real and fairly stable association with hypertension risk, though weaker than age or diabetes.\"}]}",
+      "input_tokens": 2060,
+      "output_tokens": 678,
+      "total_tokens": 2738,
+      "response_id": "resp_076fb28fa7364d15006a28122c166c81989eedf883a68a8c3c",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `brfss_blood_pressure`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEG5YR\",\n    \"type\": \"categorical\",\n    \"description\": \"Age group\",\n    \"values\": \"1.0=Age 18 to 24; 2.0=Age 25 to 29; 3.0=Age 30 to 34; 4.0=Age 35 to 39; 5.0=Age 40 to 44; 6.0=Age 45 to 49; 7.0=Age 50 to 54; 8.0=Age 55 to 59; 9.0=Age 60 to 64; 10.0=Age 65 to 69; 11.0=Age 70 to 74; 12.0=Age 75 to 79; ... (+2 more)\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"FRUIT_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Fruit consumption\",\n    \"values\": \"1.0=Consumed fruit one or more times per day; 2.0=Consumed fruit less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"VEG_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Vegetable consumption\",\n    \"values\": \"1.0=Consumed vegetables one or more times per day; 2.0=Consumed vegetables less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"DRNK_PER_WEEK\",\n    \"type\": \"continuous\",\n    \"description\": \"Total number of alcoholic beverages consumed per week\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"RFBING5\",\n    \"type\": \"categorical\",\n    \"description\": \"Respondent is binge drinker\",\n    \"values\": \"1.0=No; 2.0=Yes; 9.0=Don't know/Refused/Missing\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"TOTINDA\",\n    \"type\": \"categorical\",\n    \"description\": \"Physical activity or exercise during the past 30 days other than their regular job\",\n    \"values\": \"1.0=Had physical activity or exercise in last 30 days; 2.0=No physical activity or exercise in last 30 days\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"SMOKE100\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Answer to the question 'Have you smoked at least 100 cigarettes in your entire life?'\",\n    \"values\": \"1.0=Yes; 2.0=No\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"SMOKDAY2\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Do you now smoke cigarettes every day, some days, or not at all?'\",\n    \"values\": \"1.0=Every day; 2.0=Some days; 3.0=Not at all; 7.0=Don´t Know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"CHCSCNCR\",\n    \"type\": \"categorical\",\n    \"description\": \"Have skin cancer or ever told you have skin cancer\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"CHCOCNCR\",\n    \"type\": \"categorical\",\n    \"description\": \"Have any other types of cancer or ever told you have any other types of cancer\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"DIABETES\",\n    \"type\": \"categorical\",\n    \"description\": \"Have diabetes or ever been told you have diabetes\",\n    \"values\": \"1.0=Yes; 2.0=Yes, but female told only during pregnancy; 3.0=No; 4.0=No, pre-diabetes or borderline diabetes; 7.0=Don’t know/Not Sure; 9.0=Refused, BLANK Not asked or Missing\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"POVERTY\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Binary indicator for whether an individuals' income falls below the 2021 poverty guideline for family of four\",\n    \"values\": \"1.0=Yes; 0.0=No\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"EMPLOY1\",\n    \"type\": \"categorical\",\n    \"description\": \"Current employment status\",\n    \"values\": \"1.0=Employed for wages; 2.0=Self-employed; 3.0=Out of work for 1 year or more; 4.0=Out of work for less than 1 year; 5.0=A homemaker; 6.0=A student; 7.0=Retired; 8.0=Unable to work; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"IYEAR\",\n    \"type\": \"continuous\",\n    \"description\": \"Survey year\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"STATE\",\n    \"type\": \"categorical\",\n    \"description\": \"State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"MEDCOST\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?'\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don't know/not sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"PRACE1\",\n    \"type\": \"categorical\",\n    \"description\": \"Preferred race category\",\n    \"values\": \"1.0=White; 2.0=Black or African American; 3.0=American Indian or Alaskan Native; 4.0=Asian; 5.0=Native Hawaiian or other Pacific Islander; 6.0=Other race; 7.0=No preferred race; 8.0=Multiracial but preferred race not answered; 77.0=Don’t know/Not sure; 9.0=...\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex of respondent\",\n    \"values\": \"1=Male; 2=Female\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\"task_summary\":\"Predict whether a respondent has ever been told they have high blood pressure/hypertension from BRFSS health, behavior, and demographic variables.\",\"scores\":[{\"feature_id\":0,\"score\":0.95,\"rationale\":\"Age is one of the strongest and most stable risk factors for hypertension across populations and time.\"},{\"feature_id\":1,\"score\":0.28,\"rationale\":\"Fruit intake is weakly related to cardiovascular health but self-reported diet is noisy and only modestly predictive marginally.\"},{\"feature_id\":2,\"score\":0.3,\"rationale\":\"Vegetable intake has a plausible stable link to blood pressure through diet quality, but the coarse self-report makes it only modestly useful.\"},{\"feature_id\":3,\"score\":0.42,\"rationale\":\"Alcohol consumption has a biologically plausible association with hypertension, though self-report and nonlinear effects limit stability.\"},{\"feature_id\":4,\"score\":0.38,\"rationale\":\"Binge drinking is relevant to blood pressure risk but is behaviorally noisy and less consistently predictive than age or diabetes.\"},{\"feature_id\":5,\"score\":0.5,\"rationale\":\"Physical inactivity is a stable cardiovascular risk factor and should generalize reasonably well despite self-report noise.\"},{\"feature_id\":6,\"score\":0.34,\"rationale\":\"Ever-smoking captures long-term tobacco exposure with some cardiovascular relevance, but its marginal link to hypertension is moderate.\"},{\"feature_id\":7,\"score\":0.32,\"rationale\":\"Current smoking status may add some risk information, but effects on hypertension are mixed and reporting can be brittle.\"},{\"feature_id\":8,\"score\":0.08,\"rationale\":\"Skin cancer history is not a direct hypertension risk factor and likely acts mostly through age or healthcare access proxies.\"},{\"feature_id\":9,\"score\":0.12,\"rationale\":\"Other cancer history may weakly proxy age and comorbidity burden, but it is not a stable direct predictor of hypertension.\"},{\"feature_id\":10,\"score\":0.88,\"rationale\":\"Diabetes is a strong, clinically meaningful comorbidity with hypertension and should remain predictive across domains.\"},{\"feature_id\":11,\"score\":0.36,\"rationale\":\"Poverty relates to hypertension through chronic stress, diet, and care access, but socioeconomic effects can shift across domains.\"},{\"feature_id\":12,\"score\":0.33,\"rationale\":\"Employment status may proxy age, disability, and socioeconomic status, but it is heterogeneous and somewhat domain-dependent.\"},{\"feature_id\":13,\"score\":0.02,\"rationale\":\"Survey year is primarily a domain identifier and risks capturing temporal shifts rather than stable individual risk.\"},{\"feature_id\":14,\"score\":0.01,\"rationale\":\"State is a strong domain identifier that may encode spurious geographic prevalence and policy differences rather than stable physiology.\"},{\"feature_id\":15,\"score\":0.22,\"rationale\":\"Unable to afford care may weakly reflect access and diagnosis patterns, but it risks measuring ascertainment rather than underlying hypertension.\"},{\"feature_id\":16,\"score\":0.18,\"rationale\":\"Race can correlate with hypertension prevalence via structural factors, but it is a sensitive shortcut and less desirable for robust OOD generalization.\"},{\"feature_id\":17,\"score\":0.58,\"rationale\":\"Sex has a real and fairly stable association with blood pressure risk, though weaker than age or diabetes.\"}]}",
+      "input_tokens": 2060,
+      "output_tokens": 702,
+      "total_tokens": 2762,
+      "response_id": "resp_0c7d475e871832d1006a2812379410819b99e5c1f6eb9cf112",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `brfss_blood_pressure`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEG5YR\",\n    \"type\": \"categorical\",\n    \"description\": \"Age group\",\n    \"values\": \"1.0=Age 18 to 24; 2.0=Age 25 to 29; 3.0=Age 30 to 34; 4.0=Age 35 to 39; 5.0=Age 40 to 44; 6.0=Age 45 to 49; 7.0=Age 50 to 54; 8.0=Age 55 to 59; 9.0=Age 60 to 64; 10.0=Age 65 to 69; 11.0=Age 70 to 74; 12.0=Age 75 to 79; ... (+2 more)\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"FRUIT_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Fruit consumption\",\n    \"values\": \"1.0=Consumed fruit one or more times per day; 2.0=Consumed fruit less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"VEG_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Vegetable consumption\",\n    \"values\": \"1.0=Consumed vegetables one or more times per day; 2.0=Consumed vegetables less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"DRNK_PER_WEEK\",\n    \"type\": \"continuous\",\n    \"description\": \"Total number of alcoholic beverages consumed per week\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"RFBING5\",\n    \"type\": \"categorical\",\n    \"description\": \"Respondent is binge drinker\",\n    \"values\": \"1.0=No; 2.0=Yes; 9.0=Don't know/Refused/Missing\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"TOTINDA\",\n    \"type\": \"categorical\",\n    \"description\": \"Physical activity or exercise during the past 30 days other than their regular job\",\n    \"values\": \"1.0=Had physical activity or exercise in last 30 days; 2.0=No physical activity or exercise in last 30 days\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"SMOKE100\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Answer to the question 'Have you smoked at least 100 cigarettes in your entire life?'\",\n    \"values\": \"1.0=Yes; 2.0=No\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"SMOKDAY2\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Do you now smoke cigarettes every day, some days, or not at all?'\",\n    \"values\": \"1.0=Every day; 2.0=Some days; 3.0=Not at all; 7.0=Don´t Know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"CHCSCNCR\",\n    \"type\": \"categorical\",\n    \"description\": \"Have skin cancer or ever told you have skin cancer\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"CHCOCNCR\",\n    \"type\": \"categorical\",\n    \"description\": \"Have any other types of cancer or ever told you have any other types of cancer\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"DIABETES\",\n    \"type\": \"categorical\",\n    \"description\": \"Have diabetes or ever been told you have diabetes\",\n    \"values\": \"1.0=Yes; 2.0=Yes, but female told only during pregnancy; 3.0=No; 4.0=No, pre-diabetes or borderline diabetes; 7.0=Don’t know/Not Sure; 9.0=Refused, BLANK Not asked or Missing\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"POVERTY\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Binary indicator for whether an individuals' income falls below the 2021 poverty guideline for family of four\",\n    \"values\": \"1.0=Yes; 0.0=No\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"EMPLOY1\",\n    \"type\": \"categorical\",\n    \"description\": \"Current employment status\",\n    \"values\": \"1.0=Employed for wages; 2.0=Self-employed; 3.0=Out of work for 1 year or more; 4.0=Out of work for less than 1 year; 5.0=A homemaker; 6.0=A student; 7.0=Retired; 8.0=Unable to work; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"IYEAR\",\n    \"type\": \"continuous\",\n    \"description\": \"Survey year\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"STATE\",\n    \"type\": \"categorical\",\n    \"description\": \"State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"MEDCOST\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?'\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don't know/not sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"PRACE1\",\n    \"type\": \"categorical\",\n    \"description\": \"Preferred race category\",\n    \"values\": \"1.0=White; 2.0=Black or African American; 3.0=American Indian or Alaskan Native; 4.0=Asian; 5.0=Native Hawaiian or other Pacific Islander; 6.0=Other race; 7.0=No preferred race; 8.0=Multiracial but preferred race not answered; 77.0=Don’t know/Not sure; 9.0=...\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex of respondent\",\n    \"values\": \"1=Male; 2=Female\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a respondent has high blood pressure / hypertension from BRFSS health, behavior, and demographic variables in a way that generalizes across domains such as state and year.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.95,\n      \"rationale\": \"Age is one of the strongest and most stable risk factors for hypertension across populations and time.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.28,\n      \"rationale\": \"Fruit intake has some plausible association with cardiovascular health but is self-reported, coarse, and only weakly predictive marginally.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.32,\n      \"rationale\": \"Vegetable intake is plausibly related to blood pressure through diet quality, but the measure is coarse and likely only modestly predictive on its own.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.36,\n      \"rationale\": \"Alcohol consumption can affect blood pressure, but self-report noise and nonlinear effects reduce stable marginal usefulness.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.34,\n      \"rationale\": \"Binge drinking is a relevant cardiovascular risk behavior, though episodic self-report makes it less stable than core clinical risk factors.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.48,\n      \"rationale\": \"Physical inactivity is a broadly stable hypertension risk factor and should transfer reasonably well across domains.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.30,\n      \"rationale\": \"Lifetime smoking history has some cardiovascular relevance but is a weaker direct predictor of hypertension than age or diabetes.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.33,\n      \"rationale\": \"Current smoking status may carry some signal, but associations with hypertension are weaker and more behaviorally confounded.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.10,\n      \"rationale\": \"Skin cancer history is not a direct stable predictor of hypertension and may mostly reflect age, healthcare access, or geography.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.18,\n      \"rationale\": \"Other cancer history may weakly correlate through age and comorbidity burden, but it is not a robust direct predictor.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.88,\n      \"rationale\": \"Diabetes is a strong, clinically meaningful, and stable comorbidity associated with hypertension.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.40,\n      \"rationale\": \"Poverty captures socioeconomic risk and care environment that can relate to hypertension, though it may vary somewhat by domain and policy context.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.42,\n      \"rationale\": \"Employment status can reflect age, disability, stress, and socioeconomic status, giving moderate but partly confounded signal.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.02,\n      \"rationale\": \"Survey year is primarily a domain identifier and should be heavily penalized for out-of-distribution generalization.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.01,\n      \"rationale\": \"State is a strong domain identifier and likely encourages shortcut learning rather than stable individual-level prediction.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.27,\n      \"rationale\": \"Cost barriers to care may correlate with diagnosis and disease management, but much of the signal is indirect and domain-sensitive.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.22,\n      \"rationale\": \"Race can correlate with hypertension prevalence through structural and social factors, but it is a sensitive shortcut and less desirable for robust generalization.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.55,\n      \"rationale\": \"Sex has a real and fairly stable relationship with blood pressure risk profiles, though weaker than age or diabetes.\"\n    }\n  ]\n}",
+      "input_tokens": 2060,
+      "output_tokens": 935,
+      "total_tokens": 2995,
+      "response_id": "resp_0dcc1720c4b777f2006a281243f148819b966e8544039fe2e5",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `brfss_blood_pressure`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEG5YR\",\n    \"type\": \"categorical\",\n    \"description\": \"Age group\",\n    \"values\": \"1.0=Age 18 to 24; 2.0=Age 25 to 29; 3.0=Age 30 to 34; 4.0=Age 35 to 39; 5.0=Age 40 to 44; 6.0=Age 45 to 49; 7.0=Age 50 to 54; 8.0=Age 55 to 59; 9.0=Age 60 to 64; 10.0=Age 65 to 69; 11.0=Age 70 to 74; 12.0=Age 75 to 79; ... (+2 more)\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"FRUIT_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Fruit consumption\",\n    \"values\": \"1.0=Consumed fruit one or more times per day; 2.0=Consumed fruit less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"VEG_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Vegetable consumption\",\n    \"values\": \"1.0=Consumed vegetables one or more times per day; 2.0=Consumed vegetables less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"DRNK_PER_WEEK\",\n    \"type\": \"continuous\",\n    \"description\": \"Total number of alcoholic beverages consumed per week\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"RFBING5\",\n    \"type\": \"categorical\",\n    \"description\": \"Respondent is binge drinker\",\n    \"values\": \"1.0=No; 2.0=Yes; 9.0=Don't know/Refused/Missing\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"TOTINDA\",\n    \"type\": \"categorical\",\n    \"description\": \"Physical activity or exercise during the past 30 days other than their regular job\",\n    \"values\": \"1.0=Had physical activity or exercise in last 30 days; 2.0=No physical activity or exercise in last 30 days\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"SMOKE100\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Answer to the question 'Have you smoked at least 100 cigarettes in your entire life?'\",\n    \"values\": \"1.0=Yes; 2.0=No\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"SMOKDAY2\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Do you now smoke cigarettes every day, some days, or not at all?'\",\n    \"values\": \"1.0=Every day; 2.0=Some days; 3.0=Not at all; 7.0=Don´t Know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"CHCSCNCR\",\n    \"type\": \"categorical\",\n    \"description\": \"Have skin cancer or ever told you have skin cancer\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"CHCOCNCR\",\n    \"type\": \"categorical\",\n    \"description\": \"Have any other types of cancer or ever told you have any other types of cancer\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"DIABETES\",\n    \"type\": \"categorical\",\n    \"description\": \"Have diabetes or ever been told you have diabetes\",\n    \"values\": \"1.0=Yes; 2.0=Yes, but female told only during pregnancy; 3.0=No; 4.0=No, pre-diabetes or borderline diabetes; 7.0=Don’t know/Not Sure; 9.0=Refused, BLANK Not asked or Missing\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"POVERTY\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Binary indicator for whether an individuals' income falls below the 2021 poverty guideline for family of four\",\n    \"values\": \"1.0=Yes; 0.0=No\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"EMPLOY1\",\n    \"type\": \"categorical\",\n    \"description\": \"Current employment status\",\n    \"values\": \"1.0=Employed for wages; 2.0=Self-employed; 3.0=Out of work for 1 year or more; 4.0=Out of work for less than 1 year; 5.0=A homemaker; 6.0=A student; 7.0=Retired; 8.0=Unable to work; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"IYEAR\",\n    \"type\": \"continuous\",\n    \"description\": \"Survey year\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"STATE\",\n    \"type\": \"categorical\",\n    \"description\": \"State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"MEDCOST\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?'\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don't know/not sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"PRACE1\",\n    \"type\": \"categorical\",\n    \"description\": \"Preferred race category\",\n    \"values\": \"1.0=White; 2.0=Black or African American; 3.0=American Indian or Alaskan Native; 4.0=Asian; 5.0=Native Hawaiian or other Pacific Islander; 6.0=Other race; 7.0=No preferred race; 8.0=Multiracial but preferred race not answered; 77.0=Don’t know/Not sure; 9.0=...\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex of respondent\",\n    \"values\": \"1=Male; 2=Female\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\"task_summary\":\"Predict whether a BRFSS respondent has high blood pressure / hypertension from survey features in a way that generalizes across domains such as states and years.\",\"scores\":[{\"feature_id\":0,\"score\":0.95,\"rationale\":\"Age is one of the strongest and most stable risk factors for hypertension across populations and time.\"},{\"feature_id\":1,\"score\":0.28,\"rationale\":\"Fruit intake relates weakly to cardiovascular health but self-report is noisy and effects are modest marginally.\"},{\"feature_id\":2,\"score\":0.3,\"rationale\":\"Vegetable intake is plausibly protective for blood pressure yet coarse self-report makes it only moderately useful.\"},{\"feature_id\":3,\"score\":0.36,\"rationale\":\"Alcohol consumption has a real physiological link to blood pressure, though reporting error and nonlinear effects limit stability.\"},{\"feature_id\":4,\"score\":0.33,\"rationale\":\"Binge drinking is relevant to hypertension risk but is behaviorally noisy and less consistently predictive than age or diabetes.\"},{\"feature_id\":5,\"score\":0.42,\"rationale\":\"Physical inactivity is a stable cardiovascular risk factor and should generalize reasonably well despite self-report noise.\"},{\"feature_id\":6,\"score\":0.31,\"rationale\":\"Lifetime smoking history has some association with cardiovascular risk but is a weaker marginal predictor of hypertension.\"},{\"feature_id\":7,\"score\":0.29,\"rationale\":\"Current smoking status may add some signal but is behaviorally noisy and not as directly tied to hypertension as other factors.\"},{\"feature_id\":8,\"score\":0.08,\"rationale\":\"Skin cancer history is not directly related to hypertension and any association is likely confounded or demographic.\"},{\"feature_id\":9,\"score\":0.14,\"rationale\":\"Other cancer history may correlate with age and health status but is not a stable direct predictor of hypertension.\"},{\"feature_id\":10,\"score\":0.87,\"rationale\":\"Diabetes is strongly and consistently associated with hypertension through shared metabolic risk and comorbidity.\"},{\"feature_id\":11,\"score\":0.34,\"rationale\":\"Poverty captures social determinants affecting hypertension risk, but it can also reflect domain and demographic structure.\"},{\"feature_id\":12,\"score\":0.38,\"rationale\":\"Employment status can proxy age, disability, stress, and socioeconomic status, giving moderate but somewhat shortcut-prone signal.\"},{\"feature_id\":13,\"score\":0.02,\"rationale\":\"Survey year is primarily a domain identifier and should be heavily penalized for out-of-distribution generalization.\"},{\"feature_id\":14,\"score\":0.0,\"rationale\":\"State is a direct domain identifier and likely to encode spurious geographic prevalence differences rather than stable individual risk.\"},{\"feature_id\":15,\"score\":0.27,\"rationale\":\"Cost barriers to care may correlate with diagnosis and chronic disease burden, but also reflect access and reporting artifacts.\"},{\"feature_id\":16,\"score\":0.18,\"rationale\":\"Race can correlate with hypertension prevalence via structural factors, but it is sensitive and risks demographic shortcutting.\"},{\"feature_id\":17,\"score\":0.44,\"rationale\":\"Sex has a biologically and epidemiologically stable relationship with blood pressure, though less predictive than age or diabetes.\"}]}",
+      "input_tokens": 2060,
+      "output_tokens": 676,
+      "total_tokens": 2736,
+      "response_id": "resp_0b69cbd4c8638ff3006a281253487081998a8a602c62ab4bdd",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `brfss_blood_pressure`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEG5YR\",\n    \"type\": \"categorical\",\n    \"description\": \"Age group\",\n    \"values\": \"1.0=Age 18 to 24; 2.0=Age 25 to 29; 3.0=Age 30 to 34; 4.0=Age 35 to 39; 5.0=Age 40 to 44; 6.0=Age 45 to 49; 7.0=Age 50 to 54; 8.0=Age 55 to 59; 9.0=Age 60 to 64; 10.0=Age 65 to 69; 11.0=Age 70 to 74; 12.0=Age 75 to 79; ... (+2 more)\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"FRUIT_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Fruit consumption\",\n    \"values\": \"1.0=Consumed fruit one or more times per day; 2.0=Consumed fruit less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"VEG_ONCE_PER_DAY\",\n    \"type\": \"categorical\",\n    \"description\": \"Vegetable consumption\",\n    \"values\": \"1.0=Consumed vegetables one or more times per day; 2.0=Consumed vegetables less than one time per day; 9.0=Don't know, refused or missing values\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"DRNK_PER_WEEK\",\n    \"type\": \"continuous\",\n    \"description\": \"Total number of alcoholic beverages consumed per week\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"RFBING5\",\n    \"type\": \"categorical\",\n    \"description\": \"Respondent is binge drinker\",\n    \"values\": \"1.0=No; 2.0=Yes; 9.0=Don't know/Refused/Missing\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"TOTINDA\",\n    \"type\": \"categorical\",\n    \"description\": \"Physical activity or exercise during the past 30 days other than their regular job\",\n    \"values\": \"1.0=Had physical activity or exercise in last 30 days; 2.0=No physical activity or exercise in last 30 days\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"SMOKE100\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Answer to the question 'Have you smoked at least 100 cigarettes in your entire life?'\",\n    \"values\": \"1.0=Yes; 2.0=No\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"SMOKDAY2\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Do you now smoke cigarettes every day, some days, or not at all?'\",\n    \"values\": \"1.0=Every day; 2.0=Some days; 3.0=Not at all; 7.0=Don´t Know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"CHCSCNCR\",\n    \"type\": \"categorical\",\n    \"description\": \"Have skin cancer or ever told you have skin cancer\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"CHCOCNCR\",\n    \"type\": \"categorical\",\n    \"description\": \"Have any other types of cancer or ever told you have any other types of cancer\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"DIABETES\",\n    \"type\": \"categorical\",\n    \"description\": \"Have diabetes or ever been told you have diabetes\",\n    \"values\": \"1.0=Yes; 2.0=Yes, but female told only during pregnancy; 3.0=No; 4.0=No, pre-diabetes or borderline diabetes; 7.0=Don’t know/Not Sure; 9.0=Refused, BLANK Not asked or Missing\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"POVERTY\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Binary indicator for whether an individuals' income falls below the 2021 poverty guideline for family of four\",\n    \"values\": \"1.0=Yes; 0.0=No\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"EMPLOY1\",\n    \"type\": \"categorical\",\n    \"description\": \"Current employment status\",\n    \"values\": \"1.0=Employed for wages; 2.0=Self-employed; 3.0=Out of work for 1 year or more; 4.0=Out of work for less than 1 year; 5.0=A homemaker; 6.0=A student; 7.0=Retired; 8.0=Unable to work; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"IYEAR\",\n    \"type\": \"continuous\",\n    \"description\": \"Survey year\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"STATE\",\n    \"type\": \"categorical\",\n    \"description\": \"State\",\n    \"values\": \"1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"MEDCOST\",\n    \"type\": \"categorical\",\n    \"description\": \"Answer to the question 'Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?'\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Don't know/not sure; 9.0=Refused\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"PRACE1\",\n    \"type\": \"categorical\",\n    \"description\": \"Preferred race category\",\n    \"values\": \"1.0=White; 2.0=Black or African American; 3.0=American Indian or Alaskan Native; 4.0=Asian; 5.0=Native Hawaiian or other Pacific Islander; 6.0=Other race; 7.0=No preferred race; 8.0=Multiracial but preferred race not answered; 77.0=Don’t know/Not sure; 9.0=...\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex of respondent\",\n    \"values\": \"1=Male; 2=Female\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult respondent has high blood pressure / hypertension from BRFSS survey features in a way that generalizes across domains such as states and years.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.95,\n      \"rationale\": \"Age is one of the strongest and most stable risk factors for hypertension across populations.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.33,\n      \"rationale\": \"Fruit intake is plausibly related to cardiovascular health but self-report is noisy and marginal signal is modest.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.36,\n      \"rationale\": \"Vegetable intake has a plausible stable association with blood pressure, though coarse self-report limits strength.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.42,\n      \"rationale\": \"Alcohol consumption can affect blood pressure, but the relationship is heterogeneous and self-reported intake is noisy.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.40,\n      \"rationale\": \"Binge drinking is a relevant cardiovascular risk behavior with some stable signal, though less direct than age or diabetes.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.55,\n      \"rationale\": \"Physical inactivity is a broadly stable risk factor for hypertension and should transfer reasonably well across domains.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.30,\n      \"rationale\": \"Lifetime smoking history has some cardiovascular relevance but is only indirectly tied to hypertension.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.34,\n      \"rationale\": \"Current smoking status may add modest health-risk information, but its marginal relation to hypertension is weaker and can vary.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.10,\n      \"rationale\": \"Skin cancer history is not a direct stable predictor of hypertension and likely reflects age or healthcare utilization instead.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.14,\n      \"rationale\": \"Other cancer history may weakly track age and comorbidity but is not a direct or robust hypertension predictor.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.88,\n      \"rationale\": \"Diabetes is a strong, clinically meaningful comorbidity with hypertension and should remain predictive across domains.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.41,\n      \"rationale\": \"Poverty captures stable social determinants linked to hypertension, but it also risks demographic shortcutting and domain dependence.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.38,\n      \"rationale\": \"Employment status may reflect age, disability, stress, and socioeconomic conditions, giving moderate but partly indirect signal.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.02,\n      \"rationale\": \"Survey year is primarily a domain identifier and should be heavily penalized for out-of-distribution generalization.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.01,\n      \"rationale\": \"State is a strong domain identifier and likely encodes spurious geographic prevalence differences rather than stable individual risk.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.26,\n      \"rationale\": \"Unable to see a doctor because of cost may correlate with untreated hypertension and socioeconomic disadvantage, but is indirect and access-dependent.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.22,\n      \"rationale\": \"Race can correlate with hypertension prevalence through structural and biological pathways, but it is a sensitive shortcut with portability concerns.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.47,\n      \"rationale\": \"Sex has a real and fairly stable association with blood pressure risk, though weaker than age or diabetes.\"\n    }\n  ]\n}",
+      "input_tokens": 2060,
+      "output_tokens": 900,
+      "total_tokens": 2960,
+      "response_id": "resp_0032b58bf6968b27006a28125f1580819b8b6e7a07d8d8efb1",
+      "response_model": "gpt-5.4-2026-03-05"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/tableshift/brfss_blood_pressure/rankings/score_all_prompt.txt",
+  "config": {
+    "score_samples": 5
+  }
+}

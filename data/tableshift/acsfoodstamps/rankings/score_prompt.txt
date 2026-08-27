@@ -1,0 +1,1030 @@
+# tableshift/acsfoodstamps score prompts
+
+## 1. feature_id=0 feature=ENG
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 0,
+  "feature": "ENG",
+  "type": "categorical",
+  "description": "Ability to speak English",
+  "values": "00=less than 5 years old/speaks only English; 01=Very well; 02=Well; 03=Not well; 04=Not at all"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 0,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 2. feature_id=1 feature=FER
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 1,
+  "feature": "FER",
+  "type": "categorical",
+  "description": "Gave birth to child within the past 12 months",
+  "values": "00=less than 15 years old or greater than 50 years or male; 01=Yes; 02=No"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 1,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 3. feature_id=2 feature=HUPAC
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 2,
+  "feature": "HUPAC",
+  "type": "categorical",
+  "description": "Household presence and age of children",
+  "values": "00=N/A (GQ/vacant); 01=With children under 6 years only; 02=With children 6 to 17 years only; 03=With children under 6 years and 6 to 17 years; 04=No children"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 2,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 4. feature_id=3 feature=WIF
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 3,
+  "feature": "WIF",
+  "type": "categorical",
+  "description": "Workers in family during the past 12 months",
+  "values": "0=No workers; 1=1 worker; 2=2 workers; 3=3 or more workers"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 3,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 5. feature_id=4 feature=NWLA
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 4,
+  "feature": "NWLA",
+  "type": "categorical",
+  "description": "On layoff from work",
+  "values": "01=Yes; 02=No; 03=Did not report"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 4,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 6. feature_id=5 feature=NWLK
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 5,
+  "feature": "NWLK",
+  "type": "categorical",
+  "description": "Looking for work",
+  "values": "01=Yes; 02=No; 03=Did not report"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 5,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 7. feature_id=6 feature=OCCP
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 6,
+  "feature": "OCCP",
+  "type": "categorical",
+  "description": "Occupation"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 6,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 8. feature_id=7 feature=POBP
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 7,
+  "feature": "POBP",
+  "type": "categorical",
+  "description": "Place of birth"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 7,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 9. feature_id=8 feature=RELP
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 8,
+  "feature": "RELP",
+  "type": "categorical",
+  "description": "Relationship to reference person",
+  "values": "00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=..."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 8,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 10. feature_id=9 feature=WKHP
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 9,
+  "feature": "WKHP",
+  "type": "integer",
+  "description": "Usual hours worked per week past 12 months"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 9,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 11. feature_id=10 feature=WKW
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 10,
+  "feature": "WKW",
+  "type": "integer",
+  "description": "Weeks worked during past 12 months"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 10,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 12. feature_id=11 feature=WRK
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 11,
+  "feature": "WRK",
+  "type": "categorical",
+  "description": "worked last week",
+  "values": "01=worked; 02=did not work"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 11,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 13. feature_id=12 feature=DIS
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 12,
+  "feature": "DIS",
+  "type": "categorical",
+  "description": "Disability status",
+  "values": "01=With a disability; 02=Without a disability"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 12,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 14. feature_id=13 feature=MIL
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 13,
+  "feature": "MIL",
+  "type": "categorical",
+  "description": "Military service",
+  "values": "00=N/A (less than 17 years old); 01=Now on active duty; 02=On active duty in the past, but not now; 03=Only on active duty for training in Reserves/National Guard; 04=Never served in the military"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 13,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 15. feature_id=14 feature=ANC
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 14,
+  "feature": "ANC",
+  "type": "categorical",
+  "description": "Ancestry",
+  "values": "1=Single; 2=Multiple; 3=Unclassified; 4=Not reported; 8=Ancestry suppressed for this group"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 14,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 16. feature_id=15 feature=NATIVITY
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 15,
+  "feature": "NATIVITY",
+  "type": "categorical",
+  "description": "Nativity",
+  "values": "01=Native; 02=Foreign born"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 15,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 17. feature_id=16 feature=DEAR
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 16,
+  "feature": "DEAR",
+  "type": "boolean_categorical",
+  "description": "Hearing difficulty",
+  "values": "01=Yes; 02=No"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 16,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 18. feature_id=17 feature=DEYE
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 17,
+  "feature": "DEYE",
+  "type": "boolean_categorical",
+  "description": "Vision difficulty",
+  "values": "01=Yes; 02=No"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 17,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 19. feature_id=18 feature=DREM
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 18,
+  "feature": "DREM",
+  "type": "boolean_categorical",
+  "description": "Cognitive difficulty",
+  "values": "01=Yes; 02=No"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 18,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 20. feature_id=19 feature=PUBCOV
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 19,
+  "feature": "PUBCOV",
+  "type": "categorical",
+  "description": "Public health coverage recode",
+  "values": "00=Without public health coverage; 01=With public health coverage"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 19,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 21. feature_id=20 feature=AGEP
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 20,
+  "feature": "AGEP",
+  "type": "integer",
+  "description": "age in years"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 20,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 22. feature_id=21 feature=SEX
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 21,
+  "feature": "SEX",
+  "type": "categorical",
+  "description": "sex",
+  "values": "1=Male; 2=Female"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 21,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 23. feature_id=22 feature=ST
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 22,
+  "feature": "ST",
+  "type": "categorical",
+  "description": "State"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 22,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 24. feature_id=23 feature=MAR
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 23,
+  "feature": "MAR",
+  "type": "categorical",
+  "description": "marital status",
+  "values": "1=Married; 2=Widowed; 3=Divorced; 4=Separated; 5=Never married or under 15 years old"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 23,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 25. feature_id=24 feature=CIT
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 24,
+  "feature": "CIT",
+  "type": "categorical",
+  "description": "citizenship status",
+  "values": "1=Born in the U.S.; 2=Born in Puerto Rico, Guam, the U.S. Virgin Islands, or the Northern Marianas; 3=Born abroad of American parent(s); 4=U.S. citizen by naturalization; 5=Not a citizen of the U.S."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 24,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 26. feature_id=25 feature=RAC1P
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 25,
+  "feature": "RAC1P",
+  "type": "categorical",
+  "description": "race",
+  "values": "1=White alone; 2=Black or African American alone; 3=American Indian alone; 4=Alaska Native alone; 5=American Indian and Alaska Native tribes specified; or American Indian or Alaska Native, not specified and no other races; 6=Asian alone; 7=Native Hawaiian a..."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 25,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 27. feature_id=26 feature=SCHL
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 26,
+  "feature": "SCHL",
+  "type": "categorical",
+  "description": "Educational attainment",
+  "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 26,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 28. feature_id=27 feature=ACS_YEAR
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 27,
+  "feature": "ACS_YEAR",
+  "type": "integer",
+  "description": "Year of survey"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 27,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.

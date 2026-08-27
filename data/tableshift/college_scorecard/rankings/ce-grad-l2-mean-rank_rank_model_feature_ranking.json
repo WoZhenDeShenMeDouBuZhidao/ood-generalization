@@ -1,0 +1,855 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "college_scorecard",
+  "model": "ce-grad-l2-mean-rank",
+  "method": "rank",
+  "feature_space": "model",
+  "created_at": "2026-08-13T00:12:51",
+  "aggregation": {
+    "name": "mean_rank",
+    "per_repeat_ranking": "ordinal_descending",
+    "tie_break": "model_feature_order",
+    "repeat_count": 5,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 101,
+        "feature": "main",
+        "mean_rank": 1.0,
+        "rank_std": 0.0
+      },
+      {
+        "rank": 2,
+        "feature_id": 115,
+        "feature": "sch_deg",
+        "mean_rank": 2.4,
+        "rank_std": 0.5477225575051661
+      },
+      {
+        "rank": 3,
+        "feature_id": 52,
+        "feature": "PCIP49",
+        "mean_rank": 3.0,
+        "rank_std": 1.224744871391589
+      },
+      {
+        "rank": 4,
+        "feature_id": 35,
+        "feature": "PCIP25",
+        "mean_rank": 4.0,
+        "rank_std": 0.7071067811865476
+      },
+      {
+        "rank": 5,
+        "feature_id": 38,
+        "feature": "PCIP29",
+        "mean_rank": 4.6,
+        "rank_std": 0.5477225575051662
+      },
+      {
+        "rank": 6,
+        "feature_id": 42,
+        "feature": "PCIP39",
+        "mean_rank": 6.0,
+        "rank_std": 0.0
+      },
+      {
+        "rank": 7,
+        "feature_id": 14,
+        "feature": "HIGHDEG",
+        "mean_rank": 7.4,
+        "rank_std": 0.5477225575051662
+      },
+      {
+        "rank": 8,
+        "feature_id": 44,
+        "feature": "PCIP41",
+        "mean_rank": 7.8,
+        "rank_std": 0.8366600265340756
+      },
+      {
+        "rank": 9,
+        "feature_id": 21,
+        "feature": "PCIP04",
+        "mean_rank": 8.8,
+        "rank_std": 0.4472135954999579
+      },
+      {
+        "rank": 10,
+        "feature_id": 22,
+        "feature": "PCIP05",
+        "mean_rank": 11.2,
+        "rank_std": 1.3038404810405297
+      },
+      {
+        "rank": 11,
+        "feature_id": 18,
+        "feature": "NUMBRANCH",
+        "mean_rank": 12.0,
+        "rank_std": 2.0
+      },
+      {
+        "rank": 12,
+        "feature_id": 8,
+        "feature": "CCSIZSET",
+        "mean_rank": 12.4,
+        "rank_std": 3.286335345030997
+      },
+      {
+        "rank": 13,
+        "feature_id": 13,
+        "feature": "HBCU",
+        "mean_rank": 13.4,
+        "rank_std": 3.361547262794322
+      },
+      {
+        "rank": 14,
+        "feature_id": 117,
+        "feature": "veteran",
+        "mean_rank": 14.8,
+        "rank_std": 2.16794833886788
+      },
+      {
+        "rank": 15,
+        "feature_id": 0,
+        "feature": "ACTCMMID",
+        "mean_rank": 15.2,
+        "rank_std": 1.7888543819998317
+      },
+      {
+        "rank": 16,
+        "feature_id": 51,
+        "feature": "PCIP48",
+        "mean_rank": 16.0,
+        "rank_std": 2.23606797749979
+      },
+      {
+        "rank": 17,
+        "feature_id": 20,
+        "feature": "PCIP03",
+        "mean_rank": 16.6,
+        "rank_std": 2.3021728866442674
+      },
+      {
+        "rank": 18,
+        "feature_id": 28,
+        "feature": "PCIP14",
+        "mean_rank": 18.0,
+        "rank_std": 1.224744871391589
+      },
+      {
+        "rank": 19,
+        "feature_id": 19,
+        "feature": "PCIP01",
+        "mean_rank": 21.4,
+        "rank_std": 2.3021728866442674
+      },
+      {
+        "rank": 20,
+        "feature_id": 50,
+        "feature": "PCIP47",
+        "mean_rank": 22.4,
+        "rank_std": 4.159326868617084
+      },
+      {
+        "rank": 21,
+        "feature_id": 31,
+        "feature": "PCIP19",
+        "mean_rank": 22.6,
+        "rank_std": 3.714835124201342
+      },
+      {
+        "rank": 22,
+        "feature_id": 9,
+        "feature": "CONTROL",
+        "mean_rank": 23.6,
+        "rank_std": 2.0736441353327724
+      },
+      {
+        "rank": 23,
+        "feature_id": 26,
+        "feature": "PCIP12",
+        "mean_rank": 24.4,
+        "rank_std": 6.4265076052238514
+      },
+      {
+        "rank": 24,
+        "feature_id": 49,
+        "feature": "PCIP46",
+        "mean_rank": 25.4,
+        "rank_std": 2.4083189157584592
+      },
+      {
+        "rank": 25,
+        "feature_id": 114,
+        "feature": "region",
+        "mean_rank": 25.4,
+        "rank_std": 3.0495901363953815
+      },
+      {
+        "rank": 26,
+        "feature_id": 24,
+        "feature": "PCIP10",
+        "mean_rank": 26.0,
+        "rank_std": 5.196152422706632
+      },
+      {
+        "rank": 27,
+        "feature_id": 12,
+        "feature": "DISTANCEONLY",
+        "mean_rank": 26.2,
+        "rank_std": 18.376615575235828
+      },
+      {
+        "rank": 28,
+        "feature_id": 2,
+        "feature": "ACTMTMID",
+        "mean_rank": 28.8,
+        "rank_std": 7.049822692805827
+      },
+      {
+        "rank": 29,
+        "feature_id": 63,
+        "feature": "SATWRMID",
+        "mean_rank": 29.8,
+        "rank_std": 5.06951674225463
+      },
+      {
+        "rank": 30,
+        "feature_id": 99,
+        "feature": "loan_ever",
+        "mean_rank": 30.2,
+        "rank_std": 3.420526275297414
+      },
+      {
+        "rank": 31,
+        "feature_id": 16,
+        "feature": "LOCALE",
+        "mean_rank": 30.8,
+        "rank_std": 5.167204273105526
+      },
+      {
+        "rank": 32,
+        "feature_id": 62,
+        "feature": "SATVRMID",
+        "mean_rank": 32.8,
+        "rank_std": 2.9495762407505253
+      },
+      {
+        "rank": 33,
+        "feature_id": 66,
+        "feature": "TUITIONFEE_IN",
+        "mean_rank": 33.0,
+        "rank_std": 4.183300132670378
+      },
+      {
+        "rank": 34,
+        "feature_id": 3,
+        "feature": "ACTWRMID",
+        "mean_rank": 34.8,
+        "rank_std": 7.496665925596525
+      },
+      {
+        "rank": 35,
+        "feature_id": 23,
+        "feature": "PCIP09",
+        "mean_rank": 35.2,
+        "rank_std": 3.271085446759225
+      },
+      {
+        "rank": 36,
+        "feature_id": 98,
+        "feature": "first_gen",
+        "mean_rank": 35.4,
+        "rank_std": 6.148170459575759
+      },
+      {
+        "rank": 37,
+        "feature_id": 43,
+        "feature": "PCIP40",
+        "mean_rank": 36.2,
+        "rank_std": 6.220932405998316
+      },
+      {
+        "rank": 38,
+        "feature_id": 34,
+        "feature": "PCIP24",
+        "mean_rank": 36.8,
+        "rank_std": 1.9235384061671343
+      },
+      {
+        "rank": 39,
+        "feature_id": 46,
+        "feature": "PCIP43",
+        "mean_rank": 39.4,
+        "rank_std": 6.5038450166036395
+      },
+      {
+        "rank": 40,
+        "feature_id": 30,
+        "feature": "PCIP16",
+        "mean_rank": 43.2,
+        "rank_std": 9.311283477587823
+      },
+      {
+        "rank": 41,
+        "feature_id": 39,
+        "feature": "PCIP30",
+        "mean_rank": 43.6,
+        "rank_std": 5.594640292279746
+      },
+      {
+        "rank": 42,
+        "feature_id": 1,
+        "feature": "ACTENMID",
+        "mean_rank": 43.8,
+        "rank_std": 7.596051605933177
+      },
+      {
+        "rank": 43,
+        "feature_id": 41,
+        "feature": "PCIP38",
+        "mean_rank": 44.2,
+        "rank_std": 5.263078946776307
+      },
+      {
+        "rank": 44,
+        "feature_id": 29,
+        "feature": "PCIP15",
+        "mean_rank": 46.2,
+        "rank_std": 7.395944834840239
+      },
+      {
+        "rank": 45,
+        "feature_id": 45,
+        "feature": "PCIP42",
+        "mean_rank": 46.2,
+        "rank_std": 9.20326029187483
+      },
+      {
+        "rank": 46,
+        "feature_id": 48,
+        "feature": "PCIP45",
+        "mean_rank": 47.2,
+        "rank_std": 5.674504383644442
+      },
+      {
+        "rank": 47,
+        "feature_id": 67,
+        "feature": "TUITIONFEE_OUT",
+        "mean_rank": 48.2,
+        "rank_std": 4.919349550499538
+      },
+      {
+        "rank": 48,
+        "feature_id": 59,
+        "feature": "PPTUG_EF",
+        "mean_rank": 48.6,
+        "rank_std": 3.714835124201342
+      },
+      {
+        "rank": 49,
+        "feature_id": 37,
+        "feature": "PCIP27",
+        "mean_rank": 49.2,
+        "rank_std": 11.144505372604025
+      },
+      {
+        "rank": 50,
+        "feature_id": 61,
+        "feature": "SATMTMID",
+        "mean_rank": 51.4,
+        "rank_std": 8.677557259966656
+      },
+      {
+        "rank": 51,
+        "feature_id": 40,
+        "feature": "PCIP31",
+        "mean_rank": 52.2,
+        "rank_std": 11.454256850621082
+      },
+      {
+        "rank": 52,
+        "feature_id": 85,
+        "feature": "UG_AIANOld",
+        "mean_rank": 52.6,
+        "rank_std": 4.03732584763727
+      },
+      {
+        "rank": 53,
+        "feature_id": 69,
+        "feature": "UG",
+        "mean_rank": 52.8,
+        "rank_std": 5.215361924162119
+      },
+      {
+        "rank": 54,
+        "feature_id": 47,
+        "feature": "PCIP44",
+        "mean_rank": 53.0,
+        "rank_std": 4.183300132670378
+      },
+      {
+        "rank": 55,
+        "feature_id": 76,
+        "feature": "UGDS_BLACK",
+        "mean_rank": 57.0,
+        "rank_std": 11.335784048754634
+      },
+      {
+        "rank": 56,
+        "feature_id": 53,
+        "feature": "PCIP50",
+        "mean_rank": 60.8,
+        "rank_std": 3.7682887362833544
+      },
+      {
+        "rank": 57,
+        "feature_id": 80,
+        "feature": "UGDS_NHPI",
+        "mean_rank": 61.6,
+        "rank_std": 5.856620185738529
+      },
+      {
+        "rank": 58,
+        "feature_id": 103,
+        "feature": "md_faminc",
+        "mean_rank": 63.8,
+        "rank_std": 17.15225932639779
+      },
+      {
+        "rank": 59,
+        "feature_id": 102,
+        "feature": "married",
+        "mean_rank": 64.6,
+        "rank_std": 18.555322686496186
+      },
+      {
+        "rank": 60,
+        "feature_id": 56,
+        "feature": "PCIP54",
+        "mean_rank": 65.6,
+        "rank_std": 18.365728953678914
+      },
+      {
+        "rank": 61,
+        "feature_id": 72,
+        "feature": "UGDS_AIAN",
+        "mean_rank": 65.8,
+        "rank_std": 9.85900603509299
+      },
+      {
+        "rank": 62,
+        "feature_id": 33,
+        "feature": "PCIP23",
+        "mean_rank": 66.6,
+        "rank_std": 11.717508267545622
+      },
+      {
+        "rank": 63,
+        "feature_id": 90,
+        "feature": "UG_UNKN",
+        "mean_rank": 66.8,
+        "rank_std": 12.657013865837392
+      },
+      {
+        "rank": 64,
+        "feature_id": 112,
+        "feature": "pell_ever",
+        "mean_rank": 67.6,
+        "rank_std": 8.049844718999243
+      },
+      {
+        "rank": 65,
+        "feature_id": 32,
+        "feature": "PCIP22",
+        "mean_rank": 67.8,
+        "rank_std": 8.46758525200662
+      },
+      {
+        "rank": 66,
+        "feature_id": 94,
+        "feature": "agege24",
+        "mean_rank": 68.4,
+        "rank_std": 24.130893062628246
+      },
+      {
+        "rank": 67,
+        "feature_id": 104,
+        "feature": "median_hh_inc",
+        "mean_rank": 68.8,
+        "rank_std": 5.540758070878027
+      },
+      {
+        "rank": 68,
+        "feature_id": 70,
+        "feature": "UGDS",
+        "mean_rank": 69.4,
+        "rank_std": 2.701851217221259
+      },
+      {
+        "rank": 69,
+        "feature_id": 75,
+        "feature": "UGDS_ASIAN",
+        "mean_rank": 69.6,
+        "rank_std": 10.714476188783099
+      },
+      {
+        "rank": 70,
+        "feature_id": 60,
+        "feature": "PPTUG_EF2",
+        "mean_rank": 70.8,
+        "rank_std": 13.442470011125188
+      },
+      {
+        "rank": 71,
+        "feature_id": 89,
+        "feature": "UG_NRA",
+        "mean_rank": 70.8,
+        "rank_std": 15.896540504147437
+      },
+      {
+        "rank": 72,
+        "feature_id": 11,
+        "feature": "COSTT4_P",
+        "mean_rank": 72.6,
+        "rank_std": 13.049904214207858
+      },
+      {
+        "rank": 73,
+        "feature_id": 25,
+        "feature": "PCIP11",
+        "mean_rank": 74.4,
+        "rank_std": 8.988882021697693
+      },
+      {
+        "rank": 74,
+        "feature_id": 27,
+        "feature": "PCIP13",
+        "mean_rank": 75.8,
+        "rank_std": 7.9498427657407165
+      },
+      {
+        "rank": 75,
+        "feature_id": 83,
+        "feature": "UGDS_WHITE",
+        "mean_rank": 77.4,
+        "rank_std": 7.368853370776216
+      },
+      {
+        "rank": 76,
+        "feature_id": 100,
+        "feature": "locale2",
+        "mean_rank": 78.2,
+        "rank_std": 25.29229131573492
+      },
+      {
+        "rank": 77,
+        "feature_id": 73,
+        "feature": "UGDS_AIANOld",
+        "mean_rank": 78.6,
+        "rank_std": 8.87693640846886
+      },
+      {
+        "rank": 78,
+        "feature_id": 36,
+        "feature": "PCIP26",
+        "mean_rank": 79.4,
+        "rank_std": 20.839865642561133
+      },
+      {
+        "rank": 79,
+        "feature_id": 93,
+        "feature": "age_entry_sq",
+        "mean_rank": 80.4,
+        "rank_std": 11.907980517283358
+      },
+      {
+        "rank": 80,
+        "feature_id": 55,
+        "feature": "PCIP52",
+        "mean_rank": 82.0,
+        "rank_std": 4.847679857416329
+      },
+      {
+        "rank": 81,
+        "feature_id": 88,
+        "feature": "UG_HISPOld",
+        "mean_rank": 82.4,
+        "rank_std": 14.808781178746615
+      },
+      {
+        "rank": 82,
+        "feature_id": 71,
+        "feature": "UGDS_2MOR",
+        "mean_rank": 82.8,
+        "rank_std": 19.766132651583618
+      },
+      {
+        "rank": 83,
+        "feature_id": 54,
+        "feature": "PCIP51",
+        "mean_rank": 84.2,
+        "rank_std": 8.871302046486749
+      },
+      {
+        "rank": 84,
+        "feature_id": 74,
+        "feature": "UGDS_API",
+        "mean_rank": 84.6,
+        "rank_std": 9.071934744033381
+      },
+      {
+        "rank": 85,
+        "feature_id": 65,
+        "feature": "TUITFTE",
+        "mean_rank": 85.2,
+        "rank_std": 12.93058390019569
+      },
+      {
+        "rank": 86,
+        "feature_id": 17,
+        "feature": "NPT4_PROG",
+        "mean_rank": 87.0,
+        "rank_std": 20.493901531919196
+      },
+      {
+        "rank": 87,
+        "feature_id": 78,
+        "feature": "UGDS_HISP",
+        "mean_rank": 87.8,
+        "rank_std": 11.945710527214361
+      },
+      {
+        "rank": 88,
+        "feature_id": 109,
+        "feature": "pct_grad_prof",
+        "mean_rank": 90.2,
+        "rank_std": 13.953494186045301
+      },
+      {
+        "rank": 89,
+        "feature_id": 97,
+        "feature": "female",
+        "mean_rank": 90.8,
+        "rank_std": 9.5236547606473
+      },
+      {
+        "rank": 90,
+        "feature_id": 108,
+        "feature": "pct_born_us",
+        "mean_rank": 90.8,
+        "rank_std": 19.664689166117018
+      },
+      {
+        "rank": 91,
+        "feature_id": 64,
+        "feature": "STABBR",
+        "mean_rank": 91.2,
+        "rank_std": 13.026895255585652
+      },
+      {
+        "rank": 92,
+        "feature_id": 4,
+        "feature": "ADM_RATE",
+        "mean_rank": 91.8,
+        "rank_std": 5.357238094391549
+      },
+      {
+        "rank": 93,
+        "feature_id": 6,
+        "feature": "AVGFACSAL",
+        "mean_rank": 92.0,
+        "rank_std": 7.7781745930520225
+      },
+      {
+        "rank": 94,
+        "feature_id": 111,
+        "feature": "pct_white",
+        "mean_rank": 93.0,
+        "rank_std": 15.700318468107582
+      },
+      {
+        "rank": 95,
+        "feature_id": 7,
+        "feature": "AccredAgency",
+        "mean_rank": 93.4,
+        "rank_std": 11.371015785759864
+      },
+      {
+        "rank": 96,
+        "feature_id": 96,
+        "feature": "faminc",
+        "mean_rank": 93.6,
+        "rank_std": 22.345021816950638
+      },
+      {
+        "rank": 97,
+        "feature_id": 107,
+        "feature": "pct_black",
+        "mean_rank": 93.8,
+        "rank_std": 23.188359148503803
+      },
+      {
+        "rank": 98,
+        "feature_id": 86,
+        "feature": "UG_API",
+        "mean_rank": 94.0,
+        "rank_std": 7.7781745930520225
+      },
+      {
+        "rank": 99,
+        "feature_id": 92,
+        "feature": "age_entry",
+        "mean_rank": 94.0,
+        "rank_std": 28.319604517012593
+      },
+      {
+        "rank": 100,
+        "feature_id": 77,
+        "feature": "UGDS_BLACKNH",
+        "mean_rank": 94.2,
+        "rank_std": 11.30044246921332
+      },
+      {
+        "rank": 101,
+        "feature_id": 95,
+        "feature": "dependent",
+        "mean_rank": 94.4,
+        "rank_std": 17.854971296532515
+      },
+      {
+        "rank": 102,
+        "feature_id": 68,
+        "feature": "TUITIONFEE_PROG",
+        "mean_rank": 96.6,
+        "rank_std": 12.99230541512937
+      },
+      {
+        "rank": 103,
+        "feature_id": 91,
+        "feature": "UG_WHITENH",
+        "mean_rank": 96.6,
+        "rank_std": 13.049904214207857
+      },
+      {
+        "rank": 104,
+        "feature_id": 82,
+        "feature": "UGDS_UNKN",
+        "mean_rank": 97.0,
+        "rank_std": 12.449899597988733
+      },
+      {
+        "rank": 105,
+        "feature_id": 105,
+        "feature": "pct_asian",
+        "mean_rank": 98.2,
+        "rank_std": 10.2810505299799
+      },
+      {
+        "rank": 106,
+        "feature_id": 84,
+        "feature": "UGDS_WHITENH",
+        "mean_rank": 99.2,
+        "rank_std": 9.011104260855047
+      },
+      {
+        "rank": 107,
+        "feature_id": 15,
+        "feature": "INEXPFTE",
+        "mean_rank": 99.8,
+        "rank_std": 6.534523701081817
+      },
+      {
+        "rank": 108,
+        "feature_id": 57,
+        "feature": "PCTPELL",
+        "mean_rank": 101.8,
+        "rank_std": 8.757853618324527
+      },
+      {
+        "rank": 109,
+        "feature_id": 5,
+        "feature": "ADM_RATE_ALL",
+        "mean_rank": 105.2,
+        "rank_std": 9.17605579756357
+      },
+      {
+        "rank": 110,
+        "feature_id": 81,
+        "feature": "UGDS_NRA",
+        "mean_rank": 105.8,
+        "rank_std": 6.220932405998316
+      },
+      {
+        "rank": 111,
+        "feature_id": 106,
+        "feature": "pct_ba",
+        "mean_rank": 106.0,
+        "rank_std": 8.602325267042627
+      },
+      {
+        "rank": 112,
+        "feature_id": 110,
+        "feature": "pct_hispanic",
+        "mean_rank": 107.8,
+        "rank_std": 10.10940156488009
+      },
+      {
+        "rank": 113,
+        "feature_id": 87,
+        "feature": "UG_BLACKNH",
+        "mean_rank": 108.0,
+        "rank_std": 10.099504938362077
+      },
+      {
+        "rank": 114,
+        "feature_id": 113,
+        "feature": "poverty_rate",
+        "mean_rank": 108.0,
+        "rank_std": 4.301162633521313
+      },
+      {
+        "rank": 115,
+        "feature_id": 116,
+        "feature": "unemp_rate",
+        "mean_rank": 109.4,
+        "rank_std": 6.465291950097845
+      },
+      {
+        "rank": 116,
+        "feature_id": 79,
+        "feature": "UGDS_HISPOld",
+        "mean_rank": 115.6,
+        "rank_std": 1.140175425099138
+      },
+      {
+        "rank": 117,
+        "feature_id": 58,
+        "feature": "PFTFAC",
+        "mean_rank": 115.8,
+        "rank_std": 2.387467277262665
+      },
+      {
+        "rank": 118,
+        "feature_id": 10,
+        "feature": "COSTT4_A",
+        "mean_rank": 116.8,
+        "rank_std": 1.7888543819998317
+      }
+    ]
+  }
+}

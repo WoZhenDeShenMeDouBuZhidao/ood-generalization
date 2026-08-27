@@ -1,0 +1,133 @@
+{
+  "benchmark": "whyshift",
+  "dataset": "taxi",
+  "model": "gpt-5.4",
+  "method": "seq",
+  "temperature": 0.0,
+  "created_at": "2026-06-09T19:08:17",
+  "token_usage": {
+    "num_calls": 7,
+    "input_tokens": 3282,
+    "output_tokens": 518,
+    "total_tokens": 3800
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 5,
+        "feature": "distance",
+        "rationale": "Trip distance is the most domain-stable, causally relevant signal for taxi outcomes on WhyShift taxi, capturing core trip magnitude rather than calendar-specific or domain-identifying patterns. It should generalize better across temporal/domain shifts than month, week, hour, or minute features, and is less brittle than direction."
+      },
+      {
+        "rank": 2,
+        "feature_id": 3,
+        "feature": "hour",
+        "rationale": "Hour of day adds strong, semantically stable signal for taxi outcomes beyond distance because traffic, congestion, and demand vary predictably by time-of-day across domains. It is generally more robust than week/month identifiers, less redundant than minute-of-the-day, and less likely than direction to encode location-specific or domain-specific artifacts."
+      },
+      {
+        "rank": 3,
+        "feature_id": 2,
+        "feature": "weekday",
+        "rationale": "Day-of-week adds stable demand and traffic-pattern signal beyond distance and hour, and is less likely than month or week to encode domain shifts tied to season or collection period. It is also more robust and semantically meaningful than minute-level timing or direction, which can be brittle across environments."
+      },
+      {
+        "rank": 4,
+        "feature_id": 6,
+        "feature": "direction",
+        "rationale": "Direction adds route-structure information beyond distance and pickup time, and should remain semantically predictive across domains because fares/trip duration depend on origin-destination geometry and traffic corridors. It is less likely than month/week to encode domain shifts or seasonal identifiers, and minute_oftheday is largely redundant with hour."
+      },
+      {
+        "rank": 5,
+        "feature_id": 4,
+        "feature": "minute_oftheday",
+        "rationale": "Adds finer-grained within-day traffic variation beyond hour while remaining causally tied to travel time; it is more stably predictive than month or week, which are more likely to act as domain/time-period identifiers and capture seasonal or benchmark-specific shifts."
+      },
+      {
+        "rank": 6,
+        "feature_id": 0,
+        "feature": "month",
+        "rationale": "Month adds coarse seasonal signal that can stably affect taxi demand, traffic, and trip patterns beyond distance and time-of-week features, while being less domain-specific and less brittle than week-of-year, which more strongly encodes calendar position and potential split-specific artifacts."
+      },
+      {
+        "rank": 7,
+        "feature_id": 1,
+        "feature": "week",
+        "rationale": "Week-of-year may add limited residual seasonal signal beyond month, capturing recurring demand patterns like holidays and weather-related periods. Its marginal value is modest because month already covers most stable seasonality, but it is the only remaining candidate and is less problematic than location or demographic shortcut features."
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "step": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"month\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup month.\",\n    \"values\": \"1-12.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"week\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup week of year.\",\n    \"values\": \"1-53.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"weekday\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup day of week.\",\n    \"values\": \"0-6.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"hour\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup hour of day.\",\n    \"values\": \"0-23.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"minute_oftheday\",\n    \"type\": \"integer\",\n    \"description\": \"Pickup time represented as minutes since midnight.\",\n    \"values\": \"0-1439.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"distance\",\n    \"type\": \"continuous\",\n    \"description\": \"Trip distance derived from pickup/dropoff locations.\",\n    \"values\": \"Non-negative distance.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"direction\",\n    \"type\": \"continuous\",\n    \"description\": \"Trip travel direction or bearing.\",\n    \"values\": \"Angular direction in degrees.\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":5,\"rationale\":\"Trip distance is the most domain-stable, causally relevant signal for taxi outcomes on WhyShift taxi, capturing core trip magnitude rather than calendar-specific or domain-identifying patterns. It should generalize better across temporal/domain shifts than month, week, hour, or minute features, and is less brittle than direction.\"}",
+      "input_tokens": 554,
+      "output_tokens": 77,
+      "total_tokens": 631,
+      "response_id": "resp_07583a62dc5474ef006a27f40f6468819aba4ab63cb80b45de",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "step": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 5,\n    \"feature\": \"distance\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"month\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup month.\",\n    \"values\": \"1-12.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"week\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup week of year.\",\n    \"values\": \"1-53.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"weekday\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup day of week.\",\n    \"values\": \"0-6.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"hour\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup hour of day.\",\n    \"values\": \"0-23.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"minute_oftheday\",\n    \"type\": \"integer\",\n    \"description\": \"Pickup time represented as minutes since midnight.\",\n    \"values\": \"0-1439.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"direction\",\n    \"type\": \"continuous\",\n    \"description\": \"Trip travel direction or bearing.\",\n    \"values\": \"Angular direction in degrees.\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\n  \"selected_feature_id\": 3,\n  \"rationale\": \"Hour of day adds strong, semantically stable signal for taxi outcomes beyond distance because traffic, congestion, and demand vary predictably by time-of-day across domains. It is generally more robust than week/month identifiers, less redundant than minute-of-the-day, and less likely than direction to encode location-specific or domain-specific artifacts.\"\n}",
+      "input_tokens": 525,
+      "output_tokens": 85,
+      "total_tokens": 610,
+      "response_id": "resp_0eb52fc6b70c3c9a006a27f411ec688199b38839bcba89499d",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "step": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 5,\n    \"feature\": \"distance\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"hour\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"month\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup month.\",\n    \"values\": \"1-12.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"week\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup week of year.\",\n    \"values\": \"1-53.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"weekday\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup day of week.\",\n    \"values\": \"0-6.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"minute_oftheday\",\n    \"type\": \"integer\",\n    \"description\": \"Pickup time represented as minutes since midnight.\",\n    \"values\": \"0-1439.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"direction\",\n    \"type\": \"continuous\",\n    \"description\": \"Trip travel direction or bearing.\",\n    \"values\": \"Angular direction in degrees.\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\n  \"selected_feature_id\": 2,\n  \"rationale\": \"Day-of-week adds stable demand and traffic-pattern signal beyond distance and hour, and is less likely than month or week to encode domain shifts tied to season or collection period. It is also more robust and semantically meaningful than minute-level timing or direction, which can be brittle across environments.\"\n}",
+      "input_tokens": 497,
+      "output_tokens": 78,
+      "total_tokens": 575,
+      "response_id": "resp_097d5d9bfa24c7b8006a27f414560c8199bdaeca9d6eb8eed4",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "step": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 5,\n    \"feature\": \"distance\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"hour\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"weekday\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"month\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup month.\",\n    \"values\": \"1-12.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"week\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup week of year.\",\n    \"values\": \"1-53.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"minute_oftheday\",\n    \"type\": \"integer\",\n    \"description\": \"Pickup time represented as minutes since midnight.\",\n    \"values\": \"0-1439.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"direction\",\n    \"type\": \"continuous\",\n    \"description\": \"Trip travel direction or bearing.\",\n    \"values\": \"Angular direction in degrees.\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":6,\"rationale\":\"Direction adds route-structure information beyond distance and pickup time, and should remain semantically predictive across domains because fares/trip duration depend on origin-destination geometry and traffic corridors. It is less likely than month/week to encode domain shifts or seasonal identifiers, and minute_oftheday is largely redundant with hour.\"}",
+      "input_tokens": 469,
+      "output_tokens": 77,
+      "total_tokens": 546,
+      "response_id": "resp_0935572ab1fddf5d006a27f416936c819a88701d6bb741eab5",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "step": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 5,\n    \"feature\": \"distance\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"hour\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"weekday\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"direction\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"month\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup month.\",\n    \"values\": \"1-12.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"week\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup week of year.\",\n    \"values\": \"1-53.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"minute_oftheday\",\n    \"type\": \"integer\",\n    \"description\": \"Pickup time represented as minutes since midnight.\",\n    \"values\": \"0-1439.\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":4,\"rationale\":\"Adds finer-grained within-day traffic variation beyond hour while remaining causally tied to travel time; it is more stably predictive than month or week, which are more likely to act as domain/time-period identifiers and capture seasonal or benchmark-specific shifts.\"}",
+      "input_tokens": 441,
+      "output_tokens": 64,
+      "total_tokens": 505,
+      "response_id": "resp_00eaa8feb2b0d633006a27f418daa4819a869c1c9b53ae587b",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "step": 6,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 5,\n    \"feature\": \"distance\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"hour\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"weekday\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"direction\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"minute_oftheday\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"month\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup month.\",\n    \"values\": \"1-12.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"week\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup week of year.\",\n    \"values\": \"1-53.\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":0,\"rationale\":\"Month adds coarse seasonal signal that can stably affect taxi demand, traffic, and trip patterns beyond distance and time-of-week features, while being less domain-specific and less brittle than week-of-year, which more strongly encodes calendar position and potential split-specific artifacts.\"}",
+      "input_tokens": 411,
+      "output_tokens": 67,
+      "total_tokens": 478,
+      "response_id": "resp_063874afa953bbd3006a27f41ae36c819ab3664397892621c9",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "step": 7,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 5,\n    \"feature\": \"distance\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"hour\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"weekday\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"direction\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"minute_oftheday\"\n  },\n  {\n    \"feature_id\": 0,\n    \"feature\": \"month\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 1,\n    \"feature\": \"week\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup week of year.\",\n    \"values\": \"1-53.\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":1,\"rationale\":\"Week-of-year may add limited residual seasonal signal beyond month, capturing recurring demand patterns like holidays and weather-related periods. Its marginal value is modest because month already covers most stable seasonality, but it is the only remaining candidate and is less problematic than location or demographic shortcut features.\"}",
+      "input_tokens": 385,
+      "output_tokens": 70,
+      "total_tokens": 455,
+      "response_id": "resp_0057b7d8ee7e02ae006a27f41d3d5c819b98eb8a91b5597aaf",
+      "response_model": "gpt-5.4-2026-03-05"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/whyshift/taxi/rankings/seq_prompt.txt"
+}

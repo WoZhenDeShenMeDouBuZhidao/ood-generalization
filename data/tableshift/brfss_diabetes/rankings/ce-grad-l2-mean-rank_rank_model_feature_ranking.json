@@ -1,0 +1,1023 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "brfss_diabetes",
+  "model": "ce-grad-l2-mean-rank",
+  "method": "rank",
+  "feature_space": "model",
+  "created_at": "2026-08-13T00:12:53",
+  "aggregation": {
+    "name": "mean_rank",
+    "per_repeat_ranking": "ordinal_descending",
+    "tie_break": "model_feature_order",
+    "repeat_count": 5,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 14,
+        "feature": "CHOL_CHK_PAST_5_YEARS_40",
+        "mean_rank": 2.2,
+        "rank_std": 1.0954451150103321
+      },
+      {
+        "rank": 2,
+        "feature_id": 1,
+        "feature": "BMI5CAT_10",
+        "mean_rank": 3.0,
+        "rank_std": 1.8708286933869707
+      },
+      {
+        "rank": 3,
+        "feature_id": 55,
+        "feature": "MARITAL_nan",
+        "mean_rank": 5.0,
+        "rank_std": 4.527692569068709
+      },
+      {
+        "rank": 4,
+        "feature_id": 82,
+        "feature": "STATE_150",
+        "mean_rank": 5.6,
+        "rank_std": 2.701851217221259
+      },
+      {
+        "rank": 5,
+        "feature_id": 8,
+        "feature": "CHECKUP1_40",
+        "mean_rank": 6.8,
+        "rank_std": 2.3874672772626644
+      },
+      {
+        "rank": 6,
+        "feature_id": 26,
+        "feature": "EDUCA_nan",
+        "mean_rank": 8.4,
+        "rank_std": 11.058933040759403
+      },
+      {
+        "rank": 7,
+        "feature_id": 66,
+        "feature": "RFBING5_nan",
+        "mean_rank": 8.8,
+        "rank_std": 3.1144823004794873
+      },
+      {
+        "rank": 8,
+        "feature_id": 96,
+        "feature": "STATE_280",
+        "mean_rank": 10.6,
+        "rank_std": 4.722287581247038
+      },
+      {
+        "rank": 9,
+        "feature_id": 135,
+        "feature": "TOLDHI_NOTASKED_MISSING",
+        "mean_rank": 10.8,
+        "rank_std": 6.058052492344384
+      },
+      {
+        "rank": 10,
+        "feature_id": 31,
+        "feature": "HEALTH_COV_20",
+        "mean_rank": 12.0,
+        "rank_std": 6.0
+      },
+      {
+        "rank": 11,
+        "feature_id": 83,
+        "feature": "STATE_160",
+        "mean_rank": 12.2,
+        "rank_std": 7.694153624668537
+      },
+      {
+        "rank": 12,
+        "feature_id": 21,
+        "feature": "EDUCA_20",
+        "mean_rank": 14.0,
+        "rank_std": 6.244997998398398
+      },
+      {
+        "rank": 13,
+        "feature_id": 79,
+        "feature": "STATE_110",
+        "mean_rank": 16.0,
+        "rank_std": 6.819090848492928
+      },
+      {
+        "rank": 14,
+        "feature_id": 33,
+        "feature": "HIGH_BLOOD_PRESS_10",
+        "mean_rank": 17.8,
+        "rank_std": 8.228000972289685
+      },
+      {
+        "rank": 15,
+        "feature_id": 126,
+        "feature": "STATE_660",
+        "mean_rank": 19.0,
+        "rank_std": 10.700467279516348
+      },
+      {
+        "rank": 16,
+        "feature_id": 124,
+        "feature": "STATE_560",
+        "mean_rank": 19.6,
+        "rank_std": 9.154233993076646
+      },
+      {
+        "rank": 17,
+        "feature_id": 112,
+        "feature": "STATE_440",
+        "mean_rank": 21.0,
+        "rank_std": 5.0990195135927845
+      },
+      {
+        "rank": 18,
+        "feature_id": 7,
+        "feature": "CHECKUP1_30",
+        "mean_rank": 21.6,
+        "rank_std": 8.905054744357274
+      },
+      {
+        "rank": 19,
+        "feature_id": 119,
+        "feature": "STATE_500",
+        "mean_rank": 21.6,
+        "rank_std": 14.536161804272819
+      },
+      {
+        "rank": 20,
+        "feature_id": 0,
+        "feature": "BMI5",
+        "mean_rank": 23.0,
+        "rank_std": 6.670832032063167
+      },
+      {
+        "rank": 21,
+        "feature_id": 76,
+        "feature": "SMOKE100_nan",
+        "mean_rank": 25.2,
+        "rank_std": 15.626899884494046
+      },
+      {
+        "rank": 22,
+        "feature_id": 5,
+        "feature": "CHECKUP1_10",
+        "mean_rank": 26.0,
+        "rank_std": 13.019216566291536
+      },
+      {
+        "rank": 23,
+        "feature_id": 131,
+        "feature": "TOLDHI_10",
+        "mean_rank": 27.8,
+        "rank_std": 9.859006035092989
+      },
+      {
+        "rank": 24,
+        "feature_id": 19,
+        "feature": "DRNK_PER_WEEK",
+        "mean_rank": 28.8,
+        "rank_std": 10.183319694480774
+      },
+      {
+        "rank": 25,
+        "feature_id": 34,
+        "feature": "HIGH_BLOOD_PRESS_20",
+        "mean_rank": 31.0,
+        "rank_std": 31.591137997862628
+      },
+      {
+        "rank": 26,
+        "feature_id": 46,
+        "feature": "INCOME_90",
+        "mean_rank": 32.0,
+        "rank_std": 22.814469093099667
+      },
+      {
+        "rank": 27,
+        "feature_id": 61,
+        "feature": "MICHD_20",
+        "mean_rank": 33.6,
+        "rank_std": 19.0473095212946
+      },
+      {
+        "rank": 28,
+        "feature_id": 45,
+        "feature": "INCOME_80",
+        "mean_rank": 34.6,
+        "rank_std": 10.78424777163433
+      },
+      {
+        "rank": 29,
+        "feature_id": 6,
+        "feature": "CHECKUP1_20",
+        "mean_rank": 35.6,
+        "rank_std": 20.255863348670182
+      },
+      {
+        "rank": 30,
+        "feature_id": 67,
+        "feature": "SEX",
+        "mean_rank": 36.2,
+        "rank_std": 5.449770637375485
+      },
+      {
+        "rank": 31,
+        "feature_id": 57,
+        "feature": "MEDCOST_20",
+        "mean_rank": 39.6,
+        "rank_std": 11.058933040759403
+      },
+      {
+        "rank": 32,
+        "feature_id": 91,
+        "feature": "STATE_230",
+        "mean_rank": 41.6,
+        "rank_std": 14.51895313030523
+      },
+      {
+        "rank": 33,
+        "feature_id": 18,
+        "feature": "CVDSTRK3_nan",
+        "mean_rank": 41.8,
+        "rank_std": 20.68090907092819
+      },
+      {
+        "rank": 34,
+        "feature_id": 63,
+        "feature": "PHYSHLTH",
+        "mean_rank": 43.8,
+        "rank_std": 9.984988733093292
+      },
+      {
+        "rank": 35,
+        "feature_id": 58,
+        "feature": "MEDCOST_nan",
+        "mean_rank": 44.4,
+        "rank_std": 25.095816384409574
+      },
+      {
+        "rank": 36,
+        "feature_id": 32,
+        "feature": "HEALTH_COV_90",
+        "mean_rank": 44.6,
+        "rank_std": 13.427583550289306
+      },
+      {
+        "rank": 37,
+        "feature_id": 60,
+        "feature": "MICHD_10",
+        "mean_rank": 44.6,
+        "rank_std": 35.78826623350173
+      },
+      {
+        "rank": 38,
+        "feature_id": 123,
+        "feature": "STATE_550",
+        "mean_rank": 44.8,
+        "rank_std": 10.756393447619885
+      },
+      {
+        "rank": 39,
+        "feature_id": 39,
+        "feature": "INCOME_20",
+        "mean_rank": 45.2,
+        "rank_std": 28.04817284601619
+      },
+      {
+        "rank": 40,
+        "feature_id": 101,
+        "feature": "STATE_330",
+        "mean_rank": 45.4,
+        "rank_std": 20.95948472649077
+      },
+      {
+        "rank": 41,
+        "feature_id": 11,
+        "feature": "CHOL_CHK_PAST_5_YEARS_10",
+        "mean_rank": 47.6,
+        "rank_std": 17.91089054179049
+      },
+      {
+        "rank": 42,
+        "feature_id": 25,
+        "feature": "EDUCA_60",
+        "mean_rank": 51.0,
+        "rank_std": 23.021728866442675
+      },
+      {
+        "rank": 43,
+        "feature_id": 98,
+        "feature": "STATE_300",
+        "mean_rank": 52.6,
+        "rank_std": 24.04786892845185
+      },
+      {
+        "rank": 44,
+        "feature_id": 44,
+        "feature": "INCOME_70",
+        "mean_rank": 54.0,
+        "rank_std": 15.7797338380595
+      },
+      {
+        "rank": 45,
+        "feature_id": 132,
+        "feature": "TOLDHI_20",
+        "mean_rank": 54.2,
+        "rank_std": 14.096098751072937
+      },
+      {
+        "rank": 46,
+        "feature_id": 94,
+        "feature": "STATE_260",
+        "mean_rank": 54.8,
+        "rank_std": 27.298351598585583
+      },
+      {
+        "rank": 47,
+        "feature_id": 13,
+        "feature": "CHOL_CHK_PAST_5_YEARS_30",
+        "mean_rank": 55.4,
+        "rank_std": 35.57808314116993
+      },
+      {
+        "rank": 48,
+        "feature_id": 86,
+        "feature": "STATE_190",
+        "mean_rank": 55.8,
+        "rank_std": 25.645662401271682
+      },
+      {
+        "rank": 49,
+        "feature_id": 15,
+        "feature": "CHOL_CHK_PAST_5_YEARS_nan",
+        "mean_rank": 56.8,
+        "rank_std": 31.40382142351469
+      },
+      {
+        "rank": 50,
+        "feature_id": 103,
+        "feature": "STATE_350",
+        "mean_rank": 57.8,
+        "rank_std": 34.03968272472586
+      },
+      {
+        "rank": 51,
+        "feature_id": 52,
+        "feature": "MARITAL_40",
+        "mean_rank": 59.8,
+        "rank_std": 24.51938009004306
+      },
+      {
+        "rank": 52,
+        "feature_id": 16,
+        "feature": "CVDSTRK3_10",
+        "mean_rank": 60.0,
+        "rank_std": 52.49761899362675
+      },
+      {
+        "rank": 53,
+        "feature_id": 92,
+        "feature": "STATE_240",
+        "mean_rank": 63.6,
+        "rank_std": 17.4441967427566
+      },
+      {
+        "rank": 54,
+        "feature_id": 93,
+        "feature": "STATE_250",
+        "mean_rank": 64.2,
+        "rank_std": 30.719700519373557
+      },
+      {
+        "rank": 55,
+        "feature_id": 36,
+        "feature": "INCOME_10",
+        "mean_rank": 64.6,
+        "rank_std": 28.83227358360766
+      },
+      {
+        "rank": 56,
+        "feature_id": 118,
+        "feature": "STATE_50",
+        "mean_rank": 64.6,
+        "rank_std": 33.70904923013997
+      },
+      {
+        "rank": 57,
+        "feature_id": 4,
+        "feature": "BMI5CAT_40",
+        "mean_rank": 65.2,
+        "rank_std": 26.517918470347556
+      },
+      {
+        "rank": 58,
+        "feature_id": 90,
+        "feature": "STATE_220",
+        "mean_rank": 66.4,
+        "rank_std": 17.515707236649053
+      },
+      {
+        "rank": 59,
+        "feature_id": 87,
+        "feature": "STATE_20",
+        "mean_rank": 67.2,
+        "rank_std": 31.58638947394906
+      },
+      {
+        "rank": 60,
+        "feature_id": 69,
+        "feature": "SMOKDAY2_20",
+        "mean_rank": 68.2,
+        "rank_std": 17.82414093301554
+      },
+      {
+        "rank": 61,
+        "feature_id": 37,
+        "feature": "INCOME_100",
+        "mean_rank": 69.2,
+        "rank_std": 12.911235417263523
+      },
+      {
+        "rank": 62,
+        "feature_id": 113,
+        "feature": "STATE_450",
+        "mean_rank": 70.2,
+        "rank_std": 33.16926287996162
+      },
+      {
+        "rank": 63,
+        "feature_id": 139,
+        "feature": "VEG_ONCE_PER_DAY_10",
+        "mean_rank": 71.2,
+        "rank_std": 15.385057685949704
+      },
+      {
+        "rank": 64,
+        "feature_id": 109,
+        "feature": "STATE_400",
+        "mean_rank": 72.2,
+        "rank_std": 12.19426094521517
+      },
+      {
+        "rank": 65,
+        "feature_id": 27,
+        "feature": "FRUIT_ONCE_PER_DAY_10",
+        "mean_rank": 74.0,
+        "rank_std": 21.94310825749169
+      },
+      {
+        "rank": 66,
+        "feature_id": 141,
+        "feature": "VEG_ONCE_PER_DAY_nan",
+        "mean_rank": 74.2,
+        "rank_std": 23.552069972722144
+      },
+      {
+        "rank": 67,
+        "feature_id": 106,
+        "feature": "STATE_380",
+        "mean_rank": 75.8,
+        "rank_std": 28.621670111997307
+      },
+      {
+        "rank": 68,
+        "feature_id": 12,
+        "feature": "CHOL_CHK_PAST_5_YEARS_20",
+        "mean_rank": 76.6,
+        "rank_std": 18.568791021496256
+      },
+      {
+        "rank": 69,
+        "feature_id": 89,
+        "feature": "STATE_210",
+        "mean_rank": 77.2,
+        "rank_std": 31.94839589087377
+      },
+      {
+        "rank": 70,
+        "feature_id": 136,
+        "feature": "TOTINDA_10",
+        "mean_rank": 78.0,
+        "rank_std": 36.39368077015569
+      },
+      {
+        "rank": 71,
+        "feature_id": 102,
+        "feature": "STATE_340",
+        "mean_rank": 78.4,
+        "rank_std": 31.165686259089497
+      },
+      {
+        "rank": 72,
+        "feature_id": 84,
+        "feature": "STATE_170",
+        "mean_rank": 79.0,
+        "rank_std": 31.567388235329194
+      },
+      {
+        "rank": 73,
+        "feature_id": 2,
+        "feature": "BMI5CAT_20",
+        "mean_rank": 79.4,
+        "rank_std": 27.07951255100431
+      },
+      {
+        "rank": 74,
+        "feature_id": 108,
+        "feature": "STATE_40",
+        "mean_rank": 79.8,
+        "rank_std": 15.594870951694341
+      },
+      {
+        "rank": 75,
+        "feature_id": 17,
+        "feature": "CVDSTRK3_20",
+        "mean_rank": 80.0,
+        "rank_std": 35.035696082709705
+      },
+      {
+        "rank": 76,
+        "feature_id": 20,
+        "feature": "EDUCA_10",
+        "mean_rank": 80.2,
+        "rank_std": 28.01249721106635
+      },
+      {
+        "rank": 77,
+        "feature_id": 128,
+        "feature": "STATE_780",
+        "mean_rank": 80.6,
+        "rank_std": 14.842506526863986
+      },
+      {
+        "rank": 78,
+        "feature_id": 65,
+        "feature": "RFBING5_20",
+        "mean_rank": 81.0,
+        "rank_std": 19.761072845369505
+      },
+      {
+        "rank": 79,
+        "feature_id": 30,
+        "feature": "HEALTH_COV_10",
+        "mean_rank": 81.2,
+        "rank_std": 46.70331893987836
+      },
+      {
+        "rank": 80,
+        "feature_id": 56,
+        "feature": "MEDCOST_10",
+        "mean_rank": 82.6,
+        "rank_std": 30.794480024835618
+      },
+      {
+        "rank": 81,
+        "feature_id": 127,
+        "feature": "STATE_720",
+        "mean_rank": 82.6,
+        "rank_std": 25.5401644473954
+      },
+      {
+        "rank": 82,
+        "feature_id": 35,
+        "feature": "HIGH_BLOOD_PRESS_nan",
+        "mean_rank": 82.8,
+        "rank_std": 37.28538587704303
+      },
+      {
+        "rank": 83,
+        "feature_id": 54,
+        "feature": "MARITAL_60",
+        "mean_rank": 82.8,
+        "rank_std": 31.704889212864316
+      },
+      {
+        "rank": 84,
+        "feature_id": 47,
+        "feature": "INCOME_nan",
+        "mean_rank": 84.4,
+        "rank_std": 36.459566645806426
+      },
+      {
+        "rank": 85,
+        "feature_id": 64,
+        "feature": "RFBING5_10",
+        "mean_rank": 86.0,
+        "rank_std": 48.08326112068523
+      },
+      {
+        "rank": 86,
+        "feature_id": 134,
+        "feature": "TOLDHI_90",
+        "mean_rank": 86.2,
+        "rank_std": 36.341436405293614
+      },
+      {
+        "rank": 87,
+        "feature_id": 114,
+        "feature": "STATE_460",
+        "mean_rank": 86.4,
+        "rank_std": 19.2171798139061
+      },
+      {
+        "rank": 88,
+        "feature_id": 77,
+        "feature": "STATE_10",
+        "mean_rank": 86.6,
+        "rank_std": 30.45160094313598
+      },
+      {
+        "rank": 89,
+        "feature_id": 78,
+        "feature": "STATE_100",
+        "mean_rank": 87.2,
+        "rank_std": 39.58787693221247
+      },
+      {
+        "rank": 90,
+        "feature_id": 49,
+        "feature": "MARITAL_10",
+        "mean_rank": 88.6,
+        "rank_std": 32.1294257651767
+      },
+      {
+        "rank": 91,
+        "feature_id": 40,
+        "feature": "INCOME_30",
+        "mean_rank": 89.4,
+        "rank_std": 32.723080539582455
+      },
+      {
+        "rank": 92,
+        "feature_id": 72,
+        "feature": "SMOKDAY2_90",
+        "mean_rank": 89.8,
+        "rank_std": 22.027255843613386
+      },
+      {
+        "rank": 93,
+        "feature_id": 62,
+        "feature": "MICHD_nan",
+        "mean_rank": 90.2,
+        "rank_std": 31.324112118302732
+      },
+      {
+        "rank": 94,
+        "feature_id": 23,
+        "feature": "EDUCA_40",
+        "mean_rank": 92.4,
+        "rank_std": 35.9972221150466
+      },
+      {
+        "rank": 95,
+        "feature_id": 41,
+        "feature": "INCOME_40",
+        "mean_rank": 93.0,
+        "rank_std": 30.20761493398643
+      },
+      {
+        "rank": 96,
+        "feature_id": 71,
+        "feature": "SMOKDAY2_70",
+        "mean_rank": 93.2,
+        "rank_std": 31.356020155625618
+      },
+      {
+        "rank": 97,
+        "feature_id": 42,
+        "feature": "INCOME_50",
+        "mean_rank": 93.6,
+        "rank_std": 25.549951076274102
+      },
+      {
+        "rank": 98,
+        "feature_id": 73,
+        "feature": "SMOKDAY2_NOTASKED_MISSING",
+        "mean_rank": 94.6,
+        "rank_std": 38.03025111670971
+      },
+      {
+        "rank": 99,
+        "feature_id": 104,
+        "feature": "STATE_360",
+        "mean_rank": 94.8,
+        "rank_std": 26.166772823563857
+      },
+      {
+        "rank": 100,
+        "feature_id": 116,
+        "feature": "STATE_480",
+        "mean_rank": 95.0,
+        "rank_std": 27.7758888246623
+      },
+      {
+        "rank": 101,
+        "feature_id": 129,
+        "feature": "STATE_80",
+        "mean_rank": 95.2,
+        "rank_std": 15.84929020492716
+      },
+      {
+        "rank": 102,
+        "feature_id": 10,
+        "feature": "CHECKUP1_nan",
+        "mean_rank": 96.4,
+        "rank_std": 20.255863348670182
+      },
+      {
+        "rank": 103,
+        "feature_id": 111,
+        "feature": "STATE_420",
+        "mean_rank": 97.4,
+        "rank_std": 17.03819239238717
+      },
+      {
+        "rank": 104,
+        "feature_id": 138,
+        "feature": "TOTINDA_nan",
+        "mean_rank": 97.6,
+        "rank_std": 33.73129111077724
+      },
+      {
+        "rank": 105,
+        "feature_id": 29,
+        "feature": "FRUIT_ONCE_PER_DAY_nan",
+        "mean_rank": 97.8,
+        "rank_std": 15.84929020492716
+      },
+      {
+        "rank": 106,
+        "feature_id": 75,
+        "feature": "SMOKE100_20",
+        "mean_rank": 97.8,
+        "rank_std": 39.70768187643293
+      },
+      {
+        "rank": 107,
+        "feature_id": 38,
+        "feature": "INCOME_110",
+        "mean_rank": 98.2,
+        "rank_std": 33.01817681217423
+      },
+      {
+        "rank": 108,
+        "feature_id": 117,
+        "feature": "STATE_490",
+        "mean_rank": 99.6,
+        "rank_std": 23.596609926004202
+      },
+      {
+        "rank": 109,
+        "feature_id": 97,
+        "feature": "STATE_290",
+        "mean_rank": 100.0,
+        "rank_std": 16.47725705328408
+      },
+      {
+        "rank": 110,
+        "feature_id": 50,
+        "feature": "MARITAL_20",
+        "mean_rank": 103.6,
+        "rank_std": 36.44585024388922
+      },
+      {
+        "rank": 111,
+        "feature_id": 130,
+        "feature": "STATE_90",
+        "mean_rank": 104.0,
+        "rank_std": 20.074859899884732
+      },
+      {
+        "rank": 112,
+        "feature_id": 121,
+        "feature": "STATE_530",
+        "mean_rank": 104.6,
+        "rank_std": 34.56587912956938
+      },
+      {
+        "rank": 113,
+        "feature_id": 122,
+        "feature": "STATE_540",
+        "mean_rank": 108.4,
+        "rank_std": 21.605554841290235
+      },
+      {
+        "rank": 114,
+        "feature_id": 133,
+        "feature": "TOLDHI_70",
+        "mean_rank": 108.4,
+        "rank_std": 22.711230702011726
+      },
+      {
+        "rank": 115,
+        "feature_id": 9,
+        "feature": "CHECKUP1_80",
+        "mean_rank": 108.8,
+        "rank_std": 19.753480705941424
+      },
+      {
+        "rank": 116,
+        "feature_id": 70,
+        "feature": "SMOKDAY2_30",
+        "mean_rank": 108.8,
+        "rank_std": 21.68409555411523
+      },
+      {
+        "rank": 117,
+        "feature_id": 88,
+        "feature": "STATE_200",
+        "mean_rank": 108.8,
+        "rank_std": 26.715164233071825
+      },
+      {
+        "rank": 118,
+        "feature_id": 115,
+        "feature": "STATE_470",
+        "mean_rank": 108.8,
+        "rank_std": 20.873428084528904
+      },
+      {
+        "rank": 119,
+        "feature_id": 81,
+        "feature": "STATE_130",
+        "mean_rank": 109.4,
+        "rank_std": 14.38054240979804
+      },
+      {
+        "rank": 120,
+        "feature_id": 120,
+        "feature": "STATE_510",
+        "mean_rank": 109.6,
+        "rank_std": 31.309742892588563
+      },
+      {
+        "rank": 121,
+        "feature_id": 137,
+        "feature": "TOTINDA_20",
+        "mean_rank": 110.2,
+        "rank_std": 13.917614738165444
+      },
+      {
+        "rank": 122,
+        "feature_id": 140,
+        "feature": "VEG_ONCE_PER_DAY_20",
+        "mean_rank": 111.6,
+        "rank_std": 23.985412233272125
+      },
+      {
+        "rank": 123,
+        "feature_id": 68,
+        "feature": "SMOKDAY2_10",
+        "mean_rank": 111.8,
+        "rank_std": 17.108477430794363
+      },
+      {
+        "rank": 124,
+        "feature_id": 51,
+        "feature": "MARITAL_30",
+        "mean_rank": 113.0,
+        "rank_std": 20.0124960961895
+      },
+      {
+        "rank": 125,
+        "feature_id": 3,
+        "feature": "BMI5CAT_30",
+        "mean_rank": 113.2,
+        "rank_std": 16.300306745579974
+      },
+      {
+        "rank": 126,
+        "feature_id": 105,
+        "feature": "STATE_370",
+        "mean_rank": 113.8,
+        "rank_std": 21.568495543268657
+      },
+      {
+        "rank": 127,
+        "feature_id": 100,
+        "feature": "STATE_320",
+        "mean_rank": 114.6,
+        "rank_std": 32.56992477731565
+      },
+      {
+        "rank": 128,
+        "feature_id": 80,
+        "feature": "STATE_120",
+        "mean_rank": 116.0,
+        "rank_std": 16.186414056238647
+      },
+      {
+        "rank": 129,
+        "feature_id": 95,
+        "feature": "STATE_270",
+        "mean_rank": 116.0,
+        "rank_std": 34.583232931581165
+      },
+      {
+        "rank": 130,
+        "feature_id": 110,
+        "feature": "STATE_410",
+        "mean_rank": 116.0,
+        "rank_std": 17.52141546793523
+      },
+      {
+        "rank": 131,
+        "feature_id": 99,
+        "feature": "STATE_310",
+        "mean_rank": 116.8,
+        "rank_std": 25.723530084341068
+      },
+      {
+        "rank": 132,
+        "feature_id": 22,
+        "feature": "EDUCA_30",
+        "mean_rank": 117.0,
+        "rank_std": 21.330729007701542
+      },
+      {
+        "rank": 133,
+        "feature_id": 107,
+        "feature": "STATE_390",
+        "mean_rank": 117.0,
+        "rank_std": 34.08812109811862
+      },
+      {
+        "rank": 134,
+        "feature_id": 48,
+        "feature": "IYEAR",
+        "mean_rank": 117.4,
+        "rank_std": 30.212580161250713
+      },
+      {
+        "rank": 135,
+        "feature_id": 53,
+        "feature": "MARITAL_50",
+        "mean_rank": 119.0,
+        "rank_std": 22.304708023195463
+      },
+      {
+        "rank": 136,
+        "feature_id": 85,
+        "feature": "STATE_180",
+        "mean_rank": 119.0,
+        "rank_std": 12.349089035228468
+      },
+      {
+        "rank": 137,
+        "feature_id": 24,
+        "feature": "EDUCA_50",
+        "mean_rank": 119.8,
+        "rank_std": 13.917614738165446
+      },
+      {
+        "rank": 138,
+        "feature_id": 125,
+        "feature": "STATE_60",
+        "mean_rank": 120.0,
+        "rank_std": 20.0124960961895
+      },
+      {
+        "rank": 139,
+        "feature_id": 43,
+        "feature": "INCOME_60",
+        "mean_rank": 120.4,
+        "rank_std": 9.396807968666808
+      },
+      {
+        "rank": 140,
+        "feature_id": 59,
+        "feature": "MENTHLTH",
+        "mean_rank": 121.2,
+        "rank_std": 24.159884105682295
+      },
+      {
+        "rank": 141,
+        "feature_id": 28,
+        "feature": "FRUIT_ONCE_PER_DAY_20",
+        "mean_rank": 126.8,
+        "rank_std": 8.28854631404084
+      },
+      {
+        "rank": 142,
+        "feature_id": 74,
+        "feature": "SMOKE100_10",
+        "mean_rank": 129.4,
+        "rank_std": 11.171392035015154
+      }
+    ]
+  }
+}

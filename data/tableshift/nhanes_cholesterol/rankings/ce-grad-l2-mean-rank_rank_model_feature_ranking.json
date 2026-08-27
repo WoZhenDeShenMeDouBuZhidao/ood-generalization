@@ -1,0 +1,406 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "nhanes_cholesterol",
+  "model": "ce-grad-l2-mean-rank",
+  "method": "rank",
+  "feature_space": "model",
+  "created_at": "2026-08-13T00:12:52",
+  "aggregation": {
+    "name": "mean_rank",
+    "per_repeat_ranking": "ordinal_descending",
+    "tie_break": "model_feature_order",
+    "repeat_count": 10,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825,
+      4631,
+      14717,
+      43019,
+      20523,
+      83634
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5",
+      "ce_grad_l2_stability_extra5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 37,
+        "feature": "KIQ022_90",
+        "mean_rank": 2.0,
+        "rank_std": 2.8284271247461903
+      },
+      {
+        "rank": 2,
+        "feature_id": 7,
+        "feature": "DIQ010_90",
+        "mean_rank": 4.6,
+        "rank_std": 3.272783388968954
+      },
+      {
+        "rank": 3,
+        "feature_id": 24,
+        "feature": "DMDEDUC2_90",
+        "mean_rank": 7.5,
+        "rank_std": 12.331080875395942
+      },
+      {
+        "rank": 4,
+        "feature_id": 2,
+        "feature": "BPQ020_90",
+        "mean_rank": 9.2,
+        "rank_std": 13.323329580518193
+      },
+      {
+        "rank": 5,
+        "feature_id": 4,
+        "feature": "DIQ010_10",
+        "mean_rank": 10.6,
+        "rank_std": 8.002777295692066
+      },
+      {
+        "rank": 6,
+        "feature_id": 3,
+        "feature": "BPQ020_MISSING",
+        "mean_rank": 12.6,
+        "rank_std": 8.235424835563872
+      },
+      {
+        "rank": 7,
+        "feature_id": 6,
+        "feature": "DIQ010_30",
+        "mean_rank": 13.5,
+        "rank_std": 9.902300518341965
+      },
+      {
+        "rank": 8,
+        "feature_id": 32,
+        "feature": "DMDMARTL_770",
+        "mean_rank": 14.7,
+        "rank_std": 6.896859188548557
+      },
+      {
+        "rank": 9,
+        "feature_id": 50,
+        "feature": "RIAGENDR",
+        "mean_rank": 15.4,
+        "rank_std": 7.633260552782584
+      },
+      {
+        "rank": 10,
+        "feature_id": 30,
+        "feature": "DMDMARTL_50",
+        "mean_rank": 15.9,
+        "rank_std": 11.967084486670556
+      },
+      {
+        "rank": 11,
+        "feature_id": 11,
+        "feature": "DIQ160_90",
+        "mean_rank": 17.4,
+        "rank_std": 10.72069649478677
+      },
+      {
+        "rank": 12,
+        "feature_id": 25,
+        "feature": "DMDEDUC2_MISSING",
+        "mean_rank": 17.6,
+        "rank_std": 14.284412639112764
+      },
+      {
+        "rank": 13,
+        "feature_id": 49,
+        "feature": "MCQ160A_MISSING",
+        "mean_rank": 17.9,
+        "rank_std": 11.570556502510058
+      },
+      {
+        "rank": 14,
+        "feature_id": 15,
+        "feature": "DMDBORN4_770",
+        "mean_rank": 19.3,
+        "rank_std": 15.993401417112272
+      },
+      {
+        "rank": 15,
+        "feature_id": 48,
+        "feature": "MCQ160A_90",
+        "mean_rank": 20.0,
+        "rank_std": 16.29587541544042
+      },
+      {
+        "rank": 16,
+        "feature_id": 28,
+        "feature": "DMDMARTL_30",
+        "mean_rank": 20.2,
+        "rank_std": 12.550343067466768
+      },
+      {
+        "rank": 17,
+        "feature_id": 39,
+        "feature": "KIQ025_10",
+        "mean_rank": 20.4,
+        "rank_std": 10.946333734279357
+      },
+      {
+        "rank": 18,
+        "feature_id": 51,
+        "feature": "RIDAGEYR",
+        "mean_rank": 22.4,
+        "rank_std": 7.676804890925218
+      },
+      {
+        "rank": 19,
+        "feature_id": 14,
+        "feature": "DMDBORN4_20",
+        "mean_rank": 23.1,
+        "rank_std": 15.278525234240814
+      },
+      {
+        "rank": 20,
+        "feature_id": 1,
+        "feature": "BPQ020_20",
+        "mean_rank": 24.2,
+        "rank_std": 14.702985335562902
+      },
+      {
+        "rank": 21,
+        "feature_id": 41,
+        "feature": "KIQ025_MISSING",
+        "mean_rank": 24.5,
+        "rank_std": 5.380004130522991
+      },
+      {
+        "rank": 22,
+        "feature_id": 33,
+        "feature": "DMDMARTL_990",
+        "mean_rank": 24.8,
+        "rank_std": 8.403702887550358
+      },
+      {
+        "rank": 23,
+        "feature_id": 47,
+        "feature": "MCQ160A_20",
+        "mean_rank": 25.6,
+        "rank_std": 13.541705128150507
+      },
+      {
+        "rank": 24,
+        "feature_id": 40,
+        "feature": "KIQ025_20",
+        "mean_rank": 26.9,
+        "rank_std": 12.458375139283257
+      },
+      {
+        "rank": 25,
+        "feature_id": 23,
+        "feature": "DMDEDUC2_70",
+        "mean_rank": 27.2,
+        "rank_std": 10.932113753117973
+      },
+      {
+        "rank": 26,
+        "feature_id": 46,
+        "feature": "MCQ160A_10",
+        "mean_rank": 28.0,
+        "rank_std": 11.775681155103795
+      },
+      {
+        "rank": 27,
+        "feature_id": 43,
+        "feature": "MCQ070_20",
+        "mean_rank": 28.3,
+        "rank_std": 11.23536084571089
+      },
+      {
+        "rank": 28,
+        "feature_id": 19,
+        "feature": "DMDEDUC2_20",
+        "mean_rank": 29.6,
+        "rank_std": 13.209424245170146
+      },
+      {
+        "rank": 29,
+        "feature_id": 13,
+        "feature": "DMDBORN4_10",
+        "mean_rank": 29.7,
+        "rank_std": 9.06825966397816
+      },
+      {
+        "rank": 30,
+        "feature_id": 18,
+        "feature": "DMDEDUC2_10",
+        "mean_rank": 29.9,
+        "rank_std": 14.082692293102985
+      },
+      {
+        "rank": 31,
+        "feature_id": 38,
+        "feature": "KIQ022_MISSING",
+        "mean_rank": 30.5,
+        "rank_std": 15.116216457830975
+      },
+      {
+        "rank": 32,
+        "feature_id": 29,
+        "feature": "DMDMARTL_40",
+        "mean_rank": 30.8,
+        "rank_std": 15.346371268515275
+      },
+      {
+        "rank": 33,
+        "feature_id": 34,
+        "feature": "DMDMARTL_MISSING",
+        "mean_rank": 31.6,
+        "rank_std": 12.78193169195399
+      },
+      {
+        "rank": 34,
+        "feature_id": 0,
+        "feature": "BPQ020_10",
+        "mean_rank": 32.1,
+        "rank_std": 12.050357302217686
+      },
+      {
+        "rank": 35,
+        "feature_id": 5,
+        "feature": "DIQ010_20",
+        "mean_rank": 32.1,
+        "rank_std": 14.231811003679203
+      },
+      {
+        "rank": 36,
+        "feature_id": 42,
+        "feature": "MCQ070_10",
+        "mean_rank": 32.6,
+        "rank_std": 10.679159351018434
+      },
+      {
+        "rank": 37,
+        "feature_id": 9,
+        "feature": "DIQ160_10",
+        "mean_rank": 34.8,
+        "rank_std": 12.717442090818944
+      },
+      {
+        "rank": 38,
+        "feature_id": 35,
+        "feature": "KIQ022_10",
+        "mean_rank": 35.4,
+        "rank_std": 11.852800887928932
+      },
+      {
+        "rank": 39,
+        "feature_id": 22,
+        "feature": "DMDEDUC2_50",
+        "mean_rank": 36.0,
+        "rank_std": 13.457752825457566
+      },
+      {
+        "rank": 40,
+        "feature_id": 31,
+        "feature": "DMDMARTL_60",
+        "mean_rank": 36.2,
+        "rank_std": 10.315037566582102
+      },
+      {
+        "rank": 41,
+        "feature_id": 8,
+        "feature": "DIQ010_MISSING",
+        "mean_rank": 36.6,
+        "rank_std": 13.359973386533706
+      },
+      {
+        "rank": 42,
+        "feature_id": 21,
+        "feature": "DMDEDUC2_40",
+        "mean_rank": 37.1,
+        "rank_std": 9.386160024205852
+      },
+      {
+        "rank": 43,
+        "feature_id": 17,
+        "feature": "DMDBORN4_MISSING",
+        "mean_rank": 37.3,
+        "rank_std": 12.401164819842082
+      },
+      {
+        "rank": 44,
+        "feature_id": 10,
+        "feature": "DIQ160_20",
+        "mean_rank": 37.5,
+        "rank_std": 10.309111396128076
+      },
+      {
+        "rank": 45,
+        "feature_id": 44,
+        "feature": "MCQ070_90",
+        "mean_rank": 37.7,
+        "rank_std": 10.044899203078149
+      },
+      {
+        "rank": 46,
+        "feature_id": 20,
+        "feature": "DMDEDUC2_30",
+        "mean_rank": 38.2,
+        "rank_std": 11.133532932342527
+      },
+      {
+        "rank": 47,
+        "feature_id": 16,
+        "feature": "DMDBORN4_990",
+        "mean_rank": 38.5,
+        "rank_std": 9.513148795220223
+      },
+      {
+        "rank": 48,
+        "feature_id": 36,
+        "feature": "KIQ022_20",
+        "mean_rank": 39.0,
+        "rank_std": 11.055415967851333
+      },
+      {
+        "rank": 49,
+        "feature_id": 27,
+        "feature": "DMDMARTL_20",
+        "mean_rank": 39.2,
+        "rank_std": 15.324635214074245
+      },
+      {
+        "rank": 50,
+        "feature_id": 45,
+        "feature": "MCQ070_MISSING",
+        "mean_rank": 40.5,
+        "rank_std": 7.691987172809551
+      },
+      {
+        "rank": 51,
+        "feature_id": 12,
+        "feature": "DIQ160_MISSING",
+        "mean_rank": 40.7,
+        "rank_std": 8.179242018671411
+      },
+      {
+        "rank": 52,
+        "feature_id": 26,
+        "feature": "DMDMARTL_10",
+        "mean_rank": 41.0,
+        "rank_std": 8.096638534327413
+      },
+      {
+        "rank": 53,
+        "feature_id": 52,
+        "feature": "nhanes_year",
+        "mean_rank": 52.6,
+        "rank_std": 0.6992058987801011
+      }
+    ]
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "acsfoodstamps",
+  "model": "gpt-5.4-mini",
+  "method": "rank",
+  "temperature": 0.0,
+  "created_at": "2026-06-09T17:04:40",
+  "token_usage": {
+    "num_calls": 1,
+    "input_tokens": 2195,
+    "output_tokens": 1184,
+    "total_tokens": 3379
+  },
+  "response": {
+    "task_summary": "Predict whether a household/person receives food stamps in ACS data, emphasizing stable socioeconomic and household-structure signals over domain-specific shortcuts.",
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 20,
+        "rationale": "Age is a core, stable driver of SNAP eligibility and household need across domains.",
+        "feature": "AGEP"
+      },
+      {
+        "rank": 2,
+        "feature_id": 26,
+        "rationale": "Education strongly tracks long-run economic opportunity and tends to generalize well.",
+        "feature": "SCHL"
+      },
+      {
+        "rank": 3,
+        "feature_id": 3,
+        "rationale": "Number of workers in the family is a direct, portable proxy for household resources.",
+        "feature": "WIF"
+      },
+      {
+        "rank": 4,
+        "feature_id": 10,
+        "rationale": "Weeks worked captures labor-market attachment and income stability.",
+        "feature": "WKW"
+      },
+      {
+        "rank": 5,
+        "feature_id": 9,
+        "rationale": "Usual weekly hours worked is a strong, semantically meaningful income proxy.",
+        "feature": "WKHP"
+      },
+      {
+        "rank": 6,
+        "feature_id": 11,
+        "rationale": "Recent work status is highly predictive of current earnings and assistance need.",
+        "feature": "WRK"
+      },
+      {
+        "rank": 7,
+        "feature_id": 23,
+        "rationale": "Marital status affects household composition and economic resources in a fairly stable way.",
+        "feature": "MAR"
+      },
+      {
+        "rank": 8,
+        "feature_id": 2,
+        "rationale": "Presence and age of children is directly relevant to household need and benefit eligibility.",
+        "feature": "HUPAC"
+      },
+      {
+        "rank": 9,
+        "feature_id": 8,
+        "rationale": "Relationship to reference person helps infer household structure and dependency burden.",
+        "feature": "RELP"
+      },
+      {
+        "rank": 10,
+        "feature_id": 21,
+        "rationale": "Sex can correlate with labor supply and household composition, though it is a weaker proxy.",
+        "feature": "SEX"
+      },
+      {
+        "rank": 11,
+        "feature_id": 12,
+        "rationale": "Disability status is a meaningful and stable predictor of economic hardship.",
+        "feature": "DIS"
+      },
+      {
+        "rank": 12,
+        "feature_id": 19,
+        "rationale": "Public coverage reflects low-income status, but may be partly downstream and policy-linked.",
+        "feature": "PUBCOV"
+      },
+      {
+        "rank": 13,
+        "feature_id": 24,
+        "rationale": "Citizenship status can matter for eligibility and access, but is a sensitive demographic proxy.",
+        "feature": "CIT"
+      },
+      {
+        "rank": 14,
+        "feature_id": 15,
+        "rationale": "Nativity may correlate with eligibility and socioeconomic status, but is not a direct need signal.",
+        "feature": "NATIVITY"
+      },
+      {
+        "rank": 15,
+        "feature_id": 25,
+        "rationale": "Race can capture structural inequality, but is a sensitive shortcut and less causally direct.",
+        "feature": "RAC1P"
+      },
+      {
+        "rank": 16,
+        "feature_id": 22,
+        "rationale": "State can reflect policy variation and local conditions, but is a domain identifier and brittle.",
+        "feature": "ST"
+      },
+      {
+        "rank": 17,
+        "feature_id": 27,
+        "rationale": "Survey year may absorb temporal drift, but it is a strong domain marker rather than a stable cause.",
+        "feature": "ACS_YEAR"
+      },
+      {
+        "rank": 18,
+        "feature_id": 4,
+        "rationale": "Layoff status is informative about short-term hardship, though noisy and transient.",
+        "feature": "NWLA"
+      },
+      {
+        "rank": 19,
+        "feature_id": 5,
+        "rationale": "Looking for work indicates unemployment, but can be unstable and context-dependent.",
+        "feature": "NWLK"
+      },
+      {
+        "rank": 20,
+        "feature_id": 1,
+        "rationale": "Recent childbirth can affect household expenses, but it is a narrow and low-frequency signal.",
+        "feature": "FER"
+      },
+      {
+        "rank": 21,
+        "feature_id": 16,
+        "rationale": "Hearing difficulty is a disability-related proxy, but weaker than the direct disability indicator.",
+        "feature": "DEAR"
+      },
+      {
+        "rank": 22,
+        "feature_id": 17,
+        "rationale": "Vision difficulty is similarly relevant but usually secondary to broader disability status.",
+        "feature": "DEYE"
+      },
+      {
+        "rank": 23,
+        "feature_id": 18,
+        "rationale": "Cognitive difficulty matters for hardship, but overlaps with the more general disability feature.",
+        "feature": "DREM"
+      },
+      {
+        "rank": 24,
+        "feature_id": 13,
+        "rationale": "Military service is only indirectly related to food assistance need and can be cohort-specific.",
+        "feature": "MIL"
+      },
+      {
+        "rank": 25,
+        "feature_id": 14,
+        "rationale": "Ancestry is largely a demographic artifact with weak direct relevance to SNAP receipt.",
+        "feature": "ANC"
+      },
+      {
+        "rank": 26,
+        "feature_id": 7,
+        "rationale": "Place of birth is mostly a demographic descriptor and can act as a brittle shortcut.",
+        "feature": "POBP"
+      },
+      {
+        "rank": 27,
+        "feature_id": 6,
+        "rationale": "Occupation is often highly predictive but can overfit to local labor-market composition and coding.",
+        "feature": "OCCP"
+      },
+      {
+        "rank": 28,
+        "feature_id": 0,
+        "rationale": "English-speaking ability is a sensitive proxy that may spuriously encode nativity and ethnicity rather than stable need.",
+        "feature": "ENG"
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"ENG\",\n    \"type\": \"categorical\",\n    \"description\": \"Ability to speak English\",\n    \"values\": \"00=less than 5 years old/speaks only English; 01=Very well; 02=Well; 03=Not well; 04=Not at all\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"FER\",\n    \"type\": \"categorical\",\n    \"description\": \"Gave birth to child within the past 12 months\",\n    \"values\": \"00=less than 15 years old or greater than 50 years or male; 01=Yes; 02=No\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"HUPAC\",\n    \"type\": \"categorical\",\n    \"description\": \"Household presence and age of children\",\n    \"values\": \"00=N/A (GQ/vacant); 01=With children under 6 years only; 02=With children 6 to 17 years only; 03=With children under 6 years and 6 to 17 years; 04=No children\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"WIF\",\n    \"type\": \"categorical\",\n    \"description\": \"Workers in family during the past 12 months\",\n    \"values\": \"0=No workers; 1=1 worker; 2=2 workers; 3=3 or more workers\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"NWLA\",\n    \"type\": \"categorical\",\n    \"description\": \"On layoff from work\",\n    \"values\": \"01=Yes; 02=No; 03=Did not report\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"NWLK\",\n    \"type\": \"categorical\",\n    \"description\": \"Looking for work\",\n    \"values\": \"01=Yes; 02=No; 03=Did not report\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"OCCP\",\n    \"type\": \"categorical\",\n    \"description\": \"Occupation\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"POBP\",\n    \"type\": \"categorical\",\n    \"description\": \"Place of birth\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to reference person\",\n    \"values\": \"00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=...\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"WKHP\",\n    \"type\": \"integer\",\n    \"description\": \"Usual hours worked per week past 12 months\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"WKW\",\n    \"type\": \"integer\",\n    \"description\": \"Weeks worked during past 12 months\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"WRK\",\n    \"type\": \"categorical\",\n    \"description\": \"worked last week\",\n    \"values\": \"01=worked; 02=did not work\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DIS\",\n    \"type\": \"categorical\",\n    \"description\": \"Disability status\",\n    \"values\": \"01=With a disability; 02=Without a disability\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"MIL\",\n    \"type\": \"categorical\",\n    \"description\": \"Military service\",\n    \"values\": \"00=N/A (less than 17 years old); 01=Now on active duty; 02=On active duty in the past, but not now; 03=Only on active duty for training in Reserves/National Guard; 04=Never served in the military\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"ANC\",\n    \"type\": \"categorical\",\n    \"description\": \"Ancestry\",\n    \"values\": \"1=Single; 2=Multiple; 3=Unclassified; 4=Not reported; 8=Ancestry suppressed for this group\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"NATIVITY\",\n    \"type\": \"categorical\",\n    \"description\": \"Nativity\",\n    \"values\": \"01=Native; 02=Foreign born\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"DEAR\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Hearing difficulty\",\n    \"values\": \"01=Yes; 02=No\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"DEYE\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Vision difficulty\",\n    \"values\": \"01=Yes; 02=No\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"DREM\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Cognitive difficulty\",\n    \"values\": \"01=Yes; 02=No\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"PUBCOV\",\n    \"type\": \"categorical\",\n    \"description\": \"Public health coverage recode\",\n    \"values\": \"00=Without public health coverage; 01=With public health coverage\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"age in years\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"sex\",\n    \"values\": \"1=Male; 2=Female\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"ST\",\n    \"type\": \"categorical\",\n    \"description\": \"State\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"marital status\",\n    \"values\": \"1=Married; 2=Widowed; 3=Divorced; 4=Separated; 5=Never married or under 15 years old\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"CIT\",\n    \"type\": \"categorical\",\n    \"description\": \"citizenship status\",\n    \"values\": \"1=Born in the U.S.; 2=Born in Puerto Rico, Guam, the U.S. Virgin Islands, or the Northern Marianas; 3=Born abroad of American parent(s); 4=U.S. citizen by naturalization; 5=Not a citizen of the U.S.\"\n  },\n  {\n    \"feature_id\": 25,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"race\",\n    \"values\": \"1=White alone; 2=Black or African American alone; 3=American Indian alone; 4=Alaska Native alone; 5=American Indian and Alaska Native tribes specified; or American Indian or Alaska Native, not specified and no other races; 6=Asian alone; 7=Native Hawaiian a...\"\n  },\n  {\n    \"feature_id\": 26,\n    \"feature\": \"SCHL\",\n    \"type\": \"categorical\",\n    \"description\": \"Educational attainment\",\n    \"values\": \"nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)\"\n  },\n  {\n    \"feature_id\": 27,\n    \"feature\": \"ACS_YEAR\",\n    \"type\": \"integer\",\n    \"description\": \"Year of survey\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature_id\": 0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `ranking`.\n- Use ranks 1 through 28, with no duplicates.\n- Rank 1 is most important.\n- If two features seem similarly important, still break ties.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a household/person receives food stamps in ACS data, emphasizing stable socioeconomic and household-structure signals over domain-specific shortcuts.\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature_id\": 20,\n      \"rationale\": \"Age is a core, stable driver of SNAP eligibility and household need across domains.\"\n    },\n    {\n      \"rank\": 2,\n      \"feature_id\": 26,\n      \"rationale\": \"Education strongly tracks long-run economic opportunity and tends to generalize well.\"\n    },\n    {\n      \"rank\": 3,\n      \"feature_id\": 3,\n      \"rationale\": \"Number of workers in the family is a direct, portable proxy for household resources.\"\n    },\n    {\n      \"rank\": 4,\n      \"feature_id\": 10,\n      \"rationale\": \"Weeks worked captures labor-market attachment and income stability.\"\n    },\n    {\n      \"rank\": 5,\n      \"feature_id\": 9,\n      \"rationale\": \"Usual weekly hours worked is a strong, semantically meaningful income proxy.\"\n    },\n    {\n      \"rank\": 6,\n      \"feature_id\": 11,\n      \"rationale\": \"Recent work status is highly predictive of current earnings and assistance need.\"\n    },\n    {\n      \"rank\": 7,\n      \"feature_id\": 23,\n      \"rationale\": \"Marital status affects household composition and economic resources in a fairly stable way.\"\n    },\n    {\n      \"rank\": 8,\n      \"feature_id\": 2,\n      \"rationale\": \"Presence and age of children is directly relevant to household need and benefit eligibility.\"\n    },\n    {\n      \"rank\": 9,\n      \"feature_id\": 8,\n      \"rationale\": \"Relationship to reference person helps infer household structure and dependency burden.\"\n    },\n    {\n      \"rank\": 10,\n      \"feature_id\": 21,\n      \"rationale\": \"Sex can correlate with labor supply and household composition, though it is a weaker proxy.\"\n    },\n    {\n      \"rank\": 11,\n      \"feature_id\": 12,\n      \"rationale\": \"Disability status is a meaningful and stable predictor of economic hardship.\"\n    },\n    {\n      \"rank\": 12,\n      \"feature_id\": 19,\n      \"rationale\": \"Public coverage reflects low-income status, but may be partly downstream and policy-linked.\"\n    },\n    {\n      \"rank\": 13,\n      \"feature_id\": 24,\n      \"rationale\": \"Citizenship status can matter for eligibility and access, but is a sensitive demographic proxy.\"\n    },\n    {\n      \"rank\": 14,\n      \"feature_id\": 15,\n      \"rationale\": \"Nativity may correlate with eligibility and socioeconomic status, but is not a direct need signal.\"\n    },\n    {\n      \"rank\": 15,\n      \"feature_id\": 25,\n      \"rationale\": \"Race can capture structural inequality, but is a sensitive shortcut and less causally direct.\"\n    },\n    {\n      \"rank\": 16,\n      \"feature_id\": 22,\n      \"rationale\": \"State can reflect policy variation and local conditions, but is a domain identifier and brittle.\"\n    },\n    {\n      \"rank\": 17,\n      \"feature_id\": 27,\n      \"rationale\": \"Survey year may absorb temporal drift, but it is a strong domain marker rather than a stable cause.\"\n    },\n    {\n      \"rank\": 18,\n      \"feature_id\": 4,\n      \"rationale\": \"Layoff status is informative about short-term hardship, though noisy and transient.\"\n    },\n    {\n      \"rank\": 19,\n      \"feature_id\": 5,\n      \"rationale\": \"Looking for work indicates unemployment, but can be unstable and context-dependent.\"\n    },\n    {\n      \"rank\": 20,\n      \"feature_id\": 1,\n      \"rationale\": \"Recent childbirth can affect household expenses, but it is a narrow and low-frequency signal.\"\n    },\n    {\n      \"rank\": 21,\n      \"feature_id\": 16,\n      \"rationale\": \"Hearing difficulty is a disability-related proxy, but weaker than the direct disability indicator.\"\n    },\n    {\n      \"rank\": 22,\n      \"feature_id\": 17,\n      \"rationale\": \"Vision difficulty is similarly relevant but usually secondary to broader disability status.\"\n    },\n    {\n      \"rank\": 23,\n      \"feature_id\": 18,\n      \"rationale\": \"Cognitive difficulty matters for hardship, but overlaps with the more general disability feature.\"\n    },\n    {\n      \"rank\": 24,\n      \"feature_id\": 13,\n      \"rationale\": \"Military service is only indirectly related to food assistance need and can be cohort-specific.\"\n    },\n    {\n      \"rank\": 25,\n      \"feature_id\": 14,\n      \"rationale\": \"Ancestry is largely a demographic artifact with weak direct relevance to SNAP receipt.\"\n    },\n    {\n      \"rank\": 26,\n      \"feature_id\": 7,\n      \"rationale\": \"Place of birth is mostly a demographic descriptor and can act as a brittle shortcut.\"\n    },\n    {\n      \"rank\": 27,\n      \"feature_id\": 6,\n      \"rationale\": \"Occupation is often highly predictive but can overfit to local labor-market composition and coding.\"\n    },\n    {\n      \"rank\": 28,\n      \"feature_id\": 0,\n      \"rationale\": \"English-speaking ability is a sensitive proxy that may spuriously encode nativity and ethnicity rather than stable need.\"\n    }\n  ]\n}",
+      "input_tokens": 2195,
+      "output_tokens": 1184,
+      "total_tokens": 3379,
+      "response_id": "resp_01d41ce9db7f47ff006a27d72224908199a0b9163c671c2d57",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/tableshift/acsfoodstamps/rankings/rank_prompt.txt"
+}

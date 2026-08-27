@@ -1,0 +1,73 @@
+{
+  "benchmark": "whyshift",
+  "dataset": "taxi",
+  "model": "gpt-5.4-mini",
+  "method": "rank",
+  "temperature": 0.0,
+  "created_at": "2026-06-09T16:05:19",
+  "token_usage": {
+    "num_calls": 1,
+    "input_tokens": 600,
+    "output_tokens": 344,
+    "total_tokens": 944
+  },
+  "response": {
+    "task_summary": "Predict the taxi trip outcome using pickup time and trip geometry features that should generalize across domains.",
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 5,
+        "rationale": "Trip distance is the strongest stable predictor and should remain semantically relevant across shifts.",
+        "feature": "distance"
+      },
+      {
+        "rank": 2,
+        "feature_id": 6,
+        "rationale": "Direction captures route geometry and can add predictive signal beyond distance while remaining domain-meaningful.",
+        "feature": "direction"
+      },
+      {
+        "rank": 3,
+        "feature_id": 3,
+        "rationale": "Hour of day reflects recurring demand and traffic patterns that are usually predictive across splits.",
+        "feature": "hour"
+      },
+      {
+        "rank": 4,
+        "feature_id": 4,
+        "rationale": "Minute-of-day is a finer-grained version of time-of-day and can help, though it is more brittle than hour.",
+        "feature": "minute_oftheday"
+      },
+      {
+        "rank": 5,
+        "feature_id": 2,
+        "rationale": "Weekday can capture regular commuting and weekend effects that often generalize moderately well.",
+        "feature": "weekday"
+      },
+      {
+        "rank": 6,
+        "feature_id": 0,
+        "rationale": "Month may reflect seasonality, but it is coarser and more likely to pick up dataset-specific temporal drift.",
+        "feature": "month"
+      },
+      {
+        "rank": 7,
+        "feature_id": 1,
+        "rationale": "Week of year is the most likely to encode transient calendar artifacts and brittle temporal shortcuts.",
+        "feature": "week"
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"month\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup month.\",\n    \"values\": \"1-12.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"week\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup week of year.\",\n    \"values\": \"1-53.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"weekday\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup day of week.\",\n    \"values\": \"0-6.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"hour\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup hour of day.\",\n    \"values\": \"0-23.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"minute_oftheday\",\n    \"type\": \"integer\",\n    \"description\": \"Pickup time represented as minutes since midnight.\",\n    \"values\": \"0-1439.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"distance\",\n    \"type\": \"continuous\",\n    \"description\": \"Trip distance derived from pickup/dropoff locations.\",\n    \"values\": \"Non-negative distance.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"direction\",\n    \"type\": \"continuous\",\n    \"description\": \"Trip travel direction or bearing.\",\n    \"values\": \"Angular direction in degrees.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature_id\": 0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `ranking`.\n- Use ranks 1 through 7, with no duplicates.\n- Rank 1 is most important.\n- If two features seem similarly important, still break ties.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict the taxi trip outcome using pickup time and trip geometry features that should generalize across domains.\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature_id\": 5,\n      \"rationale\": \"Trip distance is the strongest stable predictor and should remain semantically relevant across shifts.\"\n    },\n    {\n      \"rank\": 2,\n      \"feature_id\": 6,\n      \"rationale\": \"Direction captures route geometry and can add predictive signal beyond distance while remaining domain-meaningful.\"\n    },\n    {\n      \"rank\": 3,\n      \"feature_id\": 3,\n      \"rationale\": \"Hour of day reflects recurring demand and traffic patterns that are usually predictive across splits.\"\n    },\n    {\n      \"rank\": 4,\n      \"feature_id\": 4,\n      \"rationale\": \"Minute-of-day is a finer-grained version of time-of-day and can help, though it is more brittle than hour.\"\n    },\n    {\n      \"rank\": 5,\n      \"feature_id\": 2,\n      \"rationale\": \"Weekday can capture regular commuting and weekend effects that often generalize moderately well.\"\n    },\n    {\n      \"rank\": 6,\n      \"feature_id\": 0,\n      \"rationale\": \"Month may reflect seasonality, but it is coarser and more likely to pick up dataset-specific temporal drift.\"\n    },\n    {\n      \"rank\": 7,\n      \"feature_id\": 1,\n      \"rationale\": \"Week of year is the most likely to encode transient calendar artifacts and brittle temporal shortcuts.\"\n    }\n  ]\n}",
+      "input_tokens": 600,
+      "output_tokens": 344,
+      "total_tokens": 944,
+      "response_id": "resp_06826fefd6f27d1a006a27c93c75b08198a30b37152ee71628",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/whyshift/taxi/rankings/rank_prompt.txt"
+}

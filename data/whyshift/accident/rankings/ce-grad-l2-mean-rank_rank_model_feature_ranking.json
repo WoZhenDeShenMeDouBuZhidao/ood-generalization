@@ -1,0 +1,344 @@
+{
+  "benchmark": "whyshift",
+  "dataset": "accident",
+  "model": "ce-grad-l2-mean-rank",
+  "method": "rank",
+  "feature_space": "model",
+  "created_at": "2026-08-13T00:12:49",
+  "aggregation": {
+    "name": "mean_rank",
+    "per_repeat_ranking": "ordinal_descending",
+    "tie_break": "model_feature_order",
+    "repeat_count": 5,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 0,
+        "feature": "Distance(mi)",
+        "mean_rank": 1.0,
+        "rank_std": 0.0
+      },
+      {
+        "rank": 2,
+        "feature_id": 19,
+        "feature": "Year",
+        "mean_rank": 2.0,
+        "rank_std": 0.0
+      },
+      {
+        "rank": 3,
+        "feature_id": 1,
+        "feature": "Temperature(F)",
+        "mean_rank": 3.8,
+        "rank_std": 1.0954451150103321
+      },
+      {
+        "rank": 4,
+        "feature_id": 18,
+        "feature": "Traffic_Signal",
+        "mean_rank": 4.0,
+        "rank_std": 0.7071067811865476
+      },
+      {
+        "rank": 5,
+        "feature_id": 20,
+        "feature": "Month",
+        "mean_rank": 7.0,
+        "rank_std": 1.0
+      },
+      {
+        "rank": 6,
+        "feature_id": 9,
+        "feature": "Crossing",
+        "mean_rank": 7.6,
+        "rank_std": 5.128352561983234
+      },
+      {
+        "rank": 7,
+        "feature_id": 14,
+        "feature": "Roundabout",
+        "mean_rank": 9.6,
+        "rank_std": 6.985699678629192
+      },
+      {
+        "rank": 8,
+        "feature_id": 16,
+        "feature": "Stop",
+        "mean_rank": 10.0,
+        "rank_std": 5.612486080160912
+      },
+      {
+        "rank": 9,
+        "feature_id": 42,
+        "feature": "Weather_Condition_Tornado",
+        "mean_rank": 10.2,
+        "rank_std": 3.420526275297414
+      },
+      {
+        "rank": 10,
+        "feature_id": 38,
+        "feature": "Weather_Condition_Sand",
+        "mean_rank": 12.0,
+        "rank_std": 5.431390245600108
+      },
+      {
+        "rank": 11,
+        "feature_id": 2,
+        "feature": "Humidity(%)",
+        "mean_rank": 13.2,
+        "rank_std": 2.2803508501982757
+      },
+      {
+        "rank": 12,
+        "feature_id": 3,
+        "feature": "Pressure(in)",
+        "mean_rank": 15.0,
+        "rank_std": 5.70087712549569
+      },
+      {
+        "rank": 13,
+        "feature_id": 13,
+        "feature": "Railway",
+        "mean_rank": 15.4,
+        "rank_std": 6.268971207462991
+      },
+      {
+        "rank": 14,
+        "feature_id": 23,
+        "feature": "Hour",
+        "mean_rank": 15.6,
+        "rank_std": 5.128352561983234
+      },
+      {
+        "rank": 15,
+        "feature_id": 21,
+        "feature": "Weekday",
+        "mean_rank": 15.8,
+        "rank_std": 7.949842765740716
+      },
+      {
+        "rank": 16,
+        "feature_id": 44,
+        "feature": "Civil_Twilight_Night",
+        "mean_rank": 15.8,
+        "rank_std": 5.263078946776307
+      },
+      {
+        "rank": 17,
+        "feature_id": 30,
+        "feature": "Wind_Direction_SE",
+        "mean_rank": 18.8,
+        "rank_std": 4.43846820423443
+      },
+      {
+        "rank": 18,
+        "feature_id": 11,
+        "feature": "Junction",
+        "mean_rank": 21.2,
+        "rank_std": 5.540758070878027
+      },
+      {
+        "rank": 19,
+        "feature_id": 36,
+        "feature": "Weather_Condition_Hail",
+        "mean_rank": 21.6,
+        "rank_std": 10.064790112068906
+      },
+      {
+        "rank": 20,
+        "feature_id": 32,
+        "feature": "Wind_Direction_Variable",
+        "mean_rank": 21.8,
+        "rank_std": 6.610597552415364
+      },
+      {
+        "rank": 21,
+        "feature_id": 31,
+        "feature": "Wind_Direction_SW",
+        "mean_rank": 23.2,
+        "rank_std": 8.012490249604053
+      },
+      {
+        "rank": 22,
+        "feature_id": 15,
+        "feature": "Station",
+        "mean_rank": 24.0,
+        "rank_std": 6.708203932499369
+      },
+      {
+        "rank": 23,
+        "feature_id": 5,
+        "feature": "Wind_Speed(mph)",
+        "mean_rank": 24.4,
+        "rank_std": 9.44986772394196
+      },
+      {
+        "rank": 24,
+        "feature_id": 43,
+        "feature": "Weather_Condition_Windy",
+        "mean_rank": 25.0,
+        "rank_std": 7.280109889280518
+      },
+      {
+        "rank": 25,
+        "feature_id": 37,
+        "feature": "Weather_Condition_Rain",
+        "mean_rank": 25.6,
+        "rank_std": 9.016651263079881
+      },
+      {
+        "rank": 26,
+        "feature_id": 6,
+        "feature": "Precipitation(in)",
+        "mean_rank": 26.6,
+        "rank_std": 10.737783756436894
+      },
+      {
+        "rank": 27,
+        "feature_id": 4,
+        "feature": "Visibility(mi)",
+        "mean_rank": 27.4,
+        "rank_std": 7.797435475847171
+      },
+      {
+        "rank": 28,
+        "feature_id": 35,
+        "feature": "Weather_Condition_Fog",
+        "mean_rank": 28.0,
+        "rank_std": 4.123105625617661
+      },
+      {
+        "rank": 29,
+        "feature_id": 7,
+        "feature": "Amenity",
+        "mean_rank": 28.2,
+        "rank_std": 16.300306745579974
+      },
+      {
+        "rank": 30,
+        "feature_id": 8,
+        "feature": "Bump",
+        "mean_rank": 29.6,
+        "rank_std": 7.602631123499285
+      },
+      {
+        "rank": 31,
+        "feature_id": 28,
+        "feature": "Wind_Direction_NW",
+        "mean_rank": 29.6,
+        "rank_std": 6.985699678629193
+      },
+      {
+        "rank": 32,
+        "feature_id": 40,
+        "feature": "Weather_Condition_Snow",
+        "mean_rank": 30.2,
+        "rank_std": 9.23038460737146
+      },
+      {
+        "rank": 33,
+        "feature_id": 10,
+        "feature": "Give_Way",
+        "mean_rank": 30.4,
+        "rank_std": 10.039920318408907
+      },
+      {
+        "rank": 34,
+        "feature_id": 29,
+        "feature": "Wind_Direction_S",
+        "mean_rank": 31.6,
+        "rank_std": 7.700649323271382
+      },
+      {
+        "rank": 35,
+        "feature_id": 39,
+        "feature": "Weather_Condition_Smoke",
+        "mean_rank": 32.4,
+        "rank_std": 10.334408546211051
+      },
+      {
+        "rank": 36,
+        "feature_id": 22,
+        "feature": "Day",
+        "mean_rank": 33.8,
+        "rank_std": 6.870225614927067
+      },
+      {
+        "rank": 37,
+        "feature_id": 25,
+        "feature": "Wind_Direction_E",
+        "mean_rank": 33.8,
+        "rank_std": 7.224956747275377
+      },
+      {
+        "rank": 38,
+        "feature_id": 33,
+        "feature": "Wind_Direction_W",
+        "mean_rank": 35.2,
+        "rank_std": 4.711687595755899
+      },
+      {
+        "rank": 39,
+        "feature_id": 34,
+        "feature": "Weather_Condition_Cloudy",
+        "mean_rank": 35.8,
+        "rank_std": 3.7013511046643495
+      },
+      {
+        "rank": 40,
+        "feature_id": 26,
+        "feature": "Wind_Direction_N",
+        "mean_rank": 37.8,
+        "rank_std": 5.718391382198319
+      },
+      {
+        "rank": 41,
+        "feature_id": 27,
+        "feature": "Wind_Direction_NE",
+        "mean_rank": 38.6,
+        "rank_std": 3.2093613071762426
+      },
+      {
+        "rank": 42,
+        "feature_id": 41,
+        "feature": "Weather_Condition_Thunderstorm",
+        "mean_rank": 39.2,
+        "rank_std": 9.67987603226405
+      },
+      {
+        "rank": 43,
+        "feature_id": 12,
+        "feature": "No_Exit",
+        "mean_rank": 39.8,
+        "rank_std": 5.974947698515862
+      },
+      {
+        "rank": 44,
+        "feature_id": 17,
+        "feature": "Traffic_Calming",
+        "mean_rank": 40.6,
+        "rank_std": 4.505552130427524
+      },
+      {
+        "rank": 45,
+        "feature_id": 24,
+        "feature": "Minute",
+        "mean_rank": 42.8,
+        "rank_std": 2.3874672772626644
+      }
+    ]
+  }
+}

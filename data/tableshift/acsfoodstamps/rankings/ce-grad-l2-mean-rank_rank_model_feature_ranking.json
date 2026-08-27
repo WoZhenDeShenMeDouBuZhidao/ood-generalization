@@ -1,0 +1,1702 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "acsfoodstamps",
+  "model": "ce-grad-l2-mean-rank",
+  "method": "rank",
+  "feature_space": "model",
+  "created_at": "2026-08-13T00:12:53",
+  "aggregation": {
+    "name": "mean_rank",
+    "per_repeat_ranking": "ordinal_descending",
+    "tie_break": "model_feature_order",
+    "repeat_count": 5,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 60,
+        "feature": "OCCP_LGL",
+        "mean_rank": 1.6,
+        "rank_std": 1.3416407864998738
+      },
+      {
+        "rank": 2,
+        "feature_id": 180,
+        "feature": "SCHL_24",
+        "mean_rank": 4.8,
+        "rank_std": 2.7748873851023217
+      },
+      {
+        "rank": 3,
+        "feature_id": 177,
+        "feature": "SCHL_21",
+        "mean_rank": 5.0,
+        "rank_std": 2.7386127875258306
+      },
+      {
+        "rank": 4,
+        "feature_id": 138,
+        "feature": "PUBCOV_10",
+        "mean_rank": 7.0,
+        "rank_std": 6.519202405202649
+      },
+      {
+        "rank": 5,
+        "feature_id": 130,
+        "feature": "POBP_USTERR",
+        "mean_rank": 8.4,
+        "rank_std": 1.6733200530681511
+      },
+      {
+        "rank": 6,
+        "feature_id": 179,
+        "feature": "SCHL_23",
+        "mean_rank": 8.8,
+        "rank_std": 2.16794833886788
+      },
+      {
+        "rank": 7,
+        "feature_id": 34,
+        "feature": "MIL_01",
+        "mean_rank": 9.0,
+        "rank_std": 10.653637876331258
+      },
+      {
+        "rank": 8,
+        "feature_id": 98,
+        "feature": "POBP_KY",
+        "mean_rank": 9.8,
+        "rank_std": 5.718391382198319
+      },
+      {
+        "rank": 9,
+        "feature_id": 139,
+        "feature": "PUBCOV_20",
+        "mean_rank": 10.4,
+        "rank_std": 8.44393273303382
+      },
+      {
+        "rank": 10,
+        "feature_id": 65,
+        "feature": "OCCP_O",
+        "mean_rank": 11.8,
+        "rank_std": 4.658325879540846
+      },
+      {
+        "rank": 11,
+        "feature_id": 72,
+        "feature": "OCCP_SCI",
+        "mean_rank": 12.0,
+        "rank_std": 5.338539126015656
+      },
+      {
+        "rank": 12,
+        "feature_id": 150,
+        "feature": "RELP_09",
+        "mean_rank": 13.0,
+        "rank_std": 8.215838362577491
+      },
+      {
+        "rank": 13,
+        "feature_id": 82,
+        "feature": "POBP_CANADA",
+        "mean_rank": 13.4,
+        "rank_std": 11.058933040759403
+      },
+      {
+        "rank": 14,
+        "feature_id": 87,
+        "feature": "POBP_DC",
+        "mean_rank": 14.4,
+        "rank_std": 7.765307463326871
+      },
+      {
+        "rank": 15,
+        "feature_id": 169,
+        "feature": "SCHL_13",
+        "mean_rank": 17.2,
+        "rank_std": 7.52994023880668
+      },
+      {
+        "rank": 16,
+        "feature_id": 178,
+        "feature": "SCHL_22",
+        "mean_rank": 19.0,
+        "rank_std": 1.8708286933869707
+      },
+      {
+        "rank": 17,
+        "feature_id": 111,
+        "feature": "POBP_ND",
+        "mean_rank": 21.0,
+        "rank_std": 13.490737563232042
+      },
+      {
+        "rank": 18,
+        "feature_id": 105,
+        "feature": "POBP_MIDDLEEAST",
+        "mean_rank": 22.6,
+        "rank_std": 13.011533345459329
+      },
+      {
+        "rank": 19,
+        "feature_id": 155,
+        "feature": "RELP_14",
+        "mean_rank": 27.0,
+        "rank_std": 9.513148795220223
+      },
+      {
+        "rank": 20,
+        "feature_id": 63,
+        "feature": "OCCP_MIL",
+        "mean_rank": 27.4,
+        "rank_std": 15.404544783926593
+      },
+      {
+        "rank": 21,
+        "feature_id": 112,
+        "feature": "POBP_NE",
+        "mean_rank": 27.6,
+        "rank_std": 18.994736112934028
+      },
+      {
+        "rank": 22,
+        "feature_id": 140,
+        "feature": "RAC1P",
+        "mean_rank": 29.8,
+        "rank_std": 6.260990336999411
+      },
+      {
+        "rank": 23,
+        "feature_id": 167,
+        "feature": "SCHL_11",
+        "mean_rank": 30.6,
+        "rank_std": 10.620734437881403
+      },
+      {
+        "rank": 24,
+        "feature_id": 212,
+        "feature": "ST_NJ",
+        "mean_rank": 31.6,
+        "rank_std": 7.987490219086343
+      },
+      {
+        "rank": 25,
+        "feature_id": 61,
+        "feature": "OCCP_MED",
+        "mean_rank": 32.6,
+        "rank_std": 9.864076236526156
+      },
+      {
+        "rank": 26,
+        "feature_id": 24,
+        "feature": "ENG_04",
+        "mean_rank": 34.6,
+        "rank_std": 9.476286192385707
+      },
+      {
+        "rank": 27,
+        "feature_id": 135,
+        "feature": "POBP_WI",
+        "mean_rank": 34.6,
+        "rank_std": 13.794926603646719
+      },
+      {
+        "rank": 28,
+        "feature_id": 6,
+        "feature": "ANC_08",
+        "mean_rank": 34.8,
+        "rank_std": 15.546703830716014
+      },
+      {
+        "rank": 29,
+        "feature_id": 58,
+        "feature": "OCCP_G",
+        "mean_rank": 36.0,
+        "rank_std": 26.248809496813376
+      },
+      {
+        "rank": 30,
+        "feature_id": 79,
+        "feature": "POBP_ASIA",
+        "mean_rank": 36.0,
+        "rank_std": 14.966629547095765
+      },
+      {
+        "rank": 31,
+        "feature_id": 136,
+        "feature": "POBP_WV",
+        "mean_rank": 36.0,
+        "rank_std": 10.295630140987
+      },
+      {
+        "rank": 32,
+        "feature_id": 149,
+        "feature": "RELP_08",
+        "mean_rank": 36.0,
+        "rank_std": 30.659419433511783
+      },
+      {
+        "rank": 33,
+        "feature_id": 144,
+        "feature": "RELP_03",
+        "mean_rank": 36.2,
+        "rank_std": 22.895414388038493
+      },
+      {
+        "rank": 34,
+        "feature_id": 53,
+        "feature": "OCCP_ENG",
+        "mean_rank": 37.2,
+        "rank_std": 19.188538245525635
+      },
+      {
+        "rank": 35,
+        "feature_id": 46,
+        "feature": "OCCP_BUS",
+        "mean_rank": 39.6,
+        "rank_std": 7.987490219086343
+      },
+      {
+        "rank": 36,
+        "feature_id": 187,
+        "feature": "ST_CO",
+        "mean_rank": 40.4,
+        "rank_std": 15.192103211866355
+      },
+      {
+        "rank": 37,
+        "feature_id": 151,
+        "feature": "RELP_10",
+        "mean_rank": 41.2,
+        "rank_std": 20.216330032921405
+      },
+      {
+        "rank": 38,
+        "feature_id": 83,
+        "feature": "POBP_CARIBBEAN",
+        "mean_rank": 41.4,
+        "rank_std": 13.48332303254654
+      },
+      {
+        "rank": 39,
+        "feature_id": 68,
+        "feature": "OCCP_PRS",
+        "mean_rank": 41.8,
+        "rank_std": 10.545141061171254
+      },
+      {
+        "rank": 40,
+        "feature_id": 160,
+        "feature": "SCHL_04",
+        "mean_rank": 42.6,
+        "rank_std": 22.333830840229805
+      },
+      {
+        "rank": 41,
+        "feature_id": 168,
+        "feature": "SCHL_12",
+        "mean_rank": 43.2,
+        "rank_std": 14.549914089093447
+      },
+      {
+        "rank": 42,
+        "feature_id": 159,
+        "feature": "SCHL_03",
+        "mean_rank": 44.0,
+        "rank_std": 39.59166578965831
+      },
+      {
+        "rank": 43,
+        "feature_id": 127,
+        "feature": "POBP_SOUTHAMERICA",
+        "mean_rank": 44.2,
+        "rank_std": 22.151749366585022
+      },
+      {
+        "rank": 44,
+        "feature_id": 223,
+        "feature": "ST_SD",
+        "mean_rank": 45.8,
+        "rank_std": 31.292171544972714
+      },
+      {
+        "rank": 45,
+        "feature_id": 164,
+        "feature": "SCHL_08",
+        "mean_rank": 46.8,
+        "rank_std": 14.342245291445828
+      },
+      {
+        "rank": 46,
+        "feature_id": 32,
+        "feature": "MAR_04",
+        "mean_rank": 48.4,
+        "rank_std": 32.315630892804805
+      },
+      {
+        "rank": 47,
+        "feature_id": 173,
+        "feature": "SCHL_17",
+        "mean_rank": 49.2,
+        "rank_std": 6.906518659932803
+      },
+      {
+        "rank": 48,
+        "feature_id": 204,
+        "feature": "ST_MN",
+        "mean_rank": 49.4,
+        "rank_std": 25.55973395792687
+      },
+      {
+        "rank": 49,
+        "feature_id": 142,
+        "feature": "RELP_01",
+        "mean_rank": 49.8,
+        "rank_std": 11.211601134539169
+      },
+      {
+        "rank": 50,
+        "feature_id": 28,
+        "feature": "HUPAC",
+        "mean_rank": 50.2,
+        "rank_std": 6.942621983083912
+      },
+      {
+        "rank": 51,
+        "feature_id": 97,
+        "feature": "POBP_KS",
+        "mean_rank": 50.8,
+        "rank_std": 16.146206984923737
+      },
+      {
+        "rank": 52,
+        "feature_id": 171,
+        "feature": "SCHL_15",
+        "mean_rank": 51.4,
+        "rank_std": 12.83744522870497
+      },
+      {
+        "rank": 53,
+        "feature_id": 190,
+        "feature": "ST_FL",
+        "mean_rank": 52.6,
+        "rank_std": 10.334408546211051
+      },
+      {
+        "rank": 54,
+        "feature_id": 228,
+        "feature": "ST_VT",
+        "mean_rank": 53.8,
+        "rank_std": 23.28518842526296
+      },
+      {
+        "rank": 55,
+        "feature_id": 232,
+        "feature": "ST_WY",
+        "mean_rank": 54.4,
+        "rank_std": 31.6749112074525
+      },
+      {
+        "rank": 56,
+        "feature_id": 106,
+        "feature": "POBP_MN",
+        "mean_rank": 57.6,
+        "rank_std": 16.024980499208105
+      },
+      {
+        "rank": 57,
+        "feature_id": 126,
+        "feature": "POBP_SD",
+        "mean_rank": 57.6,
+        "rank_std": 21.31431443889294
+      },
+      {
+        "rank": 58,
+        "feature_id": 217,
+        "feature": "ST_OK",
+        "mean_rank": 60.2,
+        "rank_std": 24.772969139770066
+      },
+      {
+        "rank": 59,
+        "feature_id": 62,
+        "feature": "OCCP_MGR",
+        "mean_rank": 62.6,
+        "rank_std": 13.939153489362258
+      },
+      {
+        "rank": 60,
+        "feature_id": 100,
+        "feature": "POBP_MA",
+        "mean_rank": 62.6,
+        "rank_std": 23.028243528328424
+      },
+      {
+        "rank": 61,
+        "feature_id": 26,
+        "feature": "FER_01",
+        "mean_rank": 67.6,
+        "rank_std": 25.774017925034507
+      },
+      {
+        "rank": 62,
+        "feature_id": 54,
+        "feature": "OCCP_ENT",
+        "mean_rank": 67.8,
+        "rank_std": 21.86778452427223
+      },
+      {
+        "rank": 63,
+        "feature_id": 184,
+        "feature": "ST_AR",
+        "mean_rank": 69.4,
+        "rank_std": 47.95101667326773
+      },
+      {
+        "rank": 64,
+        "feature_id": 186,
+        "feature": "ST_CA",
+        "mean_rank": 69.4,
+        "rank_std": 15.290519938837921
+      },
+      {
+        "rank": 65,
+        "feature_id": 161,
+        "feature": "SCHL_05",
+        "mean_rank": 70.2,
+        "rank_std": 21.08791122894821
+      },
+      {
+        "rank": 66,
+        "feature_id": 96,
+        "feature": "POBP_IN",
+        "mean_rank": 71.0,
+        "rank_std": 29.597297173897484
+      },
+      {
+        "rank": 67,
+        "feature_id": 170,
+        "feature": "SCHL_14",
+        "mean_rank": 71.2,
+        "rank_std": 12.755391017134675
+      },
+      {
+        "rank": 68,
+        "feature_id": 157,
+        "feature": "SCHL_01",
+        "mean_rank": 72.4,
+        "rank_std": 12.48198702130394
+      },
+      {
+        "rank": 69,
+        "feature_id": 57,
+        "feature": "OCCP_FIN",
+        "mean_rank": 73.4,
+        "rank_std": 43.09060222368678
+      },
+      {
+        "rank": 70,
+        "feature_id": 4,
+        "feature": "ANC_03",
+        "mean_rank": 73.8,
+        "rank_std": 22.73103605205887
+      },
+      {
+        "rank": 71,
+        "feature_id": 20,
+        "feature": "ENG_00",
+        "mean_rank": 78.2,
+        "rank_std": 8.34865258589672
+      },
+      {
+        "rank": 72,
+        "feature_id": 47,
+        "feature": "OCCP_CLN",
+        "mean_rank": 82.0,
+        "rank_std": 20.89258241577618
+      },
+      {
+        "rank": 73,
+        "feature_id": 59,
+        "feature": "OCCP_HLS",
+        "mean_rank": 83.6,
+        "rank_std": 30.31171390733292
+      },
+      {
+        "rank": 74,
+        "feature_id": 191,
+        "feature": "ST_GA",
+        "mean_rank": 85.8,
+        "rank_std": 33.72239611889997
+      },
+      {
+        "rank": 75,
+        "feature_id": 215,
+        "feature": "ST_NY",
+        "mean_rank": 87.2,
+        "rank_std": 23.689660191737662
+      },
+      {
+        "rank": 76,
+        "feature_id": 107,
+        "feature": "POBP_MO",
+        "mean_rank": 87.6,
+        "rank_std": 12.361229712289955
+      },
+      {
+        "rank": 77,
+        "feature_id": 90,
+        "feature": "POBP_FL",
+        "mean_rank": 88.6,
+        "rank_std": 41.198300935839576
+      },
+      {
+        "rank": 78,
+        "feature_id": 147,
+        "feature": "RELP_06",
+        "mean_rank": 91.2,
+        "rank_std": 27.169836215921507
+      },
+      {
+        "rank": 79,
+        "feature_id": 113,
+        "feature": "POBP_NH",
+        "mean_rank": 91.4,
+        "rank_std": 35.927705186944515
+      },
+      {
+        "rank": 80,
+        "feature_id": 158,
+        "feature": "SCHL_02",
+        "mean_rank": 92.4,
+        "rank_std": 35.99027646462305
+      },
+      {
+        "rank": 81,
+        "feature_id": 37,
+        "feature": "MIL_04",
+        "mean_rank": 92.8,
+        "rank_std": 31.822947695020336
+      },
+      {
+        "rank": 82,
+        "feature_id": 197,
+        "feature": "ST_KS",
+        "mean_rank": 92.8,
+        "rank_std": 23.636835659622463
+      },
+      {
+        "rank": 83,
+        "feature_id": 152,
+        "feature": "RELP_11",
+        "mean_rank": 94.2,
+        "rank_std": 18.171406109599772
+      },
+      {
+        "rank": 84,
+        "feature_id": 88,
+        "feature": "POBP_DE",
+        "mean_rank": 96.6,
+        "rank_std": 61.83283917143058
+      },
+      {
+        "rank": 85,
+        "feature_id": 66,
+        "feature": "OCCP_OFF",
+        "mean_rank": 97.2,
+        "rank_std": 25.781776509775273
+      },
+      {
+        "rank": 86,
+        "feature_id": 52,
+        "feature": "OCCP_EDU",
+        "mean_rank": 97.6,
+        "rank_std": 28.17445651649735
+      },
+      {
+        "rank": 87,
+        "feature_id": 84,
+        "feature": "POBP_CENTRALAMERICA",
+        "mean_rank": 97.8,
+        "rank_std": 25.371243564319034
+      },
+      {
+        "rank": 88,
+        "feature_id": 71,
+        "feature": "OCCP_SAL",
+        "mean_rank": 99.2,
+        "rank_std": 23.889328161335975
+      },
+      {
+        "rank": 89,
+        "feature_id": 125,
+        "feature": "POBP_SC",
+        "mean_rank": 99.8,
+        "rank_std": 30.16123339653072
+      },
+      {
+        "rank": 90,
+        "feature_id": 120,
+        "feature": "POBP_OK",
+        "mean_rank": 100.2,
+        "rank_std": 28.726294574831613
+      },
+      {
+        "rank": 91,
+        "feature_id": 36,
+        "feature": "MIL_03",
+        "mean_rank": 100.8,
+        "rank_std": 25.341665296503308
+      },
+      {
+        "rank": 92,
+        "feature_id": 50,
+        "feature": "OCCP_CON",
+        "mean_rank": 100.8,
+        "rank_std": 35.569649984221094
+      },
+      {
+        "rank": 93,
+        "feature_id": 188,
+        "feature": "ST_CT",
+        "mean_rank": 102.8,
+        "rank_std": 54.145175223652195
+      },
+      {
+        "rank": 94,
+        "feature_id": 133,
+        "feature": "POBP_VT",
+        "mean_rank": 103.2,
+        "rank_std": 46.23526792395606
+      },
+      {
+        "rank": 95,
+        "feature_id": 29,
+        "feature": "MAR_01",
+        "mean_rank": 103.6,
+        "rank_std": 34.45721985302935
+      },
+      {
+        "rank": 96,
+        "feature_id": 200,
+        "feature": "ST_MA",
+        "mean_rank": 104.6,
+        "rank_std": 36.86868590009684
+      },
+      {
+        "rank": 97,
+        "feature_id": 129,
+        "feature": "POBP_TX",
+        "mean_rank": 104.8,
+        "rank_std": 25.400787389370432
+      },
+      {
+        "rank": 98,
+        "feature_id": 43,
+        "feature": "NWLK_01",
+        "mean_rank": 105.8,
+        "rank_std": 39.00256401827962
+      },
+      {
+        "rank": 99,
+        "feature_id": 230,
+        "feature": "ST_WI",
+        "mean_rank": 106.4,
+        "rank_std": 42.24689337690998
+      },
+      {
+        "rank": 100,
+        "feature_id": 114,
+        "feature": "POBP_NJ",
+        "mean_rank": 107.8,
+        "rank_std": 27.607969863791144
+      },
+      {
+        "rank": 101,
+        "feature_id": 17,
+        "feature": "DIS_20",
+        "mean_rank": 108.4,
+        "rank_std": 37.04456775291082
+      },
+      {
+        "rank": 102,
+        "feature_id": 214,
+        "feature": "ST_NV",
+        "mean_rank": 108.4,
+        "rank_std": 11.502173707608488
+      },
+      {
+        "rank": 103,
+        "feature_id": 227,
+        "feature": "ST_VA",
+        "mean_rank": 108.8,
+        "rank_std": 41.69772176030724
+      },
+      {
+        "rank": 104,
+        "feature_id": 93,
+        "feature": "POBP_IA",
+        "mean_rank": 109.0,
+        "rank_std": 37.72929895982696
+      },
+      {
+        "rank": 105,
+        "feature_id": 233,
+        "feature": "WIF",
+        "mean_rank": 116.2,
+        "rank_std": 16.146206984923733
+      },
+      {
+        "rank": 106,
+        "feature_id": 148,
+        "feature": "RELP_07",
+        "mean_rank": 120.6,
+        "rank_std": 41.65093036175783
+      },
+      {
+        "rank": 107,
+        "feature_id": 23,
+        "feature": "ENG_03",
+        "mean_rank": 121.8,
+        "rank_std": 15.738487856207787
+      },
+      {
+        "rank": 108,
+        "feature_id": 78,
+        "feature": "POBP_AR",
+        "mean_rank": 122.0,
+        "rank_std": 39.67366884975475
+      },
+      {
+        "rank": 109,
+        "feature_id": 102,
+        "feature": "POBP_ME",
+        "mean_rank": 122.2,
+        "rank_std": 12.557866060760482
+      },
+      {
+        "rank": 110,
+        "feature_id": 85,
+        "feature": "POBP_CO",
+        "mean_rank": 122.4,
+        "rank_std": 32.377461296401854
+      },
+      {
+        "rank": 111,
+        "feature_id": 195,
+        "feature": "ST_IL",
+        "mean_rank": 122.4,
+        "rank_std": 15.453155017665487
+      },
+      {
+        "rank": 112,
+        "feature_id": 163,
+        "feature": "SCHL_07",
+        "mean_rank": 123.6,
+        "rank_std": 61.81666441987954
+      },
+      {
+        "rank": 113,
+        "feature_id": 31,
+        "feature": "MAR_03",
+        "mean_rank": 124.0,
+        "rank_std": 49.64876634922564
+      },
+      {
+        "rank": 114,
+        "feature_id": 94,
+        "feature": "POBP_ID",
+        "mean_rank": 125.4,
+        "rank_std": 52.43853544865646
+      },
+      {
+        "rank": 115,
+        "feature_id": 67,
+        "feature": "OCCP_PRD",
+        "mean_rank": 127.6,
+        "rank_std": 27.042559050504078
+      },
+      {
+        "rank": 116,
+        "feature_id": 123,
+        "feature": "POBP_PR",
+        "mean_rank": 128.8,
+        "rank_std": 55.160674397617726
+      },
+      {
+        "rank": 117,
+        "feature_id": 193,
+        "feature": "ST_IA",
+        "mean_rank": 129.8,
+        "rank_std": 53.10084745086466
+      },
+      {
+        "rank": 118,
+        "feature_id": 73,
+        "feature": "OCCP_TRN",
+        "mean_rank": 130.0,
+        "rank_std": 25.65151067676132
+      },
+      {
+        "rank": 119,
+        "feature_id": 210,
+        "feature": "ST_NE",
+        "mean_rank": 130.0,
+        "rank_std": 50.946049895943844
+      },
+      {
+        "rank": 120,
+        "feature_id": 101,
+        "feature": "POBP_MD",
+        "mean_rank": 130.2,
+        "rank_std": 43.785842460777204
+      },
+      {
+        "rank": 121,
+        "feature_id": 198,
+        "feature": "ST_KY",
+        "mean_rank": 132.0,
+        "rank_std": 73.15394726192156
+      },
+      {
+        "rank": 122,
+        "feature_id": 42,
+        "feature": "NWLA_03",
+        "mean_rank": 133.0,
+        "rank_std": 71.23903424387504
+      },
+      {
+        "rank": 123,
+        "feature_id": 131,
+        "feature": "POBP_UT",
+        "mean_rank": 133.6,
+        "rank_std": 46.26337644400807
+      },
+      {
+        "rank": 124,
+        "feature_id": 208,
+        "feature": "ST_NC",
+        "mean_rank": 135.2,
+        "rank_std": 45.041092349098285
+      },
+      {
+        "rank": 125,
+        "feature_id": 119,
+        "feature": "POBP_OH",
+        "mean_rank": 138.2,
+        "rank_std": 5.449770637375485
+      },
+      {
+        "rank": 126,
+        "feature_id": 39,
+        "feature": "NATIVITY_02",
+        "mean_rank": 139.4,
+        "rank_std": 39.13182847759609
+      },
+      {
+        "rank": 127,
+        "feature_id": 122,
+        "feature": "POBP_PA",
+        "mean_rank": 141.0,
+        "rank_std": 28.64437117480501
+      },
+      {
+        "rank": 128,
+        "feature_id": 137,
+        "feature": "POBP_WY",
+        "mean_rank": 141.0,
+        "rank_std": 70.9401155905458
+      },
+      {
+        "rank": 129,
+        "feature_id": 1,
+        "feature": "AGEP",
+        "mean_rank": 141.4,
+        "rank_std": 16.47118696390761
+      },
+      {
+        "rank": 130,
+        "feature_id": 128,
+        "feature": "POBP_TN",
+        "mean_rank": 142.2,
+        "rank_std": 47.96040033194051
+      },
+      {
+        "rank": 131,
+        "feature_id": 109,
+        "feature": "POBP_MT",
+        "mean_rank": 142.4,
+        "rank_std": 62.588337571787285
+      },
+      {
+        "rank": 132,
+        "feature_id": 143,
+        "feature": "RELP_02",
+        "mean_rank": 142.4,
+        "rank_std": 53.40692838948895
+      },
+      {
+        "rank": 133,
+        "feature_id": 213,
+        "feature": "ST_NM",
+        "mean_rank": 142.6,
+        "rank_std": 31.22178726466504
+      },
+      {
+        "rank": 134,
+        "feature_id": 44,
+        "feature": "NWLK_02",
+        "mean_rank": 143.2,
+        "rank_std": 62.307302942753026
+      },
+      {
+        "rank": 135,
+        "feature_id": 218,
+        "feature": "ST_OR",
+        "mean_rank": 144.4,
+        "rank_std": 50.34183151217286
+      },
+      {
+        "rank": 136,
+        "feature_id": 40,
+        "feature": "NWLA_01",
+        "mean_rank": 145.2,
+        "rank_std": 19.21457779916072
+      },
+      {
+        "rank": 137,
+        "feature_id": 30,
+        "feature": "MAR_02",
+        "mean_rank": 146.8,
+        "rank_std": 38.91914695879137
+      },
+      {
+        "rank": 138,
+        "feature_id": 45,
+        "feature": "NWLK_03",
+        "mean_rank": 147.4,
+        "rank_std": 59.298397954750854
+      },
+      {
+        "rank": 139,
+        "feature_id": 49,
+        "feature": "OCCP_CMS",
+        "mean_rank": 148.2,
+        "rank_std": 56.76882947533796
+      },
+      {
+        "rank": 140,
+        "feature_id": 75,
+        "feature": "POBP_AFRICA",
+        "mean_rank": 148.4,
+        "rank_std": 30.402302544379758
+      },
+      {
+        "rank": 141,
+        "feature_id": 153,
+        "feature": "RELP_12",
+        "mean_rank": 148.6,
+        "rank_std": 50.83601085844561
+      },
+      {
+        "rank": 142,
+        "feature_id": 55,
+        "feature": "OCCP_EXT",
+        "mean_rank": 149.2,
+        "rank_std": 62.64742612430298
+      },
+      {
+        "rank": 143,
+        "feature_id": 192,
+        "feature": "ST_HI",
+        "mean_rank": 150.2,
+        "rank_std": 14.68672870315238
+      },
+      {
+        "rank": 144,
+        "feature_id": 56,
+        "feature": "OCCP_FFF",
+        "mean_rank": 150.4,
+        "rank_std": 29.652993103563762
+      },
+      {
+        "rank": 145,
+        "feature_id": 225,
+        "feature": "ST_TX",
+        "mean_rank": 150.8,
+        "rank_std": 43.67722518658895
+      },
+      {
+        "rank": 146,
+        "feature_id": 237,
+        "feature": "WRK_01",
+        "mean_rank": 150.8,
+        "rank_std": 35.56262082580529
+      },
+      {
+        "rank": 147,
+        "feature_id": 220,
+        "feature": "ST_PR",
+        "mean_rank": 151.4,
+        "rank_std": 25.402755756019857
+      },
+      {
+        "rank": 148,
+        "feature_id": 15,
+        "feature": "DEYE_02",
+        "mean_rank": 151.6,
+        "rank_std": 58.54314648188975
+      },
+      {
+        "rank": 149,
+        "feature_id": 185,
+        "feature": "ST_AZ",
+        "mean_rank": 151.6,
+        "rank_std": 54.436201190016924
+      },
+      {
+        "rank": 150,
+        "feature_id": 25,
+        "feature": "FER_00",
+        "mean_rank": 151.8,
+        "rank_std": 49.33761242703178
+      },
+      {
+        "rank": 151,
+        "feature_id": 74,
+        "feature": "OCCP_Une",
+        "mean_rank": 152.4,
+        "rank_std": 53.70567940171691
+      },
+      {
+        "rank": 152,
+        "feature_id": 196,
+        "feature": "ST_IN",
+        "mean_rank": 152.8,
+        "rank_std": 52.08838642154314
+      },
+      {
+        "rank": 153,
+        "feature_id": 221,
+        "feature": "ST_RI",
+        "mean_rank": 153.4,
+        "rank_std": 25.909457732650445
+      },
+      {
+        "rank": 154,
+        "feature_id": 226,
+        "feature": "ST_UT",
+        "mean_rank": 155.2,
+        "rank_std": 16.94697613145189
+      },
+      {
+        "rank": 155,
+        "feature_id": 95,
+        "feature": "POBP_IL",
+        "mean_rank": 155.6,
+        "rank_std": 54.3120612755583
+      },
+      {
+        "rank": 156,
+        "feature_id": 35,
+        "feature": "MIL_02",
+        "mean_rank": 156.6,
+        "rank_std": 32.222662832236566
+      },
+      {
+        "rank": 157,
+        "feature_id": 77,
+        "feature": "POBP_AL",
+        "mean_rank": 157.4,
+        "rank_std": 29.74558790812513
+      },
+      {
+        "rank": 158,
+        "feature_id": 206,
+        "feature": "ST_MS",
+        "mean_rank": 158.0,
+        "rank_std": 43.393547907494266
+      },
+      {
+        "rank": 159,
+        "feature_id": 108,
+        "feature": "POBP_MS",
+        "mean_rank": 160.2,
+        "rank_std": 28.083803161252927
+      },
+      {
+        "rank": 160,
+        "feature_id": 5,
+        "feature": "ANC_04",
+        "mean_rank": 160.4,
+        "rank_std": 29.14275210065103
+      },
+      {
+        "rank": 161,
+        "feature_id": 211,
+        "feature": "ST_NH",
+        "mean_rank": 160.4,
+        "rank_std": 40.51913128387626
+      },
+      {
+        "rank": 162,
+        "feature_id": 3,
+        "feature": "ANC_02",
+        "mean_rank": 160.8,
+        "rank_std": 50.92838108559902
+      },
+      {
+        "rank": 163,
+        "feature_id": 116,
+        "feature": "POBP_NV",
+        "mean_rank": 161.0,
+        "rank_std": 64.28452379850067
+      },
+      {
+        "rank": 164,
+        "feature_id": 7,
+        "feature": "CIT_01",
+        "mean_rank": 162.4,
+        "rank_std": 45.818118686825194
+      },
+      {
+        "rank": 165,
+        "feature_id": 183,
+        "feature": "ST_AL",
+        "mean_rank": 163.4,
+        "rank_std": 34.428186127067455
+      },
+      {
+        "rank": 166,
+        "feature_id": 202,
+        "feature": "ST_ME",
+        "mean_rank": 164.4,
+        "rank_std": 34.60924731917758
+      },
+      {
+        "rank": 167,
+        "feature_id": 134,
+        "feature": "POBP_WA",
+        "mean_rank": 165.4,
+        "rank_std": 30.907927785602194
+      },
+      {
+        "rank": 168,
+        "feature_id": 14,
+        "feature": "DEYE_01",
+        "mean_rank": 165.6,
+        "rank_std": 51.30594507462074
+      },
+      {
+        "rank": 169,
+        "feature_id": 165,
+        "feature": "SCHL_09",
+        "mean_rank": 165.8,
+        "rank_std": 41.74565845689825
+      },
+      {
+        "rank": 170,
+        "feature_id": 51,
+        "feature": "OCCP_EAT",
+        "mean_rank": 166.4,
+        "rank_std": 43.80981625161192
+      },
+      {
+        "rank": 171,
+        "feature_id": 115,
+        "feature": "POBP_NM",
+        "mean_rank": 167.4,
+        "rank_std": 59.15488145537949
+      },
+      {
+        "rank": 172,
+        "feature_id": 156,
+        "feature": "RELP_15",
+        "mean_rank": 168.0,
+        "rank_std": 41.43669871020132
+      },
+      {
+        "rank": 173,
+        "feature_id": 154,
+        "feature": "RELP_13",
+        "mean_rank": 169.4,
+        "rank_std": 30.64800156617067
+      },
+      {
+        "rank": 174,
+        "feature_id": 182,
+        "feature": "ST_AK",
+        "mean_rank": 170.0,
+        "rank_std": 48.21306876771069
+      },
+      {
+        "rank": 175,
+        "feature_id": 0,
+        "feature": "ACS_YEAR",
+        "mean_rank": 170.4,
+        "rank_std": 39.042284769208884
+      },
+      {
+        "rank": 176,
+        "feature_id": 18,
+        "feature": "DREM_01",
+        "mean_rank": 170.4,
+        "rank_std": 58.350664092193504
+      },
+      {
+        "rank": 177,
+        "feature_id": 121,
+        "feature": "POBP_OR",
+        "mean_rank": 171.0,
+        "rank_std": 63.079315151640635
+      },
+      {
+        "rank": 178,
+        "feature_id": 209,
+        "feature": "ST_ND",
+        "mean_rank": 171.8,
+        "rank_std": 49.30212977144091
+      },
+      {
+        "rank": 179,
+        "feature_id": 207,
+        "feature": "ST_MT",
+        "mean_rank": 172.0,
+        "rank_std": 50.97548430373173
+      },
+      {
+        "rank": 180,
+        "feature_id": 146,
+        "feature": "RELP_05",
+        "mean_rank": 172.4,
+        "rank_std": 49.120260585628
+      },
+      {
+        "rank": 181,
+        "feature_id": 166,
+        "feature": "SCHL_10",
+        "mean_rank": 173.2,
+        "rank_std": 23.026072179162473
+      },
+      {
+        "rank": 182,
+        "feature_id": 231,
+        "feature": "ST_WV",
+        "mean_rank": 173.6,
+        "rank_std": 29.68669735757078
+      },
+      {
+        "rank": 183,
+        "feature_id": 118,
+        "feature": "POBP_OCEANIA",
+        "mean_rank": 174.6,
+        "rank_std": 40.14100148227495
+      },
+      {
+        "rank": 184,
+        "feature_id": 92,
+        "feature": "POBP_HI",
+        "mean_rank": 176.4,
+        "rank_std": 25.647611974606914
+      },
+      {
+        "rank": 185,
+        "feature_id": 236,
+        "feature": "WRK_00",
+        "mean_rank": 176.8,
+        "rank_std": 38.635475925630836
+      },
+      {
+        "rank": 186,
+        "feature_id": 189,
+        "feature": "ST_DE",
+        "mean_rank": 177.0,
+        "rank_std": 35.79106033634656
+      },
+      {
+        "rank": 187,
+        "feature_id": 194,
+        "feature": "ST_ID",
+        "mean_rank": 178.0,
+        "rank_std": 39.515819616958474
+      },
+      {
+        "rank": 188,
+        "feature_id": 9,
+        "feature": "CIT_03",
+        "mean_rank": 178.4,
+        "rank_std": 33.82011235936392
+      },
+      {
+        "rank": 189,
+        "feature_id": 11,
+        "feature": "CIT_05",
+        "mean_rank": 178.4,
+        "rank_std": 22.567675999092152
+      },
+      {
+        "rank": 190,
+        "feature_id": 69,
+        "feature": "OCCP_PRT",
+        "mean_rank": 179.4,
+        "rank_std": 19.217179813906096
+      },
+      {
+        "rank": 191,
+        "feature_id": 117,
+        "feature": "POBP_NY",
+        "mean_rank": 179.4,
+        "rank_std": 42.181749608094734
+      },
+      {
+        "rank": 192,
+        "feature_id": 38,
+        "feature": "NATIVITY_01",
+        "mean_rank": 180.2,
+        "rank_std": 46.57467122803982
+      },
+      {
+        "rank": 193,
+        "feature_id": 89,
+        "feature": "POBP_EUROPE",
+        "mean_rank": 180.8,
+        "rank_std": 62.12245970661496
+      },
+      {
+        "rank": 194,
+        "feature_id": 33,
+        "feature": "MAR_05",
+        "mean_rank": 183.0,
+        "rank_std": 41.78516483155236
+      },
+      {
+        "rank": 195,
+        "feature_id": 141,
+        "feature": "RELP_00",
+        "mean_rank": 183.2,
+        "rank_std": 22.30919093109385
+      },
+      {
+        "rank": 196,
+        "feature_id": 76,
+        "feature": "POBP_AK",
+        "mean_rank": 183.4,
+        "rank_std": 34.774991013658074
+      },
+      {
+        "rank": 197,
+        "feature_id": 70,
+        "feature": "OCCP_RPR",
+        "mean_rank": 184.4,
+        "rank_std": 54.518804095467836
+      },
+      {
+        "rank": 198,
+        "feature_id": 162,
+        "feature": "SCHL_06",
+        "mean_rank": 184.4,
+        "rank_std": 36.32216953872662
+      },
+      {
+        "rank": 199,
+        "feature_id": 2,
+        "feature": "ANC_01",
+        "mean_rank": 187.2,
+        "rank_std": 44.291082623932326
+      },
+      {
+        "rank": 200,
+        "feature_id": 91,
+        "feature": "POBP_GA",
+        "mean_rank": 187.8,
+        "rank_std": 22.1178660815188
+      },
+      {
+        "rank": 201,
+        "feature_id": 81,
+        "feature": "POBP_CA",
+        "mean_rank": 188.6,
+        "rank_std": 28.448198536990002
+      },
+      {
+        "rank": 202,
+        "feature_id": 235,
+        "feature": "WKW",
+        "mean_rank": 188.8,
+        "rank_std": 40.108602568526365
+      },
+      {
+        "rank": 203,
+        "feature_id": 110,
+        "feature": "POBP_NC",
+        "mean_rank": 189.2,
+        "rank_std": 43.34397305277863
+      },
+      {
+        "rank": 204,
+        "feature_id": 172,
+        "feature": "SCHL_16",
+        "mean_rank": 189.2,
+        "rank_std": 45.35085445722054
+      },
+      {
+        "rank": 205,
+        "feature_id": 216,
+        "feature": "ST_OH",
+        "mean_rank": 190.2,
+        "rank_std": 29.96164214458213
+      },
+      {
+        "rank": 206,
+        "feature_id": 12,
+        "feature": "DEAR_01",
+        "mean_rank": 191.0,
+        "rank_std": 22.124646889837585
+      },
+      {
+        "rank": 207,
+        "feature_id": 41,
+        "feature": "NWLA_02",
+        "mean_rank": 191.8,
+        "rank_std": 56.67186250689137
+      },
+      {
+        "rank": 208,
+        "feature_id": 175,
+        "feature": "SCHL_19",
+        "mean_rank": 191.8,
+        "rank_std": 32.50692233971097
+      },
+      {
+        "rank": 209,
+        "feature_id": 8,
+        "feature": "CIT_02",
+        "mean_rank": 192.0,
+        "rank_std": 10.27131929208707
+      },
+      {
+        "rank": 210,
+        "feature_id": 27,
+        "feature": "FER_02",
+        "mean_rank": 192.2,
+        "rank_std": 26.90167281044062
+      },
+      {
+        "rank": 211,
+        "feature_id": 222,
+        "feature": "ST_SC",
+        "mean_rank": 192.4,
+        "rank_std": 27.355072655725113
+      },
+      {
+        "rank": 212,
+        "feature_id": 176,
+        "feature": "SCHL_20",
+        "mean_rank": 192.8,
+        "rank_std": 28.146047679914137
+      },
+      {
+        "rank": 213,
+        "feature_id": 181,
+        "feature": "SEX",
+        "mean_rank": 193.0,
+        "rank_std": 33.3391661563393
+      },
+      {
+        "rank": 214,
+        "feature_id": 86,
+        "feature": "POBP_CT",
+        "mean_rank": 193.8,
+        "rank_std": 11.34460224071342
+      },
+      {
+        "rank": 215,
+        "feature_id": 124,
+        "feature": "POBP_RI",
+        "mean_rank": 194.2,
+        "rank_std": 30.96288100290411
+      },
+      {
+        "rank": 216,
+        "feature_id": 13,
+        "feature": "DEAR_02",
+        "mean_rank": 195.2,
+        "rank_std": 23.069460331789298
+      },
+      {
+        "rank": 217,
+        "feature_id": 16,
+        "feature": "DIS_10",
+        "mean_rank": 196.8,
+        "rank_std": 18.646715528478467
+      },
+      {
+        "rank": 218,
+        "feature_id": 145,
+        "feature": "RELP_04",
+        "mean_rank": 197.4,
+        "rank_std": 51.67978328127935
+      },
+      {
+        "rank": 219,
+        "feature_id": 205,
+        "feature": "ST_MO",
+        "mean_rank": 197.6,
+        "rank_std": 13.957077057894322
+      },
+      {
+        "rank": 220,
+        "feature_id": 219,
+        "feature": "ST_PA",
+        "mean_rank": 198.6,
+        "rank_std": 23.943683927081896
+      },
+      {
+        "rank": 221,
+        "feature_id": 201,
+        "feature": "ST_MD",
+        "mean_rank": 198.8,
+        "rank_std": 13.349157276772193
+      },
+      {
+        "rank": 222,
+        "feature_id": 19,
+        "feature": "DREM_02",
+        "mean_rank": 200.0,
+        "rank_std": 44.005681451376255
+      },
+      {
+        "rank": 223,
+        "feature_id": 104,
+        "feature": "POBP_MI",
+        "mean_rank": 202.2,
+        "rank_std": 32.15120526512187
+      },
+      {
+        "rank": 224,
+        "feature_id": 199,
+        "feature": "ST_LA",
+        "mean_rank": 203.0,
+        "rank_std": 42.16633728461603
+      },
+      {
+        "rank": 225,
+        "feature_id": 203,
+        "feature": "ST_MI",
+        "mean_rank": 203.0,
+        "rank_std": 29.50423698386386
+      },
+      {
+        "rank": 226,
+        "feature_id": 238,
+        "feature": "WRK_02",
+        "mean_rank": 204.0,
+        "rank_std": 19.557607215607945
+      },
+      {
+        "rank": 227,
+        "feature_id": 21,
+        "feature": "ENG_01",
+        "mean_rank": 204.2,
+        "rank_std": 31.97968104906614
+      },
+      {
+        "rank": 228,
+        "feature_id": 64,
+        "feature": "OCCP_NA",
+        "mean_rank": 204.2,
+        "rank_std": 38.50584371235099
+      },
+      {
+        "rank": 229,
+        "feature_id": 22,
+        "feature": "ENG_02",
+        "mean_rank": 205.2,
+        "rank_std": 17.22498185775532
+      },
+      {
+        "rank": 230,
+        "feature_id": 103,
+        "feature": "POBP_MEXICO",
+        "mean_rank": 205.4,
+        "rank_std": 26.463181970428273
+      },
+      {
+        "rank": 231,
+        "feature_id": 10,
+        "feature": "CIT_04",
+        "mean_rank": 207.4,
+        "rank_std": 30.98870762068015
+      },
+      {
+        "rank": 232,
+        "feature_id": 80,
+        "feature": "POBP_AZ",
+        "mean_rank": 207.6,
+        "rank_std": 20.67123605399542
+      },
+      {
+        "rank": 233,
+        "feature_id": 48,
+        "feature": "OCCP_CMM",
+        "mean_rank": 208.0,
+        "rank_std": 12.409673645990857
+      },
+      {
+        "rank": 234,
+        "feature_id": 224,
+        "feature": "ST_TN",
+        "mean_rank": 209.4,
+        "rank_std": 35.55699649857957
+      },
+      {
+        "rank": 235,
+        "feature_id": 99,
+        "feature": "POBP_LA",
+        "mean_rank": 213.4,
+        "rank_std": 10.85357084097211
+      },
+      {
+        "rank": 236,
+        "feature_id": 229,
+        "feature": "ST_WA",
+        "mean_rank": 215.6,
+        "rank_std": 24.48060456769808
+      },
+      {
+        "rank": 237,
+        "feature_id": 132,
+        "feature": "POBP_VA",
+        "mean_rank": 215.8,
+        "rank_std": 44.110089548764236
+      },
+      {
+        "rank": 238,
+        "feature_id": 174,
+        "feature": "SCHL_18",
+        "mean_rank": 216.6,
+        "rank_std": 22.501111083677625
+      },
+      {
+        "rank": 239,
+        "feature_id": 234,
+        "feature": "WKHP",
+        "mean_rank": 231.8,
+        "rank_std": 10.61602562167217
+      }
+    ]
+  }
+}

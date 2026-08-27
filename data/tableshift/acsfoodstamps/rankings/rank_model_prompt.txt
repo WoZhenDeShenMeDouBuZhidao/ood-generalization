@@ -1,0 +1,1564 @@
+# tableshift/acsfoodstamps rank prompts
+
+## 1. rank
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `acsfoodstamps`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Feature cards, in model input order:
+[
+  {
+    "feature_id": 0,
+    "feature": "ACS_YEAR",
+    "type": "integer",
+    "description": "Year of survey"
+  },
+  {
+    "feature_id": 1,
+    "feature": "AGEP",
+    "type": "integer",
+    "description": "age in years"
+  },
+  {
+    "feature_id": 2,
+    "feature": "ANC_01",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ANC_01` derived from semantic feature `ANC`. Interpret this column as the encoded model input for that derived category/value. Ancestry",
+    "values": "1=Single; 2=Multiple; 3=Unclassified; 4=Not reported; 8=Ancestry suppressed for this group"
+  },
+  {
+    "feature_id": 3,
+    "feature": "ANC_02",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ANC_02` derived from semantic feature `ANC`. Interpret this column as the encoded model input for that derived category/value. Ancestry",
+    "values": "1=Single; 2=Multiple; 3=Unclassified; 4=Not reported; 8=Ancestry suppressed for this group"
+  },
+  {
+    "feature_id": 4,
+    "feature": "ANC_03",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ANC_03` derived from semantic feature `ANC`. Interpret this column as the encoded model input for that derived category/value. Ancestry",
+    "values": "1=Single; 2=Multiple; 3=Unclassified; 4=Not reported; 8=Ancestry suppressed for this group"
+  },
+  {
+    "feature_id": 5,
+    "feature": "ANC_04",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ANC_04` derived from semantic feature `ANC`. Interpret this column as the encoded model input for that derived category/value. Ancestry",
+    "values": "1=Single; 2=Multiple; 3=Unclassified; 4=Not reported; 8=Ancestry suppressed for this group"
+  },
+  {
+    "feature_id": 6,
+    "feature": "ANC_08",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ANC_08` derived from semantic feature `ANC`. Interpret this column as the encoded model input for that derived category/value. Ancestry",
+    "values": "1=Single; 2=Multiple; 3=Unclassified; 4=Not reported; 8=Ancestry suppressed for this group"
+  },
+  {
+    "feature_id": 7,
+    "feature": "CIT_01",
+    "type": "encoded_model_feature",
+    "description": "Model feature `CIT_01` derived from semantic feature `CIT`. Interpret this column as the encoded model input for that derived category/value. citizenship status",
+    "values": "1=Born in the U.S.; 2=Born in Puerto Rico, Guam, the U.S. Virgin Islands, or the Northern Marianas; 3=Born abroad of American parent(s); 4=U.S. citizen by naturalization; 5=Not a citizen of the U.S."
+  },
+  {
+    "feature_id": 8,
+    "feature": "CIT_02",
+    "type": "encoded_model_feature",
+    "description": "Model feature `CIT_02` derived from semantic feature `CIT`. Interpret this column as the encoded model input for that derived category/value. citizenship status",
+    "values": "1=Born in the U.S.; 2=Born in Puerto Rico, Guam, the U.S. Virgin Islands, or the Northern Marianas; 3=Born abroad of American parent(s); 4=U.S. citizen by naturalization; 5=Not a citizen of the U.S."
+  },
+  {
+    "feature_id": 9,
+    "feature": "CIT_03",
+    "type": "encoded_model_feature",
+    "description": "Model feature `CIT_03` derived from semantic feature `CIT`. Interpret this column as the encoded model input for that derived category/value. citizenship status",
+    "values": "1=Born in the U.S.; 2=Born in Puerto Rico, Guam, the U.S. Virgin Islands, or the Northern Marianas; 3=Born abroad of American parent(s); 4=U.S. citizen by naturalization; 5=Not a citizen of the U.S."
+  },
+  {
+    "feature_id": 10,
+    "feature": "CIT_04",
+    "type": "encoded_model_feature",
+    "description": "Model feature `CIT_04` derived from semantic feature `CIT`. Interpret this column as the encoded model input for that derived category/value. citizenship status",
+    "values": "1=Born in the U.S.; 2=Born in Puerto Rico, Guam, the U.S. Virgin Islands, or the Northern Marianas; 3=Born abroad of American parent(s); 4=U.S. citizen by naturalization; 5=Not a citizen of the U.S."
+  },
+  {
+    "feature_id": 11,
+    "feature": "CIT_05",
+    "type": "encoded_model_feature",
+    "description": "Model feature `CIT_05` derived from semantic feature `CIT`. Interpret this column as the encoded model input for that derived category/value. citizenship status",
+    "values": "1=Born in the U.S.; 2=Born in Puerto Rico, Guam, the U.S. Virgin Islands, or the Northern Marianas; 3=Born abroad of American parent(s); 4=U.S. citizen by naturalization; 5=Not a citizen of the U.S."
+  },
+  {
+    "feature_id": 12,
+    "feature": "DEAR_01",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DEAR_01` derived from semantic feature `DEAR`. Interpret this column as the encoded model input for that derived category/value. Hearing difficulty",
+    "values": "01=Yes; 02=No"
+  },
+  {
+    "feature_id": 13,
+    "feature": "DEAR_02",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DEAR_02` derived from semantic feature `DEAR`. Interpret this column as the encoded model input for that derived category/value. Hearing difficulty",
+    "values": "01=Yes; 02=No"
+  },
+  {
+    "feature_id": 14,
+    "feature": "DEYE_01",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DEYE_01` derived from semantic feature `DEYE`. Interpret this column as the encoded model input for that derived category/value. Vision difficulty",
+    "values": "01=Yes; 02=No"
+  },
+  {
+    "feature_id": 15,
+    "feature": "DEYE_02",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DEYE_02` derived from semantic feature `DEYE`. Interpret this column as the encoded model input for that derived category/value. Vision difficulty",
+    "values": "01=Yes; 02=No"
+  },
+  {
+    "feature_id": 16,
+    "feature": "DIS_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DIS_10` derived from semantic feature `DIS`. Interpret this column as the encoded model input for that derived category/value. Disability status",
+    "values": "01=With a disability; 02=Without a disability"
+  },
+  {
+    "feature_id": 17,
+    "feature": "DIS_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DIS_20` derived from semantic feature `DIS`. Interpret this column as the encoded model input for that derived category/value. Disability status",
+    "values": "01=With a disability; 02=Without a disability"
+  },
+  {
+    "feature_id": 18,
+    "feature": "DREM_01",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DREM_01` derived from semantic feature `DREM`. Interpret this column as the encoded model input for that derived category/value. Cognitive difficulty",
+    "values": "01=Yes; 02=No"
+  },
+  {
+    "feature_id": 19,
+    "feature": "DREM_02",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DREM_02` derived from semantic feature `DREM`. Interpret this column as the encoded model input for that derived category/value. Cognitive difficulty",
+    "values": "01=Yes; 02=No"
+  },
+  {
+    "feature_id": 20,
+    "feature": "ENG_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ENG_00` derived from semantic feature `ENG`. Interpret this column as the encoded model input for that derived category/value. Ability to speak English",
+    "values": "00=less than 5 years old/speaks only English; 01=Very well; 02=Well; 03=Not well; 04=Not at all"
+  },
+  {
+    "feature_id": 21,
+    "feature": "ENG_01",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ENG_01` derived from semantic feature `ENG`. Interpret this column as the encoded model input for that derived category/value. Ability to speak English",
+    "values": "00=less than 5 years old/speaks only English; 01=Very well; 02=Well; 03=Not well; 04=Not at all"
+  },
+  {
+    "feature_id": 22,
+    "feature": "ENG_02",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ENG_02` derived from semantic feature `ENG`. Interpret this column as the encoded model input for that derived category/value. Ability to speak English",
+    "values": "00=less than 5 years old/speaks only English; 01=Very well; 02=Well; 03=Not well; 04=Not at all"
+  },
+  {
+    "feature_id": 23,
+    "feature": "ENG_03",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ENG_03` derived from semantic feature `ENG`. Interpret this column as the encoded model input for that derived category/value. Ability to speak English",
+    "values": "00=less than 5 years old/speaks only English; 01=Very well; 02=Well; 03=Not well; 04=Not at all"
+  },
+  {
+    "feature_id": 24,
+    "feature": "ENG_04",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ENG_04` derived from semantic feature `ENG`. Interpret this column as the encoded model input for that derived category/value. Ability to speak English",
+    "values": "00=less than 5 years old/speaks only English; 01=Very well; 02=Well; 03=Not well; 04=Not at all"
+  },
+  {
+    "feature_id": 25,
+    "feature": "FER_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `FER_00` derived from semantic feature `FER`. Interpret this column as the encoded model input for that derived category/value. Gave birth to child within the past 12 months",
+    "values": "00=less than 15 years old or greater than 50 years or male; 01=Yes; 02=No"
+  },
+  {
+    "feature_id": 26,
+    "feature": "FER_01",
+    "type": "encoded_model_feature",
+    "description": "Model feature `FER_01` derived from semantic feature `FER`. Interpret this column as the encoded model input for that derived category/value. Gave birth to child within the past 12 months",
+    "values": "00=less than 15 years old or greater than 50 years or male; 01=Yes; 02=No"
+  },
+  {
+    "feature_id": 27,
+    "feature": "FER_02",
+    "type": "encoded_model_feature",
+    "description": "Model feature `FER_02` derived from semantic feature `FER`. Interpret this column as the encoded model input for that derived category/value. Gave birth to child within the past 12 months",
+    "values": "00=less than 15 years old or greater than 50 years or male; 01=Yes; 02=No"
+  },
+  {
+    "feature_id": 28,
+    "feature": "HUPAC",
+    "type": "categorical",
+    "description": "Household presence and age of children",
+    "values": "00=N/A (GQ/vacant); 01=With children under 6 years only; 02=With children 6 to 17 years only; 03=With children under 6 years and 6 to 17 years; 04=No children"
+  },
+  {
+    "feature_id": 29,
+    "feature": "MAR_01",
+    "type": "encoded_model_feature",
+    "description": "Model feature `MAR_01` derived from semantic feature `MAR`. Interpret this column as the encoded model input for that derived category/value. marital status",
+    "values": "1=Married; 2=Widowed; 3=Divorced; 4=Separated; 5=Never married or under 15 years old"
+  },
+  {
+    "feature_id": 30,
+    "feature": "MAR_02",
+    "type": "encoded_model_feature",
+    "description": "Model feature `MAR_02` derived from semantic feature `MAR`. Interpret this column as the encoded model input for that derived category/value. marital status",
+    "values": "1=Married; 2=Widowed; 3=Divorced; 4=Separated; 5=Never married or under 15 years old"
+  },
+  {
+    "feature_id": 31,
+    "feature": "MAR_03",
+    "type": "encoded_model_feature",
+    "description": "Model feature `MAR_03` derived from semantic feature `MAR`. Interpret this column as the encoded model input for that derived category/value. marital status",
+    "values": "1=Married; 2=Widowed; 3=Divorced; 4=Separated; 5=Never married or under 15 years old"
+  },
+  {
+    "feature_id": 32,
+    "feature": "MAR_04",
+    "type": "encoded_model_feature",
+    "description": "Model feature `MAR_04` derived from semantic feature `MAR`. Interpret this column as the encoded model input for that derived category/value. marital status",
+    "values": "1=Married; 2=Widowed; 3=Divorced; 4=Separated; 5=Never married or under 15 years old"
+  },
+  {
+    "feature_id": 33,
+    "feature": "MAR_05",
+    "type": "encoded_model_feature",
+    "description": "Model feature `MAR_05` derived from semantic feature `MAR`. Interpret this column as the encoded model input for that derived category/value. marital status",
+    "values": "1=Married; 2=Widowed; 3=Divorced; 4=Separated; 5=Never married or under 15 years old"
+  },
+  {
+    "feature_id": 34,
+    "feature": "MIL_01",
+    "type": "encoded_model_feature",
+    "description": "Model feature `MIL_01` derived from semantic feature `MIL`. Interpret this column as the encoded model input for that derived category/value. Military service",
+    "values": "00=N/A (less than 17 years old); 01=Now on active duty; 02=On active duty in the past, but not now; 03=Only on active duty for training in Reserves/National Guard; 04=Never served in the military"
+  },
+  {
+    "feature_id": 35,
+    "feature": "MIL_02",
+    "type": "encoded_model_feature",
+    "description": "Model feature `MIL_02` derived from semantic feature `MIL`. Interpret this column as the encoded model input for that derived category/value. Military service",
+    "values": "00=N/A (less than 17 years old); 01=Now on active duty; 02=On active duty in the past, but not now; 03=Only on active duty for training in Reserves/National Guard; 04=Never served in the military"
+  },
+  {
+    "feature_id": 36,
+    "feature": "MIL_03",
+    "type": "encoded_model_feature",
+    "description": "Model feature `MIL_03` derived from semantic feature `MIL`. Interpret this column as the encoded model input for that derived category/value. Military service",
+    "values": "00=N/A (less than 17 years old); 01=Now on active duty; 02=On active duty in the past, but not now; 03=Only on active duty for training in Reserves/National Guard; 04=Never served in the military"
+  },
+  {
+    "feature_id": 37,
+    "feature": "MIL_04",
+    "type": "encoded_model_feature",
+    "description": "Model feature `MIL_04` derived from semantic feature `MIL`. Interpret this column as the encoded model input for that derived category/value. Military service",
+    "values": "00=N/A (less than 17 years old); 01=Now on active duty; 02=On active duty in the past, but not now; 03=Only on active duty for training in Reserves/National Guard; 04=Never served in the military"
+  },
+  {
+    "feature_id": 38,
+    "feature": "NATIVITY_01",
+    "type": "encoded_model_feature",
+    "description": "Model feature `NATIVITY_01` derived from semantic feature `NATIVITY`. Interpret this column as the encoded model input for that derived category/value. Nativity",
+    "values": "01=Native; 02=Foreign born"
+  },
+  {
+    "feature_id": 39,
+    "feature": "NATIVITY_02",
+    "type": "encoded_model_feature",
+    "description": "Model feature `NATIVITY_02` derived from semantic feature `NATIVITY`. Interpret this column as the encoded model input for that derived category/value. Nativity",
+    "values": "01=Native; 02=Foreign born"
+  },
+  {
+    "feature_id": 40,
+    "feature": "NWLA_01",
+    "type": "encoded_model_feature",
+    "description": "Model feature `NWLA_01` derived from semantic feature `NWLA`. Interpret this column as the encoded model input for that derived category/value. On layoff from work",
+    "values": "01=Yes; 02=No; 03=Did not report"
+  },
+  {
+    "feature_id": 41,
+    "feature": "NWLA_02",
+    "type": "encoded_model_feature",
+    "description": "Model feature `NWLA_02` derived from semantic feature `NWLA`. Interpret this column as the encoded model input for that derived category/value. On layoff from work",
+    "values": "01=Yes; 02=No; 03=Did not report"
+  },
+  {
+    "feature_id": 42,
+    "feature": "NWLA_03",
+    "type": "encoded_model_feature",
+    "description": "Model feature `NWLA_03` derived from semantic feature `NWLA`. Interpret this column as the encoded model input for that derived category/value. On layoff from work",
+    "values": "01=Yes; 02=No; 03=Did not report"
+  },
+  {
+    "feature_id": 43,
+    "feature": "NWLK_01",
+    "type": "encoded_model_feature",
+    "description": "Model feature `NWLK_01` derived from semantic feature `NWLK`. Interpret this column as the encoded model input for that derived category/value. Looking for work",
+    "values": "01=Yes; 02=No; 03=Did not report"
+  },
+  {
+    "feature_id": 44,
+    "feature": "NWLK_02",
+    "type": "encoded_model_feature",
+    "description": "Model feature `NWLK_02` derived from semantic feature `NWLK`. Interpret this column as the encoded model input for that derived category/value. Looking for work",
+    "values": "01=Yes; 02=No; 03=Did not report"
+  },
+  {
+    "feature_id": 45,
+    "feature": "NWLK_03",
+    "type": "encoded_model_feature",
+    "description": "Model feature `NWLK_03` derived from semantic feature `NWLK`. Interpret this column as the encoded model input for that derived category/value. Looking for work",
+    "values": "01=Yes; 02=No; 03=Did not report"
+  },
+  {
+    "feature_id": 46,
+    "feature": "OCCP_BUS",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_BUS` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 47,
+    "feature": "OCCP_CLN",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_CLN` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 48,
+    "feature": "OCCP_CMM",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_CMM` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 49,
+    "feature": "OCCP_CMS",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_CMS` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 50,
+    "feature": "OCCP_CON",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_CON` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 51,
+    "feature": "OCCP_EAT",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_EAT` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 52,
+    "feature": "OCCP_EDU",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_EDU` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 53,
+    "feature": "OCCP_ENG",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_ENG` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 54,
+    "feature": "OCCP_ENT",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_ENT` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 55,
+    "feature": "OCCP_EXT",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_EXT` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 56,
+    "feature": "OCCP_FFF",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_FFF` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 57,
+    "feature": "OCCP_FIN",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_FIN` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 58,
+    "feature": "OCCP_G",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_G` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 59,
+    "feature": "OCCP_HLS",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_HLS` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 60,
+    "feature": "OCCP_LGL",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_LGL` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 61,
+    "feature": "OCCP_MED",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_MED` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 62,
+    "feature": "OCCP_MGR",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_MGR` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 63,
+    "feature": "OCCP_MIL",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_MIL` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 64,
+    "feature": "OCCP_NA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_NA` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 65,
+    "feature": "OCCP_O",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_O` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 66,
+    "feature": "OCCP_OFF",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_OFF` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 67,
+    "feature": "OCCP_PRD",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_PRD` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 68,
+    "feature": "OCCP_PRS",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_PRS` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 69,
+    "feature": "OCCP_PRT",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_PRT` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 70,
+    "feature": "OCCP_RPR",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_RPR` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 71,
+    "feature": "OCCP_SAL",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_SAL` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 72,
+    "feature": "OCCP_SCI",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_SCI` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 73,
+    "feature": "OCCP_TRN",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_TRN` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 74,
+    "feature": "OCCP_Une",
+    "type": "encoded_model_feature",
+    "description": "Model feature `OCCP_Une` derived from semantic feature `OCCP`. Interpret this column as the encoded model input for that derived category/value. Occupation"
+  },
+  {
+    "feature_id": 75,
+    "feature": "POBP_AFRICA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_AFRICA` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 76,
+    "feature": "POBP_AK",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_AK` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 77,
+    "feature": "POBP_AL",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_AL` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 78,
+    "feature": "POBP_AR",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_AR` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 79,
+    "feature": "POBP_ASIA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_ASIA` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 80,
+    "feature": "POBP_AZ",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_AZ` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 81,
+    "feature": "POBP_CA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_CA` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 82,
+    "feature": "POBP_CANADA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_CANADA` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 83,
+    "feature": "POBP_CARIBBEAN",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_CARIBBEAN` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 84,
+    "feature": "POBP_CENTRALAMERICA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_CENTRALAMERICA` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 85,
+    "feature": "POBP_CO",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_CO` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 86,
+    "feature": "POBP_CT",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_CT` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 87,
+    "feature": "POBP_DC",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_DC` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 88,
+    "feature": "POBP_DE",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_DE` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 89,
+    "feature": "POBP_EUROPE",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_EUROPE` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 90,
+    "feature": "POBP_FL",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_FL` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 91,
+    "feature": "POBP_GA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_GA` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 92,
+    "feature": "POBP_HI",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_HI` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 93,
+    "feature": "POBP_IA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_IA` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 94,
+    "feature": "POBP_ID",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_ID` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 95,
+    "feature": "POBP_IL",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_IL` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 96,
+    "feature": "POBP_IN",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_IN` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 97,
+    "feature": "POBP_KS",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_KS` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 98,
+    "feature": "POBP_KY",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_KY` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 99,
+    "feature": "POBP_LA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_LA` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 100,
+    "feature": "POBP_MA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_MA` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 101,
+    "feature": "POBP_MD",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_MD` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 102,
+    "feature": "POBP_ME",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_ME` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 103,
+    "feature": "POBP_MEXICO",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_MEXICO` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 104,
+    "feature": "POBP_MI",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_MI` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 105,
+    "feature": "POBP_MIDDLEEAST",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_MIDDLEEAST` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 106,
+    "feature": "POBP_MN",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_MN` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 107,
+    "feature": "POBP_MO",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_MO` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 108,
+    "feature": "POBP_MS",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_MS` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 109,
+    "feature": "POBP_MT",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_MT` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 110,
+    "feature": "POBP_NC",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_NC` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 111,
+    "feature": "POBP_ND",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_ND` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 112,
+    "feature": "POBP_NE",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_NE` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 113,
+    "feature": "POBP_NH",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_NH` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 114,
+    "feature": "POBP_NJ",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_NJ` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 115,
+    "feature": "POBP_NM",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_NM` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 116,
+    "feature": "POBP_NV",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_NV` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 117,
+    "feature": "POBP_NY",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_NY` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 118,
+    "feature": "POBP_OCEANIA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_OCEANIA` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 119,
+    "feature": "POBP_OH",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_OH` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 120,
+    "feature": "POBP_OK",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_OK` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 121,
+    "feature": "POBP_OR",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_OR` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 122,
+    "feature": "POBP_PA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_PA` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 123,
+    "feature": "POBP_PR",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_PR` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 124,
+    "feature": "POBP_RI",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_RI` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 125,
+    "feature": "POBP_SC",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_SC` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 126,
+    "feature": "POBP_SD",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_SD` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 127,
+    "feature": "POBP_SOUTHAMERICA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_SOUTHAMERICA` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 128,
+    "feature": "POBP_TN",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_TN` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 129,
+    "feature": "POBP_TX",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_TX` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 130,
+    "feature": "POBP_USTERR",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_USTERR` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 131,
+    "feature": "POBP_UT",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_UT` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 132,
+    "feature": "POBP_VA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_VA` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 133,
+    "feature": "POBP_VT",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_VT` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 134,
+    "feature": "POBP_WA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_WA` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 135,
+    "feature": "POBP_WI",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_WI` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 136,
+    "feature": "POBP_WV",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_WV` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 137,
+    "feature": "POBP_WY",
+    "type": "encoded_model_feature",
+    "description": "Model feature `POBP_WY` derived from semantic feature `POBP`. Interpret this column as the encoded model input for that derived category/value. Place of birth"
+  },
+  {
+    "feature_id": 138,
+    "feature": "PUBCOV_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `PUBCOV_10` derived from semantic feature `PUBCOV`. Interpret this column as the encoded model input for that derived category/value. Public health coverage recode",
+    "values": "00=Without public health coverage; 01=With public health coverage"
+  },
+  {
+    "feature_id": 139,
+    "feature": "PUBCOV_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `PUBCOV_20` derived from semantic feature `PUBCOV`. Interpret this column as the encoded model input for that derived category/value. Public health coverage recode",
+    "values": "00=Without public health coverage; 01=With public health coverage"
+  },
+  {
+    "feature_id": 140,
+    "feature": "RAC1P",
+    "type": "categorical",
+    "description": "race",
+    "values": "1=White alone; 2=Black or African American alone; 3=American Indian alone; 4=Alaska Native alone; 5=American Indian and Alaska Native tribes specified; or American Indian or Alaska Native, not specified and no other races; 6=Asian alone; 7=Native Hawaiian a..."
+  },
+  {
+    "feature_id": 141,
+    "feature": "RELP_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `RELP_00` derived from semantic feature `RELP`. Interpret this column as the encoded model input for that derived category/value. Relationship to reference person",
+    "values": "00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=..."
+  },
+  {
+    "feature_id": 142,
+    "feature": "RELP_01",
+    "type": "encoded_model_feature",
+    "description": "Model feature `RELP_01` derived from semantic feature `RELP`. Interpret this column as the encoded model input for that derived category/value. Relationship to reference person",
+    "values": "00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=..."
+  },
+  {
+    "feature_id": 143,
+    "feature": "RELP_02",
+    "type": "encoded_model_feature",
+    "description": "Model feature `RELP_02` derived from semantic feature `RELP`. Interpret this column as the encoded model input for that derived category/value. Relationship to reference person",
+    "values": "00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=..."
+  },
+  {
+    "feature_id": 144,
+    "feature": "RELP_03",
+    "type": "encoded_model_feature",
+    "description": "Model feature `RELP_03` derived from semantic feature `RELP`. Interpret this column as the encoded model input for that derived category/value. Relationship to reference person",
+    "values": "00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=..."
+  },
+  {
+    "feature_id": 145,
+    "feature": "RELP_04",
+    "type": "encoded_model_feature",
+    "description": "Model feature `RELP_04` derived from semantic feature `RELP`. Interpret this column as the encoded model input for that derived category/value. Relationship to reference person",
+    "values": "00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=..."
+  },
+  {
+    "feature_id": 146,
+    "feature": "RELP_05",
+    "type": "encoded_model_feature",
+    "description": "Model feature `RELP_05` derived from semantic feature `RELP`. Interpret this column as the encoded model input for that derived category/value. Relationship to reference person",
+    "values": "00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=..."
+  },
+  {
+    "feature_id": 147,
+    "feature": "RELP_06",
+    "type": "encoded_model_feature",
+    "description": "Model feature `RELP_06` derived from semantic feature `RELP`. Interpret this column as the encoded model input for that derived category/value. Relationship to reference person",
+    "values": "00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=..."
+  },
+  {
+    "feature_id": 148,
+    "feature": "RELP_07",
+    "type": "encoded_model_feature",
+    "description": "Model feature `RELP_07` derived from semantic feature `RELP`. Interpret this column as the encoded model input for that derived category/value. Relationship to reference person",
+    "values": "00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=..."
+  },
+  {
+    "feature_id": 149,
+    "feature": "RELP_08",
+    "type": "encoded_model_feature",
+    "description": "Model feature `RELP_08` derived from semantic feature `RELP`. Interpret this column as the encoded model input for that derived category/value. Relationship to reference person",
+    "values": "00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=..."
+  },
+  {
+    "feature_id": 150,
+    "feature": "RELP_09",
+    "type": "encoded_model_feature",
+    "description": "Model feature `RELP_09` derived from semantic feature `RELP`. Interpret this column as the encoded model input for that derived category/value. Relationship to reference person",
+    "values": "00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=..."
+  },
+  {
+    "feature_id": 151,
+    "feature": "RELP_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `RELP_10` derived from semantic feature `RELP`. Interpret this column as the encoded model input for that derived category/value. Relationship to reference person",
+    "values": "00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=..."
+  },
+  {
+    "feature_id": 152,
+    "feature": "RELP_11",
+    "type": "encoded_model_feature",
+    "description": "Model feature `RELP_11` derived from semantic feature `RELP`. Interpret this column as the encoded model input for that derived category/value. Relationship to reference person",
+    "values": "00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=..."
+  },
+  {
+    "feature_id": 153,
+    "feature": "RELP_12",
+    "type": "encoded_model_feature",
+    "description": "Model feature `RELP_12` derived from semantic feature `RELP`. Interpret this column as the encoded model input for that derived category/value. Relationship to reference person",
+    "values": "00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=..."
+  },
+  {
+    "feature_id": 154,
+    "feature": "RELP_13",
+    "type": "encoded_model_feature",
+    "description": "Model feature `RELP_13` derived from semantic feature `RELP`. Interpret this column as the encoded model input for that derived category/value. Relationship to reference person",
+    "values": "00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=..."
+  },
+  {
+    "feature_id": 155,
+    "feature": "RELP_14",
+    "type": "encoded_model_feature",
+    "description": "Model feature `RELP_14` derived from semantic feature `RELP`. Interpret this column as the encoded model input for that derived category/value. Relationship to reference person",
+    "values": "00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=..."
+  },
+  {
+    "feature_id": 156,
+    "feature": "RELP_15",
+    "type": "encoded_model_feature",
+    "description": "Model feature `RELP_15` derived from semantic feature `RELP`. Interpret this column as the encoded model input for that derived category/value. Relationship to reference person",
+    "values": "00=Reference person; 01=Husband/wife; 02=Biological son or daughter; 03=Adopted son or daughter; 04=Stepson or stepdaughter; 05=Brother or sister; 06=Father or mother; 07=Grandchild; 08=Parent-in-law; 09=Son-in-law or daughter-in-law; 10=Other relative; 11=..."
+  },
+  {
+    "feature_id": 157,
+    "feature": "SCHL_01",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_01` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 158,
+    "feature": "SCHL_02",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_02` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 159,
+    "feature": "SCHL_03",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_03` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 160,
+    "feature": "SCHL_04",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_04` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 161,
+    "feature": "SCHL_05",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_05` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 162,
+    "feature": "SCHL_06",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_06` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 163,
+    "feature": "SCHL_07",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_07` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 164,
+    "feature": "SCHL_08",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_08` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 165,
+    "feature": "SCHL_09",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_09` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 166,
+    "feature": "SCHL_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_10` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 167,
+    "feature": "SCHL_11",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_11` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 168,
+    "feature": "SCHL_12",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_12` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 169,
+    "feature": "SCHL_13",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_13` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 170,
+    "feature": "SCHL_14",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_14` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 171,
+    "feature": "SCHL_15",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_15` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 172,
+    "feature": "SCHL_16",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_16` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 173,
+    "feature": "SCHL_17",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_17` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 174,
+    "feature": "SCHL_18",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_18` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 175,
+    "feature": "SCHL_19",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_19` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 176,
+    "feature": "SCHL_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_20` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 177,
+    "feature": "SCHL_21",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_21` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 178,
+    "feature": "SCHL_22",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_22` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 179,
+    "feature": "SCHL_23",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_23` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 180,
+    "feature": "SCHL_24",
+    "type": "encoded_model_feature",
+    "description": "Model feature `SCHL_24` derived from semantic feature `SCHL`. Interpret this column as the encoded model input for that derived category/value. Educational attainment",
+    "values": "nan=NA (less than 3 years old); 1=No schooling completed; 2=Nursery school, preschool; 3=Kindergarten; 4=Grade 1; 5=Grade 2; 6=Grade 3; 7=Grade 4; 8=Grade 5; 9=Grade 6; 10=Grade 7; 11=Grade 8; ... (+13 more)"
+  },
+  {
+    "feature_id": 181,
+    "feature": "SEX",
+    "type": "categorical",
+    "description": "sex",
+    "values": "1=Male; 2=Female"
+  },
+  {
+    "feature_id": 182,
+    "feature": "ST_AK",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_AK` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 183,
+    "feature": "ST_AL",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_AL` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 184,
+    "feature": "ST_AR",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_AR` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 185,
+    "feature": "ST_AZ",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_AZ` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 186,
+    "feature": "ST_CA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_CA` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 187,
+    "feature": "ST_CO",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_CO` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 188,
+    "feature": "ST_CT",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_CT` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 189,
+    "feature": "ST_DE",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_DE` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 190,
+    "feature": "ST_FL",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_FL` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 191,
+    "feature": "ST_GA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_GA` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 192,
+    "feature": "ST_HI",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_HI` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 193,
+    "feature": "ST_IA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_IA` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 194,
+    "feature": "ST_ID",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_ID` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 195,
+    "feature": "ST_IL",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_IL` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 196,
+    "feature": "ST_IN",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_IN` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 197,
+    "feature": "ST_KS",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_KS` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 198,
+    "feature": "ST_KY",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_KY` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 199,
+    "feature": "ST_LA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_LA` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 200,
+    "feature": "ST_MA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_MA` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 201,
+    "feature": "ST_MD",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_MD` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 202,
+    "feature": "ST_ME",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_ME` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 203,
+    "feature": "ST_MI",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_MI` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 204,
+    "feature": "ST_MN",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_MN` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 205,
+    "feature": "ST_MO",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_MO` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 206,
+    "feature": "ST_MS",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_MS` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 207,
+    "feature": "ST_MT",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_MT` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 208,
+    "feature": "ST_NC",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_NC` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 209,
+    "feature": "ST_ND",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_ND` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 210,
+    "feature": "ST_NE",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_NE` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 211,
+    "feature": "ST_NH",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_NH` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 212,
+    "feature": "ST_NJ",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_NJ` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 213,
+    "feature": "ST_NM",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_NM` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 214,
+    "feature": "ST_NV",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_NV` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 215,
+    "feature": "ST_NY",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_NY` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 216,
+    "feature": "ST_OH",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_OH` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 217,
+    "feature": "ST_OK",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_OK` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 218,
+    "feature": "ST_OR",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_OR` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 219,
+    "feature": "ST_PA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_PA` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 220,
+    "feature": "ST_PR",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_PR` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 221,
+    "feature": "ST_RI",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_RI` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 222,
+    "feature": "ST_SC",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_SC` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 223,
+    "feature": "ST_SD",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_SD` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 224,
+    "feature": "ST_TN",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_TN` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 225,
+    "feature": "ST_TX",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_TX` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 226,
+    "feature": "ST_UT",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_UT` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 227,
+    "feature": "ST_VA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_VA` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 228,
+    "feature": "ST_VT",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_VT` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 229,
+    "feature": "ST_WA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_WA` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 230,
+    "feature": "ST_WI",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_WI` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 231,
+    "feature": "ST_WV",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_WV` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 232,
+    "feature": "ST_WY",
+    "type": "encoded_model_feature",
+    "description": "Model feature `ST_WY` derived from semantic feature `ST`. Interpret this column as the encoded model input for that derived category/value. State"
+  },
+  {
+    "feature_id": 233,
+    "feature": "WIF",
+    "type": "categorical",
+    "description": "Workers in family during the past 12 months",
+    "values": "0=No workers; 1=1 worker; 2=2 workers; 3=3 or more workers"
+  },
+  {
+    "feature_id": 234,
+    "feature": "WKHP",
+    "type": "integer",
+    "description": "Usual hours worked per week past 12 months"
+  },
+  {
+    "feature_id": 235,
+    "feature": "WKW",
+    "type": "integer",
+    "description": "Weeks worked during past 12 months"
+  },
+  {
+    "feature_id": 236,
+    "feature": "WRK_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `WRK_00` derived from semantic feature `WRK`. Interpret this column as the encoded model input for that derived category/value. worked last week",
+    "values": "01=worked; 02=did not work"
+  },
+  {
+    "feature_id": 237,
+    "feature": "WRK_01",
+    "type": "encoded_model_feature",
+    "description": "Model feature `WRK_01` derived from semantic feature `WRK`. Interpret this column as the encoded model input for that derived category/value. worked last week",
+    "values": "01=worked; 02=did not work"
+  },
+  {
+    "feature_id": 238,
+    "feature": "WRK_02",
+    "type": "encoded_model_feature",
+    "description": "Model feature `WRK_02` derived from semantic feature `WRK`. Interpret this column as the encoded model input for that derived category/value. worked last week",
+    "values": "01=worked; 02=did not work"
+  }
+]
+
+Feature IDs to include exactly once:
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238]
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "ranking": [
+    {
+      "rank": 1,
+      "feature_id": 0,
+      "rationale": "short reason"
+    }
+  ]
+}
+
+Rules:
+- Include every feature_id exactly once in `ranking`.
+- Use ranks 1 through 239, with no duplicates.
+- Rank 1 is most important.
+- If two features seem similarly important, still break ties.
+- `feature_id` is the authoritative identifier. Include each feature_id exactly
+  once and do not include feature names in the output.

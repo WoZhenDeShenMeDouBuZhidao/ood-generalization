@@ -1,0 +1,255 @@
+# tableshift/nhanes_lead score prompts
+
+## 1. feature_id=0 feature=nhanes_year
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `nhanes_lead`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 0,
+  "feature": "nhanes_year",
+  "type": "integer",
+  "description": "year"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 0,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 2. feature_id=1 feature=DMDBORN4
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `nhanes_lead`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 1,
+  "feature": "DMDBORN4",
+  "type": "categorical",
+  "description": "country of birth",
+  "values": "1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 1,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 3. feature_id=2 feature=DMDEDUC2
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `nhanes_lead`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 2,
+  "feature": "DMDEDUC2",
+  "type": "categorical",
+  "description": "highest grade or level of school completed or highest degree received"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 2,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 4. feature_id=3 feature=RIDAGEYR
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `nhanes_lead`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 3,
+  "feature": "RIDAGEYR",
+  "type": "continuous",
+  "description": "age in years"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 3,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 5. feature_id=4 feature=RIAGENDR
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `nhanes_lead`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 4,
+  "feature": "RIAGENDR",
+  "type": "categorical",
+  "description": "gender"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 4,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 6. feature_id=5 feature=DMDMARTL
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `nhanes_lead`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 5,
+  "feature": "DMDMARTL",
+  "type": "categorical",
+  "description": "marital status"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 5,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 7. feature_id=6 feature=RIDRETH_merged
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `nhanes_lead`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 6,
+  "feature": "RIDRETH_merged",
+  "type": "categorical",
+  "description": "race and hispanic origin",
+  "values": "1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial"
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 6,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.

@@ -1,0 +1,405 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "nhanes_cholesterol",
+  "model": "ce-grad-l2",
+  "method": "score",
+  "feature_space": "model",
+  "created_at": "2026-08-12T00:24:24",
+  "aggregation": {
+    "name": "normalized_mean",
+    "normalization": "per_repeat_sum_to_one",
+    "repeat_count": 10,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825,
+      4631,
+      14717,
+      43019,
+      20523,
+      83634
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5",
+      "ce_grad_l2_stability_extra5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 37,
+        "feature": "KIQ022_90",
+        "score_mean": 0.19056707597174133,
+        "score_std": 0.10203385960506614
+      },
+      {
+        "rank": 2,
+        "feature_id": 24,
+        "feature": "DMDEDUC2_90",
+        "score_mean": 0.07675084817467802,
+        "score_std": 0.044979345362313496
+      },
+      {
+        "rank": 3,
+        "feature_id": 7,
+        "feature": "DIQ010_90",
+        "score_mean": 0.07604813427712934,
+        "score_std": 0.04566200795540112
+      },
+      {
+        "rank": 4,
+        "feature_id": 2,
+        "feature": "BPQ020_90",
+        "score_mean": 0.05812481995387424,
+        "score_std": 0.03324858039693257
+      },
+      {
+        "rank": 5,
+        "feature_id": 4,
+        "feature": "DIQ010_10",
+        "score_mean": 0.035065259636720955,
+        "score_std": 0.025354494040657736
+      },
+      {
+        "rank": 6,
+        "feature_id": 25,
+        "feature": "DMDEDUC2_MISSING",
+        "score_mean": 0.033150531076949416,
+        "score_std": 0.04080439363280114
+      },
+      {
+        "rank": 7,
+        "feature_id": 3,
+        "feature": "BPQ020_MISSING",
+        "score_mean": 0.028029879885788263,
+        "score_std": 0.02156847062127476
+      },
+      {
+        "rank": 8,
+        "feature_id": 30,
+        "feature": "DMDMARTL_50",
+        "score_mean": 0.02547115630076662,
+        "score_std": 0.01953448350677525
+      },
+      {
+        "rank": 9,
+        "feature_id": 6,
+        "feature": "DIQ010_30",
+        "score_mean": 0.024820435978429665,
+        "score_std": 0.013179055654710007
+      },
+      {
+        "rank": 10,
+        "feature_id": 48,
+        "feature": "MCQ160A_90",
+        "score_mean": 0.023899309306348544,
+        "score_std": 0.02302261072880644
+      },
+      {
+        "rank": 11,
+        "feature_id": 15,
+        "feature": "DMDBORN4_770",
+        "score_mean": 0.022491618965232846,
+        "score_std": 0.016258260000677874
+      },
+      {
+        "rank": 12,
+        "feature_id": 32,
+        "feature": "DMDMARTL_770",
+        "score_mean": 0.0206593028949354,
+        "score_std": 0.008878287624767995
+      },
+      {
+        "rank": 13,
+        "feature_id": 28,
+        "feature": "DMDMARTL_30",
+        "score_mean": 0.020252991046674697,
+        "score_std": 0.018762945002405825
+      },
+      {
+        "rank": 14,
+        "feature_id": 11,
+        "feature": "DIQ160_90",
+        "score_mean": 0.019761250207445426,
+        "score_std": 0.012427536357478845
+      },
+      {
+        "rank": 15,
+        "feature_id": 49,
+        "feature": "MCQ160A_MISSING",
+        "score_mean": 0.01895518664799663,
+        "score_std": 0.015832290612737762
+      },
+      {
+        "rank": 16,
+        "feature_id": 50,
+        "feature": "RIAGENDR",
+        "score_mean": 0.018435030675264467,
+        "score_std": 0.009474656741026927
+      },
+      {
+        "rank": 17,
+        "feature_id": 39,
+        "feature": "KIQ025_10",
+        "score_mean": 0.017282733569346877,
+        "score_std": 0.014202591876218125
+      },
+      {
+        "rank": 18,
+        "feature_id": 1,
+        "feature": "BPQ020_20",
+        "score_mean": 0.016602837230271582,
+        "score_std": 0.01746843078812176
+      },
+      {
+        "rank": 19,
+        "feature_id": 14,
+        "feature": "DMDBORN4_20",
+        "score_mean": 0.016439479018542588,
+        "score_std": 0.01686634563384658
+      },
+      {
+        "rank": 20,
+        "feature_id": 47,
+        "feature": "MCQ160A_20",
+        "score_mean": 0.013191963815296456,
+        "score_std": 0.009807455328649933
+      },
+      {
+        "rank": 21,
+        "feature_id": 51,
+        "feature": "RIDAGEYR",
+        "score_mean": 0.011876573602291027,
+        "score_std": 0.007820380798320986
+      },
+      {
+        "rank": 22,
+        "feature_id": 5,
+        "feature": "DIQ010_20",
+        "score_mean": 0.011867074654948705,
+        "score_std": 0.021318342566632207
+      },
+      {
+        "rank": 23,
+        "feature_id": 40,
+        "feature": "KIQ025_20",
+        "score_mean": 0.010725267237300518,
+        "score_std": 0.006951345234825099
+      },
+      {
+        "rank": 24,
+        "feature_id": 33,
+        "feature": "DMDMARTL_990",
+        "score_mean": 0.010720550663831423,
+        "score_std": 0.007516088245731419
+      },
+      {
+        "rank": 25,
+        "feature_id": 19,
+        "feature": "DMDEDUC2_20",
+        "score_mean": 0.01067863581711109,
+        "score_std": 0.010044819500274483
+      },
+      {
+        "rank": 26,
+        "feature_id": 46,
+        "feature": "MCQ160A_10",
+        "score_mean": 0.010253611990712964,
+        "score_std": 0.0065773220604774165
+      },
+      {
+        "rank": 27,
+        "feature_id": 41,
+        "feature": "KIQ025_MISSING",
+        "score_mean": 0.00979003276185014,
+        "score_std": 0.005066687060432746
+      },
+      {
+        "rank": 28,
+        "feature_id": 38,
+        "feature": "KIQ022_MISSING",
+        "score_mean": 0.009711423880444572,
+        "score_std": 0.008758967809244712
+      },
+      {
+        "rank": 29,
+        "feature_id": 23,
+        "feature": "DMDEDUC2_70",
+        "score_mean": 0.009287402127513191,
+        "score_std": 0.0038760251277415157
+      },
+      {
+        "rank": 30,
+        "feature_id": 18,
+        "feature": "DMDEDUC2_10",
+        "score_mean": 0.008828491132394974,
+        "score_std": 0.005979279503894597
+      },
+      {
+        "rank": 31,
+        "feature_id": 43,
+        "feature": "MCQ070_20",
+        "score_mean": 0.008740747861192215,
+        "score_std": 0.005088165817819518
+      },
+      {
+        "rank": 32,
+        "feature_id": 0,
+        "feature": "BPQ020_10",
+        "score_mean": 0.008720559359880798,
+        "score_std": 0.007333294863646581
+      },
+      {
+        "rank": 33,
+        "feature_id": 29,
+        "feature": "DMDMARTL_40",
+        "score_mean": 0.008549414563693467,
+        "score_std": 0.006763185231620531
+      },
+      {
+        "rank": 34,
+        "feature_id": 13,
+        "feature": "DMDBORN4_10",
+        "score_mean": 0.008114899972175505,
+        "score_std": 0.00530876247995502
+      },
+      {
+        "rank": 35,
+        "feature_id": 34,
+        "feature": "DMDMARTL_MISSING",
+        "score_mean": 0.008094207778163734,
+        "score_std": 0.008641825681616326
+      },
+      {
+        "rank": 36,
+        "feature_id": 8,
+        "feature": "DIQ010_MISSING",
+        "score_mean": 0.007076515239250519,
+        "score_std": 0.008254148759322013
+      },
+      {
+        "rank": 37,
+        "feature_id": 27,
+        "feature": "DMDMARTL_20",
+        "score_mean": 0.00701804094446377,
+        "score_std": 0.008107828668302154
+      },
+      {
+        "rank": 38,
+        "feature_id": 22,
+        "feature": "DMDEDUC2_50",
+        "score_mean": 0.0069634981736914296,
+        "score_std": 0.007530616026158471
+      },
+      {
+        "rank": 39,
+        "feature_id": 42,
+        "feature": "MCQ070_10",
+        "score_mean": 0.006921285640112669,
+        "score_std": 0.004082589118614332
+      },
+      {
+        "rank": 40,
+        "feature_id": 9,
+        "feature": "DIQ160_10",
+        "score_mean": 0.006359534968500206,
+        "score_std": 0.005710572493099763
+      },
+      {
+        "rank": 41,
+        "feature_id": 35,
+        "feature": "KIQ022_10",
+        "score_mean": 0.006210114960704267,
+        "score_std": 0.004959977353837729
+      },
+      {
+        "rank": 42,
+        "feature_id": 31,
+        "feature": "DMDMARTL_60",
+        "score_mean": 0.005936584085547692,
+        "score_std": 0.004958757527746215
+      },
+      {
+        "rank": 43,
+        "feature_id": 10,
+        "feature": "DIQ160_20",
+        "score_mean": 0.00587455702207242,
+        "score_std": 0.004691407229782663
+      },
+      {
+        "rank": 44,
+        "feature_id": 20,
+        "feature": "DMDEDUC2_30",
+        "score_mean": 0.005751997774215333,
+        "score_std": 0.0045626541082893326
+      },
+      {
+        "rank": 45,
+        "feature_id": 17,
+        "feature": "DMDBORN4_MISSING",
+        "score_mean": 0.005667377361233441,
+        "score_std": 0.004699095581008829
+      },
+      {
+        "rank": 46,
+        "feature_id": 44,
+        "feature": "MCQ070_90",
+        "score_mean": 0.005264048696489804,
+        "score_std": 0.0036938148166075374
+      },
+      {
+        "rank": 47,
+        "feature_id": 36,
+        "feature": "KIQ022_20",
+        "score_mean": 0.005125282086672348,
+        "score_std": 0.0038699154245244397
+      },
+      {
+        "rank": 48,
+        "feature_id": 16,
+        "feature": "DMDBORN4_990",
+        "score_mean": 0.004918880627547878,
+        "score_std": 0.003262639761876808
+      },
+      {
+        "rank": 49,
+        "feature_id": 21,
+        "feature": "DMDEDUC2_40",
+        "score_mean": 0.004891730970471593,
+        "score_std": 0.00196548439470183
+      },
+      {
+        "rank": 50,
+        "feature_id": 12,
+        "feature": "DIQ160_MISSING",
+        "score_mean": 0.004455701587705011,
+        "score_std": 0.003285162643538575
+      },
+      {
+        "rank": 51,
+        "feature_id": 26,
+        "feature": "DMDMARTL_10",
+        "score_mean": 0.004290111326717875,
+        "score_std": 0.00253701285219892
+      },
+      {
+        "rank": 52,
+        "feature_id": 45,
+        "feature": "MCQ070_MISSING",
+        "score_mean": 0.004258194054897203,
+        "score_std": 0.002135586206904729
+      },
+      {
+        "rank": 53,
+        "feature_id": 52,
+        "feature": "nhanes_year",
+        "score_mean": 0.0010578064427688256,
+        "score_std": 0.0006192983805244851
+      }
+    ]
+  }
+}

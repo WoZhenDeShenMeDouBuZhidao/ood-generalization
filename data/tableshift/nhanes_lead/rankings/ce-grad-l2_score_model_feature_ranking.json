@@ -1,0 +1,153 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "nhanes_lead",
+  "model": "ce-grad-l2",
+  "method": "score",
+  "feature_space": "model",
+  "created_at": "2026-08-12T00:24:24",
+  "aggregation": {
+    "name": "normalized_mean",
+    "normalization": "per_repeat_sum_to_one",
+    "repeat_count": 10,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825,
+      4631,
+      14717,
+      43019,
+      20523,
+      83634
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5",
+      "ce_grad_l2_stability_extra5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 9,
+        "feature": "DMDMARTL_60",
+        "score_mean": 0.1422048299579023,
+        "score_std": 0.054591696295263684
+      },
+      {
+        "rank": 2,
+        "feature_id": 15,
+        "feature": "RIDRETH_merged",
+        "score_mean": 0.11683381336221339,
+        "score_std": 0.04977790822069368
+      },
+      {
+        "rank": 3,
+        "feature_id": 14,
+        "feature": "RIDAGEYR",
+        "score_mean": 0.10328670527536668,
+        "score_std": 0.06268272673436816
+      },
+      {
+        "rank": 4,
+        "feature_id": 13,
+        "feature": "RIAGENDR",
+        "score_mean": 0.08474461722388478,
+        "score_std": 0.03303526507921504
+      },
+      {
+        "rank": 5,
+        "feature_id": 1,
+        "feature": "DMDBORN4_20",
+        "score_mean": 0.0745139451424024,
+        "score_std": 0.04545424945379418
+      },
+      {
+        "rank": 6,
+        "feature_id": 11,
+        "feature": "DMDMARTL_990",
+        "score_mean": 0.06945837865615337,
+        "score_std": 0.048260216197461896
+      },
+      {
+        "rank": 7,
+        "feature_id": 12,
+        "feature": "DMDMARTL_MISSING",
+        "score_mean": 0.06538796730934456,
+        "score_std": 0.034979331806520374
+      },
+      {
+        "rank": 8,
+        "feature_id": 4,
+        "feature": "DMDMARTL_10",
+        "score_mean": 0.0466521523722398,
+        "score_std": 0.05581010830016761
+      },
+      {
+        "rank": 9,
+        "feature_id": 7,
+        "feature": "DMDMARTL_40",
+        "score_mean": 0.04656591148313932,
+        "score_std": 0.04111253082222901
+      },
+      {
+        "rank": 10,
+        "feature_id": 3,
+        "feature": "DMDEDUC2_MISSING",
+        "score_mean": 0.040329045033187697,
+        "score_std": 0.03184427944060303
+      },
+      {
+        "rank": 11,
+        "feature_id": 6,
+        "feature": "DMDMARTL_30",
+        "score_mean": 0.039975497007297814,
+        "score_std": 0.033258009891325255
+      },
+      {
+        "rank": 12,
+        "feature_id": 0,
+        "feature": "DMDBORN4_10",
+        "score_mean": 0.038894050579954556,
+        "score_std": 0.02677008742787199
+      },
+      {
+        "rank": 13,
+        "feature_id": 10,
+        "feature": "DMDMARTL_770",
+        "score_mean": 0.03635126333357383,
+        "score_std": 0.041280815661122926
+      },
+      {
+        "rank": 14,
+        "feature_id": 8,
+        "feature": "DMDMARTL_50",
+        "score_mean": 0.03589828742016006,
+        "score_std": 0.024611211404715082
+      },
+      {
+        "rank": 15,
+        "feature_id": 2,
+        "feature": "DMDBORN4_MISSING",
+        "score_mean": 0.030848903994989657,
+        "score_std": 0.013413014213115321
+      },
+      {
+        "rank": 16,
+        "feature_id": 5,
+        "feature": "DMDMARTL_20",
+        "score_mean": 0.02393893769631493,
+        "score_std": 0.016492186166250835
+      },
+      {
+        "rank": 17,
+        "feature_id": 16,
+        "feature": "nhanes_year",
+        "score_mean": 0.00411569415187492,
+        "score_std": 0.0016654649934455463
+      }
+    ]
+  }
+}

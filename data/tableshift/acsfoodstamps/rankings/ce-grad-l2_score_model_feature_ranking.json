@@ -1,0 +1,1701 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "acsfoodstamps",
+  "model": "ce-grad-l2",
+  "method": "score",
+  "feature_space": "model",
+  "created_at": "2026-08-12T00:24:24",
+  "aggregation": {
+    "name": "normalized_mean",
+    "normalization": "per_repeat_sum_to_one",
+    "repeat_count": 5,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 60,
+        "feature": "OCCP_LGL",
+        "score_mean": 0.0384938075421358,
+        "score_std": 0.011326390190634682
+      },
+      {
+        "rank": 2,
+        "feature_id": 180,
+        "feature": "SCHL_24",
+        "score_mean": 0.02892871697238475,
+        "score_std": 0.008828160162208751
+      },
+      {
+        "rank": 3,
+        "feature_id": 138,
+        "feature": "PUBCOV_10",
+        "score_mean": 0.02653886624901699,
+        "score_std": 0.009578411262905203
+      },
+      {
+        "rank": 4,
+        "feature_id": 177,
+        "feature": "SCHL_21",
+        "score_mean": 0.02353013188594427,
+        "score_std": 0.0031243152269088545
+      },
+      {
+        "rank": 5,
+        "feature_id": 34,
+        "feature": "MIL_01",
+        "score_mean": 0.02298189732376263,
+        "score_std": 0.007558226279387595
+      },
+      {
+        "rank": 6,
+        "feature_id": 139,
+        "feature": "PUBCOV_20",
+        "score_mean": 0.02082086400533168,
+        "score_std": 0.0079141701601661
+      },
+      {
+        "rank": 7,
+        "feature_id": 130,
+        "feature": "POBP_USTERR",
+        "score_mean": 0.019941987429558584,
+        "score_std": 0.0027947394543991395
+      },
+      {
+        "rank": 8,
+        "feature_id": 82,
+        "feature": "POBP_CANADA",
+        "score_mean": 0.019221903797501237,
+        "score_std": 0.007956791208854994
+      },
+      {
+        "rank": 9,
+        "feature_id": 179,
+        "feature": "SCHL_23",
+        "score_mean": 0.019046679209270164,
+        "score_std": 0.0036112163901727465
+      },
+      {
+        "rank": 10,
+        "feature_id": 98,
+        "feature": "POBP_KY",
+        "score_mean": 0.018352841062040548,
+        "score_std": 0.005121074844880968
+      },
+      {
+        "rank": 11,
+        "feature_id": 65,
+        "feature": "OCCP_O",
+        "score_mean": 0.01800601619990655,
+        "score_std": 0.00515609602701368
+      },
+      {
+        "rank": 12,
+        "feature_id": 72,
+        "feature": "OCCP_SCI",
+        "score_mean": 0.01800540571962701,
+        "score_std": 0.0054512792306166515
+      },
+      {
+        "rank": 13,
+        "feature_id": 150,
+        "feature": "RELP_09",
+        "score_mean": 0.017770689704320695,
+        "score_std": 0.0062376700403100425
+      },
+      {
+        "rank": 14,
+        "feature_id": 87,
+        "feature": "POBP_DC",
+        "score_mean": 0.01600555784721291,
+        "score_std": 0.008031694829253906
+      },
+      {
+        "rank": 15,
+        "feature_id": 111,
+        "feature": "POBP_ND",
+        "score_mean": 0.01352179223663294,
+        "score_std": 0.005513028787188116
+      },
+      {
+        "rank": 16,
+        "feature_id": 169,
+        "feature": "SCHL_13",
+        "score_mean": 0.013429342968041356,
+        "score_std": 0.0030265931535557174
+      },
+      {
+        "rank": 17,
+        "feature_id": 105,
+        "feature": "POBP_MIDDLEEAST",
+        "score_mean": 0.012956334411937442,
+        "score_std": 0.004773600831672587
+      },
+      {
+        "rank": 18,
+        "feature_id": 178,
+        "feature": "SCHL_22",
+        "score_mean": 0.012436894401238626,
+        "score_std": 0.0009454291380132336
+      },
+      {
+        "rank": 19,
+        "feature_id": 112,
+        "feature": "POBP_NE",
+        "score_mean": 0.011301684413079542,
+        "score_std": 0.004453739254838313
+      },
+      {
+        "rank": 20,
+        "feature_id": 63,
+        "feature": "OCCP_MIL",
+        "score_mean": 0.011243964396241982,
+        "score_std": 0.005013665902775418
+      },
+      {
+        "rank": 21,
+        "feature_id": 155,
+        "feature": "RELP_14",
+        "score_mean": 0.010429757233662452,
+        "score_std": 0.003695403292569796
+      },
+      {
+        "rank": 22,
+        "feature_id": 149,
+        "feature": "RELP_08",
+        "score_mean": 0.009885088530384615,
+        "score_std": 0.004537198162709461
+      },
+      {
+        "rank": 23,
+        "feature_id": 58,
+        "feature": "OCCP_G",
+        "score_mean": 0.009833967777141985,
+        "score_std": 0.006034433710494709
+      },
+      {
+        "rank": 24,
+        "feature_id": 159,
+        "feature": "SCHL_03",
+        "score_mean": 0.00965286224493592,
+        "score_std": 0.006138611315832052
+      },
+      {
+        "rank": 25,
+        "feature_id": 144,
+        "feature": "RELP_03",
+        "score_mean": 0.009449545110191183,
+        "score_std": 0.004320489575005146
+      },
+      {
+        "rank": 26,
+        "feature_id": 6,
+        "feature": "ANC_08",
+        "score_mean": 0.009362300631366612,
+        "score_std": 0.004198429208376398
+      },
+      {
+        "rank": 27,
+        "feature_id": 212,
+        "feature": "ST_NJ",
+        "score_mean": 0.00936086913315311,
+        "score_std": 0.0021294095759295155
+      },
+      {
+        "rank": 28,
+        "feature_id": 167,
+        "feature": "SCHL_11",
+        "score_mean": 0.009079945347682847,
+        "score_std": 0.002380073368379385
+      },
+      {
+        "rank": 29,
+        "feature_id": 140,
+        "feature": "RAC1P",
+        "score_mean": 0.009064006486648193,
+        "score_std": 0.0015367949395467344
+      },
+      {
+        "rank": 30,
+        "feature_id": 61,
+        "feature": "OCCP_MED",
+        "score_mean": 0.00859327877559142,
+        "score_std": 0.0019464230567199045
+      },
+      {
+        "rank": 31,
+        "feature_id": 53,
+        "feature": "OCCP_ENG",
+        "score_mean": 0.008574290435231653,
+        "score_std": 0.0034738784886207447
+      },
+      {
+        "rank": 32,
+        "feature_id": 135,
+        "feature": "POBP_WI",
+        "score_mean": 0.008510644148413137,
+        "score_std": 0.002000449092720275
+      },
+      {
+        "rank": 33,
+        "feature_id": 79,
+        "feature": "POBP_ASIA",
+        "score_mean": 0.008381962692984635,
+        "score_std": 0.0030669758413952824
+      },
+      {
+        "rank": 34,
+        "feature_id": 160,
+        "feature": "SCHL_04",
+        "score_mean": 0.008178491422684392,
+        "score_std": 0.004299145573667091
+      },
+      {
+        "rank": 35,
+        "feature_id": 24,
+        "feature": "ENG_04",
+        "score_mean": 0.00794089316250966,
+        "score_std": 0.0015354624199488646
+      },
+      {
+        "rank": 36,
+        "feature_id": 136,
+        "feature": "POBP_WV",
+        "score_mean": 0.007934781182701996,
+        "score_std": 0.002086951092719743
+      },
+      {
+        "rank": 37,
+        "feature_id": 151,
+        "feature": "RELP_10",
+        "score_mean": 0.007545527173762147,
+        "score_std": 0.003325984257629037
+      },
+      {
+        "rank": 38,
+        "feature_id": 187,
+        "feature": "ST_CO",
+        "score_mean": 0.007479695681829562,
+        "score_std": 0.001960823600705023
+      },
+      {
+        "rank": 39,
+        "feature_id": 127,
+        "feature": "POBP_SOUTHAMERICA",
+        "score_mean": 0.0073510605802951465,
+        "score_std": 0.0028637792702141214
+      },
+      {
+        "rank": 40,
+        "feature_id": 223,
+        "feature": "ST_SD",
+        "score_mean": 0.007346528220693961,
+        "score_std": 0.003333623373035027
+      },
+      {
+        "rank": 41,
+        "feature_id": 32,
+        "feature": "MAR_04",
+        "score_mean": 0.007154111210511256,
+        "score_std": 0.004023133725200761
+      },
+      {
+        "rank": 42,
+        "feature_id": 46,
+        "feature": "OCCP_BUS",
+        "score_mean": 0.007118991367601424,
+        "score_std": 0.0014495902751459166
+      },
+      {
+        "rank": 43,
+        "feature_id": 83,
+        "feature": "POBP_CARIBBEAN",
+        "score_mean": 0.00707148863850948,
+        "score_std": 0.0015253580507911993
+      },
+      {
+        "rank": 44,
+        "feature_id": 204,
+        "feature": "ST_MN",
+        "score_mean": 0.007070288579166334,
+        "score_std": 0.003297590300300629
+      },
+      {
+        "rank": 45,
+        "feature_id": 232,
+        "feature": "ST_WY",
+        "score_mean": 0.007000712000588422,
+        "score_std": 0.004858014871838763
+      },
+      {
+        "rank": 46,
+        "feature_id": 168,
+        "feature": "SCHL_12",
+        "score_mean": 0.0069170639613642,
+        "score_std": 0.001429425239020496
+      },
+      {
+        "rank": 47,
+        "feature_id": 68,
+        "feature": "OCCP_PRS",
+        "score_mean": 0.0067654279974133855,
+        "score_std": 0.0014453292051750135
+      },
+      {
+        "rank": 48,
+        "feature_id": 164,
+        "feature": "SCHL_08",
+        "score_mean": 0.006377369476913597,
+        "score_std": 0.0014182587939515425
+      },
+      {
+        "rank": 49,
+        "feature_id": 228,
+        "feature": "ST_VT",
+        "score_mean": 0.006348192548478321,
+        "score_std": 0.0032079649379069142
+      },
+      {
+        "rank": 50,
+        "feature_id": 142,
+        "feature": "RELP_01",
+        "score_mean": 0.006026885774049935,
+        "score_std": 0.0015452840159207663
+      },
+      {
+        "rank": 51,
+        "feature_id": 97,
+        "feature": "POBP_KS",
+        "score_mean": 0.005971742564452107,
+        "score_std": 0.0016279495170632677
+      },
+      {
+        "rank": 52,
+        "feature_id": 173,
+        "feature": "SCHL_17",
+        "score_mean": 0.005853234200830011,
+        "score_std": 0.0008002372400927565
+      },
+      {
+        "rank": 53,
+        "feature_id": 28,
+        "feature": "HUPAC",
+        "score_mean": 0.005802402355304851,
+        "score_std": 0.0008209002818243765
+      },
+      {
+        "rank": 54,
+        "feature_id": 190,
+        "feature": "ST_FL",
+        "score_mean": 0.005652352181420064,
+        "score_std": 0.001489578602931514
+      },
+      {
+        "rank": 55,
+        "feature_id": 171,
+        "feature": "SCHL_15",
+        "score_mean": 0.005636061136854219,
+        "score_std": 0.0015286406930070274
+      },
+      {
+        "rank": 56,
+        "feature_id": 184,
+        "feature": "ST_AR",
+        "score_mean": 0.005376690227273507,
+        "score_std": 0.002919073362656732
+      },
+      {
+        "rank": 57,
+        "feature_id": 126,
+        "feature": "POBP_SD",
+        "score_mean": 0.005348773852957379,
+        "score_std": 0.001913708455232123
+      },
+      {
+        "rank": 58,
+        "feature_id": 217,
+        "feature": "ST_OK",
+        "score_mean": 0.005282768504860962,
+        "score_std": 0.0019078447268052513
+      },
+      {
+        "rank": 59,
+        "feature_id": 106,
+        "feature": "POBP_MN",
+        "score_mean": 0.005242178676344864,
+        "score_std": 0.001706935202905203
+      },
+      {
+        "rank": 60,
+        "feature_id": 100,
+        "feature": "POBP_MA",
+        "score_mean": 0.004881868122135095,
+        "score_std": 0.001971649743726322
+      },
+      {
+        "rank": 61,
+        "feature_id": 57,
+        "feature": "OCCP_FIN",
+        "score_mean": 0.004878811733994434,
+        "score_std": 0.0027543271257329826
+      },
+      {
+        "rank": 62,
+        "feature_id": 62,
+        "feature": "OCCP_MGR",
+        "score_mean": 0.0047021819067921055,
+        "score_std": 0.0013388099529107857
+      },
+      {
+        "rank": 63,
+        "feature_id": 26,
+        "feature": "FER_01",
+        "score_mean": 0.004457373789533529,
+        "score_std": 0.002018485463436889
+      },
+      {
+        "rank": 64,
+        "feature_id": 96,
+        "feature": "POBP_IN",
+        "score_mean": 0.004435093267418504,
+        "score_std": 0.002403579367685659
+      },
+      {
+        "rank": 65,
+        "feature_id": 161,
+        "feature": "SCHL_05",
+        "score_mean": 0.004361372754568987,
+        "score_std": 0.0016997417078639353
+      },
+      {
+        "rank": 66,
+        "feature_id": 54,
+        "feature": "OCCP_ENT",
+        "score_mean": 0.0043607459286141,
+        "score_std": 0.0016949214434138838
+      },
+      {
+        "rank": 67,
+        "feature_id": 186,
+        "feature": "ST_CA",
+        "score_mean": 0.004213709445149656,
+        "score_std": 0.0008595229192792647
+      },
+      {
+        "rank": 68,
+        "feature_id": 170,
+        "feature": "SCHL_14",
+        "score_mean": 0.004204551132231748,
+        "score_std": 0.001201712328864995
+      },
+      {
+        "rank": 69,
+        "feature_id": 4,
+        "feature": "ANC_03",
+        "score_mean": 0.004178539728643397,
+        "score_std": 0.0016727346273212149
+      },
+      {
+        "rank": 70,
+        "feature_id": 157,
+        "feature": "SCHL_01",
+        "score_mean": 0.004114913483718756,
+        "score_std": 0.0011408217861384453
+      },
+      {
+        "rank": 71,
+        "feature_id": 191,
+        "feature": "ST_GA",
+        "score_mean": 0.003652308227075298,
+        "score_std": 0.0019172199815366718
+      },
+      {
+        "rank": 72,
+        "feature_id": 20,
+        "feature": "ENG_00",
+        "score_mean": 0.0035672038705061256,
+        "score_std": 0.0007441648210477117
+      },
+      {
+        "rank": 73,
+        "feature_id": 59,
+        "feature": "OCCP_HLS",
+        "score_mean": 0.0034862242749246304,
+        "score_std": 0.00106474408939314
+      },
+      {
+        "rank": 74,
+        "feature_id": 47,
+        "feature": "OCCP_CLN",
+        "score_mean": 0.003481184550665827,
+        "score_std": 0.0011419344655994998
+      },
+      {
+        "rank": 75,
+        "feature_id": 90,
+        "feature": "POBP_FL",
+        "score_mean": 0.003464442763023534,
+        "score_std": 0.001977195529167506
+      },
+      {
+        "rank": 76,
+        "feature_id": 88,
+        "feature": "POBP_DE",
+        "score_mean": 0.00345192123575786,
+        "score_std": 0.001754415410222217
+      },
+      {
+        "rank": 77,
+        "feature_id": 158,
+        "feature": "SCHL_02",
+        "score_mean": 0.0032327519745601932,
+        "score_std": 0.0016307074272613592
+      },
+      {
+        "rank": 78,
+        "feature_id": 215,
+        "feature": "ST_NY",
+        "score_mean": 0.003215493416975653,
+        "score_std": 0.0008692034954375203
+      },
+      {
+        "rank": 79,
+        "feature_id": 113,
+        "feature": "POBP_NH",
+        "score_mean": 0.0032118263762587022,
+        "score_std": 0.0011486644362450585
+      },
+      {
+        "rank": 80,
+        "feature_id": 107,
+        "feature": "POBP_MO",
+        "score_mean": 0.003120654802720655,
+        "score_std": 0.0005228206167460861
+      },
+      {
+        "rank": 81,
+        "feature_id": 188,
+        "feature": "ST_CT",
+        "score_mean": 0.0031155206447208146,
+        "score_std": 0.0018585677353491505
+      },
+      {
+        "rank": 82,
+        "feature_id": 147,
+        "feature": "RELP_06",
+        "score_mean": 0.0030934837097055146,
+        "score_std": 0.0009849074148061488
+      },
+      {
+        "rank": 83,
+        "feature_id": 37,
+        "feature": "MIL_04",
+        "score_mean": 0.003046679560305086,
+        "score_std": 0.0015389937535650545
+      },
+      {
+        "rank": 84,
+        "feature_id": 197,
+        "feature": "ST_KS",
+        "score_mean": 0.0030128967475157803,
+        "score_std": 0.0012851907380118821
+      },
+      {
+        "rank": 85,
+        "feature_id": 133,
+        "feature": "POBP_VT",
+        "score_mean": 0.002950778513901915,
+        "score_std": 0.0016591563307853348
+      },
+      {
+        "rank": 86,
+        "feature_id": 52,
+        "feature": "OCCP_EDU",
+        "score_mean": 0.0029361367602521995,
+        "score_std": 0.0015021596504123482
+      },
+      {
+        "rank": 87,
+        "feature_id": 66,
+        "feature": "OCCP_OFF",
+        "score_mean": 0.002883238342242903,
+        "score_std": 0.0013444663851524066
+      },
+      {
+        "rank": 88,
+        "feature_id": 198,
+        "feature": "ST_KY",
+        "score_mean": 0.002831206447146657,
+        "score_std": 0.0032051181714891856
+      },
+      {
+        "rank": 89,
+        "feature_id": 125,
+        "feature": "POBP_SC",
+        "score_mean": 0.0028061739437703916,
+        "score_std": 0.0012535910612306344
+      },
+      {
+        "rank": 90,
+        "feature_id": 71,
+        "feature": "OCCP_SAL",
+        "score_mean": 0.0027897919760229125,
+        "score_std": 0.0011790841411516476
+      },
+      {
+        "rank": 91,
+        "feature_id": 120,
+        "feature": "POBP_OK",
+        "score_mean": 0.002768425639687705,
+        "score_std": 0.0012842497562794855
+      },
+      {
+        "rank": 92,
+        "feature_id": 152,
+        "feature": "RELP_11",
+        "score_mean": 0.002757232011572239,
+        "score_std": 0.0006192917998726053
+      },
+      {
+        "rank": 93,
+        "feature_id": 29,
+        "feature": "MAR_01",
+        "score_mean": 0.0027536176196475094,
+        "score_std": 0.0017357907374546933
+      },
+      {
+        "rank": 94,
+        "feature_id": 84,
+        "feature": "POBP_CENTRALAMERICA",
+        "score_mean": 0.0027470605216050673,
+        "score_std": 0.0009930337152275568
+      },
+      {
+        "rank": 95,
+        "feature_id": 50,
+        "feature": "OCCP_CON",
+        "score_mean": 0.0027284914993161566,
+        "score_std": 0.0016504986603735313
+      },
+      {
+        "rank": 96,
+        "feature_id": 36,
+        "feature": "MIL_03",
+        "score_mean": 0.002703317940196121,
+        "score_std": 0.0010276706549850088
+      },
+      {
+        "rank": 97,
+        "feature_id": 200,
+        "feature": "ST_MA",
+        "score_mean": 0.002689878957352727,
+        "score_std": 0.0012622668507251402
+      },
+      {
+        "rank": 98,
+        "feature_id": 230,
+        "feature": "ST_WI",
+        "score_mean": 0.002637672380079511,
+        "score_std": 0.0013122830033115989
+      },
+      {
+        "rank": 99,
+        "feature_id": 227,
+        "feature": "ST_VA",
+        "score_mean": 0.0026225194908046307,
+        "score_std": 0.0014297584502389726
+      },
+      {
+        "rank": 100,
+        "feature_id": 43,
+        "feature": "NWLK_01",
+        "score_mean": 0.002619983480875349,
+        "score_std": 0.0009791053634115826
+      },
+      {
+        "rank": 101,
+        "feature_id": 163,
+        "feature": "SCHL_07",
+        "score_mean": 0.0025990204827305444,
+        "score_std": 0.0020895863652517117
+      },
+      {
+        "rank": 102,
+        "feature_id": 17,
+        "feature": "DIS_20",
+        "score_mean": 0.002581246845645207,
+        "score_std": 0.001771548012265442
+      },
+      {
+        "rank": 103,
+        "feature_id": 114,
+        "feature": "POBP_NJ",
+        "score_mean": 0.002498520810008508,
+        "score_std": 0.0010201544171801477
+      },
+      {
+        "rank": 104,
+        "feature_id": 129,
+        "feature": "POBP_TX",
+        "score_mean": 0.002488981648308206,
+        "score_std": 0.0007778741231959167
+      },
+      {
+        "rank": 105,
+        "feature_id": 93,
+        "feature": "POBP_IA",
+        "score_mean": 0.002382754874058261,
+        "score_std": 0.0008555432888953649
+      },
+      {
+        "rank": 106,
+        "feature_id": 137,
+        "feature": "POBP_WY",
+        "score_mean": 0.002312764370971175,
+        "score_std": 0.0020086920328284043
+      },
+      {
+        "rank": 107,
+        "feature_id": 94,
+        "feature": "POBP_ID",
+        "score_mean": 0.0022882669957094625,
+        "score_std": 0.0016441520227263033
+      },
+      {
+        "rank": 108,
+        "feature_id": 214,
+        "feature": "ST_NV",
+        "score_mean": 0.0022171212466614103,
+        "score_std": 0.00031064349730563936
+      },
+      {
+        "rank": 109,
+        "feature_id": 193,
+        "feature": "ST_IA",
+        "score_mean": 0.002210897029111087,
+        "score_std": 0.0016521516514426933
+      },
+      {
+        "rank": 110,
+        "feature_id": 31,
+        "feature": "MAR_03",
+        "score_mean": 0.002168707246888376,
+        "score_std": 0.001125696664706296
+      },
+      {
+        "rank": 111,
+        "feature_id": 42,
+        "feature": "NWLA_03",
+        "score_mean": 0.0021553542418819424,
+        "score_std": 0.001292537752842001
+      },
+      {
+        "rank": 112,
+        "feature_id": 123,
+        "feature": "POBP_PR",
+        "score_mean": 0.0021157848026780407,
+        "score_std": 0.001173369705775346
+      },
+      {
+        "rank": 113,
+        "feature_id": 148,
+        "feature": "RELP_07",
+        "score_mean": 0.0021118787624684037,
+        "score_std": 0.0009760846327287008
+      },
+      {
+        "rank": 114,
+        "feature_id": 78,
+        "feature": "POBP_AR",
+        "score_mean": 0.002072462844432232,
+        "score_std": 0.0009461302638636984
+      },
+      {
+        "rank": 115,
+        "feature_id": 233,
+        "feature": "WIF",
+        "score_mean": 0.00204609407779146,
+        "score_std": 0.00044244405759418654
+      },
+      {
+        "rank": 116,
+        "feature_id": 109,
+        "feature": "POBP_MT",
+        "score_mean": 0.002022656638711835,
+        "score_std": 0.0015527374137416896
+      },
+      {
+        "rank": 117,
+        "feature_id": 101,
+        "feature": "POBP_MD",
+        "score_mean": 0.0020147899531607998,
+        "score_std": 0.0011145141938247883
+      },
+      {
+        "rank": 118,
+        "feature_id": 44,
+        "feature": "NWLK_02",
+        "score_mean": 0.001972637207370261,
+        "score_std": 0.0014617037781222725
+      },
+      {
+        "rank": 119,
+        "feature_id": 85,
+        "feature": "POBP_CO",
+        "score_mean": 0.0019673793364255775,
+        "score_std": 0.0006728029805041644
+      },
+      {
+        "rank": 120,
+        "feature_id": 210,
+        "feature": "ST_NE",
+        "score_mean": 0.0019104103642962704,
+        "score_std": 0.0009049798752925403
+      },
+      {
+        "rank": 121,
+        "feature_id": 55,
+        "feature": "OCCP_EXT",
+        "score_mean": 0.001887428346172291,
+        "score_std": 0.0015673704952736483
+      },
+      {
+        "rank": 122,
+        "feature_id": 195,
+        "feature": "ST_IL",
+        "score_mean": 0.001884258022074984,
+        "score_std": 0.0005150949746064424
+      },
+      {
+        "rank": 123,
+        "feature_id": 15,
+        "feature": "DEYE_02",
+        "score_mean": 0.0018733416874553211,
+        "score_std": 0.0017889687261595998
+      },
+      {
+        "rank": 124,
+        "feature_id": 102,
+        "feature": "POBP_ME",
+        "score_mean": 0.0018597852484377084,
+        "score_std": 0.0004161711382448831
+      },
+      {
+        "rank": 125,
+        "feature_id": 131,
+        "feature": "POBP_UT",
+        "score_mean": 0.00184750841573533,
+        "score_std": 0.0008714546590603601
+      },
+      {
+        "rank": 126,
+        "feature_id": 208,
+        "feature": "ST_NC",
+        "score_mean": 0.0018458150370188578,
+        "score_std": 0.0008842303387634884
+      },
+      {
+        "rank": 127,
+        "feature_id": 67,
+        "feature": "OCCP_PRD",
+        "score_mean": 0.0018436480526891844,
+        "score_std": 0.000506114417255791
+      },
+      {
+        "rank": 128,
+        "feature_id": 23,
+        "feature": "ENG_03",
+        "score_mean": 0.0018283162416029258,
+        "score_std": 0.0004642173739655524
+      },
+      {
+        "rank": 129,
+        "feature_id": 143,
+        "feature": "RELP_02",
+        "score_mean": 0.001825856301865506,
+        "score_std": 0.0011667639123638445
+      },
+      {
+        "rank": 130,
+        "feature_id": 128,
+        "feature": "POBP_TN",
+        "score_mean": 0.0017581831252222089,
+        "score_std": 0.000950020898657718
+      },
+      {
+        "rank": 131,
+        "feature_id": 73,
+        "feature": "OCCP_TRN",
+        "score_mean": 0.001708316227198981,
+        "score_std": 0.00042236656807624807
+      },
+      {
+        "rank": 132,
+        "feature_id": 49,
+        "feature": "OCCP_CMS",
+        "score_mean": 0.0016985052037576907,
+        "score_std": 0.001076744086029529
+      },
+      {
+        "rank": 133,
+        "feature_id": 153,
+        "feature": "RELP_12",
+        "score_mean": 0.0016810031047716177,
+        "score_std": 0.0010878595554842502
+      },
+      {
+        "rank": 134,
+        "feature_id": 121,
+        "feature": "POBP_OR",
+        "score_mean": 0.0016577986898998922,
+        "score_std": 0.0018477419358293922
+      },
+      {
+        "rank": 135,
+        "feature_id": 218,
+        "feature": "ST_OR",
+        "score_mean": 0.0016445259253185733,
+        "score_std": 0.000921307628358969
+      },
+      {
+        "rank": 136,
+        "feature_id": 39,
+        "feature": "NATIVITY_02",
+        "score_mean": 0.0016438011279405747,
+        "score_std": 0.0006430949682842476
+      },
+      {
+        "rank": 137,
+        "feature_id": 185,
+        "feature": "ST_AZ",
+        "score_mean": 0.0016422905957888128,
+        "score_std": 0.0010414661597046094
+      },
+      {
+        "rank": 138,
+        "feature_id": 196,
+        "feature": "ST_IN",
+        "score_mean": 0.0016165525595626489,
+        "score_std": 0.0012398611740855822
+      },
+      {
+        "rank": 139,
+        "feature_id": 116,
+        "feature": "POBP_NV",
+        "score_mean": 0.0015929514372047058,
+        "score_std": 0.0010071281981905245
+      },
+      {
+        "rank": 140,
+        "feature_id": 225,
+        "feature": "ST_TX",
+        "score_mean": 0.0015570294185225598,
+        "score_std": 0.0009220958917868419
+      },
+      {
+        "rank": 141,
+        "feature_id": 122,
+        "feature": "POBP_PA",
+        "score_mean": 0.0015543118761124097,
+        "score_std": 0.0004462086500408277
+      },
+      {
+        "rank": 142,
+        "feature_id": 45,
+        "feature": "NWLK_03",
+        "score_mean": 0.0015283770507514235,
+        "score_std": 0.0007815115441101986
+      },
+      {
+        "rank": 143,
+        "feature_id": 30,
+        "feature": "MAR_02",
+        "score_mean": 0.0015128837157174354,
+        "score_std": 0.0005544755847111682
+      },
+      {
+        "rank": 144,
+        "feature_id": 213,
+        "feature": "ST_NM",
+        "score_mean": 0.0014930978829105594,
+        "score_std": 0.0004810667615036467
+      },
+      {
+        "rank": 145,
+        "feature_id": 95,
+        "feature": "POBP_IL",
+        "score_mean": 0.0014867990838944981,
+        "score_std": 0.0008136997825970119
+      },
+      {
+        "rank": 146,
+        "feature_id": 25,
+        "feature": "FER_00",
+        "score_mean": 0.0014753471176745835,
+        "score_std": 0.0007081096890724031
+      },
+      {
+        "rank": 147,
+        "feature_id": 119,
+        "feature": "POBP_OH",
+        "score_mean": 0.0014615142241427097,
+        "score_std": 0.00023671284022313608
+      },
+      {
+        "rank": 148,
+        "feature_id": 1,
+        "feature": "AGEP",
+        "score_mean": 0.0014325750909533527,
+        "score_std": 0.0002798744356331148
+      },
+      {
+        "rank": 149,
+        "feature_id": 74,
+        "feature": "OCCP_Une",
+        "score_mean": 0.0014252720201757291,
+        "score_std": 0.0006212200962895004
+      },
+      {
+        "rank": 150,
+        "feature_id": 237,
+        "feature": "WRK_01",
+        "score_mean": 0.0014149867106627034,
+        "score_std": 0.0006336419763282674
+      },
+      {
+        "rank": 151,
+        "feature_id": 14,
+        "feature": "DEYE_01",
+        "score_mean": 0.0014137690454940088,
+        "score_std": 0.000904066966804851
+      },
+      {
+        "rank": 152,
+        "feature_id": 56,
+        "feature": "OCCP_FFF",
+        "score_mean": 0.0014136383891973643,
+        "score_std": 0.0005003731942646728
+      },
+      {
+        "rank": 153,
+        "feature_id": 75,
+        "feature": "POBP_AFRICA",
+        "score_mean": 0.0013949870542327458,
+        "score_std": 0.00029677957380844493
+      },
+      {
+        "rank": 154,
+        "feature_id": 7,
+        "feature": "CIT_01",
+        "score_mean": 0.0013858691132879856,
+        "score_std": 0.0006677355852548535
+      },
+      {
+        "rank": 155,
+        "feature_id": 220,
+        "feature": "ST_PR",
+        "score_mean": 0.001378163554792259,
+        "score_std": 0.0005125504796879276
+      },
+      {
+        "rank": 156,
+        "feature_id": 40,
+        "feature": "NWLA_01",
+        "score_mean": 0.0013735777743679113,
+        "score_std": 0.0002708589498193043
+      },
+      {
+        "rank": 157,
+        "feature_id": 18,
+        "feature": "DREM_01",
+        "score_mean": 0.0013524240017649268,
+        "score_std": 0.0008555580972119324
+      },
+      {
+        "rank": 158,
+        "feature_id": 206,
+        "feature": "ST_MS",
+        "score_mean": 0.001348794874154898,
+        "score_std": 0.0005843798336422266
+      },
+      {
+        "rank": 159,
+        "feature_id": 3,
+        "feature": "ANC_02",
+        "score_mean": 0.0013387341368286275,
+        "score_std": 0.0006736374687136225
+      },
+      {
+        "rank": 160,
+        "feature_id": 51,
+        "feature": "OCCP_EAT",
+        "score_mean": 0.00131529127911636,
+        "score_std": 0.000834526861078977
+      },
+      {
+        "rank": 161,
+        "feature_id": 221,
+        "feature": "ST_RI",
+        "score_mean": 0.001313869394068378,
+        "score_std": 0.00035868736954885067
+      },
+      {
+        "rank": 162,
+        "feature_id": 89,
+        "feature": "POBP_EUROPE",
+        "score_mean": 0.00131017823005119,
+        "score_std": 0.0011530577767679946
+      },
+      {
+        "rank": 163,
+        "feature_id": 5,
+        "feature": "ANC_04",
+        "score_mean": 0.001286141497077534,
+        "score_std": 0.0004994902893721583
+      },
+      {
+        "rank": 164,
+        "feature_id": 192,
+        "feature": "ST_HI",
+        "score_mean": 0.0012844924902271598,
+        "score_std": 0.00014659625688422085
+      },
+      {
+        "rank": 165,
+        "feature_id": 35,
+        "feature": "MIL_02",
+        "score_mean": 0.00127756901076681,
+        "score_std": 0.000384299891577907
+      },
+      {
+        "rank": 166,
+        "feature_id": 182,
+        "feature": "ST_AK",
+        "score_mean": 0.001270096346709811,
+        "score_std": 0.0007807493932357823
+      },
+      {
+        "rank": 167,
+        "feature_id": 209,
+        "feature": "ST_ND",
+        "score_mean": 0.0012637527557460841,
+        "score_std": 0.0009139622862429
+      },
+      {
+        "rank": 168,
+        "feature_id": 207,
+        "feature": "ST_MT",
+        "score_mean": 0.0012624478656353961,
+        "score_std": 0.0008449657233408574
+      },
+      {
+        "rank": 169,
+        "feature_id": 226,
+        "feature": "ST_UT",
+        "score_mean": 0.0012525982243757337,
+        "score_std": 0.00035599192934583504
+      },
+      {
+        "rank": 170,
+        "feature_id": 165,
+        "feature": "SCHL_09",
+        "score_mean": 0.0012504789952315141,
+        "score_std": 0.0005275908846705081
+      },
+      {
+        "rank": 171,
+        "feature_id": 211,
+        "feature": "ST_NH",
+        "score_mean": 0.0012398726150878677,
+        "score_std": 0.0006075704624869793
+      },
+      {
+        "rank": 172,
+        "feature_id": 115,
+        "feature": "POBP_NM",
+        "score_mean": 0.0012398494510642843,
+        "score_std": 0.0006094231271836134
+      },
+      {
+        "rank": 173,
+        "feature_id": 183,
+        "feature": "ST_AL",
+        "score_mean": 0.0012378271064260955,
+        "score_std": 0.0004955982750536011
+      },
+      {
+        "rank": 174,
+        "feature_id": 77,
+        "feature": "POBP_AL",
+        "score_mean": 0.0012326788004058137,
+        "score_std": 0.0002999875427056911
+      },
+      {
+        "rank": 175,
+        "feature_id": 156,
+        "feature": "RELP_15",
+        "score_mean": 0.001231999433680633,
+        "score_std": 0.000609329376999332
+      },
+      {
+        "rank": 176,
+        "feature_id": 202,
+        "feature": "ST_ME",
+        "score_mean": 0.0012317101375090842,
+        "score_std": 0.0005166695956479534
+      },
+      {
+        "rank": 177,
+        "feature_id": 108,
+        "feature": "POBP_MS",
+        "score_mean": 0.0012269446342941903,
+        "score_std": 0.0003791322391639154
+      },
+      {
+        "rank": 178,
+        "feature_id": 0,
+        "feature": "ACS_YEAR",
+        "score_mean": 0.0012043912364968373,
+        "score_std": 0.0005595432997095366
+      },
+      {
+        "rank": 179,
+        "feature_id": 70,
+        "feature": "OCCP_RPR",
+        "score_mean": 0.0011815086014152012,
+        "score_std": 0.0008615507660479394
+      },
+      {
+        "rank": 180,
+        "feature_id": 146,
+        "feature": "RELP_05",
+        "score_mean": 0.0011766632058003042,
+        "score_std": 0.0006201943475431909
+      },
+      {
+        "rank": 181,
+        "feature_id": 118,
+        "feature": "POBP_OCEANIA",
+        "score_mean": 0.001144484449511951,
+        "score_std": 0.0005993494768454942
+      },
+      {
+        "rank": 182,
+        "feature_id": 134,
+        "feature": "POBP_WA",
+        "score_mean": 0.0011293168331891446,
+        "score_std": 0.00029060075786272236
+      },
+      {
+        "rank": 183,
+        "feature_id": 154,
+        "feature": "RELP_13",
+        "score_mean": 0.0011278188979931786,
+        "score_std": 0.000334459865807657
+      },
+      {
+        "rank": 184,
+        "feature_id": 33,
+        "feature": "MAR_05",
+        "score_mean": 0.0010938239661266547,
+        "score_std": 0.0005485359881254935
+      },
+      {
+        "rank": 185,
+        "feature_id": 41,
+        "feature": "NWLA_02",
+        "score_mean": 0.001084671652236017,
+        "score_std": 0.0009773012937972685
+      },
+      {
+        "rank": 186,
+        "feature_id": 38,
+        "feature": "NATIVITY_01",
+        "score_mean": 0.0010821266047306127,
+        "score_std": 0.0005650992465774144
+      },
+      {
+        "rank": 187,
+        "feature_id": 117,
+        "feature": "POBP_NY",
+        "score_mean": 0.001073870655156916,
+        "score_std": 0.0005781213431828416
+      },
+      {
+        "rank": 188,
+        "feature_id": 231,
+        "feature": "ST_WV",
+        "score_mean": 0.0010656113844627838,
+        "score_std": 0.0002155801875953553
+      },
+      {
+        "rank": 189,
+        "feature_id": 166,
+        "feature": "SCHL_10",
+        "score_mean": 0.0010608880765080602,
+        "score_std": 0.00022910568376451176
+      },
+      {
+        "rank": 190,
+        "feature_id": 92,
+        "feature": "POBP_HI",
+        "score_mean": 0.00104850811480946,
+        "score_std": 0.00029565040671579814
+      },
+      {
+        "rank": 191,
+        "feature_id": 9,
+        "feature": "CIT_03",
+        "score_mean": 0.0010378934361619477,
+        "score_std": 0.00033994421859572037
+      },
+      {
+        "rank": 192,
+        "feature_id": 11,
+        "feature": "CIT_05",
+        "score_mean": 0.0010366426556992839,
+        "score_std": 0.00024068677951771423
+      },
+      {
+        "rank": 193,
+        "feature_id": 236,
+        "feature": "WRK_00",
+        "score_mean": 0.0010348933878378272,
+        "score_std": 0.00027097828636572866
+      },
+      {
+        "rank": 194,
+        "feature_id": 69,
+        "feature": "OCCP_PRT",
+        "score_mean": 0.0010249403277427715,
+        "score_std": 0.00019640406355630113
+      },
+      {
+        "rank": 195,
+        "feature_id": 2,
+        "feature": "ANC_01",
+        "score_mean": 0.0010236685456894567,
+        "score_std": 0.0004805829385819084
+      },
+      {
+        "rank": 196,
+        "feature_id": 145,
+        "feature": "RELP_04",
+        "score_mean": 0.001016559330916638,
+        "score_std": 0.0007507046551887776
+      },
+      {
+        "rank": 197,
+        "feature_id": 194,
+        "feature": "ST_ID",
+        "score_mean": 0.001015671164262694,
+        "score_std": 0.00028214846626789004
+      },
+      {
+        "rank": 198,
+        "feature_id": 162,
+        "feature": "SCHL_06",
+        "score_mean": 0.0009976128036849642,
+        "score_std": 0.0003869364703022494
+      },
+      {
+        "rank": 199,
+        "feature_id": 189,
+        "feature": "ST_DE",
+        "score_mean": 0.0009930524460526487,
+        "score_std": 0.0002592617824566219
+      },
+      {
+        "rank": 200,
+        "feature_id": 141,
+        "feature": "RELP_00",
+        "score_mean": 0.0009788305404817652,
+        "score_std": 0.0002785380666911673
+      },
+      {
+        "rank": 201,
+        "feature_id": 172,
+        "feature": "SCHL_16",
+        "score_mean": 0.0009738050804356154,
+        "score_std": 0.0004718360202194436
+      },
+      {
+        "rank": 202,
+        "feature_id": 110,
+        "feature": "POBP_NC",
+        "score_mean": 0.0009734379381099803,
+        "score_std": 0.0004283786485843751
+      },
+      {
+        "rank": 203,
+        "feature_id": 76,
+        "feature": "POBP_AK",
+        "score_mean": 0.000960231667664679,
+        "score_std": 0.0002596990789078139
+      },
+      {
+        "rank": 204,
+        "feature_id": 81,
+        "feature": "POBP_CA",
+        "score_mean": 0.0009569000526801593,
+        "score_std": 0.0003282407733092931
+      },
+      {
+        "rank": 205,
+        "feature_id": 91,
+        "feature": "POBP_GA",
+        "score_mean": 0.0009268236384481772,
+        "score_std": 0.00024974512814192795
+      },
+      {
+        "rank": 206,
+        "feature_id": 27,
+        "feature": "FER_02",
+        "score_mean": 0.0009267846956058085,
+        "score_std": 0.00030738815921030614
+      },
+      {
+        "rank": 207,
+        "feature_id": 216,
+        "feature": "ST_OH",
+        "score_mean": 0.0009246838368384067,
+        "score_std": 0.00025146519069429546
+      },
+      {
+        "rank": 208,
+        "feature_id": 12,
+        "feature": "DEAR_01",
+        "score_mean": 0.000913521185540754,
+        "score_std": 0.00025716492374518505
+      },
+      {
+        "rank": 209,
+        "feature_id": 235,
+        "feature": "WKW",
+        "score_mean": 0.0009108472617502505,
+        "score_std": 0.00028360196924459997
+      },
+      {
+        "rank": 210,
+        "feature_id": 222,
+        "feature": "ST_SC",
+        "score_mean": 0.0009102149077685427,
+        "score_std": 0.00029942924273841746
+      },
+      {
+        "rank": 211,
+        "feature_id": 175,
+        "feature": "SCHL_19",
+        "score_mean": 0.0009043775590420426,
+        "score_std": 0.0002365152875942695
+      },
+      {
+        "rank": 212,
+        "feature_id": 8,
+        "feature": "CIT_02",
+        "score_mean": 0.0008995264236442638,
+        "score_std": 0.00011432895916170702
+      },
+      {
+        "rank": 213,
+        "feature_id": 124,
+        "feature": "POBP_RI",
+        "score_mean": 0.0008966736809568956,
+        "score_std": 0.0003302218249562896
+      },
+      {
+        "rank": 214,
+        "feature_id": 86,
+        "feature": "POBP_CT",
+        "score_mean": 0.0008879007415481616,
+        "score_std": 0.00017442919016386765
+      },
+      {
+        "rank": 215,
+        "feature_id": 181,
+        "feature": "SEX",
+        "score_mean": 0.0008862216449073611,
+        "score_std": 0.00037569101409604366
+      },
+      {
+        "rank": 216,
+        "feature_id": 176,
+        "feature": "SCHL_20",
+        "score_mean": 0.0008835102205044463,
+        "score_std": 0.00022990214005365317
+      },
+      {
+        "rank": 217,
+        "feature_id": 19,
+        "feature": "DREM_02",
+        "score_mean": 0.0008701985737031504,
+        "score_std": 0.00040440022119332696
+      },
+      {
+        "rank": 218,
+        "feature_id": 219,
+        "feature": "ST_PA",
+        "score_mean": 0.0008692769686287084,
+        "score_std": 0.00019270271166723615
+      },
+      {
+        "rank": 219,
+        "feature_id": 16,
+        "feature": "DIS_10",
+        "score_mean": 0.0008678555600316734,
+        "score_std": 0.00013744416096764952
+      },
+      {
+        "rank": 220,
+        "feature_id": 13,
+        "feature": "DEAR_02",
+        "score_mean": 0.0008648903069683181,
+        "score_std": 0.0001829420503448552
+      },
+      {
+        "rank": 221,
+        "feature_id": 205,
+        "feature": "ST_MO",
+        "score_mean": 0.000849980634638713,
+        "score_std": 6.670920127904152e-05
+      },
+      {
+        "rank": 222,
+        "feature_id": 199,
+        "feature": "ST_LA",
+        "score_mean": 0.0008390927476575074,
+        "score_std": 0.0004200414777395217
+      },
+      {
+        "rank": 223,
+        "feature_id": 201,
+        "feature": "ST_MD",
+        "score_mean": 0.0008352563487829549,
+        "score_std": 7.251356096909801e-05
+      },
+      {
+        "rank": 224,
+        "feature_id": 64,
+        "feature": "OCCP_NA",
+        "score_mean": 0.0008256741310453334,
+        "score_std": 0.00037805732116578565
+      },
+      {
+        "rank": 225,
+        "feature_id": 104,
+        "feature": "POBP_MI",
+        "score_mean": 0.0008178220170365891,
+        "score_std": 0.0003460226253438398
+      },
+      {
+        "rank": 226,
+        "feature_id": 238,
+        "feature": "WRK_02",
+        "score_mean": 0.0007956296250947405,
+        "score_std": 0.00020407274202935449
+      },
+      {
+        "rank": 227,
+        "feature_id": 103,
+        "feature": "POBP_MEXICO",
+        "score_mean": 0.0007903929128597149,
+        "score_std": 0.00023115255616837718
+      },
+      {
+        "rank": 228,
+        "feature_id": 22,
+        "feature": "ENG_02",
+        "score_mean": 0.000789717416884336,
+        "score_std": 0.00015202002028321274
+      },
+      {
+        "rank": 229,
+        "feature_id": 21,
+        "feature": "ENG_01",
+        "score_mean": 0.0007794015415699856,
+        "score_std": 0.00022976886865548198
+      },
+      {
+        "rank": 230,
+        "feature_id": 80,
+        "feature": "POBP_AZ",
+        "score_mean": 0.0007780747204559309,
+        "score_std": 0.00019722294351557046
+      },
+      {
+        "rank": 231,
+        "feature_id": 48,
+        "feature": "OCCP_CMM",
+        "score_mean": 0.0007712950407326677,
+        "score_std": 0.00014722350594299034
+      },
+      {
+        "rank": 232,
+        "feature_id": 224,
+        "feature": "ST_TN",
+        "score_mean": 0.0007660368869061897,
+        "score_std": 0.00036644794496896077
+      },
+      {
+        "rank": 233,
+        "feature_id": 203,
+        "feature": "ST_MI",
+        "score_mean": 0.0007622777121052967,
+        "score_std": 0.00020604870275357443
+      },
+      {
+        "rank": 234,
+        "feature_id": 10,
+        "feature": "CIT_04",
+        "score_mean": 0.0007548450645869113,
+        "score_std": 0.00024402255409785022
+      },
+      {
+        "rank": 235,
+        "feature_id": 99,
+        "feature": "POBP_LA",
+        "score_mean": 0.0007317375531615402,
+        "score_std": 0.00011399157958458492
+      },
+      {
+        "rank": 236,
+        "feature_id": 132,
+        "feature": "POBP_VA",
+        "score_mean": 0.0007253950129831583,
+        "score_std": 0.0005256671781798024
+      },
+      {
+        "rank": 237,
+        "feature_id": 174,
+        "feature": "SCHL_18",
+        "score_mean": 0.0007171753422672127,
+        "score_std": 0.00026368358495234786
+      },
+      {
+        "rank": 238,
+        "feature_id": 229,
+        "feature": "ST_WA",
+        "score_mean": 0.0006741301481691991,
+        "score_std": 0.00026126555349307207
+      },
+      {
+        "rank": 239,
+        "feature_id": 234,
+        "feature": "WKHP",
+        "score_mean": 0.0005324813752433671,
+        "score_std": 0.0001448762281635497
+      }
+    ]
+  }
+}

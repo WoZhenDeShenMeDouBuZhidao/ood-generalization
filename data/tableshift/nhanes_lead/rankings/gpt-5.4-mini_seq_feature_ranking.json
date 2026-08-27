@@ -1,0 +1,133 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "nhanes_lead",
+  "model": "gpt-5.4-mini",
+  "method": "seq",
+  "temperature": 0.0,
+  "created_at": "2026-06-09T16:50:01",
+  "token_usage": {
+    "num_calls": 7,
+    "input_tokens": 3744,
+    "output_tokens": 383,
+    "total_tokens": 4127
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 3,
+        "feature": "RIDAGEYR",
+        "rationale": "Age is a strong, semantically stable predictor for lead burden and related exposure patterns, and is less likely than year or demographic identifiers to encode domain-specific shortcuts or leakage."
+      },
+      {
+        "rank": 2,
+        "feature_id": 4,
+        "feature": "RIAGENDR",
+        "rationale": "Gender is a broadly stable demographic predictor that can add signal beyond age without directly encoding survey year or likely domain-specific artifacts."
+      },
+      {
+        "rank": 3,
+        "feature_id": 2,
+        "feature": "DMDEDUC2",
+        "rationale": "Education is a strong, semantically stable predictor of lead exposure risk and related health behaviors, adding information beyond age and sex without directly encoding the domain split or obvious leakage."
+      },
+      {
+        "rank": 4,
+        "feature_id": 5,
+        "feature": "DMDMARTL",
+        "rationale": "Marital status is a relatively stable socioeconomic/life-course signal that can add predictive value beyond age, sex, and education without directly encoding survey year or obvious domain-specific artifacts."
+      },
+      {
+        "rank": 5,
+        "feature_id": 6,
+        "feature": "RIDRETH_merged",
+        "rationale": "Race/ethnicity is a strong, semantically meaningful predictor of lead exposure risk and related health disparities that can remain informative across domains, whereas year and birthplace are more likely to act as domain or cohort proxies."
+      },
+      {
+        "rank": 6,
+        "feature_id": 1,
+        "feature": "DMDBORN4",
+        "rationale": "Country of birth can capture persistent exposure and socioeconomic differences relevant to lead burden, while being less directly tied to the split mechanism than year; it should add stable predictive signal beyond age, sex, education, marital status, and race/ethnicity."
+      },
+      {
+        "rank": 7,
+        "feature_id": 0,
+        "feature": "nhanes_year",
+        "rationale": "The year can capture broad secular trends in lead exposure and survey-era shifts that may remain predictive across splits, though it is also somewhat domain-specific."
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "step": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DMDBORN4\",\n    \"type\": \"categorical\",\n    \"description\": \"country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DMDEDUC2\",\n    \"type\": \"categorical\",\n    \"description\": \"highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"RIDAGEYR\",\n    \"type\": \"continuous\",\n    \"description\": \"age in years\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"RIAGENDR\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"DMDMARTL\",\n    \"type\": \"categorical\",\n    \"description\": \"marital status\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RIDRETH_merged\",\n    \"type\": \"categorical\",\n    \"description\": \"race and hispanic origin\",\n    \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":3,\"rationale\":\"Age is a strong, semantically stable predictor for lead burden and related exposure patterns, and is less likely than year or demographic identifiers to encode domain-specific shortcuts or leakage.\"}",
+      "input_tokens": 616,
+      "output_tokens": 55,
+      "total_tokens": 671,
+      "response_id": "resp_0d10e1ef37bd86bd006a27d3ad4344819ba7712f3a254b5a19",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "step": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 3,\n    \"feature\": \"RIDAGEYR\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DMDBORN4\",\n    \"type\": \"categorical\",\n    \"description\": \"country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DMDEDUC2\",\n    \"type\": \"categorical\",\n    \"description\": \"highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"RIAGENDR\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"DMDMARTL\",\n    \"type\": \"categorical\",\n    \"description\": \"marital status\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RIDRETH_merged\",\n    \"type\": \"categorical\",\n    \"description\": \"race and hispanic origin\",\n    \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\": 4,\"rationale\":\"Gender is a broadly stable demographic predictor that can add signal beyond age without directly encoding survey year or likely domain-specific artifacts.\"}",
+      "input_tokens": 601,
+      "output_tokens": 46,
+      "total_tokens": 647,
+      "response_id": "resp_06648d299b15a239006a27d3aeb02c819ba1087c551dfee104",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "step": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 3,\n    \"feature\": \"RIDAGEYR\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"RIAGENDR\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DMDBORN4\",\n    \"type\": \"categorical\",\n    \"description\": \"country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DMDEDUC2\",\n    \"type\": \"categorical\",\n    \"description\": \"highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"DMDMARTL\",\n    \"type\": \"categorical\",\n    \"description\": \"marital status\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RIDRETH_merged\",\n    \"type\": \"categorical\",\n    \"description\": \"race and hispanic origin\",\n    \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":2,\"rationale\":\"Education is a strong, semantically stable predictor of lead exposure risk and related health behaviors, adding information beyond age and sex without directly encoding the domain split or obvious leakage.\"}",
+      "input_tokens": 586,
+      "output_tokens": 49,
+      "total_tokens": 635,
+      "response_id": "resp_0bc0ce54966c216e006a27d3b0a3fc8199b8fc2eaefd8052e8",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "step": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 3,\n    \"feature\": \"RIDAGEYR\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"RIAGENDR\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DMDEDUC2\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DMDBORN4\",\n    \"type\": \"categorical\",\n    \"description\": \"country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"DMDMARTL\",\n    \"type\": \"categorical\",\n    \"description\": \"marital status\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RIDRETH_merged\",\n    \"type\": \"categorical\",\n    \"description\": \"race and hispanic origin\",\n    \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":5,\"rationale\":\"Marital status is a relatively stable socioeconomic/life-course signal that can add predictive value beyond age, sex, and education without directly encoding survey year or obvious domain-specific artifacts.\"}",
+      "input_tokens": 561,
+      "output_tokens": 56,
+      "total_tokens": 617,
+      "response_id": "resp_0f8bbc1820d18c9c006a27d3b2a25c819b93cbd4378cbe4f13",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "step": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 3,\n    \"feature\": \"RIDAGEYR\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"RIAGENDR\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DMDEDUC2\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"DMDMARTL\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DMDBORN4\",\n    \"type\": \"categorical\",\n    \"description\": \"country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RIDRETH_merged\",\n    \"type\": \"categorical\",\n    \"description\": \"race and hispanic origin\",\n    \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":6,\"rationale\":\"Race/ethnicity is a strong, semantically meaningful predictor of lead exposure risk and related health disparities that can remain informative across domains, whereas year and birthplace are more likely to act as domain or cohort proxies.\"}",
+      "input_tokens": 544,
+      "output_tokens": 63,
+      "total_tokens": 607,
+      "response_id": "resp_0092b17b6ae1e40c006a27d3b3bac481999f6c965059255293",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "step": 6,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 3,\n    \"feature\": \"RIDAGEYR\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"RIAGENDR\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DMDEDUC2\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"DMDMARTL\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RIDRETH_merged\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DMDBORN4\",\n    \"type\": \"categorical\",\n    \"description\": \"country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":1,\"rationale\":\"Country of birth can capture persistent exposure and socioeconomic differences relevant to lead burden, while being less directly tied to the split mechanism than year; it should add stable predictive signal beyond age, sex, education, marital status, and race/ethnicity.\"}",
+      "input_tokens": 445,
+      "output_tokens": 70,
+      "total_tokens": 515,
+      "response_id": "resp_0f0a64ec3390334e006a27d3b713a4819b9da52e1aac139a17",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "step": 7,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 3,\n    \"feature\": \"RIDAGEYR\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"RIAGENDR\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DMDEDUC2\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"DMDMARTL\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RIDRETH_merged\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DMDBORN4\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":0,\"rationale\":\"The year can capture broad secular trends in lead exposure and survey-era shifts that may remain predictive across splits, though it is also somewhat domain-specific.\"}",
+      "input_tokens": 391,
+      "output_tokens": 44,
+      "total_tokens": 435,
+      "response_id": "resp_093570511528ce69006a27d3b8a814819b9b3aadad157b25f9",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/tableshift/nhanes_lead/rankings/seq_prompt.txt"
+}

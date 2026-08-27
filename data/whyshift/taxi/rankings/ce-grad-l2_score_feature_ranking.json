@@ -1,0 +1,77 @@
+{
+  "benchmark": "whyshift",
+  "dataset": "taxi",
+  "model": "ce-grad-l2",
+  "method": "score",
+  "feature_space": "semantic",
+  "created_at": "2026-08-12T00:24:22",
+  "aggregation": {
+    "name": "normalized_mean",
+    "normalization": "per_repeat_sum_to_one",
+    "repeat_count": 5,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 5,
+        "feature": "distance",
+        "score_mean": 0.8485746546154038,
+        "score_std": 0.0815364790069207
+      },
+      {
+        "rank": 2,
+        "feature_id": 3,
+        "feature": "hour",
+        "score_mean": 0.04554807062351408,
+        "score_std": 0.038609169966665566
+      },
+      {
+        "rank": 3,
+        "feature_id": 4,
+        "feature": "minute_oftheday",
+        "score_mean": 0.04175207554877253,
+        "score_std": 0.036481718476596904
+      },
+      {
+        "rank": 4,
+        "feature_id": 0,
+        "feature": "month",
+        "score_mean": 0.022387154176942637,
+        "score_std": 0.011950660097740918
+      },
+      {
+        "rank": 5,
+        "feature_id": 1,
+        "feature": "week",
+        "score_mean": 0.018250175972464693,
+        "score_std": 0.014315373965869802
+      },
+      {
+        "rank": 6,
+        "feature_id": 2,
+        "feature": "weekday",
+        "score_mean": 0.018076750804688783,
+        "score_std": 0.006299798004513082
+      },
+      {
+        "rank": 7,
+        "feature_id": 6,
+        "feature": "direction",
+        "score_mean": 0.005411118258213467,
+        "score_std": 0.0009737796191124023
+      }
+    ]
+  }
+}

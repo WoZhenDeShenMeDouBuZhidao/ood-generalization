@@ -1,0 +1,162 @@
+# tableshift/brfss_blood_pressure rank prompts
+
+## 1. rank
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `brfss_blood_pressure`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Feature cards, in model input order:
+[
+  {
+    "feature_id": 0,
+    "feature": "AGEG5YR",
+    "type": "categorical",
+    "description": "Age group",
+    "values": "1.0=Age 18 to 24; 2.0=Age 25 to 29; 3.0=Age 30 to 34; 4.0=Age 35 to 39; 5.0=Age 40 to 44; 6.0=Age 45 to 49; 7.0=Age 50 to 54; 8.0=Age 55 to 59; 9.0=Age 60 to 64; 10.0=Age 65 to 69; 11.0=Age 70 to 74; 12.0=Age 75 to 79; ... (+2 more)"
+  },
+  {
+    "feature_id": 1,
+    "feature": "FRUIT_ONCE_PER_DAY",
+    "type": "categorical",
+    "description": "Fruit consumption",
+    "values": "1.0=Consumed fruit one or more times per day; 2.0=Consumed fruit less than one time per day; 9.0=Don't know, refused or missing values"
+  },
+  {
+    "feature_id": 2,
+    "feature": "VEG_ONCE_PER_DAY",
+    "type": "categorical",
+    "description": "Vegetable consumption",
+    "values": "1.0=Consumed vegetables one or more times per day; 2.0=Consumed vegetables less than one time per day; 9.0=Don't know, refused or missing values"
+  },
+  {
+    "feature_id": 3,
+    "feature": "DRNK_PER_WEEK",
+    "type": "continuous",
+    "description": "Total number of alcoholic beverages consumed per week"
+  },
+  {
+    "feature_id": 4,
+    "feature": "RFBING5",
+    "type": "categorical",
+    "description": "Respondent is binge drinker",
+    "values": "1.0=No; 2.0=Yes; 9.0=Don't know/Refused/Missing"
+  },
+  {
+    "feature_id": 5,
+    "feature": "TOTINDA",
+    "type": "categorical",
+    "description": "Physical activity or exercise during the past 30 days other than their regular job",
+    "values": "1.0=Had physical activity or exercise in last 30 days; 2.0=No physical activity or exercise in last 30 days"
+  },
+  {
+    "feature_id": 6,
+    "feature": "SMOKE100",
+    "type": "boolean_categorical",
+    "description": "Answer to the question 'Have you smoked at least 100 cigarettes in your entire life?'",
+    "values": "1.0=Yes; 2.0=No"
+  },
+  {
+    "feature_id": 7,
+    "feature": "SMOKDAY2",
+    "type": "categorical",
+    "description": "Answer to the question 'Do you now smoke cigarettes every day, some days, or not at all?'",
+    "values": "1.0=Every day; 2.0=Some days; 3.0=Not at all; 7.0=Don´t Know/Not Sure; 9.0=Refused"
+  },
+  {
+    "feature_id": 8,
+    "feature": "CHCSCNCR",
+    "type": "categorical",
+    "description": "Have skin cancer or ever told you have skin cancer",
+    "values": "1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused"
+  },
+  {
+    "feature_id": 9,
+    "feature": "CHCOCNCR",
+    "type": "categorical",
+    "description": "Have any other types of cancer or ever told you have any other types of cancer",
+    "values": "1.0=Yes; 2.0=No; 7.0=Don’t know/Not Sure; 9.0=Refused"
+  },
+  {
+    "feature_id": 10,
+    "feature": "DIABETES",
+    "type": "categorical",
+    "description": "Have diabetes or ever been told you have diabetes",
+    "values": "1.0=Yes; 2.0=Yes, but female told only during pregnancy; 3.0=No; 4.0=No, pre-diabetes or borderline diabetes; 7.0=Don’t know/Not Sure; 9.0=Refused, BLANK Not asked or Missing"
+  },
+  {
+    "feature_id": 11,
+    "feature": "POVERTY",
+    "type": "boolean_categorical",
+    "description": "Binary indicator for whether an individuals' income falls below the 2021 poverty guideline for family of four",
+    "values": "1.0=Yes; 0.0=No"
+  },
+  {
+    "feature_id": 12,
+    "feature": "EMPLOY1",
+    "type": "categorical",
+    "description": "Current employment status",
+    "values": "1.0=Employed for wages; 2.0=Self-employed; 3.0=Out of work for 1 year or more; 4.0=Out of work for less than 1 year; 5.0=A homemaker; 6.0=A student; 7.0=Retired; 8.0=Unable to work; 9.0=Refused"
+  },
+  {
+    "feature_id": 13,
+    "feature": "IYEAR",
+    "type": "continuous",
+    "description": "Survey year"
+  },
+  {
+    "feature_id": 14,
+    "feature": "STATE",
+    "type": "categorical",
+    "description": "State",
+    "values": "1.0=Alabama; 4.0=Arizona; 5.0=Arkansas; 6.0=California; 8.0=Colorado; 9.0=Connecticut; 10.0=Delaware; 11.0=District of Columbia; 12.0=Florida; 13.0=Georgia; 15.0=Hawaii; 16.0=Idaho; ... (+40 more)"
+  },
+  {
+    "feature_id": 15,
+    "feature": "MEDCOST",
+    "type": "categorical",
+    "description": "Answer to the question 'Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?'",
+    "values": "1.0=Yes; 2.0=No; 7.0=Don't know/not sure; 9.0=Refused"
+  },
+  {
+    "feature_id": 16,
+    "feature": "PRACE1",
+    "type": "categorical",
+    "description": "Preferred race category",
+    "values": "1.0=White; 2.0=Black or African American; 3.0=American Indian or Alaskan Native; 4.0=Asian; 5.0=Native Hawaiian or other Pacific Islander; 6.0=Other race; 7.0=No preferred race; 8.0=Multiracial but preferred race not answered; 77.0=Don’t know/Not sure; 9.0=..."
+  },
+  {
+    "feature_id": 17,
+    "feature": "SEX",
+    "type": "categorical",
+    "description": "Sex of respondent",
+    "values": "1=Male; 2=Female"
+  }
+]
+
+Feature IDs to include exactly once:
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "ranking": [
+    {
+      "rank": 1,
+      "feature_id": 0,
+      "rationale": "short reason"
+    }
+  ]
+}
+
+Rules:
+- Include every feature_id exactly once in `ranking`.
+- Use ranks 1 through 18, with no duplicates.
+- Rank 1 is most important.
+- If two features seem similarly important, still break ties.
+- `feature_id` is the authoritative identifier. Include each feature_id exactly
+  once and do not include feature names in the output.

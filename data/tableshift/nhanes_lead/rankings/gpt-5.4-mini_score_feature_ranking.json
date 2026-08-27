@@ -1,0 +1,796 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "nhanes_lead",
+  "model": "gpt-5.4-mini",
+  "method": "score",
+  "temperature": 0.5,
+  "created_at": "2026-06-09T16:49:34",
+  "token_usage": {
+    "num_calls": 35,
+    "input_tokens": 10270,
+    "output_tokens": 3448,
+    "total_tokens": 13718
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 3,
+        "feature": "RIDAGEYR",
+        "score_mean": 0.616,
+        "score_std": 0.18260339536821324
+      },
+      {
+        "rank": 2,
+        "feature_id": 2,
+        "feature": "DMDEDUC2",
+        "score_mean": 0.384,
+        "score_std": 0.088
+      },
+      {
+        "rank": 3,
+        "feature_id": 6,
+        "feature": "RIDRETH_merged",
+        "score_mean": 0.338,
+        "score_std": 0.06209669878504009
+      },
+      {
+        "rank": 4,
+        "feature_id": 4,
+        "feature": "RIAGENDR",
+        "score_mean": 0.208,
+        "score_std": 0.05600000000000001
+      },
+      {
+        "rank": 5,
+        "feature_id": 5,
+        "feature": "DMDMARTL",
+        "score_mean": 0.18,
+        "score_std": 0.0
+      },
+      {
+        "rank": 6,
+        "feature_id": 1,
+        "feature": "DMDBORN4",
+        "score_mean": 0.16,
+        "score_std": 0.02529822128134703
+      },
+      {
+        "rank": 7,
+        "feature_id": 0,
+        "feature": "nhanes_year",
+        "score_mean": 0.034,
+        "score_std": 0.0233238075793812
+      }
+    ],
+    "scores": [
+      {
+        "feature_id": 0,
+        "feature": "nhanes_year",
+        "score_mean": 0.034,
+        "score_std": 0.0233238075793812,
+        "samples": [
+          {
+            "task_summary": "Predicting lead exposure-related outcome for NHANES participants from survey and lab features.",
+            "feature_id": 0,
+            "score": 0.02,
+            "rationale": "Survey year is mostly a domain identifier and can capture temporal shifts or dataset split artifacts rather than a stable causal signal for lead-related prediction, so it is unlikely to generalize well.",
+            "feature": "nhanes_year"
+          },
+          {
+            "task_summary": "Predict whether an NHANES participant has elevated lead based on survey and exam features.",
+            "feature_id": 0,
+            "score": 0.03,
+            "rationale": "This is a dataset-year indicator, so it may capture shifting collection protocols, population mix, or label prevalence rather than a stable causal signal; it is highly domain-specific and brittle for out-of-distribution generalization.",
+            "feature": "nhanes_year"
+          },
+          {
+            "task_summary": "Predicting elevated blood lead status in NHANES participants from survey and laboratory features.",
+            "feature_id": 0,
+            "score": 0.02,
+            "rationale": "Calendar year is mostly a domain identifier and can capture dataset shift or policy-era artifacts rather than a stable causal signal for lead exposure, so it is unlikely to generalize well.",
+            "feature": "nhanes_year"
+          },
+          {
+            "task_summary": "Predict whether a participant has elevated lead exposure in NHANES using available survey and lab features.",
+            "feature_id": 0,
+            "score": 0.08,
+            "rationale": "Survey year is mostly a domain/time identifier and can capture dataset shift or secular trends rather than a stable causal signal; any predictive value is likely brittle and not semantically transferable across splits.",
+            "feature": "nhanes_year"
+          },
+          {
+            "task_summary": "Predicting whether an individual has elevated blood lead levels from NHANES survey and examination features.",
+            "feature_id": 0,
+            "score": 0.02,
+            "rationale": "Survey year is mostly a domain/time identifier rather than a causal predictor of lead exposure, so it is likely to capture dataset shift and secular trends instead of stable individual-level signal.",
+            "feature": "nhanes_year"
+          }
+        ]
+      },
+      {
+        "feature_id": 1,
+        "feature": "DMDBORN4",
+        "score_mean": 0.16,
+        "score_std": 0.02529822128134703,
+        "samples": [
+          {
+            "task_summary": "Predict whether a person has elevated blood lead level from NHANES survey and lab features.",
+            "feature_id": 1,
+            "score": 0.14,
+            "rationale": "Country of birth may correlate weakly with lead exposure through immigration-related housing, occupation, or socioeconomic patterns, but it is a demographic shortcut that can shift across domains and is not a direct, stable causal predictor of lead burden.",
+            "feature": "DMDBORN4"
+          },
+          {
+            "task_summary": "Predicting whether a person has elevated blood lead level in the NHANES-based target population.",
+            "feature_id": 1,
+            "score": 0.18,
+            "rationale": "Country of birth may weakly relate to long-term exposure history and housing/environmental risk, but it is a sensitive demographic proxy that can act as a brittle shortcut and is unlikely to be a stable causal predictor across domains.",
+            "feature": "DMDBORN4"
+          },
+          {
+            "task_summary": "Predict whether an NHANES participant has elevated lead exposure using survey and health-related attributes.",
+            "feature_id": 1,
+            "score": 0.18,
+            "rationale": "Country of birth may weakly relate to lead exposure through migration history and environmental background, but it is a sensitive demographic proxy and likely a brittle shortcut that may not generalize well across domains.",
+            "feature": "DMDBORN4"
+          },
+          {
+            "task_summary": "Predicting whether a person has elevated blood lead levels in the NHANES lead-related classification task.",
+            "feature_id": 1,
+            "score": 0.12,
+            "rationale": "Country of birth may weakly correlate with lifetime exposure patterns, but it is a sensitive demographic proxy and likely captures population-specific or site-specific confounding rather than a stable causal signal for lead status.",
+            "feature": "DMDBORN4"
+          },
+          {
+            "task_summary": "Predict whether an individual has elevated blood lead level using survey and demographic features from NHANES.",
+            "feature_id": 1,
+            "score": 0.18,
+            "rationale": "Country of birth may weakly relate to lead exposure through immigration-related housing, occupation, or environmental history, but it is a sensitive demographic proxy and likely captures dataset-specific population shifts rather than a stable causal signal.",
+            "feature": "DMDBORN4"
+          }
+        ]
+      },
+      {
+        "feature_id": 2,
+        "feature": "DMDEDUC2",
+        "score_mean": 0.384,
+        "score_std": 0.088,
+        "samples": [
+          {
+            "task_summary": "Predicting whether a person has elevated lead exposure in the NHANES lead task.",
+            "feature_id": 2,
+            "score": 0.48,
+            "rationale": "Education is a fairly stable socioeconomic proxy that can correlate with environmental exposure risk, but it is indirect, demographic, and likely weaker than more proximal exposure-related variables.",
+            "feature": "DMDEDUC2"
+          },
+          {
+            "task_summary": "Predicting whether a person has elevated lead exposure using NHANES survey and lab data.",
+            "feature_id": 2,
+            "score": 0.42,
+            "rationale": "Education level can be a stable socioeconomic proxy that correlates with lead exposure risk through occupation, housing, and neighborhood conditions, but it is also a demographic shortcut and may vary in usefulness across domains, so it should receive moderate weight rather than be treated as a core causal predictor.",
+            "feature": "DMDEDUC2"
+          },
+          {
+            "task_summary": "Predict whether a participant has elevated blood lead level in the NHANES lead task.",
+            "feature_id": 2,
+            "score": 0.22,
+            "rationale": "Education can correlate with lead exposure through long-run socioeconomic and occupational pathways, but it is a demographic proxy that is only indirectly related to the target and may shift across domains, so it is moderately useful at best.",
+            "feature": "DMDEDUC2"
+          },
+          {
+            "task_summary": "Predicting lead exposure risk/outcome in NHANES using participant and survey features.",
+            "feature_id": 2,
+            "score": 0.42,
+            "rationale": "Education is a moderately stable socioeconomic proxy that can correlate with environmental exposure risk and health behaviors, but it is also a demographic shortcut and may shift across domains, so it should be useful only to a limited degree.",
+            "feature": "DMDEDUC2"
+          },
+          {
+            "task_summary": "Predict whether an individual has elevated blood lead level in the NHANES lead-related classification task.",
+            "feature_id": 2,
+            "score": 0.38,
+            "rationale": "Education is a plausible stable proxy for long-term socioeconomic and environmental exposure risk, so it may help generalize across domains, but it is also a demographic shortcut that can shift with sampling and policy context and is not a direct causal exposure measure.",
+            "feature": "DMDEDUC2"
+          }
+        ]
+      },
+      {
+        "feature_id": 3,
+        "feature": "RIDAGEYR",
+        "score_mean": 0.616,
+        "score_std": 0.18260339536821324,
+        "samples": [
+          {
+            "task_summary": "Predict whether an individual has elevated blood lead levels from NHANES-style survey and lab measurements.",
+            "feature_id": 3,
+            "score": 0.78,
+            "rationale": "Age is a broadly stable predictor of lead burden because cumulative exposure and cohort effects persist across domains, making it useful without being a direct leakage feature; however, it can also partially proxy demographic and cohort-specific artifacts, so it should not be treated as maximally reliable.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "task_summary": "Predicting whether a participant has elevated blood lead level in the NHANES lead task.",
+            "feature_id": 3,
+            "score": 0.62,
+            "rationale": "Age is a broadly stable health-related predictor that can correlate with cumulative lead exposure and screening patterns across domains, but it is only moderately informative and can also reflect cohort and demographic shifts rather than a direct causal signal.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "task_summary": "Predict whether a participant has elevated blood lead level in the NHANES lead task.",
+            "feature_id": 3,
+            "score": 0.62,
+            "rationale": "Age is a plausible stable predictor of lead burden because cumulative exposure and historical environmental conditions vary by age, but it is only moderately useful and can be confounded by cohort effects rather than directly causal signal.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "task_summary": "Predict whether a participant has elevated blood lead levels from NHANES survey and lab data.",
+            "feature_id": 3,
+            "score": 0.28,
+            "rationale": "Age can correlate with cumulative lead exposure and cohort effects, so it may help somewhat, but it is a broad demographic shortcut that is not a direct causal predictor and may shift across survey populations.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "task_summary": "Predict whether an individual has elevated blood lead level from NHANES survey and exam data.",
+            "feature_id": 3,
+            "score": 0.78,
+            "rationale": "Age is a broadly stable demographic predictor for lead exposure and accumulation, with plausible monotonic relationships that should transfer across domains, though it can also act as a coarse proxy for cohort and exposure-history differences.",
+            "feature": "RIDAGEYR"
+          }
+        ]
+      },
+      {
+        "feature_id": 4,
+        "feature": "RIAGENDR",
+        "score_mean": 0.208,
+        "score_std": 0.05600000000000001,
+        "samples": [
+          {
+            "task_summary": "Predict whether an individual has elevated blood lead levels from NHANES survey and exam data.",
+            "feature_id": 4,
+            "score": 0.18,
+            "rationale": "Gender can have some stable association with lead exposure patterns through occupational and behavioral differences, but it is a sensitive demographic attribute and likely only weakly predictive compared with direct exposure or health measures.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "task_summary": "Predicting whether an individual has elevated blood lead level from NHANES survey and lab features.",
+            "feature_id": 4,
+            "score": 0.18,
+            "rationale": "Gender may have some stable association with lead exposure patterns through occupational and behavioral differences, but it is a sensitive demographic attribute and usually only a weak, indirect predictor compared with more direct exposure-related features.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "task_summary": "Predicting lead exposure or elevated blood lead status from NHANES survey and exam features across domains.",
+            "feature_id": 4,
+            "score": 0.32,
+            "rationale": "Gender can have some stable association with lead burden through behavior, occupation, and physiology, but it is only an indirect proxy and may encode demographic shortcuts rather than robust causal signal.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "task_summary": "Predicting lead exposure/risk in NHANES participants from tabular survey and lab features.",
+            "feature_id": 4,
+            "score": 0.18,
+            "rationale": "Gender can have some stable association with lead exposure patterns through behavior, occupation, and physiology, but it is a sensitive demographic attribute and likely only a weak, indirect predictor rather than a robust causal signal.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "task_summary": "Predict whether a participant has elevated blood lead level from NHANES survey and exam data.",
+            "feature_id": 4,
+            "score": 0.18,
+            "rationale": "Gender may have some stable association with lead exposure through behavioral and occupational differences, but it is only a weak proxy and can reflect demographic shortcuts rather than causal signal, so it should receive low importance.",
+            "feature": "RIAGENDR"
+          }
+        ]
+      },
+      {
+        "feature_id": 5,
+        "feature": "DMDMARTL",
+        "score_mean": 0.18,
+        "score_std": 0.0,
+        "samples": [
+          {
+            "task_summary": "Predicting elevated blood lead status from NHANES survey and lab features.",
+            "feature_id": 5,
+            "score": 0.18,
+            "rationale": "Marital status may weakly correlate with age and household context, but it is not a direct causal predictor of lead exposure and is likely to be a brittle demographic shortcut that may shift across domains.",
+            "feature": "DMDMARTL"
+          },
+          {
+            "task_summary": "Predict whether a person has elevated blood lead levels from NHANES survey data.",
+            "feature_id": 5,
+            "score": 0.18,
+            "rationale": "Marital status may correlate weakly with age and socioeconomic exposure patterns, but it is an indirect demographic proxy rather than a mechanistic lead-risk factor and may shift across domains, so its stable predictive value should be low.",
+            "feature": "DMDMARTL"
+          },
+          {
+            "task_summary": "Predicting elevated lead exposure risk in NHANES participants from survey and demographic features.",
+            "feature_id": 5,
+            "score": 0.18,
+            "rationale": "Marital status may weakly correlate with age, household structure, and socioeconomic context, but it is not a direct causal predictor of lead exposure and is likely a brittle demographic shortcut with limited stable usefulness across domains.",
+            "feature": "DMDMARTL"
+          },
+          {
+            "task_summary": "Predicting elevated lead exposure status from NHANES tabular covariates under distribution shift.",
+            "feature_id": 5,
+            "score": 0.18,
+            "rationale": "Marital status may weakly correlate with age, household structure, and socioeconomic factors that relate to lead exposure, but it is an indirect demographic shortcut and unlikely to be a stable causal predictor across domains.",
+            "feature": "DMDMARTL"
+          },
+          {
+            "task_summary": "Predict elevated blood lead status from NHANES participant data.",
+            "feature_id": 5,
+            "score": 0.18,
+            "rationale": "Marital status may weakly correlate with age and socioeconomic context, but it is not a direct causal predictor of lead exposure and is likely to be a brittle demographic shortcut that may shift across domains.",
+            "feature": "DMDMARTL"
+          }
+        ]
+      },
+      {
+        "feature_id": 6,
+        "feature": "RIDRETH_merged",
+        "score_mean": 0.338,
+        "score_std": 0.06209669878504009,
+        "samples": [
+          {
+            "task_summary": "Predict a lead-related health outcome from NHANES participant data, using features that generalize across splits.",
+            "feature_id": 6,
+            "score": 0.34,
+            "rationale": "Race/ethnicity can correlate with lead exposure through durable social and environmental inequities, so it may carry some stable signal; however it is a sensitive demographic proxy and can also act as a shortcut for site- or sampling-related differences, so its usefulness should be modestly downweighted.",
+            "feature": "RIDRETH_merged"
+          },
+          {
+            "task_summary": "Predicting lead exposure-related outcome in NHANES using participant survey and exam features.",
+            "feature_id": 6,
+            "score": 0.34,
+            "rationale": "Race/ethnicity can correlate with lead burden through persistent environmental and structural exposure differences, so it may carry some stable signal; however it is a sensitive demographic proxy and can act as a shortcut for socioeconomic and sampling artifacts, so its usefulness should be heavily discounted.",
+            "feature": "RIDRETH_merged"
+          },
+          {
+            "task_summary": "Predicting lead exposure status in NHANES from participant characteristics and survey measurements.",
+            "feature_id": 6,
+            "score": 0.45,
+            "rationale": "Race/ethnicity can correlate with lead exposure through persistent environmental and socioeconomic disparities, so it may carry some stable signal across domains; however, it is a sensitive demographic proxy that can also act as a shortcut for site- or population-specific composition rather than a causal predictor, so it should be only moderately weighted.",
+            "feature": "RIDRETH_merged"
+          },
+          {
+            "task_summary": "Predicting lead exposure status from NHANES survey and examination variables.",
+            "feature_id": 6,
+            "score": 0.28,
+            "rationale": "Race/ethnicity can correlate with lead exposure through durable structural and environmental factors, so it may carry some stable signal; however it is a sensitive demographic proxy that can also act as a shortcut for site- or cohort-specific artifacts, so its usefulness should be modestly weighted down.",
+            "feature": "RIDRETH_merged"
+          },
+          {
+            "task_summary": "Predicting elevated blood lead status in NHANES participants from survey and examination features.",
+            "feature_id": 6,
+            "score": 0.28,
+            "rationale": "Race/ethnicity can correlate with lead exposure through persistent structural and environmental factors, so it may have some stable signal; however it is also a sensitive demographic proxy that can act as a shortcut for socioeconomic and site-related differences rather than a direct causal predictor, so its usefulness should be modestly downweighted.",
+            "feature": "RIDRETH_merged"
+          }
+        ]
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "feature_id": 0,
+      "feature": "nhanes_year",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"nhanes_year\",\n  \"type\": \"integer\",\n  \"description\": \"year\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predicting lead exposure-related outcome for NHANES participants from survey and lab features.\",\n  \"feature_id\": 0,\n  \"score\": 0.02,\n  \"rationale\": \"Survey year is mostly a domain identifier and can capture temporal shifts or dataset split artifacts rather than a stable causal signal for lead-related prediction, so it is unlikely to generalize well.\"\n}",
+      "input_tokens": 272,
+      "output_tokens": 94,
+      "total_tokens": 366,
+      "response_id": "resp_0286a6d423e541c8006a27d3617f308199837a8a8d3cfc63a4",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 0,
+      "feature": "nhanes_year",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"nhanes_year\",\n  \"type\": \"integer\",\n  \"description\": \"year\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an NHANES participant has elevated lead based on survey and exam features.\",\n  \"feature_id\": 0,\n  \"score\": 0.03,\n  \"rationale\": \"This is a dataset-year indicator, so it may capture shifting collection protocols, population mix, or label prevalence rather than a stable causal signal; it is highly domain-specific and brittle for out-of-distribution generalization.\"\n}",
+      "input_tokens": 272,
+      "output_tokens": 101,
+      "total_tokens": 373,
+      "response_id": "resp_04e864025b9b52cb006a27d363b7d88198982e1acf67708b8f",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 0,
+      "feature": "nhanes_year",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"nhanes_year\",\n  \"type\": \"integer\",\n  \"description\": \"year\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predicting elevated blood lead status in NHANES participants from survey and laboratory features.\",\n  \"feature_id\": 0,\n  \"score\": 0.02,\n  \"rationale\": \"Calendar year is mostly a domain identifier and can capture dataset shift or policy-era artifacts rather than a stable causal signal for lead exposure, so it is unlikely to generalize well.\"\n}",
+      "input_tokens": 272,
+      "output_tokens": 93,
+      "total_tokens": 365,
+      "response_id": "resp_01044d146dfade1b006a27d365adc081988ff097a17c55711d",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 0,
+      "feature": "nhanes_year",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"nhanes_year\",\n  \"type\": \"integer\",\n  \"description\": \"year\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a participant has elevated lead exposure in NHANES using available survey and lab features.\",\n  \"feature_id\": 0,\n  \"score\": 0.08,\n  \"rationale\": \"Survey year is mostly a domain/time identifier and can capture dataset shift or secular trends rather than a stable causal signal; any predictive value is likely brittle and not semantically transferable across splits.\"\n}",
+      "input_tokens": 272,
+      "output_tokens": 97,
+      "total_tokens": 369,
+      "response_id": "resp_0a46799a473fa2bc006a27d36785a8819b8129f73c093bf2cc",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 0,
+      "feature": "nhanes_year",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"nhanes_year\",\n  \"type\": \"integer\",\n  \"description\": \"year\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predicting whether an individual has elevated blood lead levels from NHANES survey and examination features.\",\n  \"feature_id\": 0,\n  \"score\": 0.02,\n  \"rationale\": \"Survey year is mostly a domain/time identifier rather than a causal predictor of lead exposure, so it is likely to capture dataset shift and secular trends instead of stable individual-level signal.\"\n}",
+      "input_tokens": 272,
+      "output_tokens": 95,
+      "total_tokens": 367,
+      "response_id": "resp_0f9e5ec4c4e1ff9f006a27d369fe4c81999365f981f0226599",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 1,
+      "feature": "DMDBORN4",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"DMDBORN4\",\n  \"type\": \"categorical\",\n  \"description\": \"country of birth\",\n  \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a person has elevated blood lead level from NHANES survey and lab features.\",\n  \"feature_id\": 1,\n  \"score\": 0.14,\n  \"rationale\": \"Country of birth may correlate weakly with lead exposure through immigration-related housing, occupation, or socioeconomic patterns, but it is a demographic shortcut that can shift across domains and is not a direct, stable causal predictor of lead burden.\"\n}",
+      "input_tokens": 313,
+      "output_tokens": 104,
+      "total_tokens": 417,
+      "response_id": "resp_08d11350009931dd006a27d36b99e081989044b1d9bcf481f8",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 1,
+      "feature": "DMDBORN4",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"DMDBORN4\",\n  \"type\": \"categorical\",\n  \"description\": \"country of birth\",\n  \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predicting whether a person has elevated blood lead level in the NHANES-based target population.\",\n  \"feature_id\": 1,\n  \"score\": 0.18,\n  \"rationale\": \"Country of birth may weakly relate to long-term exposure history and housing/environmental risk, but it is a sensitive demographic proxy that can act as a brittle shortcut and is unlikely to be a stable causal predictor across domains.\"\n}",
+      "input_tokens": 313,
+      "output_tokens": 104,
+      "total_tokens": 417,
+      "response_id": "resp_0fe9ae1358ae9909006a27d36d47f88199af8d9a8b20b82075",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 1,
+      "feature": "DMDBORN4",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"DMDBORN4\",\n  \"type\": \"categorical\",\n  \"description\": \"country of birth\",\n  \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an NHANES participant has elevated lead exposure using survey and health-related attributes.\",\n  \"feature_id\": 1,\n  \"score\": 0.18,\n  \"rationale\": \"Country of birth may weakly relate to lead exposure through migration history and environmental background, but it is a sensitive demographic proxy and likely a brittle shortcut that may not generalize well across domains.\"\n}",
+      "input_tokens": 313,
+      "output_tokens": 97,
+      "total_tokens": 410,
+      "response_id": "resp_065677a27a207cad006a27d36f1838819a9514b0e7be094037",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 1,
+      "feature": "DMDBORN4",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"DMDBORN4\",\n  \"type\": \"categorical\",\n  \"description\": \"country of birth\",\n  \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predicting whether a person has elevated blood lead levels in the NHANES lead-related classification task.\",\n  \"feature_id\": 1,\n  \"score\": 0.12,\n  \"rationale\": \"Country of birth may weakly correlate with lifetime exposure patterns, but it is a sensitive demographic proxy and likely captures population-specific or site-specific confounding rather than a stable causal signal for lead status.\"\n}",
+      "input_tokens": 313,
+      "output_tokens": 100,
+      "total_tokens": 413,
+      "response_id": "resp_006d5508adb81596006a27d370a1e88199841234b433726c1d",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 1,
+      "feature": "DMDBORN4",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"DMDBORN4\",\n  \"type\": \"categorical\",\n  \"description\": \"country of birth\",\n  \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual has elevated blood lead level using survey and demographic features from NHANES.\",\n  \"feature_id\": 1,\n  \"score\": 0.18,\n  \"rationale\": \"Country of birth may weakly relate to lead exposure through immigration-related housing, occupation, or environmental history, but it is a sensitive demographic proxy and likely captures dataset-specific population shifts rather than a stable causal signal.\"\n}",
+      "input_tokens": 313,
+      "output_tokens": 102,
+      "total_tokens": 415,
+      "response_id": "resp_03c261d557ab104e006a27d372637481998e3eec8f764b985d",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 2,
+      "feature": "DMDEDUC2",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"DMDEDUC2\",\n  \"type\": \"categorical\",\n  \"description\": \"highest grade or level of school completed or highest degree received\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predicting whether a person has elevated lead exposure in the NHANES lead task.\",\n  \"feature_id\": 2,\n  \"score\": 0.48,\n  \"rationale\": \"Education is a fairly stable socioeconomic proxy that can correlate with environmental exposure risk, but it is indirect, demographic, and likely weaker than more proximal exposure-related variables.\"\n}",
+      "input_tokens": 285,
+      "output_tokens": 90,
+      "total_tokens": 375,
+      "response_id": "resp_01dc1c590fe03cba006a27d37410948199a328824ac5281c12",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 2,
+      "feature": "DMDEDUC2",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"DMDEDUC2\",\n  \"type\": \"categorical\",\n  \"description\": \"highest grade or level of school completed or highest degree received\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predicting whether a person has elevated lead exposure using NHANES survey and lab data.\",\n  \"feature_id\": 2,\n  \"score\": 0.42,\n  \"rationale\": \"Education level can be a stable socioeconomic proxy that correlates with lead exposure risk through occupation, housing, and neighborhood conditions, but it is also a demographic shortcut and may vary in usefulness across domains, so it should receive moderate weight rather than be treated as a core causal predictor.\"\n}",
+      "input_tokens": 285,
+      "output_tokens": 114,
+      "total_tokens": 399,
+      "response_id": "resp_0a2d7bf7da0b7ce5006a27d375d440819a8154bfd83e1d6e98",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 2,
+      "feature": "DMDEDUC2",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"DMDEDUC2\",\n  \"type\": \"categorical\",\n  \"description\": \"highest grade or level of school completed or highest degree received\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a participant has elevated blood lead level in the NHANES lead task.\",\n  \"feature_id\": 2,\n  \"score\": 0.22,\n  \"rationale\": \"Education can correlate with lead exposure through long-run socioeconomic and occupational pathways, but it is a demographic proxy that is only indirectly related to the target and may shift across domains, so it is moderately useful at best.\"\n}",
+      "input_tokens": 285,
+      "output_tokens": 100,
+      "total_tokens": 385,
+      "response_id": "resp_003fda0901003372006a27d378b6d4819a855c8e659fb4a3e5",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 2,
+      "feature": "DMDEDUC2",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"DMDEDUC2\",\n  \"type\": \"categorical\",\n  \"description\": \"highest grade or level of school completed or highest degree received\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predicting lead exposure risk/outcome in NHANES using participant and survey features.\",\n  \"feature_id\": 2,\n  \"score\": 0.42,\n  \"rationale\": \"Education is a moderately stable socioeconomic proxy that can correlate with environmental exposure risk and health behaviors, but it is also a demographic shortcut and may shift across domains, so it should be useful only to a limited degree.\"\n}",
+      "input_tokens": 285,
+      "output_tokens": 100,
+      "total_tokens": 385,
+      "response_id": "resp_0c23e037a0be9fef006a27d37a5968819ba0338e1c5291ca38",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 2,
+      "feature": "DMDEDUC2",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"DMDEDUC2\",\n  \"type\": \"categorical\",\n  \"description\": \"highest grade or level of school completed or highest degree received\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual has elevated blood lead level in the NHANES lead-related classification task.\",\n  \"feature_id\": 2,\n  \"score\": 0.38,\n  \"rationale\": \"Education is a plausible stable proxy for long-term socioeconomic and environmental exposure risk, so it may help generalize across domains, but it is also a demographic shortcut that can shift with sampling and policy context and is not a direct causal exposure measure.\"\n}",
+      "input_tokens": 285,
+      "output_tokens": 108,
+      "total_tokens": 393,
+      "response_id": "resp_02f2319c4fe4bd51006a27d37bd7c4819ba6ac1eb239fab79a",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 3,
+      "feature": "RIDAGEYR",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"RIDAGEYR\",\n  \"type\": \"continuous\",\n  \"description\": \"age in years\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual has elevated blood lead levels from NHANES-style survey and lab measurements.\",\n  \"feature_id\": 3,\n  \"score\": 0.78,\n  \"rationale\": \"Age is a broadly stable predictor of lead burden because cumulative exposure and cohort effects persist across domains, making it useful without being a direct leakage feature; however, it can also partially proxy demographic and cohort-specific artifacts, so it should not be treated as maximally reliable.\"\n}",
+      "input_tokens": 274,
+      "output_tokens": 113,
+      "total_tokens": 387,
+      "response_id": "resp_07c110ec96e88357006a27d37dbdc0819aa3d2509b6882e856",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 3,
+      "feature": "RIDAGEYR",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"RIDAGEYR\",\n  \"type\": \"continuous\",\n  \"description\": \"age in years\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predicting whether a participant has elevated blood lead level in the NHANES lead task.\",\n  \"feature_id\": 3,\n  \"score\": 0.62,\n  \"rationale\": \"Age is a broadly stable health-related predictor that can correlate with cumulative lead exposure and screening patterns across domains, but it is only moderately informative and can also reflect cohort and demographic shifts rather than a direct causal signal.\"\n}",
+      "input_tokens": 274,
+      "output_tokens": 101,
+      "total_tokens": 375,
+      "response_id": "resp_0787c06a7adde7fe006a27d37f82e8819a8b08ce4cc4a8e766",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 3,
+      "feature": "RIDAGEYR",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"RIDAGEYR\",\n  \"type\": \"continuous\",\n  \"description\": \"age in years\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a participant has elevated blood lead level in the NHANES lead task.\",\n  \"feature_id\": 3,\n  \"score\": 0.62,\n  \"rationale\": \"Age is a plausible stable predictor of lead burden because cumulative exposure and historical environmental conditions vary by age, but it is only moderately useful and can be confounded by cohort effects rather than directly causal signal.\"\n}",
+      "input_tokens": 274,
+      "output_tokens": 98,
+      "total_tokens": 372,
+      "response_id": "resp_0689564338478d3f006a27d3813de4819a8757bff2138ed6ee",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 3,
+      "feature": "RIDAGEYR",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"RIDAGEYR\",\n  \"type\": \"continuous\",\n  \"description\": \"age in years\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a participant has elevated blood lead levels from NHANES survey and lab data.\",\n  \"feature_id\": 3,\n  \"score\": 0.28,\n  \"rationale\": \"Age can correlate with cumulative lead exposure and cohort effects, so it may help somewhat, but it is a broad demographic shortcut that is not a direct causal predictor and may shift across survey populations.\"\n}",
+      "input_tokens": 274,
+      "output_tokens": 97,
+      "total_tokens": 371,
+      "response_id": "resp_06418944d247d51e006a27d382eeec819ab3fbfc917e01614c",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 3,
+      "feature": "RIDAGEYR",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"RIDAGEYR\",\n  \"type\": \"continuous\",\n  \"description\": \"age in years\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual has elevated blood lead level from NHANES survey and exam data.\",\n  \"feature_id\": 3,\n  \"score\": 0.78,\n  \"rationale\": \"Age is a broadly stable demographic predictor for lead exposure and accumulation, with plausible monotonic relationships that should transfer across domains, though it can also act as a coarse proxy for cohort and exposure-history differences.\"\n}",
+      "input_tokens": 274,
+      "output_tokens": 99,
+      "total_tokens": 373,
+      "response_id": "resp_0059ffb5871dc16d006a27d384c4648198828f05886e3afcb2",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 4,
+      "feature": "RIAGENDR",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"RIAGENDR\",\n  \"type\": \"categorical\",\n  \"description\": \"gender\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual has elevated blood lead levels from NHANES survey and exam data.\",\n  \"feature_id\": 4,\n  \"score\": 0.18,\n  \"rationale\": \"Gender can have some stable association with lead exposure patterns through occupational and behavioral differences, but it is a sensitive demographic attribute and likely only weakly predictive compared with direct exposure or health measures.\"\n}",
+      "input_tokens": 274,
+      "output_tokens": 96,
+      "total_tokens": 370,
+      "response_id": "resp_0e23400b54ad6dc5006a27d3868d28819b87f44915c1fc0206",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 4,
+      "feature": "RIAGENDR",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"RIAGENDR\",\n  \"type\": \"categorical\",\n  \"description\": \"gender\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predicting whether an individual has elevated blood lead level from NHANES survey and lab features.\",\n  \"feature_id\": 4,\n  \"score\": 0.18,\n  \"rationale\": \"Gender may have some stable association with lead exposure patterns through occupational and behavioral differences, but it is a sensitive demographic attribute and usually only a weak, indirect predictor compared with more direct exposure-related features.\"\n}",
+      "input_tokens": 274,
+      "output_tokens": 93,
+      "total_tokens": 367,
+      "response_id": "resp_0504619f5f4266f7006a27d38813cc819b9555ea44b908d925",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 4,
+      "feature": "RIAGENDR",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"RIAGENDR\",\n  \"type\": \"categorical\",\n  \"description\": \"gender\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predicting lead exposure or elevated blood lead status from NHANES survey and exam features across domains.\",\n  \"feature_id\": 4,\n  \"score\": 0.32,\n  \"rationale\": \"Gender can have some stable association with lead burden through behavior, occupation, and physiology, but it is only an indirect proxy and may encode demographic shortcuts rather than robust causal signal.\"\n}",
+      "input_tokens": 274,
+      "output_tokens": 90,
+      "total_tokens": 364,
+      "response_id": "resp_0c9ee6ce575ca26f006a27d389b950819b998f2d0e4d5030f2",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 4,
+      "feature": "RIAGENDR",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"RIAGENDR\",\n  \"type\": \"categorical\",\n  \"description\": \"gender\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predicting lead exposure/risk in NHANES participants from tabular survey and lab features.\",\n  \"feature_id\": 4,\n  \"score\": 0.18,\n  \"rationale\": \"Gender can have some stable association with lead exposure patterns through behavior, occupation, and physiology, but it is a sensitive demographic attribute and likely only a weak, indirect predictor rather than a robust causal signal.\"\n}",
+      "input_tokens": 274,
+      "output_tokens": 94,
+      "total_tokens": 368,
+      "response_id": "resp_04fbb5da377adc51006a27d38ba7a481999ac1c7cf62e08171",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 4,
+      "feature": "RIAGENDR",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"RIAGENDR\",\n  \"type\": \"categorical\",\n  \"description\": \"gender\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a participant has elevated blood lead level from NHANES survey and exam data.\",\n  \"feature_id\": 4,\n  \"score\": 0.18,\n  \"rationale\": \"Gender may have some stable association with lead exposure through behavioral and occupational differences, but it is only a weak proxy and can reflect demographic shortcuts rather than causal signal, so it should receive low importance.\"\n}",
+      "input_tokens": 274,
+      "output_tokens": 98,
+      "total_tokens": 372,
+      "response_id": "resp_0d375bce3b67d40f006a27d38d525081998541808fa5062fd7",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 5,
+      "feature": "DMDMARTL",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"DMDMARTL\",\n  \"type\": \"categorical\",\n  \"description\": \"marital status\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predicting elevated blood lead status from NHANES survey and lab features.\",\n  \"feature_id\": 5,\n  \"score\": 0.18,\n  \"rationale\": \"Marital status may weakly correlate with age and household context, but it is not a direct causal predictor of lead exposure and is likely to be a brittle demographic shortcut that may shift across domains.\"\n}",
+      "input_tokens": 277,
+      "output_tokens": 89,
+      "total_tokens": 366,
+      "response_id": "resp_0d6d5dde9aa0754c006a27d38ee0e88198b98e15e77cca5ded",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 5,
+      "feature": "DMDMARTL",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"DMDMARTL\",\n  \"type\": \"categorical\",\n  \"description\": \"marital status\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a person has elevated blood lead levels from NHANES survey data.\",\n  \"feature_id\": 5,\n  \"score\": 0.18,\n  \"rationale\": \"Marital status may correlate weakly with age and socioeconomic exposure patterns, but it is an indirect demographic proxy rather than a mechanistic lead-risk factor and may shift across domains, so its stable predictive value should be low.\"\n}",
+      "input_tokens": 277,
+      "output_tokens": 95,
+      "total_tokens": 372,
+      "response_id": "resp_055d9e7a9e60fe80006a27d39034c08198b92e0c7d4082f7cd",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 5,
+      "feature": "DMDMARTL",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"DMDMARTL\",\n  \"type\": \"categorical\",\n  \"description\": \"marital status\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predicting elevated lead exposure risk in NHANES participants from survey and demographic features.\",\n  \"feature_id\": 5,\n  \"score\": 0.18,\n  \"rationale\": \"Marital status may weakly correlate with age, household structure, and socioeconomic context, but it is not a direct causal predictor of lead exposure and is likely a brittle demographic shortcut with limited stable usefulness across domains.\"\n}",
+      "input_tokens": 277,
+      "output_tokens": 94,
+      "total_tokens": 371,
+      "response_id": "resp_0a5be5ac3ed359ef006a27d3918e788198b1e23075006e8ee9",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 5,
+      "feature": "DMDMARTL",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"DMDMARTL\",\n  \"type\": \"categorical\",\n  \"description\": \"marital status\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predicting elevated lead exposure status from NHANES tabular covariates under distribution shift.\",\n  \"feature_id\": 5,\n  \"score\": 0.18,\n  \"rationale\": \"Marital status may weakly correlate with age, household structure, and socioeconomic factors that relate to lead exposure, but it is an indirect demographic shortcut and unlikely to be a stable causal predictor across domains.\"\n}",
+      "input_tokens": 277,
+      "output_tokens": 94,
+      "total_tokens": 371,
+      "response_id": "resp_06d7a64a1be7a561006a27d39342c8819b8201ade6b4cc8805",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 5,
+      "feature": "DMDMARTL",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"DMDMARTL\",\n  \"type\": \"categorical\",\n  \"description\": \"marital status\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict elevated blood lead status from NHANES participant data.\",\n  \"feature_id\": 5,\n  \"score\": 0.18,\n  \"rationale\": \"Marital status may weakly correlate with age and socioeconomic context, but it is not a direct causal predictor of lead exposure and is likely to be a brittle demographic shortcut that may shift across domains.\"\n}",
+      "input_tokens": 277,
+      "output_tokens": 86,
+      "total_tokens": 363,
+      "response_id": "resp_0fce3230acacac74006a27d3949df4819896eafed9939fadf0",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 6,
+      "feature": "RIDRETH_merged",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"RIDRETH_merged\",\n  \"type\": \"categorical\",\n  \"description\": \"race and hispanic origin\",\n  \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict a lead-related health outcome from NHANES participant data, using features that generalize across splits.\",\n  \"feature_id\": 6,\n  \"score\": 0.34,\n  \"rationale\": \"Race/ethnicity can correlate with lead exposure through durable social and environmental inequities, so it may carry some stable signal; however it is a sensitive demographic proxy and can also act as a shortcut for site- or sampling-related differences, so its usefulness should be modestly downweighted.\"\n}",
+      "input_tokens": 359,
+      "output_tokens": 113,
+      "total_tokens": 472,
+      "response_id": "resp_0d5bedbab7afb1ef006a27d395d6e08199b0ea7aaf388a3755",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 6,
+      "feature": "RIDRETH_merged",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"RIDRETH_merged\",\n  \"type\": \"categorical\",\n  \"description\": \"race and hispanic origin\",\n  \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predicting lead exposure-related outcome in NHANES using participant survey and exam features.\",\"feature_id\":6,\"score\":0.34,\"rationale\":\"Race/ethnicity can correlate with lead burden through persistent environmental and structural exposure differences, so it may carry some stable signal; however it is a sensitive demographic proxy and can act as a shortcut for socioeconomic and sampling artifacts, so its usefulness should be heavily discounted.\"}",
+      "input_tokens": 359,
+      "output_tokens": 92,
+      "total_tokens": 451,
+      "response_id": "resp_061267c4770173ba006a27d39792b0819aae88366725ba1c73",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 6,
+      "feature": "RIDRETH_merged",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"RIDRETH_merged\",\n  \"type\": \"categorical\",\n  \"description\": \"race and hispanic origin\",\n  \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predicting lead exposure status in NHANES from participant characteristics and survey measurements.\",\"feature_id\":6,\"score\":0.45,\"rationale\":\"Race/ethnicity can correlate with lead exposure through persistent environmental and socioeconomic disparities, so it may carry some stable signal across domains; however, it is a sensitive demographic proxy that can also act as a shortcut for site- or population-specific composition rather than a causal predictor, so it should be only moderately weighted.\"}",
+      "input_tokens": 359,
+      "output_tokens": 101,
+      "total_tokens": 460,
+      "response_id": "resp_08309f7d2ba8980c006a27d39951e081989ec78e1363444006",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 6,
+      "feature": "RIDRETH_merged",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"RIDRETH_merged\",\n  \"type\": \"categorical\",\n  \"description\": \"race and hispanic origin\",\n  \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predicting lead exposure status from NHANES survey and examination variables.\",\n  \"feature_id\": 6,\n  \"score\": 0.28,\n  \"rationale\": \"Race/ethnicity can correlate with lead exposure through durable structural and environmental factors, so it may carry some stable signal; however it is a sensitive demographic proxy that can also act as a shortcut for site- or cohort-specific artifacts, so its usefulness should be modestly weighted down.\"\n}",
+      "input_tokens": 359,
+      "output_tokens": 105,
+      "total_tokens": 464,
+      "response_id": "resp_09846cb214c0b97a006a27d39b36b4819baaffc264cb214159",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "feature_id": 6,
+      "feature": "RIDRETH_merged",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"RIDRETH_merged\",\n  \"type\": \"categorical\",\n  \"description\": \"race and hispanic origin\",\n  \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predicting elevated blood lead status in NHANES participants from survey and examination features.\",\"feature_id\":6,\"score\":0.28,\"rationale\":\"Race/ethnicity can correlate with lead exposure through persistent structural and environmental factors, so it may have some stable signal; however it is also a sensitive demographic proxy that can act as a shortcut for socioeconomic and site-related differences rather than a direct causal predictor, so its usefulness should be modestly downweighted.\"}",
+      "input_tokens": 359,
+      "output_tokens": 101,
+      "total_tokens": 460,
+      "response_id": "resp_0d9fe660c3b563a4006a27d39cf1f08199892d147e4e0c7767",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/tableshift/nhanes_lead/rankings/score_prompt.txt",
+  "config": {
+    "score_samples": 5
+  }
+}

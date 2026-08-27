@@ -4,33 +4,47 @@ import numpy as np
 import torch
 
 
-def binary_counts_from_predictions(
+def binary_confusion_from_predictions(
     preds: torch.Tensor,
     labels: torch.Tensor,
 ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
     tp = ((preds == 1) & (labels == 1)).sum()
+    tn = ((preds == 0) & (labels == 0)).sum()
     fp = ((preds == 1) & (labels == 0)).sum()
     fn = ((preds == 0) & (labels == 1)).sum()
-    correct = (preds == labels).sum()
-    return correct, tp, fp, fn
+    return tp, tn, fp, fn
 
 
-def binary_counts_from_logits(
+def binary_confusion_from_logits(
     logits: torch.Tensor,
     labels: torch.Tensor,
 ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
     preds = logits.argmax(dim=1)
-    return binary_counts_from_predictions(preds, labels)
+    return binary_confusion_from_predictions(preds, labels)
 
 
-def binary_f1_from_counts(tp: int, fp: int, fn: int) -> float:
-    denom = (2 * tp) + fp + fn
-    if denom == 0:
+def _ratio(numerator: int, denominator: int) -> float:
+    if denominator == 0:
         return 0.0
-    return (2 * tp) / denom
+    return numerator / denominator
 
 
-def binary_accuracy_f1(
+def binary_balanced_accuracy_macro_f1_from_confusion(
+    tp: int,
+    tn: int,
+    fp: int,
+    fn: int,
+) -> tuple[float, float]:
+    balanced_accuracy = (
+        _ratio(tp, tp + fn)
+        + _ratio(tn, tn + fp)
+    ) / 2.0
+    positive_f1 = _ratio(2 * tp, (2 * tp) + fp + fn)
+    negative_f1 = _ratio(2 * tn, (2 * tn) + fp + fn)
+    return balanced_accuracy, (positive_f1 + negative_f1) / 2.0
+
+
+def binary_balanced_accuracy_macro_f1(
     labels: Union[Sequence[int], np.ndarray],
     preds: Union[Sequence[int], np.ndarray],
 ) -> tuple[float, float]:
@@ -39,8 +53,8 @@ def binary_accuracy_f1(
     if labels_np.size == 0:
         return 0.0, 0.0
 
-    acc = float((preds_np == labels_np).mean())
     tp = int(((preds_np == 1) & (labels_np == 1)).sum())
+    tn = int(((preds_np == 0) & (labels_np == 0)).sum())
     fp = int(((preds_np == 1) & (labels_np == 0)).sum())
     fn = int(((preds_np == 0) & (labels_np == 1)).sum())
-    return acc, binary_f1_from_counts(tp, fp, fn)
+    return binary_balanced_accuracy_macro_f1_from_confusion(tp, tn, fp, fn)

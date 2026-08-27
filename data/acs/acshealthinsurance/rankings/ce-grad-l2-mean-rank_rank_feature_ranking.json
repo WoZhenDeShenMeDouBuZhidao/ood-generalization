@@ -1,0 +1,204 @@
+{
+  "benchmark": "acs",
+  "dataset": "acshealthinsurance",
+  "model": "ce-grad-l2-mean-rank",
+  "method": "rank",
+  "feature_space": "semantic",
+  "created_at": "2026-08-13T00:12:48",
+  "aggregation": {
+    "name": "mean_rank",
+    "per_repeat_ranking": "ordinal_descending",
+    "tie_break": "model_feature_order",
+    "repeat_count": 5,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 13,
+        "feature": "DREM",
+        "mean_rank": 2.0,
+        "rank_std": 1.4142135623730951
+      },
+      {
+        "rank": 2,
+        "feature_id": 22,
+        "feature": "ESR",
+        "mean_rank": 2.0,
+        "rank_std": 0.7071067811865476
+      },
+      {
+        "rank": 3,
+        "feature_id": 20,
+        "feature": "RACWHT",
+        "mean_rank": 3.0,
+        "rank_std": 1.5811388300841898
+      },
+      {
+        "rank": 4,
+        "feature_id": 12,
+        "feature": "DEYE",
+        "mean_rank": 3.6,
+        "rank_std": 1.140175425099138
+      },
+      {
+        "rank": 5,
+        "feature_id": 4,
+        "feature": "DIS",
+        "mean_rank": 5.6,
+        "rank_std": 2.1908902300206643
+      },
+      {
+        "rank": 6,
+        "feature_id": 24,
+        "feature": "FER",
+        "mean_rank": 6.6,
+        "rank_std": 0.8944271909999159
+      },
+      {
+        "rank": 7,
+        "feature_id": 0,
+        "feature": "AGEP",
+        "mean_rank": 6.8,
+        "rank_std": 2.16794833886788
+      },
+      {
+        "rank": 8,
+        "feature_id": 14,
+        "feature": "RACAIAN",
+        "mean_rank": 7.8,
+        "rank_std": 1.3038404810405297
+      },
+      {
+        "rank": 9,
+        "feature_id": 16,
+        "feature": "RACBLK",
+        "mean_rank": 8.6,
+        "rank_std": 2.3021728866442674
+      },
+      {
+        "rank": 10,
+        "feature_id": 7,
+        "feature": "MIG",
+        "mean_rank": 10.2,
+        "rank_std": 0.4472135954999579
+      },
+      {
+        "rank": 11,
+        "feature_id": 15,
+        "feature": "RACASN",
+        "mean_rank": 10.6,
+        "rank_std": 1.51657508881031
+      },
+      {
+        "rank": 12,
+        "feature_id": 5,
+        "feature": "ESP",
+        "mean_rank": 12.2,
+        "rank_std": 2.04939015319192
+      },
+      {
+        "rank": 13,
+        "feature_id": 17,
+        "feature": "RACNH",
+        "mean_rank": 14.6,
+        "rank_std": 3.361547262794322
+      },
+      {
+        "rank": 14,
+        "feature_id": 6,
+        "feature": "CIT",
+        "mean_rank": 14.8,
+        "rank_std": 1.4832396974191326
+      },
+      {
+        "rank": 15,
+        "feature_id": 8,
+        "feature": "MIL",
+        "mean_rank": 15.6,
+        "rank_std": 2.3021728866442674
+      },
+      {
+        "rank": 16,
+        "feature_id": 2,
+        "feature": "MAR",
+        "mean_rank": 16.2,
+        "rank_std": 2.7748873851023212
+      },
+      {
+        "rank": 17,
+        "feature_id": 19,
+        "feature": "RACSOR",
+        "mean_rank": 17.0,
+        "rank_std": 2.6457513110645907
+      },
+      {
+        "rank": 18,
+        "feature_id": 9,
+        "feature": "ANC",
+        "mean_rank": 18.0,
+        "rank_std": 2.9154759474226504
+      },
+      {
+        "rank": 19,
+        "feature_id": 10,
+        "feature": "NATIVITY",
+        "mean_rank": 18.2,
+        "rank_std": 1.6431676725154984
+      },
+      {
+        "rank": 20,
+        "feature_id": 18,
+        "feature": "RACPI",
+        "mean_rank": 19.0,
+        "rank_std": 3.7416573867739413
+      },
+      {
+        "rank": 21,
+        "feature_id": 11,
+        "feature": "DEAR",
+        "mean_rank": 20.4,
+        "rank_std": 2.8809720581775866
+      },
+      {
+        "rank": 22,
+        "feature_id": 1,
+        "feature": "SCHL",
+        "mean_rank": 21.0,
+        "rank_std": 1.0
+      },
+      {
+        "rank": 23,
+        "feature_id": 3,
+        "feature": "SEX",
+        "mean_rank": 22.2,
+        "rank_std": 1.0954451150103324
+      },
+      {
+        "rank": 24,
+        "feature_id": 21,
+        "feature": "PINCP",
+        "mean_rank": 24.0,
+        "rank_std": 0.0
+      },
+      {
+        "rank": 25,
+        "feature_id": 23,
+        "feature": "ST",
+        "mean_rank": 25.0,
+        "rank_std": 0.0
+      }
+    ]
+  }
+}

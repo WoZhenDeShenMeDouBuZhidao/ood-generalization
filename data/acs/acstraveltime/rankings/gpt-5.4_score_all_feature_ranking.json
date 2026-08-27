@@ -1,0 +1,903 @@
+{
+  "benchmark": "acs",
+  "dataset": "acstraveltime",
+  "model": "gpt-5.4",
+  "method": "score_all",
+  "temperature": 0.5,
+  "created_at": "2026-06-09T19:04:47",
+  "token_usage": {
+    "num_calls": 5,
+    "input_tokens": 6115,
+    "output_tokens": 4223,
+    "total_tokens": 10338
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 13,
+        "feature": "JWTR",
+        "score_mean": 0.966,
+        "score_std": 0.01019803902718558
+      },
+      {
+        "rank": 2,
+        "feature_id": 12,
+        "feature": "OCCP",
+        "score_mean": 0.688,
+        "score_std": 0.036551333764994115
+      },
+      {
+        "rank": 3,
+        "feature_id": 15,
+        "feature": "POVPIP",
+        "score_mean": 0.518,
+        "score_std": 0.0702566722810012
+      },
+      {
+        "rank": 4,
+        "feature_id": 1,
+        "feature": "SCHL",
+        "score_mean": 0.452,
+        "score_std": 0.06968500556073738
+      },
+      {
+        "rank": 5,
+        "feature_id": 0,
+        "feature": "AGEP",
+        "score_mean": 0.412,
+        "score_std": 0.09846826900072934
+      },
+      {
+        "rank": 6,
+        "feature_id": 6,
+        "feature": "MIG",
+        "score_mean": 0.268,
+        "score_std": 0.04445222154178574
+      },
+      {
+        "rank": 7,
+        "feature_id": 2,
+        "feature": "MAR",
+        "score_mean": 0.246,
+        "score_std": 0.023323807579381194
+      },
+      {
+        "rank": 8,
+        "feature_id": 7,
+        "feature": "RELP",
+        "score_mean": 0.24200000000000002,
+        "score_std": 0.03187475490101846
+      },
+      {
+        "rank": 9,
+        "feature_id": 4,
+        "feature": "DIS",
+        "score_mean": 0.22599999999999998,
+        "score_std": 0.03720215047547654
+      },
+      {
+        "rank": 10,
+        "feature_id": 3,
+        "feature": "SEX",
+        "score_mean": 0.172,
+        "score_std": 0.01599999999999999
+      },
+      {
+        "rank": 11,
+        "feature_id": 11,
+        "feature": "CIT",
+        "score_mean": 0.156,
+        "score_std": 0.03382306905057553
+      },
+      {
+        "rank": 12,
+        "feature_id": 8,
+        "feature": "RAC1P",
+        "score_mean": 0.112,
+        "score_std": 0.009797958971132708
+      },
+      {
+        "rank": 13,
+        "feature_id": 14,
+        "feature": "POWPUMA",
+        "score_mean": 0.022,
+        "score_std": 0.0116619037896906
+      },
+      {
+        "rank": 14,
+        "feature_id": 9,
+        "feature": "PUMA",
+        "score_mean": 0.012,
+        "score_std": 0.009797958971132713
+      },
+      {
+        "rank": 15,
+        "feature_id": 5,
+        "feature": "ESP",
+        "score_mean": 0.01,
+        "score_std": 0.0
+      },
+      {
+        "rank": 16,
+        "feature_id": 10,
+        "feature": "ST",
+        "score_mean": 0.0,
+        "score_std": 0.0
+      }
+    ],
+    "scores": [
+      {
+        "feature_id": 0,
+        "feature": "AGEP",
+        "score_mean": 0.412,
+        "score_std": 0.09846826900072934,
+        "sample_scores": [
+          0.42,
+          0.28,
+          0.42,
+          0.58,
+          0.36
+        ]
+      },
+      {
+        "feature_id": 1,
+        "feature": "SCHL",
+        "score_mean": 0.452,
+        "score_std": 0.06968500556073738,
+        "sample_scores": [
+          0.48,
+          0.34,
+          0.47,
+          0.55,
+          0.42
+        ]
+      },
+      {
+        "feature_id": 2,
+        "feature": "MAR",
+        "score_mean": 0.246,
+        "score_std": 0.023323807579381194,
+        "sample_scores": [
+          0.24,
+          0.22,
+          0.29,
+          0.24,
+          0.24
+        ]
+      },
+      {
+        "feature_id": 3,
+        "feature": "SEX",
+        "score_mean": 0.172,
+        "score_std": 0.01599999999999999,
+        "sample_scores": [
+          0.18,
+          0.18,
+          0.18,
+          0.18,
+          0.14
+        ]
+      },
+      {
+        "feature_id": 4,
+        "feature": "DIS",
+        "score_mean": 0.22599999999999998,
+        "score_std": 0.03720215047547654,
+        "sample_scores": [
+          0.29,
+          0.24,
+          0.21,
+          0.21,
+          0.18
+        ]
+      },
+      {
+        "feature_id": 5,
+        "feature": "ESP",
+        "score_mean": 0.01,
+        "score_std": 0.0,
+        "sample_scores": [
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01
+        ]
+      },
+      {
+        "feature_id": 6,
+        "feature": "MIG",
+        "score_mean": 0.268,
+        "score_std": 0.04445222154178574,
+        "sample_scores": [
+          0.33,
+          0.2,
+          0.24,
+          0.29,
+          0.28
+        ]
+      },
+      {
+        "feature_id": 7,
+        "feature": "RELP",
+        "score_mean": 0.24200000000000002,
+        "score_std": 0.03187475490101846,
+        "sample_scores": [
+          0.27,
+          0.19,
+          0.26,
+          0.27,
+          0.22
+        ]
+      },
+      {
+        "feature_id": 8,
+        "feature": "RAC1P",
+        "score_mean": 0.112,
+        "score_std": 0.009797958971132708,
+        "sample_scores": [
+          0.12,
+          0.1,
+          0.12,
+          0.12,
+          0.1
+        ]
+      },
+      {
+        "feature_id": 9,
+        "feature": "PUMA",
+        "score_mean": 0.012,
+        "score_std": 0.009797958971132713,
+        "sample_scores": [
+          0.0,
+          0.0,
+          0.02,
+          0.02,
+          0.02
+        ]
+      },
+      {
+        "feature_id": 10,
+        "feature": "ST",
+        "score_mean": 0.0,
+        "score_std": 0.0,
+        "sample_scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "feature_id": 11,
+        "feature": "CIT",
+        "score_mean": 0.156,
+        "score_std": 0.03382306905057553,
+        "sample_scores": [
+          0.21,
+          0.12,
+          0.17,
+          0.16,
+          0.12
+        ]
+      },
+      {
+        "feature_id": 12,
+        "feature": "OCCP",
+        "score_mean": 0.688,
+        "score_std": 0.036551333764994115,
+        "sample_scores": [
+          0.72,
+          0.66,
+          0.71,
+          0.72,
+          0.63
+        ]
+      },
+      {
+        "feature_id": 13,
+        "feature": "JWTR",
+        "score_mean": 0.966,
+        "score_std": 0.01019803902718558,
+        "sample_scores": [
+          0.97,
+          0.97,
+          0.96,
+          0.95,
+          0.98
+        ]
+      },
+      {
+        "feature_id": 14,
+        "feature": "POWPUMA",
+        "score_mean": 0.022,
+        "score_std": 0.0116619037896906,
+        "sample_scores": [
+          0.0,
+          0.02,
+          0.03,
+          0.03,
+          0.03
+        ]
+      },
+      {
+        "feature_id": 15,
+        "feature": "POVPIP",
+        "score_mean": 0.518,
+        "score_std": 0.0702566722810012,
+        "sample_scores": [
+          0.56,
+          0.41,
+          0.54,
+          0.61,
+          0.47
+        ]
+      }
+    ],
+    "samples": [
+      {
+        "task_summary": "Predict whether a worker’s one-way commute to work exceeds the ACS travel-time threshold, using person and work-related attributes that should generalize across states.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.42,
+            "rationale": "Age plausibly affects job type, mode choice, and residential-work patterns, but its relationship to long commute is moderate rather than dominant and should generalize reasonably well.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.48,
+            "rationale": "Education is a fairly stable proxy for occupation, earnings, and urban labor-market sorting, all of which can influence commute length across states.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.24,
+            "rationale": "Marital status may correlate with household location choices and work arrangements, but effects are indirect and weaker for commute-time prediction.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.18,
+            "rationale": "Sex can correlate with occupation mix and commuting patterns, but it is a sensitive demographic shortcut with limited stable marginal usefulness.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.29,
+            "rationale": "Disability status can affect labor-force attachment, feasible commute modes, and job selection, giving some stable signal without being central.",
+            "feature": "DIS"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.01,
+            "rationale": "Parental employment status is mainly relevant for children and should have little meaningful or stable predictive value for workers’ commute time.",
+            "feature": "ESP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.33,
+            "rationale": "Recent mobility may indicate residential change and job-location mismatch, which can affect commute time, though coding may also reflect heterogeneous life events.",
+            "feature": "MIG"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.27,
+            "rationale": "Relationship to householder captures household role and life stage, which can influence where people live relative to work, but only indirectly.",
+            "feature": "RELP"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.12,
+            "rationale": "Race may correlate with segregation and labor-market structure, but it is a sensitive shortcut and likely to encode state-specific social patterns rather than robust causal signal.",
+            "feature": "RAC1P"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.0,
+            "rationale": "Residence PUMA is a fine-grained geographic identifier that strongly encodes local domain and is unlikely to generalize out of state.",
+            "feature": "PUMA"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.0,
+            "rationale": "State directly identifies the domain and would be a brittle shortcut for an out-of-distribution across-state generalization setting.",
+            "feature": "ST"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.21,
+            "rationale": "Citizenship status may weakly proxy for labor-market segment and residential sorting, but much of its signal is indirect and potentially confounded with geography.",
+            "feature": "CIT"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.72,
+            "rationale": "Occupation is one of the most stable predictors because commute length depends strongly on job type, work location patterns, and industry-specific commuting norms across states.",
+            "feature": "OCCP"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.97,
+            "rationale": "Commute mode is extremely informative for travel time and should remain semantically predictive across states despite some geographic variation in mode prevalence.",
+            "feature": "JWTR"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.0,
+            "rationale": "Place-of-work PUMA is another fine-grained geographic code that effectively leaks local spatial structure and is highly brittle across states.",
+            "feature": "POWPUMA"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.56,
+            "rationale": "Income-to-poverty ratio is a stable socioeconomic indicator tied to housing-job tradeoffs, vehicle access, and urban sorting, making it broadly useful across states.",
+            "feature": "POVPIP"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a worker’s commute travel time falls above the acstraveltime threshold using person, job, and commute-related ACS features.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.28,
+            "rationale": "Age has some broad association with job type, residential choice, and commuting patterns, but its marginal effect on commute duration is modest and indirect across states.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.34,
+            "rationale": "Education is moderately informative through occupation and urban labor-market sorting, but much of its signal is mediated by other variables and can vary by state context.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.22,
+            "rationale": "Marital status may weakly track household location and work arrangements, yet it is only indirectly related to commute time and not especially robust marginally.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.18,
+            "rationale": "Sex can correlate with labor-force patterns and commute behavior, but it is a sensitive demographic shortcut with limited stable causal relevance to travel time itself.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.24,
+            "rationale": "Disability status may affect employment type, commute feasibility, and mode choice, giving some real signal, though it remains indirect and potentially entangled with selection into work.",
+            "feature": "DIS"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.01,
+            "rationale": "Parental employment status is mainly defined for children and should have little meaningful stable value for a worker commute-time task.",
+            "feature": "ESP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.2,
+            "rationale": "Recent mobility may weakly indicate residential instability or long-distance adjustment, but it is not a core determinant of current commute duration and may be noisy.",
+            "feature": "MIG"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.19,
+            "rationale": "Relationship to householder can reflect household structure and residential constraints, yet it is only a weak proxy for commute time and likely less stable than job-related features.",
+            "feature": "RELP"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.1,
+            "rationale": "Race often acts as a demographic shortcut tied to segregation and local structure rather than a stable semantic driver, so it should be heavily downweighted for OOD generalization.",
+            "feature": "RAC1P"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.0,
+            "rationale": "Home PUMA is a fine-grained geographic identifier that strongly encodes local domain and state-specific commuting infrastructure, making it highly brittle out of distribution.",
+            "feature": "PUMA"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.0,
+            "rationale": "State directly identifies the domain and would act as a geography shortcut rather than a transferable predictor.",
+            "feature": "ST"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.12,
+            "rationale": "Citizenship status may correlate with job sorting and residence patterns, but it is mostly an indirect demographic proxy and not a stable semantic cause of commute duration.",
+            "feature": "CIT"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.66,
+            "rationale": "Occupation is one of the most plausibly stable predictors because different jobs systematically imply different work locations, schedules, and commuting patterns across states.",
+            "feature": "OCCP"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.97,
+            "rationale": "Transportation mode is directly tied to commute duration and should remain highly predictive across states, making it the strongest stable feature despite some local variation.",
+            "feature": "JWTR"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.02,
+            "rationale": "Workplace PUMA is another detailed geographic code that can nearly localize commute structure, so it is powerful in-domain but highly non-transferable and shortcut-prone.",
+            "feature": "POWPUMA"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.41,
+            "rationale": "Income-to-poverty ratio provides moderate stable signal through residential location, car access, and job type, though much of its effect is indirect and geography-mediated.",
+            "feature": "POVPIP"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a worker’s commute travel time exceeds the acstraveltime threshold using person, job, and commute-related ACS attributes while avoiding geography-specific shortcuts.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.42,
+            "rationale": "Age plausibly affects job type, schedule flexibility, and residential choices tied to commute length, but the relationship is moderate rather than direct.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.47,
+            "rationale": "Education is a fairly stable proxy for occupation and urban labor-market sorting, which can influence commute duration across states.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.29,
+            "rationale": "Marital status may correlate with household location and family constraints, but it is an indirect and relatively weak predictor.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.18,
+            "rationale": "Sex can correlate with occupation and commuting patterns, but much of its signal is demographic shortcutting rather than robust task structure.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.21,
+            "rationale": "Disability may affect employment type and commute feasibility, yet its marginal predictive value is limited and partly demographic.",
+            "feature": "DIS"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.01,
+            "rationale": "Parental employment status is mainly relevant for children and should have little stable usefulness for workers in this task.",
+            "feature": "ESP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.24,
+            "rationale": "Recent mobility can relate to residential instability and job changes that affect commute time, but coding may partly capture state-specific movement patterns.",
+            "feature": "MIG"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.26,
+            "rationale": "Relationship to householder may weakly reflect life stage and household structure associated with commute choices, but it is indirect.",
+            "feature": "RELP"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.12,
+            "rationale": "Race may correlate with residential segregation and commute burdens, but it is a sensitive demographic shortcut with unstable cross-state implications.",
+            "feature": "RAC1P"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.02,
+            "rationale": "Home PUMA is a fine-grained geographic identifier that strongly encodes local domain and is unlikely to generalize out of state.",
+            "feature": "PUMA"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.0,
+            "rationale": "State directly identifies the domain and is the clearest geography shortcut for an out-of-distribution state generalization setting.",
+            "feature": "ST"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.17,
+            "rationale": "Citizenship status may weakly track labor-market position and residential patterns, but much of the signal is demographic and potentially brittle.",
+            "feature": "CIT"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.71,
+            "rationale": "Occupation is a strong semantically relevant predictor because different jobs systematically imply different workplace locations, schedules, and commute patterns across states.",
+            "feature": "OCCP"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.96,
+            "rationale": "Commute mode is one of the most direct stable determinants of travel time and should remain highly predictive across states.",
+            "feature": "JWTR"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.03,
+            "rationale": "Workplace PUMA is highly geographic and likely captures local commuting structure in a brittle, domain-specific way.",
+            "feature": "POWPUMA"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.54,
+            "rationale": "Income-to-poverty ratio is a broadly stable proxy for residential location, car access, and job type, all of which influence commute duration.",
+            "feature": "POVPIP"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a worker’s commute/travel time to work falls above the task threshold using person and job-related ACS attributes.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.58,
+            "rationale": "Age is moderately and broadly related to job type, residential choice, and commuting patterns across states, though not a direct determinant.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.55,
+            "rationale": "Education is a fairly stable proxy for occupation, income, and urban job access, giving moderate cross-state signal for commute time.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.24,
+            "rationale": "Marital status may weakly reflect household location and life stage, but its link to commute time is indirect and variable.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.18,
+            "rationale": "Sex can correlate with labor patterns and commute behavior, but it is a demographic shortcut with limited stable causal relevance.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.21,
+            "rationale": "Disability status may affect work participation and commute constraints, but among workers its marginal signal is modest and potentially selection-driven.",
+            "feature": "DIS"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.01,
+            "rationale": "Parental employment status is mainly meaningful for children and should have little stable relevance for workers’ commute times.",
+            "feature": "ESP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.29,
+            "rationale": "Recent mobility can indicate relocation and housing-job mismatch, offering some signal, but coding may partly reflect state-specific migration patterns.",
+            "feature": "MIG"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.27,
+            "rationale": "Relationship to householder captures household role and life stage, which can modestly affect residential location and commute length.",
+            "feature": "RELP"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.12,
+            "rationale": "Race can correlate with structural commuting differences, but it is a sensitive demographic shortcut and likely less transportable as a stable predictor.",
+            "feature": "RAC1P"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.02,
+            "rationale": "Residential PUMA is a fine-grained geographic identifier that strongly encodes local domain and is likely brittle out of state.",
+            "feature": "PUMA"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.0,
+            "rationale": "State directly identifies the domain and should be heavily penalized for out-of-distribution generalization.",
+            "feature": "ST"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.16,
+            "rationale": "Citizenship status may weakly proxy labor market segment and settlement patterns, but much of its signal is demographic and geography-linked.",
+            "feature": "CIT"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.72,
+            "rationale": "Occupation is one of the most stable predictors because commute time depends strongly on job type, workplace concentration, and schedule constraints.",
+            "feature": "OCCP"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.95,
+            "rationale": "Mode of transportation to work is directly tied to commute duration and should remain highly predictive across states.",
+            "feature": "JWTR"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.03,
+            "rationale": "Workplace PUMA is another fine-grained geographic code that likely captures local commuting structure and will not transfer well across states.",
+            "feature": "POWPUMA"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.61,
+            "rationale": "Income-to-poverty ratio is a broadly stable proxy for housing-market access, car ownership, and job type, all of which affect commute time.",
+            "feature": "POVPIP"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a worker’s commute travel time falls above the task threshold using person, job, and commuting-related ACS attributes.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.36,
+            "rationale": "Age affects job type, residential choice, and commuting patterns, but the relationship is indirect and only moderately stable.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.42,
+            "rationale": "Education is a stable proxy for occupation, income, and urban labor-market attachment, giving moderate cross-state signal.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.24,
+            "rationale": "Marital status may relate to household location and work patterns, but it is a weak and indirect predictor of commute time.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.14,
+            "rationale": "Sex can correlate with labor-force and commuting patterns, but much of that signal is demographic shortcutting rather than robust task structure.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.18,
+            "rationale": "Disability may affect employment and commute feasibility, but among workers its marginal signal is limited and potentially selection-driven.",
+            "feature": "DIS"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.01,
+            "rationale": "Parental employment status is mainly relevant for children and should have essentially no stable usefulness for workers’ commute time.",
+            "feature": "ESP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.28,
+            "rationale": "Recent mobility can affect commute setup and residential-job matching, but categories may partly reflect transient or state-specific patterns.",
+            "feature": "MIG"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.22,
+            "rationale": "Relationship to householder captures household structure that may weakly influence residential location and commuting, but only indirectly.",
+            "feature": "RELP"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.1,
+            "rationale": "Race can correlate with commuting through structural factors, but it is a sensitive shortcut with unstable state-specific associations.",
+            "feature": "RAC1P"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.02,
+            "rationale": "PUMA is a fine geographic identifier that strongly encodes local domain and is highly brittle for out-of-state generalization.",
+            "feature": "PUMA"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.0,
+            "rationale": "State directly identifies the domain and should be heavily penalized as a non-transferable geographic shortcut.",
+            "feature": "ST"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.12,
+            "rationale": "Citizenship may weakly track job type and residential patterns, but much of its signal is demographic and not reliably transport-structural.",
+            "feature": "CIT"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.63,
+            "rationale": "Occupation is a strong, semantically relevant predictor because job type systematically shapes workplace location, schedule, and commute burden across states.",
+            "feature": "OCCP"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.98,
+            "rationale": "Commute mode is the most directly and stably related feature since travel time strongly depends on whether one drives, uses transit, walks, or works from home.",
+            "feature": "JWTR"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.03,
+            "rationale": "Place-of-work PUMA is highly geographic and likely to encode local state-specific structure rather than transferable causal signal.",
+            "feature": "POWPUMA"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.47,
+            "rationale": "Income-to-poverty ratio is a fairly stable proxy for housing-job tradeoffs, car access, and urban residence, giving moderate predictive value.",
+            "feature": "POVPIP"
+          }
+        ]
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DIS\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Disability recode.\",\n    \"values\": \"1=with a disability, 2=without a disability.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"ESP\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status of parents.\",\n    \"values\": \"ACS family/parent employment code, mainly defined for children.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"MIG\",\n    \"type\": \"categorical\",\n    \"description\": \"Mobility status one year ago.\",\n    \"values\": \"Whether and where the person lived one year ago.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"PUMA\",\n    \"type\": \"categorical\",\n    \"description\": \"Public Use Microdata Area code.\",\n    \"values\": \"Fine geographic identifier within state; likely encodes local domain.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"ST\",\n    \"type\": \"categorical\",\n    \"description\": \"State code.\",\n    \"values\": \"Geographic state identifier; likely encodes train/test domain.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"CIT\",\n    \"type\": \"categorical\",\n    \"description\": \"Citizenship status.\",\n    \"values\": \"US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"OCCP\",\n    \"type\": \"categorical\",\n    \"description\": \"Occupation code.\",\n    \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"JWTR\",\n    \"type\": \"categorical\",\n    \"description\": \"Means of transportation to work.\",\n    \"values\": \"ACS commute mode category.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"POWPUMA\",\n    \"type\": \"categorical\",\n    \"description\": \"Place-of-work PUMA code.\",\n    \"values\": \"Workplace geographic identifier; likely encodes local domain.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"POVPIP\",\n    \"type\": \"continuous\",\n    \"description\": \"Income-to-poverty ratio.\",\n    \"values\": \"Poverty ratio percentage/code; larger values indicate higher income relative to poverty threshold.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\"task_summary\":\"Predict whether a worker’s one-way commute to work exceeds the ACS travel-time threshold, using person and work-related attributes that should generalize across states.\",\"scores\":[{\"feature_id\":0,\"score\":0.42,\"rationale\":\"Age plausibly affects job type, mode choice, and residential-work patterns, but its relationship to long commute is moderate rather than dominant and should generalize reasonably well.\"},{\"feature_id\":1,\"score\":0.48,\"rationale\":\"Education is a fairly stable proxy for occupation, earnings, and urban labor-market sorting, all of which can influence commute length across states.\"},{\"feature_id\":2,\"score\":0.24,\"rationale\":\"Marital status may correlate with household location choices and work arrangements, but effects are indirect and weaker for commute-time prediction.\"},{\"feature_id\":3,\"score\":0.18,\"rationale\":\"Sex can correlate with occupation mix and commuting patterns, but it is a sensitive demographic shortcut with limited stable marginal usefulness.\"},{\"feature_id\":4,\"score\":0.29,\"rationale\":\"Disability status can affect labor-force attachment, feasible commute modes, and job selection, giving some stable signal without being central.\"},{\"feature_id\":5,\"score\":0.01,\"rationale\":\"Parental employment status is mainly relevant for children and should have little meaningful or stable predictive value for workers’ commute time.\"},{\"feature_id\":6,\"score\":0.33,\"rationale\":\"Recent mobility may indicate residential change and job-location mismatch, which can affect commute time, though coding may also reflect heterogeneous life events.\"},{\"feature_id\":7,\"score\":0.27,\"rationale\":\"Relationship to householder captures household role and life stage, which can influence where people live relative to work, but only indirectly.\"},{\"feature_id\":8,\"score\":0.12,\"rationale\":\"Race may correlate with segregation and labor-market structure, but it is a sensitive shortcut and likely to encode state-specific social patterns rather than robust causal signal.\"},{\"feature_id\":9,\"score\":0.0,\"rationale\":\"Residence PUMA is a fine-grained geographic identifier that strongly encodes local domain and is unlikely to generalize out of state.\"},{\"feature_id\":10,\"score\":0.0,\"rationale\":\"State directly identifies the domain and would be a brittle shortcut for an out-of-distribution across-state generalization setting.\"},{\"feature_id\":11,\"score\":0.21,\"rationale\":\"Citizenship status may weakly proxy for labor-market segment and residential sorting, but much of its signal is indirect and potentially confounded with geography.\"},{\"feature_id\":12,\"score\":0.72,\"rationale\":\"Occupation is one of the most stable predictors because commute length depends strongly on job type, work location patterns, and industry-specific commuting norms across states.\"},{\"feature_id\":13,\"score\":0.97,\"rationale\":\"Commute mode is extremely informative for travel time and should remain semantically predictive across states despite some geographic variation in mode prevalence.\"},{\"feature_id\":14,\"score\":0.0,\"rationale\":\"Place-of-work PUMA is another fine-grained geographic code that effectively leaks local spatial structure and is highly brittle across states.\"},{\"feature_id\":15,\"score\":0.56,\"rationale\":\"Income-to-poverty ratio is a stable socioeconomic indicator tied to housing-job tradeoffs, vehicle access, and urban sorting, making it broadly useful across states.\"}]}",
+      "input_tokens": 1223,
+      "output_tokens": 709,
+      "total_tokens": 1932,
+      "response_id": "resp_0cc14188dd2e9cd2006a27f315ed1c819a8be536333bf1bb50",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DIS\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Disability recode.\",\n    \"values\": \"1=with a disability, 2=without a disability.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"ESP\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status of parents.\",\n    \"values\": \"ACS family/parent employment code, mainly defined for children.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"MIG\",\n    \"type\": \"categorical\",\n    \"description\": \"Mobility status one year ago.\",\n    \"values\": \"Whether and where the person lived one year ago.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"PUMA\",\n    \"type\": \"categorical\",\n    \"description\": \"Public Use Microdata Area code.\",\n    \"values\": \"Fine geographic identifier within state; likely encodes local domain.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"ST\",\n    \"type\": \"categorical\",\n    \"description\": \"State code.\",\n    \"values\": \"Geographic state identifier; likely encodes train/test domain.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"CIT\",\n    \"type\": \"categorical\",\n    \"description\": \"Citizenship status.\",\n    \"values\": \"US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"OCCP\",\n    \"type\": \"categorical\",\n    \"description\": \"Occupation code.\",\n    \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"JWTR\",\n    \"type\": \"categorical\",\n    \"description\": \"Means of transportation to work.\",\n    \"values\": \"ACS commute mode category.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"POWPUMA\",\n    \"type\": \"categorical\",\n    \"description\": \"Place-of-work PUMA code.\",\n    \"values\": \"Workplace geographic identifier; likely encodes local domain.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"POVPIP\",\n    \"type\": \"continuous\",\n    \"description\": \"Income-to-poverty ratio.\",\n    \"values\": \"Poverty ratio percentage/code; larger values indicate higher income relative to poverty threshold.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a worker’s commute travel time falls above the acstraveltime threshold using person, job, and commute-related ACS features.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.28,\n      \"rationale\": \"Age has some broad association with job type, residential choice, and commuting patterns, but its marginal effect on commute duration is modest and indirect across states.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.34,\n      \"rationale\": \"Education is moderately informative through occupation and urban labor-market sorting, but much of its signal is mediated by other variables and can vary by state context.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.22,\n      \"rationale\": \"Marital status may weakly track household location and work arrangements, yet it is only indirectly related to commute time and not especially robust marginally.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.18,\n      \"rationale\": \"Sex can correlate with labor-force patterns and commute behavior, but it is a sensitive demographic shortcut with limited stable causal relevance to travel time itself.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.24,\n      \"rationale\": \"Disability status may affect employment type, commute feasibility, and mode choice, giving some real signal, though it remains indirect and potentially entangled with selection into work.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.01,\n      \"rationale\": \"Parental employment status is mainly defined for children and should have little meaningful stable value for a worker commute-time task.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.20,\n      \"rationale\": \"Recent mobility may weakly indicate residential instability or long-distance adjustment, but it is not a core determinant of current commute duration and may be noisy.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.19,\n      \"rationale\": \"Relationship to householder can reflect household structure and residential constraints, yet it is only a weak proxy for commute time and likely less stable than job-related features.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.10,\n      \"rationale\": \"Race often acts as a demographic shortcut tied to segregation and local structure rather than a stable semantic driver, so it should be heavily downweighted for OOD generalization.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.00,\n      \"rationale\": \"Home PUMA is a fine-grained geographic identifier that strongly encodes local domain and state-specific commuting infrastructure, making it highly brittle out of distribution.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.00,\n      \"rationale\": \"State directly identifies the domain and would act as a geography shortcut rather than a transferable predictor.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.12,\n      \"rationale\": \"Citizenship status may correlate with job sorting and residence patterns, but it is mostly an indirect demographic proxy and not a stable semantic cause of commute duration.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.66,\n      \"rationale\": \"Occupation is one of the most plausibly stable predictors because different jobs systematically imply different work locations, schedules, and commuting patterns across states.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.97,\n      \"rationale\": \"Transportation mode is directly tied to commute duration and should remain highly predictive across states, making it the strongest stable feature despite some local variation.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.02,\n      \"rationale\": \"Workplace PUMA is another detailed geographic code that can nearly localize commute structure, so it is powerful in-domain but highly non-transferable and shortcut-prone.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.41,\n      \"rationale\": \"Income-to-poverty ratio provides moderate stable signal through residential location, car access, and job type, though much of its effect is indirect and geography-mediated.\"\n    }\n  ]\n}",
+      "input_tokens": 1223,
+      "output_tokens": 942,
+      "total_tokens": 2165,
+      "response_id": "resp_0ec4a43a15723f9e006a27f31fcc608199999acd2ec13ed5f8",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DIS\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Disability recode.\",\n    \"values\": \"1=with a disability, 2=without a disability.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"ESP\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status of parents.\",\n    \"values\": \"ACS family/parent employment code, mainly defined for children.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"MIG\",\n    \"type\": \"categorical\",\n    \"description\": \"Mobility status one year ago.\",\n    \"values\": \"Whether and where the person lived one year ago.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"PUMA\",\n    \"type\": \"categorical\",\n    \"description\": \"Public Use Microdata Area code.\",\n    \"values\": \"Fine geographic identifier within state; likely encodes local domain.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"ST\",\n    \"type\": \"categorical\",\n    \"description\": \"State code.\",\n    \"values\": \"Geographic state identifier; likely encodes train/test domain.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"CIT\",\n    \"type\": \"categorical\",\n    \"description\": \"Citizenship status.\",\n    \"values\": \"US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"OCCP\",\n    \"type\": \"categorical\",\n    \"description\": \"Occupation code.\",\n    \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"JWTR\",\n    \"type\": \"categorical\",\n    \"description\": \"Means of transportation to work.\",\n    \"values\": \"ACS commute mode category.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"POWPUMA\",\n    \"type\": \"categorical\",\n    \"description\": \"Place-of-work PUMA code.\",\n    \"values\": \"Workplace geographic identifier; likely encodes local domain.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"POVPIP\",\n    \"type\": \"continuous\",\n    \"description\": \"Income-to-poverty ratio.\",\n    \"values\": \"Poverty ratio percentage/code; larger values indicate higher income relative to poverty threshold.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a worker’s commute travel time exceeds the acstraveltime threshold using person, job, and commute-related ACS attributes while avoiding geography-specific shortcuts.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.42,\n      \"rationale\": \"Age plausibly affects job type, schedule flexibility, and residential choices tied to commute length, but the relationship is moderate rather than direct.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.47,\n      \"rationale\": \"Education is a fairly stable proxy for occupation and urban labor-market sorting, which can influence commute duration across states.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.29,\n      \"rationale\": \"Marital status may correlate with household location and family constraints, but it is an indirect and relatively weak predictor.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.18,\n      \"rationale\": \"Sex can correlate with occupation and commuting patterns, but much of its signal is demographic shortcutting rather than robust task structure.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.21,\n      \"rationale\": \"Disability may affect employment type and commute feasibility, yet its marginal predictive value is limited and partly demographic.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.01,\n      \"rationale\": \"Parental employment status is mainly relevant for children and should have little stable usefulness for workers in this task.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.24,\n      \"rationale\": \"Recent mobility can relate to residential instability and job changes that affect commute time, but coding may partly capture state-specific movement patterns.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.26,\n      \"rationale\": \"Relationship to householder may weakly reflect life stage and household structure associated with commute choices, but it is indirect.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.12,\n      \"rationale\": \"Race may correlate with residential segregation and commute burdens, but it is a sensitive demographic shortcut with unstable cross-state implications.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.02,\n      \"rationale\": \"Home PUMA is a fine-grained geographic identifier that strongly encodes local domain and is unlikely to generalize out of state.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.0,\n      \"rationale\": \"State directly identifies the domain and is the clearest geography shortcut for an out-of-distribution state generalization setting.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.17,\n      \"rationale\": \"Citizenship status may weakly track labor-market position and residential patterns, but much of the signal is demographic and potentially brittle.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.71,\n      \"rationale\": \"Occupation is a strong semantically relevant predictor because different jobs systematically imply different workplace locations, schedules, and commute patterns across states.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.96,\n      \"rationale\": \"Commute mode is one of the most direct stable determinants of travel time and should remain highly predictive across states.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.03,\n      \"rationale\": \"Workplace PUMA is highly geographic and likely captures local commuting structure in a brittle, domain-specific way.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.54,\n      \"rationale\": \"Income-to-poverty ratio is a broadly stable proxy for residential location, car access, and job type, all of which influence commute duration.\"\n    }\n  ]\n}",
+      "input_tokens": 1223,
+      "output_tokens": 863,
+      "total_tokens": 2086,
+      "response_id": "resp_02d004a1ee592cc7006a27f32cef08819ab481b3f575636978",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DIS\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Disability recode.\",\n    \"values\": \"1=with a disability, 2=without a disability.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"ESP\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status of parents.\",\n    \"values\": \"ACS family/parent employment code, mainly defined for children.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"MIG\",\n    \"type\": \"categorical\",\n    \"description\": \"Mobility status one year ago.\",\n    \"values\": \"Whether and where the person lived one year ago.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"PUMA\",\n    \"type\": \"categorical\",\n    \"description\": \"Public Use Microdata Area code.\",\n    \"values\": \"Fine geographic identifier within state; likely encodes local domain.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"ST\",\n    \"type\": \"categorical\",\n    \"description\": \"State code.\",\n    \"values\": \"Geographic state identifier; likely encodes train/test domain.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"CIT\",\n    \"type\": \"categorical\",\n    \"description\": \"Citizenship status.\",\n    \"values\": \"US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"OCCP\",\n    \"type\": \"categorical\",\n    \"description\": \"Occupation code.\",\n    \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"JWTR\",\n    \"type\": \"categorical\",\n    \"description\": \"Means of transportation to work.\",\n    \"values\": \"ACS commute mode category.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"POWPUMA\",\n    \"type\": \"categorical\",\n    \"description\": \"Place-of-work PUMA code.\",\n    \"values\": \"Workplace geographic identifier; likely encodes local domain.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"POVPIP\",\n    \"type\": \"continuous\",\n    \"description\": \"Income-to-poverty ratio.\",\n    \"values\": \"Poverty ratio percentage/code; larger values indicate higher income relative to poverty threshold.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a worker’s commute/travel time to work falls above the task threshold using person and job-related ACS attributes.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.58,\n      \"rationale\": \"Age is moderately and broadly related to job type, residential choice, and commuting patterns across states, though not a direct determinant.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.55,\n      \"rationale\": \"Education is a fairly stable proxy for occupation, income, and urban job access, giving moderate cross-state signal for commute time.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.24,\n      \"rationale\": \"Marital status may weakly reflect household location and life stage, but its link to commute time is indirect and variable.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.18,\n      \"rationale\": \"Sex can correlate with labor patterns and commute behavior, but it is a demographic shortcut with limited stable causal relevance.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.21,\n      \"rationale\": \"Disability status may affect work participation and commute constraints, but among workers its marginal signal is modest and potentially selection-driven.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.01,\n      \"rationale\": \"Parental employment status is mainly meaningful for children and should have little stable relevance for workers’ commute times.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.29,\n      \"rationale\": \"Recent mobility can indicate relocation and housing-job mismatch, offering some signal, but coding may partly reflect state-specific migration patterns.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.27,\n      \"rationale\": \"Relationship to householder captures household role and life stage, which can modestly affect residential location and commute length.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.12,\n      \"rationale\": \"Race can correlate with structural commuting differences, but it is a sensitive demographic shortcut and likely less transportable as a stable predictor.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.02,\n      \"rationale\": \"Residential PUMA is a fine-grained geographic identifier that strongly encodes local domain and is likely brittle out of state.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.0,\n      \"rationale\": \"State directly identifies the domain and should be heavily penalized for out-of-distribution generalization.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.16,\n      \"rationale\": \"Citizenship status may weakly proxy labor market segment and settlement patterns, but much of its signal is demographic and geography-linked.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.72,\n      \"rationale\": \"Occupation is one of the most stable predictors because commute time depends strongly on job type, workplace concentration, and schedule constraints.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.95,\n      \"rationale\": \"Mode of transportation to work is directly tied to commute duration and should remain highly predictive across states.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.03,\n      \"rationale\": \"Workplace PUMA is another fine-grained geographic code that likely captures local commuting structure and will not transfer well across states.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.61,\n      \"rationale\": \"Income-to-poverty ratio is a broadly stable proxy for housing-market access, car ownership, and job type, all of which affect commute time.\"\n    }\n  ]\n}",
+      "input_tokens": 1223,
+      "output_tokens": 854,
+      "total_tokens": 2077,
+      "response_id": "resp_02acd12c854001d3006a27f3387b548198b349f03ecc174de7",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acstraveltime`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DIS\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Disability recode.\",\n    \"values\": \"1=with a disability, 2=without a disability.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"ESP\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status of parents.\",\n    \"values\": \"ACS family/parent employment code, mainly defined for children.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"MIG\",\n    \"type\": \"categorical\",\n    \"description\": \"Mobility status one year ago.\",\n    \"values\": \"Whether and where the person lived one year ago.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"PUMA\",\n    \"type\": \"categorical\",\n    \"description\": \"Public Use Microdata Area code.\",\n    \"values\": \"Fine geographic identifier within state; likely encodes local domain.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"ST\",\n    \"type\": \"categorical\",\n    \"description\": \"State code.\",\n    \"values\": \"Geographic state identifier; likely encodes train/test domain.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"CIT\",\n    \"type\": \"categorical\",\n    \"description\": \"Citizenship status.\",\n    \"values\": \"US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"OCCP\",\n    \"type\": \"categorical\",\n    \"description\": \"Occupation code.\",\n    \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"JWTR\",\n    \"type\": \"categorical\",\n    \"description\": \"Means of transportation to work.\",\n    \"values\": \"ACS commute mode category.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"POWPUMA\",\n    \"type\": \"categorical\",\n    \"description\": \"Place-of-work PUMA code.\",\n    \"values\": \"Workplace geographic identifier; likely encodes local domain.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"POVPIP\",\n    \"type\": \"continuous\",\n    \"description\": \"Income-to-poverty ratio.\",\n    \"values\": \"Poverty ratio percentage/code; larger values indicate higher income relative to poverty threshold.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a worker’s commute travel time falls above the task threshold using person, job, and commuting-related ACS attributes.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.36,\n      \"rationale\": \"Age affects job type, residential choice, and commuting patterns, but the relationship is indirect and only moderately stable.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.42,\n      \"rationale\": \"Education is a stable proxy for occupation, income, and urban labor-market attachment, giving moderate cross-state signal.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.24,\n      \"rationale\": \"Marital status may relate to household location and work patterns, but it is a weak and indirect predictor of commute time.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.14,\n      \"rationale\": \"Sex can correlate with labor-force and commuting patterns, but much of that signal is demographic shortcutting rather than robust task structure.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.18,\n      \"rationale\": \"Disability may affect employment and commute feasibility, but among workers its marginal signal is limited and potentially selection-driven.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.01,\n      \"rationale\": \"Parental employment status is mainly relevant for children and should have essentially no stable usefulness for workers’ commute time.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.28,\n      \"rationale\": \"Recent mobility can affect commute setup and residential-job matching, but categories may partly reflect transient or state-specific patterns.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.22,\n      \"rationale\": \"Relationship to householder captures household structure that may weakly influence residential location and commuting, but only indirectly.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.10,\n      \"rationale\": \"Race can correlate with commuting through structural factors, but it is a sensitive shortcut with unstable state-specific associations.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.02,\n      \"rationale\": \"PUMA is a fine geographic identifier that strongly encodes local domain and is highly brittle for out-of-state generalization.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.00,\n      \"rationale\": \"State directly identifies the domain and should be heavily penalized as a non-transferable geographic shortcut.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.12,\n      \"rationale\": \"Citizenship may weakly track job type and residential patterns, but much of its signal is demographic and not reliably transport-structural.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.63,\n      \"rationale\": \"Occupation is a strong, semantically relevant predictor because job type systematically shapes workplace location, schedule, and commute burden across states.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.98,\n      \"rationale\": \"Commute mode is the most directly and stably related feature since travel time strongly depends on whether one drives, uses transit, walks, or works from home.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.03,\n      \"rationale\": \"Place-of-work PUMA is highly geographic and likely to encode local state-specific structure rather than transferable causal signal.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.47,\n      \"rationale\": \"Income-to-poverty ratio is a fairly stable proxy for housing-job tradeoffs, car access, and urban residence, giving moderate predictive value.\"\n    }\n  ]\n}",
+      "input_tokens": 1223,
+      "output_tokens": 855,
+      "total_tokens": 2078,
+      "response_id": "resp_09ee289c6e26b41e006a27f344348c819990ffd3946db8b1f5",
+      "response_model": "gpt-5.4-2026-03-05"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/acs/acstraveltime/rankings/score_all_prompt.txt",
+  "config": {
+    "score_samples": 5
+  }
+}

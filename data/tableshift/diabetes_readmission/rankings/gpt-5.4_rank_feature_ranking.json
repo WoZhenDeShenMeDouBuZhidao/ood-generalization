@@ -1,0 +1,307 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "diabetes_readmission",
+  "model": "gpt-5.4",
+  "method": "rank",
+  "temperature": 0.0,
+  "created_at": "2026-06-09T20:04:36",
+  "token_usage": {
+    "num_calls": 1,
+    "input_tokens": 2804,
+    "output_tokens": 1930,
+    "total_tokens": 4734
+  },
+  "response": {
+    "task_summary": "Predict whether a diabetic inpatient encounter will be followed by hospital readmission, prioritizing signals of underlying disease burden and prior utilization that should transfer across domains.",
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 14,
+        "rationale": "Prior inpatient utilization is a strong, portable marker of illness severity and readmission risk.",
+        "feature": "number_inpatient"
+      },
+      {
+        "rank": 2,
+        "feature_id": 13,
+        "rationale": "Recent emergency visit history reflects unstable health status and tends to generalize across settings.",
+        "feature": "number_emergency"
+      },
+      {
+        "rank": 3,
+        "feature_id": 6,
+        "rationale": "Length of stay captures acuity and complexity of the current admission with broad semantic relevance.",
+        "feature": "time_in_hospital"
+      },
+      {
+        "rank": 4,
+        "feature_id": 18,
+        "rationale": "Overall diagnosis count is a robust proxy for comorbidity burden.",
+        "feature": "number_diagnoses"
+      },
+      {
+        "rank": 5,
+        "feature_id": 15,
+        "rationale": "Primary diagnosis directly encodes the main clinical reason for admission and should remain predictive.",
+        "feature": "diag_1"
+      },
+      {
+        "rank": 6,
+        "feature_id": 12,
+        "rationale": "Outpatient utilization history captures chronic disease management intensity and prior healthcare need.",
+        "feature": "number_outpatient"
+      },
+      {
+        "rank": 7,
+        "feature_id": 16,
+        "rationale": "Secondary diagnosis adds clinically meaningful comorbidity information beyond the primary diagnosis.",
+        "feature": "diag_2"
+      },
+      {
+        "rank": 8,
+        "feature_id": 17,
+        "rationale": "Additional diagnosis information further captures multimorbidity and complication burden.",
+        "feature": "diag_3"
+      },
+      {
+        "rank": 9,
+        "feature_id": 11,
+        "rationale": "Number of medications is a strong indicator of treatment complexity and disease burden.",
+        "feature": "num_medications"
+      },
+      {
+        "rank": 10,
+        "feature_id": 9,
+        "rationale": "Lab volume often reflects acuity and monitoring intensity, which are relevant to readmission.",
+        "feature": "num_lab_procedures"
+      },
+      {
+        "rank": 11,
+        "feature_id": 38,
+        "rationale": "Insulin treatment change is clinically meaningful for diabetes severity and glycemic instability.",
+        "feature": "insulin"
+      },
+      {
+        "rank": 12,
+        "feature_id": 20,
+        "rationale": "HbA1c result is a direct measure of diabetes control with stable clinical meaning.",
+        "feature": "A1Cresult"
+      },
+      {
+        "rank": 13,
+        "feature_id": 19,
+        "rationale": "Serum glucose abnormality reflects acute glycemic dysregulation relevant to near-term outcomes.",
+        "feature": "max_glu_serum"
+      },
+      {
+        "rank": 14,
+        "feature_id": 44,
+        "rationale": "Any medication change summarizes treatment adjustment during the encounter and may indicate instability.",
+        "feature": "change"
+      },
+      {
+        "rank": 15,
+        "feature_id": 45,
+        "rationale": "Whether diabetes medication was prescribed is a broad but clinically relevant severity/treatment signal.",
+        "feature": "diabetesMed"
+      },
+      {
+        "rank": 16,
+        "feature_id": 4,
+        "rationale": "Admission type captures urgency and acuity, though some coding practices may vary by domain.",
+        "feature": "admission_type_id"
+      },
+      {
+        "rank": 17,
+        "feature_id": 10,
+        "rationale": "Procedure count can reflect complexity of care, but is somewhat more practice-pattern dependent.",
+        "feature": "num_procedures"
+      },
+      {
+        "rank": 18,
+        "feature_id": 21,
+        "rationale": "Metformin change is a common diabetes management signal with some relevance to disease control.",
+        "feature": "metformin"
+      },
+      {
+        "rank": 19,
+        "feature_id": 27,
+        "rationale": "Glipizide change may reflect treatment escalation or adjustment tied to diabetes severity.",
+        "feature": "glipizide"
+      },
+      {
+        "rank": 20,
+        "feature_id": 28,
+        "rationale": "Glyburide change carries similar treatment-intensity information, though less central than insulin.",
+        "feature": "glyburide"
+      },
+      {
+        "rank": 21,
+        "feature_id": 25,
+        "rationale": "Glimepiride change provides additional diabetes regimen information with moderate portability.",
+        "feature": "glimepiride"
+      },
+      {
+        "rank": 22,
+        "feature_id": 30,
+        "rationale": "Pioglitazone change may encode treatment strategy, though use patterns can vary over time.",
+        "feature": "pioglitazone"
+      },
+      {
+        "rank": 23,
+        "feature_id": 22,
+        "rationale": "Repaglinide change offers some signal about glycemic management but is less commonly used.",
+        "feature": "repaglinide"
+      },
+      {
+        "rank": 24,
+        "feature_id": 23,
+        "rationale": "Nateglinide change is another modest treatment signal with limited prevalence.",
+        "feature": "nateglinide"
+      },
+      {
+        "rank": 25,
+        "feature_id": 31,
+        "rationale": "Rosiglitazone change may correlate with regimen complexity but is vulnerable to temporal practice shifts.",
+        "feature": "rosiglitazone"
+      },
+      {
+        "rank": 26,
+        "feature_id": 2,
+        "rationale": "Age is broadly predictive of readmission risk, though it can also act as a demographic shortcut.",
+        "feature": "age"
+      },
+      {
+        "rank": 27,
+        "feature_id": 5,
+        "rationale": "Discharge disposition is predictive but may border on post-treatment or workflow-related leakage.",
+        "feature": "discharge_disposition_id"
+      },
+      {
+        "rank": 28,
+        "feature_id": 8,
+        "rationale": "Admitting specialty can reflect case mix, but it is also institution- and workflow-dependent.",
+        "feature": "medical_specialty"
+      },
+      {
+        "rank": 29,
+        "feature_id": 7,
+        "rationale": "Payer code may correlate with access and follow-up but is a likely socioeconomic/domain proxy.",
+        "feature": "payer_code"
+      },
+      {
+        "rank": 30,
+        "feature_id": 3,
+        "rationale": "Weight may relate to metabolic risk, but missingness and coarse binning reduce robustness.",
+        "feature": "weight"
+      },
+      {
+        "rank": 31,
+        "feature_id": 1,
+        "rationale": "Gender may have weak association with outcomes but is not a preferred stable causal driver.",
+        "feature": "gender"
+      },
+      {
+        "rank": 32,
+        "feature_id": 0,
+        "rationale": "Race can encode disparities and site/population composition more than transportable clinical risk.",
+        "feature": "race"
+      },
+      {
+        "rank": 33,
+        "feature_id": 39,
+        "rationale": "Combination-drug change may carry some regimen information but is rare and likely sparse.",
+        "feature": "glyburide-metformin"
+      },
+      {
+        "rank": 34,
+        "feature_id": 40,
+        "rationale": "Rare combination-medication changes are likely brittle and less useful out of distribution.",
+        "feature": "glipizide-metformin"
+      },
+      {
+        "rank": 35,
+        "feature_id": 35,
+        "rationale": "Tolazamide change is uncommon and likely reflects historical prescribing artifacts.",
+        "feature": "tolazamide"
+      },
+      {
+        "rank": 36,
+        "feature_id": 32,
+        "rationale": "Acarbose change is relatively uncommon and less central to broad readmission mechanisms.",
+        "feature": "acarbose"
+      },
+      {
+        "rank": 37,
+        "feature_id": 24,
+        "rationale": "Chlorpropamide change is rare and likely tied to outdated treatment patterns.",
+        "feature": "chlorpropamide"
+      },
+      {
+        "rank": 38,
+        "feature_id": 29,
+        "rationale": "Tolbutamide change is another sparse, outdated medication signal with poor portability.",
+        "feature": "tolbutamide"
+      },
+      {
+        "rank": 39,
+        "feature_id": 33,
+        "rationale": "Miglitol change is uncommon and unlikely to provide robust cross-domain signal.",
+        "feature": "miglitol"
+      },
+      {
+        "rank": 40,
+        "feature_id": 41,
+        "rationale": "This combination medication is very rare, making any learned association brittle.",
+        "feature": "glimepiride-pioglitazone"
+      },
+      {
+        "rank": 41,
+        "feature_id": 42,
+        "rationale": "Rare combination therapy likely reflects historical prescribing quirks more than stable risk.",
+        "feature": "metformin-rosiglitazone"
+      },
+      {
+        "rank": 42,
+        "feature_id": 43,
+        "rationale": "Another sparse combination-medication feature with limited expected transferability.",
+        "feature": "metformin-pioglitazone"
+      },
+      {
+        "rank": 43,
+        "feature_id": 26,
+        "rationale": "Acetohexamide change is extremely rare and likely uninformative outside the source distribution.",
+        "feature": "acetohexamide"
+      },
+      {
+        "rank": 44,
+        "feature_id": 34,
+        "rationale": "Troglitazone is obsolete, so any signal is likely a temporal artifact rather than stable biology.",
+        "feature": "troglitazone"
+      },
+      {
+        "rank": 45,
+        "feature_id": 36,
+        "rationale": "Examide is effectively absent in this dataset and should not be relied on.",
+        "feature": "examide"
+      },
+      {
+        "rank": 46,
+        "feature_id": 37,
+        "rationale": "Citoglipton is effectively absent and most likely pure noise or artifact.",
+        "feature": "citoglipton"
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `diabetes_readmission`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"race\",\n    \"type\": \"categorical\",\n    \"description\": \"Nominal. Values: Caucasian, Asian, African American, Hispanic, and other\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"gender\",\n    \"type\": \"categorical\",\n    \"description\": \"Nominal. Values: male, female, and unknown/invalid.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"age\",\n    \"type\": \"categorical\",\n    \"description\": \"Nominal. Grouped in 10-year intervals: [0, 10), [10, 20), . . ., [90, 100)\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"weight\",\n    \"type\": \"categorical\",\n    \"description\": \"Weight in pounds. Grouped in 25-pound intervals.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"admission_type_id\",\n    \"type\": \"categorical\",\n    \"description\": \"Admission type\",\n    \"values\": \"1=Emergency; 2=Urgent; 3=Elective; 4=Newborn; 5=Not Available; 6=NULL; 7=Trauma Center; 8=Not Mapped\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"discharge_disposition_id\",\n    \"type\": \"categorical\",\n    \"description\": \"Discharge type\",\n    \"values\": \"1=Discharged to home; 2=Discharged/transferred to another short term hospital; 3=Discharged/transferred to SNF; 4=Discharged/transferred to ICF; 5=Discharged/transferred to another type of inpatient care institution; 6=Discharged/transferred to home with ho...\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"time_in_hospital\",\n    \"type\": \"continuous\",\n    \"description\": \"Count of days beween admission and discharge\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"payer_code\",\n    \"type\": \"categorical\",\n    \"description\": \"Payer code\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"medical_specialty\",\n    \"type\": \"categorical\",\n    \"description\": \"Medical specialty of the admitting physician\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"num_lab_procedures\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of lab tests performed during the encounter\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"num_procedures\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of procedures (other than lab tests) performed during the encounter\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"num_medications\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of distinct generic drugs administered during the encounter\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"number_outpatient\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of outpatient visits of the patient in the year preceding the encounter\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"number_emergency\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of emergency visits of the patient in the year preceding the encounter\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"number_inpatient\",\n    \"type\": \"continuous\",\n    \"description\": \"Number of inpatient visits of the patient in the year preceding the encounter\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"diag_1\",\n    \"type\": \"categorical\",\n    \"description\": \"Primary diagnosis\",\n    \"values\": \"1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec...\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"diag_2\",\n    \"type\": \"categorical\",\n    \"description\": \"Secondary diagnosis\",\n    \"values\": \"1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec...\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"diag_3\",\n    \"type\": \"categorical\",\n    \"description\": \"Additional secondary diagnosis\",\n    \"values\": \"1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec...\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"number_diagnoses\",\n    \"type\": \"continuous\",\n    \"description\": \"Total number of diagnoses\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"max_glu_serum\",\n    \"type\": \"categorical\",\n    \"description\": \"Max glucose serum\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"A1Cresult\",\n    \"type\": \"categorical\",\n    \"description\": \"Hemoglobin A1c test result\",\n    \"note\": \"From original citation: Hemoglobin A1c (HbA1c) is an important measure of glucose control, which is widely applied to measure performance of diabetes care. (See documentation link.)\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"metformin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in metformin medication\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"repaglinide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in repaglinide medication\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"nateglinide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in nateglinide medication\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"chlorpropamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in chlorpropamide medication\"\n  },\n  {\n    \"feature_id\": 25,\n    \"feature\": \"glimepiride\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glimepiride medication\"\n  },\n  {\n    \"feature_id\": 26,\n    \"feature\": \"acetohexamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in acetohexamide medication\"\n  },\n  {\n    \"feature_id\": 27,\n    \"feature\": \"glipizide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glipizide medication\"\n  },\n  {\n    \"feature_id\": 28,\n    \"feature\": \"glyburide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glyburide medication\"\n  },\n  {\n    \"feature_id\": 29,\n    \"feature\": \"tolbutamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in tolbutamide medication\"\n  },\n  {\n    \"feature_id\": 30,\n    \"feature\": \"pioglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in pioglitazone medication\"\n  },\n  {\n    \"feature_id\": 31,\n    \"feature\": \"rosiglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in rosiglitazone medication\"\n  },\n  {\n    \"feature_id\": 32,\n    \"feature\": \"acarbose\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in acarbose medication\"\n  },\n  {\n    \"feature_id\": 33,\n    \"feature\": \"miglitol\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in miglitol medication\"\n  },\n  {\n    \"feature_id\": 34,\n    \"feature\": \"troglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in troglitazone medication\"\n  },\n  {\n    \"feature_id\": 35,\n    \"feature\": \"tolazamide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in tolazamide medication\"\n  },\n  {\n    \"feature_id\": 36,\n    \"feature\": \"examide\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in examide medication\"\n  },\n  {\n    \"feature_id\": 37,\n    \"feature\": \"citoglipton\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in citoglipton medication\"\n  },\n  {\n    \"feature_id\": 38,\n    \"feature\": \"insulin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in insulin medication\"\n  },\n  {\n    \"feature_id\": 39,\n    \"feature\": \"glyburide-metformin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glyburide-metformin medication\"\n  },\n  {\n    \"feature_id\": 40,\n    \"feature\": \"glipizide-metformin\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glipizide-metformin medication\"\n  },\n  {\n    \"feature_id\": 41,\n    \"feature\": \"glimepiride-pioglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in glimepiride-pioglitazone medication\"\n  },\n  {\n    \"feature_id\": 42,\n    \"feature\": \"metformin-rosiglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in metformin-rosiglitazone medication\"\n  },\n  {\n    \"feature_id\": 43,\n    \"feature\": \"metformin-pioglitazone\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in metformin-pioglitazone medication\"\n  },\n  {\n    \"feature_id\": 44,\n    \"feature\": \"change\",\n    \"type\": \"categorical\",\n    \"description\": \"Change in any medication\"\n  },\n  {\n    \"feature_id\": 45,\n    \"feature\": \"diabetesMed\",\n    \"type\": \"categorical\",\n    \"description\": \"Diabetes medication prescribed\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature_id\": 0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `ranking`.\n- Use ranks 1 through 46, with no duplicates.\n- Rank 1 is most important.\n- If two features seem similarly important, still break ties.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a diabetic inpatient encounter will be followed by hospital readmission, prioritizing signals of underlying disease burden and prior utilization that should transfer across domains.\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature_id\": 14,\n      \"rationale\": \"Prior inpatient utilization is a strong, portable marker of illness severity and readmission risk.\"\n    },\n    {\n      \"rank\": 2,\n      \"feature_id\": 13,\n      \"rationale\": \"Recent emergency visit history reflects unstable health status and tends to generalize across settings.\"\n    },\n    {\n      \"rank\": 3,\n      \"feature_id\": 6,\n      \"rationale\": \"Length of stay captures acuity and complexity of the current admission with broad semantic relevance.\"\n    },\n    {\n      \"rank\": 4,\n      \"feature_id\": 18,\n      \"rationale\": \"Overall diagnosis count is a robust proxy for comorbidity burden.\"\n    },\n    {\n      \"rank\": 5,\n      \"feature_id\": 15,\n      \"rationale\": \"Primary diagnosis directly encodes the main clinical reason for admission and should remain predictive.\"\n    },\n    {\n      \"rank\": 6,\n      \"feature_id\": 12,\n      \"rationale\": \"Outpatient utilization history captures chronic disease management intensity and prior healthcare need.\"\n    },\n    {\n      \"rank\": 7,\n      \"feature_id\": 16,\n      \"rationale\": \"Secondary diagnosis adds clinically meaningful comorbidity information beyond the primary diagnosis.\"\n    },\n    {\n      \"rank\": 8,\n      \"feature_id\": 17,\n      \"rationale\": \"Additional diagnosis information further captures multimorbidity and complication burden.\"\n    },\n    {\n      \"rank\": 9,\n      \"feature_id\": 11,\n      \"rationale\": \"Number of medications is a strong indicator of treatment complexity and disease burden.\"\n    },\n    {\n      \"rank\": 10,\n      \"feature_id\": 9,\n      \"rationale\": \"Lab volume often reflects acuity and monitoring intensity, which are relevant to readmission.\"\n    },\n    {\n      \"rank\": 11,\n      \"feature_id\": 38,\n      \"rationale\": \"Insulin treatment change is clinically meaningful for diabetes severity and glycemic instability.\"\n    },\n    {\n      \"rank\": 12,\n      \"feature_id\": 20,\n      \"rationale\": \"HbA1c result is a direct measure of diabetes control with stable clinical meaning.\"\n    },\n    {\n      \"rank\": 13,\n      \"feature_id\": 19,\n      \"rationale\": \"Serum glucose abnormality reflects acute glycemic dysregulation relevant to near-term outcomes.\"\n    },\n    {\n      \"rank\": 14,\n      \"feature_id\": 44,\n      \"rationale\": \"Any medication change summarizes treatment adjustment during the encounter and may indicate instability.\"\n    },\n    {\n      \"rank\": 15,\n      \"feature_id\": 45,\n      \"rationale\": \"Whether diabetes medication was prescribed is a broad but clinically relevant severity/treatment signal.\"\n    },\n    {\n      \"rank\": 16,\n      \"feature_id\": 4,\n      \"rationale\": \"Admission type captures urgency and acuity, though some coding practices may vary by domain.\"\n    },\n    {\n      \"rank\": 17,\n      \"feature_id\": 10,\n      \"rationale\": \"Procedure count can reflect complexity of care, but is somewhat more practice-pattern dependent.\"\n    },\n    {\n      \"rank\": 18,\n      \"feature_id\": 21,\n      \"rationale\": \"Metformin change is a common diabetes management signal with some relevance to disease control.\"\n    },\n    {\n      \"rank\": 19,\n      \"feature_id\": 27,\n      \"rationale\": \"Glipizide change may reflect treatment escalation or adjustment tied to diabetes severity.\"\n    },\n    {\n      \"rank\": 20,\n      \"feature_id\": 28,\n      \"rationale\": \"Glyburide change carries similar treatment-intensity information, though less central than insulin.\"\n    },\n    {\n      \"rank\": 21,\n      \"feature_id\": 25,\n      \"rationale\": \"Glimepiride change provides additional diabetes regimen information with moderate portability.\"\n    },\n    {\n      \"rank\": 22,\n      \"feature_id\": 30,\n      \"rationale\": \"Pioglitazone change may encode treatment strategy, though use patterns can vary over time.\"\n    },\n    {\n      \"rank\": 23,\n      \"feature_id\": 22,\n      \"rationale\": \"Repaglinide change offers some signal about glycemic management but is less commonly used.\"\n    },\n    {\n      \"rank\": 24,\n      \"feature_id\": 23,\n      \"rationale\": \"Nateglinide change is another modest treatment signal with limited prevalence.\"\n    },\n    {\n      \"rank\": 25,\n      \"feature_id\": 31,\n      \"rationale\": \"Rosiglitazone change may correlate with regimen complexity but is vulnerable to temporal practice shifts.\"\n    },\n    {\n      \"rank\": 26,\n      \"feature_id\": 2,\n      \"rationale\": \"Age is broadly predictive of readmission risk, though it can also act as a demographic shortcut.\"\n    },\n    {\n      \"rank\": 27,\n      \"feature_id\": 5,\n      \"rationale\": \"Discharge disposition is predictive but may border on post-treatment or workflow-related leakage.\"\n    },\n    {\n      \"rank\": 28,\n      \"feature_id\": 8,\n      \"rationale\": \"Admitting specialty can reflect case mix, but it is also institution- and workflow-dependent.\"\n    },\n    {\n      \"rank\": 29,\n      \"feature_id\": 7,\n      \"rationale\": \"Payer code may correlate with access and follow-up but is a likely socioeconomic/domain proxy.\"\n    },\n    {\n      \"rank\": 30,\n      \"feature_id\": 3,\n      \"rationale\": \"Weight may relate to metabolic risk, but missingness and coarse binning reduce robustness.\"\n    },\n    {\n      \"rank\": 31,\n      \"feature_id\": 1,\n      \"rationale\": \"Gender may have weak association with outcomes but is not a preferred stable causal driver.\"\n    },\n    {\n      \"rank\": 32,\n      \"feature_id\": 0,\n      \"rationale\": \"Race can encode disparities and site/population composition more than transportable clinical risk.\"\n    },\n    {\n      \"rank\": 33,\n      \"feature_id\": 39,\n      \"rationale\": \"Combination-drug change may carry some regimen information but is rare and likely sparse.\"\n    },\n    {\n      \"rank\": 34,\n      \"feature_id\": 40,\n      \"rationale\": \"Rare combination-medication changes are likely brittle and less useful out of distribution.\"\n    },\n    {\n      \"rank\": 35,\n      \"feature_id\": 35,\n      \"rationale\": \"Tolazamide change is uncommon and likely reflects historical prescribing artifacts.\"\n    },\n    {\n      \"rank\": 36,\n      \"feature_id\": 32,\n      \"rationale\": \"Acarbose change is relatively uncommon and less central to broad readmission mechanisms.\"\n    },\n    {\n      \"rank\": 37,\n      \"feature_id\": 24,\n      \"rationale\": \"Chlorpropamide change is rare and likely tied to outdated treatment patterns.\"\n    },\n    {\n      \"rank\": 38,\n      \"feature_id\": 29,\n      \"rationale\": \"Tolbutamide change is another sparse, outdated medication signal with poor portability.\"\n    },\n    {\n      \"rank\": 39,\n      \"feature_id\": 33,\n      \"rationale\": \"Miglitol change is uncommon and unlikely to provide robust cross-domain signal.\"\n    },\n    {\n      \"rank\": 40,\n      \"feature_id\": 41,\n      \"rationale\": \"This combination medication is very rare, making any learned association brittle.\"\n    },\n    {\n      \"rank\": 41,\n      \"feature_id\": 42,\n      \"rationale\": \"Rare combination therapy likely reflects historical prescribing quirks more than stable risk.\"\n    },\n    {\n      \"rank\": 42,\n      \"feature_id\": 43,\n      \"rationale\": \"Another sparse combination-medication feature with limited expected transferability.\"\n    },\n    {\n      \"rank\": 43,\n      \"feature_id\": 26,\n      \"rationale\": \"Acetohexamide change is extremely rare and likely uninformative outside the source distribution.\"\n    },\n    {\n      \"rank\": 44,\n      \"feature_id\": 34,\n      \"rationale\": \"Troglitazone is obsolete, so any signal is likely a temporal artifact rather than stable biology.\"\n    },\n    {\n      \"rank\": 45,\n      \"feature_id\": 36,\n      \"rationale\": \"Examide is effectively absent in this dataset and should not be relied on.\"\n    },\n    {\n      \"rank\": 46,\n      \"feature_id\": 37,\n      \"rationale\": \"Citoglipton is effectively absent and most likely pure noise or artifact.\"\n    }\n  ]\n}",
+      "input_tokens": 2804,
+      "output_tokens": 1930,
+      "total_tokens": 4734,
+      "response_id": "resp_011a5c8ca3159b39006a280134471c819a8b90d3727f9e30a0",
+      "response_model": "gpt-5.4-2026-03-05"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/tableshift/diabetes_readmission/rankings/rank_prompt.txt"
+}

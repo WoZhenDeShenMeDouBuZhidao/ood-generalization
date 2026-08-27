@@ -1,0 +1,149 @@
+# tableshift/nhanes_lead score_all prompts
+
+## 1. score_all
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `nhanes_lead`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score every feature by stable predictive usefulness for this task, considered
+marginally and without seeing the downstream data.
+
+Feature cards, in model input order:
+[
+  {
+    "feature_id": 0,
+    "feature": "DMDBORN4_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DMDBORN4_10` derived from semantic feature `DMDBORN4`. Interpret this column as the encoded model input for that derived category/value. country of birth",
+    "values": "1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC"
+  },
+  {
+    "feature_id": 1,
+    "feature": "DMDBORN4_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DMDBORN4_20` derived from semantic feature `DMDBORN4`. Interpret this column as the encoded model input for that derived category/value. country of birth",
+    "values": "1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC"
+  },
+  {
+    "feature_id": 2,
+    "feature": "DMDBORN4_MISSING",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DMDBORN4_MISSING` derived from semantic feature `DMDBORN4`. Interpret this column as the encoded model input for that derived category/value. country of birth",
+    "values": "1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC"
+  },
+  {
+    "feature_id": 3,
+    "feature": "DMDEDUC2_MISSING",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DMDEDUC2_MISSING` derived from semantic feature `DMDEDUC2`. Interpret this column as the encoded model input for that derived category/value. highest grade or level of school completed or highest degree received"
+  },
+  {
+    "feature_id": 4,
+    "feature": "DMDMARTL_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DMDMARTL_10` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status"
+  },
+  {
+    "feature_id": 5,
+    "feature": "DMDMARTL_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DMDMARTL_20` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status"
+  },
+  {
+    "feature_id": 6,
+    "feature": "DMDMARTL_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DMDMARTL_30` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status"
+  },
+  {
+    "feature_id": 7,
+    "feature": "DMDMARTL_40",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DMDMARTL_40` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status"
+  },
+  {
+    "feature_id": 8,
+    "feature": "DMDMARTL_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DMDMARTL_50` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status"
+  },
+  {
+    "feature_id": 9,
+    "feature": "DMDMARTL_60",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DMDMARTL_60` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status"
+  },
+  {
+    "feature_id": 10,
+    "feature": "DMDMARTL_770",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DMDMARTL_770` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status"
+  },
+  {
+    "feature_id": 11,
+    "feature": "DMDMARTL_990",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DMDMARTL_990` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status"
+  },
+  {
+    "feature_id": 12,
+    "feature": "DMDMARTL_MISSING",
+    "type": "encoded_model_feature",
+    "description": "Model feature `DMDMARTL_MISSING` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status"
+  },
+  {
+    "feature_id": 13,
+    "feature": "RIAGENDR",
+    "type": "categorical",
+    "description": "gender"
+  },
+  {
+    "feature_id": 14,
+    "feature": "RIDAGEYR",
+    "type": "continuous",
+    "description": "age in years"
+  },
+  {
+    "feature_id": 15,
+    "feature": "RIDRETH_merged",
+    "type": "categorical",
+    "description": "race and hispanic origin",
+    "values": "1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial"
+  },
+  {
+    "feature_id": 16,
+    "feature": "nhanes_year",
+    "type": "integer",
+    "description": "year"
+  }
+]
+
+Feature IDs to include exactly once:
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "scores": [
+    {
+      "feature_id": 0,
+      "score": 0.0,
+      "rationale": "short reason"
+    }
+  ]
+}
+
+Rules:
+- Include every feature_id exactly once in `scores`.
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- If two features seem similarly important, assign scores that still reflect your
+  best estimate of their relative stable usefulness.
+- `feature_id` is the authoritative identifier. Include each feature_id exactly
+  once and do not include feature names in the output.

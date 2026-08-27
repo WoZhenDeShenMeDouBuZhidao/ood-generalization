@@ -1,0 +1,453 @@
+{
+  "benchmark": "whyshift",
+  "dataset": "taxi",
+  "model": "gpt-5.4",
+  "method": "score_all",
+  "temperature": 0.5,
+  "created_at": "2026-06-09T19:07:59",
+  "token_usage": {
+    "num_calls": 5,
+    "input_tokens": 3305,
+    "output_tokens": 2032,
+    "total_tokens": 5337
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 5,
+        "feature": "distance",
+        "score_mean": 0.938,
+        "score_std": 0.03919183588453084
+      },
+      {
+        "rank": 2,
+        "feature_id": 3,
+        "feature": "hour",
+        "score_mean": 0.722,
+        "score_std": 0.02712931993250106
+      },
+      {
+        "rank": 3,
+        "feature_id": 4,
+        "feature": "minute_oftheday",
+        "score_mean": 0.65,
+        "score_std": 0.025298221281347056
+      },
+      {
+        "rank": 4,
+        "feature_id": 2,
+        "feature": "weekday",
+        "score_mean": 0.556,
+        "score_std": 0.019595917942265416
+      },
+      {
+        "rank": 5,
+        "feature_id": 6,
+        "feature": "direction",
+        "score_mean": 0.408,
+        "score_std": 0.10007996802557441
+      },
+      {
+        "rank": 6,
+        "feature_id": 0,
+        "feature": "month",
+        "score_mean": 0.336,
+        "score_std": 0.04630334761116089
+      },
+      {
+        "rank": 7,
+        "feature_id": 1,
+        "feature": "week",
+        "score_mean": 0.188,
+        "score_std": 0.027129319932501072
+      }
+    ],
+    "scores": [
+      {
+        "feature_id": 0,
+        "feature": "month",
+        "score_mean": 0.336,
+        "score_std": 0.04630334761116089,
+        "sample_scores": [
+          0.32,
+          0.32,
+          0.34,
+          0.42,
+          0.28
+        ]
+      },
+      {
+        "feature_id": 1,
+        "feature": "week",
+        "score_mean": 0.188,
+        "score_std": 0.027129319932501072,
+        "sample_scores": [
+          0.18,
+          0.18,
+          0.18,
+          0.24,
+          0.16
+        ]
+      },
+      {
+        "feature_id": 2,
+        "feature": "weekday",
+        "score_mean": 0.556,
+        "score_std": 0.019595917942265416,
+        "sample_scores": [
+          0.56,
+          0.56,
+          0.56,
+          0.58,
+          0.52
+        ]
+      },
+      {
+        "feature_id": 3,
+        "feature": "hour",
+        "score_mean": 0.722,
+        "score_std": 0.02712931993250106,
+        "sample_scores": [
+          0.72,
+          0.74,
+          0.68,
+          0.76,
+          0.71
+        ]
+      },
+      {
+        "feature_id": 4,
+        "feature": "minute_oftheday",
+        "score_mean": 0.65,
+        "score_std": 0.025298221281347056,
+        "sample_scores": [
+          0.64,
+          0.68,
+          0.62,
+          0.68,
+          0.63
+        ]
+      },
+      {
+        "feature_id": 5,
+        "feature": "distance",
+        "score_mean": 0.938,
+        "score_std": 0.03919183588453084,
+        "sample_scores": [
+          0.96,
+          0.96,
+          0.86,
+          0.95,
+          0.96
+        ]
+      },
+      {
+        "feature_id": 6,
+        "feature": "direction",
+        "score_mean": 0.408,
+        "score_std": 0.10007996802557441,
+        "sample_scores": [
+          0.41,
+          0.41,
+          0.27,
+          0.37,
+          0.58
+        ]
+      }
+    ],
+    "samples": [
+      {
+        "task_summary": "Predict whether a taxi trip will have a high fare/tip-related outcome from pre-trip pickup time and route geometry, favoring signals that should generalize across distribution shifts.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.32,
+            "rationale": "Month captures broad seasonality but is also a likely domain-shift variable and can encode calendar-specific artifacts.",
+            "feature": "month"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.18,
+            "rationale": "Week-of-year is highly specific to calendar timing, making it brittle and more likely to act as a domain identifier than a stable causal predictor.",
+            "feature": "week"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.56,
+            "rationale": "Day of week reflects recurring travel-demand patterns that often persist across domains, though strength can vary by setting.",
+            "feature": "weekday"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.72,
+            "rationale": "Hour of day is a strong, semantically meaningful driver of traffic and trip behavior that should remain broadly predictive under shift.",
+            "feature": "hour"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.64,
+            "rationale": "Fine-grained pickup time is useful for capturing within-day congestion and demand, but overlaps with hour and may overfit narrow temporal patterns.",
+            "feature": "minute_oftheday"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.96,
+            "rationale": "Trip distance is a core structural determinant of taxi outcomes and should remain highly predictive across environments.",
+            "feature": "distance"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.41,
+            "rationale": "Travel direction can proxy route structure and traffic tendencies, but is more location-specific and less stable than distance or coarse time features.",
+            "feature": "direction"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict the taxi trip duration from pickup time and coarse trip geometry in a way that should generalize across shifted environments.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.32,
+            "rationale": "Seasonality can affect traffic and travel times, but month is also a strong domain/time-shift marker and is only weakly informative marginally.",
+            "feature": "month"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.18,
+            "rationale": "Week-of-year is mostly a fine-grained calendar index that can encode dataset period and transient events, making it brittle under distribution shift.",
+            "feature": "week"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.56,
+            "rationale": "Day of week has a stable relationship with commuting patterns and congestion, so it should remain moderately predictive across domains.",
+            "feature": "weekday"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.74,
+            "rationale": "Hour of day is a robust driver of traffic intensity and trip speed, giving strong and semantically stable signal for duration.",
+            "feature": "hour"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.68,
+            "rationale": "Time of day is useful for capturing rush-hour structure, though it overlaps with hour and may be slightly more sensitive to fine-grained scheduling artifacts.",
+            "feature": "minute_oftheday"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.96,
+            "rationale": "Trip distance is the most direct and stable determinant of travel time, with clear causal relevance that should transfer across environments.",
+            "feature": "distance"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.41,
+            "rationale": "Direction can proxy route orientation and typical traffic corridors, but it is less directly predictive and more location-pattern dependent than distance or time features.",
+            "feature": "direction"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a taxi trip has a positive tip using pre-trip time and route characteristics, favoring signals that should generalize across shifts.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.34,
+            "rationale": "Seasonality can affect rider mix and tipping, but month is also a common source of domain shift and weakly tied to individual tipping behavior.",
+            "feature": "month"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.18,
+            "rationale": "Week-of-year is mostly a fine-grained calendar identifier, likely brittle across domains and less semantically stable than broader time features.",
+            "feature": "week"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.56,
+            "rationale": "Day-of-week captures stable differences between commuting and leisure travel that can influence tipping propensity across settings.",
+            "feature": "weekday"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.68,
+            "rationale": "Hour-of-day is a robust behavioral signal tied to trip purpose, rush periods, nightlife, and airport travel, making it broadly predictive.",
+            "feature": "hour"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.62,
+            "rationale": "Time within day is useful for capturing intraday tipping patterns, though somewhat redundant with hour and potentially more sensitive to overfitting.",
+            "feature": "minute_oftheday"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.86,
+            "rationale": "Trip distance is a core, semantically meaningful determinant of fare size and trip type, both of which are stably related to tipping.",
+            "feature": "distance"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.27,
+            "rationale": "Direction may weakly proxy destination types or airport routes, but it is geography-specific and more likely to encode brittle location artifacts.",
+            "feature": "direction"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict the taxi trip outcome in WhyShift's taxi task using pre-trip temporal and route descriptors, favoring features whose relationship to the target should persist across distribution shifts.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.42,
+            "rationale": "Seasonality can affect traffic and demand, but month is also a strong domain/time identifier and may shift across environments.",
+            "feature": "month"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.24,
+            "rationale": "Week-of-year is highly specific to calendar period, often acting more like a domain marker than a stable causal predictor.",
+            "feature": "week"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.58,
+            "rationale": "Day-of-week captures recurring behavioral and traffic patterns that are usually more stable than exact calendar indicators.",
+            "feature": "weekday"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.76,
+            "rationale": "Hour-of-day strongly reflects congestion and travel conditions in a broadly stable, semantically meaningful way.",
+            "feature": "hour"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.68,
+            "rationale": "Fine-grained pickup time is useful for within-day traffic variation, though somewhat redundant with hour and potentially more brittle.",
+            "feature": "minute_oftheday"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.95,
+            "rationale": "Trip distance is a core semantic driver of taxi outcomes and should remain predictive across domains.",
+            "feature": "distance"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.37,
+            "rationale": "Direction can proxy route structure and geography, but it is more location-specific and less reliably stable than distance or time-of-day.",
+            "feature": "direction"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a taxi trip will have a relatively high outcome tied to trip duration/efficiency from pickup-time and route geometry features, emphasizing signals that should transfer across distribution shifts.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.28,
+            "rationale": "Seasonality can affect traffic and travel patterns, but month is also a strong domain/time identifier and may shift substantially across environments.",
+            "feature": "month"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.16,
+            "rationale": "Week-of-year is mostly a calendar index that can encode domain membership and transient events more than stable trip mechanics.",
+            "feature": "week"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.52,
+            "rationale": "Day of week captures recurring demand and congestion structure that is fairly stable, though still somewhat environment-dependent.",
+            "feature": "weekday"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.71,
+            "rationale": "Hour of day is a strong, semantically meaningful predictor of traffic conditions and trip speed that usually generalizes across domains.",
+            "feature": "hour"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.63,
+            "rationale": "Fine-grained time of day is useful for congestion and demand cycles, but overlaps with hour and may overfit local temporal quirks.",
+            "feature": "minute_oftheday"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.96,
+            "rationale": "Trip distance is a core causal driver of travel time/fare-related outcomes and should remain highly predictive under distribution shift.",
+            "feature": "distance"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.58,
+            "rationale": "Travel direction can proxy route structure and borough-to-borough traffic differences, offering real signal but with more location-specific brittleness than distance.",
+            "feature": "direction"
+          }
+        ]
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"month\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup month.\",\n    \"values\": \"1-12.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"week\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup week of year.\",\n    \"values\": \"1-53.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"weekday\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup day of week.\",\n    \"values\": \"0-6.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"hour\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup hour of day.\",\n    \"values\": \"0-23.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"minute_oftheday\",\n    \"type\": \"integer\",\n    \"description\": \"Pickup time represented as minutes since midnight.\",\n    \"values\": \"0-1439.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"distance\",\n    \"type\": \"continuous\",\n    \"description\": \"Trip distance derived from pickup/dropoff locations.\",\n    \"values\": \"Non-negative distance.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"direction\",\n    \"type\": \"continuous\",\n    \"description\": \"Trip travel direction or bearing.\",\n    \"values\": \"Angular direction in degrees.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a taxi trip will have a high fare/tip-related outcome from pre-trip pickup time and route geometry, favoring signals that should generalize across distribution shifts.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.32,\n      \"rationale\": \"Month captures broad seasonality but is also a likely domain-shift variable and can encode calendar-specific artifacts.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.18,\n      \"rationale\": \"Week-of-year is highly specific to calendar timing, making it brittle and more likely to act as a domain identifier than a stable causal predictor.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.56,\n      \"rationale\": \"Day of week reflects recurring travel-demand patterns that often persist across domains, though strength can vary by setting.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.72,\n      \"rationale\": \"Hour of day is a strong, semantically meaningful driver of traffic and trip behavior that should remain broadly predictive under shift.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.64,\n      \"rationale\": \"Fine-grained pickup time is useful for capturing within-day congestion and demand, but overlaps with hour and may overfit narrow temporal patterns.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.96,\n      \"rationale\": \"Trip distance is a core structural determinant of taxi outcomes and should remain highly predictive across environments.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.41,\n      \"rationale\": \"Travel direction can proxy route structure and traffic tendencies, but is more location-specific and less stable than distance or coarse time features.\"\n    }\n  ]\n}",
+      "input_tokens": 661,
+      "output_tokens": 406,
+      "total_tokens": 1067,
+      "response_id": "resp_0b542cae338705c4006a27f3ec99c08198a38660d307e6b911",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"month\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup month.\",\n    \"values\": \"1-12.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"week\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup week of year.\",\n    \"values\": \"1-53.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"weekday\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup day of week.\",\n    \"values\": \"0-6.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"hour\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup hour of day.\",\n    \"values\": \"0-23.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"minute_oftheday\",\n    \"type\": \"integer\",\n    \"description\": \"Pickup time represented as minutes since midnight.\",\n    \"values\": \"0-1439.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"distance\",\n    \"type\": \"continuous\",\n    \"description\": \"Trip distance derived from pickup/dropoff locations.\",\n    \"values\": \"Non-negative distance.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"direction\",\n    \"type\": \"continuous\",\n    \"description\": \"Trip travel direction or bearing.\",\n    \"values\": \"Angular direction in degrees.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict the taxi trip duration from pickup time and coarse trip geometry in a way that should generalize across shifted environments.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.32,\n      \"rationale\": \"Seasonality can affect traffic and travel times, but month is also a strong domain/time-shift marker and is only weakly informative marginally.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.18,\n      \"rationale\": \"Week-of-year is mostly a fine-grained calendar index that can encode dataset period and transient events, making it brittle under distribution shift.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.56,\n      \"rationale\": \"Day of week has a stable relationship with commuting patterns and congestion, so it should remain moderately predictive across domains.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.74,\n      \"rationale\": \"Hour of day is a robust driver of traffic intensity and trip speed, giving strong and semantically stable signal for duration.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.68,\n      \"rationale\": \"Time of day is useful for capturing rush-hour structure, though it overlaps with hour and may be slightly more sensitive to fine-grained scheduling artifacts.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.96,\n      \"rationale\": \"Trip distance is the most direct and stable determinant of travel time, with clear causal relevance that should transfer across environments.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.41,\n      \"rationale\": \"Direction can proxy route orientation and typical traffic corridors, but it is less directly predictive and more location-pattern dependent than distance or time features.\"\n    }\n  ]\n}",
+      "input_tokens": 661,
+      "output_tokens": 412,
+      "total_tokens": 1073,
+      "response_id": "resp_05a26d58777f5bcb006a27f3f33648819b9ae4715703253ea9",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"month\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup month.\",\n    \"values\": \"1-12.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"week\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup week of year.\",\n    \"values\": \"1-53.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"weekday\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup day of week.\",\n    \"values\": \"0-6.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"hour\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup hour of day.\",\n    \"values\": \"0-23.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"minute_oftheday\",\n    \"type\": \"integer\",\n    \"description\": \"Pickup time represented as minutes since midnight.\",\n    \"values\": \"0-1439.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"distance\",\n    \"type\": \"continuous\",\n    \"description\": \"Trip distance derived from pickup/dropoff locations.\",\n    \"values\": \"Non-negative distance.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"direction\",\n    \"type\": \"continuous\",\n    \"description\": \"Trip travel direction or bearing.\",\n    \"values\": \"Angular direction in degrees.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a taxi trip has a positive tip using pre-trip time and route characteristics, favoring signals that should generalize across shifts.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.34,\n      \"rationale\": \"Seasonality can affect rider mix and tipping, but month is also a common source of domain shift and weakly tied to individual tipping behavior.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.18,\n      \"rationale\": \"Week-of-year is mostly a fine-grained calendar identifier, likely brittle across domains and less semantically stable than broader time features.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.56,\n      \"rationale\": \"Day-of-week captures stable differences between commuting and leisure travel that can influence tipping propensity across settings.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.68,\n      \"rationale\": \"Hour-of-day is a robust behavioral signal tied to trip purpose, rush periods, nightlife, and airport travel, making it broadly predictive.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.62,\n      \"rationale\": \"Time within day is useful for capturing intraday tipping patterns, though somewhat redundant with hour and potentially more sensitive to overfitting.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.86,\n      \"rationale\": \"Trip distance is a core, semantically meaningful determinant of fare size and trip type, both of which are stably related to tipping.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.27,\n      \"rationale\": \"Direction may weakly proxy destination types or airport routes, but it is geography-specific and more likely to encode brittle location artifacts.\"\n    }\n  ]\n}",
+      "input_tokens": 661,
+      "output_tokens": 413,
+      "total_tokens": 1074,
+      "response_id": "resp_048d8f6a342bc333006a27f3fa9bb0819b8780f750191b079b",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"month\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup month.\",\n    \"values\": \"1-12.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"week\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup week of year.\",\n    \"values\": \"1-53.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"weekday\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup day of week.\",\n    \"values\": \"0-6.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"hour\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup hour of day.\",\n    \"values\": \"0-23.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"minute_oftheday\",\n    \"type\": \"integer\",\n    \"description\": \"Pickup time represented as minutes since midnight.\",\n    \"values\": \"0-1439.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"distance\",\n    \"type\": \"continuous\",\n    \"description\": \"Trip distance derived from pickup/dropoff locations.\",\n    \"values\": \"Non-negative distance.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"direction\",\n    \"type\": \"continuous\",\n    \"description\": \"Trip travel direction or bearing.\",\n    \"values\": \"Angular direction in degrees.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict the taxi trip outcome in WhyShift's taxi task using pre-trip temporal and route descriptors, favoring features whose relationship to the target should persist across distribution shifts.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.42,\n      \"rationale\": \"Seasonality can affect traffic and demand, but month is also a strong domain/time identifier and may shift across environments.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.24,\n      \"rationale\": \"Week-of-year is highly specific to calendar period, often acting more like a domain marker than a stable causal predictor.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.58,\n      \"rationale\": \"Day-of-week captures recurring behavioral and traffic patterns that are usually more stable than exact calendar indicators.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.76,\n      \"rationale\": \"Hour-of-day strongly reflects congestion and travel conditions in a broadly stable, semantically meaningful way.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.68,\n      \"rationale\": \"Fine-grained pickup time is useful for within-day traffic variation, though somewhat redundant with hour and potentially more brittle.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.95,\n      \"rationale\": \"Trip distance is a core semantic driver of taxi outcomes and should remain predictive across domains.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.37,\n      \"rationale\": \"Direction can proxy route structure and geography, but it is more location-specific and less reliably stable than distance or time-of-day.\"\n    }\n  ]\n}",
+      "input_tokens": 661,
+      "output_tokens": 390,
+      "total_tokens": 1051,
+      "response_id": "resp_04912d1e8fb79dbd006a27f401c17c81988652675a157c2efd",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"month\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup month.\",\n    \"values\": \"1-12.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"week\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup week of year.\",\n    \"values\": \"1-53.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"weekday\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup day of week.\",\n    \"values\": \"0-6.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"hour\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Pickup hour of day.\",\n    \"values\": \"0-23.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"minute_oftheday\",\n    \"type\": \"integer\",\n    \"description\": \"Pickup time represented as minutes since midnight.\",\n    \"values\": \"0-1439.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"distance\",\n    \"type\": \"continuous\",\n    \"description\": \"Trip distance derived from pickup/dropoff locations.\",\n    \"values\": \"Non-negative distance.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"direction\",\n    \"type\": \"continuous\",\n    \"description\": \"Trip travel direction or bearing.\",\n    \"values\": \"Angular direction in degrees.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a taxi trip will have a relatively high outcome tied to trip duration/efficiency from pickup-time and route geometry features, emphasizing signals that should transfer across distribution shifts.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.28,\n      \"rationale\": \"Seasonality can affect traffic and travel patterns, but month is also a strong domain/time identifier and may shift substantially across environments.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.16,\n      \"rationale\": \"Week-of-year is mostly a calendar index that can encode domain membership and transient events more than stable trip mechanics.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.52,\n      \"rationale\": \"Day of week captures recurring demand and congestion structure that is fairly stable, though still somewhat environment-dependent.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.71,\n      \"rationale\": \"Hour of day is a strong, semantically meaningful predictor of traffic conditions and trip speed that usually generalizes across domains.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.63,\n      \"rationale\": \"Fine-grained time of day is useful for congestion and demand cycles, but overlaps with hour and may overfit local temporal quirks.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.96,\n      \"rationale\": \"Trip distance is a core causal driver of travel time/fare-related outcomes and should remain highly predictive under distribution shift.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.58,\n      \"rationale\": \"Travel direction can proxy route structure and borough-to-borough traffic differences, offering real signal but with more location-specific brittleness than distance.\"\n    }\n  ]\n}",
+      "input_tokens": 661,
+      "output_tokens": 411,
+      "total_tokens": 1072,
+      "response_id": "resp_0395b9da4c4d97db006a27f4081ab4819aa63787dee05d69cf",
+      "response_model": "gpt-5.4-2026-03-05"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/whyshift/taxi/rankings/score_all_prompt.txt",
+  "config": {
+    "score_samples": 5
+  }
+}

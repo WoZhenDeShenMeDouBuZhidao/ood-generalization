@@ -1,0 +1,753 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "nhanes_cholesterol",
+  "model": "gpt-5.4",
+  "method": "score_all",
+  "temperature": 0.5,
+  "created_at": "2026-06-09T20:29:05",
+  "token_usage": {
+    "num_calls": 5,
+    "input_tokens": 6345,
+    "output_tokens": 3191,
+    "total_tokens": 9536
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 10,
+        "feature": "RIDAGEYR",
+        "score_mean": 0.892,
+        "score_std": 0.014696938456699081
+      },
+      {
+        "rank": 2,
+        "feature_id": 2,
+        "feature": "DIQ010",
+        "score_mean": 0.78,
+        "score_std": 0.016733200530681527
+      },
+      {
+        "rank": 3,
+        "feature_id": 0,
+        "feature": "BPQ020",
+        "score_mean": 0.744,
+        "score_std": 0.014966629547095779
+      },
+      {
+        "rank": 4,
+        "feature_id": 1,
+        "feature": "DIQ160",
+        "score_mean": 0.68,
+        "score_std": 0.02529822128134702
+      },
+      {
+        "rank": 5,
+        "feature_id": 11,
+        "feature": "RIAGENDR",
+        "score_mean": 0.584,
+        "score_std": 0.03720215047547654
+      },
+      {
+        "rank": 6,
+        "feature_id": 4,
+        "feature": "KIQ022",
+        "score_mean": 0.48400000000000004,
+        "score_std": 0.03498571136907181
+      },
+      {
+        "rank": 7,
+        "feature_id": 9,
+        "feature": "DMDEDUC2",
+        "score_mean": 0.308,
+        "score_std": 0.04534313619501854
+      },
+      {
+        "rank": 8,
+        "feature_id": 6,
+        "feature": "MCQ160A",
+        "score_mean": 0.302,
+        "score_std": 0.02135415650406263
+      },
+      {
+        "rank": 9,
+        "feature_id": 3,
+        "feature": "KIQ025",
+        "score_mean": 0.28400000000000003,
+        "score_std": 0.04079215610874229
+      },
+      {
+        "rank": 10,
+        "feature_id": 5,
+        "feature": "MCQ070",
+        "score_mean": 0.214,
+        "score_std": 0.033226495451672305
+      },
+      {
+        "rank": 11,
+        "feature_id": 12,
+        "feature": "DMDMARTL",
+        "score_mean": 0.156,
+        "score_std": 0.014966629547095758
+      },
+      {
+        "rank": 12,
+        "feature_id": 8,
+        "feature": "DMDBORN4",
+        "score_mean": 0.128,
+        "score_std": 0.016000000000000004
+      },
+      {
+        "rank": 13,
+        "feature_id": 7,
+        "feature": "nhanes_year",
+        "score_mean": 0.022,
+        "score_std": 0.003999999999999999
+      }
+    ],
+    "scores": [
+      {
+        "feature_id": 0,
+        "feature": "BPQ020",
+        "score_mean": 0.744,
+        "score_std": 0.014966629547095779,
+        "sample_scores": [
+          0.74,
+          0.74,
+          0.76,
+          0.72,
+          0.76
+        ]
+      },
+      {
+        "feature_id": 1,
+        "feature": "DIQ160",
+        "score_mean": 0.68,
+        "score_std": 0.02529822128134702,
+        "sample_scores": [
+          0.68,
+          0.68,
+          0.68,
+          0.64,
+          0.72
+        ]
+      },
+      {
+        "feature_id": 2,
+        "feature": "DIQ010",
+        "score_mean": 0.78,
+        "score_std": 0.016733200530681527,
+        "sample_scores": [
+          0.79,
+          0.76,
+          0.79,
+          0.76,
+          0.8
+        ]
+      },
+      {
+        "feature_id": 3,
+        "feature": "KIQ025",
+        "score_mean": 0.28400000000000003,
+        "score_std": 0.04079215610874229,
+        "sample_scores": [
+          0.24,
+          0.34,
+          0.32,
+          0.24,
+          0.28
+        ]
+      },
+      {
+        "feature_id": 4,
+        "feature": "KIQ022",
+        "score_mean": 0.48400000000000004,
+        "score_std": 0.03498571136907181,
+        "sample_scores": [
+          0.46,
+          0.49,
+          0.55,
+          0.46,
+          0.46
+        ]
+      },
+      {
+        "feature_id": 5,
+        "feature": "MCQ070",
+        "score_mean": 0.214,
+        "score_std": 0.033226495451672305,
+        "sample_scores": [
+          0.18,
+          0.22,
+          0.27,
+          0.18,
+          0.22
+        ]
+      },
+      {
+        "feature_id": 6,
+        "feature": "MCQ160A",
+        "score_mean": 0.302,
+        "score_std": 0.02135415650406263,
+        "sample_scores": [
+          0.29,
+          0.28,
+          0.34,
+          0.29,
+          0.31
+        ]
+      },
+      {
+        "feature_id": 7,
+        "feature": "nhanes_year",
+        "score_mean": 0.022,
+        "score_std": 0.003999999999999999,
+        "sample_scores": [
+          0.03,
+          0.02,
+          0.02,
+          0.02,
+          0.02
+        ]
+      },
+      {
+        "feature_id": 8,
+        "feature": "DMDBORN4",
+        "score_mean": 0.128,
+        "score_std": 0.016000000000000004,
+        "sample_scores": [
+          0.12,
+          0.12,
+          0.12,
+          0.16,
+          0.12
+        ]
+      },
+      {
+        "feature_id": 9,
+        "feature": "DMDEDUC2",
+        "score_mean": 0.308,
+        "score_std": 0.04534313619501854,
+        "sample_scores": [
+          0.34,
+          0.31,
+          0.22,
+          0.33,
+          0.34
+        ]
+      },
+      {
+        "feature_id": 10,
+        "feature": "RIDAGEYR",
+        "score_mean": 0.892,
+        "score_std": 0.014696938456699081,
+        "sample_scores": [
+          0.88,
+          0.88,
+          0.91,
+          0.91,
+          0.88
+        ]
+      },
+      {
+        "feature_id": 11,
+        "feature": "RIAGENDR",
+        "score_mean": 0.584,
+        "score_std": 0.03720215047547654,
+        "sample_scores": [
+          0.52,
+          0.63,
+          0.61,
+          0.58,
+          0.58
+        ]
+      },
+      {
+        "feature_id": 12,
+        "feature": "DMDMARTL",
+        "score_mean": 0.156,
+        "score_std": 0.014966629547095758,
+        "sample_scores": [
+          0.16,
+          0.18,
+          0.14,
+          0.14,
+          0.16
+        ]
+      }
+    ],
+    "samples": [
+      {
+        "task_summary": "Predict whether an NHANES participant has high cholesterol / has been told they have high cholesterol using features likely to generalize across benchmark domain shifts.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.74,
+            "rationale": "Hypertension is a strong cardiometabolic correlate of dyslipidemia and should remain predictive across domains.",
+            "feature": "BPQ020"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.68,
+            "rationale": "Prediabetes reflects metabolic dysfunction linked to abnormal cholesterol and is likely fairly stable across settings.",
+            "feature": "DIQ160"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.79,
+            "rationale": "Diabetes is a robust risk factor for dyslipidemia and should generalize well as a semantically related comorbidity.",
+            "feature": "DIQ010"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.24,
+            "rationale": "Dialysis indicates severe kidney disease that can affect lipids, but it is rare and may be unstable due to treatment-related selection.",
+            "feature": "KIQ025"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.46,
+            "rationale": "Kidney disease has some physiological association with lipid abnormalities, though weaker and less direct than core metabolic features.",
+            "feature": "KIQ022"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.18,
+            "rationale": "Psoriasis has only a modest indirect association with cardiometabolic risk and is unlikely to be a strong stable marginal predictor.",
+            "feature": "MCQ070"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.29,
+            "rationale": "Arthritis may correlate through age and inflammation, but much of its signal is likely indirect and redundant.",
+            "feature": "MCQ160A"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.03,
+            "rationale": "Survey year is primarily a domain identifier and risks exploiting temporal prevalence or measurement shifts rather than stable biology.",
+            "feature": "nhanes_year"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.12,
+            "rationale": "Country of birth may proxy lifestyle or access differences but is a demographic shortcut with questionable transportability.",
+            "feature": "DMDBORN4"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.34,
+            "rationale": "Education captures socioeconomic patterns affecting diet, care access, and diagnosis, but it is partly a brittle social proxy.",
+            "feature": "DMDEDUC2"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.88,
+            "rationale": "Age is one of the most stable and consistently strong predictors of high cholesterol prevalence and diagnosis.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.52,
+            "rationale": "Sex/gender has biologically grounded differences in lipid profiles, though effect size is moderate and can vary by age.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.16,
+            "rationale": "Marital status is mostly an indirect social proxy and likely less stable for out-of-distribution generalization.",
+            "feature": "DMDMARTL"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether an adult in NHANES has high cholesterol / hypercholesterolemia from broadly available health and demographic variables.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.74,
+            "rationale": "Hypertension is strongly and stably associated with dyslipidemia through shared cardiometabolic risk.",
+            "feature": "BPQ020"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.68,
+            "rationale": "Prediabetes reflects insulin resistance and metabolic syndrome, a robust correlate of elevated cholesterol.",
+            "feature": "DIQ160"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.76,
+            "rationale": "Diabetes is a strong, clinically meaningful predictor of abnormal lipid profiles across populations.",
+            "feature": "DIQ010"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.34,
+            "rationale": "Dialysis indicates severe kidney disease, which can affect lipids, but it is rare and may be unstable marginally.",
+            "feature": "KIQ025"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.49,
+            "rationale": "Kidney disease has a plausible biologic link to dyslipidemia, though weaker and less universal than core metabolic factors.",
+            "feature": "KIQ022"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.22,
+            "rationale": "Psoriasis has some inflammatory association with cardiometabolic risk but is a weak marginal predictor here.",
+            "feature": "MCQ070"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.28,
+            "rationale": "Arthritis may correlate with age and inflammation, but much of its signal is indirect and nonspecific.",
+            "feature": "MCQ160A"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.02,
+            "rationale": "Survey year is primarily a domain indicator and risks exploiting temporal shifts rather than stable disease mechanisms.",
+            "feature": "nhanes_year"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.12,
+            "rationale": "Country of birth may proxy lifestyle or access differences but is a demographic shortcut with limited stable causal relevance.",
+            "feature": "DMDBORN4"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.31,
+            "rationale": "Education can capture socioeconomic influences on diet and care, but it is indirect and potentially domain-sensitive.",
+            "feature": "DMDEDUC2"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.88,
+            "rationale": "Age is one of the most stable and powerful predictors of high cholesterol prevalence.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.63,
+            "rationale": "Sex/gender has a consistent biologic relationship with lipid levels and cardiovascular risk patterns.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.18,
+            "rationale": "Marital status is at best an indirect socioeconomic/behavioral proxy and likely brittle across domains.",
+            "feature": "DMDMARTL"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether an NHANES participant has high cholesterol using features that should generalize across shifted demographic or temporal domains.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.76,
+            "rationale": "Hypertension is strongly linked to cardiometabolic risk and tends to remain predictive of cholesterol status across domains.",
+            "feature": "BPQ020"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.68,
+            "rationale": "Prediabetes reflects metabolic dysfunction associated with dyslipidemia, with fairly stable clinical relevance.",
+            "feature": "DIQ160"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.79,
+            "rationale": "Diabetes is a robust cardiometabolic correlate of abnormal cholesterol and should generalize well.",
+            "feature": "DIQ010"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.32,
+            "rationale": "Dialysis indicates severe kidney disease that can affect lipids, but it is rare and may be unstable due to treatment and access patterns.",
+            "feature": "KIQ025"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.55,
+            "rationale": "Kidney disease has a plausible biological association with lipid abnormalities, though self-report and healthcare access add noise.",
+            "feature": "KIQ022"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.27,
+            "rationale": "Psoriasis has some inflammatory association with cardiometabolic risk but is a weak and indirect predictor here.",
+            "feature": "MCQ070"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.34,
+            "rationale": "Arthritis may correlate with age and inflammation, but much of its signal is indirect and likely less stable than core metabolic features.",
+            "feature": "MCQ160A"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.02,
+            "rationale": "Survey year is primarily a domain identifier and risks exploiting temporal shifts rather than stable biology.",
+            "feature": "nhanes_year"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.12,
+            "rationale": "Country of birth may capture demographic and access-related differences more than stable causal signal, so it is a potential shortcut.",
+            "feature": "DMDBORN4"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.22,
+            "rationale": "Education can proxy health behaviors and care access but is a socioeconomic shortcut with limited stable marginal usefulness.",
+            "feature": "DMDEDUC2"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.91,
+            "rationale": "Age is one of the most stable and biologically grounded predictors of high cholesterol prevalence.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.61,
+            "rationale": "Sex has a consistent physiological relationship with lipid profiles, though it is less directly predictive than age or diabetes.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.14,
+            "rationale": "Marital status is mostly an indirect social proxy and likely brittle across domains.",
+            "feature": "DMDMARTL"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether an NHANES participant has high cholesterol using features likely to generalize across domain shifts.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.72,
+            "rationale": "Hypertension is a well-established cardiometabolic correlate of high cholesterol and should remain predictive across domains.",
+            "feature": "BPQ020"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.64,
+            "rationale": "Prediabetes reflects metabolic dysfunction linked to dyslipidemia, with reasonably stable but not direct predictive value.",
+            "feature": "DIQ160"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.76,
+            "rationale": "Diabetes is strongly associated with abnormal lipid profiles and is likely to be a robust predictor across settings.",
+            "feature": "DIQ010"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.24,
+            "rationale": "Dialysis indicates severe kidney disease, which can affect lipids, but it is rare and may be unstable due to treatment and ascertainment effects.",
+            "feature": "KIQ025"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.46,
+            "rationale": "Kidney disease has some biologic relationship to dyslipidemia, though self-reported diagnosis is indirect and less consistently predictive.",
+            "feature": "KIQ022"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.18,
+            "rationale": "Psoriasis has only a modest inflammatory association with lipid abnormalities and is unlikely to be a strong stable marginal predictor.",
+            "feature": "MCQ070"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.29,
+            "rationale": "Arthritis may weakly track age and chronic inflammation but is mostly an indirect correlate rather than a stable causal signal.",
+            "feature": "MCQ160A"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.02,
+            "rationale": "Survey year is a classic domain identifier and should be heavily penalized despite possible temporal prevalence shifts.",
+            "feature": "nhanes_year"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.16,
+            "rationale": "Country of birth may correlate with diet and healthcare patterns but is demographic and prone to acting as a brittle shortcut.",
+            "feature": "DMDBORN4"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.33,
+            "rationale": "Education can capture socioeconomic influences on diet and healthcare, but it is an indirect demographic proxy with limited stable marginal value.",
+            "feature": "DMDEDUC2"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.91,
+            "rationale": "Age is one of the most stable and broadly predictive risk factors for high cholesterol.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.58,
+            "rationale": "Sex differences in lipid levels are biologically grounded and generally stable, though less predictive than age or metabolic disease history.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.14,
+            "rationale": "Marital status is a weak social proxy that may not generalize well and risks encoding demographic structure rather than stable biology.",
+            "feature": "DMDMARTL"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether an NHANES participant has high cholesterol / has been told they have high cholesterol using broadly health-related covariates that may transfer across domains.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.76,
+            "rationale": "Hypertension is strongly linked to dyslipidemia through shared cardiometabolic risk and should remain predictive across domains.",
+            "feature": "BPQ020"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.72,
+            "rationale": "Prediabetes reflects insulin resistance and metabolic syndrome, making it a fairly stable correlate of cholesterol abnormalities.",
+            "feature": "DIQ160"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.8,
+            "rationale": "Diabetes is a robust cardiometabolic risk factor associated with abnormal lipid profiles and should generalize reasonably well.",
+            "feature": "DIQ010"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.28,
+            "rationale": "Dialysis indicates severe kidney disease, which can affect lipids, but it is rare and may be unstable due to treatment and selection effects.",
+            "feature": "KIQ025"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.46,
+            "rationale": "Kidney disease has a plausible association with dyslipidemia, though self-reported diagnosis is less directly tied to cholesterol than core metabolic conditions.",
+            "feature": "KIQ022"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.22,
+            "rationale": "Psoriasis has some inflammatory association with cardiometabolic risk but is a weak and likely low-prevalence predictor.",
+            "feature": "MCQ070"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.31,
+            "rationale": "Arthritis may correlate indirectly through age, obesity, and inflammation, but much of its signal is likely nonspecific.",
+            "feature": "MCQ160A"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.02,
+            "rationale": "Survey year is primarily a domain identifier and risks exploiting temporal shifts rather than stable biology.",
+            "feature": "nhanes_year"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.12,
+            "rationale": "Country of birth may proxy lifestyle or access differences but is largely demographic and vulnerable to domain-specific shortcutting.",
+            "feature": "DMDBORN4"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.34,
+            "rationale": "Education captures socioeconomic patterns affecting diet, care, and diagnosis, but it is indirect and partly a demographic shortcut.",
+            "feature": "DMDEDUC2"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.88,
+            "rationale": "Age is one of the most stable and broadly predictive determinants of cholesterol risk and diagnosis.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.58,
+            "rationale": "Sex differences in lipid profiles are biologically grounded and fairly stable, though less informative than age or metabolic disease history.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.16,
+            "rationale": "Marital status is an indirect social correlate of health behavior and healthcare use, with limited stable causal relevance to cholesterol.",
+            "feature": "DMDMARTL"
+          }
+        ]
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"BPQ020\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health professional that you had hypertension\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DIQ160\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health professional that {you have/SP has} any of the following: prediabetes, impaired fasting glucose, impaired glucose tolerance, borderline diabetes or that {your/her/his} blood sugar is higher than normal but not high...\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DIQ010\",\n    \"type\": \"categorical\",\n    \"description\": \"{Other than during pregnancy, have you ever been told by a doctor or health professional that you have diabetes or sugar diabetes?\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know; 3.0=Borderline\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"KIQ025\",\n    \"type\": \"categorical\",\n    \"description\": \"received dialysis (either hemodialysis or peritoneal dialysis) in the past 12 months\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"KIQ022\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health professional that you had weak or failing kidneys\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"MCQ070\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health care professional that you had psoriasis\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"MCQ160A\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health care professional that you had arthritis\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"DMDBORN4\",\n    \"type\": \"categorical\",\n    \"description\": \"country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"DMDEDUC2\",\n    \"type\": \"categorical\",\n    \"description\": \"highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"RIDAGEYR\",\n    \"type\": \"continuous\",\n    \"description\": \"age in years\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"RIAGENDR\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DMDMARTL\",\n    \"type\": \"categorical\",\n    \"description\": \"marital status\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an NHANES participant has high cholesterol / has been told they have high cholesterol using features likely to generalize across benchmark domain shifts.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.74,\n      \"rationale\": \"Hypertension is a strong cardiometabolic correlate of dyslipidemia and should remain predictive across domains.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.68,\n      \"rationale\": \"Prediabetes reflects metabolic dysfunction linked to abnormal cholesterol and is likely fairly stable across settings.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.79,\n      \"rationale\": \"Diabetes is a robust risk factor for dyslipidemia and should generalize well as a semantically related comorbidity.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.24,\n      \"rationale\": \"Dialysis indicates severe kidney disease that can affect lipids, but it is rare and may be unstable due to treatment-related selection.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.46,\n      \"rationale\": \"Kidney disease has some physiological association with lipid abnormalities, though weaker and less direct than core metabolic features.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.18,\n      \"rationale\": \"Psoriasis has only a modest indirect association with cardiometabolic risk and is unlikely to be a strong stable marginal predictor.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.29,\n      \"rationale\": \"Arthritis may correlate through age and inflammation, but much of its signal is likely indirect and redundant.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.03,\n      \"rationale\": \"Survey year is primarily a domain identifier and risks exploiting temporal prevalence or measurement shifts rather than stable biology.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.12,\n      \"rationale\": \"Country of birth may proxy lifestyle or access differences but is a demographic shortcut with questionable transportability.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.34,\n      \"rationale\": \"Education captures socioeconomic patterns affecting diet, care access, and diagnosis, but it is partly a brittle social proxy.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.88,\n      \"rationale\": \"Age is one of the most stable and consistently strong predictors of high cholesterol prevalence and diagnosis.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.52,\n      \"rationale\": \"Sex/gender has biologically grounded differences in lipid profiles, though effect size is moderate and can vary by age.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.16,\n      \"rationale\": \"Marital status is mostly an indirect social proxy and likely less stable for out-of-distribution generalization.\"\n    }\n  ]\n}",
+      "input_tokens": 1269,
+      "output_tokens": 679,
+      "total_tokens": 1948,
+      "response_id": "resp_0ce73e826283801d006a2806dfa1b8819894de5764441a552a",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"BPQ020\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health professional that you had hypertension\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DIQ160\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health professional that {you have/SP has} any of the following: prediabetes, impaired fasting glucose, impaired glucose tolerance, borderline diabetes or that {your/her/his} blood sugar is higher than normal but not high...\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DIQ010\",\n    \"type\": \"categorical\",\n    \"description\": \"{Other than during pregnancy, have you ever been told by a doctor or health professional that you have diabetes or sugar diabetes?\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know; 3.0=Borderline\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"KIQ025\",\n    \"type\": \"categorical\",\n    \"description\": \"received dialysis (either hemodialysis or peritoneal dialysis) in the past 12 months\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"KIQ022\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health professional that you had weak or failing kidneys\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"MCQ070\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health care professional that you had psoriasis\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"MCQ160A\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health care professional that you had arthritis\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"DMDBORN4\",\n    \"type\": \"categorical\",\n    \"description\": \"country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"DMDEDUC2\",\n    \"type\": \"categorical\",\n    \"description\": \"highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"RIDAGEYR\",\n    \"type\": \"continuous\",\n    \"description\": \"age in years\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"RIAGENDR\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DMDMARTL\",\n    \"type\": \"categorical\",\n    \"description\": \"marital status\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has high cholesterol / hypercholesterolemia from broadly available health and demographic variables.\",\"scores\":[{\"feature_id\":0,\"score\":0.74,\"rationale\":\"Hypertension is strongly and stably associated with dyslipidemia through shared cardiometabolic risk.\"},{\"feature_id\":1,\"score\":0.68,\"rationale\":\"Prediabetes reflects insulin resistance and metabolic syndrome, a robust correlate of elevated cholesterol.\"},{\"feature_id\":2,\"score\":0.76,\"rationale\":\"Diabetes is a strong, clinically meaningful predictor of abnormal lipid profiles across populations.\"},{\"feature_id\":3,\"score\":0.34,\"rationale\":\"Dialysis indicates severe kidney disease, which can affect lipids, but it is rare and may be unstable marginally.\"},{\"feature_id\":4,\"score\":0.49,\"rationale\":\"Kidney disease has a plausible biologic link to dyslipidemia, though weaker and less universal than core metabolic factors.\"},{\"feature_id\":5,\"score\":0.22,\"rationale\":\"Psoriasis has some inflammatory association with cardiometabolic risk but is a weak marginal predictor here.\"},{\"feature_id\":6,\"score\":0.28,\"rationale\":\"Arthritis may correlate with age and inflammation, but much of its signal is indirect and nonspecific.\"},{\"feature_id\":7,\"score\":0.02,\"rationale\":\"Survey year is primarily a domain indicator and risks exploiting temporal shifts rather than stable disease mechanisms.\"},{\"feature_id\":8,\"score\":0.12,\"rationale\":\"Country of birth may proxy lifestyle or access differences but is a demographic shortcut with limited stable causal relevance.\"},{\"feature_id\":9,\"score\":0.31,\"rationale\":\"Education can capture socioeconomic influences on diet and care, but it is indirect and potentially domain-sensitive.\"},{\"feature_id\":10,\"score\":0.88,\"rationale\":\"Age is one of the most stable and powerful predictors of high cholesterol prevalence.\"},{\"feature_id\":11,\"score\":0.63,\"rationale\":\"Sex/gender has a consistent biologic relationship with lipid levels and cardiovascular risk patterns.\"},{\"feature_id\":12,\"score\":0.18,\"rationale\":\"Marital status is at best an indirect socioeconomic/behavioral proxy and likely brittle across domains.\"}]}",
+      "input_tokens": 1269,
+      "output_tokens": 482,
+      "total_tokens": 1751,
+      "response_id": "resp_086071333b6e41ef006a2806ea59ec8199950e593bef325d59",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"BPQ020\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health professional that you had hypertension\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DIQ160\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health professional that {you have/SP has} any of the following: prediabetes, impaired fasting glucose, impaired glucose tolerance, borderline diabetes or that {your/her/his} blood sugar is higher than normal but not high...\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DIQ010\",\n    \"type\": \"categorical\",\n    \"description\": \"{Other than during pregnancy, have you ever been told by a doctor or health professional that you have diabetes or sugar diabetes?\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know; 3.0=Borderline\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"KIQ025\",\n    \"type\": \"categorical\",\n    \"description\": \"received dialysis (either hemodialysis or peritoneal dialysis) in the past 12 months\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"KIQ022\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health professional that you had weak or failing kidneys\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"MCQ070\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health care professional that you had psoriasis\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"MCQ160A\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health care professional that you had arthritis\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"DMDBORN4\",\n    \"type\": \"categorical\",\n    \"description\": \"country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"DMDEDUC2\",\n    \"type\": \"categorical\",\n    \"description\": \"highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"RIDAGEYR\",\n    \"type\": \"continuous\",\n    \"description\": \"age in years\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"RIAGENDR\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DMDMARTL\",\n    \"type\": \"categorical\",\n    \"description\": \"marital status\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an NHANES participant has high cholesterol using features that should generalize across shifted demographic or temporal domains.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.76,\n      \"rationale\": \"Hypertension is strongly linked to cardiometabolic risk and tends to remain predictive of cholesterol status across domains.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.68,\n      \"rationale\": \"Prediabetes reflects metabolic dysfunction associated with dyslipidemia, with fairly stable clinical relevance.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.79,\n      \"rationale\": \"Diabetes is a robust cardiometabolic correlate of abnormal cholesterol and should generalize well.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.32,\n      \"rationale\": \"Dialysis indicates severe kidney disease that can affect lipids, but it is rare and may be unstable due to treatment and access patterns.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.55,\n      \"rationale\": \"Kidney disease has a plausible biological association with lipid abnormalities, though self-report and healthcare access add noise.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.27,\n      \"rationale\": \"Psoriasis has some inflammatory association with cardiometabolic risk but is a weak and indirect predictor here.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.34,\n      \"rationale\": \"Arthritis may correlate with age and inflammation, but much of its signal is indirect and likely less stable than core metabolic features.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.02,\n      \"rationale\": \"Survey year is primarily a domain identifier and risks exploiting temporal shifts rather than stable biology.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.12,\n      \"rationale\": \"Country of birth may capture demographic and access-related differences more than stable causal signal, so it is a potential shortcut.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.22,\n      \"rationale\": \"Education can proxy health behaviors and care access but is a socioeconomic shortcut with limited stable marginal usefulness.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.91,\n      \"rationale\": \"Age is one of the most stable and biologically grounded predictors of high cholesterol prevalence.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.61,\n      \"rationale\": \"Sex has a consistent physiological relationship with lipid profiles, though it is less directly predictive than age or diabetes.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.14,\n      \"rationale\": \"Marital status is mostly an indirect social proxy and likely brittle across domains.\"\n    }\n  ]\n}",
+      "input_tokens": 1269,
+      "output_tokens": 657,
+      "total_tokens": 1926,
+      "response_id": "resp_00700fbc97682256006a2806f383688199a0758237c988803a",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"BPQ020\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health professional that you had hypertension\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DIQ160\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health professional that {you have/SP has} any of the following: prediabetes, impaired fasting glucose, impaired glucose tolerance, borderline diabetes or that {your/her/his} blood sugar is higher than normal but not high...\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DIQ010\",\n    \"type\": \"categorical\",\n    \"description\": \"{Other than during pregnancy, have you ever been told by a doctor or health professional that you have diabetes or sugar diabetes?\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know; 3.0=Borderline\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"KIQ025\",\n    \"type\": \"categorical\",\n    \"description\": \"received dialysis (either hemodialysis or peritoneal dialysis) in the past 12 months\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"KIQ022\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health professional that you had weak or failing kidneys\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"MCQ070\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health care professional that you had psoriasis\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"MCQ160A\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health care professional that you had arthritis\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"DMDBORN4\",\n    \"type\": \"categorical\",\n    \"description\": \"country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"DMDEDUC2\",\n    \"type\": \"categorical\",\n    \"description\": \"highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"RIDAGEYR\",\n    \"type\": \"continuous\",\n    \"description\": \"age in years\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"RIAGENDR\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DMDMARTL\",\n    \"type\": \"categorical\",\n    \"description\": \"marital status\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an NHANES participant has high cholesterol using features likely to generalize across domain shifts.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.72,\n      \"rationale\": \"Hypertension is a well-established cardiometabolic correlate of high cholesterol and should remain predictive across domains.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.64,\n      \"rationale\": \"Prediabetes reflects metabolic dysfunction linked to dyslipidemia, with reasonably stable but not direct predictive value.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.76,\n      \"rationale\": \"Diabetes is strongly associated with abnormal lipid profiles and is likely to be a robust predictor across settings.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.24,\n      \"rationale\": \"Dialysis indicates severe kidney disease, which can affect lipids, but it is rare and may be unstable due to treatment and ascertainment effects.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.46,\n      \"rationale\": \"Kidney disease has some biologic relationship to dyslipidemia, though self-reported diagnosis is indirect and less consistently predictive.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.18,\n      \"rationale\": \"Psoriasis has only a modest inflammatory association with lipid abnormalities and is unlikely to be a strong stable marginal predictor.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.29,\n      \"rationale\": \"Arthritis may weakly track age and chronic inflammation but is mostly an indirect correlate rather than a stable causal signal.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.02,\n      \"rationale\": \"Survey year is a classic domain identifier and should be heavily penalized despite possible temporal prevalence shifts.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.16,\n      \"rationale\": \"Country of birth may correlate with diet and healthcare patterns but is demographic and prone to acting as a brittle shortcut.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.33,\n      \"rationale\": \"Education can capture socioeconomic influences on diet and healthcare, but it is an indirect demographic proxy with limited stable marginal value.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.91,\n      \"rationale\": \"Age is one of the most stable and broadly predictive risk factors for high cholesterol.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.58,\n      \"rationale\": \"Sex differences in lipid levels are biologically grounded and generally stable, though less predictive than age or metabolic disease history.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.14,\n      \"rationale\": \"Marital status is a weak social proxy that may not generalize well and risks encoding demographic structure rather than stable biology.\"\n    }\n  ]\n}",
+      "input_tokens": 1269,
+      "output_tokens": 680,
+      "total_tokens": 1949,
+      "response_id": "resp_0e29f0570720e541006a2806fd383c8199856652299b1b93e0",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"BPQ020\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health professional that you had hypertension\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DIQ160\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health professional that {you have/SP has} any of the following: prediabetes, impaired fasting glucose, impaired glucose tolerance, borderline diabetes or that {your/her/his} blood sugar is higher than normal but not high...\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DIQ010\",\n    \"type\": \"categorical\",\n    \"description\": \"{Other than during pregnancy, have you ever been told by a doctor or health professional that you have diabetes or sugar diabetes?\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know; 3.0=Borderline\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"KIQ025\",\n    \"type\": \"categorical\",\n    \"description\": \"received dialysis (either hemodialysis or peritoneal dialysis) in the past 12 months\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"KIQ022\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health professional that you had weak or failing kidneys\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"MCQ070\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health care professional that you had psoriasis\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"MCQ160A\",\n    \"type\": \"categorical\",\n    \"description\": \"ever been told by a doctor or other health care professional that you had arthritis\",\n    \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"DMDBORN4\",\n    \"type\": \"categorical\",\n    \"description\": \"country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"DMDEDUC2\",\n    \"type\": \"categorical\",\n    \"description\": \"highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"RIDAGEYR\",\n    \"type\": \"continuous\",\n    \"description\": \"age in years\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"RIAGENDR\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DMDMARTL\",\n    \"type\": \"categorical\",\n    \"description\": \"marital status\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an NHANES participant has high cholesterol / has been told they have high cholesterol using broadly health-related covariates that may transfer across domains.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.76,\n      \"rationale\": \"Hypertension is strongly linked to dyslipidemia through shared cardiometabolic risk and should remain predictive across domains.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.72,\n      \"rationale\": \"Prediabetes reflects insulin resistance and metabolic syndrome, making it a fairly stable correlate of cholesterol abnormalities.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.8,\n      \"rationale\": \"Diabetes is a robust cardiometabolic risk factor associated with abnormal lipid profiles and should generalize reasonably well.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.28,\n      \"rationale\": \"Dialysis indicates severe kidney disease, which can affect lipids, but it is rare and may be unstable due to treatment and selection effects.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.46,\n      \"rationale\": \"Kidney disease has a plausible association with dyslipidemia, though self-reported diagnosis is less directly tied to cholesterol than core metabolic conditions.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.22,\n      \"rationale\": \"Psoriasis has some inflammatory association with cardiometabolic risk but is a weak and likely low-prevalence predictor.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.31,\n      \"rationale\": \"Arthritis may correlate indirectly through age, obesity, and inflammation, but much of its signal is likely nonspecific.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.02,\n      \"rationale\": \"Survey year is primarily a domain identifier and risks exploiting temporal shifts rather than stable biology.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.12,\n      \"rationale\": \"Country of birth may proxy lifestyle or access differences but is largely demographic and vulnerable to domain-specific shortcutting.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.34,\n      \"rationale\": \"Education captures socioeconomic patterns affecting diet, care, and diagnosis, but it is indirect and partly a demographic shortcut.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.88,\n      \"rationale\": \"Age is one of the most stable and broadly predictive determinants of cholesterol risk and diagnosis.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.58,\n      \"rationale\": \"Sex differences in lipid profiles are biologically grounded and fairly stable, though less informative than age or metabolic disease history.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.16,\n      \"rationale\": \"Marital status is an indirect social correlate of health behavior and healthcare use, with limited stable causal relevance to cholesterol.\"\n    }\n  ]\n}",
+      "input_tokens": 1269,
+      "output_tokens": 693,
+      "total_tokens": 1962,
+      "response_id": "resp_00a6f744f1f18675006a280707c6848198b92956e1fb685eca",
+      "response_model": "gpt-5.4-2026-03-05"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/tableshift/nhanes_cholesterol/rankings/score_all_prompt.txt",
+  "config": {
+    "score_samples": 5
+  }
+}

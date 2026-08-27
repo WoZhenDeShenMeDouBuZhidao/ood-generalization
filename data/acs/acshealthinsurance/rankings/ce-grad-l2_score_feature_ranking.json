@@ -1,0 +1,203 @@
+{
+  "benchmark": "acs",
+  "dataset": "acshealthinsurance",
+  "model": "ce-grad-l2",
+  "method": "score",
+  "feature_space": "semantic",
+  "created_at": "2026-08-12T00:24:22",
+  "aggregation": {
+    "name": "normalized_mean",
+    "normalization": "per_repeat_sum_to_one",
+    "repeat_count": 5,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 13,
+        "feature": "DREM",
+        "score_mean": 0.14845840227137036,
+        "score_std": 0.038641480482921944
+      },
+      {
+        "rank": 2,
+        "feature_id": 22,
+        "feature": "ESR",
+        "score_mean": 0.13330652500405532,
+        "score_std": 0.013226329037182896
+      },
+      {
+        "rank": 3,
+        "feature_id": 20,
+        "feature": "RACWHT",
+        "score_mean": 0.12782298720013618,
+        "score_std": 0.03581169027816906
+      },
+      {
+        "rank": 4,
+        "feature_id": 12,
+        "feature": "DEYE",
+        "score_mean": 0.10934355368852619,
+        "score_std": 0.022637826113613924
+      },
+      {
+        "rank": 5,
+        "feature_id": 4,
+        "feature": "DIS",
+        "score_mean": 0.08941261087993677,
+        "score_std": 0.027433719318089453
+      },
+      {
+        "rank": 6,
+        "feature_id": 24,
+        "feature": "FER",
+        "score_mean": 0.062364093804026285,
+        "score_std": 0.015132973547594186
+      },
+      {
+        "rank": 7,
+        "feature_id": 0,
+        "feature": "AGEP",
+        "score_mean": 0.061860670790421235,
+        "score_std": 0.021953617555347044
+      },
+      {
+        "rank": 8,
+        "feature_id": 14,
+        "feature": "RACAIAN",
+        "score_mean": 0.05036207365433598,
+        "score_std": 0.014590553766662817
+      },
+      {
+        "rank": 9,
+        "feature_id": 16,
+        "feature": "RACBLK",
+        "score_mean": 0.0475685187166056,
+        "score_std": 0.01595167215514997
+      },
+      {
+        "rank": 10,
+        "feature_id": 7,
+        "feature": "MIG",
+        "score_mean": 0.035494112023916974,
+        "score_std": 0.006176393529461056
+      },
+      {
+        "rank": 11,
+        "feature_id": 15,
+        "feature": "RACASN",
+        "score_mean": 0.03239783402103927,
+        "score_std": 0.008293229134573027
+      },
+      {
+        "rank": 12,
+        "feature_id": 5,
+        "feature": "ESP",
+        "score_mean": 0.02215697339004114,
+        "score_std": 0.010950232669853838
+      },
+      {
+        "rank": 13,
+        "feature_id": 17,
+        "feature": "RACNH",
+        "score_mean": 0.014269268310656474,
+        "score_std": 0.008360843446656855
+      },
+      {
+        "rank": 14,
+        "feature_id": 6,
+        "feature": "CIT",
+        "score_mean": 0.012896481480716556,
+        "score_std": 0.006639590407313906
+      },
+      {
+        "rank": 15,
+        "feature_id": 8,
+        "feature": "MIL",
+        "score_mean": 0.012317414886537982,
+        "score_std": 0.008358539083036229
+      },
+      {
+        "rank": 16,
+        "feature_id": 19,
+        "feature": "RACSOR",
+        "score_mean": 0.008986181436286576,
+        "score_std": 0.007704631301922527
+      },
+      {
+        "rank": 17,
+        "feature_id": 2,
+        "feature": "MAR",
+        "score_mean": 0.008888744480637175,
+        "score_std": 0.00453623428397211
+      },
+      {
+        "rank": 18,
+        "feature_id": 9,
+        "feature": "ANC",
+        "score_mean": 0.006151363502390124,
+        "score_std": 0.004021274788370651
+      },
+      {
+        "rank": 19,
+        "feature_id": 10,
+        "feature": "NATIVITY",
+        "score_mean": 0.005456882728537675,
+        "score_std": 0.0020417347917769534
+      },
+      {
+        "rank": 20,
+        "feature_id": 18,
+        "feature": "RACPI",
+        "score_mean": 0.00468059150251137,
+        "score_std": 0.005141293011080368
+      },
+      {
+        "rank": 21,
+        "feature_id": 11,
+        "feature": "DEAR",
+        "score_mean": 0.0025355473926076504,
+        "score_std": 0.0029083065426972234
+      },
+      {
+        "rank": 22,
+        "feature_id": 1,
+        "feature": "SCHL",
+        "score_mean": 0.002049800360139143,
+        "score_std": 0.0008639296244874351
+      },
+      {
+        "rank": 23,
+        "feature_id": 3,
+        "feature": "SEX",
+        "score_mean": 0.0012193656896435441,
+        "score_std": 0.0008728963043485706
+      },
+      {
+        "rank": 24,
+        "feature_id": 21,
+        "feature": "PINCP",
+        "score_mean": 2.784924424233652e-09,
+        "score_std": 1.9322029500910276e-09
+      },
+      {
+        "rank": 25,
+        "feature_id": 23,
+        "feature": "ST",
+        "score_mean": 0.0,
+        "score_std": 0.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,603 @@
+{
+  "benchmark": "acs",
+  "dataset": "acsincome",
+  "model": "gpt-5.4",
+  "method": "score_all",
+  "temperature": 0.5,
+  "created_at": "2026-06-09T18:10:48",
+  "token_usage": {
+    "num_calls": 5,
+    "input_tokens": 4315,
+    "output_tokens": 2547,
+    "total_tokens": 6862
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 2,
+        "feature": "SCHL",
+        "score_mean": 0.938,
+        "score_std": 0.007483314773547842
+      },
+      {
+        "rank": 2,
+        "feature_id": 7,
+        "feature": "WKHP",
+        "score_mean": 0.864,
+        "score_std": 0.028705400188814675
+      },
+      {
+        "rank": 3,
+        "feature_id": 4,
+        "feature": "OCCP",
+        "score_mean": 0.858,
+        "score_std": 0.016000000000000014
+      },
+      {
+        "rank": 4,
+        "feature_id": 0,
+        "feature": "AGEP",
+        "score_mean": 0.724,
+        "score_std": 0.008000000000000007
+      },
+      {
+        "rank": 5,
+        "feature_id": 1,
+        "feature": "COW",
+        "score_mean": 0.62,
+        "score_std": 0.020000000000000018
+      },
+      {
+        "rank": 6,
+        "feature_id": 3,
+        "feature": "MAR",
+        "score_mean": 0.40199999999999997,
+        "score_std": 0.033105890714493685
+      },
+      {
+        "rank": 7,
+        "feature_id": 6,
+        "feature": "RELP",
+        "score_mean": 0.304,
+        "score_std": 0.03498571136907179
+      },
+      {
+        "rank": 8,
+        "feature_id": 5,
+        "feature": "POBP",
+        "score_mean": 0.13999999999999999,
+        "score_std": 0.025298221281347035
+      },
+      {
+        "rank": 9,
+        "feature_id": 8,
+        "feature": "SEX",
+        "score_mean": 0.13999999999999999,
+        "score_std": 0.03346640106136302
+      },
+      {
+        "rank": 10,
+        "feature_id": 9,
+        "feature": "RAC1P",
+        "score_mean": 0.092,
+        "score_std": 0.009797958971132715
+      }
+    ],
+    "scores": [
+      {
+        "feature_id": 0,
+        "feature": "AGEP",
+        "score_mean": 0.724,
+        "score_std": 0.008000000000000007,
+        "sample_scores": [
+          0.72,
+          0.72,
+          0.72,
+          0.72,
+          0.74
+        ]
+      },
+      {
+        "feature_id": 1,
+        "feature": "COW",
+        "score_mean": 0.62,
+        "score_std": 0.020000000000000018,
+        "sample_scores": [
+          0.63,
+          0.63,
+          0.63,
+          0.58,
+          0.63
+        ]
+      },
+      {
+        "feature_id": 2,
+        "feature": "SCHL",
+        "score_mean": 0.938,
+        "score_std": 0.007483314773547842,
+        "sample_scores": [
+          0.94,
+          0.93,
+          0.93,
+          0.94,
+          0.95
+        ]
+      },
+      {
+        "feature_id": 3,
+        "feature": "MAR",
+        "score_mean": 0.40199999999999997,
+        "score_std": 0.033105890714493685,
+        "sample_scores": [
+          0.34,
+          0.41,
+          0.41,
+          0.41,
+          0.44
+        ]
+      },
+      {
+        "feature_id": 4,
+        "feature": "OCCP",
+        "score_mean": 0.858,
+        "score_std": 0.016000000000000014,
+        "sample_scores": [
+          0.86,
+          0.86,
+          0.88,
+          0.83,
+          0.86
+        ]
+      },
+      {
+        "feature_id": 5,
+        "feature": "POBP",
+        "score_mean": 0.13999999999999999,
+        "score_std": 0.025298221281347035,
+        "sample_scores": [
+          0.12,
+          0.12,
+          0.12,
+          0.16,
+          0.18
+        ]
+      },
+      {
+        "feature_id": 6,
+        "feature": "RELP",
+        "score_mean": 0.304,
+        "score_std": 0.03498571136907179,
+        "sample_scores": [
+          0.28,
+          0.28,
+          0.28,
+          0.37,
+          0.31
+        ]
+      },
+      {
+        "feature_id": 7,
+        "feature": "WKHP",
+        "score_mean": 0.864,
+        "score_std": 0.028705400188814675,
+        "sample_scores": [
+          0.88,
+          0.89,
+          0.84,
+          0.89,
+          0.82
+        ]
+      },
+      {
+        "feature_id": 8,
+        "feature": "SEX",
+        "score_mean": 0.13999999999999999,
+        "score_std": 0.03346640106136302,
+        "sample_scores": [
+          0.18,
+          0.18,
+          0.1,
+          0.12,
+          0.12
+        ]
+      },
+      {
+        "feature_id": 9,
+        "feature": "RAC1P",
+        "score_mean": 0.092,
+        "score_std": 0.009797958971132715,
+        "sample_scores": [
+          0.1,
+          0.1,
+          0.08,
+          0.08,
+          0.1
+        ]
+      }
+    ],
+    "samples": [
+      {
+        "task_summary": "Predict whether a person’s annual income exceeds the ACSIncome threshold, using individual ACS demographic and work-related attributes.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.72,
+            "rationale": "Age is broadly and causally related to labor-market experience and earnings, with patterns that should generalize reasonably well across states.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.63,
+            "rationale": "Class of worker strongly affects pay structure and is fairly portable across states, though category prevalence and public-sector pay vary geographically.",
+            "feature": "COW"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.94,
+            "rationale": "Educational attainment is one of the most stable and semantically central predictors of income across states.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.34,
+            "rationale": "Marital status correlates with income but much of that signal is indirect and partly reflects demographic sorting rather than stable individual earning capacity.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.86,
+            "rationale": "Occupation is a strong direct determinant of earnings and should remain predictive across states, though detailed code distributions and local wage premia can shift.",
+            "feature": "OCCP"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.12,
+            "rationale": "Place of birth may proxy immigration and ethnicity patterns but is weakly tied to income in a stable way and risks encoding geography-linked shortcuts.",
+            "feature": "POBP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.28,
+            "rationale": "Relationship to householder can reflect life stage and household role, but much of its signal is indirect and potentially brittle across state compositions.",
+            "feature": "RELP"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.88,
+            "rationale": "Usual hours worked is closely tied to annual income and should generalize well because it captures labor supply intensity rather than local identity.",
+            "feature": "WKHP"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.18,
+            "rationale": "Sex is predictive due to persistent labor-market disparities, but it is a sensitive shortcut with limited desirability for stable OOD generalization priors.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.1,
+            "rationale": "Race can correlate with income through structural inequities, but it is a sensitive demographic shortcut and likely to capture unstable state-specific composition effects.",
+            "feature": "RAC1P"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a person's annual income exceeds the ACS income threshold used in Folktables acsincome, using demographic and work-related attributes.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.72,
+            "rationale": "Age is broadly and causally related to labor-market experience and earnings, with effects that should generalize across states despite some nonlinearities and retirement-age variation.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.63,
+            "rationale": "Class of worker is strongly tied to earnings structure across states, though category effects can vary with local public-sector and self-employment composition.",
+            "feature": "COW"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.93,
+            "rationale": "Educational attainment is one of the most stable and semantically central predictors of income across states and populations.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.41,
+            "rationale": "Marital status correlates with income through household formation and age patterns, but it is partly a demographic shortcut and less directly tied to earning capacity.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.86,
+            "rationale": "Occupation is highly informative about wage level and should remain predictive across states, though detailed codes can pick up some regional labor-market composition differences.",
+            "feature": "OCCP"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.12,
+            "rationale": "Place of birth may proxy immigration and language-related labor outcomes, but it is also a geography-linked demographic shortcut with brittle state-specific composition effects.",
+            "feature": "POBP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.28,
+            "rationale": "Relationship to householder may weakly reflect life stage and household role, but it is indirect for personal income and can encode household-structure artifacts.",
+            "feature": "RELP"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.89,
+            "rationale": "Usual hours worked is directly connected to annual earnings and should be highly predictive across states, though it partly reflects labor supply rather than wage rate.",
+            "feature": "WKHP"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.18,
+            "rationale": "Sex has predictive signal due to persistent labor-market disparities, but it is a sensitive demographic shortcut and less desirable for stable causal generalization.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.1,
+            "rationale": "Race can correlate with income through structural inequities, but it is a sensitive shortcut with substantial risk of encoding non-transferable state-specific demographic composition.",
+            "feature": "RAC1P"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a person's annual income exceeds the ACS income threshold used in Folktables acsincome, using demographic and work-related attributes.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.72,
+            "rationale": "Age is broadly and causally related to labor-market experience and earnings, with effects that should generalize across states despite some nonlinearities.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.63,
+            "rationale": "Class of worker strongly affects pay structure and benefits in a way that is generally stable across states, though category mixes vary geographically.",
+            "feature": "COW"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.93,
+            "rationale": "Educational attainment is one of the most robust and portable predictors of income across US states and labor markets.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.41,
+            "rationale": "Marital status correlates with household formation and labor-market attachment, but much of its signal is indirect and partly demographic shortcut-like.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.88,
+            "rationale": "Occupation is a direct determinant of earnings potential and should remain highly predictive across states, though detailed code frequencies can shift.",
+            "feature": "OCCP"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.12,
+            "rationale": "Place of birth can proxy immigration and ethnicity patterns but is weakly causal for income and risks encoding geography-linked distribution artifacts.",
+            "feature": "POBP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.28,
+            "rationale": "Relationship to householder may capture life stage and household role, but it is an indirect proxy with limited stable marginal value for personal income.",
+            "feature": "RELP"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.84,
+            "rationale": "Usual hours worked is closely tied to annual income and should generalize well, though it partly reflects intensive-margin behavior rather than earning rate alone.",
+            "feature": "WKHP"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.1,
+            "rationale": "Sex is predictive due to persistent social disparities, but it is a sensitive shortcut and less desirable as a stable semantically grounded signal.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.08,
+            "rationale": "Race often acts as a sensitive proxy for structural inequities and state-specific composition differences rather than stable task-relevant semantics.",
+            "feature": "RAC1P"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a person's annual income exceeds the ACS income threshold used in Folktables ACSIncome, using person-level demographic and work-related attributes.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.72,
+            "rationale": "Age is broadly and stably related to earnings through labor-market experience and lifecycle effects, though nonlinear and somewhat state-varying.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.58,
+            "rationale": "Class of worker is meaningfully tied to income differences across private, public, and self-employment sectors, but some categories reflect state-specific labor composition.",
+            "feature": "COW"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.94,
+            "rationale": "Educational attainment is one of the most robust and portable predictors of income across states because human-capital returns are broadly consistent.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.41,
+            "rationale": "Marital status correlates with household formation and labor-market attachment, but it is partly a demographic proxy and less directly causal for personal income.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.83,
+            "rationale": "Occupation strongly predicts earnings in a way that should generalize reasonably well, though detailed codes can pick up state-specific industry mix and sparse-category artifacts.",
+            "feature": "OCCP"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.16,
+            "rationale": "Place of birth may correlate with immigration and language-related labor outcomes, but it is also a demographic/geographic proxy with substantial risk of brittle state-specific shortcutting.",
+            "feature": "POBP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.37,
+            "rationale": "Relationship to householder can indicate life stage and household role associated with earnings, but it is indirect and entangled with household structure rather than stable individual productivity.",
+            "feature": "RELP"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.89,
+            "rationale": "Usual hours worked is a strong, direct signal for annual income and should remain predictive across states despite some variation in part-time work prevalence.",
+            "feature": "WKHP"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.12,
+            "rationale": "Sex has predictive power due to persistent labor-market disparities, but it is a sensitive demographic shortcut that is less desirable for stable, semantics-based generalization.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.08,
+            "rationale": "Race can correlate with income through structural inequities, but it is a sensitive proxy with high risk of encoding non-portable demographic shortcuts rather than stable task semantics.",
+            "feature": "RAC1P"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether a person’s annual income exceeds the ACS income threshold used in the Folktables acsincome task.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.74,
+            "rationale": "Age is broadly and causally related to labor market experience and earnings over the life cycle, with effects that should generalize across states.",
+            "feature": "AGEP"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.63,
+            "rationale": "Class of worker is meaningfully tied to pay structure and benefits, but some categories depend on state-specific public-sector and local labor-market composition.",
+            "feature": "COW"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.95,
+            "rationale": "Educational attainment is one of the most stable and semantically robust predictors of income across states.",
+            "feature": "SCHL"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.44,
+            "rationale": "Marital status correlates with household formation and labor-market attachment, but much of its predictive power may reflect demographic and social shortcuts rather than stable individual earning mechanisms.",
+            "feature": "MAR"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.86,
+            "rationale": "Occupation strongly determines typical earnings and should remain predictive across states, though detailed codes can pick up some regional industry mix and coding sparsity.",
+            "feature": "OCCP"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.18,
+            "rationale": "Place of birth may proxy immigration history and language or selection effects, but it is also a geography-linked demographic shortcut with unstable state-specific composition.",
+            "feature": "POBP"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.31,
+            "rationale": "Relationship to householder can reflect life stage and family role, but it is an indirect household-structure proxy with limited stable marginal signal for personal income.",
+            "feature": "RELP"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.82,
+            "rationale": "Usual hours worked is directly tied to annual earnings and should generalize well, though some variation reflects local labor-market norms and part-time prevalence.",
+            "feature": "WKHP"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.12,
+            "rationale": "Sex is predictive in observed data because of persistent wage and labor-force disparities, but it is a sensitive demographic shortcut and less desirable for robust cross-state generalization.",
+            "feature": "SEX"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.1,
+            "rationale": "Race can correlate with income through structural inequities, but it is a sensitive shortcut with substantial risk of encoding state-specific demographic composition rather than stable task-relevant mechanisms.",
+            "feature": "RAC1P"
+          }
+        ]
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"COW\",\n    \"type\": \"categorical\",\n    \"description\": \"Class of worker.\",\n    \"values\": \"ACS employment class code, such as private, government, self-employed, or unpaid family worker.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"OCCP\",\n    \"type\": \"categorical\",\n    \"description\": \"Occupation code.\",\n    \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"POBP\",\n    \"type\": \"categorical\",\n    \"description\": \"Place of birth.\",\n    \"values\": \"Geographic birthplace recode.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"WKHP\",\n    \"type\": \"integer\",\n    \"description\": \"Usual hours worked per week during the past 12 months.\",\n    \"values\": \"0 or positive weekly work hours.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\"task_summary\":\"Predict whether a person’s annual income exceeds the ACSIncome threshold, using individual ACS demographic and work-related attributes.\",\"scores\":[{\"feature_id\":0,\"score\":0.72,\"rationale\":\"Age is broadly and causally related to labor-market experience and earnings, with patterns that should generalize reasonably well across states.\"},{\"feature_id\":1,\"score\":0.63,\"rationale\":\"Class of worker strongly affects pay structure and is fairly portable across states, though category prevalence and public-sector pay vary geographically.\"},{\"feature_id\":2,\"score\":0.94,\"rationale\":\"Educational attainment is one of the most stable and semantically central predictors of income across states.\"},{\"feature_id\":3,\"score\":0.34,\"rationale\":\"Marital status correlates with income but much of that signal is indirect and partly reflects demographic sorting rather than stable individual earning capacity.\"},{\"feature_id\":4,\"score\":0.86,\"rationale\":\"Occupation is a strong direct determinant of earnings and should remain predictive across states, though detailed code distributions and local wage premia can shift.\"},{\"feature_id\":5,\"score\":0.12,\"rationale\":\"Place of birth may proxy immigration and ethnicity patterns but is weakly tied to income in a stable way and risks encoding geography-linked shortcuts.\"},{\"feature_id\":6,\"score\":0.28,\"rationale\":\"Relationship to householder can reflect life stage and household role, but much of its signal is indirect and potentially brittle across state compositions.\"},{\"feature_id\":7,\"score\":0.88,\"rationale\":\"Usual hours worked is closely tied to annual income and should generalize well because it captures labor supply intensity rather than local identity.\"},{\"feature_id\":8,\"score\":0.18,\"rationale\":\"Sex is predictive due to persistent labor-market disparities, but it is a sensitive shortcut with limited desirability for stable OOD generalization priors.\"},{\"feature_id\":9,\"score\":0.1,\"rationale\":\"Race can correlate with income through structural inequities, but it is a sensitive demographic shortcut and likely to capture unstable state-specific composition effects.\"}]}",
+      "input_tokens": 863,
+      "output_tokens": 439,
+      "total_tokens": 1302,
+      "response_id": "resp_067cf611004bc599006a27e67bd8a88198a30e918d017a8e00",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"COW\",\n    \"type\": \"categorical\",\n    \"description\": \"Class of worker.\",\n    \"values\": \"ACS employment class code, such as private, government, self-employed, or unpaid family worker.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"OCCP\",\n    \"type\": \"categorical\",\n    \"description\": \"Occupation code.\",\n    \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"POBP\",\n    \"type\": \"categorical\",\n    \"description\": \"Place of birth.\",\n    \"values\": \"Geographic birthplace recode.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"WKHP\",\n    \"type\": \"integer\",\n    \"description\": \"Usual hours worked per week during the past 12 months.\",\n    \"values\": \"0 or positive weekly work hours.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\"task_summary\":\"Predict whether a person's annual income exceeds the ACS income threshold used in Folktables acsincome, using demographic and work-related attributes.\",\"scores\":[{\"feature_id\":0,\"score\":0.72,\"rationale\":\"Age is broadly and causally related to labor-market experience and earnings, with effects that should generalize across states despite some nonlinearities and retirement-age variation.\"},{\"feature_id\":1,\"score\":0.63,\"rationale\":\"Class of worker is strongly tied to earnings structure across states, though category effects can vary with local public-sector and self-employment composition.\"},{\"feature_id\":2,\"score\":0.93,\"rationale\":\"Educational attainment is one of the most stable and semantically central predictors of income across states and populations.\"},{\"feature_id\":3,\"score\":0.41,\"rationale\":\"Marital status correlates with income through household formation and age patterns, but it is partly a demographic shortcut and less directly tied to earning capacity.\"},{\"feature_id\":4,\"score\":0.86,\"rationale\":\"Occupation is highly informative about wage level and should remain predictive across states, though detailed codes can pick up some regional labor-market composition differences.\"},{\"feature_id\":5,\"score\":0.12,\"rationale\":\"Place of birth may proxy immigration and language-related labor outcomes, but it is also a geography-linked demographic shortcut with brittle state-specific composition effects.\"},{\"feature_id\":6,\"score\":0.28,\"rationale\":\"Relationship to householder may weakly reflect life stage and household role, but it is indirect for personal income and can encode household-structure artifacts.\"},{\"feature_id\":7,\"score\":0.89,\"rationale\":\"Usual hours worked is directly connected to annual earnings and should be highly predictive across states, though it partly reflects labor supply rather than wage rate.\"},{\"feature_id\":8,\"score\":0.18,\"rationale\":\"Sex has predictive signal due to persistent labor-market disparities, but it is a sensitive demographic shortcut and less desirable for stable causal generalization.\"},{\"feature_id\":9,\"score\":0.1,\"rationale\":\"Race can correlate with income through structural inequities, but it is a sensitive shortcut with substantial risk of encoding non-transferable state-specific demographic composition.\"}]}",
+      "input_tokens": 863,
+      "output_tokens": 465,
+      "total_tokens": 1328,
+      "response_id": "resp_06ae37ecb849703b006a27e6844308819aacb9d68b68c42690",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"COW\",\n    \"type\": \"categorical\",\n    \"description\": \"Class of worker.\",\n    \"values\": \"ACS employment class code, such as private, government, self-employed, or unpaid family worker.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"OCCP\",\n    \"type\": \"categorical\",\n    \"description\": \"Occupation code.\",\n    \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"POBP\",\n    \"type\": \"categorical\",\n    \"description\": \"Place of birth.\",\n    \"values\": \"Geographic birthplace recode.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"WKHP\",\n    \"type\": \"integer\",\n    \"description\": \"Usual hours worked per week during the past 12 months.\",\n    \"values\": \"0 or positive weekly work hours.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\"task_summary\":\"Predict whether a person's annual income exceeds the ACS income threshold used in Folktables acsincome, using demographic and work-related attributes.\",\"scores\":[{\"feature_id\":0,\"score\":0.72,\"rationale\":\"Age is broadly and causally related to labor-market experience and earnings, with effects that should generalize across states despite some nonlinearities.\"},{\"feature_id\":1,\"score\":0.63,\"rationale\":\"Class of worker strongly affects pay structure and benefits in a way that is generally stable across states, though category mixes vary geographically.\"},{\"feature_id\":2,\"score\":0.93,\"rationale\":\"Educational attainment is one of the most robust and portable predictors of income across US states and labor markets.\"},{\"feature_id\":3,\"score\":0.41,\"rationale\":\"Marital status correlates with household formation and labor-market attachment, but much of its signal is indirect and partly demographic shortcut-like.\"},{\"feature_id\":4,\"score\":0.88,\"rationale\":\"Occupation is a direct determinant of earnings potential and should remain highly predictive across states, though detailed code frequencies can shift.\"},{\"feature_id\":5,\"score\":0.12,\"rationale\":\"Place of birth can proxy immigration and ethnicity patterns but is weakly causal for income and risks encoding geography-linked distribution artifacts.\"},{\"feature_id\":6,\"score\":0.28,\"rationale\":\"Relationship to householder may capture life stage and household role, but it is an indirect proxy with limited stable marginal value for personal income.\"},{\"feature_id\":7,\"score\":0.84,\"rationale\":\"Usual hours worked is closely tied to annual income and should generalize well, though it partly reflects intensive-margin behavior rather than earning rate alone.\"},{\"feature_id\":8,\"score\":0.1,\"rationale\":\"Sex is predictive due to persistent social disparities, but it is a sensitive shortcut and less desirable as a stable semantically grounded signal.\"},{\"feature_id\":9,\"score\":0.08,\"rationale\":\"Race often acts as a sensitive proxy for structural inequities and state-specific composition differences rather than stable task-relevant semantics.\"}]}",
+      "input_tokens": 863,
+      "output_tokens": 440,
+      "total_tokens": 1303,
+      "response_id": "resp_0399aefae0f780cd006a27e68db8bc819b8653e77c1cf298ea",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"COW\",\n    \"type\": \"categorical\",\n    \"description\": \"Class of worker.\",\n    \"values\": \"ACS employment class code, such as private, government, self-employed, or unpaid family worker.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"OCCP\",\n    \"type\": \"categorical\",\n    \"description\": \"Occupation code.\",\n    \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"POBP\",\n    \"type\": \"categorical\",\n    \"description\": \"Place of birth.\",\n    \"values\": \"Geographic birthplace recode.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"WKHP\",\n    \"type\": \"integer\",\n    \"description\": \"Usual hours worked per week during the past 12 months.\",\n    \"values\": \"0 or positive weekly work hours.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a person's annual income exceeds the ACS income threshold used in Folktables ACSIncome, using person-level demographic and work-related attributes.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.72,\n      \"rationale\": \"Age is broadly and stably related to earnings through labor-market experience and lifecycle effects, though nonlinear and somewhat state-varying.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.58,\n      \"rationale\": \"Class of worker is meaningfully tied to income differences across private, public, and self-employment sectors, but some categories reflect state-specific labor composition.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.94,\n      \"rationale\": \"Educational attainment is one of the most robust and portable predictors of income across states because human-capital returns are broadly consistent.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.41,\n      \"rationale\": \"Marital status correlates with household formation and labor-market attachment, but it is partly a demographic proxy and less directly causal for personal income.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.83,\n      \"rationale\": \"Occupation strongly predicts earnings in a way that should generalize reasonably well, though detailed codes can pick up state-specific industry mix and sparse-category artifacts.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.16,\n      \"rationale\": \"Place of birth may correlate with immigration and language-related labor outcomes, but it is also a demographic/geographic proxy with substantial risk of brittle state-specific shortcutting.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.37,\n      \"rationale\": \"Relationship to householder can indicate life stage and household role associated with earnings, but it is indirect and entangled with household structure rather than stable individual productivity.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.89,\n      \"rationale\": \"Usual hours worked is a strong, direct signal for annual income and should remain predictive across states despite some variation in part-time work prevalence.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.12,\n      \"rationale\": \"Sex has predictive power due to persistent labor-market disparities, but it is a sensitive demographic shortcut that is less desirable for stable, semantics-based generalization.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.08,\n      \"rationale\": \"Race can correlate with income through structural inequities, but it is a sensitive proxy with high risk of encoding non-portable demographic shortcuts rather than stable task semantics.\"\n    }\n  ]\n}",
+      "input_tokens": 863,
+      "output_tokens": 607,
+      "total_tokens": 1470,
+      "response_id": "resp_000f45b7c433aecc006a27e6965df48198a7cf5c0747b70da5",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"COW\",\n    \"type\": \"categorical\",\n    \"description\": \"Class of worker.\",\n    \"values\": \"ACS employment class code, such as private, government, self-employed, or unpaid family worker.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"OCCP\",\n    \"type\": \"categorical\",\n    \"description\": \"Occupation code.\",\n    \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"POBP\",\n    \"type\": \"categorical\",\n    \"description\": \"Place of birth.\",\n    \"values\": \"Geographic birthplace recode.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"WKHP\",\n    \"type\": \"integer\",\n    \"description\": \"Usual hours worked per week during the past 12 months.\",\n    \"values\": \"0 or positive weekly work hours.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a person’s annual income exceeds the ACS income threshold used in the Folktables acsincome task.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.74,\n      \"rationale\": \"Age is broadly and causally related to labor market experience and earnings over the life cycle, with effects that should generalize across states.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.63,\n      \"rationale\": \"Class of worker is meaningfully tied to pay structure and benefits, but some categories depend on state-specific public-sector and local labor-market composition.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.95,\n      \"rationale\": \"Educational attainment is one of the most stable and semantically robust predictors of income across states.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.44,\n      \"rationale\": \"Marital status correlates with household formation and labor-market attachment, but much of its predictive power may reflect demographic and social shortcuts rather than stable individual earning mechanisms.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.86,\n      \"rationale\": \"Occupation strongly determines typical earnings and should remain predictive across states, though detailed codes can pick up some regional industry mix and coding sparsity.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.18,\n      \"rationale\": \"Place of birth may proxy immigration history and language or selection effects, but it is also a geography-linked demographic shortcut with unstable state-specific composition.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.31,\n      \"rationale\": \"Relationship to householder can reflect life stage and family role, but it is an indirect household-structure proxy with limited stable marginal signal for personal income.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.82,\n      \"rationale\": \"Usual hours worked is directly tied to annual earnings and should generalize well, though some variation reflects local labor-market norms and part-time prevalence.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.12,\n      \"rationale\": \"Sex is predictive in observed data because of persistent wage and labor-force disparities, but it is a sensitive demographic shortcut and less desirable for robust cross-state generalization.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.1,\n      \"rationale\": \"Race can correlate with income through structural inequities, but it is a sensitive shortcut with substantial risk of encoding state-specific demographic composition rather than stable task-relevant mechanisms.\"\n    }\n  ]\n}",
+      "input_tokens": 863,
+      "output_tokens": 596,
+      "total_tokens": 1459,
+      "response_id": "resp_06a37a75a3bf8b15006a27e69f7b2881989c782026fbc5d8ec",
+      "response_model": "gpt-5.4-2026-03-05"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/acs/acsincome/rankings/score_all_prompt.txt",
+  "config": {
+    "score_samples": 5
+  }
+}

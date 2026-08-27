@@ -1,0 +1,151 @@
+{
+  "benchmark": "acs",
+  "dataset": "acsincomepovertyratio",
+  "model": "gpt-5.4",
+  "method": "rank",
+  "temperature": 0.0,
+  "created_at": "2026-06-09T18:35:03",
+  "token_usage": {
+    "num_calls": 1,
+    "input_tokens": 1366,
+    "output_tokens": 937,
+    "total_tokens": 2303
+  },
+  "response": {
+    "task_summary": "Predict whether a person's income-to-poverty ratio exceeds a threshold using ACS person-level attributes, favoring signals that reflect broadly portable socioeconomic status rather than state-specific composition.",
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 1,
+        "rationale": "Educational attainment is a strong, portable predictor of earnings and poverty risk across states.",
+        "feature": "SCHL"
+      },
+      {
+        "rank": 2,
+        "feature_id": 17,
+        "rationale": "Current labor-force attachment directly tracks income generation and poverty status in a state-robust way.",
+        "feature": "ESR"
+      },
+      {
+        "rank": 3,
+        "feature_id": 19,
+        "rationale": "Usual weekly hours worked is closely tied to annual labor income and generalizes well across geographies.",
+        "feature": "WKHP"
+      },
+      {
+        "rank": 4,
+        "feature_id": 18,
+        "rationale": "Occupation captures skill level and wage structure that remain predictive across states despite some local mix differences.",
+        "feature": "OCCP"
+      },
+      {
+        "rank": 5,
+        "feature_id": 0,
+        "rationale": "Age proxies career stage and earning potential with broadly stable effects across the US.",
+        "feature": "AGEP"
+      },
+      {
+        "rank": 6,
+        "feature_id": 4,
+        "rationale": "Disability status strongly affects work capacity and poverty risk in a generally portable manner.",
+        "feature": "DIS"
+      },
+      {
+        "rank": 7,
+        "feature_id": 14,
+        "rationale": "Cognitive difficulty is a meaningful functional limitation linked to employment and income across states.",
+        "feature": "DREM"
+      },
+      {
+        "rank": 8,
+        "feature_id": 2,
+        "rationale": "Marital status relates to household economic resources and poverty buffering, though effects depend somewhat on household structure.",
+        "feature": "MAR"
+      },
+      {
+        "rank": 9,
+        "feature_id": 11,
+        "rationale": "Relationship to householder helps infer dependence and household resource sharing relevant to poverty ratio.",
+        "feature": "RELP"
+      },
+      {
+        "rank": 10,
+        "feature_id": 13,
+        "rationale": "Vision difficulty can reduce labor-market participation and is more semantically grounded than demographic shortcut features.",
+        "feature": "DEYE"
+      },
+      {
+        "rank": 11,
+        "feature_id": 12,
+        "rationale": "Hearing difficulty also captures functional barriers associated with lower earnings and higher poverty risk.",
+        "feature": "DEAR"
+      },
+      {
+        "rank": 12,
+        "feature_id": 8,
+        "rationale": "Military service status can affect benefits and labor-market history, but its predictive value is less universal than core work variables.",
+        "feature": "MIL"
+      },
+      {
+        "rank": 13,
+        "feature_id": 16,
+        "rationale": "Grandparent caregiving status may indicate family burden or multigenerational support, but applies to a narrower subset.",
+        "feature": "GCL"
+      },
+      {
+        "rank": 14,
+        "feature_id": 7,
+        "rationale": "Citizenship status can matter for labor-market access, yet it risks encoding demographic composition differences across states.",
+        "feature": "CIT"
+      },
+      {
+        "rank": 15,
+        "feature_id": 10,
+        "rationale": "Nativity has some socioeconomic relevance but overlaps with geography-linked immigrant composition and is less stable causally.",
+        "feature": "NATIVITY"
+      },
+      {
+        "rank": 16,
+        "feature_id": 6,
+        "rationale": "Recent mobility may correlate with instability or opportunity, but it is a weaker and more context-dependent signal.",
+        "feature": "MIG"
+      },
+      {
+        "rank": 17,
+        "feature_id": 3,
+        "rationale": "Sex has predictive power through labor-market disparities, but it is partly a demographic shortcut rather than a robust socioeconomic mechanism.",
+        "feature": "SEX"
+      },
+      {
+        "rank": 18,
+        "feature_id": 5,
+        "rationale": "Parental employment status is mainly meaningful for children and is less broadly applicable across the full sample.",
+        "feature": "ESP"
+      },
+      {
+        "rank": 19,
+        "feature_id": 15,
+        "rationale": "Race can correlate with poverty due to structural inequities, but it is especially prone to encoding non-portable demographic composition.",
+        "feature": "RAC1P"
+      },
+      {
+        "rank": 20,
+        "feature_id": 9,
+        "rationale": "Ancestry is highly susceptible to geography-specific population mix and offers little stable semantic signal beyond brittle shortcuts.",
+        "feature": "ANC"
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincomepovertyratio`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DIS\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Disability recode.\",\n    \"values\": \"1=with a disability, 2=without a disability.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"ESP\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status of parents.\",\n    \"values\": \"ACS family/parent employment code, mainly defined for children.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"MIG\",\n    \"type\": \"categorical\",\n    \"description\": \"Mobility status one year ago.\",\n    \"values\": \"Whether and where the person lived one year ago.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"CIT\",\n    \"type\": \"categorical\",\n    \"description\": \"Citizenship status.\",\n    \"values\": \"US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"MIL\",\n    \"type\": \"categorical\",\n    \"description\": \"Military service status.\",\n    \"values\": \"ACS military service category.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"ANC\",\n    \"type\": \"categorical\",\n    \"description\": \"Ancestry recode.\",\n    \"values\": \"ACS ancestry category.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"NATIVITY\",\n    \"type\": \"categorical\",\n    \"description\": \"Nativity recode.\",\n    \"values\": \"Native-born or foreign-born.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DEAR\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Hearing difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"DEYE\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Vision difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"DREM\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Cognitive difficulty remembering, concentrating, or making decisions.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"GCL\",\n    \"type\": \"categorical\",\n    \"description\": \"Grandparents living with grandchildren and responsibility status.\",\n    \"values\": \"ACS grandparent care category.\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"ESR\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status recode.\",\n    \"values\": \"Employed, unemployed, armed forces, or not in labor force categories.\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"OCCP\",\n    \"type\": \"categorical\",\n    \"description\": \"Occupation code.\",\n    \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"WKHP\",\n    \"type\": \"integer\",\n    \"description\": \"Usual hours worked per week during the past 12 months.\",\n    \"values\": \"0 or positive weekly work hours.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature_id\": 0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `ranking`.\n- Use ranks 1 through 20, with no duplicates.\n- Rank 1 is most important.\n- If two features seem similarly important, still break ties.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a person's income-to-poverty ratio exceeds a threshold using ACS person-level attributes, favoring signals that reflect broadly portable socioeconomic status rather than state-specific composition.\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature_id\": 1,\n      \"rationale\": \"Educational attainment is a strong, portable predictor of earnings and poverty risk across states.\"\n    },\n    {\n      \"rank\": 2,\n      \"feature_id\": 17,\n      \"rationale\": \"Current labor-force attachment directly tracks income generation and poverty status in a state-robust way.\"\n    },\n    {\n      \"rank\": 3,\n      \"feature_id\": 19,\n      \"rationale\": \"Usual weekly hours worked is closely tied to annual labor income and generalizes well across geographies.\"\n    },\n    {\n      \"rank\": 4,\n      \"feature_id\": 18,\n      \"rationale\": \"Occupation captures skill level and wage structure that remain predictive across states despite some local mix differences.\"\n    },\n    {\n      \"rank\": 5,\n      \"feature_id\": 0,\n      \"rationale\": \"Age proxies career stage and earning potential with broadly stable effects across the US.\"\n    },\n    {\n      \"rank\": 6,\n      \"feature_id\": 4,\n      \"rationale\": \"Disability status strongly affects work capacity and poverty risk in a generally portable manner.\"\n    },\n    {\n      \"rank\": 7,\n      \"feature_id\": 14,\n      \"rationale\": \"Cognitive difficulty is a meaningful functional limitation linked to employment and income across states.\"\n    },\n    {\n      \"rank\": 8,\n      \"feature_id\": 2,\n      \"rationale\": \"Marital status relates to household economic resources and poverty buffering, though effects depend somewhat on household structure.\"\n    },\n    {\n      \"rank\": 9,\n      \"feature_id\": 11,\n      \"rationale\": \"Relationship to householder helps infer dependence and household resource sharing relevant to poverty ratio.\"\n    },\n    {\n      \"rank\": 10,\n      \"feature_id\": 13,\n      \"rationale\": \"Vision difficulty can reduce labor-market participation and is more semantically grounded than demographic shortcut features.\"\n    },\n    {\n      \"rank\": 11,\n      \"feature_id\": 12,\n      \"rationale\": \"Hearing difficulty also captures functional barriers associated with lower earnings and higher poverty risk.\"\n    },\n    {\n      \"rank\": 12,\n      \"feature_id\": 8,\n      \"rationale\": \"Military service status can affect benefits and labor-market history, but its predictive value is less universal than core work variables.\"\n    },\n    {\n      \"rank\": 13,\n      \"feature_id\": 16,\n      \"rationale\": \"Grandparent caregiving status may indicate family burden or multigenerational support, but applies to a narrower subset.\"\n    },\n    {\n      \"rank\": 14,\n      \"feature_id\": 7,\n      \"rationale\": \"Citizenship status can matter for labor-market access, yet it risks encoding demographic composition differences across states.\"\n    },\n    {\n      \"rank\": 15,\n      \"feature_id\": 10,\n      \"rationale\": \"Nativity has some socioeconomic relevance but overlaps with geography-linked immigrant composition and is less stable causally.\"\n    },\n    {\n      \"rank\": 16,\n      \"feature_id\": 6,\n      \"rationale\": \"Recent mobility may correlate with instability or opportunity, but it is a weaker and more context-dependent signal.\"\n    },\n    {\n      \"rank\": 17,\n      \"feature_id\": 3,\n      \"rationale\": \"Sex has predictive power through labor-market disparities, but it is partly a demographic shortcut rather than a robust socioeconomic mechanism.\"\n    },\n    {\n      \"rank\": 18,\n      \"feature_id\": 5,\n      \"rationale\": \"Parental employment status is mainly meaningful for children and is less broadly applicable across the full sample.\"\n    },\n    {\n      \"rank\": 19,\n      \"feature_id\": 15,\n      \"rationale\": \"Race can correlate with poverty due to structural inequities, but it is especially prone to encoding non-portable demographic composition.\"\n    },\n    {\n      \"rank\": 20,\n      \"feature_id\": 9,\n      \"rationale\": \"Ancestry is highly susceptible to geography-specific population mix and offers little stable semantic signal beyond brittle shortcuts.\"\n    }\n  ]\n}",
+      "input_tokens": 1366,
+      "output_tokens": 937,
+      "total_tokens": 2303,
+      "response_id": "resp_0d810a589426a127006a27ec4986448199b92620a0dc3bdd5f",
+      "response_model": "gpt-5.4-2026-03-05"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/acs/acsincomepovertyratio/rankings/rank_prompt.txt"
+}

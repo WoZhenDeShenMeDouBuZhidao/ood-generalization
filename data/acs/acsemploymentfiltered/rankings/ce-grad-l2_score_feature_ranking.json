@@ -1,0 +1,147 @@
+{
+  "benchmark": "acs",
+  "dataset": "acsemploymentfiltered",
+  "model": "ce-grad-l2",
+  "method": "score",
+  "feature_space": "semantic",
+  "created_at": "2026-08-12T00:24:22",
+  "aggregation": {
+    "name": "normalized_mean",
+    "normalization": "per_repeat_sum_to_one",
+    "repeat_count": 5,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 14,
+        "feature": "DREM",
+        "score_mean": 0.33097070462618355,
+        "score_std": 0.07980816356606688
+      },
+      {
+        "rank": 2,
+        "feature_id": 4,
+        "feature": "DIS",
+        "score_mean": 0.24047138227968806,
+        "score_std": 0.07721542067966097
+      },
+      {
+        "rank": 3,
+        "feature_id": 3,
+        "feature": "SEX",
+        "score_mean": 0.10070904824877451,
+        "score_std": 0.03400511169390835
+      },
+      {
+        "rank": 4,
+        "feature_id": 15,
+        "feature": "RAC1P",
+        "score_mean": 0.07954867677655805,
+        "score_std": 0.017106503347082313
+      },
+      {
+        "rank": 5,
+        "feature_id": 16,
+        "feature": "GCL",
+        "score_mean": 0.043849595719129476,
+        "score_std": 0.021551968984287677
+      },
+      {
+        "rank": 6,
+        "feature_id": 5,
+        "feature": "ESP",
+        "score_mean": 0.04163426449683414,
+        "score_std": 0.03686283793081696
+      },
+      {
+        "rank": 7,
+        "feature_id": 8,
+        "feature": "MIL",
+        "score_mean": 0.033130818304346506,
+        "score_std": 0.014668146055839496
+      },
+      {
+        "rank": 8,
+        "feature_id": 11,
+        "feature": "RELP",
+        "score_mean": 0.02399553190279518,
+        "score_std": 0.013962920884386885
+      },
+      {
+        "rank": 9,
+        "feature_id": 12,
+        "feature": "DEAR",
+        "score_mean": 0.021429172645743087,
+        "score_std": 0.024776755924601764
+      },
+      {
+        "rank": 10,
+        "feature_id": 10,
+        "feature": "NATIVITY",
+        "score_mean": 0.01785848274747747,
+        "score_std": 0.012489009217053853
+      },
+      {
+        "rank": 11,
+        "feature_id": 13,
+        "feature": "DEYE",
+        "score_mean": 0.016964489724534716,
+        "score_std": 0.023402607106953986
+      },
+      {
+        "rank": 12,
+        "feature_id": 6,
+        "feature": "MIG",
+        "score_mean": 0.014542622100925079,
+        "score_std": 0.004111660449019793
+      },
+      {
+        "rank": 13,
+        "feature_id": 7,
+        "feature": "CIT",
+        "score_mean": 0.013978615927143976,
+        "score_std": 0.004657662589968683
+      },
+      {
+        "rank": 14,
+        "feature_id": 1,
+        "feature": "SCHL",
+        "score_mean": 0.007217776508517959,
+        "score_std": 0.00345841028147286
+      },
+      {
+        "rank": 15,
+        "feature_id": 9,
+        "feature": "ANC",
+        "score_mean": 0.006048211799296721,
+        "score_std": 0.0013548641147053035
+      },
+      {
+        "rank": 16,
+        "feature_id": 0,
+        "feature": "AGEP",
+        "score_mean": 0.004642027548060974,
+        "score_std": 0.002169483006463169
+      },
+      {
+        "rank": 17,
+        "feature_id": 2,
+        "feature": "MAR",
+        "score_mean": 0.0030085786439905298,
+        "score_std": 0.001037669929816015
+      }
+    ]
+  }
+}

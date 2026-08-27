@@ -1,0 +1,1310 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "diabetes_readmission",
+  "model": "ce-grad-l2-mean-rank",
+  "method": "rank",
+  "feature_space": "model",
+  "created_at": "2026-08-13T00:12:52",
+  "aggregation": {
+    "name": "mean_rank",
+    "per_repeat_ranking": "ordinal_descending",
+    "tie_break": "model_feature_order",
+    "repeat_count": 5,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 59,
+        "feature": "diag_2_424",
+        "mean_rank": 5.0,
+        "rank_std": 4.58257569495584
+      },
+      {
+        "rank": 2,
+        "feature_id": 65,
+        "feature": "diag_2_518",
+        "mean_rank": 5.2,
+        "rank_std": 2.8635642126552705
+      },
+      {
+        "rank": 3,
+        "feature_id": 63,
+        "feature": "diag_2_491",
+        "mean_rank": 7.0,
+        "rank_std": 3.391164991562634
+      },
+      {
+        "rank": 4,
+        "feature_id": 124,
+        "feature": "medical_specialty_ObstetricsandGynecology",
+        "mean_rank": 7.0,
+        "rank_std": 5.830951894845301
+      },
+      {
+        "rank": 5,
+        "feature_id": 151,
+        "feature": "number_inpatient",
+        "mean_rank": 9.0,
+        "rank_std": 7.615773105863909
+      },
+      {
+        "rank": 6,
+        "feature_id": 171,
+        "feature": "rosiglitazone_infrequent_sklearn",
+        "mean_rank": 9.0,
+        "rank_std": 7.54983443527075
+      },
+      {
+        "rank": 7,
+        "feature_id": 25,
+        "feature": "diag_1_2506",
+        "mean_rank": 10.8,
+        "rank_std": 3.96232255123179
+      },
+      {
+        "rank": 8,
+        "feature_id": 131,
+        "feature": "medical_specialty_Surgery-Vascular",
+        "mean_rank": 11.8,
+        "rank_std": 10.084641788382966
+      },
+      {
+        "rank": 9,
+        "feature_id": 126,
+        "feature": "medical_specialty_Orthopedics-Reconstructive",
+        "mean_rank": 12.2,
+        "rank_std": 6.016643582596529
+      },
+      {
+        "rank": 10,
+        "feature_id": 36,
+        "feature": "diag_1_440",
+        "mean_rank": 16.0,
+        "rank_std": 3.6742346141747673
+      },
+      {
+        "rank": 11,
+        "feature_id": 55,
+        "feature": "diag_2_403",
+        "mean_rank": 17.8,
+        "rank_std": 8.555699854482976
+      },
+      {
+        "rank": 12,
+        "feature_id": 153,
+        "feature": "payer_code_BC",
+        "mean_rank": 19.2,
+        "rank_std": 14.042791745233567
+      },
+      {
+        "rank": 13,
+        "feature_id": 75,
+        "feature": "diag_3_2506",
+        "mean_rank": 19.8,
+        "rank_std": 6.833739825307955
+      },
+      {
+        "rank": 14,
+        "feature_id": 34,
+        "feature": "diag_1_433",
+        "mean_rank": 21.2,
+        "rank_std": 6.418722614352485
+      },
+      {
+        "rank": 15,
+        "feature_id": 33,
+        "feature": "diag_1_428",
+        "mean_rank": 25.0,
+        "rank_std": 9.746794344808963
+      },
+      {
+        "rank": 16,
+        "feature_id": 110,
+        "feature": "glyburide_infrequent_sklearn",
+        "mean_rank": 25.0,
+        "rank_std": 11.661903789690601
+      },
+      {
+        "rank": 17,
+        "feature_id": 30,
+        "feature": "diag_1_410",
+        "mean_rank": 27.6,
+        "rank_std": 18.836135484753765
+      },
+      {
+        "rank": 18,
+        "feature_id": 182,
+        "feature": "weight_nan",
+        "mean_rank": 28.4,
+        "rank_std": 19.424211695716252
+      },
+      {
+        "rank": 19,
+        "feature_id": 180,
+        "feature": "weight_75-100)",
+        "mean_rank": 29.4,
+        "rank_std": 13.315404612703288
+      },
+      {
+        "rank": 20,
+        "feature_id": 173,
+        "feature": "tolazamide_No",
+        "mean_rank": 29.6,
+        "rank_std": 20.329781110479278
+      },
+      {
+        "rank": 21,
+        "feature_id": 154,
+        "feature": "payer_code_CM",
+        "mean_rank": 30.6,
+        "rank_std": 12.934450123604018
+      },
+      {
+        "rank": 22,
+        "feature_id": 174,
+        "feature": "tolazamide_infrequent_sklearn",
+        "mean_rank": 30.8,
+        "rank_std": 36.91476669301866
+      },
+      {
+        "rank": 23,
+        "feature_id": 135,
+        "feature": "metformin-pioglitazone_No",
+        "mean_rank": 33.4,
+        "rank_std": 26.884940022250376
+      },
+      {
+        "rank": 24,
+        "feature_id": 70,
+        "feature": "diag_2_707",
+        "mean_rank": 33.8,
+        "rank_std": 13.736811857195978
+      },
+      {
+        "rank": 25,
+        "feature_id": 38,
+        "feature": "diag_1_491",
+        "mean_rank": 34.2,
+        "rank_std": 16.69431040804022
+      },
+      {
+        "rank": 26,
+        "feature_id": 101,
+        "feature": "glipizide-metformin_No",
+        "mean_rank": 34.8,
+        "rank_std": 39.05380903317883
+      },
+      {
+        "rank": 27,
+        "feature_id": 181,
+        "feature": "weight_infrequent_sklearn",
+        "mean_rank": 35.4,
+        "rank_std": 15.962455951387932
+      },
+      {
+        "rank": 28,
+        "feature_id": 89,
+        "feature": "diag_3_780",
+        "mean_rank": 38.0,
+        "rank_std": 5.612486080160912
+      },
+      {
+        "rank": 29,
+        "feature_id": 150,
+        "feature": "number_emergency",
+        "mean_rank": 38.2,
+        "rank_std": 12.275992831539126
+      },
+      {
+        "rank": 30,
+        "feature_id": 46,
+        "feature": "diag_1_998",
+        "mean_rank": 39.2,
+        "rank_std": 24.28373941550189
+      },
+      {
+        "rank": 31,
+        "feature_id": 43,
+        "feature": "diag_1_780",
+        "mean_rank": 39.4,
+        "rank_std": 14.909728367747013
+      },
+      {
+        "rank": 32,
+        "feature_id": 141,
+        "feature": "metformin_infrequent_sklearn",
+        "mean_rank": 40.2,
+        "rank_std": 25.013996082193664
+      },
+      {
+        "rank": 33,
+        "feature_id": 159,
+        "feature": "payer_code_SP",
+        "mean_rank": 42.0,
+        "rank_std": 37.20886991027811
+      },
+      {
+        "rank": 34,
+        "feature_id": 32,
+        "feature": "diag_1_427",
+        "mean_rank": 45.4,
+        "rank_std": 16.890825912311097
+      },
+      {
+        "rank": 35,
+        "feature_id": 54,
+        "feature": "diag_2_401",
+        "mean_rank": 45.6,
+        "rank_std": 18.1190507477627
+      },
+      {
+        "rank": 36,
+        "feature_id": 144,
+        "feature": "nateglinide_No",
+        "mean_rank": 47.6,
+        "rank_std": 3.646916505762094
+      },
+      {
+        "rank": 37,
+        "feature_id": 102,
+        "feature": "glipizide-metformin_infrequent_sklearn",
+        "mean_rank": 47.8,
+        "rank_std": 40.591871107402774
+      },
+      {
+        "rank": 38,
+        "feature_id": 176,
+        "feature": "tolbutamide_infrequent_sklearn",
+        "mean_rank": 49.2,
+        "rank_std": 50.85469496516521
+      },
+      {
+        "rank": 39,
+        "feature_id": 80,
+        "feature": "diag_3_403",
+        "mean_rank": 49.4,
+        "rank_std": 23.13655116909173
+      },
+      {
+        "rank": 40,
+        "feature_id": 128,
+        "feature": "medical_specialty_Radiologist",
+        "mean_rank": 51.8,
+        "rank_std": 28.472794032198525
+      },
+      {
+        "rank": 41,
+        "feature_id": 64,
+        "feature": "diag_2_496",
+        "mean_rank": 55.0,
+        "rank_std": 15.47578754054216
+      },
+      {
+        "rank": 42,
+        "feature_id": 136,
+        "feature": "metformin-pioglitazone_infrequent_sklearn",
+        "mean_rank": 55.6,
+        "rank_std": 69.43918202283204
+      },
+      {
+        "rank": 43,
+        "feature_id": 123,
+        "feature": "medical_specialty_Nephrology",
+        "mean_rank": 57.2,
+        "rank_std": 21.695621678117455
+      },
+      {
+        "rank": 44,
+        "feature_id": 44,
+        "feature": "diag_1_786",
+        "mean_rank": 58.6,
+        "rank_std": 15.69394787808345
+      },
+      {
+        "rank": 45,
+        "feature_id": 1,
+        "feature": "A1Cresult_8",
+        "mean_rank": 58.8,
+        "rank_std": 15.786069808536894
+      },
+      {
+        "rank": 46,
+        "feature_id": 49,
+        "feature": "diag_2_250",
+        "mean_rank": 58.8,
+        "rank_std": 20.400980368599935
+      },
+      {
+        "rank": 47,
+        "feature_id": 17,
+        "feature": "age_infrequent_sklearn",
+        "mean_rank": 59.2,
+        "rank_std": 39.75801805925441
+      },
+      {
+        "rank": 48,
+        "feature_id": 2,
+        "feature": "A1Cresult_Norm",
+        "mean_rank": 59.4,
+        "rank_std": 47.395147430934315
+      },
+      {
+        "rank": 49,
+        "feature_id": 152,
+        "feature": "number_outpatient",
+        "mean_rank": 60.2,
+        "rank_std": 19.162463307205574
+      },
+      {
+        "rank": 50,
+        "feature_id": 84,
+        "feature": "diag_3_428",
+        "mean_rank": 60.6,
+        "rank_std": 21.14946807841748
+      },
+      {
+        "rank": 51,
+        "feature_id": 121,
+        "feature": "medical_specialty_FamilyGeneralPractice",
+        "mean_rank": 63.2,
+        "rank_std": 36.928308924184435
+      },
+      {
+        "rank": 52,
+        "feature_id": 175,
+        "feature": "tolbutamide_No",
+        "mean_rank": 63.8,
+        "rank_std": 58.80221084279059
+      },
+      {
+        "rank": 53,
+        "feature_id": 162,
+        "feature": "payer_code_nan",
+        "mean_rank": 64.6,
+        "rank_std": 43.609631963592626
+      },
+      {
+        "rank": 54,
+        "feature_id": 105,
+        "feature": "glipizide_infrequent_sklearn",
+        "mean_rank": 65.4,
+        "rank_std": 50.60928768516704
+      },
+      {
+        "rank": 55,
+        "feature_id": 16,
+        "feature": "age_90-100)",
+        "mean_rank": 66.0,
+        "rank_std": 50.926417506044935
+      },
+      {
+        "rank": 56,
+        "feature_id": 92,
+        "feature": "diag_3_nan",
+        "mean_rank": 66.8,
+        "rank_std": 21.300234740490538
+      },
+      {
+        "rank": 57,
+        "feature_id": 51,
+        "feature": "diag_2_25002",
+        "mean_rank": 68.6,
+        "rank_std": 34.195028878478816
+      },
+      {
+        "rank": 58,
+        "feature_id": 40,
+        "feature": "diag_1_682",
+        "mean_rank": 69.6,
+        "rank_std": 32.761257607118814
+      },
+      {
+        "rank": 59,
+        "feature_id": 143,
+        "feature": "miglitol_infrequent_sklearn",
+        "mean_rank": 71.6,
+        "rank_std": 44.73030292765744
+      },
+      {
+        "rank": 60,
+        "feature_id": 160,
+        "feature": "payer_code_UN",
+        "mean_rank": 71.6,
+        "rank_std": 32.11385993617086
+      },
+      {
+        "rank": 61,
+        "feature_id": 158,
+        "feature": "payer_code_MD",
+        "mean_rank": 71.8,
+        "rank_std": 32.76736181019156
+      },
+      {
+        "rank": 62,
+        "feature_id": 118,
+        "feature": "max_glu_serum_nan",
+        "mean_rank": 73.6,
+        "rank_std": 48.72678934631339
+      },
+      {
+        "rank": 63,
+        "feature_id": 145,
+        "feature": "nateglinide_infrequent_sklearn",
+        "mean_rank": 74.6,
+        "rank_std": 26.623298067669978
+      },
+      {
+        "rank": 64,
+        "feature_id": 61,
+        "feature": "diag_2_427",
+        "mean_rank": 75.0,
+        "rank_std": 36.71511950137164
+      },
+      {
+        "rank": 65,
+        "feature_id": 47,
+        "feature": "diag_1_V57",
+        "mean_rank": 75.8,
+        "rank_std": 8.927485648266257
+      },
+      {
+        "rank": 66,
+        "feature_id": 106,
+        "feature": "glyburide-metformin_No",
+        "mean_rank": 82.4,
+        "rank_std": 45.37400136642128
+      },
+      {
+        "rank": 67,
+        "feature_id": 29,
+        "feature": "diag_1_296",
+        "mean_rank": 82.6,
+        "rank_std": 15.469324484281788
+      },
+      {
+        "rank": 68,
+        "feature_id": 86,
+        "feature": "diag_3_585",
+        "mean_rank": 82.6,
+        "rank_std": 27.245183060497137
+      },
+      {
+        "rank": 69,
+        "feature_id": 10,
+        "feature": "age_30-40)",
+        "mean_rank": 82.8,
+        "rank_std": 46.64439944945159
+      },
+      {
+        "rank": 70,
+        "feature_id": 11,
+        "feature": "age_40-50)",
+        "mean_rank": 82.8,
+        "rank_std": 40.27033647736259
+      },
+      {
+        "rank": 71,
+        "feature_id": 88,
+        "feature": "diag_3_707",
+        "mean_rank": 82.8,
+        "rank_std": 33.95143590483325
+      },
+      {
+        "rank": 72,
+        "feature_id": 142,
+        "feature": "miglitol_No",
+        "mean_rank": 83.4,
+        "rank_std": 45.09212791607865
+      },
+      {
+        "rank": 73,
+        "feature_id": 45,
+        "feature": "diag_1_996",
+        "mean_rank": 88.0,
+        "rank_std": 50.24937810560445
+      },
+      {
+        "rank": 74,
+        "feature_id": 78,
+        "feature": "diag_3_285",
+        "mean_rank": 88.4,
+        "rank_std": 29.61925049693189
+      },
+      {
+        "rank": 75,
+        "feature_id": 138,
+        "feature": "metformin_No",
+        "mean_rank": 88.4,
+        "rank_std": 45.665085130764844
+      },
+      {
+        "rank": 76,
+        "feature_id": 58,
+        "feature": "diag_2_414",
+        "mean_rank": 88.6,
+        "rank_std": 24.965976848503242
+      },
+      {
+        "rank": 77,
+        "feature_id": 20,
+        "feature": "chlorpropamide_No",
+        "mean_rank": 89.2,
+        "rank_std": 38.596631977414816
+      },
+      {
+        "rank": 78,
+        "feature_id": 90,
+        "feature": "diag_3_V45",
+        "mean_rank": 89.6,
+        "rank_std": 13.538833036861043
+      },
+      {
+        "rank": 79,
+        "feature_id": 129,
+        "feature": "medical_specialty_Surgery-CardiovascularThoracic",
+        "mean_rank": 90.0,
+        "rank_std": 27.4135003237456
+      },
+      {
+        "rank": 80,
+        "feature_id": 23,
+        "feature": "diabetesMed_No",
+        "mean_rank": 90.6,
+        "rank_std": 47.3212425872356
+      },
+      {
+        "rank": 81,
+        "feature_id": 76,
+        "feature": "diag_3_272",
+        "mean_rank": 91.0,
+        "rank_std": 42.924352062669506
+      },
+      {
+        "rank": 82,
+        "feature_id": 161,
+        "feature": "payer_code_infrequent_sklearn",
+        "mean_rank": 91.0,
+        "rank_std": 24.647515087732476
+      },
+      {
+        "rank": 83,
+        "feature_id": 103,
+        "feature": "glipizide_No",
+        "mean_rank": 91.6,
+        "rank_std": 49.22194632478484
+      },
+      {
+        "rank": 84,
+        "feature_id": 53,
+        "feature": "diag_2_285",
+        "mean_rank": 91.8,
+        "rank_std": 24.128820940941146
+      },
+      {
+        "rank": 85,
+        "feature_id": 81,
+        "feature": "diag_3_414",
+        "mean_rank": 92.2,
+        "rank_std": 38.277930978567795
+      },
+      {
+        "rank": 86,
+        "feature_id": 100,
+        "feature": "glimepiride_infrequent_sklearn",
+        "mean_rank": 92.2,
+        "rank_std": 56.18006763968872
+      },
+      {
+        "rank": 87,
+        "feature_id": 168,
+        "feature": "repaglinide_infrequent_sklearn",
+        "mean_rank": 94.6,
+        "rank_std": 33.40359262115379
+      },
+      {
+        "rank": 88,
+        "feature_id": 178,
+        "feature": "troglitazone_infrequent_sklearn",
+        "mean_rank": 94.8,
+        "rank_std": 77.47709338894948
+      },
+      {
+        "rank": 89,
+        "feature_id": 149,
+        "feature": "number_diagnoses",
+        "mean_rank": 95.6,
+        "rank_std": 38.135285497816845
+      },
+      {
+        "rank": 90,
+        "feature_id": 48,
+        "feature": "diag_1_infrequent_sklearn",
+        "mean_rank": 97.4,
+        "rank_std": 34.246167668806386
+      },
+      {
+        "rank": 91,
+        "feature_id": 132,
+        "feature": "medical_specialty_Urology",
+        "mean_rank": 98.6,
+        "rank_std": 25.86116780039138
+      },
+      {
+        "rank": 92,
+        "feature_id": 125,
+        "feature": "medical_specialty_Orthopedics",
+        "mean_rank": 98.8,
+        "rank_std": 36.98242825991825
+      },
+      {
+        "rank": 93,
+        "feature_id": 0,
+        "feature": "A1Cresult_7",
+        "mean_rank": 99.2,
+        "rank_std": 65.48434927522759
+      },
+      {
+        "rank": 94,
+        "feature_id": 85,
+        "feature": "diag_3_496",
+        "mean_rank": 100.0,
+        "rank_std": 50.749384232717546
+      },
+      {
+        "rank": 95,
+        "feature_id": 127,
+        "feature": "medical_specialty_Psychiatry",
+        "mean_rank": 100.0,
+        "rank_std": 40.847276531000205
+      },
+      {
+        "rank": 96,
+        "feature_id": 155,
+        "feature": "payer_code_CP",
+        "mean_rank": 101.2,
+        "rank_std": 32.93478404362172
+      },
+      {
+        "rank": 97,
+        "feature_id": 115,
+        "feature": "max_glu_serum_200",
+        "mean_rank": 101.4,
+        "rank_std": 34.61647006845152
+      },
+      {
+        "rank": 98,
+        "feature_id": 96,
+        "feature": "glimepiride-pioglitazone_No",
+        "mean_rank": 101.8,
+        "rank_std": 45.12981276274033
+      },
+      {
+        "rank": 99,
+        "feature_id": 130,
+        "feature": "medical_specialty_Surgery-General",
+        "mean_rank": 102.0,
+        "rank_std": 33.436506994600975
+      },
+      {
+        "rank": 100,
+        "feature_id": 104,
+        "feature": "glipizide_Steady",
+        "mean_rank": 102.2,
+        "rank_std": 48.27214517711016
+      },
+      {
+        "rank": 101,
+        "feature_id": 24,
+        "feature": "diabetesMed_Yes",
+        "mean_rank": 103.8,
+        "rank_std": 49.25139591930365
+      },
+      {
+        "rank": 102,
+        "feature_id": 99,
+        "feature": "glimepiride_Steady",
+        "mean_rank": 104.4,
+        "rank_std": 35.302974378938664
+      },
+      {
+        "rank": 103,
+        "feature_id": 3,
+        "feature": "A1Cresult_nan",
+        "mean_rank": 105.2,
+        "rank_std": 31.14803364580178
+      },
+      {
+        "rank": 104,
+        "feature_id": 5,
+        "feature": "acarbose_infrequent_sklearn",
+        "mean_rank": 105.2,
+        "rank_std": 45.70229753524433
+      },
+      {
+        "rank": 105,
+        "feature_id": 60,
+        "feature": "diag_2_425",
+        "mean_rank": 105.2,
+        "rank_std": 52.31825685169566
+      },
+      {
+        "rank": 106,
+        "feature_id": 117,
+        "feature": "max_glu_serum_Norm",
+        "mean_rank": 105.2,
+        "rank_std": 54.755821608300245
+      },
+      {
+        "rank": 107,
+        "feature_id": 165,
+        "feature": "pioglitazone_infrequent_sklearn",
+        "mean_rank": 105.4,
+        "rank_std": 46.71509392048784
+      },
+      {
+        "rank": 108,
+        "feature_id": 82,
+        "feature": "diag_3_424",
+        "mean_rank": 105.8,
+        "rank_std": 41.06945336865345
+      },
+      {
+        "rank": 109,
+        "feature_id": 22,
+        "feature": "citoglipton_No",
+        "mean_rank": 106.2,
+        "rank_std": 41.05118755894889
+      },
+      {
+        "rank": 110,
+        "feature_id": 109,
+        "feature": "glyburide_Steady",
+        "mean_rank": 106.2,
+        "rank_std": 43.80296793597438
+      },
+      {
+        "rank": 111,
+        "feature_id": 19,
+        "feature": "change_No",
+        "mean_rank": 107.2,
+        "rank_std": 34.95282535074954
+      },
+      {
+        "rank": 112,
+        "feature_id": 170,
+        "feature": "rosiglitazone_Steady",
+        "mean_rank": 107.4,
+        "rank_std": 33.00454514154074
+      },
+      {
+        "rank": 113,
+        "feature_id": 6,
+        "feature": "acetohexamide_No",
+        "mean_rank": 107.8,
+        "rank_std": 39.098593325080124
+      },
+      {
+        "rank": 114,
+        "feature_id": 18,
+        "feature": "change_Ch",
+        "mean_rank": 108.4,
+        "rank_std": 58.33780935208315
+      },
+      {
+        "rank": 115,
+        "feature_id": 156,
+        "feature": "payer_code_HM",
+        "mean_rank": 109.0,
+        "rank_std": 40.26164427839479
+      },
+      {
+        "rank": 116,
+        "feature_id": 77,
+        "feature": "diag_3_276",
+        "mean_rank": 110.6,
+        "rank_std": 20.501219475923865
+      },
+      {
+        "rank": 117,
+        "feature_id": 69,
+        "feature": "diag_2_682",
+        "mean_rank": 111.0,
+        "rank_std": 37.18198488515641
+      },
+      {
+        "rank": 118,
+        "feature_id": 133,
+        "feature": "medical_specialty_infrequent_sklearn",
+        "mean_rank": 112.4,
+        "rank_std": 40.259160448275615
+      },
+      {
+        "rank": 119,
+        "feature_id": 28,
+        "feature": "diag_1_276",
+        "mean_rank": 113.6,
+        "rank_std": 18.782971010998235
+      },
+      {
+        "rank": 120,
+        "feature_id": 21,
+        "feature": "chlorpropamide_infrequent_sklearn",
+        "mean_rank": 113.8,
+        "rank_std": 21.87921387984495
+      },
+      {
+        "rank": 121,
+        "feature_id": 163,
+        "feature": "pioglitazone_No",
+        "mean_rank": 113.8,
+        "rank_std": 37.92360742334516
+      },
+      {
+        "rank": 122,
+        "feature_id": 116,
+        "feature": "max_glu_serum_300",
+        "mean_rank": 114.0,
+        "rank_std": 53.02357966037374
+      },
+      {
+        "rank": 123,
+        "feature_id": 9,
+        "feature": "age_20-30)",
+        "mean_rank": 115.8,
+        "rank_std": 40.195770921827084
+      },
+      {
+        "rank": 124,
+        "feature_id": 107,
+        "feature": "glyburide-metformin_infrequent_sklearn",
+        "mean_rank": 116.2,
+        "rank_std": 43.90558051091
+      },
+      {
+        "rank": 125,
+        "feature_id": 56,
+        "feature": "diag_2_411",
+        "mean_rank": 116.4,
+        "rank_std": 24.182638400306942
+      },
+      {
+        "rank": 126,
+        "feature_id": 15,
+        "feature": "age_80-90)",
+        "mean_rank": 116.6,
+        "rank_std": 45.208406297944194
+      },
+      {
+        "rank": 127,
+        "feature_id": 98,
+        "feature": "glimepiride_No",
+        "mean_rank": 116.6,
+        "rank_std": 35.161058004559536
+      },
+      {
+        "rank": 128,
+        "feature_id": 122,
+        "feature": "medical_specialty_InternalMedicine",
+        "mean_rank": 117.0,
+        "rank_std": 40.601724101323576
+      },
+      {
+        "rank": 129,
+        "feature_id": 4,
+        "feature": "acarbose_No",
+        "mean_rank": 117.8,
+        "rank_std": 31.877892025665687
+      },
+      {
+        "rank": 130,
+        "feature_id": 111,
+        "feature": "insulin_Down",
+        "mean_rank": 117.8,
+        "rank_std": 50.13182621848121
+      },
+      {
+        "rank": 131,
+        "feature_id": 95,
+        "feature": "gender",
+        "mean_rank": 118.8,
+        "rank_std": 18.939376969689366
+      },
+      {
+        "rank": 132,
+        "feature_id": 119,
+        "feature": "medical_specialty_Cardiology",
+        "mean_rank": 120.4,
+        "rank_std": 32.385181796618035
+      },
+      {
+        "rank": 133,
+        "feature_id": 113,
+        "feature": "insulin_Steady",
+        "mean_rank": 120.8,
+        "rank_std": 23.34951819631403
+      },
+      {
+        "rank": 134,
+        "feature_id": 140,
+        "feature": "metformin_Up",
+        "mean_rank": 121.2,
+        "rank_std": 45.592762583550474
+      },
+      {
+        "rank": 135,
+        "feature_id": 94,
+        "feature": "examide_No",
+        "mean_rank": 122.0,
+        "rank_std": 18.560711193270585
+      },
+      {
+        "rank": 136,
+        "feature_id": 13,
+        "feature": "age_60-70)",
+        "mean_rank": 122.2,
+        "rank_std": 38.173289090671766
+      },
+      {
+        "rank": 137,
+        "feature_id": 139,
+        "feature": "metformin_Steady",
+        "mean_rank": 122.2,
+        "rank_std": 38.284461599975515
+      },
+      {
+        "rank": 138,
+        "feature_id": 71,
+        "feature": "diag_2_780",
+        "mean_rank": 122.6,
+        "rank_std": 36.623762777737625
+      },
+      {
+        "rank": 139,
+        "feature_id": 7,
+        "feature": "acetohexamide_infrequent_sklearn",
+        "mean_rank": 122.8,
+        "rank_std": 57.19877621068479
+      },
+      {
+        "rank": 140,
+        "feature_id": 134,
+        "feature": "medical_specialty_nan",
+        "mean_rank": 123.8,
+        "rank_std": 17.020575783445164
+      },
+      {
+        "rank": 141,
+        "feature_id": 57,
+        "feature": "diag_2_413",
+        "mean_rank": 125.6,
+        "rank_std": 43.136991086537314
+      },
+      {
+        "rank": 142,
+        "feature_id": 68,
+        "feature": "diag_2_599",
+        "mean_rank": 127.0,
+        "rank_std": 46.94145289613435
+      },
+      {
+        "rank": 143,
+        "feature_id": 27,
+        "feature": "diag_1_2508",
+        "mean_rank": 131.2,
+        "rank_std": 25.153528579505497
+      },
+      {
+        "rank": 144,
+        "feature_id": 41,
+        "feature": "diag_1_715",
+        "mean_rank": 131.2,
+        "rank_std": 27.077666073722085
+      },
+      {
+        "rank": 145,
+        "feature_id": 26,
+        "feature": "diag_1_2507",
+        "mean_rank": 132.8,
+        "rank_std": 35.54855833926321
+      },
+      {
+        "rank": 146,
+        "feature_id": 35,
+        "feature": "diag_1_434",
+        "mean_rank": 133.2,
+        "rank_std": 50.236440956739756
+      },
+      {
+        "rank": 147,
+        "feature_id": 62,
+        "feature": "diag_2_428",
+        "mean_rank": 133.2,
+        "rank_std": 37.21155734445953
+      },
+      {
+        "rank": 148,
+        "feature_id": 8,
+        "feature": "admission_type_id",
+        "mean_rank": 135.8,
+        "rank_std": 23.541452801388445
+      },
+      {
+        "rank": 149,
+        "feature_id": 164,
+        "feature": "pioglitazone_Steady",
+        "mean_rank": 136.2,
+        "rank_std": 41.075540166868166
+      },
+      {
+        "rank": 150,
+        "feature_id": 179,
+        "feature": "weight_50-75)",
+        "mean_rank": 136.4,
+        "rank_std": 29.837895368138817
+      },
+      {
+        "rank": 151,
+        "feature_id": 67,
+        "feature": "diag_2_585",
+        "mean_rank": 136.8,
+        "rank_std": 25.68462575160479
+      },
+      {
+        "rank": 152,
+        "feature_id": 50,
+        "feature": "diag_2_25001",
+        "mean_rank": 137.6,
+        "rank_std": 27.336788399517598
+      },
+      {
+        "rank": 153,
+        "feature_id": 97,
+        "feature": "glimepiride-pioglitazone_infrequent_sklearn",
+        "mean_rank": 137.8,
+        "rank_std": 53.61622888641088
+      },
+      {
+        "rank": 154,
+        "feature_id": 66,
+        "feature": "diag_2_584",
+        "mean_rank": 139.4,
+        "rank_std": 18.84940317357555
+      },
+      {
+        "rank": 155,
+        "feature_id": 157,
+        "feature": "payer_code_MC",
+        "mean_rank": 139.6,
+        "rank_std": 27.1624741141156
+      },
+      {
+        "rank": 156,
+        "feature_id": 167,
+        "feature": "repaglinide_No",
+        "mean_rank": 140.4,
+        "rank_std": 35.295892112255785
+      },
+      {
+        "rank": 157,
+        "feature_id": 14,
+        "feature": "age_70-80)",
+        "mean_rank": 140.8,
+        "rank_std": 48.22032766375608
+      },
+      {
+        "rank": 158,
+        "feature_id": 93,
+        "feature": "discharge_disposition_id",
+        "mean_rank": 142.0,
+        "rank_std": 21.02379604162864
+      },
+      {
+        "rank": 159,
+        "feature_id": 74,
+        "feature": "diag_3_25001",
+        "mean_rank": 142.2,
+        "rank_std": 15.17234326002414
+      },
+      {
+        "rank": 160,
+        "feature_id": 42,
+        "feature": "diag_1_722",
+        "mean_rank": 142.4,
+        "rank_std": 19.819182626939995
+      },
+      {
+        "rank": 161,
+        "feature_id": 177,
+        "feature": "troglitazone_No",
+        "mean_rank": 143.0,
+        "rank_std": 34.8926926447358
+      },
+      {
+        "rank": 162,
+        "feature_id": 72,
+        "feature": "diag_2_infrequent_sklearn",
+        "mean_rank": 143.8,
+        "rank_std": 19.447364860052378
+      },
+      {
+        "rank": 163,
+        "feature_id": 120,
+        "feature": "medical_specialty_EmergencyTrauma",
+        "mean_rank": 144.0,
+        "rank_std": 7.615773105863909
+      },
+      {
+        "rank": 164,
+        "feature_id": 31,
+        "feature": "diag_1_414",
+        "mean_rank": 144.4,
+        "rank_std": 14.432601983010548
+      },
+      {
+        "rank": 165,
+        "feature_id": 137,
+        "feature": "metformin-rosiglitazone_No",
+        "mean_rank": 147.6,
+        "rank_std": 25.5401644473954
+      },
+      {
+        "rank": 166,
+        "feature_id": 37,
+        "feature": "diag_1_486",
+        "mean_rank": 149.0,
+        "rank_std": 24.78911051248108
+      },
+      {
+        "rank": 167,
+        "feature_id": 112,
+        "feature": "insulin_No",
+        "mean_rank": 150.2,
+        "rank_std": 50.62311724894072
+      },
+      {
+        "rank": 168,
+        "feature_id": 148,
+        "feature": "num_procedures",
+        "mean_rank": 151.2,
+        "rank_std": 16.25423021862309
+      },
+      {
+        "rank": 169,
+        "feature_id": 12,
+        "feature": "age_50-60)",
+        "mean_rank": 151.8,
+        "rank_std": 37.37244974576861
+      },
+      {
+        "rank": 170,
+        "feature_id": 166,
+        "feature": "race",
+        "mean_rank": 151.8,
+        "rank_std": 35.478162297390774
+      },
+      {
+        "rank": 171,
+        "feature_id": 83,
+        "feature": "diag_3_427",
+        "mean_rank": 152.4,
+        "rank_std": 27.281862106535176
+      },
+      {
+        "rank": 172,
+        "feature_id": 39,
+        "feature": "diag_1_584",
+        "mean_rank": 153.0,
+        "rank_std": 27.16615541441225
+      },
+      {
+        "rank": 173,
+        "feature_id": 114,
+        "feature": "insulin_Up",
+        "mean_rank": 153.4,
+        "rank_std": 22.76620302114518
+      },
+      {
+        "rank": 174,
+        "feature_id": 87,
+        "feature": "diag_3_599",
+        "mean_rank": 154.2,
+        "rank_std": 18.471599822430107
+      },
+      {
+        "rank": 175,
+        "feature_id": 108,
+        "feature": "glyburide_No",
+        "mean_rank": 158.6,
+        "rank_std": 19.39845354661036
+      },
+      {
+        "rank": 176,
+        "feature_id": 169,
+        "feature": "rosiglitazone_No",
+        "mean_rank": 159.6,
+        "rank_std": 17.126003620226175
+      },
+      {
+        "rank": 177,
+        "feature_id": 73,
+        "feature": "diag_3_250",
+        "mean_rank": 161.2,
+        "rank_std": 20.72920644887305
+      },
+      {
+        "rank": 178,
+        "feature_id": 91,
+        "feature": "diag_3_infrequent_sklearn",
+        "mean_rank": 165.8,
+        "rank_std": 18.48512915832616
+      },
+      {
+        "rank": 179,
+        "feature_id": 172,
+        "feature": "time_in_hospital",
+        "mean_rank": 166.6,
+        "rank_std": 13.813037319865606
+      },
+      {
+        "rank": 180,
+        "feature_id": 52,
+        "feature": "diag_2_276",
+        "mean_rank": 168.6,
+        "rank_std": 14.553350129781114
+      },
+      {
+        "rank": 181,
+        "feature_id": 79,
+        "feature": "diag_3_401",
+        "mean_rank": 169.0,
+        "rank_std": 10.464224768228174
+      },
+      {
+        "rank": 182,
+        "feature_id": 146,
+        "feature": "num_lab_procedures",
+        "mean_rank": 171.4,
+        "rank_std": 7.402702209328699
+      },
+      {
+        "rank": 183,
+        "feature_id": 147,
+        "feature": "num_medications",
+        "mean_rank": 173.4,
+        "rank_std": 9.316651759081694
+      }
+    ]
+  }
+}

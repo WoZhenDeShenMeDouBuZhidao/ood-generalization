@@ -1,0 +1,98 @@
+{
+  "benchmark": "acs",
+  "dataset": "acsincome",
+  "model": "ce-grad-l2",
+  "method": "score",
+  "feature_space": "semantic",
+  "created_at": "2026-08-12T00:24:22",
+  "aggregation": {
+    "name": "normalized_mean",
+    "normalization": "per_repeat_sum_to_one",
+    "repeat_count": 5,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 8,
+        "feature": "SEX",
+        "score_mean": 0.6236021223537427,
+        "score_std": 0.026085379971220755
+      },
+      {
+        "rank": 2,
+        "feature_id": 2,
+        "feature": "SCHL",
+        "score_mean": 0.2992215734291789,
+        "score_std": 0.017928029089605474
+      },
+      {
+        "rank": 3,
+        "feature_id": 3,
+        "feature": "MAR",
+        "score_mean": 0.03949354637894906,
+        "score_std": 0.007240303592704053
+      },
+      {
+        "rank": 4,
+        "feature_id": 6,
+        "feature": "RELP",
+        "score_mean": 0.012115612434254089,
+        "score_std": 0.0016958226535142582
+      },
+      {
+        "rank": 5,
+        "feature_id": 1,
+        "feature": "COW",
+        "score_mean": 0.010745240922046387,
+        "score_std": 0.0035624406999946933
+      },
+      {
+        "rank": 6,
+        "feature_id": 7,
+        "feature": "WKHP",
+        "score_mean": 0.006365263643836948,
+        "score_std": 0.00039281718432828056
+      },
+      {
+        "rank": 7,
+        "feature_id": 9,
+        "feature": "RAC1P",
+        "score_mean": 0.005183899434966613,
+        "score_std": 0.001372689180076344
+      },
+      {
+        "rank": 8,
+        "feature_id": 0,
+        "feature": "AGEP",
+        "score_mean": 0.0031468029600511967,
+        "score_std": 0.0005772089307574085
+      },
+      {
+        "rank": 9,
+        "feature_id": 5,
+        "feature": "POBP",
+        "score_mean": 0.00012567485376523097,
+        "score_std": 3.443207447168284e-05
+      },
+      {
+        "rank": 10,
+        "feature_id": 4,
+        "feature": "OCCP",
+        "score_mean": 2.635892089153268e-07,
+        "score_std": 6.48611560542624e-08
+      }
+    ]
+  }
+}

@@ -1,21 +1,93 @@
+# Environment lock captured from the Linux x86_64 `ood` conda environment on
+# 2026-08-01: Python 3.10.19, pip 26.0.1, PyTorch 2.10.0+cu128, CUDA 12.8
+# runtime wheels. The remote machine needs an NVIDIA driver compatible with
+# CUDA 12.8; the system driver is intentionally not managed by pip or conda.
+#
+# Recreate the environment from the project root:
+#
+#   conda create -n ood -y \
+#     python=3.10.19 pip=26.0.1 setuptools=80.10.2 wheel=0.46.3
+#   conda activate ood
+#   python -m pip install -r requirements.txt
+#   python -m pip install --no-deps \
+#     git+https://github.com/mlfoundations/tableshift.git@fca9429814703a07e3902d005d46563a207b7f0a
+#
+# TableShift must be installed last with `--no-deps`. Its upstream metadata
+# pins `numpy==1.23.5`, `rtdl`, and `tab-transformer-pytorch`; this project uses
+# only the dataset API and intentionally keeps the current NumPy/PyTorch stack.
+# Consequently, `pip check` reports those known TableShift metadata conflicts
+# in both the source and reproduced environments.
+#
+Jinja2==3.1.6
+Mako==1.3.12
+MarkupSafe==3.0.3
+PyYAML==6.0.3
+Pygments==2.20.0
+SQLAlchemy==2.0.50
+aiohappyeyeballs==2.6.2
+aiohttp==3.14.1
+aiosignal==1.4.0
+alembic==1.18.4
+annotated-doc==0.0.4
+annotated-types==0.7.0
+anyio==4.13.0
+async-timeout==5.0.1
+attrs==26.1.0
+bleach==6.4.0
+blosc2==2.7.1
+category_encoders==2.8.1
 certifi==2026.2.25
 charset-normalizer==3.4.4
+click==8.4.1
+cloudpickle==3.1.2
+colorlog==6.10.1
 contourpy==1.3.2
 cuda-bindings==12.9.4
 cuda-pathfinder==1.4.0
 cycler==0.12.1
+datasets==5.0.0
+dill==0.4.1
+distlib==0.4.1
+distro==1.9.0
+einops==0.8.2
+et_xmlfile==2.0.0
+exceptiongroup==1.3.1
+fairlearn==0.9.0
 filelock==3.25.0
 folktables==0.0.12
 fonttools==4.61.1
+frozendict==2.4.7
+frozenlist==1.8.0
 fsspec==2026.2.0
+future==1.0.0
+greenlet==3.5.1
+grpcio==1.81.0
+h11==0.16.0
+h5py==3.16.0
+hf-xet==1.5.0
+httpcore==1.0.9
+httpx==0.28.1
+huggingface_hub==1.18.0
+hyperopt==0.2.7
 idna==3.11
-Jinja2==3.1.6
+jiter==0.14.0
 joblib==1.5.3
+jsonschema-specifications==2025.9.1
+jsonschema==4.26.0
+kaggle==1.7.4.5
 kiwisolver==1.4.9
-MarkupSafe==3.0.3
+llvmlite==0.46.0
+markdown-it-py==4.2.0
 matplotlib==3.10.8
+mdurl==0.1.2
 mpmath==1.3.0
+msgpack==1.1.2
+multidict==6.7.1
+multiprocess==0.70.19
+ndindex==1.10.1
 networkx==3.4.2
+numba==0.64.0
+numexpr==2.14.1
 numpy==2.2.6
 nvidia-cublas-cu12==12.8.4.1
 nvidia-cuda-cupti-cu12==12.8.90
@@ -32,21 +104,57 @@ nvidia-nccl-cu12==2.27.5
 nvidia-nvjitlink-cu12==12.8.93
 nvidia-nvshmem-cu12==3.4.5
 nvidia-nvtx-cu12==12.8.90
-packaging @ file:///home/task_176104877067765/conda-bld/packaging_1761049113113/work
+openai==2.36.0
+openpyxl==3.1.5
+optuna==4.9.0
+packaging==25.0
 pandas==2.3.3
+patsy==1.0.2
 pillow==12.1.1
+platformdirs==4.10.0
+propcache==0.5.2
+protobuf==7.35.0
+py-cpuinfo==9.0.0
+py4j==0.10.9.9
+pyarrow==24.0.0
+pydantic==2.13.4
+pydantic_core==2.46.4
 pyparsing==3.3.2
 python-dateutil==2.9.0.post0
+python-discovery==1.4.0
+python-dotenv==1.2.2
+python-slugify==8.0.4
 pytz==2026.1.post1
+ray==2.2.0
+referencing==0.37.0
 requests==2.32.5
+rich==15.0.0
+rpds-py==0.30.0
 scikit-learn==1.7.2
 scipy==1.15.3
+shap==0.49.1
+shellingham==1.5.4
 six==1.17.0
+slicer==0.0.8
+sniffio==1.3.1
+statsmodels==0.14.6
 sympy==1.14.0
+tables==3.10.1
+text-unidecode==1.3
 threadpoolctl==3.6.0
+tomli==2.4.1
 torch==2.10.0
+torchinfo==1.8.0
+torchvision==0.25.0
 tqdm==4.67.3
 triton==3.6.0
+typer==0.25.1
+typing-inspection==0.4.2
 typing_extensions==4.15.0
 tzdata==2025.3
 urllib3==2.6.3
+virtualenv==21.4.2
+webencodings==0.5.1
+xport==3.2.1
+xxhash==3.7.0
+yarl==1.24.2

@@ -1,0 +1,1503 @@
+{
+  "benchmark": "whyshift",
+  "dataset": "accident",
+  "model": "gpt-5.4",
+  "method": "score_all",
+  "temperature": 0.5,
+  "created_at": "2026-06-09T19:18:13",
+  "token_usage": {
+    "num_calls": 5,
+    "input_tokens": 9045,
+    "output_tokens": 5636,
+    "total_tokens": 14681
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 0,
+        "feature": "Distance(mi)",
+        "score_mean": 0.932,
+        "score_std": 0.007483314773547842
+      },
+      {
+        "rank": 2,
+        "feature_id": 26,
+        "feature": "Weather_Condition",
+        "score_mean": 0.818,
+        "score_std": 0.033105890714493685
+      },
+      {
+        "rank": 3,
+        "feature_id": 4,
+        "feature": "Visibility(mi)",
+        "score_mean": 0.784,
+        "score_std": 0.025768197453450242
+      },
+      {
+        "rank": 4,
+        "feature_id": 11,
+        "feature": "Junction",
+        "score_mean": 0.75,
+        "score_std": 0.03346640106136305
+      },
+      {
+        "rank": 5,
+        "feature_id": 6,
+        "feature": "Precipitation(in)",
+        "score_mean": 0.704,
+        "score_std": 0.02870540018881462
+      },
+      {
+        "rank": 6,
+        "feature_id": 23,
+        "feature": "Hour",
+        "score_mean": 0.7,
+        "score_std": 0.023664319132398456
+      },
+      {
+        "rank": 7,
+        "feature_id": 27,
+        "feature": "Civil_Twilight",
+        "score_mean": 0.6940000000000001,
+        "score_std": 0.054990908339470075
+      },
+      {
+        "rank": 8,
+        "feature_id": 18,
+        "feature": "Traffic_Signal",
+        "score_mean": 0.642,
+        "score_std": 0.032496153618543834
+      },
+      {
+        "rank": 9,
+        "feature_id": 9,
+        "feature": "Crossing",
+        "score_mean": 0.58,
+        "score_std": 0.026076809620810583
+      },
+      {
+        "rank": 10,
+        "feature_id": 5,
+        "feature": "Wind_Speed(mph)",
+        "score_mean": 0.546,
+        "score_std": 0.043174066289845804
+      },
+      {
+        "rank": 11,
+        "feature_id": 16,
+        "feature": "Stop",
+        "score_mean": 0.528,
+        "score_std": 0.029257477676655572
+      },
+      {
+        "rank": 12,
+        "feature_id": 1,
+        "feature": "Temperature(F)",
+        "score_mean": 0.48,
+        "score_std": 0.04560701700396554
+      },
+      {
+        "rank": 13,
+        "feature_id": 21,
+        "feature": "Weekday",
+        "score_mean": 0.476,
+        "score_std": 0.03611094017053559
+      },
+      {
+        "rank": 14,
+        "feature_id": 20,
+        "feature": "Month",
+        "score_mean": 0.458,
+        "score_std": 0.018330302779823355
+      },
+      {
+        "rank": 15,
+        "feature_id": 2,
+        "feature": "Humidity(%)",
+        "score_mean": 0.442,
+        "score_std": 0.05306599664568641
+      },
+      {
+        "rank": 16,
+        "feature_id": 10,
+        "feature": "Give_Way",
+        "score_mean": 0.432,
+        "score_std": 0.027129319932501082
+      },
+      {
+        "rank": 17,
+        "feature_id": 14,
+        "feature": "Roundabout",
+        "score_mean": 0.388,
+        "score_std": 0.04118252056394799
+      },
+      {
+        "rank": 18,
+        "feature_id": 13,
+        "feature": "Railway",
+        "score_mean": 0.334,
+        "score_std": 0.00489897948556636
+      },
+      {
+        "rank": 19,
+        "feature_id": 8,
+        "feature": "Bump",
+        "score_mean": 0.33,
+        "score_std": 0.03999999999999999
+      },
+      {
+        "rank": 20,
+        "feature_id": 17,
+        "feature": "Traffic_Calming",
+        "score_mean": 0.3,
+        "score_std": 0.03098386676965933
+      },
+      {
+        "rank": 21,
+        "feature_id": 7,
+        "feature": "Amenity",
+        "score_mean": 0.276,
+        "score_std": 0.008000000000000007
+      },
+      {
+        "rank": 22,
+        "feature_id": 3,
+        "feature": "Pressure(in)",
+        "score_mean": 0.268,
+        "score_std": 0.05600000000000001
+      },
+      {
+        "rank": 23,
+        "feature_id": 15,
+        "feature": "Station",
+        "score_mean": 0.232,
+        "score_std": 0.011661903789690599
+      },
+      {
+        "rank": 24,
+        "feature_id": 25,
+        "feature": "Wind_Direction",
+        "score_mean": 0.19,
+        "score_std": 0.021908902300206645
+      },
+      {
+        "rank": 25,
+        "feature_id": 12,
+        "feature": "No_Exit",
+        "score_mean": 0.168,
+        "score_std": 0.01599999999999999
+      },
+      {
+        "rank": 26,
+        "feature_id": 22,
+        "feature": "Day",
+        "score_mean": 0.12,
+        "score_std": 0.0
+      },
+      {
+        "rank": 27,
+        "feature_id": 24,
+        "feature": "Minute",
+        "score_mean": 0.084,
+        "score_std": 0.004898979485566354
+      },
+      {
+        "rank": 28,
+        "feature_id": 19,
+        "feature": "Year",
+        "score_mean": 0.068,
+        "score_std": 0.009797958971132715
+      }
+    ],
+    "scores": [
+      {
+        "feature_id": 0,
+        "feature": "Distance(mi)",
+        "score_mean": 0.932,
+        "score_std": 0.007483314773547842,
+        "sample_scores": [
+          0.92,
+          0.93,
+          0.94,
+          0.94,
+          0.93
+        ]
+      },
+      {
+        "feature_id": 1,
+        "feature": "Temperature(F)",
+        "score_mean": 0.48,
+        "score_std": 0.04560701700396554,
+        "sample_scores": [
+          0.56,
+          0.42,
+          0.48,
+          0.46,
+          0.48
+        ]
+      },
+      {
+        "feature_id": 2,
+        "feature": "Humidity(%)",
+        "score_mean": 0.442,
+        "score_std": 0.05306599664568641,
+        "sample_scores": [
+          0.54,
+          0.38,
+          0.42,
+          0.43,
+          0.44
+        ]
+      },
+      {
+        "feature_id": 3,
+        "feature": "Pressure(in)",
+        "score_mean": 0.268,
+        "score_std": 0.05600000000000001,
+        "sample_scores": [
+          0.38,
+          0.24,
+          0.24,
+          0.24,
+          0.24
+        ]
+      },
+      {
+        "feature_id": 4,
+        "feature": "Visibility(mi)",
+        "score_mean": 0.784,
+        "score_std": 0.025768197453450242,
+        "sample_scores": [
+          0.78,
+          0.74,
+          0.82,
+          0.79,
+          0.79
+        ]
+      },
+      {
+        "feature_id": 5,
+        "feature": "Wind_Speed(mph)",
+        "score_mean": 0.546,
+        "score_std": 0.043174066289845804,
+        "sample_scores": [
+          0.62,
+          0.49,
+          0.55,
+          0.55,
+          0.52
+        ]
+      },
+      {
+        "feature_id": 6,
+        "feature": "Precipitation(in)",
+        "score_mean": 0.704,
+        "score_std": 0.02870540018881462,
+        "sample_scores": [
+          0.74,
+          0.67,
+          0.72,
+          0.72,
+          0.67
+        ]
+      },
+      {
+        "feature_id": 7,
+        "feature": "Amenity",
+        "score_mean": 0.276,
+        "score_std": 0.008000000000000007,
+        "sample_scores": [
+          0.28,
+          0.28,
+          0.26,
+          0.28,
+          0.28
+        ]
+      },
+      {
+        "feature_id": 8,
+        "feature": "Bump",
+        "score_mean": 0.33,
+        "score_std": 0.03999999999999999,
+        "sample_scores": [
+          0.41,
+          0.31,
+          0.31,
+          0.31,
+          0.31
+        ]
+      },
+      {
+        "feature_id": 9,
+        "feature": "Crossing",
+        "score_mean": 0.58,
+        "score_std": 0.026076809620810583,
+        "sample_scores": [
+          0.63,
+          0.56,
+          0.58,
+          0.57,
+          0.56
+        ]
+      },
+      {
+        "feature_id": 10,
+        "feature": "Give_Way",
+        "score_mean": 0.432,
+        "score_std": 0.027129319932501082,
+        "sample_scores": [
+          0.46,
+          0.41,
+          0.47,
+          0.41,
+          0.41
+        ]
+      },
+      {
+        "feature_id": 11,
+        "feature": "Junction",
+        "score_mean": 0.75,
+        "score_std": 0.03346640106136305,
+        "sample_scores": [
+          0.81,
+          0.72,
+          0.76,
+          0.74,
+          0.72
+        ]
+      },
+      {
+        "feature_id": 12,
+        "feature": "No_Exit",
+        "score_mean": 0.168,
+        "score_std": 0.01599999999999999,
+        "sample_scores": [
+          0.18,
+          0.16,
+          0.18,
+          0.14,
+          0.18
+        ]
+      },
+      {
+        "feature_id": 13,
+        "feature": "Railway",
+        "score_mean": 0.334,
+        "score_std": 0.00489897948556636,
+        "sample_scores": [
+          0.33,
+          0.33,
+          0.34,
+          0.33,
+          0.34
+        ]
+      },
+      {
+        "feature_id": 14,
+        "feature": "Roundabout",
+        "score_mean": 0.388,
+        "score_std": 0.04118252056394799,
+        "sample_scores": [
+          0.47,
+          0.37,
+          0.37,
+          0.36,
+          0.37
+        ]
+      },
+      {
+        "feature_id": 15,
+        "feature": "Station",
+        "score_mean": 0.232,
+        "score_std": 0.011661903789690599,
+        "sample_scores": [
+          0.24,
+          0.25,
+          0.22,
+          0.22,
+          0.23
+        ]
+      },
+      {
+        "feature_id": 16,
+        "feature": "Stop",
+        "score_mean": 0.528,
+        "score_std": 0.029257477676655572,
+        "sample_scores": [
+          0.58,
+          0.52,
+          0.52,
+          0.53,
+          0.49
+        ]
+      },
+      {
+        "feature_id": 17,
+        "feature": "Traffic_Calming",
+        "score_mean": 0.3,
+        "score_std": 0.03098386676965933,
+        "sample_scores": [
+          0.36,
+          0.29,
+          0.29,
+          0.27,
+          0.29
+        ]
+      },
+      {
+        "feature_id": 18,
+        "feature": "Traffic_Signal",
+        "score_mean": 0.642,
+        "score_std": 0.032496153618543834,
+        "sample_scores": [
+          0.69,
+          0.61,
+          0.67,
+          0.61,
+          0.63
+        ]
+      },
+      {
+        "feature_id": 19,
+        "feature": "Year",
+        "score_mean": 0.068,
+        "score_std": 0.009797958971132715,
+        "sample_scores": [
+          0.08,
+          0.08,
+          0.06,
+          0.06,
+          0.06
+        ]
+      },
+      {
+        "feature_id": 20,
+        "feature": "Month",
+        "score_mean": 0.458,
+        "score_std": 0.018330302779823355,
+        "sample_scores": [
+          0.44,
+          0.46,
+          0.49,
+          0.44,
+          0.46
+        ]
+      },
+      {
+        "feature_id": 21,
+        "feature": "Weekday",
+        "score_mean": 0.476,
+        "score_std": 0.03611094017053559,
+        "sample_scores": [
+          0.52,
+          0.51,
+          0.44,
+          0.48,
+          0.43
+        ]
+      },
+      {
+        "feature_id": 22,
+        "feature": "Day",
+        "score_mean": 0.12,
+        "score_std": 0.0,
+        "sample_scores": [
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ]
+      },
+      {
+        "feature_id": 23,
+        "feature": "Hour",
+        "score_mean": 0.7,
+        "score_std": 0.023664319132398456,
+        "sample_scores": [
+          0.71,
+          0.69,
+          0.74,
+          0.67,
+          0.69
+        ]
+      },
+      {
+        "feature_id": 24,
+        "feature": "Minute",
+        "score_mean": 0.084,
+        "score_std": 0.004898979485566354,
+        "sample_scores": [
+          0.09,
+          0.09,
+          0.08,
+          0.08,
+          0.08
+        ]
+      },
+      {
+        "feature_id": 25,
+        "feature": "Wind_Direction",
+        "score_mean": 0.19,
+        "score_std": 0.021908902300206645,
+        "sample_scores": [
+          0.22,
+          0.18,
+          0.16,
+          0.18,
+          0.21
+        ]
+      },
+      {
+        "feature_id": 26,
+        "feature": "Weather_Condition",
+        "score_mean": 0.818,
+        "score_std": 0.033105890714493685,
+        "sample_scores": [
+          0.83,
+          0.81,
+          0.86,
+          0.83,
+          0.76
+        ]
+      },
+      {
+        "feature_id": 27,
+        "feature": "Civil_Twilight",
+        "score_mean": 0.6940000000000001,
+        "score_std": 0.054990908339470075,
+        "sample_scores": [
+          0.76,
+          0.66,
+          0.63,
+          0.76,
+          0.66
+        ]
+      }
+    ],
+    "samples": [
+      {
+        "task_summary": "Predict the accident outcome label in WhyShift's accident task using features likely to remain causally or semantically related across environment shifts.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.92,
+            "rationale": "Directly reflects accident extent/severity and should remain predictive across domains.",
+            "feature": "Distance(mi)"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.56,
+            "rationale": "Temperature affects road conditions and driving risk but varies by region and season.",
+            "feature": "Temperature(F)"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.54,
+            "rationale": "Humidity is moderately related to visibility and precipitation but is indirect.",
+            "feature": "Humidity(%)"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.38,
+            "rationale": "Pressure has weak, indirect links to hazardous weather and is often brittle.",
+            "feature": "Pressure(in)"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.78,
+            "rationale": "Poor visibility is a robust safety-related factor across locations and times.",
+            "feature": "Visibility(mi)"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.62,
+            "rationale": "Wind speed can affect control and hazard level with reasonable cross-domain stability.",
+            "feature": "Wind_Speed(mph)"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.74,
+            "rationale": "Precipitation directly worsens road safety and should generalize well.",
+            "feature": "Precipitation(in)"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.28,
+            "rationale": "Nearby amenities may proxy urban context more than stable accident mechanism.",
+            "feature": "Amenity"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.41,
+            "rationale": "Road bumps can influence driving behavior and local hazard, though sparse and context-specific.",
+            "feature": "Bump"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.63,
+            "rationale": "Crossings are structurally linked to conflict points and should be broadly predictive.",
+            "feature": "Crossing"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.46,
+            "rationale": "Give-way locations indicate intersection control and some stable risk structure.",
+            "feature": "Give_Way"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.81,
+            "rationale": "Junctions are strong, semantically meaningful conflict points across domains.",
+            "feature": "Junction"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.18,
+            "rationale": "No-exit is rare and likely weakly informative outside specific local layouts.",
+            "feature": "No_Exit"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.33,
+            "rationale": "Railway proximity may matter for specific incidents but is sparse and context-dependent.",
+            "feature": "Railway"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.47,
+            "rationale": "Roundabouts change traffic flow and conflict patterns in a fairly stable way.",
+            "feature": "Roundabout"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.24,
+            "rationale": "Station proximity is largely a land-use proxy and may encode locality.",
+            "feature": "Station"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.58,
+            "rationale": "Stop-controlled areas have stable implications for traffic conflict and speed.",
+            "feature": "Stop"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.36,
+            "rationale": "Traffic calming relates to lower-speed environments but may mostly proxy neighborhood type.",
+            "feature": "Traffic_Calming"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.69,
+            "rationale": "Traffic signals mark important intersections and control regimes with stable relevance.",
+            "feature": "Traffic_Signal"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.08,
+            "rationale": "Year is highly vulnerable to temporal domain shift and dataset-specific trends.",
+            "feature": "Year"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.44,
+            "rationale": "Month captures seasonal driving conditions but can shift across geographies and years.",
+            "feature": "Month"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.52,
+            "rationale": "Weekday reflects commuting patterns that are fairly general though not purely causal.",
+            "feature": "Weekday"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.12,
+            "rationale": "Day of month is mostly calendar noise and can encode brittle temporal artifacts.",
+            "feature": "Day"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.71,
+            "rationale": "Hour strongly captures traffic density, darkness, and behavior patterns that generalize reasonably well.",
+            "feature": "Hour"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.09,
+            "rationale": "Minute within hour is unlikely to be semantically meaningful and may be noise.",
+            "feature": "Minute"
+          },
+          {
+            "feature_id": 25,
+            "score": 0.22,
+            "rationale": "Wind direction is weakly related to accidents and highly location/weather-regime specific.",
+            "feature": "Wind_Direction"
+          },
+          {
+            "feature_id": 26,
+            "score": 0.83,
+            "rationale": "Weather condition directly captures hazardous states like rain, snow, and fog with strong stable relevance.",
+            "feature": "Weather_Condition"
+          },
+          {
+            "feature_id": 27,
+            "score": 0.76,
+            "rationale": "Day versus night is a robust determinant of visibility and driving conditions across domains.",
+            "feature": "Civil_Twilight"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict the accident outcome label in WhyShift's accident task using features likely to remain predictive across distribution shifts such as geography, time, and environment.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.93,
+            "rationale": "Directly reflects spatial extent/impact of the incident and is usually strongly tied to accident severity across domains.",
+            "feature": "Distance(mi)"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.42,
+            "rationale": "Temperature affects road conditions and driving risk but its marginal relationship is indirect and varies by region and season.",
+            "feature": "Temperature(F)"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.38,
+            "rationale": "Humidity can correlate with fog or precipitation but is a weak standalone predictor and somewhat climate-specific.",
+            "feature": "Humidity(%)"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.24,
+            "rationale": "Atmospheric pressure is only loosely connected to hazardous conditions and is likely a weak, noisy proxy.",
+            "feature": "Pressure(in)"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.74,
+            "rationale": "Poor visibility is a broadly stable risk factor for more serious incidents and should generalize reasonably well.",
+            "feature": "Visibility(mi)"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.49,
+            "rationale": "Wind speed can affect vehicle control and weather severity, though effects are moderate and context-dependent.",
+            "feature": "Wind_Speed(mph)"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.67,
+            "rationale": "Precipitation is a robust indicator of hazardous driving conditions across locations and time.",
+            "feature": "Precipitation(in)"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.28,
+            "rationale": "Nearby amenities may proxy urban context and traffic density but are indirect and can encode location-specific patterns.",
+            "feature": "Amenity"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.31,
+            "rationale": "Road bumps may affect driving behavior locally, but rarity and infrastructure differences limit stable marginal usefulness.",
+            "feature": "Bump"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.56,
+            "rationale": "Crossings indicate conflict points in road layout and should be moderately predictive across domains.",
+            "feature": "Crossing"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.41,
+            "rationale": "Give-way locations capture intersection control structure, which is relevant but less common and somewhat sparse.",
+            "feature": "Give_Way"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.72,
+            "rationale": "Junctions are consistently associated with complex traffic interactions and accident severity patterns.",
+            "feature": "Junction"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.16,
+            "rationale": "No-exit status is a weak contextual cue and likely contributes little stable signal.",
+            "feature": "No_Exit"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.33,
+            "rationale": "Railway proximity can indicate special crossing hazards, but it is sparse and highly context-specific.",
+            "feature": "Railway"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.37,
+            "rationale": "Roundabouts alter conflict structure in a semantically meaningful way, though prevalence differs across regions.",
+            "feature": "Roundabout"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.25,
+            "rationale": "Station proximity mostly proxies urban land use and may not transfer cleanly across domains.",
+            "feature": "Station"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.52,
+            "rationale": "Stop-controlled areas capture intersection behavior and conflict patterns with moderate stable relevance.",
+            "feature": "Stop"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.29,
+            "rationale": "Traffic calming features may relate to lower speeds and local road design, but they are sparse and heterogeneous.",
+            "feature": "Traffic_Calming"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.61,
+            "rationale": "Traffic signals mark busy controlled intersections and are broadly informative about accident context.",
+            "feature": "Traffic_Signal"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.08,
+            "rationale": "Year is highly vulnerable to temporal dataset shift, reporting changes, and benchmark-specific drift rather than stable causation.",
+            "feature": "Year"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.46,
+            "rationale": "Month captures seasonal effects on weather and travel patterns, though some of that may shift geographically.",
+            "feature": "Month"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.51,
+            "rationale": "Weekday reflects commuting and traffic behavior patterns that are fairly stable across many domains.",
+            "feature": "Weekday"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.12,
+            "rationale": "Day of month is mostly calendar noise and can spuriously encode reporting cycles rather than stable accident mechanisms.",
+            "feature": "Day"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.69,
+            "rationale": "Hour of day strongly captures traffic density, lighting, and human behavior patterns that often generalize.",
+            "feature": "Hour"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.09,
+            "rationale": "Minute within hour is unlikely to have meaningful stable signal and may mostly add noise or logging artifacts.",
+            "feature": "Minute"
+          },
+          {
+            "feature_id": 25,
+            "score": 0.18,
+            "rationale": "Wind direction is rarely a stable marginal predictor and can depend heavily on local geography and weather systems.",
+            "feature": "Wind_Direction"
+          },
+          {
+            "feature_id": 26,
+            "score": 0.81,
+            "rationale": "Weather condition categories directly encode hazardous states like rain, snow, and fog with strong cross-domain semantic relevance.",
+            "feature": "Weather_Condition"
+          },
+          {
+            "feature_id": 27,
+            "score": 0.66,
+            "rationale": "Day versus night is a stable and meaningful determinant of visibility and driving conditions across settings.",
+            "feature": "Civil_Twilight"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict the accident outcome label in WhyShift's accident task using features that should remain causally or semantically related across domain shifts.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.94,
+            "rationale": "Directly reflects incident extent/severity and should remain strongly predictive across regions and times.",
+            "feature": "Distance(mi)"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.48,
+            "rationale": "Temperature affects road conditions but its marginal effect is indirect and varies by climate domain.",
+            "feature": "Temperature(F)"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.42,
+            "rationale": "Humidity can matter through fog or precipitation risk, but is a weak standalone predictor and somewhat climate-specific.",
+            "feature": "Humidity(%)"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.24,
+            "rationale": "Atmospheric pressure is a noisy proxy for weather systems and usually has limited stable marginal signal.",
+            "feature": "Pressure(in)"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.82,
+            "rationale": "Poor visibility is broadly and mechanistically related to more serious hazardous driving conditions.",
+            "feature": "Visibility(mi)"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.55,
+            "rationale": "Wind speed can worsen driving safety and incident impact, though effects are moderate and context dependent.",
+            "feature": "Wind_Speed(mph)"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.72,
+            "rationale": "Precipitation directly captures adverse conditions that should generalize across domains.",
+            "feature": "Precipitation(in)"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.26,
+            "rationale": "Nearby amenities may correlate with urban context, but this is a weak and potentially domain-specific shortcut.",
+            "feature": "Amenity"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.31,
+            "rationale": "Road bumps can affect crash risk and speed, but they are sparse and infrastructure prevalence varies by locale.",
+            "feature": "Bump"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.58,
+            "rationale": "Crossings indicate conflict points in road layout, a reasonably stable structural risk factor.",
+            "feature": "Crossing"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.47,
+            "rationale": "Give-way locations encode intersection control and conflict, though prevalence and mapping quality vary.",
+            "feature": "Give_Way"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.76,
+            "rationale": "Junctions are robust indicators of complex traffic environments and tend to generalize well.",
+            "feature": "Junction"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.18,
+            "rationale": "No-exit roads are uncommon and likely provide limited stable marginal information.",
+            "feature": "No_Exit"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.34,
+            "rationale": "Railway proximity can mark crossing hazards but is sparse and partly location-specific.",
+            "feature": "Railway"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.37,
+            "rationale": "Roundabouts affect traffic conflict patterns, but rarity and regional design differences reduce robustness.",
+            "feature": "Roundabout"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.22,
+            "rationale": "Station proximity mostly captures urban land use and may act as a brittle context proxy.",
+            "feature": "Station"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.52,
+            "rationale": "Stop-controlled areas indicate intersection risk and lower-speed environments with moderate stable signal.",
+            "feature": "Stop"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.29,
+            "rationale": "Traffic calming may relate to lower speeds and neighborhood roads, but effects are mixed and sparse.",
+            "feature": "Traffic_Calming"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.67,
+            "rationale": "Traffic signals mark busy controlled intersections, a broadly predictive and semantically stable road-context feature.",
+            "feature": "Traffic_Signal"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.06,
+            "rationale": "Year is highly vulnerable to temporal shift and can encode collection or reporting changes rather than stable mechanism.",
+            "feature": "Year"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.49,
+            "rationale": "Month captures seasonality in weather and travel patterns, but some of its signal is domain dependent.",
+            "feature": "Month"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.44,
+            "rationale": "Weekday reflects commuting structure and traffic mix with moderate but not fully invariant usefulness.",
+            "feature": "Weekday"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.12,
+            "rationale": "Day of month is mostly calendar noise and unlikely to transfer robustly.",
+            "feature": "Day"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.74,
+            "rationale": "Hour strongly captures traffic density, visibility, and human behavior patterns that are broadly stable.",
+            "feature": "Hour"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.08,
+            "rationale": "Minute within hour is unlikely to have meaningful stable semantic signal and may reflect logging artifacts.",
+            "feature": "Minute"
+          },
+          {
+            "feature_id": 25,
+            "score": 0.16,
+            "rationale": "Wind direction is weakly related to accidents marginally and heavily depends on local geography and weather systems.",
+            "feature": "Wind_Direction"
+          },
+          {
+            "feature_id": 26,
+            "score": 0.86,
+            "rationale": "Weather condition directly encodes hazardous states like rain, snow, and fog that should transfer well.",
+            "feature": "Weather_Condition"
+          },
+          {
+            "feature_id": 27,
+            "score": 0.63,
+            "rationale": "Day versus night is a robust determinant of visibility and driving conditions across domains.",
+            "feature": "Civil_Twilight"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict the accident outcome label in WhyShift's accident task using features that should remain predictive across distribution shifts such as geography, time, and environment.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.94,
+            "rationale": "Directly reflects incident extent and is highly tied to accident severity across domains.",
+            "feature": "Distance(mi)"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.46,
+            "rationale": "Temperature affects road conditions but its marginal effect is indirect and partly region-season specific.",
+            "feature": "Temperature(F)"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.43,
+            "rationale": "Humidity can matter through fog or precipitation risk, but is a weak standalone predictor.",
+            "feature": "Humidity(%)"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.24,
+            "rationale": "Pressure is meteorologically related yet usually only weakly and indirectly linked to accident outcome.",
+            "feature": "Pressure(in)"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.79,
+            "rationale": "Poor visibility is a robust hazard indicator that should generalize across locations and times.",
+            "feature": "Visibility(mi)"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.55,
+            "rationale": "Wind speed can worsen driving conditions and incident seriousness in a reasonably stable way.",
+            "feature": "Wind_Speed(mph)"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.72,
+            "rationale": "Precipitation directly captures hazardous conditions and should transfer well across domains.",
+            "feature": "Precipitation(in)"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.28,
+            "rationale": "Nearby amenities proxy local road context but may also encode urbanicity and geography-specific patterns.",
+            "feature": "Amenity"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.31,
+            "rationale": "Road bumps can affect driving risk, though rarity and mapping differences limit stable usefulness.",
+            "feature": "Bump"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.57,
+            "rationale": "Crossings indicate conflict points in traffic flow and are plausibly stable structural predictors.",
+            "feature": "Crossing"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.41,
+            "rationale": "Give-way signs reflect intersection control and some risk structure, though prevalence varies by locale.",
+            "feature": "Give_Way"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.74,
+            "rationale": "Junctions are strong, semantically meaningful indicators of complex traffic environments and accident severity.",
+            "feature": "Junction"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.14,
+            "rationale": "No-exit status is sparse and likely weakly related to the target outside specific local contexts.",
+            "feature": "No_Exit"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.33,
+            "rationale": "Railway proximity may matter for some incidents but is sparse and partly location-specific.",
+            "feature": "Railway"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.36,
+            "rationale": "Roundabouts alter conflict patterns in a meaningful way, but rarity reduces broad marginal utility.",
+            "feature": "Roundabout"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.22,
+            "rationale": "Station proximity mostly proxies dense urban areas and may be a brittle geographic shortcut.",
+            "feature": "Station"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.53,
+            "rationale": "Stop signs capture intersection control and should have moderate stable relevance to accident outcomes.",
+            "feature": "Stop"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.27,
+            "rationale": "Traffic-calming features affect road behavior but are sparse and unevenly mapped across domains.",
+            "feature": "Traffic_Calming"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.61,
+            "rationale": "Traffic signals mark busy controlled intersections, a broadly stable predictor of accident context.",
+            "feature": "Traffic_Signal"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.06,
+            "rationale": "Year is mainly a temporal domain identifier and risks capturing nonstationary reporting or collection effects.",
+            "feature": "Year"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.44,
+            "rationale": "Month captures seasonality in weather and travel patterns, but can also encode domain shift.",
+            "feature": "Month"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.48,
+            "rationale": "Weekday reflects commuting and traffic regime differences that are fairly stable across domains.",
+            "feature": "Weekday"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.12,
+            "rationale": "Day of month has little semantic connection to accident outcome and mostly adds noise.",
+            "feature": "Day"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.67,
+            "rationale": "Hour strongly captures traffic density, darkness, and behavior patterns that generalize reasonably well.",
+            "feature": "Hour"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.08,
+            "rationale": "Minute within hour is unlikely to be causally meaningful and may reflect logging artifacts.",
+            "feature": "Minute"
+          },
+          {
+            "feature_id": 25,
+            "score": 0.18,
+            "rationale": "Wind direction is highly context dependent and weakly predictive without local geography interactions.",
+            "feature": "Wind_Direction"
+          },
+          {
+            "feature_id": 26,
+            "score": 0.83,
+            "rationale": "Weather condition directly represents hazardous states like rain, snow, or fog and should generalize well.",
+            "feature": "Weather_Condition"
+          },
+          {
+            "feature_id": 27,
+            "score": 0.76,
+            "rationale": "Day versus night is a robust determinant of visibility and driving conditions across domains.",
+            "feature": "Civil_Twilight"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict the accident outcome/severity from roadway context, weather, and time features in a way that generalizes across shifted domains in WhyShift accident.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.93,
+            "rationale": "Directly reflects spatial extent/impact of the incident and is usually strongly tied to severity across domains.",
+            "feature": "Distance(mi)"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.48,
+            "rationale": "Weather temperature affects road risk and conditions but its marginal relation is moderate and partly region-season dependent.",
+            "feature": "Temperature(F)"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.44,
+            "rationale": "Humidity can proxy adverse weather but is indirect and less consistently predictive across locations.",
+            "feature": "Humidity(%)"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.24,
+            "rationale": "Atmospheric pressure is a weak, indirect weather signal and likely brittle marginally.",
+            "feature": "Pressure(in)"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.79,
+            "rationale": "Low visibility is a robust hazard indicator that should transfer well across domains.",
+            "feature": "Visibility(mi)"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.52,
+            "rationale": "Wind speed can materially affect driving conditions, though effects are weaker than visibility or precipitation.",
+            "feature": "Wind_Speed(mph)"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.67,
+            "rationale": "Precipitation is a stable causal driver of hazardous road conditions and should generalize reasonably well.",
+            "feature": "Precipitation(in)"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.28,
+            "rationale": "Nearby amenities may correlate with urban context and traffic density but are mostly coarse location proxies.",
+            "feature": "Amenity"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.31,
+            "rationale": "Road bumps can affect driving behavior and incident patterns, though prevalence is sparse and context specific.",
+            "feature": "Bump"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.56,
+            "rationale": "Crossings represent conflict points in road geometry and are plausibly stable predictors.",
+            "feature": "Crossing"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.41,
+            "rationale": "Give-way control indicates intersection structure and risk, with moderate but not dominant transferability.",
+            "feature": "Give_Way"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.72,
+            "rationale": "Junctions are strong, semantically meaningful road-risk locations and should remain predictive across domains.",
+            "feature": "Junction"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.18,
+            "rationale": "No-exit status is a weak contextual cue and may mostly encode local road-network quirks.",
+            "feature": "No_Exit"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.34,
+            "rationale": "Railway proximity can matter for crossing-related incidents but is relatively sparse and context dependent.",
+            "feature": "Railway"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.37,
+            "rationale": "Roundabouts alter traffic conflict structure in a semantically meaningful way, though they are uncommon in many regions.",
+            "feature": "Roundabout"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.23,
+            "rationale": "Station proximity is mostly a land-use/urbanicity proxy and may not transfer cleanly.",
+            "feature": "Station"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.49,
+            "rationale": "Stop signs encode intersection control and can stably affect accident patterns.",
+            "feature": "Stop"
+          },
+          {
+            "feature_id": 17,
+            "score": 0.29,
+            "rationale": "Traffic-calming features may relate to lower-speed environments but are sparse and locality specific.",
+            "feature": "Traffic_Calming"
+          },
+          {
+            "feature_id": 18,
+            "score": 0.63,
+            "rationale": "Traffic signals are common structural indicators of complex intersections and should be broadly predictive.",
+            "feature": "Traffic_Signal"
+          },
+          {
+            "feature_id": 19,
+            "score": 0.06,
+            "rationale": "Year is highly vulnerable to temporal-domain identification and dataset drift rather than stable semantics.",
+            "feature": "Year"
+          },
+          {
+            "feature_id": 20,
+            "score": 0.46,
+            "rationale": "Month captures seasonality in weather and travel patterns, but some effect overlaps with direct weather features.",
+            "feature": "Month"
+          },
+          {
+            "feature_id": 21,
+            "score": 0.43,
+            "rationale": "Weekday reflects commuting and traffic regime differences that are fairly stable but not purely causal.",
+            "feature": "Weekday"
+          },
+          {
+            "feature_id": 22,
+            "score": 0.12,
+            "rationale": "Day of month is mostly calendar noise and can act as a brittle temporal artifact.",
+            "feature": "Day"
+          },
+          {
+            "feature_id": 23,
+            "score": 0.69,
+            "rationale": "Hour strongly captures traffic density, lighting, and human behavior patterns that usually transfer well.",
+            "feature": "Hour"
+          },
+          {
+            "feature_id": 24,
+            "score": 0.08,
+            "rationale": "Minute within hour is unlikely to have stable semantic signal and may reflect logging artifacts.",
+            "feature": "Minute"
+          },
+          {
+            "feature_id": 25,
+            "score": 0.21,
+            "rationale": "Wind direction is a weak and location-dependent meteorological detail with limited stable marginal value.",
+            "feature": "Wind_Direction"
+          },
+          {
+            "feature_id": 26,
+            "score": 0.76,
+            "rationale": "Weather condition categories like rain, fog, and snow are strong semantically grounded predictors of hazardous driving.",
+            "feature": "Weather_Condition"
+          },
+          {
+            "feature_id": 27,
+            "score": 0.66,
+            "rationale": "Day versus night is a robust visibility and behavior signal that should generalize across domains.",
+            "feature": "Civil_Twilight"
+          }
+        ]
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `accident`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"Distance(mi)\",\n    \"type\": \"continuous\",\n    \"description\": \"Distance affected by the accident.\",\n    \"values\": \"Miles.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"Temperature(F)\",\n    \"type\": \"continuous\",\n    \"description\": \"Weather temperature near the accident.\",\n    \"values\": \"Degrees Fahrenheit.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"Humidity(%)\",\n    \"type\": \"continuous\",\n    \"description\": \"Weather humidity near the accident.\",\n    \"values\": \"Percentage.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"Pressure(in)\",\n    \"type\": \"continuous\",\n    \"description\": \"Atmospheric pressure near the accident.\",\n    \"values\": \"Inches.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"Visibility(mi)\",\n    \"type\": \"continuous\",\n    \"description\": \"Weather visibility near the accident.\",\n    \"values\": \"Miles.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"Wind_Speed(mph)\",\n    \"type\": \"continuous\",\n    \"description\": \"Wind speed near the accident.\",\n    \"values\": \"Miles per hour.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"Precipitation(in)\",\n    \"type\": \"continuous\",\n    \"description\": \"Precipitation near the accident.\",\n    \"values\": \"Inches.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"Amenity\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether an amenity point of interest is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"Bump\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a road bump is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"Crossing\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a crossing is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"Give_Way\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a give-way sign is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"Junction\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a road junction is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"No_Exit\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a no-exit road feature is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"Railway\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a railway feature is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"Roundabout\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a roundabout is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"Station\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a station point of interest is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"Stop\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a stop sign is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"Traffic_Calming\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a traffic-calming feature is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"Traffic_Signal\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a traffic signal is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"Year\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident year.\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"Month\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident month.\",\n    \"values\": \"1-12.\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"Weekday\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident day of week.\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"Day\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident day of month.\",\n    \"values\": \"1-31.\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"Hour\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident hour of day.\",\n    \"values\": \"0-23.\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"Minute\",\n    \"type\": \"integer\",\n    \"description\": \"Accident minute within the hour.\",\n    \"values\": \"0-59.\"\n  },\n  {\n    \"feature_id\": 25,\n    \"feature\": \"Wind_Direction\",\n    \"type\": \"categorical\",\n    \"description\": \"Wind direction category near the accident.\",\n    \"values\": \"Grouped one-hot model columns: E, N, NE, NW, S, SE, SW, Variable, W.\"\n  },\n  {\n    \"feature_id\": 26,\n    \"feature\": \"Weather_Condition\",\n    \"type\": \"categorical\",\n    \"description\": \"Weather condition category near the accident.\",\n    \"values\": \"Grouped one-hot model columns such as Cloudy, Fog, Rain, Snow, Thunderstorm, Windy.\"\n  },\n  {\n    \"feature_id\": 27,\n    \"feature\": \"Civil_Twilight\",\n    \"type\": \"categorical\",\n    \"description\": \"Whether the accident occurred during civil twilight day or night.\",\n    \"values\": \"Grouped one-hot model columns; current model column indicates Night.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\"task_summary\":\"Predict the accident outcome label in WhyShift's accident task using features likely to remain causally or semantically related across environment shifts.\",\"scores\":[{\"feature_id\":0,\"score\":0.92,\"rationale\":\"Directly reflects accident extent/severity and should remain predictive across domains.\"},{\"feature_id\":1,\"score\":0.56,\"rationale\":\"Temperature affects road conditions and driving risk but varies by region and season.\"},{\"feature_id\":2,\"score\":0.54,\"rationale\":\"Humidity is moderately related to visibility and precipitation but is indirect.\"},{\"feature_id\":3,\"score\":0.38,\"rationale\":\"Pressure has weak, indirect links to hazardous weather and is often brittle.\"},{\"feature_id\":4,\"score\":0.78,\"rationale\":\"Poor visibility is a robust safety-related factor across locations and times.\"},{\"feature_id\":5,\"score\":0.62,\"rationale\":\"Wind speed can affect control and hazard level with reasonable cross-domain stability.\"},{\"feature_id\":6,\"score\":0.74,\"rationale\":\"Precipitation directly worsens road safety and should generalize well.\"},{\"feature_id\":7,\"score\":0.28,\"rationale\":\"Nearby amenities may proxy urban context more than stable accident mechanism.\"},{\"feature_id\":8,\"score\":0.41,\"rationale\":\"Road bumps can influence driving behavior and local hazard, though sparse and context-specific.\"},{\"feature_id\":9,\"score\":0.63,\"rationale\":\"Crossings are structurally linked to conflict points and should be broadly predictive.\"},{\"feature_id\":10,\"score\":0.46,\"rationale\":\"Give-way locations indicate intersection control and some stable risk structure.\"},{\"feature_id\":11,\"score\":0.81,\"rationale\":\"Junctions are strong, semantically meaningful conflict points across domains.\"},{\"feature_id\":12,\"score\":0.18,\"rationale\":\"No-exit is rare and likely weakly informative outside specific local layouts.\"},{\"feature_id\":13,\"score\":0.33,\"rationale\":\"Railway proximity may matter for specific incidents but is sparse and context-dependent.\"},{\"feature_id\":14,\"score\":0.47,\"rationale\":\"Roundabouts change traffic flow and conflict patterns in a fairly stable way.\"},{\"feature_id\":15,\"score\":0.24,\"rationale\":\"Station proximity is largely a land-use proxy and may encode locality.\"},{\"feature_id\":16,\"score\":0.58,\"rationale\":\"Stop-controlled areas have stable implications for traffic conflict and speed.\"},{\"feature_id\":17,\"score\":0.36,\"rationale\":\"Traffic calming relates to lower-speed environments but may mostly proxy neighborhood type.\"},{\"feature_id\":18,\"score\":0.69,\"rationale\":\"Traffic signals mark important intersections and control regimes with stable relevance.\"},{\"feature_id\":19,\"score\":0.08,\"rationale\":\"Year is highly vulnerable to temporal domain shift and dataset-specific trends.\"},{\"feature_id\":20,\"score\":0.44,\"rationale\":\"Month captures seasonal driving conditions but can shift across geographies and years.\"},{\"feature_id\":21,\"score\":0.52,\"rationale\":\"Weekday reflects commuting patterns that are fairly general though not purely causal.\"},{\"feature_id\":22,\"score\":0.12,\"rationale\":\"Day of month is mostly calendar noise and can encode brittle temporal artifacts.\"},{\"feature_id\":23,\"score\":0.71,\"rationale\":\"Hour strongly captures traffic density, darkness, and behavior patterns that generalize reasonably well.\"},{\"feature_id\":24,\"score\":0.09,\"rationale\":\"Minute within hour is unlikely to be semantically meaningful and may be noise.\"},{\"feature_id\":25,\"score\":0.22,\"rationale\":\"Wind direction is weakly related to accidents and highly location/weather-regime specific.\"},{\"feature_id\":26,\"score\":0.83,\"rationale\":\"Weather condition directly captures hazardous states like rain, snow, and fog with strong stable relevance.\"},{\"feature_id\":27,\"score\":0.76,\"rationale\":\"Day versus night is a robust determinant of visibility and driving conditions across domains.\"}]}",
+      "input_tokens": 1809,
+      "output_tokens": 853,
+      "total_tokens": 2662,
+      "response_id": "resp_0dbfa95631df4ec5006a27f607d1808198a9942bddcbc216ba",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `accident`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"Distance(mi)\",\n    \"type\": \"continuous\",\n    \"description\": \"Distance affected by the accident.\",\n    \"values\": \"Miles.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"Temperature(F)\",\n    \"type\": \"continuous\",\n    \"description\": \"Weather temperature near the accident.\",\n    \"values\": \"Degrees Fahrenheit.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"Humidity(%)\",\n    \"type\": \"continuous\",\n    \"description\": \"Weather humidity near the accident.\",\n    \"values\": \"Percentage.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"Pressure(in)\",\n    \"type\": \"continuous\",\n    \"description\": \"Atmospheric pressure near the accident.\",\n    \"values\": \"Inches.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"Visibility(mi)\",\n    \"type\": \"continuous\",\n    \"description\": \"Weather visibility near the accident.\",\n    \"values\": \"Miles.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"Wind_Speed(mph)\",\n    \"type\": \"continuous\",\n    \"description\": \"Wind speed near the accident.\",\n    \"values\": \"Miles per hour.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"Precipitation(in)\",\n    \"type\": \"continuous\",\n    \"description\": \"Precipitation near the accident.\",\n    \"values\": \"Inches.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"Amenity\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether an amenity point of interest is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"Bump\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a road bump is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"Crossing\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a crossing is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"Give_Way\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a give-way sign is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"Junction\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a road junction is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"No_Exit\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a no-exit road feature is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"Railway\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a railway feature is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"Roundabout\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a roundabout is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"Station\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a station point of interest is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"Stop\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a stop sign is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"Traffic_Calming\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a traffic-calming feature is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"Traffic_Signal\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a traffic signal is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"Year\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident year.\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"Month\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident month.\",\n    \"values\": \"1-12.\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"Weekday\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident day of week.\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"Day\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident day of month.\",\n    \"values\": \"1-31.\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"Hour\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident hour of day.\",\n    \"values\": \"0-23.\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"Minute\",\n    \"type\": \"integer\",\n    \"description\": \"Accident minute within the hour.\",\n    \"values\": \"0-59.\"\n  },\n  {\n    \"feature_id\": 25,\n    \"feature\": \"Wind_Direction\",\n    \"type\": \"categorical\",\n    \"description\": \"Wind direction category near the accident.\",\n    \"values\": \"Grouped one-hot model columns: E, N, NE, NW, S, SE, SW, Variable, W.\"\n  },\n  {\n    \"feature_id\": 26,\n    \"feature\": \"Weather_Condition\",\n    \"type\": \"categorical\",\n    \"description\": \"Weather condition category near the accident.\",\n    \"values\": \"Grouped one-hot model columns such as Cloudy, Fog, Rain, Snow, Thunderstorm, Windy.\"\n  },\n  {\n    \"feature_id\": 27,\n    \"feature\": \"Civil_Twilight\",\n    \"type\": \"categorical\",\n    \"description\": \"Whether the accident occurred during civil twilight day or night.\",\n    \"values\": \"Grouped one-hot model columns; current model column indicates Night.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict the accident outcome label in WhyShift's accident task using features likely to remain predictive across distribution shifts such as geography, time, and environment.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.93,\n      \"rationale\": \"Directly reflects spatial extent/impact of the incident and is usually strongly tied to accident severity across domains.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.42,\n      \"rationale\": \"Temperature affects road conditions and driving risk but its marginal relationship is indirect and varies by region and season.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.38,\n      \"rationale\": \"Humidity can correlate with fog or precipitation but is a weak standalone predictor and somewhat climate-specific.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.24,\n      \"rationale\": \"Atmospheric pressure is only loosely connected to hazardous conditions and is likely a weak, noisy proxy.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.74,\n      \"rationale\": \"Poor visibility is a broadly stable risk factor for more serious incidents and should generalize reasonably well.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.49,\n      \"rationale\": \"Wind speed can affect vehicle control and weather severity, though effects are moderate and context-dependent.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.67,\n      \"rationale\": \"Precipitation is a robust indicator of hazardous driving conditions across locations and time.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.28,\n      \"rationale\": \"Nearby amenities may proxy urban context and traffic density but are indirect and can encode location-specific patterns.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.31,\n      \"rationale\": \"Road bumps may affect driving behavior locally, but rarity and infrastructure differences limit stable marginal usefulness.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.56,\n      \"rationale\": \"Crossings indicate conflict points in road layout and should be moderately predictive across domains.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.41,\n      \"rationale\": \"Give-way locations capture intersection control structure, which is relevant but less common and somewhat sparse.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.72,\n      \"rationale\": \"Junctions are consistently associated with complex traffic interactions and accident severity patterns.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.16,\n      \"rationale\": \"No-exit status is a weak contextual cue and likely contributes little stable signal.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.33,\n      \"rationale\": \"Railway proximity can indicate special crossing hazards, but it is sparse and highly context-specific.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.37,\n      \"rationale\": \"Roundabouts alter conflict structure in a semantically meaningful way, though prevalence differs across regions.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.25,\n      \"rationale\": \"Station proximity mostly proxies urban land use and may not transfer cleanly across domains.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.52,\n      \"rationale\": \"Stop-controlled areas capture intersection behavior and conflict patterns with moderate stable relevance.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.29,\n      \"rationale\": \"Traffic calming features may relate to lower speeds and local road design, but they are sparse and heterogeneous.\"\n    },\n    {\n      \"feature_id\": 18,\n      \"score\": 0.61,\n      \"rationale\": \"Traffic signals mark busy controlled intersections and are broadly informative about accident context.\"\n    },\n    {\n      \"feature_id\": 19,\n      \"score\": 0.08,\n      \"rationale\": \"Year is highly vulnerable to temporal dataset shift, reporting changes, and benchmark-specific drift rather than stable causation.\"\n    },\n    {\n      \"feature_id\": 20,\n      \"score\": 0.46,\n      \"rationale\": \"Month captures seasonal effects on weather and travel patterns, though some of that may shift geographically.\"\n    },\n    {\n      \"feature_id\": 21,\n      \"score\": 0.51,\n      \"rationale\": \"Weekday reflects commuting and traffic behavior patterns that are fairly stable across many domains.\"\n    },\n    {\n      \"feature_id\": 22,\n      \"score\": 0.12,\n      \"rationale\": \"Day of month is mostly calendar noise and can spuriously encode reporting cycles rather than stable accident mechanisms.\"\n    },\n    {\n      \"feature_id\": 23,\n      \"score\": 0.69,\n      \"rationale\": \"Hour of day strongly captures traffic density, lighting, and human behavior patterns that often generalize.\"\n    },\n    {\n      \"feature_id\": 24,\n      \"score\": 0.09,\n      \"rationale\": \"Minute within hour is unlikely to have meaningful stable signal and may mostly add noise or logging artifacts.\"\n    },\n    {\n      \"feature_id\": 25,\n      \"score\": 0.18,\n      \"rationale\": \"Wind direction is rarely a stable marginal predictor and can depend heavily on local geography and weather systems.\"\n    },\n    {\n      \"feature_id\": 26,\n      \"score\": 0.81,\n      \"rationale\": \"Weather condition categories directly encode hazardous states like rain, snow, and fog with strong cross-domain semantic relevance.\"\n    },\n    {\n      \"feature_id\": 27,\n      \"score\": 0.66,\n      \"rationale\": \"Day versus night is a stable and meaningful determinant of visibility and driving conditions across settings.\"\n    }\n  ]\n}",
+      "input_tokens": 1809,
+      "output_tokens": 1308,
+      "total_tokens": 3117,
+      "response_id": "resp_0a0c6a778b659b1d006a27f61802a8819ba0e724856e5b51a2",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `accident`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"Distance(mi)\",\n    \"type\": \"continuous\",\n    \"description\": \"Distance affected by the accident.\",\n    \"values\": \"Miles.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"Temperature(F)\",\n    \"type\": \"continuous\",\n    \"description\": \"Weather temperature near the accident.\",\n    \"values\": \"Degrees Fahrenheit.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"Humidity(%)\",\n    \"type\": \"continuous\",\n    \"description\": \"Weather humidity near the accident.\",\n    \"values\": \"Percentage.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"Pressure(in)\",\n    \"type\": \"continuous\",\n    \"description\": \"Atmospheric pressure near the accident.\",\n    \"values\": \"Inches.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"Visibility(mi)\",\n    \"type\": \"continuous\",\n    \"description\": \"Weather visibility near the accident.\",\n    \"values\": \"Miles.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"Wind_Speed(mph)\",\n    \"type\": \"continuous\",\n    \"description\": \"Wind speed near the accident.\",\n    \"values\": \"Miles per hour.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"Precipitation(in)\",\n    \"type\": \"continuous\",\n    \"description\": \"Precipitation near the accident.\",\n    \"values\": \"Inches.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"Amenity\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether an amenity point of interest is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"Bump\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a road bump is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"Crossing\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a crossing is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"Give_Way\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a give-way sign is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"Junction\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a road junction is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"No_Exit\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a no-exit road feature is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"Railway\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a railway feature is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"Roundabout\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a roundabout is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"Station\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a station point of interest is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"Stop\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a stop sign is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"Traffic_Calming\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a traffic-calming feature is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"Traffic_Signal\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a traffic signal is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"Year\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident year.\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"Month\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident month.\",\n    \"values\": \"1-12.\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"Weekday\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident day of week.\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"Day\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident day of month.\",\n    \"values\": \"1-31.\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"Hour\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident hour of day.\",\n    \"values\": \"0-23.\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"Minute\",\n    \"type\": \"integer\",\n    \"description\": \"Accident minute within the hour.\",\n    \"values\": \"0-59.\"\n  },\n  {\n    \"feature_id\": 25,\n    \"feature\": \"Wind_Direction\",\n    \"type\": \"categorical\",\n    \"description\": \"Wind direction category near the accident.\",\n    \"values\": \"Grouped one-hot model columns: E, N, NE, NW, S, SE, SW, Variable, W.\"\n  },\n  {\n    \"feature_id\": 26,\n    \"feature\": \"Weather_Condition\",\n    \"type\": \"categorical\",\n    \"description\": \"Weather condition category near the accident.\",\n    \"values\": \"Grouped one-hot model columns such as Cloudy, Fog, Rain, Snow, Thunderstorm, Windy.\"\n  },\n  {\n    \"feature_id\": 27,\n    \"feature\": \"Civil_Twilight\",\n    \"type\": \"categorical\",\n    \"description\": \"Whether the accident occurred during civil twilight day or night.\",\n    \"values\": \"Grouped one-hot model columns; current model column indicates Night.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict the accident outcome label in WhyShift's accident task using features that should remain causally or semantically related across domain shifts.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.94,\n      \"rationale\": \"Directly reflects incident extent/severity and should remain strongly predictive across regions and times.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.48,\n      \"rationale\": \"Temperature affects road conditions but its marginal effect is indirect and varies by climate domain.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.42,\n      \"rationale\": \"Humidity can matter through fog or precipitation risk, but is a weak standalone predictor and somewhat climate-specific.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.24,\n      \"rationale\": \"Atmospheric pressure is a noisy proxy for weather systems and usually has limited stable marginal signal.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.82,\n      \"rationale\": \"Poor visibility is broadly and mechanistically related to more serious hazardous driving conditions.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.55,\n      \"rationale\": \"Wind speed can worsen driving safety and incident impact, though effects are moderate and context dependent.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.72,\n      \"rationale\": \"Precipitation directly captures adverse conditions that should generalize across domains.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.26,\n      \"rationale\": \"Nearby amenities may correlate with urban context, but this is a weak and potentially domain-specific shortcut.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.31,\n      \"rationale\": \"Road bumps can affect crash risk and speed, but they are sparse and infrastructure prevalence varies by locale.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.58,\n      \"rationale\": \"Crossings indicate conflict points in road layout, a reasonably stable structural risk factor.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.47,\n      \"rationale\": \"Give-way locations encode intersection control and conflict, though prevalence and mapping quality vary.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.76,\n      \"rationale\": \"Junctions are robust indicators of complex traffic environments and tend to generalize well.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.18,\n      \"rationale\": \"No-exit roads are uncommon and likely provide limited stable marginal information.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.34,\n      \"rationale\": \"Railway proximity can mark crossing hazards but is sparse and partly location-specific.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.37,\n      \"rationale\": \"Roundabouts affect traffic conflict patterns, but rarity and regional design differences reduce robustness.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.22,\n      \"rationale\": \"Station proximity mostly captures urban land use and may act as a brittle context proxy.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.52,\n      \"rationale\": \"Stop-controlled areas indicate intersection risk and lower-speed environments with moderate stable signal.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.29,\n      \"rationale\": \"Traffic calming may relate to lower speeds and neighborhood roads, but effects are mixed and sparse.\"\n    },\n    {\n      \"feature_id\": 18,\n      \"score\": 0.67,\n      \"rationale\": \"Traffic signals mark busy controlled intersections, a broadly predictive and semantically stable road-context feature.\"\n    },\n    {\n      \"feature_id\": 19,\n      \"score\": 0.06,\n      \"rationale\": \"Year is highly vulnerable to temporal shift and can encode collection or reporting changes rather than stable mechanism.\"\n    },\n    {\n      \"feature_id\": 20,\n      \"score\": 0.49,\n      \"rationale\": \"Month captures seasonality in weather and travel patterns, but some of its signal is domain dependent.\"\n    },\n    {\n      \"feature_id\": 21,\n      \"score\": 0.44,\n      \"rationale\": \"Weekday reflects commuting structure and traffic mix with moderate but not fully invariant usefulness.\"\n    },\n    {\n      \"feature_id\": 22,\n      \"score\": 0.12,\n      \"rationale\": \"Day of month is mostly calendar noise and unlikely to transfer robustly.\"\n    },\n    {\n      \"feature_id\": 23,\n      \"score\": 0.74,\n      \"rationale\": \"Hour strongly captures traffic density, visibility, and human behavior patterns that are broadly stable.\"\n    },\n    {\n      \"feature_id\": 24,\n      \"score\": 0.08,\n      \"rationale\": \"Minute within hour is unlikely to have meaningful stable semantic signal and may reflect logging artifacts.\"\n    },\n    {\n      \"feature_id\": 25,\n      \"score\": 0.16,\n      \"rationale\": \"Wind direction is weakly related to accidents marginally and heavily depends on local geography and weather systems.\"\n    },\n    {\n      \"feature_id\": 26,\n      \"score\": 0.86,\n      \"rationale\": \"Weather condition directly encodes hazardous states like rain, snow, and fog that should transfer well.\"\n    },\n    {\n      \"feature_id\": 27,\n      \"score\": 0.63,\n      \"rationale\": \"Day versus night is a robust determinant of visibility and driving conditions across domains.\"\n    }\n  ]\n}",
+      "input_tokens": 1809,
+      "output_tokens": 1275,
+      "total_tokens": 3084,
+      "response_id": "resp_064f598fdda047cd006a27f6303f6c8199ba870e48da88f901",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `accident`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"Distance(mi)\",\n    \"type\": \"continuous\",\n    \"description\": \"Distance affected by the accident.\",\n    \"values\": \"Miles.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"Temperature(F)\",\n    \"type\": \"continuous\",\n    \"description\": \"Weather temperature near the accident.\",\n    \"values\": \"Degrees Fahrenheit.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"Humidity(%)\",\n    \"type\": \"continuous\",\n    \"description\": \"Weather humidity near the accident.\",\n    \"values\": \"Percentage.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"Pressure(in)\",\n    \"type\": \"continuous\",\n    \"description\": \"Atmospheric pressure near the accident.\",\n    \"values\": \"Inches.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"Visibility(mi)\",\n    \"type\": \"continuous\",\n    \"description\": \"Weather visibility near the accident.\",\n    \"values\": \"Miles.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"Wind_Speed(mph)\",\n    \"type\": \"continuous\",\n    \"description\": \"Wind speed near the accident.\",\n    \"values\": \"Miles per hour.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"Precipitation(in)\",\n    \"type\": \"continuous\",\n    \"description\": \"Precipitation near the accident.\",\n    \"values\": \"Inches.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"Amenity\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether an amenity point of interest is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"Bump\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a road bump is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"Crossing\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a crossing is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"Give_Way\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a give-way sign is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"Junction\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a road junction is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"No_Exit\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a no-exit road feature is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"Railway\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a railway feature is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"Roundabout\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a roundabout is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"Station\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a station point of interest is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"Stop\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a stop sign is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"Traffic_Calming\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a traffic-calming feature is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"Traffic_Signal\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a traffic signal is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"Year\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident year.\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"Month\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident month.\",\n    \"values\": \"1-12.\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"Weekday\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident day of week.\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"Day\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident day of month.\",\n    \"values\": \"1-31.\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"Hour\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident hour of day.\",\n    \"values\": \"0-23.\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"Minute\",\n    \"type\": \"integer\",\n    \"description\": \"Accident minute within the hour.\",\n    \"values\": \"0-59.\"\n  },\n  {\n    \"feature_id\": 25,\n    \"feature\": \"Wind_Direction\",\n    \"type\": \"categorical\",\n    \"description\": \"Wind direction category near the accident.\",\n    \"values\": \"Grouped one-hot model columns: E, N, NE, NW, S, SE, SW, Variable, W.\"\n  },\n  {\n    \"feature_id\": 26,\n    \"feature\": \"Weather_Condition\",\n    \"type\": \"categorical\",\n    \"description\": \"Weather condition category near the accident.\",\n    \"values\": \"Grouped one-hot model columns such as Cloudy, Fog, Rain, Snow, Thunderstorm, Windy.\"\n  },\n  {\n    \"feature_id\": 27,\n    \"feature\": \"Civil_Twilight\",\n    \"type\": \"categorical\",\n    \"description\": \"Whether the accident occurred during civil twilight day or night.\",\n    \"values\": \"Grouped one-hot model columns; current model column indicates Night.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\"task_summary\":\"Predict the accident outcome label in WhyShift's accident task using features that should remain predictive across distribution shifts such as geography, time, and environment.\",\"scores\":[{\"feature_id\":0,\"score\":0.94,\"rationale\":\"Directly reflects incident extent and is highly tied to accident severity across domains.\"},{\"feature_id\":1,\"score\":0.46,\"rationale\":\"Temperature affects road conditions but its marginal effect is indirect and partly region-season specific.\"},{\"feature_id\":2,\"score\":0.43,\"rationale\":\"Humidity can matter through fog or precipitation risk, but is a weak standalone predictor.\"},{\"feature_id\":3,\"score\":0.24,\"rationale\":\"Pressure is meteorologically related yet usually only weakly and indirectly linked to accident outcome.\"},{\"feature_id\":4,\"score\":0.79,\"rationale\":\"Poor visibility is a robust hazard indicator that should generalize across locations and times.\"},{\"feature_id\":5,\"score\":0.55,\"rationale\":\"Wind speed can worsen driving conditions and incident seriousness in a reasonably stable way.\"},{\"feature_id\":6,\"score\":0.72,\"rationale\":\"Precipitation directly captures hazardous conditions and should transfer well across domains.\"},{\"feature_id\":7,\"score\":0.28,\"rationale\":\"Nearby amenities proxy local road context but may also encode urbanicity and geography-specific patterns.\"},{\"feature_id\":8,\"score\":0.31,\"rationale\":\"Road bumps can affect driving risk, though rarity and mapping differences limit stable usefulness.\"},{\"feature_id\":9,\"score\":0.57,\"rationale\":\"Crossings indicate conflict points in traffic flow and are plausibly stable structural predictors.\"},{\"feature_id\":10,\"score\":0.41,\"rationale\":\"Give-way signs reflect intersection control and some risk structure, though prevalence varies by locale.\"},{\"feature_id\":11,\"score\":0.74,\"rationale\":\"Junctions are strong, semantically meaningful indicators of complex traffic environments and accident severity.\"},{\"feature_id\":12,\"score\":0.14,\"rationale\":\"No-exit status is sparse and likely weakly related to the target outside specific local contexts.\"},{\"feature_id\":13,\"score\":0.33,\"rationale\":\"Railway proximity may matter for some incidents but is sparse and partly location-specific.\"},{\"feature_id\":14,\"score\":0.36,\"rationale\":\"Roundabouts alter conflict patterns in a meaningful way, but rarity reduces broad marginal utility.\"},{\"feature_id\":15,\"score\":0.22,\"rationale\":\"Station proximity mostly proxies dense urban areas and may be a brittle geographic shortcut.\"},{\"feature_id\":16,\"score\":0.53,\"rationale\":\"Stop signs capture intersection control and should have moderate stable relevance to accident outcomes.\"},{\"feature_id\":17,\"score\":0.27,\"rationale\":\"Traffic-calming features affect road behavior but are sparse and unevenly mapped across domains.\"},{\"feature_id\":18,\"score\":0.61,\"rationale\":\"Traffic signals mark busy controlled intersections, a broadly stable predictor of accident context.\"},{\"feature_id\":19,\"score\":0.06,\"rationale\":\"Year is mainly a temporal domain identifier and risks capturing nonstationary reporting or collection effects.\"},{\"feature_id\":20,\"score\":0.44,\"rationale\":\"Month captures seasonality in weather and travel patterns, but can also encode domain shift.\"},{\"feature_id\":21,\"score\":0.48,\"rationale\":\"Weekday reflects commuting and traffic regime differences that are fairly stable across domains.\"},{\"feature_id\":22,\"score\":0.12,\"rationale\":\"Day of month has little semantic connection to accident outcome and mostly adds noise.\"},{\"feature_id\":23,\"score\":0.67,\"rationale\":\"Hour strongly captures traffic density, darkness, and behavior patterns that generalize reasonably well.\"},{\"feature_id\":24,\"score\":0.08,\"rationale\":\"Minute within hour is unlikely to be causally meaningful and may reflect logging artifacts.\"},{\"feature_id\":25,\"score\":0.18,\"rationale\":\"Wind direction is highly context dependent and weakly predictive without local geography interactions.\"},{\"feature_id\":26,\"score\":0.83,\"rationale\":\"Weather condition directly represents hazardous states like rain, snow, or fog and should generalize well.\"},{\"feature_id\":27,\"score\":0.76,\"rationale\":\"Day versus night is a robust determinant of visibility and driving conditions across domains.\"}]}",
+      "input_tokens": 1809,
+      "output_tokens": 915,
+      "total_tokens": 2724,
+      "response_id": "resp_08dfc84e716083e0006a27f647f8e8819a8d17fa3782a91703",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `accident`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"Distance(mi)\",\n    \"type\": \"continuous\",\n    \"description\": \"Distance affected by the accident.\",\n    \"values\": \"Miles.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"Temperature(F)\",\n    \"type\": \"continuous\",\n    \"description\": \"Weather temperature near the accident.\",\n    \"values\": \"Degrees Fahrenheit.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"Humidity(%)\",\n    \"type\": \"continuous\",\n    \"description\": \"Weather humidity near the accident.\",\n    \"values\": \"Percentage.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"Pressure(in)\",\n    \"type\": \"continuous\",\n    \"description\": \"Atmospheric pressure near the accident.\",\n    \"values\": \"Inches.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"Visibility(mi)\",\n    \"type\": \"continuous\",\n    \"description\": \"Weather visibility near the accident.\",\n    \"values\": \"Miles.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"Wind_Speed(mph)\",\n    \"type\": \"continuous\",\n    \"description\": \"Wind speed near the accident.\",\n    \"values\": \"Miles per hour.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"Precipitation(in)\",\n    \"type\": \"continuous\",\n    \"description\": \"Precipitation near the accident.\",\n    \"values\": \"Inches.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"Amenity\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether an amenity point of interest is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"Bump\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a road bump is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"Crossing\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a crossing is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"Give_Way\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a give-way sign is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"Junction\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a road junction is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"No_Exit\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a no-exit road feature is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"Railway\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a railway feature is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"Roundabout\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a roundabout is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"Station\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a station point of interest is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"Stop\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a stop sign is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"Traffic_Calming\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a traffic-calming feature is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"Traffic_Signal\",\n    \"type\": \"boolean\",\n    \"description\": \"Whether a traffic signal is nearby.\",\n    \"values\": \"0=false, 1=true.\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"Year\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident year.\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"Month\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident month.\",\n    \"values\": \"1-12.\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"Weekday\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident day of week.\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"Day\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident day of month.\",\n    \"values\": \"1-31.\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"Hour\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Accident hour of day.\",\n    \"values\": \"0-23.\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"Minute\",\n    \"type\": \"integer\",\n    \"description\": \"Accident minute within the hour.\",\n    \"values\": \"0-59.\"\n  },\n  {\n    \"feature_id\": 25,\n    \"feature\": \"Wind_Direction\",\n    \"type\": \"categorical\",\n    \"description\": \"Wind direction category near the accident.\",\n    \"values\": \"Grouped one-hot model columns: E, N, NE, NW, S, SE, SW, Variable, W.\"\n  },\n  {\n    \"feature_id\": 26,\n    \"feature\": \"Weather_Condition\",\n    \"type\": \"categorical\",\n    \"description\": \"Weather condition category near the accident.\",\n    \"values\": \"Grouped one-hot model columns such as Cloudy, Fog, Rain, Snow, Thunderstorm, Windy.\"\n  },\n  {\n    \"feature_id\": 27,\n    \"feature\": \"Civil_Twilight\",\n    \"type\": \"categorical\",\n    \"description\": \"Whether the accident occurred during civil twilight day or night.\",\n    \"values\": \"Grouped one-hot model columns; current model column indicates Night.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict the accident outcome/severity from roadway context, weather, and time features in a way that generalizes across shifted domains in WhyShift accident.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.93,\n      \"rationale\": \"Directly reflects spatial extent/impact of the incident and is usually strongly tied to severity across domains.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.48,\n      \"rationale\": \"Weather temperature affects road risk and conditions but its marginal relation is moderate and partly region-season dependent.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.44,\n      \"rationale\": \"Humidity can proxy adverse weather but is indirect and less consistently predictive across locations.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.24,\n      \"rationale\": \"Atmospheric pressure is a weak, indirect weather signal and likely brittle marginally.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.79,\n      \"rationale\": \"Low visibility is a robust hazard indicator that should transfer well across domains.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.52,\n      \"rationale\": \"Wind speed can materially affect driving conditions, though effects are weaker than visibility or precipitation.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.67,\n      \"rationale\": \"Precipitation is a stable causal driver of hazardous road conditions and should generalize reasonably well.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.28,\n      \"rationale\": \"Nearby amenities may correlate with urban context and traffic density but are mostly coarse location proxies.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.31,\n      \"rationale\": \"Road bumps can affect driving behavior and incident patterns, though prevalence is sparse and context specific.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.56,\n      \"rationale\": \"Crossings represent conflict points in road geometry and are plausibly stable predictors.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.41,\n      \"rationale\": \"Give-way control indicates intersection structure and risk, with moderate but not dominant transferability.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.72,\n      \"rationale\": \"Junctions are strong, semantically meaningful road-risk locations and should remain predictive across domains.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.18,\n      \"rationale\": \"No-exit status is a weak contextual cue and may mostly encode local road-network quirks.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.34,\n      \"rationale\": \"Railway proximity can matter for crossing-related incidents but is relatively sparse and context dependent.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.37,\n      \"rationale\": \"Roundabouts alter traffic conflict structure in a semantically meaningful way, though they are uncommon in many regions.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.23,\n      \"rationale\": \"Station proximity is mostly a land-use/urbanicity proxy and may not transfer cleanly.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.49,\n      \"rationale\": \"Stop signs encode intersection control and can stably affect accident patterns.\"\n    },\n    {\n      \"feature_id\": 17,\n      \"score\": 0.29,\n      \"rationale\": \"Traffic-calming features may relate to lower-speed environments but are sparse and locality specific.\"\n    },\n    {\n      \"feature_id\": 18,\n      \"score\": 0.63,\n      \"rationale\": \"Traffic signals are common structural indicators of complex intersections and should be broadly predictive.\"\n    },\n    {\n      \"feature_id\": 19,\n      \"score\": 0.06,\n      \"rationale\": \"Year is highly vulnerable to temporal-domain identification and dataset drift rather than stable semantics.\"\n    },\n    {\n      \"feature_id\": 20,\n      \"score\": 0.46,\n      \"rationale\": \"Month captures seasonality in weather and travel patterns, but some effect overlaps with direct weather features.\"\n    },\n    {\n      \"feature_id\": 21,\n      \"score\": 0.43,\n      \"rationale\": \"Weekday reflects commuting and traffic regime differences that are fairly stable but not purely causal.\"\n    },\n    {\n      \"feature_id\": 22,\n      \"score\": 0.12,\n      \"rationale\": \"Day of month is mostly calendar noise and can act as a brittle temporal artifact.\"\n    },\n    {\n      \"feature_id\": 23,\n      \"score\": 0.69,\n      \"rationale\": \"Hour strongly captures traffic density, lighting, and human behavior patterns that usually transfer well.\"\n    },\n    {\n      \"feature_id\": 24,\n      \"score\": 0.08,\n      \"rationale\": \"Minute within hour is unlikely to have stable semantic signal and may reflect logging artifacts.\"\n    },\n    {\n      \"feature_id\": 25,\n      \"score\": 0.21,\n      \"rationale\": \"Wind direction is a weak and location-dependent meteorological detail with limited stable marginal value.\"\n    },\n    {\n      \"feature_id\": 26,\n      \"score\": 0.76,\n      \"rationale\": \"Weather condition categories like rain, fog, and snow are strong semantically grounded predictors of hazardous driving.\"\n    },\n    {\n      \"feature_id\": 27,\n      \"score\": 0.66,\n      \"rationale\": \"Day versus night is a robust visibility and behavior signal that should generalize across domains.\"\n    }\n  ]\n}",
+      "input_tokens": 1809,
+      "output_tokens": 1285,
+      "total_tokens": 3094,
+      "response_id": "resp_0ca9fbfed9caa960006a27f65a61f8819a9dc8b5041a3677e2",
+      "response_model": "gpt-5.4-2026-03-05"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/whyshift/accident/rankings/score_all_prompt.txt",
+  "config": {
+    "score_samples": 5
+  }
+}

@@ -1,0 +1,325 @@
+# tableshift/diabetes_readmission score_all prompts
+
+## 1. score_all
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `diabetes_readmission`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Score every feature by stable predictive usefulness for this task, considered
+marginally and without seeing the downstream data.
+
+Feature cards, in model input order:
+[
+  {
+    "feature_id": 0,
+    "feature": "race",
+    "type": "categorical",
+    "description": "Nominal. Values: Caucasian, Asian, African American, Hispanic, and other"
+  },
+  {
+    "feature_id": 1,
+    "feature": "gender",
+    "type": "categorical",
+    "description": "Nominal. Values: male, female, and unknown/invalid."
+  },
+  {
+    "feature_id": 2,
+    "feature": "age",
+    "type": "categorical",
+    "description": "Nominal. Grouped in 10-year intervals: [0, 10), [10, 20), . . ., [90, 100)"
+  },
+  {
+    "feature_id": 3,
+    "feature": "weight",
+    "type": "categorical",
+    "description": "Weight in pounds. Grouped in 25-pound intervals."
+  },
+  {
+    "feature_id": 4,
+    "feature": "admission_type_id",
+    "type": "categorical",
+    "description": "Admission type",
+    "values": "1=Emergency; 2=Urgent; 3=Elective; 4=Newborn; 5=Not Available; 6=NULL; 7=Trauma Center; 8=Not Mapped"
+  },
+  {
+    "feature_id": 5,
+    "feature": "discharge_disposition_id",
+    "type": "categorical",
+    "description": "Discharge type",
+    "values": "1=Discharged to home; 2=Discharged/transferred to another short term hospital; 3=Discharged/transferred to SNF; 4=Discharged/transferred to ICF; 5=Discharged/transferred to another type of inpatient care institution; 6=Discharged/transferred to home with ho..."
+  },
+  {
+    "feature_id": 6,
+    "feature": "time_in_hospital",
+    "type": "continuous",
+    "description": "Count of days beween admission and discharge"
+  },
+  {
+    "feature_id": 7,
+    "feature": "payer_code",
+    "type": "categorical",
+    "description": "Payer code"
+  },
+  {
+    "feature_id": 8,
+    "feature": "medical_specialty",
+    "type": "categorical",
+    "description": "Medical specialty of the admitting physician"
+  },
+  {
+    "feature_id": 9,
+    "feature": "num_lab_procedures",
+    "type": "continuous",
+    "description": "Number of lab tests performed during the encounter"
+  },
+  {
+    "feature_id": 10,
+    "feature": "num_procedures",
+    "type": "continuous",
+    "description": "Number of procedures (other than lab tests) performed during the encounter"
+  },
+  {
+    "feature_id": 11,
+    "feature": "num_medications",
+    "type": "continuous",
+    "description": "Number of distinct generic drugs administered during the encounter"
+  },
+  {
+    "feature_id": 12,
+    "feature": "number_outpatient",
+    "type": "continuous",
+    "description": "Number of outpatient visits of the patient in the year preceding the encounter"
+  },
+  {
+    "feature_id": 13,
+    "feature": "number_emergency",
+    "type": "continuous",
+    "description": "Number of emergency visits of the patient in the year preceding the encounter"
+  },
+  {
+    "feature_id": 14,
+    "feature": "number_inpatient",
+    "type": "continuous",
+    "description": "Number of inpatient visits of the patient in the year preceding the encounter"
+  },
+  {
+    "feature_id": 15,
+    "feature": "diag_1",
+    "type": "categorical",
+    "description": "Primary diagnosis",
+    "values": "1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec..."
+  },
+  {
+    "feature_id": 16,
+    "feature": "diag_2",
+    "type": "categorical",
+    "description": "Secondary diagnosis",
+    "values": "1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec..."
+  },
+  {
+    "feature_id": 17,
+    "feature": "diag_3",
+    "type": "categorical",
+    "description": "Additional secondary diagnosis",
+    "values": "1=Cholera; 2=Typhoid and paratyphoid fevers; 3=Other salmonella infections; 4=Shigellosis; 5=Other food poisoning (bacterial); 6=Amebiasis; 7=Other protozoal intestinal diseases; 8=Intestinal infections due to other organisms; 9=Ill-defined intestinal infec..."
+  },
+  {
+    "feature_id": 18,
+    "feature": "number_diagnoses",
+    "type": "continuous",
+    "description": "Total number of diagnoses"
+  },
+  {
+    "feature_id": 19,
+    "feature": "max_glu_serum",
+    "type": "categorical",
+    "description": "Max glucose serum"
+  },
+  {
+    "feature_id": 20,
+    "feature": "A1Cresult",
+    "type": "categorical",
+    "description": "Hemoglobin A1c test result",
+    "note": "From original citation: Hemoglobin A1c (HbA1c) is an important measure of glucose control, which is widely applied to measure performance of diabetes care. (See documentation link.)"
+  },
+  {
+    "feature_id": 21,
+    "feature": "metformin",
+    "type": "categorical",
+    "description": "Change in metformin medication"
+  },
+  {
+    "feature_id": 22,
+    "feature": "repaglinide",
+    "type": "categorical",
+    "description": "Change in repaglinide medication"
+  },
+  {
+    "feature_id": 23,
+    "feature": "nateglinide",
+    "type": "categorical",
+    "description": "Change in nateglinide medication"
+  },
+  {
+    "feature_id": 24,
+    "feature": "chlorpropamide",
+    "type": "categorical",
+    "description": "Change in chlorpropamide medication"
+  },
+  {
+    "feature_id": 25,
+    "feature": "glimepiride",
+    "type": "categorical",
+    "description": "Change in glimepiride medication"
+  },
+  {
+    "feature_id": 26,
+    "feature": "acetohexamide",
+    "type": "categorical",
+    "description": "Change in acetohexamide medication"
+  },
+  {
+    "feature_id": 27,
+    "feature": "glipizide",
+    "type": "categorical",
+    "description": "Change in glipizide medication"
+  },
+  {
+    "feature_id": 28,
+    "feature": "glyburide",
+    "type": "categorical",
+    "description": "Change in glyburide medication"
+  },
+  {
+    "feature_id": 29,
+    "feature": "tolbutamide",
+    "type": "categorical",
+    "description": "Change in tolbutamide medication"
+  },
+  {
+    "feature_id": 30,
+    "feature": "pioglitazone",
+    "type": "categorical",
+    "description": "Change in pioglitazone medication"
+  },
+  {
+    "feature_id": 31,
+    "feature": "rosiglitazone",
+    "type": "categorical",
+    "description": "Change in rosiglitazone medication"
+  },
+  {
+    "feature_id": 32,
+    "feature": "acarbose",
+    "type": "categorical",
+    "description": "Change in acarbose medication"
+  },
+  {
+    "feature_id": 33,
+    "feature": "miglitol",
+    "type": "categorical",
+    "description": "Change in miglitol medication"
+  },
+  {
+    "feature_id": 34,
+    "feature": "troglitazone",
+    "type": "categorical",
+    "description": "Change in troglitazone medication"
+  },
+  {
+    "feature_id": 35,
+    "feature": "tolazamide",
+    "type": "categorical",
+    "description": "Change in tolazamide medication"
+  },
+  {
+    "feature_id": 36,
+    "feature": "examide",
+    "type": "categorical",
+    "description": "Change in examide medication"
+  },
+  {
+    "feature_id": 37,
+    "feature": "citoglipton",
+    "type": "categorical",
+    "description": "Change in citoglipton medication"
+  },
+  {
+    "feature_id": 38,
+    "feature": "insulin",
+    "type": "categorical",
+    "description": "Change in insulin medication"
+  },
+  {
+    "feature_id": 39,
+    "feature": "glyburide-metformin",
+    "type": "categorical",
+    "description": "Change in glyburide-metformin medication"
+  },
+  {
+    "feature_id": 40,
+    "feature": "glipizide-metformin",
+    "type": "categorical",
+    "description": "Change in glipizide-metformin medication"
+  },
+  {
+    "feature_id": 41,
+    "feature": "glimepiride-pioglitazone",
+    "type": "categorical",
+    "description": "Change in glimepiride-pioglitazone medication"
+  },
+  {
+    "feature_id": 42,
+    "feature": "metformin-rosiglitazone",
+    "type": "categorical",
+    "description": "Change in metformin-rosiglitazone medication"
+  },
+  {
+    "feature_id": 43,
+    "feature": "metformin-pioglitazone",
+    "type": "categorical",
+    "description": "Change in metformin-pioglitazone medication"
+  },
+  {
+    "feature_id": 44,
+    "feature": "change",
+    "type": "categorical",
+    "description": "Change in any medication"
+  },
+  {
+    "feature_id": 45,
+    "feature": "diabetesMed",
+    "type": "categorical",
+    "description": "Diabetes medication prescribed"
+  }
+]
+
+Feature IDs to include exactly once:
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45]
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "scores": [
+    {
+      "feature_id": 0,
+      "score": 0.0,
+      "rationale": "short reason"
+    }
+  ]
+}
+
+Rules:
+- Include every feature_id exactly once in `scores`.
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- If two features seem similarly important, assign scores that still reflect your
+  best estimate of their relative stable usefulness.
+- `feature_id` is the authoritative identifier. Include each feature_id exactly
+  once and do not include feature names in the output.

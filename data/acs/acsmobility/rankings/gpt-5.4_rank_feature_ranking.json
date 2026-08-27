@@ -1,0 +1,157 @@
+{
+  "benchmark": "acs",
+  "dataset": "acsmobility",
+  "model": "gpt-5.4",
+  "method": "rank",
+  "temperature": 0.0,
+  "created_at": "2026-06-09T18:43:01",
+  "token_usage": {
+    "num_calls": 1,
+    "input_tokens": 1426,
+    "output_tokens": 915,
+    "total_tokens": 2341
+  },
+  "response": {
+    "task_summary": "Predict whether a person changed residence within the last year using individual ACS demographic, household, and work-related attributes in a way that should generalize across states.",
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 0,
+        "rationale": "Age is a strong, broadly stable driver of mobility over the life course across states.",
+        "feature": "AGEP"
+      },
+      {
+        "rank": 2,
+        "feature_id": 10,
+        "rationale": "Household relationship strongly reflects life stage and household formation patterns closely tied to moving.",
+        "feature": "RELP"
+      },
+      {
+        "rank": 3,
+        "feature_id": 2,
+        "rationale": "Marital status is consistently linked to household transitions and relocation behavior.",
+        "feature": "MAR"
+      },
+      {
+        "rank": 4,
+        "feature_id": 17,
+        "rationale": "Employment status affects job-related moves and residential stability in a generally state-invariant way.",
+        "feature": "ESR"
+      },
+      {
+        "rank": 5,
+        "feature_id": 1,
+        "rationale": "Education captures life stage and labor-market position that predict migration across many contexts.",
+        "feature": "SCHL"
+      },
+      {
+        "rank": 6,
+        "feature_id": 20,
+        "rationale": "Income influences housing options and moving propensity, though absolute levels vary by state.",
+        "feature": "PINCP"
+      },
+      {
+        "rank": 7,
+        "feature_id": 18,
+        "rationale": "Usual work hours proxy job attachment and schedule stability, which relate to mobility.",
+        "feature": "WKHP"
+      },
+      {
+        "rank": 8,
+        "feature_id": 16,
+        "rationale": "Class of worker captures employment arrangements associated with different relocation patterns.",
+        "feature": "COW"
+      },
+      {
+        "rank": 9,
+        "feature_id": 19,
+        "rationale": "Commute time can motivate moves but is also shaped by local geography and infrastructure.",
+        "feature": "JWMNP"
+      },
+      {
+        "rank": 10,
+        "feature_id": 9,
+        "rationale": "Nativity is predictive of migration behavior but can partly reflect state-specific immigrant composition.",
+        "feature": "NATIVITY"
+      },
+      {
+        "rank": 11,
+        "feature_id": 6,
+        "rationale": "Citizenship status adds migration-related signal beyond nativity, though it may encode regional composition.",
+        "feature": "CIT"
+      },
+      {
+        "rank": 12,
+        "feature_id": 4,
+        "rationale": "Disability status affects residential stability and moving constraints in a fairly general way.",
+        "feature": "DIS"
+      },
+      {
+        "rank": 13,
+        "feature_id": 7,
+        "rationale": "Military service can matter for relocation but applies to a smaller subgroup and may be episodic.",
+        "feature": "MIL"
+      },
+      {
+        "rank": 14,
+        "feature_id": 15,
+        "rationale": "Grandparent caregiving reflects family structure that may influence mobility, but it is niche.",
+        "feature": "GCL"
+      },
+      {
+        "rank": 15,
+        "feature_id": 3,
+        "rationale": "Sex may correlate with mobility through family and labor patterns, but effects are weaker and less direct.",
+        "feature": "SEX"
+      },
+      {
+        "rank": 16,
+        "feature_id": 13,
+        "rationale": "Cognitive difficulty may affect moving ability, though mostly through broader disability mechanisms already captured.",
+        "feature": "DREM"
+      },
+      {
+        "rank": 17,
+        "feature_id": 11,
+        "rationale": "Hearing difficulty has limited direct connection to moving beyond general health constraints.",
+        "feature": "DEAR"
+      },
+      {
+        "rank": 18,
+        "feature_id": 12,
+        "rationale": "Vision difficulty is plausibly related to mobility decisions but usually only weakly.",
+        "feature": "DEYE"
+      },
+      {
+        "rank": 19,
+        "feature_id": 5,
+        "rationale": "Parental employment status is mainly relevant for children and is less broadly informative for the full sample.",
+        "feature": "ESP"
+      },
+      {
+        "rank": 20,
+        "feature_id": 14,
+        "rationale": "Race can be predictive but risks demographic shortcutting and state-specific composition effects.",
+        "feature": "RAC1P"
+      },
+      {
+        "rank": 21,
+        "feature_id": 8,
+        "rationale": "Ancestry is especially likely to encode geography and local ethnic composition rather than stable causal signal.",
+        "feature": "ANC"
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsmobility`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DIS\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Disability recode.\",\n    \"values\": \"1=with a disability, 2=without a disability.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"ESP\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status of parents.\",\n    \"values\": \"ACS family/parent employment code, mainly defined for children.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"CIT\",\n    \"type\": \"categorical\",\n    \"description\": \"Citizenship status.\",\n    \"values\": \"US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"MIL\",\n    \"type\": \"categorical\",\n    \"description\": \"Military service status.\",\n    \"values\": \"ACS military service category.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"ANC\",\n    \"type\": \"categorical\",\n    \"description\": \"Ancestry recode.\",\n    \"values\": \"ACS ancestry category.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"NATIVITY\",\n    \"type\": \"categorical\",\n    \"description\": \"Nativity recode.\",\n    \"values\": \"Native-born or foreign-born.\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"DEAR\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Hearing difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DEYE\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Vision difficulty.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"DREM\",\n    \"type\": \"boolean_categorical\",\n    \"description\": \"Cognitive difficulty remembering, concentrating, or making decisions.\",\n    \"values\": \"1=yes, 2=no.\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"GCL\",\n    \"type\": \"categorical\",\n    \"description\": \"Grandparents living with grandchildren and responsibility status.\",\n    \"values\": \"ACS grandparent care category.\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"COW\",\n    \"type\": \"categorical\",\n    \"description\": \"Class of worker.\",\n    \"values\": \"ACS employment class code, such as private, government, self-employed, or unpaid family worker.\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"ESR\",\n    \"type\": \"categorical\",\n    \"description\": \"Employment status recode.\",\n    \"values\": \"Employed, unemployed, armed forces, or not in labor force categories.\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"WKHP\",\n    \"type\": \"integer\",\n    \"description\": \"Usual hours worked per week during the past 12 months.\",\n    \"values\": \"0 or positive weekly work hours.\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"JWMNP\",\n    \"type\": \"integer\",\n    \"description\": \"Travel time to work in minutes.\",\n    \"values\": \"Number of commuting minutes.\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"PINCP\",\n    \"type\": \"continuous\",\n    \"description\": \"Total person's income.\",\n    \"values\": \"Dollar income amount; may be negative, zero, or positive.\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature_id\": 0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `ranking`.\n- Use ranks 1 through 21, with no duplicates.\n- Rank 1 is most important.\n- If two features seem similarly important, still break ties.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a person changed residence within the last year using individual ACS demographic, household, and work-related attributes in a way that should generalize across states.\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature_id\": 0,\n      \"rationale\": \"Age is a strong, broadly stable driver of mobility over the life course across states.\"\n    },\n    {\n      \"rank\": 2,\n      \"feature_id\": 10,\n      \"rationale\": \"Household relationship strongly reflects life stage and household formation patterns closely tied to moving.\"\n    },\n    {\n      \"rank\": 3,\n      \"feature_id\": 2,\n      \"rationale\": \"Marital status is consistently linked to household transitions and relocation behavior.\"\n    },\n    {\n      \"rank\": 4,\n      \"feature_id\": 17,\n      \"rationale\": \"Employment status affects job-related moves and residential stability in a generally state-invariant way.\"\n    },\n    {\n      \"rank\": 5,\n      \"feature_id\": 1,\n      \"rationale\": \"Education captures life stage and labor-market position that predict migration across many contexts.\"\n    },\n    {\n      \"rank\": 6,\n      \"feature_id\": 20,\n      \"rationale\": \"Income influences housing options and moving propensity, though absolute levels vary by state.\"\n    },\n    {\n      \"rank\": 7,\n      \"feature_id\": 18,\n      \"rationale\": \"Usual work hours proxy job attachment and schedule stability, which relate to mobility.\"\n    },\n    {\n      \"rank\": 8,\n      \"feature_id\": 16,\n      \"rationale\": \"Class of worker captures employment arrangements associated with different relocation patterns.\"\n    },\n    {\n      \"rank\": 9,\n      \"feature_id\": 19,\n      \"rationale\": \"Commute time can motivate moves but is also shaped by local geography and infrastructure.\"\n    },\n    {\n      \"rank\": 10,\n      \"feature_id\": 9,\n      \"rationale\": \"Nativity is predictive of migration behavior but can partly reflect state-specific immigrant composition.\"\n    },\n    {\n      \"rank\": 11,\n      \"feature_id\": 6,\n      \"rationale\": \"Citizenship status adds migration-related signal beyond nativity, though it may encode regional composition.\"\n    },\n    {\n      \"rank\": 12,\n      \"feature_id\": 4,\n      \"rationale\": \"Disability status affects residential stability and moving constraints in a fairly general way.\"\n    },\n    {\n      \"rank\": 13,\n      \"feature_id\": 7,\n      \"rationale\": \"Military service can matter for relocation but applies to a smaller subgroup and may be episodic.\"\n    },\n    {\n      \"rank\": 14,\n      \"feature_id\": 15,\n      \"rationale\": \"Grandparent caregiving reflects family structure that may influence mobility, but it is niche.\"\n    },\n    {\n      \"rank\": 15,\n      \"feature_id\": 3,\n      \"rationale\": \"Sex may correlate with mobility through family and labor patterns, but effects are weaker and less direct.\"\n    },\n    {\n      \"rank\": 16,\n      \"feature_id\": 13,\n      \"rationale\": \"Cognitive difficulty may affect moving ability, though mostly through broader disability mechanisms already captured.\"\n    },\n    {\n      \"rank\": 17,\n      \"feature_id\": 11,\n      \"rationale\": \"Hearing difficulty has limited direct connection to moving beyond general health constraints.\"\n    },\n    {\n      \"rank\": 18,\n      \"feature_id\": 12,\n      \"rationale\": \"Vision difficulty is plausibly related to mobility decisions but usually only weakly.\"\n    },\n    {\n      \"rank\": 19,\n      \"feature_id\": 5,\n      \"rationale\": \"Parental employment status is mainly relevant for children and is less broadly informative for the full sample.\"\n    },\n    {\n      \"rank\": 20,\n      \"feature_id\": 14,\n      \"rationale\": \"Race can be predictive but risks demographic shortcutting and state-specific composition effects.\"\n    },\n    {\n      \"rank\": 21,\n      \"feature_id\": 8,\n      \"rationale\": \"Ancestry is especially likely to encode geography and local ethnic composition rather than stable causal signal.\"\n    }\n  ]\n}",
+      "input_tokens": 1426,
+      "output_tokens": 915,
+      "total_tokens": 2341,
+      "response_id": "resp_059361dddb31762f006a27ee266dc48198a96e643d2028bef7",
+      "response_model": "gpt-5.4-2026-03-05"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/acs/acsmobility/rankings/rank_prompt.txt"
+}

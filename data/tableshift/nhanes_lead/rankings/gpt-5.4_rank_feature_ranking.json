@@ -1,0 +1,73 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "nhanes_lead",
+  "model": "gpt-5.4",
+  "method": "rank",
+  "temperature": 0.0,
+  "created_at": "2026-06-09T20:21:43",
+  "token_usage": {
+    "num_calls": 1,
+    "input_tokens": 662,
+    "output_tokens": 384,
+    "total_tokens": 1046
+  },
+  "response": {
+    "task_summary": "Predict elevated blood lead risk from NHANES participant characteristics while favoring signals that should generalize across survey years and population shifts.",
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 3,
+        "rationale": "Age is a stable biological and exposure-related predictor of lead burden and should remain predictive across domains.",
+        "feature": "RIDAGEYR"
+      },
+      {
+        "rank": 2,
+        "feature_id": 2,
+        "rationale": "Education is a robust socioeconomic proxy linked to housing, occupation, and environmental exposure risk that should generalize reasonably well.",
+        "feature": "DMDEDUC2"
+      },
+      {
+        "rank": 3,
+        "feature_id": 1,
+        "rationale": "Country of birth can capture persistent differences in historical and environmental lead exposure, though it may partly reflect subgroup structure.",
+        "feature": "DMDBORN4"
+      },
+      {
+        "rank": 4,
+        "feature_id": 4,
+        "rationale": "Gender may relate to occupational and behavioral exposure patterns, but effects are weaker and less direct than age or socioeconomic factors.",
+        "feature": "RIAGENDR"
+      },
+      {
+        "rank": 5,
+        "feature_id": 5,
+        "rationale": "Marital status is at best an indirect socioeconomic/life-stage correlate and is likely less stable as a causal signal.",
+        "feature": "DMDMARTL"
+      },
+      {
+        "rank": 6,
+        "feature_id": 6,
+        "rationale": "Race/ethnicity can correlate with exposure through structural inequities but is also a demographic shortcut that may harm out-of-domain generalization.",
+        "feature": "RIDRETH_merged"
+      },
+      {
+        "rank": 7,
+        "feature_id": 0,
+        "rationale": "Survey year is highly likely to encode domain identity and temporal shifts rather than portable individual-level risk, so it should be penalized most.",
+        "feature": "nhanes_year"
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DMDBORN4\",\n    \"type\": \"categorical\",\n    \"description\": \"country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DMDEDUC2\",\n    \"type\": \"categorical\",\n    \"description\": \"highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"RIDAGEYR\",\n    \"type\": \"continuous\",\n    \"description\": \"age in years\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"RIAGENDR\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"DMDMARTL\",\n    \"type\": \"categorical\",\n    \"description\": \"marital status\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RIDRETH_merged\",\n    \"type\": \"categorical\",\n    \"description\": \"race and hispanic origin\",\n    \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature_id\": 0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `ranking`.\n- Use ranks 1 through 7, with no duplicates.\n- Rank 1 is most important.\n- If two features seem similarly important, still break ties.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict elevated blood lead risk from NHANES participant characteristics while favoring signals that should generalize across survey years and population shifts.\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature_id\": 3,\n      \"rationale\": \"Age is a stable biological and exposure-related predictor of lead burden and should remain predictive across domains.\"\n    },\n    {\n      \"rank\": 2,\n      \"feature_id\": 2,\n      \"rationale\": \"Education is a robust socioeconomic proxy linked to housing, occupation, and environmental exposure risk that should generalize reasonably well.\"\n    },\n    {\n      \"rank\": 3,\n      \"feature_id\": 1,\n      \"rationale\": \"Country of birth can capture persistent differences in historical and environmental lead exposure, though it may partly reflect subgroup structure.\"\n    },\n    {\n      \"rank\": 4,\n      \"feature_id\": 4,\n      \"rationale\": \"Gender may relate to occupational and behavioral exposure patterns, but effects are weaker and less direct than age or socioeconomic factors.\"\n    },\n    {\n      \"rank\": 5,\n      \"feature_id\": 5,\n      \"rationale\": \"Marital status is at best an indirect socioeconomic/life-stage correlate and is likely less stable as a causal signal.\"\n    },\n    {\n      \"rank\": 6,\n      \"feature_id\": 6,\n      \"rationale\": \"Race/ethnicity can correlate with exposure through structural inequities but is also a demographic shortcut that may harm out-of-domain generalization.\"\n    },\n    {\n      \"rank\": 7,\n      \"feature_id\": 0,\n      \"rationale\": \"Survey year is highly likely to encode domain identity and temporal shifts rather than portable individual-level risk, so it should be penalized most.\"\n    }\n  ]\n}",
+      "input_tokens": 662,
+      "output_tokens": 384,
+      "total_tokens": 1046,
+      "response_id": "resp_0de382f588da9c6e006a280551ff1c8199a00618f14db31af2",
+      "response_model": "gpt-5.4-2026-03-05"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/tableshift/nhanes_lead/rankings/rank_prompt.txt"
+}

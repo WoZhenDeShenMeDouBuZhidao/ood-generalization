@@ -1,0 +1,1456 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "nhanes_cholesterol",
+  "model": "gpt-5.4",
+  "method": "score",
+  "temperature": 0.5,
+  "created_at": "2026-06-09T20:28:15",
+  "token_usage": {
+    "num_calls": 65,
+    "input_tokens": 20080,
+    "output_tokens": 6844,
+    "total_tokens": 26924
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 10,
+        "feature": "RIDAGEYR",
+        "score_mean": 0.862,
+        "score_std": 0.04019950248448356
+      },
+      {
+        "rank": 2,
+        "feature_id": 2,
+        "feature": "DIQ010",
+        "score_mean": 0.724,
+        "score_std": 0.008000000000000007
+      },
+      {
+        "rank": 3,
+        "feature_id": 0,
+        "feature": "BPQ020",
+        "score_mean": 0.696,
+        "score_std": 0.02939387691339811
+      },
+      {
+        "rank": 4,
+        "feature_id": 1,
+        "feature": "DIQ160",
+        "score_mean": 0.626,
+        "score_std": 0.00489897948556636
+      },
+      {
+        "rank": 5,
+        "feature_id": 11,
+        "feature": "RIAGENDR",
+        "score_mean": 0.5539999999999999,
+        "score_std": 0.06799999999999999
+      },
+      {
+        "rank": 6,
+        "feature_id": 4,
+        "feature": "KIQ022",
+        "score_mean": 0.512,
+        "score_std": 0.0530659966456864
+      },
+      {
+        "rank": 7,
+        "feature_id": 6,
+        "feature": "MCQ160A",
+        "score_mean": 0.338,
+        "score_std": 0.05035871324805667
+      },
+      {
+        "rank": 8,
+        "feature_id": 9,
+        "feature": "DMDEDUC2",
+        "score_mean": 0.332,
+        "score_std": 0.032496153618543834
+      },
+      {
+        "rank": 9,
+        "feature_id": 12,
+        "feature": "DMDMARTL",
+        "score_mean": 0.25,
+        "score_std": 0.025298221281347046
+      },
+      {
+        "rank": 10,
+        "feature_id": 3,
+        "feature": "KIQ025",
+        "score_mean": 0.196,
+        "score_std": 0.01959591794226543
+      },
+      {
+        "rank": 11,
+        "feature_id": 5,
+        "feature": "MCQ070",
+        "score_mean": 0.152,
+        "score_std": 0.027129319932501072
+      },
+      {
+        "rank": 12,
+        "feature_id": 8,
+        "feature": "DMDBORN4",
+        "score_mean": 0.112,
+        "score_std": 0.015999999999999997
+      },
+      {
+        "rank": 13,
+        "feature_id": 7,
+        "feature": "nhanes_year",
+        "score_mean": 0.012,
+        "score_std": 0.009797958971132713
+      }
+    ],
+    "scores": [
+      {
+        "feature_id": 0,
+        "feature": "BPQ020",
+        "score_mean": 0.696,
+        "score_std": 0.02939387691339811,
+        "samples": [
+          {
+            "task_summary": "Predict whether an adult has high cholesterol from NHANES health, examination, and questionnaire variables under distribution shift.",
+            "feature_id": 0,
+            "score": 0.66,
+            "rationale": "A prior hypertension diagnosis is medically related to cardiometabolic risk and should retain moderate predictive value across domains, but it is a self-reported healthcare-history variable that depends on access to care, screening, age, and reporting behavior, making it less stable and somewhat shortcut-prone than direct physiologic measures.",
+            "feature": "BPQ020"
+          },
+          {
+            "task_summary": "Predict whether an individual has high cholesterol from NHANES health and examination data under distribution shift.",
+            "feature_id": 0,
+            "score": 0.72,
+            "rationale": "A prior hypertension diagnosis is medically related to dyslipidemia through shared cardiometabolic risk factors, so it should be moderately predictive across domains; however, it is a self-reported prior diagnosis that depends on healthcare access, age, and demographic patterns, making it somewhat vulnerable to shortcut and domain-shift effects.",
+            "feature": "BPQ020"
+          },
+          {
+            "task_summary": "Predict whether an adult has high cholesterol from NHANES health and examination variables under distribution shift.",
+            "feature_id": 0,
+            "score": 0.72,
+            "rationale": "A prior hypertension diagnosis is medically related to cardiometabolic risk and should remain broadly predictive of high cholesterol across domains, but it is self-reported, partly reflects healthcare access and age, and can encode demographic/system-contact shortcuts rather than purely biological signal.",
+            "feature": "BPQ020"
+          },
+          {
+            "task_summary": "Predict whether an individual has high cholesterol from NHANES health, exam, and questionnaire variables under domain shift.",
+            "feature_id": 0,
+            "score": 0.66,
+            "rationale": "A prior hypertension diagnosis is medically related to dyslipidemia through shared cardiometabolic risk factors, so it should carry real signal that generalizes reasonably well. However, it is self-reported and depends on healthcare access, screening intensity, age, and socioeconomic factors, making it partly a demographic/healthcare-utilization proxy rather than a purely stable biological predictor.",
+            "feature": "BPQ020"
+          },
+          {
+            "task_summary": "Predict whether an adult has high cholesterol from NHANES health, exam, and questionnaire variables under distribution shift.",
+            "feature_id": 0,
+            "score": 0.72,
+            "rationale": "A prior hypertension diagnosis is medically related to dyslipidemia through shared cardiometabolic risk and should remain broadly predictive across domains, but it is self-reported, partly reflects healthcare access and age, and can act as a demographic/usage proxy rather than a purely biological signal.",
+            "feature": "BPQ020"
+          }
+        ]
+      },
+      {
+        "feature_id": 1,
+        "feature": "DIQ160",
+        "score_mean": 0.626,
+        "score_std": 0.00489897948556636,
+        "samples": [
+          {
+            "task_summary": "Predict whether an adult in NHANES has high cholesterol from survey and examination variables under distribution shift.",
+            "feature_id": 1,
+            "score": 0.63,
+            "rationale": "Prediabetes/borderline diabetes is medically related to dyslipidemia through shared metabolic risk, so it should provide real signal that is likely to persist across domains. However, this is a self-reported prior diagnosis, making it sensitive to healthcare access, screening intensity, and demographic differences, and the refused/don't-know categories may reflect survey artifacts rather than biology.",
+            "feature": "DIQ160"
+          },
+          {
+            "task_summary": "Predict whether an individual has high cholesterol in NHANES from survey and examination variables under domain shift.",
+            "feature_id": 1,
+            "score": 0.63,
+            "rationale": "Prediabetes history is plausibly and mechanistically associated with dyslipidemia through shared metabolic risk, so it should retain moderate predictive value across domains. However, it is a self-reported prior diagnosis that depends on healthcare access, screening intensity, and clinician communication, making it somewhat vulnerable to demographic and domain-related reporting differences; refused/don't-know responses also add noise.",
+            "feature": "DIQ160"
+          },
+          {
+            "task_summary": "Predict whether an individual has high cholesterol in NHANES from survey and examination features under distribution shift.",
+            "feature_id": 1,
+            "score": 0.63,
+            "rationale": "Prediabetes/borderline diabetes is biologically related to dyslipidemia through metabolic syndrome, so it should carry real signal that generalizes across domains. However, it is self-reported clinician-diagnosed history, making it vulnerable to healthcare access, awareness, age, and demographic differences, and the refused/don't-know categories may reflect survey artifacts rather than stable physiology.",
+            "feature": "DIQ160"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has high cholesterol from survey and examination variables in a way that generalizes across population shifts.",
+            "feature_id": 1,
+            "score": 0.62,
+            "rationale": "Prediabetes/borderline diabetes is medically related to dyslipidemia through shared metabolic risk, so it should have real signal that is fairly stable across domains. However, it is a self-reported prior diagnosis, making it dependent on healthcare access, screening intensity, and awareness, which can vary by subgroup and act as demographic or domain-linked shortcut information; refused/don't-know responses also add noise.",
+            "feature": "DIQ160"
+          },
+          {
+            "task_summary": "Predict whether an individual has high cholesterol from NHANES health and examination data under distribution shift.",
+            "feature_id": 1,
+            "score": 0.62,
+            "rationale": "Prediabetes history is medically related to dyslipidemia through shared metabolic risk, so it should have moderate stable signal across domains. However, it is a self-reported prior diagnosis that depends on healthcare access, screening intensity, and awareness, making it partly a demographic and domain-sensitive proxy rather than a purely physiological predictor.",
+            "feature": "DIQ160"
+          }
+        ]
+      },
+      {
+        "feature_id": 2,
+        "feature": "DIQ010",
+        "score_mean": 0.724,
+        "score_std": 0.008000000000000007,
+        "samples": [
+          {
+            "task_summary": "Predict whether an NHANES participant has high cholesterol / adverse cholesterol status from survey and examination variables under domain shift.",
+            "feature_id": 2,
+            "score": 0.72,
+            "rationale": "Self-reported diabetes history is a clinically meaningful, generally stable correlate of dyslipidemia and cardiovascular metabolic risk, so it should transfer reasonably well across domains. It is not direct label leakage, but as a self-report diagnosis it can reflect healthcare access, awareness, and demographic differences, making it somewhat less robust than direct physiologic measures.",
+            "feature": "DIQ010"
+          },
+          {
+            "task_summary": "Predict whether an adult has high total cholesterol from NHANES health examination and questionnaire variables under distribution shift.",
+            "feature_id": 2,
+            "score": 0.74,
+            "rationale": "Self-reported diabetes status is medically related to dyslipidemia and cardiovascular risk, so it should carry stable signal for cholesterol across domains. It is not direct label leakage, but it is somewhat weakened by self-report error, treatment effects, and demographic/access-to-care differences that can affect diagnosis patterns.",
+            "feature": "DIQ010"
+          },
+          {
+            "task_summary": "Predict whether an individual has high cholesterol from NHANES health survey data under distribution shift.",
+            "feature_id": 2,
+            "score": 0.72,
+            "rationale": "Self-reported diabetes history is medically linked to dyslipidemia and cardiovascular risk, so it should be a fairly stable predictor across domains; however, it is indirect rather than task-defining, depends on prior diagnosis and healthcare access, and includes response categories that may reflect survey/measurement artifacts.",
+            "feature": "DIQ010"
+          },
+          {
+            "task_summary": "Predict whether an individual has high cholesterol from NHANES health examination and questionnaire data under distribution shift.",
+            "feature_id": 2,
+            "score": 0.72,
+            "rationale": "A prior diabetes diagnosis is medically and consistently associated with dyslipidemia and elevated cholesterol risk, so it should generalize reasonably well across domains; however, it is self-reported, partly reflects healthcare access and diagnosis practices, and includes noninformative missing-style categories, so it is useful but not maximally stable.",
+            "feature": "DIQ010"
+          },
+          {
+            "task_summary": "Predict whether an individual has high cholesterol from NHANES health and examination variables under distribution shift.",
+            "feature_id": 2,
+            "score": 0.72,
+            "rationale": "A prior diabetes diagnosis is medically and causally associated with dyslipidemia, so it should be a fairly stable predictor across domains; however, it is self-reported, partly reflects healthcare access and diagnosis practices, and includes noninformative response categories, which reduce robustness and raise some shortcut risk.",
+            "feature": "DIQ010"
+          }
+        ]
+      },
+      {
+        "feature_id": 3,
+        "feature": "KIQ025",
+        "score_mean": 0.196,
+        "score_std": 0.01959591794226543,
+        "samples": [
+          {
+            "task_summary": "Predict whether an individual has high cholesterol from NHANES health and examination variables under domain shift.",
+            "feature_id": 3,
+            "score": 0.18,
+            "rationale": "Recent dialysis reflects severe kidney disease, which can correlate with abnormal lipid profiles, but it is a rare, highly selected clinical status and may act more like a comorbidity shortcut than a broadly stable predictor of cholesterol across domains; refusal/don't-know responses are also likely noninformative artifacts.",
+            "feature": "KIQ025"
+          },
+          {
+            "task_summary": "Predict whether an NHANES participant has high total cholesterol from survey and examination variables under distribution shift.",
+            "feature_id": 3,
+            "score": 0.18,
+            "rationale": "Recent dialysis indicates severe kidney disease and may correlate with abnormal lipid profiles, but it is a rare, highly clinical indicator with limited marginal coverage for population cholesterol prediction; it is not direct leakage, yet its usefulness is likely weak and somewhat brittle across domains because it reflects a specific comorbidity subgroup rather than a general, stable driver of cholesterol.",
+            "feature": "KIQ025"
+          },
+          {
+            "task_summary": "Predict whether an NHANES participant has high cholesterol from survey and examination variables under distribution shift.",
+            "feature_id": 3,
+            "score": 0.18,
+            "rationale": "Recent dialysis reflects severe kidney disease, which can relate to lipid abnormalities, but it is a rare, highly selected clinical-status indicator with limited marginal coverage for the general cholesterol task; refusals/unknowns may also encode survey artifacts rather than stable biology.",
+            "feature": "KIQ025"
+          },
+          {
+            "task_summary": "Predict whether an NHANES participant has elevated total cholesterol from survey and examination variables under domain shift.",
+            "feature_id": 3,
+            "score": 0.22,
+            "rationale": "Recent dialysis reflects severe kidney disease that can correlate with abnormal lipid metabolism, but it is a rare, highly selected treatment-status variable with substantial missing/refusal structure and likely weak marginal signal for cholesterol in the general population, so its usefulness is limited and potentially brittle across domains.",
+            "feature": "KIQ025"
+          },
+          {
+            "task_summary": "Predict whether an NHANES participant has high total cholesterol from questionnaire, exam, and lab-related features under distribution shift.",
+            "feature_id": 3,
+            "score": 0.22,
+            "rationale": "Recent dialysis may correlate with severe kidney disease and altered lipid metabolism, but it is a rare, highly selected treatment indicator with limited marginal signal for cholesterol in the general population; it is also tied to healthcare access and comorbidity patterns that can shift across domains, reducing stable usefulness.",
+            "feature": "KIQ025"
+          }
+        ]
+      },
+      {
+        "feature_id": 4,
+        "feature": "KIQ022",
+        "score_mean": 0.512,
+        "score_std": 0.0530659966456864,
+        "samples": [
+          {
+            "task_summary": "Predict whether an adult has high cholesterol from NHANES health and examination variables under distribution shift.",
+            "feature_id": 4,
+            "score": 0.5,
+            "rationale": "Kidney disease history is medically related to cardiometabolic risk and can correlate with dyslipidemia, so it has some stable signal, but it is a self-reported diagnosis with missing/refusal categories and may act partly as a healthcare-access or comorbidity proxy rather than a direct robust predictor.",
+            "feature": "KIQ022"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has high cholesterol from survey and examination variables under distribution shift.",
+            "feature_id": 4,
+            "score": 0.54,
+            "rationale": "Kidney disease history is medically related to dyslipidemia and cardiovascular-metabolic risk, so it can carry real signal that should generalize, but it is a self-reported diagnosis with missing/refusal categories and may partly reflect healthcare access, age, and comorbidity patterns rather than a direct stable predictor.",
+            "feature": "KIQ022"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has high cholesterol from survey and examination variables under distribution shift.",
+            "feature_id": 4,
+            "score": 0.42,
+            "rationale": "Kidney disease is medically associated with dyslipidemia and cardiovascular risk, so it can carry some stable signal, but this self-reported diagnosis is indirect, relatively rare, and may reflect healthcare access, age, and comorbidity patterns that vary across domains; refused/don't-know responses are also brittle.",
+            "feature": "KIQ022"
+          },
+          {
+            "task_summary": "Predict whether an individual has high cholesterol from NHANES health survey data under distribution shift.",
+            "feature_id": 4,
+            "score": 0.58,
+            "rationale": "Kidney disease history is medically associated with cardiometabolic risk and can correlate with high cholesterol, so it has some stable signal; however it is a self-reported diagnosis, relatively distal to the target, and may vary with healthcare access and diagnosis patterns across domains, which limits robustness.",
+            "feature": "KIQ022"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has high cholesterol or an adverse cholesterol status from survey and examination variables across shifted domains.",
+            "feature_id": 4,
+            "score": 0.52,
+            "rationale": "History of weak or failing kidneys is medically related to dyslipidemia and cardiovascular-metabolic disease, so it can carry real signal that should generalize reasonably well; however it is a self-reported diagnosis with missing/refusal categories, depends on healthcare access and prior screening, and may partly reflect demographic or utilization patterns rather than stable biology, so its standalone usefulness is moderate rather than high.",
+            "feature": "KIQ022"
+          }
+        ]
+      },
+      {
+        "feature_id": 5,
+        "feature": "MCQ070",
+        "score_mean": 0.152,
+        "score_std": 0.027129319932501072,
+        "samples": [
+          {
+            "task_summary": "Predict whether an adult has high cholesterol from NHANES health, examination, and questionnaire variables under distribution shift.",
+            "feature_id": 5,
+            "score": 0.12,
+            "rationale": "Psoriasis history may have a weak indirect association with dyslipidemia through systemic inflammation and comorbidity, but it is not a core causal driver of cholesterol status and is likely sparse, noisy self-report with refused/don't-know artifacts; expected stable marginal predictive value is low.",
+            "feature": "MCQ070"
+          },
+          {
+            "task_summary": "Predict whether an adult has high cholesterol from NHANES health, examination, and questionnaire variables under distribution shift.",
+            "feature_id": 5,
+            "score": 0.18,
+            "rationale": "Psoriasis has at most a weak indirect association with cholesterol through systemic inflammation and comorbidity, but it is not a core causal indicator of hypercholesterolemia; self-report also adds noise, missingness, and healthcare-access dependence, making its predictive value likely low and not especially stable across domains.",
+            "feature": "MCQ070"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has high cholesterol or related cholesterol abnormality from health and examination variables across distribution shifts.",
+            "feature_id": 5,
+            "score": 0.18,
+            "rationale": "Psoriasis has only a weak, indirect association with dyslipidemia through systemic inflammation and comorbidity patterns, so it is unlikely to be a strong marginal predictor; as a self-reported doctor-diagnosed condition, it is also vulnerable to healthcare-access and demographic differences across domains, reducing stable usefulness.",
+            "feature": "MCQ070"
+          },
+          {
+            "task_summary": "Predict whether an adult has high total cholesterol from NHANES health examination and questionnaire variables under distribution shift.",
+            "feature_id": 5,
+            "score": 0.12,
+            "rationale": "A prior psoriasis diagnosis may have a weak indirect association with cholesterol through systemic inflammation or treatment patterns, but it is not a core causal driver of cholesterol and is likely sparse and noisy; it should generalize somewhat if real, yet offers limited stable predictive value and may partly reflect healthcare access differences.",
+            "feature": "MCQ070"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has elevated cholesterol from survey and examination variables under distribution shift.",
+            "feature_id": 5,
+            "score": 0.16,
+            "rationale": "Self-reported psoriasis may have a weak biological association with dyslipidemia through systemic inflammation, but it is an indirect, sparse comorbidity signal and depends on prior diagnosis and healthcare access; this makes it only weakly predictive and potentially unstable across domains.",
+            "feature": "MCQ070"
+          }
+        ]
+      },
+      {
+        "feature_id": 6,
+        "feature": "MCQ160A",
+        "score_mean": 0.338,
+        "score_std": 0.05035871324805667,
+        "samples": [
+          {
+            "task_summary": "Predict whether an adult in NHANES has high cholesterol or has been told they have high cholesterol from health and examination variables.",
+            "feature_id": 6,
+            "score": 0.37,
+            "rationale": "Arthritis history may correlate weakly with cholesterol through age, obesity, inflammation, and overall chronic disease burden, so it has some broad clinical signal. But it is largely an indirect comorbidity marker, heavily age-related, partially a healthcare-access/diagnosis variable, and therefore likely less stable and less specifically predictive across domains than direct metabolic or cardiovascular features.",
+            "feature": "MCQ160A"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has high cholesterol or related abnormal cholesterol status from survey and examination variables.",
+            "feature_id": 6,
+            "score": 0.42,
+            "rationale": "Arthritis history can correlate with older age, obesity, inflammation, and lower activity, which are plausibly associated with cholesterol risk, but it is an indirect comorbidity signal rather than a causal or specific marker. It may add some stable predictive value across domains, yet much of its signal is likely mediated by demographics and health-status shortcuts, so usefulness is moderate at best.",
+            "feature": "MCQ160A"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has high total cholesterol from questionnaire, exam, and lab-related covariates under domain shift.",
+            "feature_id": 6,
+            "score": 0.31,
+            "rationale": "History of arthritis may have a weak, indirect association with cholesterol through age, inflammation, obesity, and medication patterns, so it could add some signal; however it is largely a comorbidity/self-report variable, strongly age-linked, potentially treatment- and access-dependent, and not a direct stable cause of cholesterol, so its marginal usefulness is limited and somewhat brittle across domains.",
+            "feature": "MCQ160A"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has high cholesterol / was told they have high cholesterol from health and examination variables.",
+            "feature_id": 6,
+            "score": 0.28,
+            "rationale": "Arthritis history may have a weak indirect association with cholesterol through age, obesity, inflammation, and general chronic disease burden, but it is not a direct causal marker of cholesterol status. Much of its signal likely comes from age/comorbidity patterns that can shift across domains, and the refused/don't-know categories are especially brittle.",
+            "feature": "MCQ160A"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has high cholesterol or related cholesterol abnormality from health and examination variables across shifted domains.",
+            "feature_id": 6,
+            "score": 0.31,
+            "rationale": "History of arthritis may have a weak indirect association with cholesterol through age, inflammation, obesity, and medication patterns, but it is not a direct causal marker of cholesterol status and risks acting mainly as an age/comorbidity shortcut; refusal and don't-know categories are also brittle.",
+            "feature": "MCQ160A"
+          }
+        ]
+      },
+      {
+        "feature_id": 7,
+        "feature": "nhanes_year",
+        "score_mean": 0.012,
+        "score_std": 0.009797958971132713,
+        "samples": [
+          {
+            "task_summary": "Predict whether an individual has elevated cholesterol from NHANES health and examination data under distribution shift.",
+            "feature_id": 7,
+            "score": 0.02,
+            "rationale": "Survey year is primarily a domain/index variable that captures temporal and sampling differences rather than a stable individual-level biological cause of cholesterol, so it is likely to act as a brittle shortcut and should be heavily downweighted.",
+            "feature": "nhanes_year"
+          },
+          {
+            "task_summary": "Predict whether an individual has elevated cholesterol from NHANES health and examination variables under distribution shift.",
+            "feature_id": 7,
+            "score": 0.0,
+            "rationale": "Survey year is primarily a domain identifier in NHANES and captures temporal shifts in sampling, measurement, and treatment patterns rather than a stable individual-level causal signal; it is likely to act as a brittle shortcut and harm out-of-distribution generalization.",
+            "feature": "nhanes_year"
+          },
+          {
+            "task_summary": "Predict whether an individual has elevated cholesterol from NHANES health and examination variables under distribution shift.",
+            "feature_id": 7,
+            "score": 0.02,
+            "rationale": "Survey year is primarily a domain indicator in NHANES and is likely to capture temporal shifts in sampling, measurement, and population trends rather than a stable individual-level signal; it risks shortcutting train/test differences and offers little semantically robust predictive value on its own.",
+            "feature": "nhanes_year"
+          },
+          {
+            "task_summary": "Predict whether an individual has elevated cholesterol from NHANES health and examination data under distribution shift.",
+            "feature_id": 7,
+            "score": 0.0,
+            "rationale": "Survey year is primarily a domain identifier for NHANES waves, not an individual-level physiological cause of cholesterol; any association is likely due to temporal trends, measurement changes, or cohort composition shifts, making it a brittle shortcut for out-of-distribution generalization.",
+            "feature": "nhanes_year"
+          },
+          {
+            "task_summary": "Predict whether an individual has high cholesterol from NHANES health and examination variables under distribution shift.",
+            "feature_id": 7,
+            "score": 0.02,
+            "rationale": "Survey year is primarily a domain identifier and can capture changing measurement protocols, treatment prevalence, and population composition rather than stable individual risk; any association with cholesterol is likely brittle and non-causal for out-of-distribution generalization.",
+            "feature": "nhanes_year"
+          }
+        ]
+      },
+      {
+        "feature_id": 8,
+        "feature": "DMDBORN4",
+        "score_mean": 0.112,
+        "score_std": 0.015999999999999997,
+        "samples": [
+          {
+            "task_summary": "Predict whether an adult in NHANES has elevated total cholesterol from health examination and questionnaire variables.",
+            "feature_id": 8,
+            "score": 0.12,
+            "rationale": "Country of birth is a coarse demographic variable that may correlate with cholesterol through lifestyle or healthcare access, but it is largely a sensitive proxy and likely to vary across domains in unstable ways rather than reflect a direct, transportable biological signal.",
+            "feature": "DMDBORN4"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has high cholesterol from health and examination variables under distribution shift.",
+            "feature_id": 8,
+            "score": 0.12,
+            "rationale": "Country of birth may weakly correlate with cholesterol through diet, acculturation, and healthcare access, but it is a coarse demographic proxy that can encode subgroup and domain differences rather than stable physiology, so its marginal predictive value is likely limited and brittle for out-of-distribution generalization.",
+            "feature": "DMDBORN4"
+          },
+          {
+            "task_summary": "Predict whether an adult has elevated total cholesterol from NHANES health examination and questionnaire variables.",
+            "feature_id": 8,
+            "score": 0.08,
+            "rationale": "Country of birth is a coarse demographic variable that may correlate with diet, healthcare access, or ancestry, but its effect is indirect and likely unstable across domains; it also risks acting as a sensitive demographic shortcut rather than a robust physiological predictor.",
+            "feature": "DMDBORN4"
+          },
+          {
+            "task_summary": "Predict whether an individual has high cholesterol from NHANES health, examination, and questionnaire variables under distribution shift.",
+            "feature_id": 8,
+            "score": 0.12,
+            "rationale": "Country of birth is at best an indirect proxy for lifestyle, healthcare access, and socioeconomic factors, so its marginal signal for cholesterol is likely weak and confounded. It is also a sensitive demographic attribute that can encode domain differences and population composition shifts rather than stable biology, making it a brittle shortcut for out-of-distribution generalization.",
+            "feature": "DMDBORN4"
+          },
+          {
+            "task_summary": "Predict whether an adult has high total cholesterol from NHANES health, examination, and questionnaire variables under domain shift.",
+            "feature_id": 8,
+            "score": 0.12,
+            "rationale": "Country of birth is a coarse demographic variable that may correlate with diet, healthcare access, or acculturation, but it is also a sensitive proxy for population subgroup and likely to vary across domains; its association with cholesterol is indirect and brittle rather than a stable causal signal.",
+            "feature": "DMDBORN4"
+          }
+        ]
+      },
+      {
+        "feature_id": 9,
+        "feature": "DMDEDUC2",
+        "score_mean": 0.332,
+        "score_std": 0.032496153618543834,
+        "samples": [
+          {
+            "task_summary": "Predict whether an adult in NHANES has elevated total cholesterol from survey and examination variables under distribution shift.",
+            "feature_id": 9,
+            "score": 0.28,
+            "rationale": "Education level is associated with cholesterol through socioeconomic status, health literacy, diet, and care access, so it has some marginal predictive value; however, it is a demographic proxy that can act as a shortcut, is not biologically proximal, and its relationship to cholesterol is likely to vary across domains and subpopulations, so its stable usefulness is limited.",
+            "feature": "DMDEDUC2"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has elevated total cholesterol from health examination and questionnaire variables under distribution shift.",
+            "feature_id": 9,
+            "score": 0.34,
+            "rationale": "Education level is associated with long-run health behaviors, healthcare access, diet, and medication use, so it has some marginal signal for cholesterol risk. However, it is also a socioeconomic and demographic proxy that can vary across domains and act as a shortcut rather than a stable biological predictor, so its out-of-distribution usefulness is limited.",
+            "feature": "DMDEDUC2"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has elevated total cholesterol from examination/lab and survey variables under distribution shift.",
+            "feature_id": 9,
+            "score": 0.32,
+            "rationale": "Education level is associated with health behaviors, healthcare access, diet, and statin use, so it may carry some signal for cholesterol risk, but it is an indirect socioeconomic proxy. Its effect is likely mediated by other variables, can vary across subpopulations and survey domains, and may act as a demographic shortcut rather than a stable biological predictor.",
+            "feature": "DMDEDUC2"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has high cholesterol from survey and examination variables under distribution shift.",
+            "feature_id": 9,
+            "score": 0.38,
+            "rationale": "Education level is associated with health behaviors, healthcare access, and long-run cardiovascular risk, so it may carry some signal, but it is an indirect socioeconomic proxy rather than a biological marker and can act as a demographic shortcut whose relationship to cholesterol may vary across domains.",
+            "feature": "DMDEDUC2"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has elevated cholesterol from survey and examination variables under domain shift.",
+            "feature_id": 9,
+            "score": 0.34,
+            "rationale": "Education level can correlate with cholesterol through health literacy, diet, healthcare access, and lifestyle, but it is an indirect socioeconomic proxy rather than a biological driver. Its effect is likely confounded with age, income, race, and survey-domain differences, so it may act as a demographic shortcut and be less stable across shifted populations.",
+            "feature": "DMDEDUC2"
+          }
+        ]
+      },
+      {
+        "feature_id": 10,
+        "feature": "RIDAGEYR",
+        "score_mean": 0.862,
+        "score_std": 0.04019950248448356,
+        "samples": [
+          {
+            "task_summary": "Predict whether an individual has elevated total cholesterol from NHANES health examination data under distribution shift.",
+            "feature_id": 10,
+            "score": 0.9,
+            "rationale": "Age is a strong, biologically grounded predictor of cholesterol risk that should generalize across domains; while it is a demographic variable and may correlate with domain shifts, it is not a leakage feature and is expected to remain stably useful.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "task_summary": "Predict whether an individual has elevated total cholesterol from NHANES health examination data under distribution shift.",
+            "feature_id": 10,
+            "score": 0.9,
+            "rationale": "Age is a strong, biologically grounded predictor of cholesterol risk that should remain predictive across domains; although correlated with demographic structure, it is not a leakage feature and is generally stable rather than a brittle shortcut.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "task_summary": "Predict whether an individual has high total cholesterol from NHANES health examination and questionnaire data.",
+            "feature_id": 10,
+            "score": 0.83,
+            "rationale": "Age is a strong, biologically grounded predictor of cholesterol risk that should remain useful across domains, but it is also correlated with cohort and demographic shifts, so it is not maximally invariant.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "task_summary": "Predict whether an individual has high total cholesterol from NHANES health examination data under distribution shift.",
+            "feature_id": 10,
+            "score": 0.88,
+            "rationale": "Age is a strong, biologically grounded predictor of cholesterol risk that should remain informative across domains; while correlated with demographic and cohort differences, it is not direct leakage and is generally more stable than many survey-specific artifacts.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "task_summary": "Predict whether an adult has high total cholesterol from NHANES health examination and questionnaire variables across distribution shifts.",
+            "feature_id": 10,
+            "score": 0.8,
+            "rationale": "Age is a strong, biologically grounded risk factor for elevated cholesterol and should remain predictive across domains, though it is somewhat sensitive and can partly act as a demographic shortcut if domain shifts are age-structured.",
+            "feature": "RIDAGEYR"
+          }
+        ]
+      },
+      {
+        "feature_id": 11,
+        "feature": "RIAGENDR",
+        "score_mean": 0.5539999999999999,
+        "score_std": 0.06799999999999999,
+        "samples": [
+          {
+            "task_summary": "Predict whether an adult has high cholesterol from NHANES health and examination variables under distribution shift.",
+            "feature_id": 11,
+            "score": 0.58,
+            "rationale": "Sex is a genuine biological risk factor for cholesterol and should retain some predictive value across domains, but as a sensitive demographic attribute it can act as a shortcut, interact with age and hormones in shifting ways, and is less reliable than direct clinical measurements.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has elevated total cholesterol from examination and questionnaire variables under domain shift.",
+            "feature_id": 11,
+            "score": 0.61,
+            "rationale": "Sex is a genuine biological correlate of cholesterol through hormonal and metabolic differences, so it should retain some predictive value across domains; however, it is a sensitive demographic attribute and can act as a shortcut tied to population composition shifts rather than individual pathology, so its stable usefulness is only moderate.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "task_summary": "Predict whether an adult has high total cholesterol from NHANES health examination and questionnaire variables under distribution shift.",
+            "feature_id": 11,
+            "score": 0.42,
+            "rationale": "Sex is biologically related to cholesterol levels and cardiovascular risk, so it has some stable signal, but as a sensitive demographic attribute it can act as a shortcut and its association may vary with age, hormones, treatment patterns, and domain splits.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "task_summary": "Predict whether an adult has high cholesterol from health and examination variables under distribution shift.",
+            "feature_id": 11,
+            "score": 0.58,
+            "rationale": "Sex is a genuine biological risk factor for cholesterol and should retain some predictive value across domains, but as a sensitive demographic attribute it can also act as a shortcut and its marginal effect may vary with age, hormones, treatment, and sampling differences, so its stable standalone usefulness is only moderate.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "task_summary": "Predict whether an adult has high total cholesterol from NHANES health examination and questionnaire variables under domain shift.",
+            "feature_id": 11,
+            "score": 0.58,
+            "rationale": "Sex is a genuine biological correlate of cholesterol levels and cardiovascular risk, so it should retain some predictive value across domains; however, it is a sensitive demographic attribute with effects that can vary by age, hormones, treatment, and sampling, making it only moderately stable and potentially a shortcut.",
+            "feature": "RIAGENDR"
+          }
+        ]
+      },
+      {
+        "feature_id": 12,
+        "feature": "DMDMARTL",
+        "score_mean": 0.25,
+        "score_std": 0.025298221281347046,
+        "samples": [
+          {
+            "task_summary": "Predict whether an adult in NHANES has elevated total cholesterol from questionnaire and examination variables under distribution shift.",
+            "feature_id": 12,
+            "score": 0.28,
+            "rationale": "Marital status may weakly correlate with cholesterol through age, socioeconomic conditions, and health behaviors, but it is an indirect demographic proxy rather than a causal biomarker and is likely to vary across domains, so its marginal signal is limited and potentially brittle.",
+            "feature": "DMDMARTL"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has elevated total cholesterol from examination/laboratory and survey variables under distribution shift.",
+            "feature_id": 12,
+            "score": 0.23,
+            "rationale": "Marital status may weakly correlate with cholesterol through age, socioeconomic conditions, and health behaviors, but it is a coarse demographic proxy rather than a direct biological driver. Its association is likely mediated by other variables and can vary across domains, so it offers limited stable signal and risks acting as a brittle social shortcut.",
+            "feature": "DMDMARTL"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has elevated total cholesterol from health examination and questionnaire variables under domain shift.",
+            "feature_id": 12,
+            "score": 0.22,
+            "rationale": "Marital status may correlate weakly with cholesterol through age, socioeconomic factors, diet, and healthcare access, but it is an indirect demographic/social proxy rather than a direct physiological driver. Its association is likely unstable across subpopulations and survey domains and may act as a shortcut, so its expected robust marginal usefulness is low.",
+            "feature": "DMDMARTL"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has high cholesterol from health, examination, and questionnaire variables under distribution shift.",
+            "feature_id": 12,
+            "score": 0.24,
+            "rationale": "Marital status may correlate weakly with cholesterol through age, socioeconomic factors, and health behaviors, but it is a coarse demographic proxy rather than a direct physiological signal and is likely to vary across domains in ways that make it a brittle shortcut.",
+            "feature": "DMDMARTL"
+          },
+          {
+            "task_summary": "Predict whether an adult in NHANES has elevated total cholesterol from survey and examination variables under distribution shift.",
+            "feature_id": 12,
+            "score": 0.28,
+            "rationale": "Marital status may weakly correlate with cholesterol through age, socioeconomic factors, and health behaviors, but it is an indirect demographic proxy rather than a causal biomarker. Its association is likely unstable across domains and risks acting as a shortcut tied to population composition, so its marginal out-of-distribution usefulness should be low.",
+            "feature": "DMDMARTL"
+          }
+        ]
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "feature_id": 0,
+      "feature": "BPQ020",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"BPQ020\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health professional that you had hypertension\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult has high cholesterol from NHANES health, examination, and questionnaire variables under distribution shift.\",\"feature_id\":0,\"score\":0.66,\"rationale\":\"A prior hypertension diagnosis is medically related to cardiometabolic risk and should retain moderate predictive value across domains, but it is a self-reported healthcare-history variable that depends on access to care, screening, age, and reporting behavior, making it less stable and somewhat shortcut-prone than direct physiologic measures.\"}",
+      "input_tokens": 321,
+      "output_tokens": 106,
+      "total_tokens": 427,
+      "response_id": "resp_0ae6a961e6acdb81006a2806079618819b81cea3b83e8befd7",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 0,
+      "feature": "BPQ020",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"BPQ020\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health professional that you had hypertension\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual has high cholesterol from NHANES health and examination data under distribution shift.\",\"feature_id\":0,\"score\":0.72,\"rationale\":\"A prior hypertension diagnosis is medically related to dyslipidemia through shared cardiometabolic risk factors, so it should be moderately predictive across domains; however, it is a self-reported prior diagnosis that depends on healthcare access, age, and demographic patterns, making it somewhat vulnerable to shortcut and domain-shift effects.\"}",
+      "input_tokens": 321,
+      "output_tokens": 105,
+      "total_tokens": 426,
+      "response_id": "resp_09db82801737c7ce006a28060a9288819b9c20c2e3b200ba0d",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 0,
+      "feature": "BPQ020",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"BPQ020\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health professional that you had hypertension\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult has high cholesterol from NHANES health and examination variables under distribution shift.\",\"feature_id\":0,\"score\":0.72,\"rationale\":\"A prior hypertension diagnosis is medically related to cardiometabolic risk and should remain broadly predictive of high cholesterol across domains, but it is self-reported, partly reflects healthcare access and age, and can encode demographic/system-contact shortcuts rather than purely biological signal.\"}",
+      "input_tokens": 321,
+      "output_tokens": 92,
+      "total_tokens": 413,
+      "response_id": "resp_032416045421007c006a28060d56a8819bb83ea452f23d7d4c",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 0,
+      "feature": "BPQ020",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"BPQ020\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health professional that you had hypertension\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual has high cholesterol from NHANES health, exam, and questionnaire variables under domain shift.\",\"feature_id\":0,\"score\":0.66,\"rationale\":\"A prior hypertension diagnosis is medically related to dyslipidemia through shared cardiometabolic risk factors, so it should carry real signal that generalizes reasonably well. However, it is self-reported and depends on healthcare access, screening intensity, age, and socioeconomic factors, making it partly a demographic/healthcare-utilization proxy rather than a purely stable biological predictor.\"}",
+      "input_tokens": 321,
+      "output_tokens": 118,
+      "total_tokens": 439,
+      "response_id": "resp_02ab5c523896df52006a28060fd7708198b7449b6917fe200e",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 0,
+      "feature": "BPQ020",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"BPQ020\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health professional that you had hypertension\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult has high cholesterol from NHANES health, exam, and questionnaire variables under distribution shift.\",\"feature_id\":0,\"score\":0.72,\"rationale\":\"A prior hypertension diagnosis is medically related to dyslipidemia through shared cardiometabolic risk and should remain broadly predictive across domains, but it is self-reported, partly reflects healthcare access and age, and can act as a demographic/usage proxy rather than a purely biological signal.\"}",
+      "input_tokens": 321,
+      "output_tokens": 101,
+      "total_tokens": 422,
+      "response_id": "resp_0587985988c6d7b5006a2806133360819985e6e39ec2203e29",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 1,
+      "feature": "DIQ160",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"DIQ160\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health professional that {you have/SP has} any of the following: prediabetes, impaired fasting glucose, impaired glucose tolerance, borderline diabetes or that {your/her/his} blood sugar is higher than normal but not high...\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has high cholesterol from survey and examination variables under distribution shift.\",\"feature_id\":1,\"score\":0.63,\"rationale\":\"Prediabetes/borderline diabetes is medically related to dyslipidemia through shared metabolic risk, so it should provide real signal that is likely to persist across domains. However, this is a self-reported prior diagnosis, making it sensitive to healthcare access, screening intensity, and demographic differences, and the refused/don't-know categories may reflect survey artifacts rather than biology.\"}",
+      "input_tokens": 360,
+      "output_tokens": 119,
+      "total_tokens": 479,
+      "response_id": "resp_02fcb76d83508b10006a2806182054819b8b1ea1c772989fe4",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 1,
+      "feature": "DIQ160",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"DIQ160\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health professional that {you have/SP has} any of the following: prediabetes, impaired fasting glucose, impaired glucose tolerance, borderline diabetes or that {your/her/his} blood sugar is higher than normal but not high...\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual has high cholesterol in NHANES from survey and examination variables under domain shift.\",\n  \"feature_id\": 1,\n  \"score\": 0.63,\n  \"rationale\": \"Prediabetes history is plausibly and mechanistically associated with dyslipidemia through shared metabolic risk, so it should retain moderate predictive value across domains. However, it is a self-reported prior diagnosis that depends on healthcare access, screening intensity, and clinician communication, making it somewhat vulnerable to demographic and domain-related reporting differences; refused/don't-know responses also add noise.\"\n}",
+      "input_tokens": 360,
+      "output_tokens": 132,
+      "total_tokens": 492,
+      "response_id": "resp_04cc990aa7cf6ca6006a28061bb62c81989f0e5a21223c2993",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 1,
+      "feature": "DIQ160",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"DIQ160\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health professional that {you have/SP has} any of the following: prediabetes, impaired fasting glucose, impaired glucose tolerance, borderline diabetes or that {your/her/his} blood sugar is higher than normal but not high...\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual has high cholesterol in NHANES from survey and examination features under distribution shift.\",\n  \"feature_id\": 1,\n  \"score\": 0.63,\n  \"rationale\": \"Prediabetes/borderline diabetes is biologically related to dyslipidemia through metabolic syndrome, so it should carry real signal that generalizes across domains. However, it is self-reported clinician-diagnosed history, making it vulnerable to healthcare access, awareness, age, and demographic differences, and the refused/don't-know categories may reflect survey artifacts rather than stable physiology.\"\n}",
+      "input_tokens": 360,
+      "output_tokens": 133,
+      "total_tokens": 493,
+      "response_id": "resp_012dabc99d724600006a28061fbec8819987c75e0264ae8e0e",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 1,
+      "feature": "DIQ160",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"DIQ160\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health professional that {you have/SP has} any of the following: prediabetes, impaired fasting glucose, impaired glucose tolerance, borderline diabetes or that {your/her/his} blood sugar is higher than normal but not high...\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has high cholesterol from survey and examination variables in a way that generalizes across population shifts.\",\"feature_id\":1,\"score\":0.62,\"rationale\":\"Prediabetes/borderline diabetes is medically related to dyslipidemia through shared metabolic risk, so it should have real signal that is fairly stable across domains. However, it is a self-reported prior diagnosis, making it dependent on healthcare access, screening intensity, and awareness, which can vary by subgroup and act as demographic or domain-linked shortcut information; refused/don't-know responses also add noise.\"}",
+      "input_tokens": 360,
+      "output_tokens": 132,
+      "total_tokens": 492,
+      "response_id": "resp_05a002e9d0f4706f006a2806230d908198914328057425aa1f",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 1,
+      "feature": "DIQ160",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"DIQ160\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health professional that {you have/SP has} any of the following: prediabetes, impaired fasting glucose, impaired glucose tolerance, borderline diabetes or that {your/her/his} blood sugar is higher than normal but not high...\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual has high cholesterol from NHANES health and examination data under distribution shift.\",\"feature_id\":1,\"score\":0.62,\"rationale\":\"Prediabetes history is medically related to dyslipidemia through shared metabolic risk, so it should have moderate stable signal across domains. However, it is a self-reported prior diagnosis that depends on healthcare access, screening intensity, and awareness, making it partly a demographic and domain-sensitive proxy rather than a purely physiological predictor.\"}",
+      "input_tokens": 360,
+      "output_tokens": 107,
+      "total_tokens": 467,
+      "response_id": "resp_0afe81e8a8f73a88006a280626b678819bac80ac5f40eb1fa7",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 2,
+      "feature": "DIQ010",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"DIQ010\",\n  \"type\": \"categorical\",\n  \"description\": \"{Other than during pregnancy, have you ever been told by a doctor or health professional that you have diabetes or sugar diabetes?\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know; 3.0=Borderline\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an NHANES participant has high cholesterol / adverse cholesterol status from survey and examination variables under domain shift.\",\"feature_id\":2,\"score\":0.72,\"rationale\":\"Self-reported diabetes history is a clinically meaningful, generally stable correlate of dyslipidemia and cardiovascular metabolic risk, so it should transfer reasonably well across domains. It is not direct label leakage, but as a self-report diagnosis it can reflect healthcare access, awareness, and demographic differences, making it somewhat less robust than direct physiologic measures.\"}",
+      "input_tokens": 338,
+      "output_tokens": 114,
+      "total_tokens": 452,
+      "response_id": "resp_0503113fd9c3471c006a28062a1af0819897407c6dbdfc8455",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 2,
+      "feature": "DIQ010",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"DIQ010\",\n  \"type\": \"categorical\",\n  \"description\": \"{Other than during pregnancy, have you ever been told by a doctor or health professional that you have diabetes or sugar diabetes?\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know; 3.0=Borderline\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult has high total cholesterol from NHANES health examination and questionnaire variables under distribution shift.\",\"feature_id\":2,\"score\":0.74,\"rationale\":\"Self-reported diabetes status is medically related to dyslipidemia and cardiovascular risk, so it should carry stable signal for cholesterol across domains. It is not direct label leakage, but it is somewhat weakened by self-report error, treatment effects, and demographic/access-to-care differences that can affect diagnosis patterns.\"}",
+      "input_tokens": 338,
+      "output_tokens": 104,
+      "total_tokens": 442,
+      "response_id": "resp_01518e58324f90e6006a28062dae38819abd8c42ac593c03ac",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 2,
+      "feature": "DIQ010",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"DIQ010\",\n  \"type\": \"categorical\",\n  \"description\": \"{Other than during pregnancy, have you ever been told by a doctor or health professional that you have diabetes or sugar diabetes?\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know; 3.0=Borderline\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual has high cholesterol from NHANES health survey data under distribution shift.\",\"feature_id\":2,\"score\":0.72,\"rationale\":\"Self-reported diabetes history is medically linked to dyslipidemia and cardiovascular risk, so it should be a fairly stable predictor across domains; however, it is indirect rather than task-defining, depends on prior diagnosis and healthcare access, and includes response categories that may reflect survey/measurement artifacts.\"}",
+      "input_tokens": 338,
+      "output_tokens": 100,
+      "total_tokens": 438,
+      "response_id": "resp_0dd10e88031cb362006a2806317c04819bb07e52267f173325",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 2,
+      "feature": "DIQ010",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"DIQ010\",\n  \"type\": \"categorical\",\n  \"description\": \"{Other than during pregnancy, have you ever been told by a doctor or health professional that you have diabetes or sugar diabetes?\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know; 3.0=Borderline\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual has high cholesterol from NHANES health examination and questionnaire data under distribution shift.\",\"feature_id\":2,\"score\":0.72,\"rationale\":\"A prior diabetes diagnosis is medically and consistently associated with dyslipidemia and elevated cholesterol risk, so it should generalize reasonably well across domains; however, it is self-reported, partly reflects healthcare access and diagnosis practices, and includes noninformative missing-style categories, so it is useful but not maximally stable.\"}",
+      "input_tokens": 338,
+      "output_tokens": 107,
+      "total_tokens": 445,
+      "response_id": "resp_0e5f1b5708f57e57006a28063489dc819a9b2d81cab1c5365b",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 2,
+      "feature": "DIQ010",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"DIQ010\",\n  \"type\": \"categorical\",\n  \"description\": \"{Other than during pregnancy, have you ever been told by a doctor or health professional that you have diabetes or sugar diabetes?\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know; 3.0=Borderline\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual has high cholesterol from NHANES health and examination variables under distribution shift.\",\"feature_id\":2,\"score\":0.72,\"rationale\":\"A prior diabetes diagnosis is medically and causally associated with dyslipidemia, so it should be a fairly stable predictor across domains; however, it is self-reported, partly reflects healthcare access and diagnosis practices, and includes noninformative response categories, which reduce robustness and raise some shortcut risk.\"}",
+      "input_tokens": 338,
+      "output_tokens": 102,
+      "total_tokens": 440,
+      "response_id": "resp_0a2a83697d49c4ae006a280637d2f8819aae7e135b5f1e0ae1",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 3,
+      "feature": "KIQ025",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"KIQ025\",\n  \"type\": \"categorical\",\n  \"description\": \"received dialysis (either hemodialysis or peritoneal dialysis) in the past 12 months\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual has high cholesterol from NHANES health and examination variables under domain shift.\",\"feature_id\":3,\"score\":0.18,\"rationale\":\"Recent dialysis reflects severe kidney disease, which can correlate with abnormal lipid profiles, but it is a rare, highly selected clinical status and may act more like a comorbidity shortcut than a broadly stable predictor of cholesterol across domains; refusal/don't-know responses are also likely noninformative artifacts.\"}",
+      "input_tokens": 327,
+      "output_tokens": 102,
+      "total_tokens": 429,
+      "response_id": "resp_07e9b981e4cb2dcf006a28063b0a9c819bb870154ed0d1d550",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 3,
+      "feature": "KIQ025",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"KIQ025\",\n  \"type\": \"categorical\",\n  \"description\": \"received dialysis (either hemodialysis or peritoneal dialysis) in the past 12 months\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an NHANES participant has high total cholesterol from survey and examination variables under distribution shift.\",\"feature_id\":3,\"score\":0.18,\"rationale\":\"Recent dialysis indicates severe kidney disease and may correlate with abnormal lipid profiles, but it is a rare, highly clinical indicator with limited marginal coverage for population cholesterol prediction; it is not direct leakage, yet its usefulness is likely weak and somewhat brittle across domains because it reflects a specific comorbidity subgroup rather than a general, stable driver of cholesterol.\"}",
+      "input_tokens": 327,
+      "output_tokens": 111,
+      "total_tokens": 438,
+      "response_id": "resp_0399c63c41e9f0af006a28063e511c819abca1a364d23a95d2",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 3,
+      "feature": "KIQ025",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"KIQ025\",\n  \"type\": \"categorical\",\n  \"description\": \"received dialysis (either hemodialysis or peritoneal dialysis) in the past 12 months\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an NHANES participant has high cholesterol from survey and examination variables under distribution shift.\",\"feature_id\":3,\"score\":0.18,\"rationale\":\"Recent dialysis reflects severe kidney disease, which can relate to lipid abnormalities, but it is a rare, highly selected clinical-status indicator with limited marginal coverage for the general cholesterol task; refusals/unknowns may also encode survey artifacts rather than stable biology.\"}",
+      "input_tokens": 327,
+      "output_tokens": 92,
+      "total_tokens": 419,
+      "response_id": "resp_09002b66681d057f006a2806423504819bba89653bf4aa0532",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 3,
+      "feature": "KIQ025",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"KIQ025\",\n  \"type\": \"categorical\",\n  \"description\": \"received dialysis (either hemodialysis or peritoneal dialysis) in the past 12 months\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an NHANES participant has elevated total cholesterol from survey and examination variables under domain shift.\",\"feature_id\":3,\"score\":0.22,\"rationale\":\"Recent dialysis reflects severe kidney disease that can correlate with abnormal lipid metabolism, but it is a rare, highly selected treatment-status variable with substantial missing/refusal structure and likely weak marginal signal for cholesterol in the general population, so its usefulness is limited and potentially brittle across domains.\"}",
+      "input_tokens": 327,
+      "output_tokens": 97,
+      "total_tokens": 424,
+      "response_id": "resp_0736c1c4603d5091006a28064531608198bcfeb39db429fd77",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 3,
+      "feature": "KIQ025",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"KIQ025\",\n  \"type\": \"categorical\",\n  \"description\": \"received dialysis (either hemodialysis or peritoneal dialysis) in the past 12 months\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an NHANES participant has high total cholesterol from questionnaire, exam, and lab-related features under distribution shift.\",\"feature_id\":3,\"score\":0.22,\"rationale\":\"Recent dialysis may correlate with severe kidney disease and altered lipid metabolism, but it is a rare, highly selected treatment indicator with limited marginal signal for cholesterol in the general population; it is also tied to healthcare access and comorbidity patterns that can shift across domains, reducing stable usefulness.\"}",
+      "input_tokens": 327,
+      "output_tokens": 103,
+      "total_tokens": 430,
+      "response_id": "resp_079e4533ea205ba2006a280648065c819892fae0398aace0cb",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 4,
+      "feature": "KIQ022",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"KIQ022\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health professional that you had weak or failing kidneys\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult has high cholesterol from NHANES health and examination variables under distribution shift.\",\"feature_id\":4,\"score\":0.5,\"rationale\":\"Kidney disease history is medically related to cardiometabolic risk and can correlate with dyslipidemia, so it has some stable signal, but it is a self-reported diagnosis with missing/refusal categories and may act partly as a healthcare-access or comorbidity proxy rather than a direct robust predictor.\"}",
+      "input_tokens": 324,
+      "output_tokens": 103,
+      "total_tokens": 427,
+      "response_id": "resp_0342545feaced4f0006a28064afcbc819ba777690dd0897383",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 4,
+      "feature": "KIQ022",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"KIQ022\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health professional that you had weak or failing kidneys\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has high cholesterol from survey and examination variables under distribution shift.\",\"feature_id\":4,\"score\":0.54,\"rationale\":\"Kidney disease history is medically related to dyslipidemia and cardiovascular-metabolic risk, so it can carry real signal that should generalize, but it is a self-reported diagnosis with missing/refusal categories and may partly reflect healthcare access, age, and comorbidity patterns rather than a direct stable predictor.\"}",
+      "input_tokens": 324,
+      "output_tokens": 106,
+      "total_tokens": 430,
+      "response_id": "resp_072dbf998951ddb0006a28064e331081998ef3f2f5e8d7ed8a",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 4,
+      "feature": "KIQ022",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"KIQ022\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health professional that you had weak or failing kidneys\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult in NHANES has high cholesterol from survey and examination variables under distribution shift.\",\n  \"feature_id\": 4,\n  \"score\": 0.42,\n  \"rationale\": \"Kidney disease is medically associated with dyslipidemia and cardiovascular risk, so it can carry some stable signal, but this self-reported diagnosis is indirect, relatively rare, and may reflect healthcare access, age, and comorbidity patterns that vary across domains; refused/don't-know responses are also brittle.\"\n}",
+      "input_tokens": 324,
+      "output_tokens": 119,
+      "total_tokens": 443,
+      "response_id": "resp_0dd8317e58038923006a2806511358819b9b52bcbd8c5146e2",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 4,
+      "feature": "KIQ022",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"KIQ022\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health professional that you had weak or failing kidneys\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an individual has high cholesterol from NHANES health survey data under distribution shift.\",\n  \"feature_id\": 4,\n  \"score\": 0.58,\n  \"rationale\": \"Kidney disease history is medically associated with cardiometabolic risk and can correlate with high cholesterol, so it has some stable signal; however it is a self-reported diagnosis, relatively distal to the target, and may vary with healthcare access and diagnosis patterns across domains, which limits robustness.\"\n}",
+      "input_tokens": 324,
+      "output_tokens": 110,
+      "total_tokens": 434,
+      "response_id": "resp_0741d22057eb1b9f006a280656d9a88199bfbfade738c3db11",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 4,
+      "feature": "KIQ022",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"KIQ022\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health professional that you had weak or failing kidneys\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has high cholesterol or an adverse cholesterol status from survey and examination variables across shifted domains.\",\"feature_id\":4,\"score\":0.52,\"rationale\":\"History of weak or failing kidneys is medically related to dyslipidemia and cardiovascular-metabolic disease, so it can carry real signal that should generalize reasonably well; however it is a self-reported diagnosis with missing/refusal categories, depends on healthcare access and prior screening, and may partly reflect demographic or utilization patterns rather than stable biology, so its standalone usefulness is moderate rather than high.\"}",
+      "input_tokens": 324,
+      "output_tokens": 126,
+      "total_tokens": 450,
+      "response_id": "resp_01289b136a270678006a28065a3df4819b94b2d760875dfb9c",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 5,
+      "feature": "MCQ070",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"MCQ070\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health care professional that you had psoriasis\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult has high cholesterol from NHANES health, examination, and questionnaire variables under distribution shift.\",\n  \"feature_id\": 5,\n  \"score\": 0.12,\n  \"rationale\": \"Psoriasis history may have a weak indirect association with dyslipidemia through systemic inflammation and comorbidity, but it is not a core causal driver of cholesterol status and is likely sparse, noisy self-report with refused/don't-know artifacts; expected stable marginal predictive value is low.\"\n}",
+      "input_tokens": 322,
+      "output_tokens": 115,
+      "total_tokens": 437,
+      "response_id": "resp_0589a5c04b6fdd6f006a28065de1088198a77c065f013e8a65",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 5,
+      "feature": "MCQ070",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"MCQ070\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health care professional that you had psoriasis\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult has high cholesterol from NHANES health, examination, and questionnaire variables under distribution shift.\",\n  \"feature_id\": 5,\n  \"score\": 0.18,\n  \"rationale\": \"Psoriasis has at most a weak indirect association with cholesterol through systemic inflammation and comorbidity, but it is not a core causal indicator of hypercholesterolemia; self-report also adds noise, missingness, and healthcare-access dependence, making its predictive value likely low and not especially stable across domains.\"\n}",
+      "input_tokens": 322,
+      "output_tokens": 118,
+      "total_tokens": 440,
+      "response_id": "resp_05a9d5454d54f5ee006a2806612ecc819b97a32e4a90fcefce",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 5,
+      "feature": "MCQ070",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"MCQ070\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health care professional that you had psoriasis\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has high cholesterol or related cholesterol abnormality from health and examination variables across distribution shifts.\",\"feature_id\":5,\"score\":0.18,\"rationale\":\"Psoriasis has only a weak, indirect association with dyslipidemia through systemic inflammation and comorbidity patterns, so it is unlikely to be a strong marginal predictor; as a self-reported doctor-diagnosed condition, it is also vulnerable to healthcare-access and demographic differences across domains, reducing stable usefulness.\"}",
+      "input_tokens": 322,
+      "output_tokens": 110,
+      "total_tokens": 432,
+      "response_id": "resp_093cfa5a19a19aff006a28066476a8819abbb1c84f068d9890",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 5,
+      "feature": "MCQ070",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"MCQ070\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health care professional that you had psoriasis\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult has high total cholesterol from NHANES health examination and questionnaire variables under distribution shift.\",\"feature_id\":5,\"score\":0.12,\"rationale\":\"A prior psoriasis diagnosis may have a weak indirect association with cholesterol through systemic inflammation or treatment patterns, but it is not a core causal driver of cholesterol and is likely sparse and noisy; it should generalize somewhat if real, yet offers limited stable predictive value and may partly reflect healthcare access differences.\"}",
+      "input_tokens": 322,
+      "output_tokens": 102,
+      "total_tokens": 424,
+      "response_id": "resp_096162713ebce868006a2806679414819a9aaf77f4d901dbce",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 5,
+      "feature": "MCQ070",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"MCQ070\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health care professional that you had psoriasis\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has elevated cholesterol from survey and examination variables under distribution shift.\",\"feature_id\":5,\"score\":0.16,\"rationale\":\"Self-reported psoriasis may have a weak biological association with dyslipidemia through systemic inflammation, but it is an indirect, sparse comorbidity signal and depends on prior diagnosis and healthcare access; this makes it only weakly predictive and potentially unstable across domains.\"}",
+      "input_tokens": 322,
+      "output_tokens": 95,
+      "total_tokens": 417,
+      "response_id": "resp_0770f7cfd6de2b86006a28066ae5d8819888a5b67b943d9814",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 6,
+      "feature": "MCQ160A",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"MCQ160A\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health care professional that you had arthritis\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has high cholesterol or has been told they have high cholesterol from health and examination variables.\",\"feature_id\":6,\"score\":0.37,\"rationale\":\"Arthritis history may correlate weakly with cholesterol through age, obesity, inflammation, and overall chronic disease burden, so it has some broad clinical signal. But it is largely an indirect comorbidity marker, heavily age-related, partially a healthcare-access/diagnosis variable, and therefore likely less stable and less specifically predictive across domains than direct metabolic or cardiovascular features.\"}",
+      "input_tokens": 323,
+      "output_tokens": 121,
+      "total_tokens": 444,
+      "response_id": "resp_0b5d8359859ef097006a28066df7c0819ab1003b928c1ef985",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 6,
+      "feature": "MCQ160A",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"MCQ160A\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health care professional that you had arthritis\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has high cholesterol or related abnormal cholesterol status from survey and examination variables.\",\"feature_id\":6,\"score\":0.42,\"rationale\":\"Arthritis history can correlate with older age, obesity, inflammation, and lower activity, which are plausibly associated with cholesterol risk, but it is an indirect comorbidity signal rather than a causal or specific marker. It may add some stable predictive value across domains, yet much of its signal is likely mediated by demographics and health-status shortcuts, so usefulness is moderate at best.\"}",
+      "input_tokens": 323,
+      "output_tokens": 121,
+      "total_tokens": 444,
+      "response_id": "resp_0fdfe2358979909c006a280671b43c81999454f8c4658a229c",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 6,
+      "feature": "MCQ160A",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"MCQ160A\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health care professional that you had arthritis\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has high total cholesterol from questionnaire, exam, and lab-related covariates under domain shift.\",\"feature_id\":6,\"score\":0.31,\"rationale\":\"History of arthritis may have a weak, indirect association with cholesterol through age, inflammation, obesity, and medication patterns, so it could add some signal; however it is largely a comorbidity/self-report variable, strongly age-linked, potentially treatment- and access-dependent, and not a direct stable cause of cholesterol, so its marginal usefulness is limited and somewhat brittle across domains.\"}",
+      "input_tokens": 323,
+      "output_tokens": 124,
+      "total_tokens": 447,
+      "response_id": "resp_02be579edab217a3006a2806757db8819a84c1d35f35da30ff",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 6,
+      "feature": "MCQ160A",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"MCQ160A\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health care professional that you had arthritis\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has high cholesterol / was told they have high cholesterol from health and examination variables.\",\"feature_id\":6,\"score\":0.28,\"rationale\":\"Arthritis history may have a weak indirect association with cholesterol through age, obesity, inflammation, and general chronic disease burden, but it is not a direct causal marker of cholesterol status. Much of its signal likely comes from age/comorbidity patterns that can shift across domains, and the refused/don't-know categories are especially brittle.\"}",
+      "input_tokens": 323,
+      "output_tokens": 115,
+      "total_tokens": 438,
+      "response_id": "resp_056adb13dc4808ba006a280678d9d88198a6d8d09facbd0b19",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 6,
+      "feature": "MCQ160A",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"MCQ160A\",\n  \"type\": \"categorical\",\n  \"description\": \"ever been told by a doctor or other health care professional that you had arthritis\",\n  \"values\": \"1.0=Yes; 2.0=No; 7.0=Refused; 9.0=Don't know\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has high cholesterol or related cholesterol abnormality from health and examination variables across shifted domains.\",\"feature_id\":6,\"score\":0.31,\"rationale\":\"History of arthritis may have a weak indirect association with cholesterol through age, inflammation, obesity, and medication patterns, but it is not a direct causal marker of cholesterol status and risks acting mainly as an age/comorbidity shortcut; refusal and don't-know categories are also brittle.\"}",
+      "input_tokens": 323,
+      "output_tokens": 103,
+      "total_tokens": 426,
+      "response_id": "resp_0dd7aaebc16df44e006a28067c1044819a88c4174b75584a14",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 7,
+      "feature": "nhanes_year",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 7,\n  \"feature\": \"nhanes_year\",\n  \"type\": \"integer\",\n  \"description\": \"year\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 7,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual has elevated cholesterol from NHANES health and examination data under distribution shift.\",\"feature_id\":7,\"score\":0.02,\"rationale\":\"Survey year is primarily a domain/index variable that captures temporal and sampling differences rather than a stable individual-level biological cause of cholesterol, so it is likely to act as a brittle shortcut and should be heavily downweighted.\"}",
+      "input_tokens": 273,
+      "output_tokens": 84,
+      "total_tokens": 357,
+      "response_id": "resp_0c53f5e2c0551213006a28067f22988199a3f6a8e820026482",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 7,
+      "feature": "nhanes_year",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 7,\n  \"feature\": \"nhanes_year\",\n  \"type\": \"integer\",\n  \"description\": \"year\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 7,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual has elevated cholesterol from NHANES health and examination variables under distribution shift.\",\"feature_id\":7,\"score\":0.0,\"rationale\":\"Survey year is primarily a domain identifier in NHANES and captures temporal shifts in sampling, measurement, and treatment patterns rather than a stable individual-level causal signal; it is likely to act as a brittle shortcut and harm out-of-distribution generalization.\"}",
+      "input_tokens": 273,
+      "output_tokens": 92,
+      "total_tokens": 365,
+      "response_id": "resp_0bae9de754e03154006a280682fc9481989e430534ffed8c49",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 7,
+      "feature": "nhanes_year",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 7,\n  \"feature\": \"nhanes_year\",\n  \"type\": \"integer\",\n  \"description\": \"year\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 7,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual has elevated cholesterol from NHANES health and examination variables under distribution shift.\",\"feature_id\":7,\"score\":0.02,\"rationale\":\"Survey year is primarily a domain indicator in NHANES and is likely to capture temporal shifts in sampling, measurement, and population trends rather than a stable individual-level signal; it risks shortcutting train/test differences and offers little semantically robust predictive value on its own.\"}",
+      "input_tokens": 273,
+      "output_tokens": 95,
+      "total_tokens": 368,
+      "response_id": "resp_0e7109b0d9787abc006a2806850f688198af560f7dca2a2ff2",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 7,
+      "feature": "nhanes_year",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 7,\n  \"feature\": \"nhanes_year\",\n  \"type\": \"integer\",\n  \"description\": \"year\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 7,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual has elevated cholesterol from NHANES health and examination data under distribution shift.\",\"feature_id\":7,\"score\":0.0,\"rationale\":\"Survey year is primarily a domain identifier for NHANES waves, not an individual-level physiological cause of cholesterol; any association is likely due to temporal trends, measurement changes, or cohort composition shifts, making it a brittle shortcut for out-of-distribution generalization.\"}",
+      "input_tokens": 273,
+      "output_tokens": 94,
+      "total_tokens": 367,
+      "response_id": "resp_0ec34eb2e4be40ed006a280687852c819b8faa64798202258f",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 7,
+      "feature": "nhanes_year",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 7,\n  \"feature\": \"nhanes_year\",\n  \"type\": \"integer\",\n  \"description\": \"year\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 7,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual has high cholesterol from NHANES health and examination variables under distribution shift.\",\"feature_id\":7,\"score\":0.02,\"rationale\":\"Survey year is primarily a domain identifier and can capture changing measurement protocols, treatment prevalence, and population composition rather than stable individual risk; any association with cholesterol is likely brittle and non-causal for out-of-distribution generalization.\"}",
+      "input_tokens": 273,
+      "output_tokens": 87,
+      "total_tokens": 360,
+      "response_id": "resp_052c3e7e124a71bb006a280689ac78819a85484e884b34a1ba",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 8,
+      "feature": "DMDBORN4",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 8,\n  \"feature\": \"DMDBORN4\",\n  \"type\": \"categorical\",\n  \"description\": \"country of birth\",\n  \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 8,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult in NHANES has elevated total cholesterol from health examination and questionnaire variables.\",\n  \"feature_id\": 8,\n  \"score\": 0.12,\n  \"rationale\": \"Country of birth is a coarse demographic variable that may correlate with cholesterol through lifestyle or healthcare access, but it is largely a sensitive proxy and likely to vary across domains in unstable ways rather than reflect a direct, transportable biological signal.\"\n}",
+      "input_tokens": 314,
+      "output_tokens": 100,
+      "total_tokens": 414,
+      "response_id": "resp_0dd57f5f1ab3ed72006a28068bf4d8819a810e2a9da332b92a",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 8,
+      "feature": "DMDBORN4",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 8,\n  \"feature\": \"DMDBORN4\",\n  \"type\": \"categorical\",\n  \"description\": \"country of birth\",\n  \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 8,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult in NHANES has high cholesterol from health and examination variables under distribution shift.\",\n  \"feature_id\": 8,\n  \"score\": 0.12,\n  \"rationale\": \"Country of birth may weakly correlate with cholesterol through diet, acculturation, and healthcare access, but it is a coarse demographic proxy that can encode subgroup and domain differences rather than stable physiology, so its marginal predictive value is likely limited and brittle for out-of-distribution generalization.\"\n}",
+      "input_tokens": 314,
+      "output_tokens": 112,
+      "total_tokens": 426,
+      "response_id": "resp_09f7bf2c69809c47006a28068f8034819a89e39ebba62b9d5d",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 8,
+      "feature": "DMDBORN4",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 8,\n  \"feature\": \"DMDBORN4\",\n  \"type\": \"categorical\",\n  \"description\": \"country of birth\",\n  \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 8,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult has elevated total cholesterol from NHANES health examination and questionnaire variables.\",\"feature_id\":8,\"score\":0.08,\"rationale\":\"Country of birth is a coarse demographic variable that may correlate with diet, healthcare access, or ancestry, but its effect is indirect and likely unstable across domains; it also risks acting as a sensitive demographic shortcut rather than a robust physiological predictor.\"}",
+      "input_tokens": 314,
+      "output_tokens": 88,
+      "total_tokens": 402,
+      "response_id": "resp_0d38b576b2ef9e24006a28069296d4819a9c98fc6de99dcced",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 8,
+      "feature": "DMDBORN4",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 8,\n  \"feature\": \"DMDBORN4\",\n  \"type\": \"categorical\",\n  \"description\": \"country of birth\",\n  \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 8,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual has high cholesterol from NHANES health, examination, and questionnaire variables under distribution shift.\",\"feature_id\":8,\"score\":0.12,\"rationale\":\"Country of birth is at best an indirect proxy for lifestyle, healthcare access, and socioeconomic factors, so its marginal signal for cholesterol is likely weak and confounded. It is also a sensitive demographic attribute that can encode domain differences and population composition shifts rather than stable biology, making it a brittle shortcut for out-of-distribution generalization.\"}",
+      "input_tokens": 314,
+      "output_tokens": 111,
+      "total_tokens": 425,
+      "response_id": "resp_030734c38feb8269006a2806973b5c81998908b770f0b83d0a",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 8,
+      "feature": "DMDBORN4",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 8,\n  \"feature\": \"DMDBORN4\",\n  \"type\": \"categorical\",\n  \"description\": \"country of birth\",\n  \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 8,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult has high total cholesterol from NHANES health, examination, and questionnaire variables under domain shift.\",\n  \"feature_id\": 8,\n  \"score\": 0.12,\n  \"rationale\": \"Country of birth is a coarse demographic variable that may correlate with diet, healthcare access, or acculturation, but it is also a sensitive proxy for population subgroup and likely to vary across domains; its association with cholesterol is indirect and brittle rather than a stable causal signal.\"\n}",
+      "input_tokens": 314,
+      "output_tokens": 112,
+      "total_tokens": 426,
+      "response_id": "resp_000b3a5a340e4abe006a28069a3d2c819b9d68d16cc9428850",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 9,
+      "feature": "DMDEDUC2",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 9,\n  \"feature\": \"DMDEDUC2\",\n  \"type\": \"categorical\",\n  \"description\": \"highest grade or level of school completed or highest degree received\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 9,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has elevated total cholesterol from survey and examination variables under distribution shift.\",\"feature_id\":9,\"score\":0.28,\"rationale\":\"Education level is associated with cholesterol through socioeconomic status, health literacy, diet, and care access, so it has some marginal predictive value; however, it is a demographic proxy that can act as a shortcut, is not biologically proximal, and its relationship to cholesterol is likely to vary across domains and subpopulations, so its stable usefulness is limited.\"}",
+      "input_tokens": 286,
+      "output_tokens": 114,
+      "total_tokens": 400,
+      "response_id": "resp_016e1aa86c405ff8006a28069db3308198a5124dae9713da38",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 9,
+      "feature": "DMDEDUC2",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 9,\n  \"feature\": \"DMDEDUC2\",\n  \"type\": \"categorical\",\n  \"description\": \"highest grade or level of school completed or highest degree received\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 9,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has elevated total cholesterol from health examination and questionnaire variables under distribution shift.\",\"feature_id\":9,\"score\":0.34,\"rationale\":\"Education level is associated with long-run health behaviors, healthcare access, diet, and medication use, so it has some marginal signal for cholesterol risk. However, it is also a socioeconomic and demographic proxy that can vary across domains and act as a shortcut rather than a stable biological predictor, so its out-of-distribution usefulness is limited.\"}",
+      "input_tokens": 286,
+      "output_tokens": 111,
+      "total_tokens": 397,
+      "response_id": "resp_00494ddf49ce69ae006a2806a0e738819b917d40572af8c0d8",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 9,
+      "feature": "DMDEDUC2",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 9,\n  \"feature\": \"DMDEDUC2\",\n  \"type\": \"categorical\",\n  \"description\": \"highest grade or level of school completed or highest degree received\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 9,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has elevated total cholesterol from examination/lab and survey variables under distribution shift.\",\"feature_id\":9,\"score\":0.32,\"rationale\":\"Education level is associated with health behaviors, healthcare access, diet, and statin use, so it may carry some signal for cholesterol risk, but it is an indirect socioeconomic proxy. Its effect is likely mediated by other variables, can vary across subpopulations and survey domains, and may act as a demographic shortcut rather than a stable biological predictor.\"}",
+      "input_tokens": 286,
+      "output_tokens": 115,
+      "total_tokens": 401,
+      "response_id": "resp_0ffea174662613b6006a2806a433a8819b87fd8438ffee7120",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 9,
+      "feature": "DMDEDUC2",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 9,\n  \"feature\": \"DMDEDUC2\",\n  \"type\": \"categorical\",\n  \"description\": \"highest grade or level of school completed or highest degree received\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 9,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult in NHANES has high cholesterol from survey and examination variables under distribution shift.\",\n  \"feature_id\": 9,\n  \"score\": 0.38,\n  \"rationale\": \"Education level is associated with health behaviors, healthcare access, and long-run cardiovascular risk, so it may carry some signal, but it is an indirect socioeconomic proxy rather than a biological marker and can act as a demographic shortcut whose relationship to cholesterol may vary across domains.\"\n}",
+      "input_tokens": 286,
+      "output_tokens": 107,
+      "total_tokens": 393,
+      "response_id": "resp_0f4eee332ffa479e006a2806a77fc08198abd006a162fb7b4e",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 9,
+      "feature": "DMDEDUC2",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 9,\n  \"feature\": \"DMDEDUC2\",\n  \"type\": \"categorical\",\n  \"description\": \"highest grade or level of school completed or highest degree received\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 9,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult in NHANES has elevated cholesterol from survey and examination variables under domain shift.\",\n  \"feature_id\": 9,\n  \"score\": 0.34,\n  \"rationale\": \"Education level can correlate with cholesterol through health literacy, diet, healthcare access, and lifestyle, but it is an indirect socioeconomic proxy rather than a biological driver. Its effect is likely confounded with age, income, race, and survey-domain differences, so it may act as a demographic shortcut and be less stable across shifted populations.\"\n}",
+      "input_tokens": 286,
+      "output_tokens": 120,
+      "total_tokens": 406,
+      "response_id": "resp_0b523cc71d18ace6006a2806aa3d34819992ed4a60eba161c3",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 10,
+      "feature": "RIDAGEYR",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 10,\n  \"feature\": \"RIDAGEYR\",\n  \"type\": \"continuous\",\n  \"description\": \"age in years\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 10,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual has elevated total cholesterol from NHANES health examination data under distribution shift.\",\"feature_id\":10,\"score\":0.9,\"rationale\":\"Age is a strong, biologically grounded predictor of cholesterol risk that should generalize across domains; while it is a demographic variable and may correlate with domain shifts, it is not a leakage feature and is expected to remain stably useful.\"}",
+      "input_tokens": 275,
+      "output_tokens": 89,
+      "total_tokens": 364,
+      "response_id": "resp_036b6d3af916c0b7006a2806ad97cc819aa58975e681dd9d5f",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 10,
+      "feature": "RIDAGEYR",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 10,\n  \"feature\": \"RIDAGEYR\",\n  \"type\": \"continuous\",\n  \"description\": \"age in years\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 10,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual has elevated total cholesterol from NHANES health examination data under distribution shift.\",\"feature_id\":10,\"score\":0.9,\"rationale\":\"Age is a strong, biologically grounded predictor of cholesterol risk that should remain predictive across domains; although correlated with demographic structure, it is not a leakage feature and is generally stable rather than a brittle shortcut.\"}",
+      "input_tokens": 275,
+      "output_tokens": 83,
+      "total_tokens": 358,
+      "response_id": "resp_0543824e9d058792006a2806b04af48198ae095a408118f8bc",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 10,
+      "feature": "RIDAGEYR",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 10,\n  \"feature\": \"RIDAGEYR\",\n  \"type\": \"continuous\",\n  \"description\": \"age in years\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 10,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual has high total cholesterol from NHANES health examination and questionnaire data.\",\"feature_id\":10,\"score\":0.83,\"rationale\":\"Age is a strong, biologically grounded predictor of cholesterol risk that should remain useful across domains, but it is also correlated with cohort and demographic shifts, so it is not maximally invariant.\"}",
+      "input_tokens": 275,
+      "output_tokens": 79,
+      "total_tokens": 354,
+      "response_id": "resp_00773f23e17116e5006a2806b2cb5c81989620f7c614cac314",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 10,
+      "feature": "RIDAGEYR",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 10,\n  \"feature\": \"RIDAGEYR\",\n  \"type\": \"continuous\",\n  \"description\": \"age in years\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 10,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an individual has high total cholesterol from NHANES health examination data under distribution shift.\",\"feature_id\":10,\"score\":0.88,\"rationale\":\"Age is a strong, biologically grounded predictor of cholesterol risk that should remain informative across domains; while correlated with demographic and cohort differences, it is not direct leakage and is generally more stable than many survey-specific artifacts.\"}",
+      "input_tokens": 275,
+      "output_tokens": 85,
+      "total_tokens": 360,
+      "response_id": "resp_06cddc69b7fb3e38006a2806b5611c819998c30dc02345bddf",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 10,
+      "feature": "RIDAGEYR",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 10,\n  \"feature\": \"RIDAGEYR\",\n  \"type\": \"continuous\",\n  \"description\": \"age in years\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 10,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult has high total cholesterol from NHANES health examination and questionnaire variables across distribution shifts.\",\"feature_id\":10,\"score\":0.8,\"rationale\":\"Age is a strong, biologically grounded risk factor for elevated cholesterol and should remain predictive across domains, though it is somewhat sensitive and can partly act as a demographic shortcut if domain shifts are age-structured.\"}",
+      "input_tokens": 275,
+      "output_tokens": 85,
+      "total_tokens": 360,
+      "response_id": "resp_06dd97ef53785f34006a2806ba925c8198b601241a20409135",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 11,
+      "feature": "RIAGENDR",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 11,\n  \"feature\": \"RIAGENDR\",\n  \"type\": \"categorical\",\n  \"description\": \"gender\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 11,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult has high cholesterol from NHANES health and examination variables under distribution shift.\",\"feature_id\":11,\"score\":0.58,\"rationale\":\"Sex is a genuine biological risk factor for cholesterol and should retain some predictive value across domains, but as a sensitive demographic attribute it can act as a shortcut, interact with age and hormones in shifting ways, and is less reliable than direct clinical measurements.\"}",
+      "input_tokens": 275,
+      "output_tokens": 91,
+      "total_tokens": 366,
+      "response_id": "resp_0bbe3d8c58987a45006a2806bd2c108199980e137205d737bc",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 11,
+      "feature": "RIAGENDR",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 11,\n  \"feature\": \"RIAGENDR\",\n  \"type\": \"categorical\",\n  \"description\": \"gender\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 11,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has elevated total cholesterol from examination and questionnaire variables under domain shift.\",\"feature_id\":11,\"score\":0.61,\"rationale\":\"Sex is a genuine biological correlate of cholesterol through hormonal and metabolic differences, so it should retain some predictive value across domains; however, it is a sensitive demographic attribute and can act as a shortcut tied to population composition shifts rather than individual pathology, so its stable usefulness is only moderate.\"}",
+      "input_tokens": 275,
+      "output_tokens": 100,
+      "total_tokens": 375,
+      "response_id": "resp_03b077fac696656c006a2806c04f94819a8b4332f77ba80db9",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 11,
+      "feature": "RIAGENDR",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 11,\n  \"feature\": \"RIAGENDR\",\n  \"type\": \"categorical\",\n  \"description\": \"gender\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 11,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult has high total cholesterol from NHANES health examination and questionnaire variables under distribution shift.\",\"feature_id\":11,\"score\":0.42,\"rationale\":\"Sex is biologically related to cholesterol levels and cardiovascular risk, so it has some stable signal, but as a sensitive demographic attribute it can act as a shortcut and its association may vary with age, hormones, treatment patterns, and domain splits.\"}",
+      "input_tokens": 275,
+      "output_tokens": 92,
+      "total_tokens": 367,
+      "response_id": "resp_02f39e71c62f2d24006a2806c2d658819982fb769cae3125ed",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 11,
+      "feature": "RIAGENDR",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 11,\n  \"feature\": \"RIAGENDR\",\n  \"type\": \"categorical\",\n  \"description\": \"gender\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 11,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult has high cholesterol from health and examination variables under distribution shift.\",\"feature_id\":11,\"score\":0.58,\"rationale\":\"Sex is a genuine biological risk factor for cholesterol and should retain some predictive value across domains, but as a sensitive demographic attribute it can also act as a shortcut and its marginal effect may vary with age, hormones, treatment, and sampling differences, so its stable standalone usefulness is only moderate.\"}",
+      "input_tokens": 275,
+      "output_tokens": 96,
+      "total_tokens": 371,
+      "response_id": "resp_02f92ff37ac68c4c006a2806c77650819a848f12dd60d6dcf1",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 11,
+      "feature": "RIAGENDR",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 11,\n  \"feature\": \"RIAGENDR\",\n  \"type\": \"categorical\",\n  \"description\": \"gender\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 11,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult has high total cholesterol from NHANES health examination and questionnaire variables under domain shift.\",\"feature_id\":11,\"score\":0.58,\"rationale\":\"Sex is a genuine biological correlate of cholesterol levels and cardiovascular risk, so it should retain some predictive value across domains; however, it is a sensitive demographic attribute with effects that can vary by age, hormones, treatment, and sampling, making it only moderately stable and potentially a shortcut.\"}",
+      "input_tokens": 275,
+      "output_tokens": 100,
+      "total_tokens": 375,
+      "response_id": "resp_09a5a695a633c6c0006a2806caa2288199b4c390222bee1a09",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 12,
+      "feature": "DMDMARTL",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 12,\n  \"feature\": \"DMDMARTL\",\n  \"type\": \"categorical\",\n  \"description\": \"marital status\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 12,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult in NHANES has elevated total cholesterol from questionnaire and examination variables under distribution shift.\",\n  \"feature_id\": 12,\n  \"score\": 0.28,\n  \"rationale\": \"Marital status may weakly correlate with cholesterol through age, socioeconomic conditions, and health behaviors, but it is an indirect demographic proxy rather than a causal biomarker and is likely to vary across domains, so its marginal signal is limited and potentially brittle.\"\n}",
+      "input_tokens": 278,
+      "output_tokens": 106,
+      "total_tokens": 384,
+      "response_id": "resp_038cff3dbe855ecc006a2806cdc10c819ab9120608054a8aca",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 12,
+      "feature": "DMDMARTL",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 12,\n  \"feature\": \"DMDMARTL\",\n  \"type\": \"categorical\",\n  \"description\": \"marital status\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 12,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has elevated total cholesterol from examination/laboratory and survey variables under distribution shift.\",\"feature_id\":12,\"score\":0.23,\"rationale\":\"Marital status may weakly correlate with cholesterol through age, socioeconomic conditions, and health behaviors, but it is a coarse demographic proxy rather than a direct biological driver. Its association is likely mediated by other variables and can vary across domains, so it offers limited stable signal and risks acting as a brittle social shortcut.\"}",
+      "input_tokens": 278,
+      "output_tokens": 109,
+      "total_tokens": 387,
+      "response_id": "resp_0d1d9d90ccac2663006a2806d2142881998283da94ed941764",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 12,
+      "feature": "DMDMARTL",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 12,\n  \"feature\": \"DMDMARTL\",\n  \"type\": \"categorical\",\n  \"description\": \"marital status\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 12,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has elevated total cholesterol from health examination and questionnaire variables under domain shift.\",\"feature_id\":12,\"score\":0.22,\"rationale\":\"Marital status may correlate weakly with cholesterol through age, socioeconomic factors, diet, and healthcare access, but it is an indirect demographic/social proxy rather than a direct physiological driver. Its association is likely unstable across subpopulations and survey domains and may act as a shortcut, so its expected robust marginal usefulness is low.\"}",
+      "input_tokens": 278,
+      "output_tokens": 109,
+      "total_tokens": 387,
+      "response_id": "resp_0105987d9f8a4e99006a2806d502f48199ac0c3b885f0d0763",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 12,
+      "feature": "DMDMARTL",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 12,\n  \"feature\": \"DMDMARTL\",\n  \"type\": \"categorical\",\n  \"description\": \"marital status\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 12,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an adult in NHANES has high cholesterol from health, examination, and questionnaire variables under distribution shift.\",\n  \"feature_id\": 12,\n  \"score\": 0.24,\n  \"rationale\": \"Marital status may correlate weakly with cholesterol through age, socioeconomic factors, and health behaviors, but it is a coarse demographic proxy rather than a direct physiological signal and is likely to vary across domains in ways that make it a brittle shortcut.\"\n}",
+      "input_tokens": 278,
+      "output_tokens": 106,
+      "total_tokens": 384,
+      "response_id": "resp_0b58b0e5cf4b21ab006a2806d8ae94819a81d71cea8d63249d",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 12,
+      "feature": "DMDMARTL",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_cholesterol`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 12,\n  \"feature\": \"DMDMARTL\",\n  \"type\": \"categorical\",\n  \"description\": \"marital status\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 12,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether an adult in NHANES has elevated total cholesterol from survey and examination variables under distribution shift.\",\"feature_id\":12,\"score\":0.28,\"rationale\":\"Marital status may weakly correlate with cholesterol through age, socioeconomic factors, and health behaviors, but it is an indirect demographic proxy rather than a causal biomarker. Its association is likely unstable across domains and risks acting as a shortcut tied to population composition, so its marginal out-of-distribution usefulness should be low.\"}",
+      "input_tokens": 278,
+      "output_tokens": 107,
+      "total_tokens": 385,
+      "response_id": "resp_09be5121ef2be267006a2806dc3cf88198b1b9f2724e5ddd89",
+      "response_model": "gpt-5.4-2026-03-05"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/tableshift/nhanes_cholesterol/rankings/score_prompt.txt",
+  "config": {
+    "score_samples": 5
+  }
+}

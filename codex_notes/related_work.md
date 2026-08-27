@@ -112,7 +112,7 @@ Concrete novelty angles:
 
 4. **Ranking / grouping priors instead of calibrated numeric scores**
 
-   LAAT asks LLMs for calibrated integer scores. Our setup can use rankings, coarse groups, or suppress sets, then convert them into a target distribution via `target_power` and `suppress_scale`. This is useful because LLM numeric scores may be poorly calibrated.
+   LAAT asks LLMs for calibrated integer scores. Our setup can use rankings, coarse groups, or suppress sets, then convert them into a target distribution while calibrating the model-side gradient distribution with `grad_prob_temperature`. This is useful because LLM numeric scores may be poorly calibrated.
 
 5. **LLM prior quality as a bottleneck**
 

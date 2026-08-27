@@ -1,0 +1,355 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "anes",
+  "model": "gpt-5.4",
+  "method": "rank",
+  "temperature": 0.0,
+  "created_at": "2026-06-09T20:30:19",
+  "token_usage": {
+    "num_calls": 1,
+    "input_tokens": 4703,
+    "output_tokens": 2244,
+    "total_tokens": 6947
+  },
+  "response": {
+    "task_summary": "Predict whether an ANES respondent voted for the Democratic or Republican presidential candidate using attitudes and partisan orientations that should generalize across survey years and domains.",
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 4,
+        "rationale": "Seven-point partisan identification is a stable, core determinant of presidential vote across years.",
+        "feature": "VCF0301"
+      },
+      {
+        "rank": 2,
+        "feature_id": 5,
+        "rationale": "Party identification directly captures enduring partisan alignment and strongly predicts vote choice.",
+        "feature": "VCF0302"
+      },
+      {
+        "rank": 3,
+        "feature_id": 2,
+        "rationale": "Affective evaluation of the Democratic Party is highly predictive and semantically tied to party support.",
+        "feature": "VCF0218"
+      },
+      {
+        "rank": 4,
+        "feature_id": 3,
+        "rationale": "Affective evaluation of the Republican Party is highly predictive and robust across elections.",
+        "feature": "VCF0224"
+      },
+      {
+        "rank": 5,
+        "feature_id": 9,
+        "rationale": "Like-dislike placement for Democrats is another direct measure of partisan affect linked to vote.",
+        "feature": "VCF9201"
+      },
+      {
+        "rank": 6,
+        "feature_id": 10,
+        "rationale": "Like-dislike placement for Republicans closely tracks support for the GOP ticket.",
+        "feature": "VCF9202"
+      },
+      {
+        "rank": 7,
+        "feature_id": 29,
+        "rationale": "Liberal-conservative self-placement is a broad ideological signal that generalizes well.",
+        "feature": "VCF0803"
+      },
+      {
+        "rank": 8,
+        "feature_id": 12,
+        "rationale": "Naming the party that best represents one's views is nearly a direct expression of partisan preference.",
+        "feature": "VCF9204"
+      },
+      {
+        "rank": 9,
+        "feature_id": 13,
+        "rationale": "Which party represents views best is a strong, stable summary of political alignment.",
+        "feature": "VCF9205"
+      },
+      {
+        "rank": 10,
+        "feature_id": 11,
+        "rationale": "Whether any party represents the respondent's views captures partisan attachment versus alienation.",
+        "feature": "VCF9203"
+      },
+      {
+        "rank": 11,
+        "feature_id": 21,
+        "rationale": "Guaranteed jobs and income reflects economic ideology that maps consistently onto party choice.",
+        "feature": "VCF0809"
+      },
+      {
+        "rank": 12,
+        "feature_id": 22,
+        "rationale": "Government services and spending is a classic ideological dimension with durable predictive value.",
+        "feature": "VCF0839"
+      },
+      {
+        "rank": 13,
+        "feature_id": 27,
+        "rationale": "Abortion attitudes are a major cross-cycle issue cleavage tied to partisan voting.",
+        "feature": "VCF0838"
+      },
+      {
+        "rank": 14,
+        "feature_id": 15,
+        "rationale": "Beliefs about which party favors stronger government encode issue-party perceptions relevant to vote.",
+        "feature": "VCF0521"
+      },
+      {
+        "rank": 15,
+        "feature_id": 28,
+        "rationale": "Gun control salience often separates partisan coalitions and can generalize beyond a single year.",
+        "feature": "VCF9239"
+      },
+      {
+        "rank": 16,
+        "feature_id": 30,
+        "rationale": "Importance of religion is a durable sociopolitical orientation associated with partisan choice.",
+        "feature": "VCF0846"
+      },
+      {
+        "rank": 17,
+        "feature_id": 6,
+        "rationale": "Party preference on environment captures issue ownership beliefs that inform vote decisions.",
+        "feature": "VCF9008"
+      },
+      {
+        "rank": 18,
+        "feature_id": 7,
+        "rationale": "Party preference on inflation reflects economic issue ownership and partisan competence beliefs.",
+        "feature": "VCF9010"
+      },
+      {
+        "rank": 19,
+        "feature_id": 8,
+        "rationale": "Party preference on unemployment is another stable issue-ownership signal tied to vote.",
+        "feature": "VCF9011"
+      },
+      {
+        "rank": 20,
+        "feature_id": 25,
+        "rationale": "Defense spending preferences capture ideological and partisan differences that often persist.",
+        "feature": "VCF0843"
+      },
+      {
+        "rank": 21,
+        "feature_id": 16,
+        "rationale": "Perceptions of which party favors military spending cuts encode partisan issue stereotypes.",
+        "feature": "VCF0523"
+      },
+      {
+        "rank": 22,
+        "feature_id": 20,
+        "rationale": "National mood about whether things are going well can influence incumbent-party support.",
+        "feature": "VCF9052"
+      },
+      {
+        "rank": 23,
+        "feature_id": 23,
+        "rationale": "Rating government economic policy is substantively relevant, though somewhat more incumbent-specific.",
+        "feature": "VCF0822"
+      },
+      {
+        "rank": 24,
+        "feature_id": 24,
+        "rationale": "Retrospective economic evaluation is predictive but can vary with election context.",
+        "feature": "VCF0870"
+      },
+      {
+        "rank": 25,
+        "feature_id": 26,
+        "rationale": "Views on whether the U.S. grew stronger are relevant retrospective judgments, though context dependent.",
+        "feature": "VCF9045"
+      },
+      {
+        "rank": 26,
+        "feature_id": 19,
+        "rationale": "Most important national problem captures issue salience, useful but more sensitive to year-specific agendas.",
+        "feature": "VCF0875"
+      },
+      {
+        "rank": 27,
+        "feature_id": 14,
+        "rationale": "Preference for unified versus split party control reflects governance attitudes with moderate relevance.",
+        "feature": "VCF9206"
+      },
+      {
+        "rank": 28,
+        "feature_id": 17,
+        "rationale": "President thermometer can be predictive but risks candidate- and year-specific leakage.",
+        "feature": "VCF0428"
+      },
+      {
+        "rank": 29,
+        "feature_id": 18,
+        "rationale": "Vice-president thermometer is similarly predictive yet more tied to specific election cycles.",
+        "feature": "VCF0429"
+      },
+      {
+        "rank": 30,
+        "feature_id": 37,
+        "rationale": "Interest in elections reflects engagement and can correlate with partisan turnout and vote choice.",
+        "feature": "VCF0310"
+      },
+      {
+        "rank": 31,
+        "feature_id": 44,
+        "rationale": "Trust in media may proxy political worldview, though it is less direct than ideology or party ID.",
+        "feature": "VCF0675"
+      },
+      {
+        "rank": 32,
+        "feature_id": 32,
+        "rationale": "Beliefs about government waste reflect anti-government sentiment associated with partisan preference.",
+        "feature": "VCF0606"
+      },
+      {
+        "rank": 33,
+        "feature_id": 31,
+        "rationale": "Approval of protests captures broader sociopolitical values that can align with party coalitions.",
+        "feature": "VCF0601"
+      },
+      {
+        "rank": 34,
+        "feature_id": 53,
+        "rationale": "Education is a meaningful demographic correlate of vote, but can act as a shortcut and shift over time.",
+        "feature": "VCF0140a"
+      },
+      {
+        "rank": 35,
+        "feature_id": 51,
+        "rationale": "Race/ethnicity is predictive in U.S. politics but should be downweighted due to shortcut risk.",
+        "feature": "VCF0105a"
+      },
+      {
+        "rank": 36,
+        "feature_id": 49,
+        "rationale": "Age has some stable association with vote but is weaker and partly demographic shortcutting.",
+        "feature": "VCF0101"
+      },
+      {
+        "rank": 37,
+        "feature_id": 50,
+        "rationale": "Gender can matter electorally but is a coarse demographic proxy rather than a robust causal attitude.",
+        "feature": "VCF0104"
+      },
+      {
+        "rank": 38,
+        "feature_id": 52,
+        "rationale": "Occupation may correlate with class and vote, though noisily and with weaker cross-domain stability.",
+        "feature": "VCF0115"
+      },
+      {
+        "rank": 39,
+        "feature_id": 43,
+        "rationale": "Registration status is behaviorally relevant but may reflect institutional differences across domains.",
+        "feature": "VCF0701"
+      },
+      {
+        "rank": 40,
+        "feature_id": 39,
+        "rationale": "Trying to influence others indicates engagement, but is only indirectly related to candidate choice.",
+        "feature": "VCF0717"
+      },
+      {
+        "rank": 41,
+        "feature_id": 42,
+        "rationale": "Donating to a party or candidate signals intensity, yet may be sparse and campaign-specific.",
+        "feature": "VCF0721"
+      },
+      {
+        "rank": 42,
+        "feature_id": 41,
+        "rationale": "Displaying campaign materials reflects activism but can be brittle and election-specific.",
+        "feature": "VCF0720"
+      },
+      {
+        "rank": 43,
+        "feature_id": 40,
+        "rationale": "Attending rallies is a noisy engagement measure that may not generalize well across years.",
+        "feature": "VCF0718"
+      },
+      {
+        "rank": 44,
+        "feature_id": 38,
+        "rationale": "Political organization membership indicates engagement but is not a direct preference measure.",
+        "feature": "VCF0743"
+      },
+      {
+        "rank": 45,
+        "feature_id": 45,
+        "rationale": "Watching TV campaign coverage mostly captures media exposure rather than stable political preference.",
+        "feature": "VCF0724"
+      },
+      {
+        "rank": 46,
+        "feature_id": 46,
+        "rationale": "Hearing radio campaign coverage is a weak and potentially outdated exposure proxy.",
+        "feature": "VCF0725"
+      },
+      {
+        "rank": 47,
+        "feature_id": 47,
+        "rationale": "Reading campaign coverage in magazines is sparse and likely brittle across survey years.",
+        "feature": "VCF0726"
+      },
+      {
+        "rank": 48,
+        "feature_id": 48,
+        "rationale": "Seeing campaign information on the internet is highly time-varying and can encode survey year.",
+        "feature": "VCF0745"
+      },
+      {
+        "rank": 49,
+        "feature_id": 34,
+        "rationale": "Belief that one's vote matters is more about efficacy than partisan choice.",
+        "feature": "VCF0615"
+      },
+      {
+        "rank": 50,
+        "feature_id": 33,
+        "rationale": "Belief that voting is the only way to have a say reflects civic norms, not candidate preference.",
+        "feature": "VCF0612"
+      },
+      {
+        "rank": 51,
+        "feature_id": 35,
+        "rationale": "Whether uninterested people should vote is a weak normative attitude with limited predictive value.",
+        "feature": "VCF0616"
+      },
+      {
+        "rank": 52,
+        "feature_id": 36,
+        "rationale": "Whether one should vote if their party cannot win is another weak civic-norm indicator.",
+        "feature": "VCF0617"
+      },
+      {
+        "rank": 53,
+        "feature_id": 1,
+        "rationale": "State can encode domain shifts and local political context rather than portable individual preference.",
+        "feature": "VCF0901b"
+      },
+      {
+        "rank": 54,
+        "feature_id": 0,
+        "rationale": "Election year is primarily a domain identifier and should be heavily penalized for OOD generalization.",
+        "feature": "VCF0004"
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `anes`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"VCF0004\",\n    \"type\": \"integer\",\n    \"description\": \"election year\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"VCF0901b\",\n    \"type\": \"categorical\",\n    \"description\": \"state\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"VCF0218\",\n    \"type\": \"continuous\",\n    \"description\": \"Democratic Party feeling thermometer\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"VCF0224\",\n    \"type\": \"continuous\",\n    \"description\": \"Republican Party feeling thermometer\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"VCF0301\",\n    \"type\": \"categorical\",\n    \"description\": \"think of yourself as closer to the Republican or Democratic party\",\n    \"values\": \"0.0=no answer; 1.0=Strong Democrat; 2.0=Weak Democrat; 3.0=Independent - Democrat; 4.0=Independent - Independent; 5.0=Independent - Republican; 6.0=Weak Republican; 7.0=Strong Republican\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"VCF0302\",\n    \"type\": \"categorical\",\n    \"description\": \"party identification\",\n    \"values\": \"1.0=Republican; 2.0=Independent; 3.0=No preference; none; neither; 4.0=Other; 5.0=Democrat; 8.0=Don't know; 9.0=no answer\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"VCF9008\",\n    \"type\": \"categorical\",\n    \"description\": \"party preference on pollution and environment\",\n    \"values\": \"1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"VCF9010\",\n    \"type\": \"categorical\",\n    \"description\": \"party preference on inflation\",\n    \"values\": \"1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"VCF9011\",\n    \"type\": \"categorical\",\n    \"description\": \"party preference on unemployment\",\n    \"values\": \"1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"VCF9201\",\n    \"type\": \"categorical\",\n    \"description\": \"like-dislike scale placement for democratic party (0-10)\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"VCF9202\",\n    \"type\": \"categorical\",\n    \"description\": \"like-dislike scale placement for republican party (0-10)\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"VCF9203\",\n    \"type\": \"categorical\",\n    \"description\": \"do any of the parties in the U.S. represent views reasonably well\",\n    \"values\": \"1.0=Yes; 2.0=No; -8.0=no answer; -9.0=no answer\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"VCF9204\",\n    \"type\": \"categorical\",\n    \"description\": \"party in US that represents views best\",\n    \"values\": \"1.0=Democratic; 2.0=Republican; 7.0=Other; -8.0=no answer; -9.0=no answer\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"VCF9205\",\n    \"type\": \"categorical\",\n    \"description\": \"which political party represents views best\",\n    \"values\": \"1.0=Democrats; 2.0=No difference; 3.0=Republican; 7.0=Neither party; -8.0=no answer; -9.0=no answer\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"VCF9206\",\n    \"type\": \"categorical\",\n    \"description\": \"better when one party controls both presidency and congress or when control is split\",\n    \"values\": \"1.0=One party control both; 2.0=Control is split; 3.0=It doesn’t matter; -8.0=no answer; -9.0=no answer\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"VCF0521\",\n    \"type\": \"categorical\",\n    \"description\": \"which party favors stronger government\",\n    \"values\": \"0.0=no answer; 1.0=Democrats; 2.0=No difference; 3.0=Republicans; 8.0=DK which party\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"VCF0523\",\n    \"type\": \"categorical\",\n    \"description\": \"which party favors military spending cut\",\n    \"values\": \"1.0=Democrats; 2.0=Not much difference; 3.0=Republicans; 8.0=no answer; 0.0=no answer\"\n  },\n  {\n    \"feature_id\": 17,\n    \"feature\": \"VCF0428\",\n    \"type\": \"continuous\",\n    \"description\": \"President thermometer\"\n  },\n  {\n    \"feature_id\": 18,\n    \"feature\": \"VCF0429\",\n    \"type\": \"continuous\",\n    \"description\": \"Vice-president thermometer\"\n  },\n  {\n    \"feature_id\": 19,\n    \"feature\": \"VCF0875\",\n    \"type\": \"categorical\",\n    \"description\": \"most important national problem\",\n    \"values\": \"1.0=AGRICULTURAL; 2.0=ECONOMICS; BUSINESS; CONSUMER ISSUES; 3.0=FOREIGN AFFAIRS AND NATIONAL DEFENSE; 4.0=GOVERNMENT FUNCTIONING; 5.0=LABOR ISSUES; 6.0=NATURAL RESOURCES; 7.0=PUBLIC ORDER; 8.0=RACIAL PROBLEMS; 9.0=SOCIAL WELFARE; 97.0=Other problems; 98.0=n...\"\n  },\n  {\n    \"feature_id\": 20,\n    \"feature\": \"VCF9052\",\n    \"type\": \"categorical\",\n    \"description\": \"are things in U.S. going well or not\",\n    \"values\": \"1.0=Very well; 2.0=Fairly well; 4.0=Not too well; 5.0=Not well at all; 8.0=no answer; 9.0=no answer\"\n  },\n  {\n    \"feature_id\": 21,\n    \"feature\": \"VCF0809\",\n    \"type\": \"categorical\",\n    \"description\": \"guaranteed jobs and income scale (support/don't support)\"\n  },\n  {\n    \"feature_id\": 22,\n    \"feature\": \"VCF0839\",\n    \"type\": \"categorical\",\n    \"description\": \"government services and spending scale (fewer/more services)\"\n  },\n  {\n    \"feature_id\": 23,\n    \"feature\": \"VCF0822\",\n    \"type\": \"categorical\",\n    \"description\": \"rating of government economic policy\",\n    \"values\": \"1.0=Poor job; 2.0=Only fair; 3.0=Good job; 0.0=no answer; 9.0=no answer\"\n  },\n  {\n    \"feature_id\": 24,\n    \"feature\": \"VCF0870\",\n    \"type\": \"categorical\",\n    \"description\": \"better or worse economy in past year\",\n    \"values\": \"1.0=Better; 3.0=Stayed same; 5.0=Worse; 0.0=no answer; 8.0=no answer\"\n  },\n  {\n    \"feature_id\": 25,\n    \"feature\": \"VCF0843\",\n    \"type\": \"categorical\",\n    \"description\": \"defense spending scale (decrease/increase)\"\n  },\n  {\n    \"feature_id\": 26,\n    \"feature\": \"VCF9045\",\n    \"type\": \"categorical\",\n    \"description\": \"position of the U.S. in past year\",\n    \"values\": \"1.0=Weaker; 3.0=Same; 5.0=Stronger; 8.0=Don't know; 9.0=no answer\"\n  },\n  {\n    \"feature_id\": 27,\n    \"feature\": \"VCF0838\",\n    \"type\": \"categorical\",\n    \"description\": \"when should abortion be allowed by law\",\n    \"values\": \"1.0=By law, abortion should never be permitted.; 2.0=The law should permit abortion only in case of rape, incest, or when the woman’s life is in danger.; 3.0=The law should permit abortion for reasons other than rape, incest, or danger to the woman’s life,...\"\n  },\n  {\n    \"feature_id\": 28,\n    \"feature\": \"VCF9239\",\n    \"type\": \"categorical\",\n    \"description\": \"importance of gun control\",\n    \"values\": \"1.0=Extremely important; 2.0=Very important; 3.0=Somewhat important; 4.0=Not too important; 5.0=Not at all important; -8.0=no answer; -9.0=no answer\"\n  },\n  {\n    \"feature_id\": 29,\n    \"feature\": \"VCF0803\",\n    \"type\": \"categorical\",\n    \"description\": \"liberal-conservative scale\",\n    \"values\": \"1.0=Extremely liberal; 2.0=Liberal; 3.0=Slightly liberal; 4.0=Moderate, middle of the road; 5.0=Slightly conservative; 6.0=Conservative; 7.0=Extremely conservative; 9.0=Don't know; haven’t thought much about it; 0.0=no answer\"\n  },\n  {\n    \"feature_id\": 30,\n    \"feature\": \"VCF0846\",\n    \"type\": \"categorical\",\n    \"description\": \"importance of religion\",\n    \"values\": \"1.0=Yes, important; 2.0=Little to no importance; 0.0=no answer; 8.0=no answer\"\n  },\n  {\n    \"feature_id\": 31,\n    \"feature\": \"VCF0601\",\n    \"type\": \"categorical\",\n    \"description\": \"approve participation in protests\",\n    \"values\": \"1.0=Disapprove; 2.0=Pro-con, depends, don’t know; 3.0=Approve; 0.0=no answer\"\n  },\n  {\n    \"feature_id\": 32,\n    \"feature\": \"VCF0606\",\n    \"type\": \"categorical\",\n    \"description\": \"how much does federal government waste tax money\",\n    \"values\": \"1.0=A lot; 2.0=Some; 3.0=Not very much; 9.0=Don't know; 0.0=no answer\"\n  },\n  {\n    \"feature_id\": 33,\n    \"feature\": \"VCF0612\",\n    \"type\": \"categorical\",\n    \"description\": \"voting is the only way to have a say in government\",\n    \"values\": \"1.0=Agree; 2.0=Disagree; 9.0=Don't know or not sure; 0.0=no answer\"\n  },\n  {\n    \"feature_id\": 34,\n    \"feature\": \"VCF0615\",\n    \"type\": \"categorical\",\n    \"description\": \"it matters whether I vote\",\n    \"values\": \"1.0=Agree; 2.0=Disagree; 3.0=Neither agree nor disagree; 9.0=Don't know or not sure; 0.0=no answer\"\n  },\n  {\n    \"feature_id\": 35,\n    \"feature\": \"VCF0616\",\n    \"type\": \"categorical\",\n    \"description\": \"those who don't care about election outcome should vote\",\n    \"values\": \"1.0=Agree; 2.0=Disagree; 3.0=Neither agree nor disagree; 9.0=Don't know or not sure; 0.0=no answer\"\n  },\n  {\n    \"feature_id\": 36,\n    \"feature\": \"VCF0617\",\n    \"type\": \"categorical\",\n    \"description\": \"someone should vote if their party can't win\",\n    \"values\": \"1.0=Agree; 2.0=Disagree; 9.0=Don't know or not sure; 0.0=no answer\"\n  },\n  {\n    \"feature_id\": 37,\n    \"feature\": \"VCF0310\",\n    \"type\": \"categorical\",\n    \"description\": \"interest in the elections\",\n    \"values\": \"1.0=Not much interested; 2.0=Somewhat interested; 3.0=Very much interested; 9.0=Don't know; 0.0=no answer\"\n  },\n  {\n    \"feature_id\": 38,\n    \"feature\": \"VCF0743\",\n    \"type\": \"categorical\",\n    \"description\": \"belongs to political organization or club\",\n    \"values\": \"1.0=Yes; 5.0=No; 9.0=no answer\"\n  },\n  {\n    \"feature_id\": 39,\n    \"feature\": \"VCF0717\",\n    \"type\": \"categorical\",\n    \"description\": \"tried to influence others during campaign\",\n    \"values\": \"1.0=No; 2.0=Yes; 0.0=no answer\"\n  },\n  {\n    \"feature_id\": 40,\n    \"feature\": \"VCF0718\",\n    \"type\": \"categorical\",\n    \"description\": \"attended political meetings/rallies during campaign\",\n    \"values\": \"1.0=No; 2.0=Yes; 0.0=no answer\"\n  },\n  {\n    \"feature_id\": 41,\n    \"feature\": \"VCF0720\",\n    \"type\": \"categorical\",\n    \"description\": \"displayed candidate button/sticker during campaign\",\n    \"values\": \"1.0=No; 2.0=Yes; 0.0=no answer\"\n  },\n  {\n    \"feature_id\": 42,\n    \"feature\": \"VCF0721\",\n    \"type\": \"categorical\",\n    \"description\": \"donated money to party or candidate during campaign\",\n    \"values\": \"1.0=No; 2.0=Yes; 0.0=no answer\"\n  },\n  {\n    \"feature_id\": 43,\n    \"feature\": \"VCF0701\",\n    \"type\": \"categorical\",\n    \"description\": \"registered to vote pre-election\",\n    \"values\": \"1.0=No; 2.0=Yes; 0.0=no answer\"\n  },\n  {\n    \"feature_id\": 44,\n    \"feature\": \"VCF0675\",\n    \"type\": \"categorical\",\n    \"description\": \"how much of the time can you trust the media to report the news fairly\",\n    \"values\": \"1.0=Just about always; 2.0=Most of the time; 3.0=Only some of the time; 4.0=Almost never; 5.0=Never; 8.0=Don't know; 9.0=no answer\"\n  },\n  {\n    \"feature_id\": 45,\n    \"feature\": \"VCF0724\",\n    \"type\": \"categorical\",\n    \"description\": \"watched TV programs about the election campaigns\",\n    \"values\": \"1.0=No; 2.0=Yes; 0.0=no answer\"\n  },\n  {\n    \"feature_id\": 46,\n    \"feature\": \"VCF0725\",\n    \"type\": \"categorical\",\n    \"description\": \"heard radio programs about the election campaigns\",\n    \"values\": \"1.0=No; 2.0=Yes; 0.0=no answer\"\n  },\n  {\n    \"feature_id\": 47,\n    \"feature\": \"VCF0726\",\n    \"type\": \"categorical\",\n    \"description\": \"read about the election campaigns in magazines\",\n    \"values\": \"1.0=No; 2.0=Yes; 0.0=no answer\"\n  },\n  {\n    \"feature_id\": 48,\n    \"feature\": \"VCF0745\",\n    \"type\": \"categorical\",\n    \"description\": \"saw election campaign information on the internet\",\n    \"values\": \"1.0=Yes; 5.0=No; 9.0=no answer\"\n  },\n  {\n    \"feature_id\": 49,\n    \"feature\": \"VCF0101\",\n    \"type\": \"integer\",\n    \"description\": \"age\"\n  },\n  {\n    \"feature_id\": 50,\n    \"feature\": \"VCF0104\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\",\n    \"values\": \"1=Male; 2=Female; 3=Other; 0=no answer\"\n  },\n  {\n    \"feature_id\": 51,\n    \"feature\": \"VCF0105a\",\n    \"type\": \"categorical\",\n    \"description\": \"race/ethnicity\",\n    \"values\": \"1.0=White non-Hispanic; 2.0=Black non-Hispanic; 3.0=Asian or Pacific Islander, non-Hispanic; 4.0=American Indian or Alaska Native non-Hispanic; 5.0=Hispanic; 6.0=Other or multiple races, non-Hispanic; 7.0=Non-white and non-black; 9.0=no answer\"\n  },\n  {\n    \"feature_id\": 52,\n    \"feature\": \"VCF0115\",\n    \"type\": \"categorical\",\n    \"description\": \"occupation group\",\n    \"values\": \"1.0=Professional and managerial; 2.0=Clerical and sales workers; 3.0=Skilled, semi-skilled and service workers; 4.0=Laborers, except farm; 5.0=Farmers, farm managers, farm laborers and foremen; forestry and fishermen; 6.0=Homemakers; 0.0=no answer\"\n  },\n  {\n    \"feature_id\": 53,\n    \"feature\": \"VCF0140a\",\n    \"type\": \"categorical\",\n    \"description\": \"education level\",\n    \"values\": \"1.0=8 grades or less (‘grade school’); 2.0=9-12 grades (‘high school’), no diploma/equivalency; less than high school credential (2020); 3.0=12 grades, diploma or equivalency; 4.0=12 grades, diploma or equivalency plus non-academic training; 5.0=Some colleg...\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature_id\": 0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `ranking`.\n- Use ranks 1 through 54, with no duplicates.\n- Rank 1 is most important.\n- If two features seem similarly important, still break ties.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an ANES respondent voted for the Democratic or Republican presidential candidate using attitudes and partisan orientations that should generalize across survey years and domains.\",\n  \"ranking\": [\n    {\n      \"rank\": 1,\n      \"feature_id\": 4,\n      \"rationale\": \"Seven-point partisan identification is a stable, core determinant of presidential vote across years.\"\n    },\n    {\n      \"rank\": 2,\n      \"feature_id\": 5,\n      \"rationale\": \"Party identification directly captures enduring partisan alignment and strongly predicts vote choice.\"\n    },\n    {\n      \"rank\": 3,\n      \"feature_id\": 2,\n      \"rationale\": \"Affective evaluation of the Democratic Party is highly predictive and semantically tied to party support.\"\n    },\n    {\n      \"rank\": 4,\n      \"feature_id\": 3,\n      \"rationale\": \"Affective evaluation of the Republican Party is highly predictive and robust across elections.\"\n    },\n    {\n      \"rank\": 5,\n      \"feature_id\": 9,\n      \"rationale\": \"Like-dislike placement for Democrats is another direct measure of partisan affect linked to vote.\"\n    },\n    {\n      \"rank\": 6,\n      \"feature_id\": 10,\n      \"rationale\": \"Like-dislike placement for Republicans closely tracks support for the GOP ticket.\"\n    },\n    {\n      \"rank\": 7,\n      \"feature_id\": 29,\n      \"rationale\": \"Liberal-conservative self-placement is a broad ideological signal that generalizes well.\"\n    },\n    {\n      \"rank\": 8,\n      \"feature_id\": 12,\n      \"rationale\": \"Naming the party that best represents one's views is nearly a direct expression of partisan preference.\"\n    },\n    {\n      \"rank\": 9,\n      \"feature_id\": 13,\n      \"rationale\": \"Which party represents views best is a strong, stable summary of political alignment.\"\n    },\n    {\n      \"rank\": 10,\n      \"feature_id\": 11,\n      \"rationale\": \"Whether any party represents the respondent's views captures partisan attachment versus alienation.\"\n    },\n    {\n      \"rank\": 11,\n      \"feature_id\": 21,\n      \"rationale\": \"Guaranteed jobs and income reflects economic ideology that maps consistently onto party choice.\"\n    },\n    {\n      \"rank\": 12,\n      \"feature_id\": 22,\n      \"rationale\": \"Government services and spending is a classic ideological dimension with durable predictive value.\"\n    },\n    {\n      \"rank\": 13,\n      \"feature_id\": 27,\n      \"rationale\": \"Abortion attitudes are a major cross-cycle issue cleavage tied to partisan voting.\"\n    },\n    {\n      \"rank\": 14,\n      \"feature_id\": 15,\n      \"rationale\": \"Beliefs about which party favors stronger government encode issue-party perceptions relevant to vote.\"\n    },\n    {\n      \"rank\": 15,\n      \"feature_id\": 28,\n      \"rationale\": \"Gun control salience often separates partisan coalitions and can generalize beyond a single year.\"\n    },\n    {\n      \"rank\": 16,\n      \"feature_id\": 30,\n      \"rationale\": \"Importance of religion is a durable sociopolitical orientation associated with partisan choice.\"\n    },\n    {\n      \"rank\": 17,\n      \"feature_id\": 6,\n      \"rationale\": \"Party preference on environment captures issue ownership beliefs that inform vote decisions.\"\n    },\n    {\n      \"rank\": 18,\n      \"feature_id\": 7,\n      \"rationale\": \"Party preference on inflation reflects economic issue ownership and partisan competence beliefs.\"\n    },\n    {\n      \"rank\": 19,\n      \"feature_id\": 8,\n      \"rationale\": \"Party preference on unemployment is another stable issue-ownership signal tied to vote.\"\n    },\n    {\n      \"rank\": 20,\n      \"feature_id\": 25,\n      \"rationale\": \"Defense spending preferences capture ideological and partisan differences that often persist.\"\n    },\n    {\n      \"rank\": 21,\n      \"feature_id\": 16,\n      \"rationale\": \"Perceptions of which party favors military spending cuts encode partisan issue stereotypes.\"\n    },\n    {\n      \"rank\": 22,\n      \"feature_id\": 20,\n      \"rationale\": \"National mood about whether things are going well can influence incumbent-party support.\"\n    },\n    {\n      \"rank\": 23,\n      \"feature_id\": 23,\n      \"rationale\": \"Rating government economic policy is substantively relevant, though somewhat more incumbent-specific.\"\n    },\n    {\n      \"rank\": 24,\n      \"feature_id\": 24,\n      \"rationale\": \"Retrospective economic evaluation is predictive but can vary with election context.\"\n    },\n    {\n      \"rank\": 25,\n      \"feature_id\": 26,\n      \"rationale\": \"Views on whether the U.S. grew stronger are relevant retrospective judgments, though context dependent.\"\n    },\n    {\n      \"rank\": 26,\n      \"feature_id\": 19,\n      \"rationale\": \"Most important national problem captures issue salience, useful but more sensitive to year-specific agendas.\"\n    },\n    {\n      \"rank\": 27,\n      \"feature_id\": 14,\n      \"rationale\": \"Preference for unified versus split party control reflects governance attitudes with moderate relevance.\"\n    },\n    {\n      \"rank\": 28,\n      \"feature_id\": 17,\n      \"rationale\": \"President thermometer can be predictive but risks candidate- and year-specific leakage.\"\n    },\n    {\n      \"rank\": 29,\n      \"feature_id\": 18,\n      \"rationale\": \"Vice-president thermometer is similarly predictive yet more tied to specific election cycles.\"\n    },\n    {\n      \"rank\": 30,\n      \"feature_id\": 37,\n      \"rationale\": \"Interest in elections reflects engagement and can correlate with partisan turnout and vote choice.\"\n    },\n    {\n      \"rank\": 31,\n      \"feature_id\": 44,\n      \"rationale\": \"Trust in media may proxy political worldview, though it is less direct than ideology or party ID.\"\n    },\n    {\n      \"rank\": 32,\n      \"feature_id\": 32,\n      \"rationale\": \"Beliefs about government waste reflect anti-government sentiment associated with partisan preference.\"\n    },\n    {\n      \"rank\": 33,\n      \"feature_id\": 31,\n      \"rationale\": \"Approval of protests captures broader sociopolitical values that can align with party coalitions.\"\n    },\n    {\n      \"rank\": 34,\n      \"feature_id\": 53,\n      \"rationale\": \"Education is a meaningful demographic correlate of vote, but can act as a shortcut and shift over time.\"\n    },\n    {\n      \"rank\": 35,\n      \"feature_id\": 51,\n      \"rationale\": \"Race/ethnicity is predictive in U.S. politics but should be downweighted due to shortcut risk.\"\n    },\n    {\n      \"rank\": 36,\n      \"feature_id\": 49,\n      \"rationale\": \"Age has some stable association with vote but is weaker and partly demographic shortcutting.\"\n    },\n    {\n      \"rank\": 37,\n      \"feature_id\": 50,\n      \"rationale\": \"Gender can matter electorally but is a coarse demographic proxy rather than a robust causal attitude.\"\n    },\n    {\n      \"rank\": 38,\n      \"feature_id\": 52,\n      \"rationale\": \"Occupation may correlate with class and vote, though noisily and with weaker cross-domain stability.\"\n    },\n    {\n      \"rank\": 39,\n      \"feature_id\": 43,\n      \"rationale\": \"Registration status is behaviorally relevant but may reflect institutional differences across domains.\"\n    },\n    {\n      \"rank\": 40,\n      \"feature_id\": 39,\n      \"rationale\": \"Trying to influence others indicates engagement, but is only indirectly related to candidate choice.\"\n    },\n    {\n      \"rank\": 41,\n      \"feature_id\": 42,\n      \"rationale\": \"Donating to a party or candidate signals intensity, yet may be sparse and campaign-specific.\"\n    },\n    {\n      \"rank\": 42,\n      \"feature_id\": 41,\n      \"rationale\": \"Displaying campaign materials reflects activism but can be brittle and election-specific.\"\n    },\n    {\n      \"rank\": 43,\n      \"feature_id\": 40,\n      \"rationale\": \"Attending rallies is a noisy engagement measure that may not generalize well across years.\"\n    },\n    {\n      \"rank\": 44,\n      \"feature_id\": 38,\n      \"rationale\": \"Political organization membership indicates engagement but is not a direct preference measure.\"\n    },\n    {\n      \"rank\": 45,\n      \"feature_id\": 45,\n      \"rationale\": \"Watching TV campaign coverage mostly captures media exposure rather than stable political preference.\"\n    },\n    {\n      \"rank\": 46,\n      \"feature_id\": 46,\n      \"rationale\": \"Hearing radio campaign coverage is a weak and potentially outdated exposure proxy.\"\n    },\n    {\n      \"rank\": 47,\n      \"feature_id\": 47,\n      \"rationale\": \"Reading campaign coverage in magazines is sparse and likely brittle across survey years.\"\n    },\n    {\n      \"rank\": 48,\n      \"feature_id\": 48,\n      \"rationale\": \"Seeing campaign information on the internet is highly time-varying and can encode survey year.\"\n    },\n    {\n      \"rank\": 49,\n      \"feature_id\": 34,\n      \"rationale\": \"Belief that one's vote matters is more about efficacy than partisan choice.\"\n    },\n    {\n      \"rank\": 50,\n      \"feature_id\": 33,\n      \"rationale\": \"Belief that voting is the only way to have a say reflects civic norms, not candidate preference.\"\n    },\n    {\n      \"rank\": 51,\n      \"feature_id\": 35,\n      \"rationale\": \"Whether uninterested people should vote is a weak normative attitude with limited predictive value.\"\n    },\n    {\n      \"rank\": 52,\n      \"feature_id\": 36,\n      \"rationale\": \"Whether one should vote if their party cannot win is another weak civic-norm indicator.\"\n    },\n    {\n      \"rank\": 53,\n      \"feature_id\": 1,\n      \"rationale\": \"State can encode domain shifts and local political context rather than portable individual preference.\"\n    },\n    {\n      \"rank\": 54,\n      \"feature_id\": 0,\n      \"rationale\": \"Election year is primarily a domain identifier and should be heavily penalized for OOD generalization.\"\n    }\n  ]\n}",
+      "input_tokens": 4703,
+      "output_tokens": 2244,
+      "total_tokens": 6947,
+      "response_id": "resp_0eb5722972eee14f006a28073bf8cc819b9e3d8b48d290bbbb",
+      "response_model": "gpt-5.4-2026-03-05"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/tableshift/anes/rankings/rank_prompt.txt"
+}

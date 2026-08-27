@@ -1,0 +1,954 @@
+{
+  "benchmark": "tableshift",
+  "dataset": "nhanes_lead",
+  "model": "gpt-5.4",
+  "method": "score_all",
+  "feature_space": "model",
+  "temperature": 0.5,
+  "created_at": "2026-06-29T11:12:45",
+  "token_usage": {
+    "num_calls": 5,
+    "input_tokens": 8585,
+    "output_tokens": 4031,
+    "total_tokens": 12616
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 14,
+        "feature": "RIDAGEYR",
+        "score_mean": 0.88,
+        "score_std": 0.0
+      },
+      {
+        "rank": 2,
+        "feature_id": 13,
+        "feature": "RIAGENDR",
+        "score_mean": 0.354,
+        "score_std": 0.03440930106817049
+      },
+      {
+        "rank": 3,
+        "feature_id": 15,
+        "feature": "RIDRETH_merged",
+        "score_mean": 0.256,
+        "score_std": 0.029393876913398148
+      },
+      {
+        "rank": 4,
+        "feature_id": 0,
+        "feature": "DMDBORN4_10",
+        "score_mean": 0.18,
+        "score_std": 0.0
+      },
+      {
+        "rank": 5,
+        "feature_id": 1,
+        "feature": "DMDBORN4_20",
+        "score_mean": 0.176,
+        "score_std": 0.014966629547095767
+      },
+      {
+        "rank": 6,
+        "feature_id": 5,
+        "feature": "DMDMARTL_20",
+        "score_mean": 0.14200000000000002,
+        "score_std": 0.021354156504062624
+      },
+      {
+        "rank": 7,
+        "feature_id": 4,
+        "feature": "DMDMARTL_10",
+        "score_mean": 0.14,
+        "score_std": 0.017888543819998323
+      },
+      {
+        "rank": 8,
+        "feature_id": 6,
+        "feature": "DMDMARTL_30",
+        "score_mean": 0.134,
+        "score_std": 0.020591260281973996
+      },
+      {
+        "rank": 9,
+        "feature_id": 8,
+        "feature": "DMDMARTL_50",
+        "score_mean": 0.12000000000000001,
+        "score_std": 0.020976176963403037
+      },
+      {
+        "rank": 10,
+        "feature_id": 7,
+        "feature": "DMDMARTL_40",
+        "score_mean": 0.116,
+        "score_std": 0.020591260281974007
+      },
+      {
+        "rank": 11,
+        "feature_id": 9,
+        "feature": "DMDMARTL_60",
+        "score_mean": 0.102,
+        "score_std": 0.019390719429665318
+      },
+      {
+        "rank": 12,
+        "feature_id": 3,
+        "feature": "DMDEDUC2_MISSING",
+        "score_mean": 0.056,
+        "score_std": 0.004898979485566354
+      },
+      {
+        "rank": 13,
+        "feature_id": 2,
+        "feature": "DMDBORN4_MISSING",
+        "score_mean": 0.04,
+        "score_std": 0.008944271909999161
+      },
+      {
+        "rank": 14,
+        "feature_id": 12,
+        "feature": "DMDMARTL_MISSING",
+        "score_mean": 0.034,
+        "score_std": 0.0048989794855663574
+      },
+      {
+        "rank": 15,
+        "feature_id": 10,
+        "feature": "DMDMARTL_770",
+        "score_mean": 0.024,
+        "score_std": 0.004898979485566356
+      },
+      {
+        "rank": 16,
+        "feature_id": 11,
+        "feature": "DMDMARTL_990",
+        "score_mean": 0.024,
+        "score_std": 0.004898979485566356
+      },
+      {
+        "rank": 17,
+        "feature_id": 16,
+        "feature": "nhanes_year",
+        "score_mean": 0.01,
+        "score_std": 0.00894427190999916
+      }
+    ],
+    "scores": [
+      {
+        "feature_id": 0,
+        "feature": "DMDBORN4_10",
+        "score_mean": 0.18,
+        "score_std": 0.0,
+        "sample_scores": [
+          0.18,
+          0.18,
+          0.18,
+          0.18,
+          0.18
+        ]
+      },
+      {
+        "feature_id": 1,
+        "feature": "DMDBORN4_20",
+        "score_mean": 0.176,
+        "score_std": 0.014966629547095767,
+        "sample_scores": [
+          0.18,
+          0.18,
+          0.16,
+          0.2,
+          0.16
+        ]
+      },
+      {
+        "feature_id": 2,
+        "feature": "DMDBORN4_MISSING",
+        "score_mean": 0.04,
+        "score_std": 0.008944271909999161,
+        "sample_scores": [
+          0.04,
+          0.05,
+          0.05,
+          0.03,
+          0.03
+        ]
+      },
+      {
+        "feature_id": 3,
+        "feature": "DMDEDUC2_MISSING",
+        "score_mean": 0.056,
+        "score_std": 0.004898979485566354,
+        "sample_scores": [
+          0.05,
+          0.06,
+          0.06,
+          0.06,
+          0.05
+        ]
+      },
+      {
+        "feature_id": 4,
+        "feature": "DMDMARTL_10",
+        "score_mean": 0.14,
+        "score_std": 0.017888543819998323,
+        "sample_scores": [
+          0.16,
+          0.16,
+          0.14,
+          0.12,
+          0.12
+        ]
+      },
+      {
+        "feature_id": 5,
+        "feature": "DMDMARTL_20",
+        "score_mean": 0.14200000000000002,
+        "score_std": 0.021354156504062624,
+        "sample_scores": [
+          0.16,
+          0.17,
+          0.13,
+          0.14,
+          0.11
+        ]
+      },
+      {
+        "feature_id": 6,
+        "feature": "DMDMARTL_30",
+        "score_mean": 0.134,
+        "score_std": 0.020591260281973996,
+        "sample_scores": [
+          0.15,
+          0.15,
+          0.12,
+          0.15,
+          0.1
+        ]
+      },
+      {
+        "feature_id": 7,
+        "feature": "DMDMARTL_40",
+        "score_mean": 0.116,
+        "score_std": 0.020591260281974007,
+        "sample_scores": [
+          0.14,
+          0.14,
+          0.11,
+          0.1,
+          0.09
+        ]
+      },
+      {
+        "feature_id": 8,
+        "feature": "DMDMARTL_50",
+        "score_mean": 0.12000000000000001,
+        "score_std": 0.020976176963403037,
+        "sample_scores": [
+          0.14,
+          0.14,
+          0.1,
+          0.13,
+          0.09
+        ]
+      },
+      {
+        "feature_id": 9,
+        "feature": "DMDMARTL_60",
+        "score_mean": 0.102,
+        "score_std": 0.019390719429665318,
+        "sample_scores": [
+          0.13,
+          0.12,
+          0.09,
+          0.09,
+          0.08
+        ]
+      },
+      {
+        "feature_id": 10,
+        "feature": "DMDMARTL_770",
+        "score_mean": 0.024,
+        "score_std": 0.004898979485566356,
+        "sample_scores": [
+          0.02,
+          0.03,
+          0.03,
+          0.02,
+          0.02
+        ]
+      },
+      {
+        "feature_id": 11,
+        "feature": "DMDMARTL_990",
+        "score_mean": 0.024,
+        "score_std": 0.004898979485566356,
+        "sample_scores": [
+          0.02,
+          0.03,
+          0.03,
+          0.02,
+          0.02
+        ]
+      },
+      {
+        "feature_id": 12,
+        "feature": "DMDMARTL_MISSING",
+        "score_mean": 0.034,
+        "score_std": 0.0048989794855663574,
+        "sample_scores": [
+          0.03,
+          0.04,
+          0.04,
+          0.03,
+          0.03
+        ]
+      },
+      {
+        "feature_id": 13,
+        "feature": "RIAGENDR",
+        "score_mean": 0.354,
+        "score_std": 0.03440930106817049,
+        "sample_scores": [
+          0.32,
+          0.34,
+          0.42,
+          0.34,
+          0.35
+        ]
+      },
+      {
+        "feature_id": 14,
+        "feature": "RIDAGEYR",
+        "score_mean": 0.88,
+        "score_std": 0.0,
+        "sample_scores": [
+          0.88,
+          0.88,
+          0.88,
+          0.88,
+          0.88
+        ]
+      },
+      {
+        "feature_id": 15,
+        "feature": "RIDRETH_merged",
+        "score_mean": 0.256,
+        "score_std": 0.029393876913398148,
+        "sample_scores": [
+          0.22,
+          0.22,
+          0.28,
+          0.28,
+          0.28
+        ]
+      },
+      {
+        "feature_id": 16,
+        "feature": "nhanes_year",
+        "score_mean": 0.01,
+        "score_std": 0.00894427190999916,
+        "sample_scores": [
+          0.0,
+          0.02,
+          0.02,
+          0.01,
+          0.0
+        ]
+      }
+    ],
+    "samples": [
+      {
+        "task_summary": "Predict whether an NHANES participant has elevated blood lead level using demographic variables in a way that generalizes across survey years and domains.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.18,
+            "rationale": "US-born status may weakly relate to environmental exposure history, but it is also a demographic proxy and likely unstable across domains.",
+            "feature": "DMDBORN4_10"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.18,
+            "rationale": "Non-US-born status may weakly capture differing exposure histories, but it is a coarse demographic shortcut with limited stable marginal value.",
+            "feature": "DMDBORN4_20"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.04,
+            "rationale": "Missingness on country of birth is unlikely to be causally informative and may reflect survey process artifacts.",
+            "feature": "DMDBORN4_MISSING"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.05,
+            "rationale": "Missingness on education is mostly a data-collection artifact and not a robust predictor of lead exposure.",
+            "feature": "DMDEDUC2_MISSING"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.16,
+            "rationale": "Marital status can weakly correlate with household and socioeconomic conditions, but it is indirect and brittle.",
+            "feature": "DMDMARTL_10"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.16,
+            "rationale": "Marital status can weakly correlate with household and socioeconomic conditions, but it is indirect and brittle.",
+            "feature": "DMDMARTL_20"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.15,
+            "rationale": "Marital status has some weak association with life stage and living conditions, though not a stable direct driver.",
+            "feature": "DMDMARTL_30"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.14,
+            "rationale": "Separated or similar marital categories may reflect household context, but signal is likely weak and unstable.",
+            "feature": "DMDMARTL_40"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.14,
+            "rationale": "Widowed or similar marital categories mostly proxy age and social context rather than direct exposure risk.",
+            "feature": "DMDMARTL_50"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.13,
+            "rationale": "Never married or similar categories may weakly reflect life stage, but add limited stable information beyond age.",
+            "feature": "DMDMARTL_60"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.02,
+            "rationale": "Refused marital status is not semantically predictive and mainly encodes response behavior.",
+            "feature": "DMDMARTL_770"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.02,
+            "rationale": "Don't know marital status is not meaningfully related to lead exposure and is likely survey noise.",
+            "feature": "DMDMARTL_990"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.03,
+            "rationale": "Missing marital status is largely procedural missingness with little stable predictive value.",
+            "feature": "DMDMARTL_MISSING"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.32,
+            "rationale": "Sex can affect occupational and behavioral exposure patterns, but it is also a demographic shortcut and only moderately stable.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.88,
+            "rationale": "Age is a strong, semantically grounded predictor because lead exposure and accumulation patterns vary substantially across the life course.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.22,
+            "rationale": "Race/ethnicity may correlate with structural exposure disparities, but it is a sensitive proxy with substantial risk of brittle domain-specific shortcutting.",
+            "feature": "RIDRETH_merged"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.0,
+            "rationale": "Survey year is effectively a domain identifier and likely to encode distribution shift rather than stable individual-level risk.",
+            "feature": "nhanes_year"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether an NHANES participant has elevated blood lead level using demographic variables while favoring signals that should generalize across survey domains.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.18,
+            "rationale": "US-born status may weakly relate to environmental exposure history, but it is a demographic proxy with limited stable marginal signal.",
+            "feature": "DMDBORN4_10"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.18,
+            "rationale": "Non-US-born status may weakly capture different lifetime exposure environments, but it is also a brittle demographic shortcut.",
+            "feature": "DMDBORN4_20"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.05,
+            "rationale": "Missingness on country of birth is unlikely to be intrinsically predictive and may mostly reflect survey process artifacts.",
+            "feature": "DMDBORN4_MISSING"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.06,
+            "rationale": "Missing education is usually a weak administrative signal rather than a stable causal predictor of lead exposure.",
+            "feature": "DMDEDUC2_MISSING"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.16,
+            "rationale": "Marital status categories can correlate with age and socioeconomic conditions, but their direct stable relationship to lead is weak.",
+            "feature": "DMDMARTL_10"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.17,
+            "rationale": "This marital-status indicator may carry some socioeconomic and household-structure information, but mostly indirectly.",
+            "feature": "DMDMARTL_20"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.15,
+            "rationale": "Another marital-status category with limited direct relevance; any usefulness is likely through age or SES proxies.",
+            "feature": "DMDMARTL_30"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.14,
+            "rationale": "Marital status provides only weak, indirect information for lead risk and may not transfer robustly across domains.",
+            "feature": "DMDMARTL_40"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.14,
+            "rationale": "This marital-status category is at best a modest proxy for life stage or household context, not a core stable predictor.",
+            "feature": "DMDMARTL_50"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.12,
+            "rationale": "Widowed or similar categories may mostly reflect age composition; useful only indirectly and less stably than age itself.",
+            "feature": "DMDMARTL_60"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.03,
+            "rationale": "Refused-response category is likely a survey artifact with little semantic connection to lead exposure.",
+            "feature": "DMDMARTL_770"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.03,
+            "rationale": "Don't-know or similar nonresponse category is mainly procedural noise rather than stable predictive signal.",
+            "feature": "DMDMARTL_990"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.04,
+            "rationale": "Missing marital status is unlikely to generalize as a meaningful predictor beyond data-collection quirks.",
+            "feature": "DMDMARTL_MISSING"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.34,
+            "rationale": "Sex can affect occupational and behavioral exposure patterns, giving moderate but not dominant stable signal.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.88,
+            "rationale": "Age is a strong, semantically stable predictor because lead burden and historical exposure opportunities vary substantially over the life course.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.22,
+            "rationale": "Race/ethnicity may correlate with structural exposure disparities, but it is a sensitive proxy vulnerable to domain shift and shortcut learning.",
+            "feature": "RIDRETH_merged"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.02,
+            "rationale": "Survey year is a likely domain identifier and can encode temporal prevalence shifts rather than transportable individual-level risk.",
+            "feature": "nhanes_year"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict elevated blood lead status in NHANES participants using features likely to remain predictive across survey domains.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.18,
+            "rationale": "US-born status may weakly track environmental and housing exposure patterns, but it is a demographic proxy with limited stable marginal signal.",
+            "feature": "DMDBORN4_10"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.16,
+            "rationale": "Non-US-born status may weakly relate to differing historical exposures, but it is a brittle demographic shortcut rather than a direct exposure measure.",
+            "feature": "DMDBORN4_20"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.05,
+            "rationale": "Missingness in country of birth is unlikely to be intrinsically predictive and may reflect survey process artifacts.",
+            "feature": "DMDBORN4_MISSING"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.06,
+            "rationale": "Missing education mainly captures nonresponse or inapplicability and is not a robust causal signal for lead exposure.",
+            "feature": "DMDEDUC2_MISSING"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.14,
+            "rationale": "Marital status category has at most weak indirect association through household structure or age, with limited stable marginal usefulness.",
+            "feature": "DMDMARTL_10"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.13,
+            "rationale": "This marital status category is only an indirect socioeconomic proxy and likely weakly predictive out of domain.",
+            "feature": "DMDMARTL_20"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.12,
+            "rationale": "Marital status provides little direct information about lead exposure beyond correlated demographics.",
+            "feature": "DMDMARTL_30"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.11,
+            "rationale": "Another marital status indicator with weak and likely unstable association to the target.",
+            "feature": "DMDMARTL_40"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.1,
+            "rationale": "Marital status category is a coarse demographic correlate and not a direct exposure determinant.",
+            "feature": "DMDMARTL_50"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.09,
+            "rationale": "This marital status category is likely rare or age-linked, giving weak and potentially unstable signal.",
+            "feature": "DMDMARTL_60"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.03,
+            "rationale": "Refused marital status mostly reflects survey-response behavior, not true lead risk.",
+            "feature": "DMDMARTL_770"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.03,
+            "rationale": "Unknown marital status is primarily a missingness artifact with little stable predictive value.",
+            "feature": "DMDMARTL_990"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.04,
+            "rationale": "Missing marital status is unlikely to generalize as a meaningful predictor of blood lead.",
+            "feature": "DMDMARTL_MISSING"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.42,
+            "rationale": "Sex can stably affect occupational and physiological exposure patterns, though it remains a coarse demographic proxy.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.88,
+            "rationale": "Age is a strong, semantically stable predictor because lead burden and exposure opportunities vary systematically across the life course.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.28,
+            "rationale": "Race/ethnicity may correlate with structural exposure disparities, but it is a sensitive shortcut and vulnerable to domain shifts in social patterns.",
+            "feature": "RIDRETH_merged"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.02,
+            "rationale": "Survey year is effectively a domain identifier and risks capturing temporal prevalence shifts rather than transferable individual-level risk.",
+            "feature": "nhanes_year"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether an NHANES participant has elevated blood lead level using demographic variables that may correlate with exposure risk across survey domains.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.18,
+            "rationale": "US-born status may weakly track housing, occupation, and exposure history, but it is also a demographic shortcut and likely unstable across domains.",
+            "feature": "DMDBORN4_10"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.2,
+            "rationale": "Non-US-born status may weakly reflect differing environmental exposure histories, but usefulness is modest and potentially domain-dependent.",
+            "feature": "DMDBORN4_20"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.03,
+            "rationale": "Missingness on country of birth is unlikely to be semantically predictive and may mostly encode survey process artifacts.",
+            "feature": "DMDBORN4_MISSING"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.06,
+            "rationale": "Missing education is more likely a measurement/process indicator than a stable causal predictor of lead exposure.",
+            "feature": "DMDEDUC2_MISSING"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.12,
+            "rationale": "Marital status category may weakly proxy life stage and household context, but is indirect and brittle for lead prediction.",
+            "feature": "DMDMARTL_10"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.14,
+            "rationale": "This marital status category may carry slight information about household and socioeconomic context, though not strongly or robustly.",
+            "feature": "DMDMARTL_20"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.15,
+            "rationale": "Marital status can modestly proxy age and living conditions related to exposure, but remains an indirect shortcut.",
+            "feature": "DMDMARTL_30"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.1,
+            "rationale": "This marital status category is only weakly connected to lead risk and likely unstable across domains.",
+            "feature": "DMDMARTL_40"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.13,
+            "rationale": "Some marital categories may correlate with household composition and SES, but predictive value should be limited.",
+            "feature": "DMDMARTL_50"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.09,
+            "rationale": "Separated or similar marital categories are unlikely to be stable direct predictors beyond weak demographic correlation.",
+            "feature": "DMDMARTL_60"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.02,
+            "rationale": "Refused marital status mainly reflects response behavior and survey artifact rather than stable exposure risk.",
+            "feature": "DMDMARTL_770"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.02,
+            "rationale": "Unknown marital status is largely non-substantive missingness and unlikely to generalize as a useful predictor.",
+            "feature": "DMDMARTL_990"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.03,
+            "rationale": "Missing marital status mostly captures data collection patterns, not stable lead-related signal.",
+            "feature": "DMDMARTL_MISSING"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.34,
+            "rationale": "Sex/gender can capture stable differences in occupation, physiology, and exposure patterns, though effect is moderate and partly confounded.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.88,
+            "rationale": "Age is a strong, semantically stable predictor because cumulative exposure and cohort effects are central to blood lead risk.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.28,
+            "rationale": "Race/ethnicity may correlate with structural exposure disparities, but it is a sensitive demographic shortcut and likely less transportable than age.",
+            "feature": "RIDRETH_merged"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.01,
+            "rationale": "Survey year is primarily a domain identifier and risks exploiting temporal shift rather than stable individual-level lead risk.",
+            "feature": "nhanes_year"
+          }
+        ]
+      },
+      {
+        "task_summary": "Predict whether an NHANES participant has elevated blood lead, favoring features that reflect stable exposure risk rather than survey-wave or demographic shortcuts.",
+        "scores": [
+          {
+            "feature_id": 0,
+            "score": 0.18,
+            "rationale": "US-born status may weakly track lifetime environmental exposure patterns, but it is a coarse demographic proxy and can be domain-sensitive.",
+            "feature": "DMDBORN4_10"
+          },
+          {
+            "feature_id": 1,
+            "score": 0.16,
+            "rationale": "Non-US-born status may weakly relate to differing historical lead exposures, but it is still a coarse proxy with limited stable marginal value.",
+            "feature": "DMDBORN4_20"
+          },
+          {
+            "feature_id": 2,
+            "score": 0.03,
+            "rationale": "Missingness on country of birth is unlikely to be intrinsically predictive and may reflect survey process artifacts.",
+            "feature": "DMDBORN4_MISSING"
+          },
+          {
+            "feature_id": 3,
+            "score": 0.05,
+            "rationale": "Education missingness may correlate with survey administration or subgroup differences more than true lead risk.",
+            "feature": "DMDEDUC2_MISSING"
+          },
+          {
+            "feature_id": 4,
+            "score": 0.12,
+            "rationale": "Marital status can weakly proxy household structure and age, but its direct stable relation to lead is limited.",
+            "feature": "DMDMARTL_10"
+          },
+          {
+            "feature_id": 5,
+            "score": 0.11,
+            "rationale": "This marital-status category may carry slight socioeconomic or life-stage information, but is mostly indirect.",
+            "feature": "DMDMARTL_20"
+          },
+          {
+            "feature_id": 6,
+            "score": 0.1,
+            "rationale": "Another marital-status category with modest proxy value through age and household context, but weak direct relevance.",
+            "feature": "DMDMARTL_30"
+          },
+          {
+            "feature_id": 7,
+            "score": 0.09,
+            "rationale": "Marital-status category offers limited stable signal and is mostly a demographic correlate.",
+            "feature": "DMDMARTL_40"
+          },
+          {
+            "feature_id": 8,
+            "score": 0.09,
+            "rationale": "Marital-status category may weakly reflect social and economic context, but is not a strong direct predictor.",
+            "feature": "DMDMARTL_50"
+          },
+          {
+            "feature_id": 9,
+            "score": 0.08,
+            "rationale": "This marital-status category likely adds only weak indirect information and may be unstable across domains.",
+            "feature": "DMDMARTL_60"
+          },
+          {
+            "feature_id": 10,
+            "score": 0.02,
+            "rationale": "Refused/other special-code marital responses are likely survey artifacts rather than meaningful lead-risk indicators.",
+            "feature": "DMDMARTL_770"
+          },
+          {
+            "feature_id": 11,
+            "score": 0.02,
+            "rationale": "Unknown special-code marital responses are mainly missingness/process signals with poor semantic stability.",
+            "feature": "DMDMARTL_990"
+          },
+          {
+            "feature_id": 12,
+            "score": 0.03,
+            "rationale": "Missing marital status is unlikely to generalize as a substantive predictor and may encode collection artifacts.",
+            "feature": "DMDMARTL_MISSING"
+          },
+          {
+            "feature_id": 13,
+            "score": 0.35,
+            "rationale": "Sex can affect occupational and behavioral exposure patterns, but it is also a sensitive demographic shortcut and not the core causal driver.",
+            "feature": "RIAGENDR"
+          },
+          {
+            "feature_id": 14,
+            "score": 0.88,
+            "rationale": "Age is a strong and plausibly stable predictor because lead burden and exposure history vary systematically across cohorts and life stages.",
+            "feature": "RIDAGEYR"
+          },
+          {
+            "feature_id": 15,
+            "score": 0.28,
+            "rationale": "Race/ethnicity may correlate with structural exposure disparities, but it is a sensitive proxy that risks encoding non-causal demographic shortcuts.",
+            "feature": "RIDRETH_merged"
+          },
+          {
+            "feature_id": 16,
+            "score": 0.0,
+            "rationale": "Survey year is essentially a domain identifier and likely captures temporal distribution shift rather than portable individual-level risk.",
+            "feature": "nhanes_year"
+          }
+        ]
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"DMDBORN4_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDBORN4_10` derived from semantic feature `DMDBORN4`. Interpret this column as the encoded model input for that derived category/value. country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DMDBORN4_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDBORN4_20` derived from semantic feature `DMDBORN4`. Interpret this column as the encoded model input for that derived category/value. country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DMDBORN4_MISSING\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDBORN4_MISSING` derived from semantic feature `DMDBORN4`. Interpret this column as the encoded model input for that derived category/value. country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"DMDEDUC2_MISSING\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDEDUC2_MISSING` derived from semantic feature `DMDEDUC2`. Interpret this column as the encoded model input for that derived category/value. highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DMDMARTL_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_10` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"DMDMARTL_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_20` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"DMDMARTL_30\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_30` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"DMDMARTL_40\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_40` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"DMDMARTL_50\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_50` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"DMDMARTL_60\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_60` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"DMDMARTL_770\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_770` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"DMDMARTL_990\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_990` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DMDMARTL_MISSING\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_MISSING` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"RIAGENDR\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"RIDAGEYR\",\n    \"type\": \"continuous\",\n    \"description\": \"age in years\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"RIDRETH_merged\",\n    \"type\": \"categorical\",\n    \"description\": \"race and hispanic origin\",\n    \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an NHANES participant has elevated blood lead level using demographic variables in a way that generalizes across survey years and domains.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.18,\n      \"rationale\": \"US-born status may weakly relate to environmental exposure history, but it is also a demographic proxy and likely unstable across domains.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.18,\n      \"rationale\": \"Non-US-born status may weakly capture differing exposure histories, but it is a coarse demographic shortcut with limited stable marginal value.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.04,\n      \"rationale\": \"Missingness on country of birth is unlikely to be causally informative and may reflect survey process artifacts.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.05,\n      \"rationale\": \"Missingness on education is mostly a data-collection artifact and not a robust predictor of lead exposure.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.16,\n      \"rationale\": \"Marital status can weakly correlate with household and socioeconomic conditions, but it is indirect and brittle.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.16,\n      \"rationale\": \"Marital status can weakly correlate with household and socioeconomic conditions, but it is indirect and brittle.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.15,\n      \"rationale\": \"Marital status has some weak association with life stage and living conditions, though not a stable direct driver.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.14,\n      \"rationale\": \"Separated or similar marital categories may reflect household context, but signal is likely weak and unstable.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.14,\n      \"rationale\": \"Widowed or similar marital categories mostly proxy age and social context rather than direct exposure risk.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.13,\n      \"rationale\": \"Never married or similar categories may weakly reflect life stage, but add limited stable information beyond age.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.02,\n      \"rationale\": \"Refused marital status is not semantically predictive and mainly encodes response behavior.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.02,\n      \"rationale\": \"Don't know marital status is not meaningfully related to lead exposure and is likely survey noise.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.03,\n      \"rationale\": \"Missing marital status is largely procedural missingness with little stable predictive value.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.32,\n      \"rationale\": \"Sex can affect occupational and behavioral exposure patterns, but it is also a demographic shortcut and only moderately stable.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.88,\n      \"rationale\": \"Age is a strong, semantically grounded predictor because lead exposure and accumulation patterns vary substantially across the life course.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.22,\n      \"rationale\": \"Race/ethnicity may correlate with structural exposure disparities, but it is a sensitive proxy with substantial risk of brittle domain-specific shortcutting.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.0,\n      \"rationale\": \"Survey year is effectively a domain identifier and likely to encode distribution shift rather than stable individual-level risk.\"\n    }\n  ]\n}",
+      "input_tokens": 1717,
+      "output_tokens": 850,
+      "total_tokens": 2567,
+      "response_id": "resp_01619f78964f6ee5006a41e287912881969b9938fe324fb5be",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"DMDBORN4_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDBORN4_10` derived from semantic feature `DMDBORN4`. Interpret this column as the encoded model input for that derived category/value. country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DMDBORN4_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDBORN4_20` derived from semantic feature `DMDBORN4`. Interpret this column as the encoded model input for that derived category/value. country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DMDBORN4_MISSING\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDBORN4_MISSING` derived from semantic feature `DMDBORN4`. Interpret this column as the encoded model input for that derived category/value. country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"DMDEDUC2_MISSING\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDEDUC2_MISSING` derived from semantic feature `DMDEDUC2`. Interpret this column as the encoded model input for that derived category/value. highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DMDMARTL_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_10` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"DMDMARTL_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_20` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"DMDMARTL_30\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_30` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"DMDMARTL_40\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_40` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"DMDMARTL_50\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_50` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"DMDMARTL_60\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_60` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"DMDMARTL_770\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_770` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"DMDMARTL_990\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_990` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DMDMARTL_MISSING\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_MISSING` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"RIAGENDR\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"RIDAGEYR\",\n    \"type\": \"continuous\",\n    \"description\": \"age in years\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"RIDRETH_merged\",\n    \"type\": \"categorical\",\n    \"description\": \"race and hispanic origin\",\n    \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an NHANES participant has elevated blood lead level using demographic variables while favoring signals that should generalize across survey domains.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.18,\n      \"rationale\": \"US-born status may weakly relate to environmental exposure history, but it is a demographic proxy with limited stable marginal signal.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.18,\n      \"rationale\": \"Non-US-born status may weakly capture different lifetime exposure environments, but it is also a brittle demographic shortcut.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.05,\n      \"rationale\": \"Missingness on country of birth is unlikely to be intrinsically predictive and may mostly reflect survey process artifacts.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.06,\n      \"rationale\": \"Missing education is usually a weak administrative signal rather than a stable causal predictor of lead exposure.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.16,\n      \"rationale\": \"Marital status categories can correlate with age and socioeconomic conditions, but their direct stable relationship to lead is weak.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.17,\n      \"rationale\": \"This marital-status indicator may carry some socioeconomic and household-structure information, but mostly indirectly.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.15,\n      \"rationale\": \"Another marital-status category with limited direct relevance; any usefulness is likely through age or SES proxies.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.14,\n      \"rationale\": \"Marital status provides only weak, indirect information for lead risk and may not transfer robustly across domains.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.14,\n      \"rationale\": \"This marital-status category is at best a modest proxy for life stage or household context, not a core stable predictor.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.12,\n      \"rationale\": \"Widowed or similar categories may mostly reflect age composition; useful only indirectly and less stably than age itself.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.03,\n      \"rationale\": \"Refused-response category is likely a survey artifact with little semantic connection to lead exposure.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.03,\n      \"rationale\": \"Don't-know or similar nonresponse category is mainly procedural noise rather than stable predictive signal.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.04,\n      \"rationale\": \"Missing marital status is unlikely to generalize as a meaningful predictor beyond data-collection quirks.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.34,\n      \"rationale\": \"Sex can affect occupational and behavioral exposure patterns, giving moderate but not dominant stable signal.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.88,\n      \"rationale\": \"Age is a strong, semantically stable predictor because lead burden and historical exposure opportunities vary substantially over the life course.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.22,\n      \"rationale\": \"Race/ethnicity may correlate with structural exposure disparities, but it is a sensitive proxy vulnerable to domain shift and shortcut learning.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.02,\n      \"rationale\": \"Survey year is a likely domain identifier and can encode temporal prevalence shifts rather than transportable individual-level risk.\"\n    }\n  ]\n}",
+      "input_tokens": 1717,
+      "output_tokens": 855,
+      "total_tokens": 2572,
+      "response_id": "resp_0f8c4481fbf989e9006a41e28e4af8819684e10886d73f8cc7",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"DMDBORN4_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDBORN4_10` derived from semantic feature `DMDBORN4`. Interpret this column as the encoded model input for that derived category/value. country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DMDBORN4_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDBORN4_20` derived from semantic feature `DMDBORN4`. Interpret this column as the encoded model input for that derived category/value. country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DMDBORN4_MISSING\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDBORN4_MISSING` derived from semantic feature `DMDBORN4`. Interpret this column as the encoded model input for that derived category/value. country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"DMDEDUC2_MISSING\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDEDUC2_MISSING` derived from semantic feature `DMDEDUC2`. Interpret this column as the encoded model input for that derived category/value. highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DMDMARTL_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_10` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"DMDMARTL_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_20` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"DMDMARTL_30\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_30` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"DMDMARTL_40\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_40` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"DMDMARTL_50\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_50` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"DMDMARTL_60\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_60` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"DMDMARTL_770\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_770` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"DMDMARTL_990\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_990` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DMDMARTL_MISSING\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_MISSING` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"RIAGENDR\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"RIDAGEYR\",\n    \"type\": \"continuous\",\n    \"description\": \"age in years\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"RIDRETH_merged\",\n    \"type\": \"categorical\",\n    \"description\": \"race and hispanic origin\",\n    \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict elevated blood lead status in NHANES participants using features likely to remain predictive across survey domains.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.18,\n      \"rationale\": \"US-born status may weakly track environmental and housing exposure patterns, but it is a demographic proxy with limited stable marginal signal.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.16,\n      \"rationale\": \"Non-US-born status may weakly relate to differing historical exposures, but it is a brittle demographic shortcut rather than a direct exposure measure.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.05,\n      \"rationale\": \"Missingness in country of birth is unlikely to be intrinsically predictive and may reflect survey process artifacts.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.06,\n      \"rationale\": \"Missing education mainly captures nonresponse or inapplicability and is not a robust causal signal for lead exposure.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.14,\n      \"rationale\": \"Marital status category has at most weak indirect association through household structure or age, with limited stable marginal usefulness.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.13,\n      \"rationale\": \"This marital status category is only an indirect socioeconomic proxy and likely weakly predictive out of domain.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.12,\n      \"rationale\": \"Marital status provides little direct information about lead exposure beyond correlated demographics.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.11,\n      \"rationale\": \"Another marital status indicator with weak and likely unstable association to the target.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.10,\n      \"rationale\": \"Marital status category is a coarse demographic correlate and not a direct exposure determinant.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.09,\n      \"rationale\": \"This marital status category is likely rare or age-linked, giving weak and potentially unstable signal.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.03,\n      \"rationale\": \"Refused marital status mostly reflects survey-response behavior, not true lead risk.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.03,\n      \"rationale\": \"Unknown marital status is primarily a missingness artifact with little stable predictive value.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.04,\n      \"rationale\": \"Missing marital status is unlikely to generalize as a meaningful predictor of blood lead.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.42,\n      \"rationale\": \"Sex can stably affect occupational and physiological exposure patterns, though it remains a coarse demographic proxy.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.88,\n      \"rationale\": \"Age is a strong, semantically stable predictor because lead burden and exposure opportunities vary systematically across the life course.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.28,\n      \"rationale\": \"Race/ethnicity may correlate with structural exposure disparities, but it is a sensitive shortcut and vulnerable to domain shifts in social patterns.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.02,\n      \"rationale\": \"Survey year is effectively a domain identifier and risks capturing temporal prevalence shifts rather than transferable individual-level risk.\"\n    }\n  ]\n}",
+      "input_tokens": 1717,
+      "output_tokens": 828,
+      "total_tokens": 2545,
+      "response_id": "resp_0becf5694c3cddd4006a41e29662108196858892179b3377e6",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"DMDBORN4_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDBORN4_10` derived from semantic feature `DMDBORN4`. Interpret this column as the encoded model input for that derived category/value. country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DMDBORN4_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDBORN4_20` derived from semantic feature `DMDBORN4`. Interpret this column as the encoded model input for that derived category/value. country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DMDBORN4_MISSING\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDBORN4_MISSING` derived from semantic feature `DMDBORN4`. Interpret this column as the encoded model input for that derived category/value. country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"DMDEDUC2_MISSING\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDEDUC2_MISSING` derived from semantic feature `DMDEDUC2`. Interpret this column as the encoded model input for that derived category/value. highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DMDMARTL_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_10` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"DMDMARTL_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_20` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"DMDMARTL_30\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_30` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"DMDMARTL_40\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_40` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"DMDMARTL_50\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_50` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"DMDMARTL_60\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_60` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"DMDMARTL_770\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_770` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"DMDMARTL_990\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_990` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DMDMARTL_MISSING\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_MISSING` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"RIAGENDR\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"RIDAGEYR\",\n    \"type\": \"continuous\",\n    \"description\": \"age in years\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"RIDRETH_merged\",\n    \"type\": \"categorical\",\n    \"description\": \"race and hispanic origin\",\n    \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\"task_summary\":\"Predict whether an NHANES participant has elevated blood lead level using demographic variables that may correlate with exposure risk across survey domains.\",\"scores\":[{\"feature_id\":0,\"score\":0.18,\"rationale\":\"US-born status may weakly track housing, occupation, and exposure history, but it is also a demographic shortcut and likely unstable across domains.\"},{\"feature_id\":1,\"score\":0.20,\"rationale\":\"Non-US-born status may weakly reflect differing environmental exposure histories, but usefulness is modest and potentially domain-dependent.\"},{\"feature_id\":2,\"score\":0.03,\"rationale\":\"Missingness on country of birth is unlikely to be semantically predictive and may mostly encode survey process artifacts.\"},{\"feature_id\":3,\"score\":0.06,\"rationale\":\"Missing education is more likely a measurement/process indicator than a stable causal predictor of lead exposure.\"},{\"feature_id\":4,\"score\":0.12,\"rationale\":\"Marital status category may weakly proxy life stage and household context, but is indirect and brittle for lead prediction.\"},{\"feature_id\":5,\"score\":0.14,\"rationale\":\"This marital status category may carry slight information about household and socioeconomic context, though not strongly or robustly.\"},{\"feature_id\":6,\"score\":0.15,\"rationale\":\"Marital status can modestly proxy age and living conditions related to exposure, but remains an indirect shortcut.\"},{\"feature_id\":7,\"score\":0.10,\"rationale\":\"This marital status category is only weakly connected to lead risk and likely unstable across domains.\"},{\"feature_id\":8,\"score\":0.13,\"rationale\":\"Some marital categories may correlate with household composition and SES, but predictive value should be limited.\"},{\"feature_id\":9,\"score\":0.09,\"rationale\":\"Separated or similar marital categories are unlikely to be stable direct predictors beyond weak demographic correlation.\"},{\"feature_id\":10,\"score\":0.02,\"rationale\":\"Refused marital status mainly reflects response behavior and survey artifact rather than stable exposure risk.\"},{\"feature_id\":11,\"score\":0.02,\"rationale\":\"Unknown marital status is largely non-substantive missingness and unlikely to generalize as a useful predictor.\"},{\"feature_id\":12,\"score\":0.03,\"rationale\":\"Missing marital status mostly captures data collection patterns, not stable lead-related signal.\"},{\"feature_id\":13,\"score\":0.34,\"rationale\":\"Sex/gender can capture stable differences in occupation, physiology, and exposure patterns, though effect is moderate and partly confounded.\"},{\"feature_id\":14,\"score\":0.88,\"rationale\":\"Age is a strong, semantically stable predictor because cumulative exposure and cohort effects are central to blood lead risk.\"},{\"feature_id\":15,\"score\":0.28,\"rationale\":\"Race/ethnicity may correlate with structural exposure disparities, but it is a sensitive demographic shortcut and likely less transportable than age.\"},{\"feature_id\":16,\"score\":0.01,\"rationale\":\"Survey year is primarily a domain identifier and risks exploiting temporal shift rather than stable individual-level lead risk.\"}]}",
+      "input_tokens": 1717,
+      "output_tokens": 645,
+      "total_tokens": 2362,
+      "response_id": "resp_0e9f3ff0ac352f4b006a41e29e23348194a370024854174dd4",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `tableshift` benchmark dataset `nhanes_lead`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore every feature by stable predictive usefulness for this task, considered\nmarginally and without seeing the downstream data.\n\nFeature cards, in model input order:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"DMDBORN4_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDBORN4_10` derived from semantic feature `DMDBORN4`. Interpret this column as the encoded model input for that derived category/value. country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"DMDBORN4_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDBORN4_20` derived from semantic feature `DMDBORN4`. Interpret this column as the encoded model input for that derived category/value. country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"DMDBORN4_MISSING\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDBORN4_MISSING` derived from semantic feature `DMDBORN4`. Interpret this column as the encoded model input for that derived category/value. country of birth\",\n    \"values\": \"1.0=born in 50 US states or Washington, DC; 2.0=not born in 50 US states or Washington, DC\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"DMDEDUC2_MISSING\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDEDUC2_MISSING` derived from semantic feature `DMDEDUC2`. Interpret this column as the encoded model input for that derived category/value. highest grade or level of school completed or highest degree received\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"DMDMARTL_10\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_10` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"DMDMARTL_20\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_20` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"DMDMARTL_30\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_30` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"DMDMARTL_40\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_40` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"DMDMARTL_50\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_50` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"DMDMARTL_60\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_60` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 10,\n    \"feature\": \"DMDMARTL_770\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_770` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 11,\n    \"feature\": \"DMDMARTL_990\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_990` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 12,\n    \"feature\": \"DMDMARTL_MISSING\",\n    \"type\": \"encoded_model_feature\",\n    \"description\": \"Model feature `DMDMARTL_MISSING` derived from semantic feature `DMDMARTL`. Interpret this column as the encoded model input for that derived category/value. marital status\"\n  },\n  {\n    \"feature_id\": 13,\n    \"feature\": \"RIAGENDR\",\n    \"type\": \"categorical\",\n    \"description\": \"gender\"\n  },\n  {\n    \"feature_id\": 14,\n    \"feature\": \"RIDAGEYR\",\n    \"type\": \"continuous\",\n    \"description\": \"age in years\"\n  },\n  {\n    \"feature_id\": 15,\n    \"feature\": \"RIDRETH_merged\",\n    \"type\": \"categorical\",\n    \"description\": \"race and hispanic origin\",\n    \"values\": \"1.0=Mexican American; 2.0=Other Hispanic; 3.0=Non-Hispanic White; 4.0=Non-Hispanic Black; 5.0=Other Race - Including Multi-Racial; 6.0=Non-Hispanic Asian; 7.0=Other Race - Including Multi-Racial\"\n  },\n  {\n    \"feature_id\": 16,\n    \"feature\": \"nhanes_year\",\n    \"type\": \"integer\",\n    \"description\": \"year\"\n  }\n]\n\nFeature IDs to include exactly once:\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.0,\n      \"rationale\": \"short reason\"\n    }\n  ]\n}\n\nRules:\n- Include every feature_id exactly once in `scores`.\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- If two features seem similarly important, assign scores that still reflect your\n  best estimate of their relative stable usefulness.\n- `feature_id` is the authoritative identifier. Include each feature_id exactly\n  once and do not include feature names in the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether an NHANES participant has elevated blood lead, favoring features that reflect stable exposure risk rather than survey-wave or demographic shortcuts.\",\n  \"scores\": [\n    {\n      \"feature_id\": 0,\n      \"score\": 0.18,\n      \"rationale\": \"US-born status may weakly track lifetime environmental exposure patterns, but it is a coarse demographic proxy and can be domain-sensitive.\"\n    },\n    {\n      \"feature_id\": 1,\n      \"score\": 0.16,\n      \"rationale\": \"Non-US-born status may weakly relate to differing historical lead exposures, but it is still a coarse proxy with limited stable marginal value.\"\n    },\n    {\n      \"feature_id\": 2,\n      \"score\": 0.03,\n      \"rationale\": \"Missingness on country of birth is unlikely to be intrinsically predictive and may reflect survey process artifacts.\"\n    },\n    {\n      \"feature_id\": 3,\n      \"score\": 0.05,\n      \"rationale\": \"Education missingness may correlate with survey administration or subgroup differences more than true lead risk.\"\n    },\n    {\n      \"feature_id\": 4,\n      \"score\": 0.12,\n      \"rationale\": \"Marital status can weakly proxy household structure and age, but its direct stable relation to lead is limited.\"\n    },\n    {\n      \"feature_id\": 5,\n      \"score\": 0.11,\n      \"rationale\": \"This marital-status category may carry slight socioeconomic or life-stage information, but is mostly indirect.\"\n    },\n    {\n      \"feature_id\": 6,\n      \"score\": 0.1,\n      \"rationale\": \"Another marital-status category with modest proxy value through age and household context, but weak direct relevance.\"\n    },\n    {\n      \"feature_id\": 7,\n      \"score\": 0.09,\n      \"rationale\": \"Marital-status category offers limited stable signal and is mostly a demographic correlate.\"\n    },\n    {\n      \"feature_id\": 8,\n      \"score\": 0.09,\n      \"rationale\": \"Marital-status category may weakly reflect social and economic context, but is not a strong direct predictor.\"\n    },\n    {\n      \"feature_id\": 9,\n      \"score\": 0.08,\n      \"rationale\": \"This marital-status category likely adds only weak indirect information and may be unstable across domains.\"\n    },\n    {\n      \"feature_id\": 10,\n      \"score\": 0.02,\n      \"rationale\": \"Refused/other special-code marital responses are likely survey artifacts rather than meaningful lead-risk indicators.\"\n    },\n    {\n      \"feature_id\": 11,\n      \"score\": 0.02,\n      \"rationale\": \"Unknown special-code marital responses are mainly missingness/process signals with poor semantic stability.\"\n    },\n    {\n      \"feature_id\": 12,\n      \"score\": 0.03,\n      \"rationale\": \"Missing marital status is unlikely to generalize as a substantive predictor and may encode collection artifacts.\"\n    },\n    {\n      \"feature_id\": 13,\n      \"score\": 0.35,\n      \"rationale\": \"Sex can affect occupational and behavioral exposure patterns, but it is also a sensitive demographic shortcut and not the core causal driver.\"\n    },\n    {\n      \"feature_id\": 14,\n      \"score\": 0.88,\n      \"rationale\": \"Age is a strong and plausibly stable predictor because lead burden and exposure history vary systematically across cohorts and life stages.\"\n    },\n    {\n      \"feature_id\": 15,\n      \"score\": 0.28,\n      \"rationale\": \"Race/ethnicity may correlate with structural exposure disparities, but it is a sensitive proxy that risks encoding non-causal demographic shortcuts.\"\n    },\n    {\n      \"feature_id\": 16,\n      \"score\": 0.0,\n      \"rationale\": \"Survey year is essentially a domain identifier and likely captures temporal distribution shift rather than portable individual-level risk.\"\n    }\n  ]\n}",
+      "input_tokens": 1717,
+      "output_tokens": 853,
+      "total_tokens": 2570,
+      "response_id": "resp_04d32d5bfb87d848006a41e2a5a3588194ad4789b44ce375b3",
+      "response_model": "gpt-5.4-2026-03-05"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/tableshift/nhanes_lead/rankings/score_all_model_prompt.txt",
+  "config": {
+    "score_samples": 5
+  }
+}

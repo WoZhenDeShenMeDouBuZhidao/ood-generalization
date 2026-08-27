@@ -1,0 +1,181 @@
+{
+  "benchmark": "acs",
+  "dataset": "acsincome",
+  "model": "gpt-5.4-mini",
+  "method": "seq",
+  "temperature": 0.0,
+  "created_at": "2026-06-09T15:35:25",
+  "token_usage": {
+    "num_calls": 10,
+    "input_tokens": 5963,
+    "output_tokens": 551,
+    "total_tokens": 6514
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 2,
+        "feature": "SCHL",
+        "rationale": "Educational attainment is one of the strongest and most stable predictors of income across states, capturing durable human-capital differences with less geographic brittleness than occupation or birthplace."
+      },
+      {
+        "rank": 2,
+        "feature_id": 7,
+        "feature": "WKHP",
+        "rationale": "Usual hours worked per week is a strong, broadly stable predictor of income across states and complements SCHL by capturing labor supply intensity rather than geography or state-specific artifacts."
+      },
+      {
+        "rank": 3,
+        "feature_id": 0,
+        "feature": "AGEP",
+        "rationale": "Age is a strong, broadly stable predictor of income across states and complements education and hours worked without relying on geography or brittle local artifacts."
+      },
+      {
+        "rank": 4,
+        "feature_id": 4,
+        "feature": "OCCP",
+        "rationale": "Occupation is one of the strongest remaining predictors of income and tends to generalize better across states than geography-linked or demographic proxy features; it adds substantial stable signal beyond education, hours worked, and age."
+      },
+      {
+        "rank": 5,
+        "feature_id": 1,
+        "feature": "COW",
+        "rationale": "Class of worker adds stable labor-market information about earnings potential and complements education, occupation, age, and hours worked without relying as heavily on geography or brittle state-specific artifacts."
+      },
+      {
+        "rank": 6,
+        "feature_id": 3,
+        "feature": "MAR",
+        "rationale": "Marital status is a relatively stable socioeconomic signal that can add predictive value beyond age, education, hours worked, occupation, and class of worker, while being less geography-specific and less brittle than birthplace or race."
+      },
+      {
+        "rank": 7,
+        "feature_id": 6,
+        "feature": "RELP",
+        "rationale": "Household relationship can add stable context about family/household role that may correlate with income across states without being as geography-specific as birthplace or race."
+      },
+      {
+        "rank": 8,
+        "feature_id": 8,
+        "feature": "SEX",
+        "rationale": "Sex can add modest stable signal for income through labor-market patterns and hours/occupation interactions, while being less geography-specific than birthplace or race."
+      },
+      {
+        "rank": 9,
+        "feature_id": 9,
+        "feature": "RAC1P",
+        "rationale": "Race can add some stable signal through persistent labor-market and education disparities, while birthplace is more geography- and migration-pattern-specific and more likely to encode brittle state-level artifacts."
+      },
+      {
+        "rank": 10,
+        "feature_id": 5,
+        "feature": "POBP",
+        "rationale": "Place of birth can add some signal about migration-linked labor and education patterns, but it is also a strong geography/demographic shortcut and likely less stable across states than the already selected core socioeconomic features."
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "step": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"COW\",\n    \"type\": \"categorical\",\n    \"description\": \"Class of worker.\",\n    \"values\": \"ACS employment class code, such as private, government, self-employed, or unpaid family worker.\"\n  },\n  {\n    \"feature_id\": 2,\n    \"feature\": \"SCHL\",\n    \"type\": \"ordinal_categorical\",\n    \"description\": \"Educational attainment.\",\n    \"values\": \"ACS education level code; larger codes generally indicate more education.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"OCCP\",\n    \"type\": \"categorical\",\n    \"description\": \"Occupation code.\",\n    \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"POBP\",\n    \"type\": \"categorical\",\n    \"description\": \"Place of birth.\",\n    \"values\": \"Geographic birthplace recode.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"WKHP\",\n    \"type\": \"integer\",\n    \"description\": \"Usual hours worked per week during the past 12 months.\",\n    \"values\": \"0 or positive weekly work hours.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":2,\"rationale\":\"Educational attainment is one of the strongest and most stable predictors of income across states, capturing durable human-capital differences with less geographic brittleness than occupation or birthplace.\"}",
+      "input_tokens": 747,
+      "output_tokens": 47,
+      "total_tokens": 794,
+      "response_id": "resp_092e3b0799329d89006a27c22ecdd0819ba8892bba453f7279",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "step": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 2,\n    \"feature\": \"SCHL\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"COW\",\n    \"type\": \"categorical\",\n    \"description\": \"Class of worker.\",\n    \"values\": \"ACS employment class code, such as private, government, self-employed, or unpaid family worker.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"OCCP\",\n    \"type\": \"categorical\",\n    \"description\": \"Occupation code.\",\n    \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"POBP\",\n    \"type\": \"categorical\",\n    \"description\": \"Place of birth.\",\n    \"values\": \"Geographic birthplace recode.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"WKHP\",\n    \"type\": \"integer\",\n    \"description\": \"Usual hours worked per week during the past 12 months.\",\n    \"values\": \"0 or positive weekly work hours.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":7,\"rationale\":\"Usual hours worked per week is a strong, broadly stable predictor of income across states and complements SCHL by capturing labor supply intensity rather than geography or state-specific artifacts.\"}",
+      "input_tokens": 714,
+      "output_tokens": 49,
+      "total_tokens": 763,
+      "response_id": "resp_09685554c4228110006a27c22ff3ac819a97e908dc367176ae",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "step": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 2,\n    \"feature\": \"SCHL\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"WKHP\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\",\n    \"type\": \"integer\",\n    \"description\": \"Age of the person in years.\",\n    \"values\": \"ACS age code; older ages may be topcoded.\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"COW\",\n    \"type\": \"categorical\",\n    \"description\": \"Class of worker.\",\n    \"values\": \"ACS employment class code, such as private, government, self-employed, or unpaid family worker.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"OCCP\",\n    \"type\": \"categorical\",\n    \"description\": \"Occupation code.\",\n    \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"POBP\",\n    \"type\": \"categorical\",\n    \"description\": \"Place of birth.\",\n    \"values\": \"Geographic birthplace recode.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"Age is a strong, broadly stable predictor of income across states and complements education and hours worked without relying on geography or brittle local artifacts.\"\n}",
+      "input_tokens": 677,
+      "output_tokens": 54,
+      "total_tokens": 731,
+      "response_id": "resp_0e29d19405da8f2a006a27c23124c08198a278e23a2189866c",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "step": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 2,\n    \"feature\": \"SCHL\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"WKHP\"\n  },\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 1,\n    \"feature\": \"COW\",\n    \"type\": \"categorical\",\n    \"description\": \"Class of worker.\",\n    \"values\": \"ACS employment class code, such as private, government, self-employed, or unpaid family worker.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"OCCP\",\n    \"type\": \"categorical\",\n    \"description\": \"Occupation code.\",\n    \"values\": \"Detailed ACS occupation category; many possible occupations.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"POBP\",\n    \"type\": \"categorical\",\n    \"description\": \"Place of birth.\",\n    \"values\": \"Geographic birthplace recode.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":4,\"rationale\":\"Occupation is one of the strongest remaining predictors of income and tends to generalize better across states than geography-linked or demographic proxy features; it adds substantial stable signal beyond education, hours worked, and age.\"}",
+      "input_tokens": 642,
+      "output_tokens": 61,
+      "total_tokens": 703,
+      "response_id": "resp_02049d7699089856006a27c2325a088198b63ee23bf3247269",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "step": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 2,\n    \"feature\": \"SCHL\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"WKHP\"\n  },\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"OCCP\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 1,\n    \"feature\": \"COW\",\n    \"type\": \"categorical\",\n    \"description\": \"Class of worker.\",\n    \"values\": \"ACS employment class code, such as private, government, self-employed, or unpaid family worker.\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"POBP\",\n    \"type\": \"categorical\",\n    \"description\": \"Place of birth.\",\n    \"values\": \"Geographic birthplace recode.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":1,\"rationale\":\"Class of worker adds stable labor-market information about earnings potential and complements education, occupation, age, and hours worked without relying as heavily on geography or brittle state-specific artifacts.\"}",
+      "input_tokens": 612,
+      "output_tokens": 55,
+      "total_tokens": 667,
+      "response_id": "resp_0956f84f411aeeca006a27c233a270819997f13474edb5b683",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "step": 6,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 2,\n    \"feature\": \"SCHL\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"WKHP\"\n  },\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"OCCP\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"COW\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 3,\n    \"feature\": \"MAR\",\n    \"type\": \"categorical\",\n    \"description\": \"Marital status.\",\n    \"values\": \"ACS marital status code.\"\n  },\n  {\n    \"feature_id\": 5,\n    \"feature\": \"POBP\",\n    \"type\": \"categorical\",\n    \"description\": \"Place of birth.\",\n    \"values\": \"Geographic birthplace recode.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":3,\"rationale\":\"Marital status is a relatively stable socioeconomic signal that can add predictive value beyond age, education, hours worked, occupation, and class of worker, while being less geography-specific and less brittle than birthplace or race.\"}",
+      "input_tokens": 571,
+      "output_tokens": 63,
+      "total_tokens": 634,
+      "response_id": "resp_0a0d717fd4dab285006a27c2351bec8199b23524aad650a8df",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "step": 7,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 2,\n    \"feature\": \"SCHL\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"WKHP\"\n  },\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"OCCP\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"COW\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"MAR\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 5,\n    \"feature\": \"POBP\",\n    \"type\": \"categorical\",\n    \"description\": \"Place of birth.\",\n    \"values\": \"Geographic birthplace recode.\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RELP\",\n    \"type\": \"categorical\",\n    \"description\": \"Relationship to householder.\",\n    \"values\": \"ACS household relationship code.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":6,\"rationale\":\"Household relationship can add stable context about family/household role that may correlate with income across states without being as geography-specific as birthplace or race.\"}",
+      "input_tokens": 544,
+      "output_tokens": 51,
+      "total_tokens": 595,
+      "response_id": "resp_097e72715a81c94e006a27c236913c8198a990baf115748ff6",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "step": 8,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 2,\n    \"feature\": \"SCHL\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"WKHP\"\n  },\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"OCCP\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"COW\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"MAR\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RELP\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 5,\n    \"feature\": \"POBP\",\n    \"type\": \"categorical\",\n    \"description\": \"Place of birth.\",\n    \"values\": \"Geographic birthplace recode.\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"SEX\",\n    \"type\": \"categorical\",\n    \"description\": \"Sex reported in ACS.\",\n    \"values\": \"1=male, 2=female.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\n  \"selected_feature_id\": 8,\n  \"rationale\": \"Sex can add modest stable signal for income through labor-market patterns and hours/occupation interactions, while being less geography-specific than birthplace or race.\"\n}",
+      "input_tokens": 516,
+      "output_tokens": 55,
+      "total_tokens": 571,
+      "response_id": "resp_0ebcd4849bc280f0006a27c237e840819aa8a80e7a98378e55",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "step": 9,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 2,\n    \"feature\": \"SCHL\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"WKHP\"\n  },\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"OCCP\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"COW\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"MAR\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RELP\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"SEX\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 5,\n    \"feature\": \"POBP\",\n    \"type\": \"categorical\",\n    \"description\": \"Place of birth.\",\n    \"values\": \"Geographic birthplace recode.\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"RAC1P\",\n    \"type\": \"categorical\",\n    \"description\": \"Detailed race recode.\",\n    \"values\": \"ACS race category code.\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":9,\"rationale\":\"Race can add some stable signal through persistent labor-market and education disparities, while birthplace is more geography- and migration-pattern-specific and more likely to encode brittle state-level artifacts.\"}",
+      "input_tokens": 484,
+      "output_tokens": 55,
+      "total_tokens": 539,
+      "response_id": "resp_06fdbb479d19f41a006a27c23aa760819b92decd59d2d1e4af",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "step": 10,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the Folktables ACS task `acsincome`.\n\nResearch and use your knowledge of Folktables, ACS PUMS variables, and the task\ndefinition. Prefer features that should remain semantically predictive across US\nstates, and penalize features that likely encode geography, demographic shortcuts,\nor brittle state-specific distributional artifacts.\n\nSequentially select the next feature that would most improve a downstream model,\ngiven the features already selected.\n\nAlready selected features, in order:\n[\n  {\n    \"feature_id\": 2,\n    \"feature\": \"SCHL\"\n  },\n  {\n    \"feature_id\": 7,\n    \"feature\": \"WKHP\"\n  },\n  {\n    \"feature_id\": 0,\n    \"feature\": \"AGEP\"\n  },\n  {\n    \"feature_id\": 4,\n    \"feature\": \"OCCP\"\n  },\n  {\n    \"feature_id\": 1,\n    \"feature\": \"COW\"\n  },\n  {\n    \"feature_id\": 3,\n    \"feature\": \"MAR\"\n  },\n  {\n    \"feature_id\": 6,\n    \"feature\": \"RELP\"\n  },\n  {\n    \"feature_id\": 8,\n    \"feature\": \"SEX\"\n  },\n  {\n    \"feature_id\": 9,\n    \"feature\": \"RAC1P\"\n  }\n]\n\nCandidate feature cards not yet selected:\n[\n  {\n    \"feature_id\": 5,\n    \"feature\": \"POBP\",\n    \"type\": \"categorical\",\n    \"description\": \"Place of birth.\",\n    \"values\": \"Geographic birthplace recode.\"\n  }\n]\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"selected_feature_id\": 0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `selected_feature_id` must be exactly one feature_id from the candidate list.\n- Choose the feature with the largest marginal stable predictive value given the\n  already selected features.\n- `selected_feature_id` is the authoritative identifier. Do not include feature\n  names in the output.",
+      "content": "{\"selected_feature_id\":5,\"rationale\":\"Place of birth can add some signal about migration-linked labor and education patterns, but it is also a strong geography/demographic shortcut and likely less stable across states than the already selected core socioeconomic features.\"}",
+      "input_tokens": 456,
+      "output_tokens": 61,
+      "total_tokens": 517,
+      "response_id": "resp_067cdfae3e05cfea006a27c23c0a04819aa9f16f4f47999add",
+      "response_model": "gpt-5.4-mini-2026-03-17"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/acs/acsincome/rankings/seq_prompt.txt"
+}

@@ -1,0 +1,99 @@
+{
+  "benchmark": "acs",
+  "dataset": "acsincome",
+  "model": "ce-grad-l2-mean-rank",
+  "method": "rank",
+  "feature_space": "semantic",
+  "created_at": "2026-08-13T00:12:48",
+  "aggregation": {
+    "name": "mean_rank",
+    "per_repeat_ranking": "ordinal_descending",
+    "tie_break": "model_feature_order",
+    "repeat_count": 5,
+    "model_seeds": [
+      9803,
+      38224,
+      8113,
+      4854,
+      98825
+    ],
+    "source_methods": [
+      "ce_grad_l2_stability_r5"
+    ],
+    "class_reweighting": true
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 8,
+        "feature": "SEX",
+        "mean_rank": 1.0,
+        "rank_std": 0.0
+      },
+      {
+        "rank": 2,
+        "feature_id": 2,
+        "feature": "SCHL",
+        "mean_rank": 2.0,
+        "rank_std": 0.0
+      },
+      {
+        "rank": 3,
+        "feature_id": 3,
+        "feature": "MAR",
+        "mean_rank": 3.0,
+        "rank_std": 0.0
+      },
+      {
+        "rank": 4,
+        "feature_id": 6,
+        "feature": "RELP",
+        "mean_rank": 4.4,
+        "rank_std": 0.5477225575051661
+      },
+      {
+        "rank": 5,
+        "feature_id": 1,
+        "feature": "COW",
+        "mean_rank": 4.8,
+        "rank_std": 0.8366600265340756
+      },
+      {
+        "rank": 6,
+        "feature_id": 7,
+        "feature": "WKHP",
+        "mean_rank": 6.0,
+        "rank_std": 0.7071067811865476
+      },
+      {
+        "rank": 7,
+        "feature_id": 9,
+        "feature": "RAC1P",
+        "mean_rank": 6.8,
+        "rank_std": 0.4472135954999579
+      },
+      {
+        "rank": 8,
+        "feature_id": 0,
+        "feature": "AGEP",
+        "mean_rank": 8.0,
+        "rank_std": 0.0
+      },
+      {
+        "rank": 9,
+        "feature_id": 5,
+        "feature": "POBP",
+        "mean_rank": 9.0,
+        "rank_std": 0.0
+      },
+      {
+        "rank": 10,
+        "feature_id": 4,
+        "feature": "OCCP",
+        "mean_rank": 10.0,
+        "rank_std": 0.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,796 @@
+{
+  "benchmark": "whyshift",
+  "dataset": "taxi",
+  "model": "gpt-5.4",
+  "method": "score",
+  "temperature": 0.5,
+  "created_at": "2026-06-09T19:07:24",
+  "token_usage": {
+    "num_calls": 35,
+    "input_tokens": 9900,
+    "output_tokens": 3468,
+    "total_tokens": 13368
+  },
+  "response": {
+    "ranking": [
+      {
+        "rank": 1,
+        "feature_id": 5,
+        "feature": "distance",
+        "score_mean": 0.8119999999999999,
+        "score_std": 0.029933259094191512
+      },
+      {
+        "rank": 2,
+        "feature_id": 4,
+        "feature": "minute_oftheday",
+        "score_mean": 0.752,
+        "score_std": 0.02400000000000002
+      },
+      {
+        "rank": 3,
+        "feature_id": 3,
+        "feature": "hour",
+        "score_mean": 0.7,
+        "score_std": 0.05215361924162119
+      },
+      {
+        "rank": 4,
+        "feature_id": 2,
+        "feature": "weekday",
+        "score_mean": 0.604,
+        "score_std": 0.01959591794226544
+      },
+      {
+        "rank": 5,
+        "feature_id": 0,
+        "feature": "month",
+        "score_mean": 0.29600000000000004,
+        "score_std": 0.06621178142898738
+      },
+      {
+        "rank": 6,
+        "feature_id": 1,
+        "feature": "week",
+        "score_mean": 0.28400000000000003,
+        "score_std": 0.04454211490264017
+      },
+      {
+        "rank": 7,
+        "feature_id": 6,
+        "feature": "direction",
+        "score_mean": 0.27599999999999997,
+        "score_std": 0.11757550765359255
+      }
+    ],
+    "scores": [
+      {
+        "feature_id": 0,
+        "feature": "month",
+        "score_mean": 0.29600000000000004,
+        "score_std": 0.06621178142898738,
+        "samples": [
+          {
+            "task_summary": "Predict whether a taxi trip will receive a high tip from pre-trip and trip metadata under distribution shift.",
+            "feature_id": 0,
+            "score": 0.28,
+            "rationale": "Month can capture broad seasonal effects on taxi demand and rider behavior, but it is also strongly tied to calendar-time domain shifts, weather, holidays, and policy changes, making it a relatively brittle shortcut rather than a consistently stable semantic predictor.",
+            "feature": "month"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip will receive a high tip from pre-trip and trip metadata under distribution shift.",
+            "feature_id": 0,
+            "score": 0.22,
+            "rationale": "Month can capture broad seasonal effects on taxi demand and rider behavior, but it is also a strong domain/time identifier and likely to vary across environments, making its predictive value brittle for out-of-distribution generalization.",
+            "feature": "month"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip’s tip exceeds a threshold from pre-tip trip and context information under distribution shift.",
+            "feature_id": 0,
+            "score": 0.42,
+            "rationale": "Month can capture broad seasonal effects on tipping behavior and travel patterns, but it is also a strong domain/time indicator and likely to vary across environments, making it only moderately stable and somewhat brittle for out-of-distribution generalization.",
+            "feature": "month"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip will receive a high tip from pre-trip and trip-related information under distribution shift.",
+            "feature_id": 0,
+            "score": 0.28,
+            "rationale": "Month can capture broad seasonal effects on taxi demand and tipping, but it is also a strong domain/time identifier and its associations can vary substantially across years, weather patterns, holidays, and policy changes, making it only weakly stable OOD.",
+            "feature": "month"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip will receive a high tip from trip and context information under distribution shift.",
+            "feature_id": 0,
+            "score": 0.28,
+            "rationale": "Month can capture broad seasonal effects on travel and tipping, but it is also a strong domain/time identifier and its association with the label is likely to vary across years, holidays, weather, and changing rider behavior, making it only weakly stable out of distribution.",
+            "feature": "month"
+          }
+        ]
+      },
+      {
+        "feature_id": 1,
+        "feature": "week",
+        "score_mean": 0.28400000000000003,
+        "score_std": 0.04454211490264017,
+        "samples": [
+          {
+            "task_summary": "Predict whether a taxi trip outcome of interest generalizes across shifts using trip and context features from the NYC taxi benchmark.",
+            "feature_id": 1,
+            "score": 0.36,
+            "rationale": "Week-of-year can capture broad seasonal demand and weather patterns that affect taxi behavior, but it is also strongly tied to calendar time and holidays, making it vulnerable to temporal domain shift and dataset-specific seasonality rather than stable trip-level signal.",
+            "feature": "week"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip outcome of interest will occur from trip and context features under distribution shift across environments.",
+            "feature_id": 1,
+            "score": 0.28,
+            "rationale": "Week-of-year can capture broad seasonal travel patterns and weather-related demand effects, but it is also strongly tied to calendar time, holidays, and year-specific events that often vary across domains, making it a relatively brittle temporal shortcut rather than a consistently causal predictor.",
+            "feature": "week"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip will have a relatively high tip amount from pre-trip and trip-context information under distribution shift.",
+            "feature_id": 1,
+            "score": 0.22,
+            "rationale": "Week of year can capture broad seasonal demand and travel patterns that affect tipping, but it is also strongly tied to calendar time and likely to vary across domains, making it a brittle temporal shortcut rather than a consistently causal predictor.",
+            "feature": "week"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip outcome of interest will occur from pre-trip/context features in a way that generalizes across shifts in time and location.",
+            "feature_id": 1,
+            "score": 0.28,
+            "rationale": "Week of year captures broad seasonal patterns that can affect taxi demand and trip behavior, so it has some real signal, but it is also strongly tied to calendar-specific temporal domain shifts, holidays, weather regimes, and yearly idiosyncrasies that may not transfer robustly across train/test environments.",
+            "feature": "week"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip outcome of interest will occur from pre-trip and contextual information under distribution shift across environments.",
+            "feature_id": 1,
+            "score": 0.28,
+            "rationale": "Week-of-year captures broad seasonality that can affect taxi demand and travel conditions, but it is also tightly tied to calendar time and likely to vary across domains, making it a brittle temporal shortcut rather than a consistently causal signal.",
+            "feature": "week"
+          }
+        ]
+      },
+      {
+        "feature_id": 2,
+        "feature": "weekday",
+        "score_mean": 0.604,
+        "score_std": 0.01959591794226544,
+        "samples": [
+          {
+            "task_summary": "Predict whether a taxi trip outcome is positive using trip and context features in a way that generalizes across distribution shifts.",
+            "feature_id": 2,
+            "score": 0.58,
+            "rationale": "Day of week captures real, recurring demand and traffic patterns that can affect taxi-trip outcomes, so it is moderately useful. However, it is also tied to local temporal routines and policy/event differences across domains, making it less stable than core trip features and somewhat vulnerable to shift-specific artifacts.",
+            "feature": "weekday"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip will receive a high tip amount from trip and context features under distribution shift.",
+            "feature_id": 2,
+            "score": 0.62,
+            "rationale": "Day of week captures real behavioral patterns in taxi demand and tipping that can generalize across environments, but it is also tied to temporal domain shifts, local routines, and calendar-specific effects, so its usefulness is moderate rather than highly stable.",
+            "feature": "weekday"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip outcome in the WhyShift taxi task will occur using pre-trip/context features in a way that generalizes across shifted environments.",
+            "feature_id": 2,
+            "score": 0.62,
+            "rationale": "Day of week captures real, semantically meaningful variation in travel demand and traffic patterns that should remain moderately predictive across domains, but its effect can shift with city-specific routines, holidays, and temporal domain splits, so it is useful yet not fully stable.",
+            "feature": "weekday"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip will have a relatively high tip amount from pre-trip and trip metadata under distribution shift.",
+            "feature_id": 2,
+            "score": 0.58,
+            "rationale": "Day of week can capture stable behavioral patterns in taxi demand and tipping, such as weekday versus weekend travel, but it is also tied to temporal domain shifts and local routines, so its usefulness is moderate rather than highly robust.",
+            "feature": "weekday"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip outcome in the WhyShift taxi task will occur using pre-trip and trip-context features under distribution shift.",
+            "feature_id": 2,
+            "score": 0.62,
+            "rationale": "Day of week captures real, semantically meaningful variation in taxi demand, traffic, and travel patterns that should remain predictive across domains, but its effect can shift with location, season, holidays, and local scheduling, so it is useful yet only moderately stable.",
+            "feature": "weekday"
+          }
+        ]
+      },
+      {
+        "feature_id": 3,
+        "feature": "hour",
+        "score_mean": 0.7,
+        "score_std": 0.05215361924162119,
+        "samples": [
+          {
+            "task_summary": "Predict whether a taxi trip will receive a high tip from pre-trip and trip-context information under distribution shift.",
+            "feature_id": 3,
+            "score": 0.66,
+            "rationale": "Time of day is a generally meaningful driver of taxi demand, trip purpose, traffic, and rider behavior, so it should retain moderate predictive value across domains; however, it can also partially encode environment-specific schedules, nightlife/commute patterns, and temporal domain shifts, making it useful but not maximally stable.",
+            "feature": "hour"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip will receive a high tip from pre-trip/contextual information under distribution shift.",
+            "feature_id": 3,
+            "score": 0.76,
+            "rationale": "Time of day is a generally stable driver of taxi demand, trip purpose, traffic, and rider behavior, so it should retain real predictive signal across domains; however, it is also tied to city-specific schedules and shift definitions, making it somewhat vulnerable to temporal distribution changes.",
+            "feature": "hour"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip will have a relatively high tip amount from pre-trip and trip-context information under distribution shift.",
+            "feature_id": 3,
+            "score": 0.62,
+            "rationale": "Time of day is generally informative for taxi demand, trip purpose, traffic, and tipping behavior, so it should retain moderate predictive value across environments; however, it is also tied to city rhythms, policy changes, and shift-specific domain differences, making it less stable than core trip features.",
+            "feature": "hour"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip will have a relatively high tip from pre-ride trip and context information under distribution shift.",
+            "feature_id": 3,
+            "score": 0.72,
+            "rationale": "Time of day is generally and causally related to rider mix, trip purpose, traffic, and tipping behavior, so it should retain moderate predictive value across domains; however, it can also partially encode location- or period-specific demand patterns, making it less stable than core trip features.",
+            "feature": "hour"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip outcome of interest will occur from pre-trip ride context under distribution shift across environments.",
+            "feature_id": 3,
+            "score": 0.74,
+            "rationale": "Time of day is generally causally related to traffic, demand, and trip patterns, so it should retain meaningful signal across domains; however, it can also partially encode environment-specific schedules, commuting rhythms, and nightlife patterns, making it somewhat vulnerable to shift.",
+            "feature": "hour"
+          }
+        ]
+      },
+      {
+        "feature_id": 4,
+        "feature": "minute_oftheday",
+        "score_mean": 0.752,
+        "score_std": 0.02400000000000002,
+        "samples": [
+          {
+            "task_summary": "Predict whether a taxi trip outcome in the WhyShift taxi task can be inferred from trip and context features across distribution shifts.",
+            "feature_id": 4,
+            "score": 0.72,
+            "rationale": "Time of day is a generally meaningful driver of taxi demand, traffic, and trip patterns, so it should retain predictive signal across domains; however, exact minute can also capture city- or period-specific schedules and sharp local artifacts, making it only moderately high in stable usefulness.",
+            "feature": "minute_oftheday"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip outcome of interest will occur from pre-trip context under distribution shift across environments.",
+            "feature_id": 4,
+            "score": 0.74,
+            "rationale": "Time of day captures stable human mobility and traffic patterns that usually remain predictive across domains, but its effect can shift with local schedules, seasonality, and environment-specific demand cycles, so it is useful but not fully invariant.",
+            "feature": "minute_oftheday"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip outcome on WhyShift remains likely across shifted environments using pre-trip trip-context features.",
+            "feature_id": 4,
+            "score": 0.78,
+            "rationale": "Time of day is a strong pre-trip signal for taxi demand, traffic, routing, and trip characteristics, and these daily behavioral patterns are generally semantically stable across domains; however, it can still encode location-specific schedules, special events, or policy differences, so it is useful but not maximally robust.",
+            "feature": "minute_oftheday"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip will have a positive tip amount from pre-trip and trip metadata under distribution shift.",
+            "feature_id": 4,
+            "score": 0.74,
+            "rationale": "Time of day is plausibly and causally related to rider purpose, traffic, airport/nightlife demand, and tipping behavior, so it should retain moderate predictive value across domains; however, exact clock time can also reflect city-specific schedules, policy changes, and temporal sampling shifts, making it less stable than core trip attributes.",
+            "feature": "minute_oftheday"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip outcome on WhyShift's taxi task will occur using pre-trip and trip-context information under distribution shift.",
+            "feature_id": 4,
+            "score": 0.78,
+            "rationale": "Time of day is a generally stable driver of taxi demand, traffic, and trip patterns, so it should remain broadly predictive across domains; however, exact minute can also capture city-specific schedules, nightlife/commute artifacts, and shift-dependent patterns that may vary across environments, so it is useful but not maximally robust.",
+            "feature": "minute_oftheday"
+          }
+        ]
+      },
+      {
+        "feature_id": 5,
+        "feature": "distance",
+        "score_mean": 0.8119999999999999,
+        "score_std": 0.029933259094191512,
+        "samples": [
+          {
+            "task_summary": "Predict whether a taxi trip’s tip exceeds a threshold from pre-tip trip and context information under distribution shift.",
+            "feature_id": 5,
+            "score": 0.86,
+            "rationale": "Trip distance is a core, semantically meaningful proxy for fare size and trip magnitude, which generally relates to tipping behavior across domains; it is available before tip realization and less tied to demographics than location IDs, though some sensitivity to city-specific routing, traffic, and fare-policy shifts prevents a perfect score.",
+            "feature": "distance"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip will receive a high tip amount/rate from trip-related information under distribution shift.",
+            "feature_id": 5,
+            "score": 0.78,
+            "rationale": "Trip distance is a core behavioral signal tied to fare structure and rider tipping patterns, so it should remain broadly predictive across domains; however, its effect can vary with geography, route mix, traffic, and interactions with duration/fare, so it is useful but not perfectly stable.",
+            "feature": "distance"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip will receive a high tip from trip and context features under distribution shift.",
+            "feature_id": 5,
+            "score": 0.82,
+            "rationale": "Trip length is a core behavioral signal that should remain broadly predictive across domains because fare and rider tipping often scale with ride magnitude, and it is available before the outcome; however, it is not perfect because tipping norms can vary by location, route mix, and traffic conditions, and derived distance may absorb some domain-specific geography effects.",
+            "feature": "distance"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip will receive a high tip amount/percentage from trip and context features under distribution shift.",
+            "feature_id": 5,
+            "score": 0.78,
+            "rationale": "Trip length is a generally meaningful determinant of fare and rider tipping behavior, so it should retain predictive value across domains; however, its effect can vary with route type, traffic, airport trips, and location-specific shift patterns, so it is useful but not fully invariant.",
+            "feature": "distance"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip will receive a high tip from pre-trip and trip-related information under distribution shift.",
+            "feature_id": 5,
+            "score": 0.82,
+            "rationale": "Trip distance is a core, semantically meaningful determinant of fare and trip type, so it should remain broadly predictive across domains; however, its effect on tipping is indirect and can vary with geography, traffic patterns, and local rider behavior, so it is useful but not maximally stable.",
+            "feature": "distance"
+          }
+        ]
+      },
+      {
+        "feature_id": 6,
+        "feature": "direction",
+        "score_mean": 0.27599999999999997,
+        "score_std": 0.11757550765359255,
+        "samples": [
+          {
+            "task_summary": "Predict whether a taxi trip’s tip outcome will occur from trip and context features under distribution shift.",
+            "feature_id": 6,
+            "score": 0.18,
+            "rationale": "Travel bearing has weak direct semantic connection to tipping behavior and is likely useful mainly through route geography, neighborhood patterns, or airport/borough effects that can shift across domains, making it a brittle shortcut rather than a stable predictor.",
+            "feature": "direction"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip will receive a positive tip from pre-trip and trip-level information under distribution shift.",
+            "feature_id": 6,
+            "score": 0.18,
+            "rationale": "Travel bearing has weak direct causal connection to tipping and is likely only indirectly useful through route or neighborhood patterns that can shift across time and location domains, making it a brittle signal with limited stable predictive value.",
+            "feature": "direction"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip outcome of interest will occur from trip metadata in a way that generalizes across distribution shifts.",
+            "feature_id": 6,
+            "score": 0.42,
+            "rationale": "Travel bearing can carry some route and geography signal related to trip outcomes, but it is often highly location- and city-pattern-dependent, interacts strongly with origin/destination, and may be brittle across temporal or regional domain shifts rather than a broadly stable standalone predictor.",
+            "feature": "direction"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip will receive a positive tip from pre-trip and trip metadata under distribution shift.",
+            "feature_id": 6,
+            "score": 0.18,
+            "rationale": "Trip bearing has weak direct semantic link to tipping and is highly context-dependent on city geography, route patterns, and local demand structure, making it a brittle signal across domains rather than a stable predictor.",
+            "feature": "direction"
+          },
+          {
+            "task_summary": "Predict whether a taxi trip outcome on the WhyShift taxi task will generalize across shifts using trip-level ride attributes.",
+            "feature_id": 6,
+            "score": 0.42,
+            "rationale": "Travel bearing can carry some real signal through route structure and urban geography, but its usefulness is usually indirect and highly tied to local street layout, airport/commute corridors, and time- or region-specific demand patterns, making it only moderately stable under domain shift.",
+            "feature": "direction"
+          }
+        ]
+      }
+    ]
+  },
+  "llm_calls": [
+    {
+      "feature_id": 0,
+      "feature": "month",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"month\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup month.\",\n  \"values\": \"1-12.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip will receive a high tip from pre-trip and trip metadata under distribution shift.\",\"feature_id\":0,\"score\":0.28,\"rationale\":\"Month can capture broad seasonal effects on taxi demand and rider behavior, but it is also strongly tied to calendar-time domain shifts, weather, holidays, and policy changes, making it a relatively brittle shortcut rather than a consistently stable semantic predictor.\"}",
+      "input_tokens": 280,
+      "output_tokens": 90,
+      "total_tokens": 370,
+      "response_id": "resp_0d24b5be78a9eb35006a27f38341e8819993347bcb74f39a79",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 0,
+      "feature": "month",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"month\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup month.\",\n  \"values\": \"1-12.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip will receive a high tip from pre-trip and trip metadata under distribution shift.\",\"feature_id\":0,\"score\":0.22,\"rationale\":\"Month can capture broad seasonal effects on taxi demand and rider behavior, but it is also a strong domain/time identifier and likely to vary across environments, making its predictive value brittle for out-of-distribution generalization.\"}",
+      "input_tokens": 280,
+      "output_tokens": 85,
+      "total_tokens": 365,
+      "response_id": "resp_0d58547c3f9d2d20006a27f385da908198b865ad077f4590f6",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 0,
+      "feature": "month",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"month\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup month.\",\n  \"values\": \"1-12.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a taxi trip’s tip exceeds a threshold from pre-tip trip and context information under distribution shift.\",\n  \"feature_id\": 0,\n  \"score\": 0.42,\n  \"rationale\": \"Month can capture broad seasonal effects on tipping behavior and travel patterns, but it is also a strong domain/time indicator and likely to vary across environments, making it only moderately stable and somewhat brittle for out-of-distribution generalization.\"\n}",
+      "input_tokens": 280,
+      "output_tokens": 101,
+      "total_tokens": 381,
+      "response_id": "resp_018fe8864cf6853e006a27f3883404819a83e4366f4e0e1997",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 0,
+      "feature": "month",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"month\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup month.\",\n  \"values\": \"1-12.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip will receive a high tip from pre-trip and trip-related information under distribution shift.\",\"feature_id\":0,\"score\":0.28,\"rationale\":\"Month can capture broad seasonal effects on taxi demand and tipping, but it is also a strong domain/time identifier and its associations can vary substantially across years, weather patterns, holidays, and policy changes, making it only weakly stable OOD.\"}",
+      "input_tokens": 280,
+      "output_tokens": 92,
+      "total_tokens": 372,
+      "response_id": "resp_0936c2c756f6eda1006a27f38ad860819984fc510d41f7cd4e",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 0,
+      "feature": "month",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 0,\n  \"feature\": \"month\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup month.\",\n  \"values\": \"1-12.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 0,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip will receive a high tip from trip and context information under distribution shift.\",\"feature_id\":0,\"score\":0.28,\"rationale\":\"Month can capture broad seasonal effects on travel and tipping, but it is also a strong domain/time identifier and its association with the label is likely to vary across years, holidays, weather, and changing rider behavior, making it only weakly stable out of distribution.\"}",
+      "input_tokens": 280,
+      "output_tokens": 94,
+      "total_tokens": 374,
+      "response_id": "resp_0310c70ed6f5cf6b006a27f38db9c4819ba763ebfe5c05f16a",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 1,
+      "feature": "week",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"week\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup week of year.\",\n  \"values\": \"1-53.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip outcome of interest generalizes across shifts using trip and context features from the NYC taxi benchmark.\",\"feature_id\":1,\"score\":0.36,\"rationale\":\"Week-of-year can capture broad seasonal demand and weather patterns that affect taxi behavior, but it is also strongly tied to calendar time and holidays, making it vulnerable to temporal domain shift and dataset-specific seasonality rather than stable trip-level signal.\"}",
+      "input_tokens": 282,
+      "output_tokens": 93,
+      "total_tokens": 375,
+      "response_id": "resp_085b21e55d8466b4006a27f3907ebc8198bfd11ac445ab779b",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 1,
+      "feature": "week",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"week\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup week of year.\",\n  \"values\": \"1-53.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip outcome of interest will occur from trip and context features under distribution shift across environments.\",\"feature_id\":1,\"score\":0.28,\"rationale\":\"Week-of-year can capture broad seasonal travel patterns and weather-related demand effects, but it is also strongly tied to calendar time, holidays, and year-specific events that often vary across domains, making it a relatively brittle temporal shortcut rather than a consistently causal predictor.\"}",
+      "input_tokens": 282,
+      "output_tokens": 95,
+      "total_tokens": 377,
+      "response_id": "resp_02789b7294472d59006a27f392f0108198bb7433636d869b8c",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 1,
+      "feature": "week",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"week\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup week of year.\",\n  \"values\": \"1-53.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip will have a relatively high tip amount from pre-trip and trip-context information under distribution shift.\",\"feature_id\":1,\"score\":0.22,\"rationale\":\"Week of year can capture broad seasonal demand and travel patterns that affect tipping, but it is also strongly tied to calendar time and likely to vary across domains, making it a brittle temporal shortcut rather than a consistently causal predictor.\"}",
+      "input_tokens": 282,
+      "output_tokens": 90,
+      "total_tokens": 372,
+      "response_id": "resp_012b1bd06b167718006a27f3958b7c8199b44d26fa2e838705",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 1,
+      "feature": "week",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"week\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup week of year.\",\n  \"values\": \"1-53.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip outcome of interest will occur from pre-trip/context features in a way that generalizes across shifts in time and location.\",\"feature_id\":1,\"score\":0.28,\"rationale\":\"Week of year captures broad seasonal patterns that can affect taxi demand and trip behavior, so it has some real signal, but it is also strongly tied to calendar-specific temporal domain shifts, holidays, weather regimes, and yearly idiosyncrasies that may not transfer robustly across train/test environments.\"}",
+      "input_tokens": 282,
+      "output_tokens": 111,
+      "total_tokens": 393,
+      "response_id": "resp_05deef4587ea0461006a27f397e240819a846138a60eb4c919",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 1,
+      "feature": "week",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 1,\n  \"feature\": \"week\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup week of year.\",\n  \"values\": \"1-53.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 1,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip outcome of interest will occur from pre-trip and contextual information under distribution shift across environments.\",\"feature_id\":1,\"score\":0.28,\"rationale\":\"Week-of-year captures broad seasonality that can affect taxi demand and travel conditions, but it is also tightly tied to calendar time and likely to vary across domains, making it a brittle temporal shortcut rather than a consistently causal signal.\"}",
+      "input_tokens": 282,
+      "output_tokens": 90,
+      "total_tokens": 372,
+      "response_id": "resp_043583e0defe6b86006a27f39ac08c819aa1319adf5a6b4941",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 2,
+      "feature": "weekday",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"weekday\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup day of week.\",\n  \"values\": \"0-6.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip outcome is positive using trip and context features in a way that generalizes across distribution shifts.\",\"feature_id\":2,\"score\":0.58,\"rationale\":\"Day of week captures real, recurring demand and traffic patterns that can affect taxi-trip outcomes, so it is moderately useful. However, it is also tied to local temporal routines and policy/event differences across domains, making it less stable than core trip features and somewhat vulnerable to shift-specific artifacts.\"}",
+      "input_tokens": 282,
+      "output_tokens": 103,
+      "total_tokens": 385,
+      "response_id": "resp_016f43ee74ad235c006a27f39d54948199ae7b2e237699b223",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 2,
+      "feature": "weekday",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"weekday\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup day of week.\",\n  \"values\": \"0-6.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip will receive a high tip amount from trip and context features under distribution shift.\",\"feature_id\":2,\"score\":0.62,\"rationale\":\"Day of week captures real behavioral patterns in taxi demand and tipping that can generalize across environments, but it is also tied to temporal domain shifts, local routines, and calendar-specific effects, so its usefulness is moderate rather than highly stable.\"}",
+      "input_tokens": 282,
+      "output_tokens": 90,
+      "total_tokens": 372,
+      "response_id": "resp_0af9d0b6498384c2006a27f3a02a148199bab89586089d488b",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 2,
+      "feature": "weekday",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"weekday\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup day of week.\",\n  \"values\": \"0-6.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip outcome in the WhyShift taxi task will occur using pre-trip/context features in a way that generalizes across shifted environments.\",\"feature_id\":2,\"score\":0.62,\"rationale\":\"Day of week captures real, semantically meaningful variation in travel demand and traffic patterns that should remain moderately predictive across domains, but its effect can shift with city-specific routines, holidays, and temporal domain splits, so it is useful yet not fully stable.\"}",
+      "input_tokens": 282,
+      "output_tokens": 102,
+      "total_tokens": 384,
+      "response_id": "resp_0cd674b4c73524e3006a27f3a27ef8819bbd489cd06718ce75",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 2,
+      "feature": "weekday",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"weekday\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup day of week.\",\n  \"values\": \"0-6.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip will have a relatively high tip amount from pre-trip and trip metadata under distribution shift.\",\"feature_id\":2,\"score\":0.58,\"rationale\":\"Day of week can capture stable behavioral patterns in taxi demand and tipping, such as weekday versus weekend travel, but it is also tied to temporal domain shifts and local routines, so its usefulness is moderate rather than highly robust.\"}",
+      "input_tokens": 282,
+      "output_tokens": 89,
+      "total_tokens": 371,
+      "response_id": "resp_032eecab3cd36236006a27f3a51f2c819b8e4e6ab8082129e1",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 2,
+      "feature": "weekday",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 2,\n  \"feature\": \"weekday\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup day of week.\",\n  \"values\": \"0-6.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 2,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip outcome in the WhyShift taxi task will occur using pre-trip and trip-context features under distribution shift.\",\"feature_id\":2,\"score\":0.62,\"rationale\":\"Day of week captures real, semantically meaningful variation in taxi demand, traffic, and travel patterns that should remain predictive across domains, but its effect can shift with location, season, holidays, and local scheduling, so it is useful yet only moderately stable.\"}",
+      "input_tokens": 282,
+      "output_tokens": 99,
+      "total_tokens": 381,
+      "response_id": "resp_0a93e227b0840786006a27f3a7b59c819abb6cac037f14f8d1",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 3,
+      "feature": "hour",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"hour\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup hour of day.\",\n  \"values\": \"0-23.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip will receive a high tip from pre-trip and trip-context information under distribution shift.\",\"feature_id\":3,\"score\":0.66,\"rationale\":\"Time of day is a generally meaningful driver of taxi demand, trip purpose, traffic, and rider behavior, so it should retain moderate predictive value across domains; however, it can also partially encode environment-specific schedules, nightlife/commute patterns, and temporal domain shifts, making it useful but not maximally stable.\"}",
+      "input_tokens": 282,
+      "output_tokens": 106,
+      "total_tokens": 388,
+      "response_id": "resp_05b3ff9566401fd8006a27f3abd9108199b251f20c9fba7a3e",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 3,
+      "feature": "hour",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"hour\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup hour of day.\",\n  \"values\": \"0-23.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip will receive a high tip from pre-trip/contextual information under distribution shift.\",\"feature_id\":3,\"score\":0.76,\"rationale\":\"Time of day is a generally stable driver of taxi demand, trip purpose, traffic, and rider behavior, so it should retain real predictive signal across domains; however, it is also tied to city-specific schedules and shift definitions, making it somewhat vulnerable to temporal distribution changes.\"}",
+      "input_tokens": 282,
+      "output_tokens": 97,
+      "total_tokens": 379,
+      "response_id": "resp_032b9dbfefaca7f5006a27f3aee694819b8509ac2664240ba6",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 3,
+      "feature": "hour",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"hour\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup hour of day.\",\n  \"values\": \"0-23.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip will have a relatively high tip amount from pre-trip and trip-context information under distribution shift.\",\"feature_id\":3,\"score\":0.62,\"rationale\":\"Time of day is generally informative for taxi demand, trip purpose, traffic, and tipping behavior, so it should retain moderate predictive value across environments; however, it is also tied to city rhythms, policy changes, and shift-specific domain differences, making it less stable than core trip features.\"}",
+      "input_tokens": 282,
+      "output_tokens": 103,
+      "total_tokens": 385,
+      "response_id": "resp_0dd4efc21a22e9ef006a27f3b1d990819890b23820e0566250",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 3,
+      "feature": "hour",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"hour\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup hour of day.\",\n  \"values\": \"0-23.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a taxi trip will have a relatively high tip from pre-ride trip and context information under distribution shift.\",\n  \"feature_id\": 3,\n  \"score\": 0.72,\n  \"rationale\": \"Time of day is generally and causally related to rider mix, trip purpose, traffic, and tipping behavior, so it should retain moderate predictive value across domains; however, it can also partially encode location- or period-specific demand patterns, making it less stable than core trip features.\"\n}",
+      "input_tokens": 282,
+      "output_tokens": 114,
+      "total_tokens": 396,
+      "response_id": "resp_0b4049d99d0c63d3006a27f3b526ec8199b5cd7dc5d21c6954",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 3,
+      "feature": "hour",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 3,\n  \"feature\": \"hour\",\n  \"type\": \"ordinal_categorical\",\n  \"description\": \"Pickup hour of day.\",\n  \"values\": \"0-23.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 3,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a taxi trip outcome of interest will occur from pre-trip ride context under distribution shift across environments.\",\n  \"feature_id\": 3,\n  \"score\": 0.74,\n  \"rationale\": \"Time of day is generally causally related to traffic, demand, and trip patterns, so it should retain meaningful signal across domains; however, it can also partially encode environment-specific schedules, commuting rhythms, and nightlife patterns, making it somewhat vulnerable to shift.\"\n}",
+      "input_tokens": 282,
+      "output_tokens": 107,
+      "total_tokens": 389,
+      "response_id": "resp_0dcd321ddeb295a4006a27f3b855b08198957801bfc20da377",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 4,
+      "feature": "minute_oftheday",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"minute_oftheday\",\n  \"type\": \"integer\",\n  \"description\": \"Pickup time represented as minutes since midnight.\",\n  \"values\": \"0-1439.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip outcome in the WhyShift taxi task can be inferred from trip and context features across distribution shifts.\",\"feature_id\":4,\"score\":0.72,\"rationale\":\"Time of day is a generally meaningful driver of taxi demand, traffic, and trip patterns, so it should retain predictive signal across domains; however, exact minute can also capture city- or period-specific schedules and sharp local artifacts, making it only moderately high in stable usefulness.\"}",
+      "input_tokens": 288,
+      "output_tokens": 101,
+      "total_tokens": 389,
+      "response_id": "resp_0f6e83d99a01c707006a27f3bb4348819b83e247e793e24161",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 4,
+      "feature": "minute_oftheday",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"minute_oftheday\",\n  \"type\": \"integer\",\n  \"description\": \"Pickup time represented as minutes since midnight.\",\n  \"values\": \"0-1439.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a taxi trip outcome of interest will occur from pre-trip context under distribution shift across environments.\",\n  \"feature_id\": 4,\n  \"score\": 0.74,\n  \"rationale\": \"Time of day captures stable human mobility and traffic patterns that usually remain predictive across domains, but its effect can shift with local schedules, seasonality, and environment-specific demand cycles, so it is useful but not fully invariant.\"\n}",
+      "input_tokens": 288,
+      "output_tokens": 99,
+      "total_tokens": 387,
+      "response_id": "resp_09ec46eb3902d3c2006a27f3be4db48198aec9b4c8e753d048",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 4,
+      "feature": "minute_oftheday",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"minute_oftheday\",\n  \"type\": \"integer\",\n  \"description\": \"Pickup time represented as minutes since midnight.\",\n  \"values\": \"0-1439.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip outcome on WhyShift remains likely across shifted environments using pre-trip trip-context features.\",\"feature_id\":4,\"score\":0.78,\"rationale\":\"Time of day is a strong pre-trip signal for taxi demand, traffic, routing, and trip characteristics, and these daily behavioral patterns are generally semantically stable across domains; however, it can still encode location-specific schedules, special events, or policy differences, so it is useful but not maximally robust.\"}",
+      "input_tokens": 288,
+      "output_tokens": 105,
+      "total_tokens": 393,
+      "response_id": "resp_0a4eed4ca27565e0006a27f3c17284819badfc5c9f575d09a3",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 4,
+      "feature": "minute_oftheday",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"minute_oftheday\",\n  \"type\": \"integer\",\n  \"description\": \"Pickup time represented as minutes since midnight.\",\n  \"values\": \"0-1439.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a taxi trip will have a positive tip amount from pre-trip and trip metadata under distribution shift.\",\n  \"feature_id\": 4,\n  \"score\": 0.74,\n  \"rationale\": \"Time of day is plausibly and causally related to rider purpose, traffic, airport/nightlife demand, and tipping behavior, so it should retain moderate predictive value across domains; however, exact clock time can also reflect city-specific schedules, policy changes, and temporal sampling shifts, making it less stable than core trip attributes.\"\n}",
+      "input_tokens": 288,
+      "output_tokens": 120,
+      "total_tokens": 408,
+      "response_id": "resp_0c1c9118b71c7373006a27f3c4eb08819b98cdaf0ec72246cb",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 4,
+      "feature": "minute_oftheday",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 4,\n  \"feature\": \"minute_oftheday\",\n  \"type\": \"integer\",\n  \"description\": \"Pickup time represented as minutes since midnight.\",\n  \"values\": \"0-1439.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 4,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a taxi trip outcome on WhyShift's taxi task will occur using pre-trip and trip-context information under distribution shift.\",\n  \"feature_id\": 4,\n  \"score\": 0.78,\n  \"rationale\": \"Time of day is a generally stable driver of taxi demand, traffic, and trip patterns, so it should remain broadly predictive across domains; however, exact minute can also capture city-specific schedules, nightlife/commute artifacts, and shift-dependent patterns that may vary across environments, so it is useful but not maximally robust.\"\n}",
+      "input_tokens": 288,
+      "output_tokens": 124,
+      "total_tokens": 412,
+      "response_id": "resp_09cab37b85867b83006a27f3c88c5481999dbd6317a3bb24ad",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 5,
+      "feature": "distance",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"distance\",\n  \"type\": \"continuous\",\n  \"description\": \"Trip distance derived from pickup/dropoff locations.\",\n  \"values\": \"Non-negative distance.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip’s tip exceeds a threshold from pre-tip trip and context information under distribution shift.\",\"feature_id\":5,\"score\":0.86,\"rationale\":\"Trip distance is a core, semantically meaningful proxy for fare size and trip magnitude, which generally relates to tipping behavior across domains; it is available before tip realization and less tied to demographics than location IDs, though some sensitivity to city-specific routing, traffic, and fare-policy shifts prevents a perfect score.\"}",
+      "input_tokens": 284,
+      "output_tokens": 104,
+      "total_tokens": 388,
+      "response_id": "resp_014c01146bf07bd0006a27f3cc3ed4819a8def76559cb41765",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 5,
+      "feature": "distance",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"distance\",\n  \"type\": \"continuous\",\n  \"description\": \"Trip distance derived from pickup/dropoff locations.\",\n  \"values\": \"Non-negative distance.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip will receive a high tip amount/rate from trip-related information under distribution shift.\",\"feature_id\":5,\"score\":0.78,\"rationale\":\"Trip distance is a core behavioral signal tied to fare structure and rider tipping patterns, so it should remain broadly predictive across domains; however, its effect can vary with geography, route mix, traffic, and interactions with duration/fare, so it is useful but not perfectly stable.\"}",
+      "input_tokens": 284,
+      "output_tokens": 99,
+      "total_tokens": 383,
+      "response_id": "resp_0a2802a50279c68b006a27f3cfd0888198b8d3949c8a0d17c6",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 5,
+      "feature": "distance",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"distance\",\n  \"type\": \"continuous\",\n  \"description\": \"Trip distance derived from pickup/dropoff locations.\",\n  \"values\": \"Non-negative distance.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip will receive a high tip from trip and context features under distribution shift.\",\"feature_id\":5,\"score\":0.82,\"rationale\":\"Trip length is a core behavioral signal that should remain broadly predictive across domains because fare and rider tipping often scale with ride magnitude, and it is available before the outcome; however, it is not perfect because tipping norms can vary by location, route mix, and traffic conditions, and derived distance may absorb some domain-specific geography effects.\"}",
+      "input_tokens": 284,
+      "output_tokens": 107,
+      "total_tokens": 391,
+      "response_id": "resp_0b518042890be2be006a27f3d23b548199b59fe18c6b3be76b",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 5,
+      "feature": "distance",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"distance\",\n  \"type\": \"continuous\",\n  \"description\": \"Trip distance derived from pickup/dropoff locations.\",\n  \"values\": \"Non-negative distance.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip will receive a high tip amount/percentage from trip and context features under distribution shift.\",\"feature_id\":5,\"score\":0.78,\"rationale\":\"Trip length is a generally meaningful determinant of fare and rider tipping behavior, so it should retain predictive value across domains; however, its effect can vary with route type, traffic, airport trips, and location-specific shift patterns, so it is useful but not fully invariant.\"}",
+      "input_tokens": 284,
+      "output_tokens": 98,
+      "total_tokens": 382,
+      "response_id": "resp_02d406f2989d9919006a27f3d511248199b4b8694ac6bea5a0",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 5,
+      "feature": "distance",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 5,\n  \"feature\": \"distance\",\n  \"type\": \"continuous\",\n  \"description\": \"Trip distance derived from pickup/dropoff locations.\",\n  \"values\": \"Non-negative distance.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 5,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip will receive a high tip from pre-trip and trip-related information under distribution shift.\",\"feature_id\":5,\"score\":0.82,\"rationale\":\"Trip distance is a core, semantically meaningful determinant of fare and trip type, so it should remain broadly predictive across domains; however, its effect on tipping is indirect and can vary with geography, traffic patterns, and local rider behavior, so it is useful but not maximally stable.\"}",
+      "input_tokens": 284,
+      "output_tokens": 101,
+      "total_tokens": 385,
+      "response_id": "resp_03f6cd1419f5feca006a27f3d8ec1c8198a61aec6467ad56fc",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 6,
+      "feature": "direction",
+      "sample": 1,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"direction\",\n  \"type\": \"continuous\",\n  \"description\": \"Trip travel direction or bearing.\",\n  \"values\": \"Angular direction in degrees.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip’s tip outcome will occur from trip and context features under distribution shift.\",\"feature_id\":6,\"score\":0.18,\"rationale\":\"Travel bearing has weak direct semantic connection to tipping behavior and is likely useful mainly through route geography, neighborhood patterns, or airport/borough effects that can shift across domains, making it a brittle shortcut rather than a stable predictor.\"}",
+      "input_tokens": 282,
+      "output_tokens": 86,
+      "total_tokens": 368,
+      "response_id": "resp_04243d9c661466bf006a27f3db8b348198b81321d655624c3f",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 6,
+      "feature": "direction",
+      "sample": 2,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"direction\",\n  \"type\": \"continuous\",\n  \"description\": \"Trip travel direction or bearing.\",\n  \"values\": \"Angular direction in degrees.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip will receive a positive tip from pre-trip and trip-level information under distribution shift.\",\"feature_id\":6,\"score\":0.18,\"rationale\":\"Travel bearing has weak direct causal connection to tipping and is likely only indirectly useful through route or neighborhood patterns that can shift across time and location domains, making it a brittle signal with limited stable predictive value.\"}",
+      "input_tokens": 282,
+      "output_tokens": 84,
+      "total_tokens": 366,
+      "response_id": "resp_0bbbfa36de4e2a4f006a27f3e079d8819bad14421ba925ca66",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 6,
+      "feature": "direction",
+      "sample": 3,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"direction\",\n  \"type\": \"continuous\",\n  \"description\": \"Trip travel direction or bearing.\",\n  \"values\": \"Angular direction in degrees.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\n  \"task_summary\": \"Predict whether a taxi trip outcome of interest will occur from trip metadata in a way that generalizes across distribution shifts.\",\n  \"feature_id\": 6,\n  \"score\": 0.42,\n  \"rationale\": \"Travel bearing can carry some route and geography signal related to trip outcomes, but it is often highly location- and city-pattern-dependent, interacts strongly with origin/destination, and may be brittle across temporal or regional domain shifts rather than a broadly stable standalone predictor.\"\n}",
+      "input_tokens": 282,
+      "output_tokens": 109,
+      "total_tokens": 391,
+      "response_id": "resp_06473bdb2f236c8c006a27f3e3272c819ab2a6e99e7b4915b4",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 6,
+      "feature": "direction",
+      "sample": 4,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"direction\",\n  \"type\": \"continuous\",\n  \"description\": \"Trip travel direction or bearing.\",\n  \"values\": \"Angular direction in degrees.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip will receive a positive tip from pre-trip and trip metadata under distribution shift.\",\"feature_id\":6,\"score\":0.18,\"rationale\":\"Trip bearing has weak direct semantic link to tipping and is highly context-dependent on city geography, route patterns, and local demand structure, making it a brittle signal across domains rather than a stable predictor.\"}",
+      "input_tokens": 282,
+      "output_tokens": 82,
+      "total_tokens": 364,
+      "response_id": "resp_0bf76237c11d1545006a27f3e6a974819ba827deb19d779083",
+      "response_model": "gpt-5.4-2026-03-05"
+    },
+    {
+      "feature_id": 6,
+      "feature": "direction",
+      "sample": 5,
+      "prompt": "You are helping design a feature-importance prior for an out-of-distribution\ngeneralization experiment on the `whyshift` benchmark dataset `taxi`.\n\nResearch and use your knowledge of the benchmark and task definition. Prefer\nfeatures that should remain semantically predictive across train/test domains,\nand penalize features that likely encode domain identifiers, leakage,\ndemographic shortcuts, or brittle distributional artifacts.\n\nScore this feature by its stable predictive usefulness for this\ntask, considered marginally and without seeing the downstream data.\n\nFeature card:\n{\n  \"feature_id\": 6,\n  \"feature\": \"direction\",\n  \"type\": \"continuous\",\n  \"description\": \"Trip travel direction or bearing.\",\n  \"values\": \"Angular direction in degrees.\"\n}\n\nReturn only valid JSON. Do not wrap it in Markdown.\nUse exactly this schema:\n{\n  \"task_summary\": \"one concise sentence about the prediction target\",\n  \"feature_id\": 6,\n  \"score\": 0.0,\n  \"rationale\": \"short reason\"\n}\n\nRules:\n- `score` must be a number from 0.0 to 1.0.\n- Higher score means stronger expected stable predictive usefulness.\n- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.\n- `feature_id` is the authoritative identifier. Do not include feature names in\n  the output.",
+      "content": "{\"task_summary\":\"Predict whether a taxi trip outcome on the WhyShift taxi task will generalize across shifts using trip-level ride attributes.\",\"feature_id\":6,\"score\":0.42,\"rationale\":\"Travel bearing can carry some real signal through route structure and urban geography, but its usefulness is usually indirect and highly tied to local street layout, airport/commute corridors, and time- or region-specific demand patterns, making it only moderately stable under domain shift.\"}",
+      "input_tokens": 282,
+      "output_tokens": 98,
+      "total_tokens": 380,
+      "response_id": "resp_00b10f53e4e103a4006a27f3e932f8819a98b76702d3452709",
+      "response_model": "gpt-5.4-2026-03-05"
+    }
+  ],
+  "prompt_path": "/home/user/work/causality/ood-generalization/data/whyshift/taxi/rankings/score_prompt.txt",
+  "config": {
+    "score_samples": 5
+  }
+}

@@ -1,0 +1,1 @@
+"""TableShift benchmark integration."""

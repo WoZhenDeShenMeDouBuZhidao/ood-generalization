@@ -1,0 +1,2536 @@
+# tableshift/anes rank prompts
+
+## 1. rank
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the `tableshift` benchmark dataset `anes`.
+
+Research and use your knowledge of the benchmark and task definition. Prefer
+features that should remain semantically predictive across train/test domains,
+and penalize features that likely encode domain identifiers, leakage,
+demographic shortcuts, or brittle distributional artifacts.
+
+Feature cards, in model input order:
+[
+  {
+    "feature_id": 0,
+    "feature": "VCF0004",
+    "type": "integer",
+    "description": "election year"
+  },
+  {
+    "feature_id": 1,
+    "feature": "VCF0101",
+    "type": "integer",
+    "description": "age"
+  },
+  {
+    "feature_id": 2,
+    "feature": "VCF0104",
+    "type": "categorical",
+    "description": "gender",
+    "values": "1=Male; 2=Female; 3=Other; 0=no answer"
+  },
+  {
+    "feature_id": 3,
+    "feature": "VCF0105a",
+    "type": "categorical",
+    "description": "race/ethnicity",
+    "values": "1.0=White non-Hispanic; 2.0=Black non-Hispanic; 3.0=Asian or Pacific Islander, non-Hispanic; 4.0=American Indian or Alaska Native non-Hispanic; 5.0=Hispanic; 6.0=Other or multiple races, non-Hispanic; 7.0=Non-white and non-black; 9.0=no answer"
+  },
+  {
+    "feature_id": 4,
+    "feature": "VCF0115_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0115_00` derived from semantic feature `VCF0115`. Interpret this column as the encoded model input for that derived category/value. occupation group",
+    "values": "1.0=Professional and managerial; 2.0=Clerical and sales workers; 3.0=Skilled, semi-skilled and service workers; 4.0=Laborers, except farm; 5.0=Farmers, farm managers, farm laborers and foremen; forestry and fishermen; 6.0=Homemakers; 0.0=no answer"
+  },
+  {
+    "feature_id": 5,
+    "feature": "VCF0115_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0115_10` derived from semantic feature `VCF0115`. Interpret this column as the encoded model input for that derived category/value. occupation group",
+    "values": "1.0=Professional and managerial; 2.0=Clerical and sales workers; 3.0=Skilled, semi-skilled and service workers; 4.0=Laborers, except farm; 5.0=Farmers, farm managers, farm laborers and foremen; forestry and fishermen; 6.0=Homemakers; 0.0=no answer"
+  },
+  {
+    "feature_id": 6,
+    "feature": "VCF0115_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0115_20` derived from semantic feature `VCF0115`. Interpret this column as the encoded model input for that derived category/value. occupation group",
+    "values": "1.0=Professional and managerial; 2.0=Clerical and sales workers; 3.0=Skilled, semi-skilled and service workers; 4.0=Laborers, except farm; 5.0=Farmers, farm managers, farm laborers and foremen; forestry and fishermen; 6.0=Homemakers; 0.0=no answer"
+  },
+  {
+    "feature_id": 7,
+    "feature": "VCF0115_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0115_30` derived from semantic feature `VCF0115`. Interpret this column as the encoded model input for that derived category/value. occupation group",
+    "values": "1.0=Professional and managerial; 2.0=Clerical and sales workers; 3.0=Skilled, semi-skilled and service workers; 4.0=Laborers, except farm; 5.0=Farmers, farm managers, farm laborers and foremen; forestry and fishermen; 6.0=Homemakers; 0.0=no answer"
+  },
+  {
+    "feature_id": 8,
+    "feature": "VCF0115_40",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0115_40` derived from semantic feature `VCF0115`. Interpret this column as the encoded model input for that derived category/value. occupation group",
+    "values": "1.0=Professional and managerial; 2.0=Clerical and sales workers; 3.0=Skilled, semi-skilled and service workers; 4.0=Laborers, except farm; 5.0=Farmers, farm managers, farm laborers and foremen; forestry and fishermen; 6.0=Homemakers; 0.0=no answer"
+  },
+  {
+    "feature_id": 9,
+    "feature": "VCF0115_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0115_50` derived from semantic feature `VCF0115`. Interpret this column as the encoded model input for that derived category/value. occupation group",
+    "values": "1.0=Professional and managerial; 2.0=Clerical and sales workers; 3.0=Skilled, semi-skilled and service workers; 4.0=Laborers, except farm; 5.0=Farmers, farm managers, farm laborers and foremen; forestry and fishermen; 6.0=Homemakers; 0.0=no answer"
+  },
+  {
+    "feature_id": 10,
+    "feature": "VCF0115_60",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0115_60` derived from semantic feature `VCF0115`. Interpret this column as the encoded model input for that derived category/value. occupation group",
+    "values": "1.0=Professional and managerial; 2.0=Clerical and sales workers; 3.0=Skilled, semi-skilled and service workers; 4.0=Laborers, except farm; 5.0=Farmers, farm managers, farm laborers and foremen; forestry and fishermen; 6.0=Homemakers; 0.0=no answer"
+  },
+  {
+    "feature_id": 11,
+    "feature": "VCF0115_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0115_no answer` derived from semantic feature `VCF0115`. Interpret this column as the encoded model input for that derived category/value. occupation group",
+    "values": "1.0=Professional and managerial; 2.0=Clerical and sales workers; 3.0=Skilled, semi-skilled and service workers; 4.0=Laborers, except farm; 5.0=Farmers, farm managers, farm laborers and foremen; forestry and fishermen; 6.0=Homemakers; 0.0=no answer"
+  },
+  {
+    "feature_id": 12,
+    "feature": "VCF0140a_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0140a_10` derived from semantic feature `VCF0140a`. Interpret this column as the encoded model input for that derived category/value. education level",
+    "values": "1.0=8 grades or less (‘grade school’); 2.0=9-12 grades (‘high school’), no diploma/equivalency; less than high school credential (2020); 3.0=12 grades, diploma or equivalency; 4.0=12 grades, diploma or equivalency plus non-academic training; 5.0=Some colleg..."
+  },
+  {
+    "feature_id": 13,
+    "feature": "VCF0140a_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0140a_20` derived from semantic feature `VCF0140a`. Interpret this column as the encoded model input for that derived category/value. education level",
+    "values": "1.0=8 grades or less (‘grade school’); 2.0=9-12 grades (‘high school’), no diploma/equivalency; less than high school credential (2020); 3.0=12 grades, diploma or equivalency; 4.0=12 grades, diploma or equivalency plus non-academic training; 5.0=Some colleg..."
+  },
+  {
+    "feature_id": 14,
+    "feature": "VCF0140a_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0140a_30` derived from semantic feature `VCF0140a`. Interpret this column as the encoded model input for that derived category/value. education level",
+    "values": "1.0=8 grades or less (‘grade school’); 2.0=9-12 grades (‘high school’), no diploma/equivalency; less than high school credential (2020); 3.0=12 grades, diploma or equivalency; 4.0=12 grades, diploma or equivalency plus non-academic training; 5.0=Some colleg..."
+  },
+  {
+    "feature_id": 15,
+    "feature": "VCF0140a_40",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0140a_40` derived from semantic feature `VCF0140a`. Interpret this column as the encoded model input for that derived category/value. education level",
+    "values": "1.0=8 grades or less (‘grade school’); 2.0=9-12 grades (‘high school’), no diploma/equivalency; less than high school credential (2020); 3.0=12 grades, diploma or equivalency; 4.0=12 grades, diploma or equivalency plus non-academic training; 5.0=Some colleg..."
+  },
+  {
+    "feature_id": 16,
+    "feature": "VCF0140a_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0140a_50` derived from semantic feature `VCF0140a`. Interpret this column as the encoded model input for that derived category/value. education level",
+    "values": "1.0=8 grades or less (‘grade school’); 2.0=9-12 grades (‘high school’), no diploma/equivalency; less than high school credential (2020); 3.0=12 grades, diploma or equivalency; 4.0=12 grades, diploma or equivalency plus non-academic training; 5.0=Some colleg..."
+  },
+  {
+    "feature_id": 17,
+    "feature": "VCF0140a_60",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0140a_60` derived from semantic feature `VCF0140a`. Interpret this column as the encoded model input for that derived category/value. education level",
+    "values": "1.0=8 grades or less (‘grade school’); 2.0=9-12 grades (‘high school’), no diploma/equivalency; less than high school credential (2020); 3.0=12 grades, diploma or equivalency; 4.0=12 grades, diploma or equivalency plus non-academic training; 5.0=Some colleg..."
+  },
+  {
+    "feature_id": 18,
+    "feature": "VCF0140a_70",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0140a_70` derived from semantic feature `VCF0140a`. Interpret this column as the encoded model input for that derived category/value. education level",
+    "values": "1.0=8 grades or less (‘grade school’); 2.0=9-12 grades (‘high school’), no diploma/equivalency; less than high school credential (2020); 3.0=12 grades, diploma or equivalency; 4.0=12 grades, diploma or equivalency plus non-academic training; 5.0=Some colleg..."
+  },
+  {
+    "feature_id": 19,
+    "feature": "VCF0140a_80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0140a_80` derived from semantic feature `VCF0140a`. Interpret this column as the encoded model input for that derived category/value. education level",
+    "values": "1.0=8 grades or less (‘grade school’); 2.0=9-12 grades (‘high school’), no diploma/equivalency; less than high school credential (2020); 3.0=12 grades, diploma or equivalency; 4.0=12 grades, diploma or equivalency plus non-academic training; 5.0=Some colleg..."
+  },
+  {
+    "feature_id": 20,
+    "feature": "VCF0140a_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0140a_90` derived from semantic feature `VCF0140a`. Interpret this column as the encoded model input for that derived category/value. education level",
+    "values": "1.0=8 grades or less (‘grade school’); 2.0=9-12 grades (‘high school’), no diploma/equivalency; less than high school credential (2020); 3.0=12 grades, diploma or equivalency; 4.0=12 grades, diploma or equivalency plus non-academic training; 5.0=Some colleg..."
+  },
+  {
+    "feature_id": 21,
+    "feature": "VCF0140a_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0140a_no answer` derived from semantic feature `VCF0140a`. Interpret this column as the encoded model input for that derived category/value. education level",
+    "values": "1.0=8 grades or less (‘grade school’); 2.0=9-12 grades (‘high school’), no diploma/equivalency; less than high school credential (2020); 3.0=12 grades, diploma or equivalency; 4.0=12 grades, diploma or equivalency plus non-academic training; 5.0=Some colleg..."
+  },
+  {
+    "feature_id": 22,
+    "feature": "VCF0218",
+    "type": "continuous",
+    "description": "Democratic Party feeling thermometer"
+  },
+  {
+    "feature_id": 23,
+    "feature": "VCF0224",
+    "type": "continuous",
+    "description": "Republican Party feeling thermometer"
+  },
+  {
+    "feature_id": 24,
+    "feature": "VCF0301_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0301_00` derived from semantic feature `VCF0301`. Interpret this column as the encoded model input for that derived category/value. think of yourself as closer to the Republican or Democratic party",
+    "values": "0.0=no answer; 1.0=Strong Democrat; 2.0=Weak Democrat; 3.0=Independent - Democrat; 4.0=Independent - Independent; 5.0=Independent - Republican; 6.0=Weak Republican; 7.0=Strong Republican"
+  },
+  {
+    "feature_id": 25,
+    "feature": "VCF0301_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0301_10` derived from semantic feature `VCF0301`. Interpret this column as the encoded model input for that derived category/value. think of yourself as closer to the Republican or Democratic party",
+    "values": "0.0=no answer; 1.0=Strong Democrat; 2.0=Weak Democrat; 3.0=Independent - Democrat; 4.0=Independent - Independent; 5.0=Independent - Republican; 6.0=Weak Republican; 7.0=Strong Republican"
+  },
+  {
+    "feature_id": 26,
+    "feature": "VCF0301_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0301_20` derived from semantic feature `VCF0301`. Interpret this column as the encoded model input for that derived category/value. think of yourself as closer to the Republican or Democratic party",
+    "values": "0.0=no answer; 1.0=Strong Democrat; 2.0=Weak Democrat; 3.0=Independent - Democrat; 4.0=Independent - Independent; 5.0=Independent - Republican; 6.0=Weak Republican; 7.0=Strong Republican"
+  },
+  {
+    "feature_id": 27,
+    "feature": "VCF0301_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0301_30` derived from semantic feature `VCF0301`. Interpret this column as the encoded model input for that derived category/value. think of yourself as closer to the Republican or Democratic party",
+    "values": "0.0=no answer; 1.0=Strong Democrat; 2.0=Weak Democrat; 3.0=Independent - Democrat; 4.0=Independent - Independent; 5.0=Independent - Republican; 6.0=Weak Republican; 7.0=Strong Republican"
+  },
+  {
+    "feature_id": 28,
+    "feature": "VCF0301_40",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0301_40` derived from semantic feature `VCF0301`. Interpret this column as the encoded model input for that derived category/value. think of yourself as closer to the Republican or Democratic party",
+    "values": "0.0=no answer; 1.0=Strong Democrat; 2.0=Weak Democrat; 3.0=Independent - Democrat; 4.0=Independent - Independent; 5.0=Independent - Republican; 6.0=Weak Republican; 7.0=Strong Republican"
+  },
+  {
+    "feature_id": 29,
+    "feature": "VCF0301_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0301_50` derived from semantic feature `VCF0301`. Interpret this column as the encoded model input for that derived category/value. think of yourself as closer to the Republican or Democratic party",
+    "values": "0.0=no answer; 1.0=Strong Democrat; 2.0=Weak Democrat; 3.0=Independent - Democrat; 4.0=Independent - Independent; 5.0=Independent - Republican; 6.0=Weak Republican; 7.0=Strong Republican"
+  },
+  {
+    "feature_id": 30,
+    "feature": "VCF0301_60",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0301_60` derived from semantic feature `VCF0301`. Interpret this column as the encoded model input for that derived category/value. think of yourself as closer to the Republican or Democratic party",
+    "values": "0.0=no answer; 1.0=Strong Democrat; 2.0=Weak Democrat; 3.0=Independent - Democrat; 4.0=Independent - Independent; 5.0=Independent - Republican; 6.0=Weak Republican; 7.0=Strong Republican"
+  },
+  {
+    "feature_id": 31,
+    "feature": "VCF0301_70",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0301_70` derived from semantic feature `VCF0301`. Interpret this column as the encoded model input for that derived category/value. think of yourself as closer to the Republican or Democratic party",
+    "values": "0.0=no answer; 1.0=Strong Democrat; 2.0=Weak Democrat; 3.0=Independent - Democrat; 4.0=Independent - Independent; 5.0=Independent - Republican; 6.0=Weak Republican; 7.0=Strong Republican"
+  },
+  {
+    "feature_id": 32,
+    "feature": "VCF0301_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0301_no answer` derived from semantic feature `VCF0301`. Interpret this column as the encoded model input for that derived category/value. think of yourself as closer to the Republican or Democratic party",
+    "values": "0.0=no answer; 1.0=Strong Democrat; 2.0=Weak Democrat; 3.0=Independent - Democrat; 4.0=Independent - Independent; 5.0=Independent - Republican; 6.0=Weak Republican; 7.0=Strong Republican"
+  },
+  {
+    "feature_id": 33,
+    "feature": "VCF0302_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0302_10` derived from semantic feature `VCF0302`. Interpret this column as the encoded model input for that derived category/value. party identification",
+    "values": "1.0=Republican; 2.0=Independent; 3.0=No preference; none; neither; 4.0=Other; 5.0=Democrat; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 34,
+    "feature": "VCF0302_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0302_20` derived from semantic feature `VCF0302`. Interpret this column as the encoded model input for that derived category/value. party identification",
+    "values": "1.0=Republican; 2.0=Independent; 3.0=No preference; none; neither; 4.0=Other; 5.0=Democrat; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 35,
+    "feature": "VCF0302_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0302_30` derived from semantic feature `VCF0302`. Interpret this column as the encoded model input for that derived category/value. party identification",
+    "values": "1.0=Republican; 2.0=Independent; 3.0=No preference; none; neither; 4.0=Other; 5.0=Democrat; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 36,
+    "feature": "VCF0302_40",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0302_40` derived from semantic feature `VCF0302`. Interpret this column as the encoded model input for that derived category/value. party identification",
+    "values": "1.0=Republican; 2.0=Independent; 3.0=No preference; none; neither; 4.0=Other; 5.0=Democrat; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 37,
+    "feature": "VCF0302_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0302_50` derived from semantic feature `VCF0302`. Interpret this column as the encoded model input for that derived category/value. party identification",
+    "values": "1.0=Republican; 2.0=Independent; 3.0=No preference; none; neither; 4.0=Other; 5.0=Democrat; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 38,
+    "feature": "VCF0302_80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0302_80` derived from semantic feature `VCF0302`. Interpret this column as the encoded model input for that derived category/value. party identification",
+    "values": "1.0=Republican; 2.0=Independent; 3.0=No preference; none; neither; 4.0=Other; 5.0=Democrat; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 39,
+    "feature": "VCF0302_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0302_90` derived from semantic feature `VCF0302`. Interpret this column as the encoded model input for that derived category/value. party identification",
+    "values": "1.0=Republican; 2.0=Independent; 3.0=No preference; none; neither; 4.0=Other; 5.0=Democrat; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 40,
+    "feature": "VCF0302_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0302_no answer` derived from semantic feature `VCF0302`. Interpret this column as the encoded model input for that derived category/value. party identification",
+    "values": "1.0=Republican; 2.0=Independent; 3.0=No preference; none; neither; 4.0=Other; 5.0=Democrat; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 41,
+    "feature": "VCF0310_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0310_00` derived from semantic feature `VCF0310`. Interpret this column as the encoded model input for that derived category/value. interest in the elections",
+    "values": "1.0=Not much interested; 2.0=Somewhat interested; 3.0=Very much interested; 9.0=Don't know; 0.0=no answer"
+  },
+  {
+    "feature_id": 42,
+    "feature": "VCF0310_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0310_10` derived from semantic feature `VCF0310`. Interpret this column as the encoded model input for that derived category/value. interest in the elections",
+    "values": "1.0=Not much interested; 2.0=Somewhat interested; 3.0=Very much interested; 9.0=Don't know; 0.0=no answer"
+  },
+  {
+    "feature_id": 43,
+    "feature": "VCF0310_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0310_20` derived from semantic feature `VCF0310`. Interpret this column as the encoded model input for that derived category/value. interest in the elections",
+    "values": "1.0=Not much interested; 2.0=Somewhat interested; 3.0=Very much interested; 9.0=Don't know; 0.0=no answer"
+  },
+  {
+    "feature_id": 44,
+    "feature": "VCF0310_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0310_30` derived from semantic feature `VCF0310`. Interpret this column as the encoded model input for that derived category/value. interest in the elections",
+    "values": "1.0=Not much interested; 2.0=Somewhat interested; 3.0=Very much interested; 9.0=Don't know; 0.0=no answer"
+  },
+  {
+    "feature_id": 45,
+    "feature": "VCF0310_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0310_90` derived from semantic feature `VCF0310`. Interpret this column as the encoded model input for that derived category/value. interest in the elections",
+    "values": "1.0=Not much interested; 2.0=Somewhat interested; 3.0=Very much interested; 9.0=Don't know; 0.0=no answer"
+  },
+  {
+    "feature_id": 46,
+    "feature": "VCF0310_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0310_no answer` derived from semantic feature `VCF0310`. Interpret this column as the encoded model input for that derived category/value. interest in the elections",
+    "values": "1.0=Not much interested; 2.0=Somewhat interested; 3.0=Very much interested; 9.0=Don't know; 0.0=no answer"
+  },
+  {
+    "feature_id": 47,
+    "feature": "VCF0428",
+    "type": "continuous",
+    "description": "President thermometer"
+  },
+  {
+    "feature_id": 48,
+    "feature": "VCF0429",
+    "type": "continuous",
+    "description": "Vice-president thermometer"
+  },
+  {
+    "feature_id": 49,
+    "feature": "VCF0521_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0521_00` derived from semantic feature `VCF0521`. Interpret this column as the encoded model input for that derived category/value. which party favors stronger government",
+    "values": "0.0=no answer; 1.0=Democrats; 2.0=No difference; 3.0=Republicans; 8.0=DK which party"
+  },
+  {
+    "feature_id": 50,
+    "feature": "VCF0521_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0521_10` derived from semantic feature `VCF0521`. Interpret this column as the encoded model input for that derived category/value. which party favors stronger government",
+    "values": "0.0=no answer; 1.0=Democrats; 2.0=No difference; 3.0=Republicans; 8.0=DK which party"
+  },
+  {
+    "feature_id": 51,
+    "feature": "VCF0521_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0521_20` derived from semantic feature `VCF0521`. Interpret this column as the encoded model input for that derived category/value. which party favors stronger government",
+    "values": "0.0=no answer; 1.0=Democrats; 2.0=No difference; 3.0=Republicans; 8.0=DK which party"
+  },
+  {
+    "feature_id": 52,
+    "feature": "VCF0521_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0521_30` derived from semantic feature `VCF0521`. Interpret this column as the encoded model input for that derived category/value. which party favors stronger government",
+    "values": "0.0=no answer; 1.0=Democrats; 2.0=No difference; 3.0=Republicans; 8.0=DK which party"
+  },
+  {
+    "feature_id": 53,
+    "feature": "VCF0521_80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0521_80` derived from semantic feature `VCF0521`. Interpret this column as the encoded model input for that derived category/value. which party favors stronger government",
+    "values": "0.0=no answer; 1.0=Democrats; 2.0=No difference; 3.0=Republicans; 8.0=DK which party"
+  },
+  {
+    "feature_id": 54,
+    "feature": "VCF0521_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0521_no answer` derived from semantic feature `VCF0521`. Interpret this column as the encoded model input for that derived category/value. which party favors stronger government",
+    "values": "0.0=no answer; 1.0=Democrats; 2.0=No difference; 3.0=Republicans; 8.0=DK which party"
+  },
+  {
+    "feature_id": 55,
+    "feature": "VCF0523_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0523_00` derived from semantic feature `VCF0523`. Interpret this column as the encoded model input for that derived category/value. which party favors military spending cut",
+    "values": "1.0=Democrats; 2.0=Not much difference; 3.0=Republicans; 8.0=no answer; 0.0=no answer"
+  },
+  {
+    "feature_id": 56,
+    "feature": "VCF0523_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0523_10` derived from semantic feature `VCF0523`. Interpret this column as the encoded model input for that derived category/value. which party favors military spending cut",
+    "values": "1.0=Democrats; 2.0=Not much difference; 3.0=Republicans; 8.0=no answer; 0.0=no answer"
+  },
+  {
+    "feature_id": 57,
+    "feature": "VCF0523_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0523_20` derived from semantic feature `VCF0523`. Interpret this column as the encoded model input for that derived category/value. which party favors military spending cut",
+    "values": "1.0=Democrats; 2.0=Not much difference; 3.0=Republicans; 8.0=no answer; 0.0=no answer"
+  },
+  {
+    "feature_id": 58,
+    "feature": "VCF0523_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0523_30` derived from semantic feature `VCF0523`. Interpret this column as the encoded model input for that derived category/value. which party favors military spending cut",
+    "values": "1.0=Democrats; 2.0=Not much difference; 3.0=Republicans; 8.0=no answer; 0.0=no answer"
+  },
+  {
+    "feature_id": 59,
+    "feature": "VCF0523_80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0523_80` derived from semantic feature `VCF0523`. Interpret this column as the encoded model input for that derived category/value. which party favors military spending cut",
+    "values": "1.0=Democrats; 2.0=Not much difference; 3.0=Republicans; 8.0=no answer; 0.0=no answer"
+  },
+  {
+    "feature_id": 60,
+    "feature": "VCF0523_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0523_no answer` derived from semantic feature `VCF0523`. Interpret this column as the encoded model input for that derived category/value. which party favors military spending cut",
+    "values": "1.0=Democrats; 2.0=Not much difference; 3.0=Republicans; 8.0=no answer; 0.0=no answer"
+  },
+  {
+    "feature_id": 61,
+    "feature": "VCF0601_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0601_00` derived from semantic feature `VCF0601`. Interpret this column as the encoded model input for that derived category/value. approve participation in protests",
+    "values": "1.0=Disapprove; 2.0=Pro-con, depends, don’t know; 3.0=Approve; 0.0=no answer"
+  },
+  {
+    "feature_id": 62,
+    "feature": "VCF0601_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0601_10` derived from semantic feature `VCF0601`. Interpret this column as the encoded model input for that derived category/value. approve participation in protests",
+    "values": "1.0=Disapprove; 2.0=Pro-con, depends, don’t know; 3.0=Approve; 0.0=no answer"
+  },
+  {
+    "feature_id": 63,
+    "feature": "VCF0601_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0601_20` derived from semantic feature `VCF0601`. Interpret this column as the encoded model input for that derived category/value. approve participation in protests",
+    "values": "1.0=Disapprove; 2.0=Pro-con, depends, don’t know; 3.0=Approve; 0.0=no answer"
+  },
+  {
+    "feature_id": 64,
+    "feature": "VCF0601_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0601_30` derived from semantic feature `VCF0601`. Interpret this column as the encoded model input for that derived category/value. approve participation in protests",
+    "values": "1.0=Disapprove; 2.0=Pro-con, depends, don’t know; 3.0=Approve; 0.0=no answer"
+  },
+  {
+    "feature_id": 65,
+    "feature": "VCF0601_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0601_no answer` derived from semantic feature `VCF0601`. Interpret this column as the encoded model input for that derived category/value. approve participation in protests",
+    "values": "1.0=Disapprove; 2.0=Pro-con, depends, don’t know; 3.0=Approve; 0.0=no answer"
+  },
+  {
+    "feature_id": 66,
+    "feature": "VCF0606_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0606_00` derived from semantic feature `VCF0606`. Interpret this column as the encoded model input for that derived category/value. how much does federal government waste tax money",
+    "values": "1.0=A lot; 2.0=Some; 3.0=Not very much; 9.0=Don't know; 0.0=no answer"
+  },
+  {
+    "feature_id": 67,
+    "feature": "VCF0606_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0606_10` derived from semantic feature `VCF0606`. Interpret this column as the encoded model input for that derived category/value. how much does federal government waste tax money",
+    "values": "1.0=A lot; 2.0=Some; 3.0=Not very much; 9.0=Don't know; 0.0=no answer"
+  },
+  {
+    "feature_id": 68,
+    "feature": "VCF0606_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0606_20` derived from semantic feature `VCF0606`. Interpret this column as the encoded model input for that derived category/value. how much does federal government waste tax money",
+    "values": "1.0=A lot; 2.0=Some; 3.0=Not very much; 9.0=Don't know; 0.0=no answer"
+  },
+  {
+    "feature_id": 69,
+    "feature": "VCF0606_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0606_30` derived from semantic feature `VCF0606`. Interpret this column as the encoded model input for that derived category/value. how much does federal government waste tax money",
+    "values": "1.0=A lot; 2.0=Some; 3.0=Not very much; 9.0=Don't know; 0.0=no answer"
+  },
+  {
+    "feature_id": 70,
+    "feature": "VCF0606_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0606_90` derived from semantic feature `VCF0606`. Interpret this column as the encoded model input for that derived category/value. how much does federal government waste tax money",
+    "values": "1.0=A lot; 2.0=Some; 3.0=Not very much; 9.0=Don't know; 0.0=no answer"
+  },
+  {
+    "feature_id": 71,
+    "feature": "VCF0606_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0606_no answer` derived from semantic feature `VCF0606`. Interpret this column as the encoded model input for that derived category/value. how much does federal government waste tax money",
+    "values": "1.0=A lot; 2.0=Some; 3.0=Not very much; 9.0=Don't know; 0.0=no answer"
+  },
+  {
+    "feature_id": 72,
+    "feature": "VCF0612_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0612_00` derived from semantic feature `VCF0612`. Interpret this column as the encoded model input for that derived category/value. voting is the only way to have a say in government",
+    "values": "1.0=Agree; 2.0=Disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 73,
+    "feature": "VCF0612_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0612_10` derived from semantic feature `VCF0612`. Interpret this column as the encoded model input for that derived category/value. voting is the only way to have a say in government",
+    "values": "1.0=Agree; 2.0=Disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 74,
+    "feature": "VCF0612_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0612_20` derived from semantic feature `VCF0612`. Interpret this column as the encoded model input for that derived category/value. voting is the only way to have a say in government",
+    "values": "1.0=Agree; 2.0=Disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 75,
+    "feature": "VCF0612_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0612_90` derived from semantic feature `VCF0612`. Interpret this column as the encoded model input for that derived category/value. voting is the only way to have a say in government",
+    "values": "1.0=Agree; 2.0=Disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 76,
+    "feature": "VCF0612_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0612_no answer` derived from semantic feature `VCF0612`. Interpret this column as the encoded model input for that derived category/value. voting is the only way to have a say in government",
+    "values": "1.0=Agree; 2.0=Disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 77,
+    "feature": "VCF0615_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0615_00` derived from semantic feature `VCF0615`. Interpret this column as the encoded model input for that derived category/value. it matters whether I vote",
+    "values": "1.0=Agree; 2.0=Disagree; 3.0=Neither agree nor disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 78,
+    "feature": "VCF0615_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0615_10` derived from semantic feature `VCF0615`. Interpret this column as the encoded model input for that derived category/value. it matters whether I vote",
+    "values": "1.0=Agree; 2.0=Disagree; 3.0=Neither agree nor disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 79,
+    "feature": "VCF0615_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0615_20` derived from semantic feature `VCF0615`. Interpret this column as the encoded model input for that derived category/value. it matters whether I vote",
+    "values": "1.0=Agree; 2.0=Disagree; 3.0=Neither agree nor disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 80,
+    "feature": "VCF0615_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0615_30` derived from semantic feature `VCF0615`. Interpret this column as the encoded model input for that derived category/value. it matters whether I vote",
+    "values": "1.0=Agree; 2.0=Disagree; 3.0=Neither agree nor disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 81,
+    "feature": "VCF0615_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0615_90` derived from semantic feature `VCF0615`. Interpret this column as the encoded model input for that derived category/value. it matters whether I vote",
+    "values": "1.0=Agree; 2.0=Disagree; 3.0=Neither agree nor disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 82,
+    "feature": "VCF0615_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0615_no answer` derived from semantic feature `VCF0615`. Interpret this column as the encoded model input for that derived category/value. it matters whether I vote",
+    "values": "1.0=Agree; 2.0=Disagree; 3.0=Neither agree nor disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 83,
+    "feature": "VCF0616_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0616_00` derived from semantic feature `VCF0616`. Interpret this column as the encoded model input for that derived category/value. those who don't care about election outcome should vote",
+    "values": "1.0=Agree; 2.0=Disagree; 3.0=Neither agree nor disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 84,
+    "feature": "VCF0616_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0616_10` derived from semantic feature `VCF0616`. Interpret this column as the encoded model input for that derived category/value. those who don't care about election outcome should vote",
+    "values": "1.0=Agree; 2.0=Disagree; 3.0=Neither agree nor disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 85,
+    "feature": "VCF0616_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0616_20` derived from semantic feature `VCF0616`. Interpret this column as the encoded model input for that derived category/value. those who don't care about election outcome should vote",
+    "values": "1.0=Agree; 2.0=Disagree; 3.0=Neither agree nor disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 86,
+    "feature": "VCF0616_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0616_30` derived from semantic feature `VCF0616`. Interpret this column as the encoded model input for that derived category/value. those who don't care about election outcome should vote",
+    "values": "1.0=Agree; 2.0=Disagree; 3.0=Neither agree nor disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 87,
+    "feature": "VCF0616_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0616_90` derived from semantic feature `VCF0616`. Interpret this column as the encoded model input for that derived category/value. those who don't care about election outcome should vote",
+    "values": "1.0=Agree; 2.0=Disagree; 3.0=Neither agree nor disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 88,
+    "feature": "VCF0616_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0616_no answer` derived from semantic feature `VCF0616`. Interpret this column as the encoded model input for that derived category/value. those who don't care about election outcome should vote",
+    "values": "1.0=Agree; 2.0=Disagree; 3.0=Neither agree nor disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 89,
+    "feature": "VCF0617_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0617_00` derived from semantic feature `VCF0617`. Interpret this column as the encoded model input for that derived category/value. someone should vote if their party can't win",
+    "values": "1.0=Agree; 2.0=Disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 90,
+    "feature": "VCF0617_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0617_10` derived from semantic feature `VCF0617`. Interpret this column as the encoded model input for that derived category/value. someone should vote if their party can't win",
+    "values": "1.0=Agree; 2.0=Disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 91,
+    "feature": "VCF0617_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0617_20` derived from semantic feature `VCF0617`. Interpret this column as the encoded model input for that derived category/value. someone should vote if their party can't win",
+    "values": "1.0=Agree; 2.0=Disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 92,
+    "feature": "VCF0617_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0617_90` derived from semantic feature `VCF0617`. Interpret this column as the encoded model input for that derived category/value. someone should vote if their party can't win",
+    "values": "1.0=Agree; 2.0=Disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 93,
+    "feature": "VCF0617_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0617_no answer` derived from semantic feature `VCF0617`. Interpret this column as the encoded model input for that derived category/value. someone should vote if their party can't win",
+    "values": "1.0=Agree; 2.0=Disagree; 9.0=Don't know or not sure; 0.0=no answer"
+  },
+  {
+    "feature_id": 94,
+    "feature": "VCF0675_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0675_10` derived from semantic feature `VCF0675`. Interpret this column as the encoded model input for that derived category/value. how much of the time can you trust the media to report the news fairly",
+    "values": "1.0=Just about always; 2.0=Most of the time; 3.0=Only some of the time; 4.0=Almost never; 5.0=Never; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 95,
+    "feature": "VCF0675_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0675_20` derived from semantic feature `VCF0675`. Interpret this column as the encoded model input for that derived category/value. how much of the time can you trust the media to report the news fairly",
+    "values": "1.0=Just about always; 2.0=Most of the time; 3.0=Only some of the time; 4.0=Almost never; 5.0=Never; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 96,
+    "feature": "VCF0675_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0675_30` derived from semantic feature `VCF0675`. Interpret this column as the encoded model input for that derived category/value. how much of the time can you trust the media to report the news fairly",
+    "values": "1.0=Just about always; 2.0=Most of the time; 3.0=Only some of the time; 4.0=Almost never; 5.0=Never; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 97,
+    "feature": "VCF0675_40",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0675_40` derived from semantic feature `VCF0675`. Interpret this column as the encoded model input for that derived category/value. how much of the time can you trust the media to report the news fairly",
+    "values": "1.0=Just about always; 2.0=Most of the time; 3.0=Only some of the time; 4.0=Almost never; 5.0=Never; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 98,
+    "feature": "VCF0675_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0675_50` derived from semantic feature `VCF0675`. Interpret this column as the encoded model input for that derived category/value. how much of the time can you trust the media to report the news fairly",
+    "values": "1.0=Just about always; 2.0=Most of the time; 3.0=Only some of the time; 4.0=Almost never; 5.0=Never; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 99,
+    "feature": "VCF0675_80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0675_80` derived from semantic feature `VCF0675`. Interpret this column as the encoded model input for that derived category/value. how much of the time can you trust the media to report the news fairly",
+    "values": "1.0=Just about always; 2.0=Most of the time; 3.0=Only some of the time; 4.0=Almost never; 5.0=Never; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 100,
+    "feature": "VCF0675_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0675_90` derived from semantic feature `VCF0675`. Interpret this column as the encoded model input for that derived category/value. how much of the time can you trust the media to report the news fairly",
+    "values": "1.0=Just about always; 2.0=Most of the time; 3.0=Only some of the time; 4.0=Almost never; 5.0=Never; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 101,
+    "feature": "VCF0675_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0675_no answer` derived from semantic feature `VCF0675`. Interpret this column as the encoded model input for that derived category/value. how much of the time can you trust the media to report the news fairly",
+    "values": "1.0=Just about always; 2.0=Most of the time; 3.0=Only some of the time; 4.0=Almost never; 5.0=Never; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 102,
+    "feature": "VCF0701_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0701_00` derived from semantic feature `VCF0701`. Interpret this column as the encoded model input for that derived category/value. registered to vote pre-election",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 103,
+    "feature": "VCF0701_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0701_10` derived from semantic feature `VCF0701`. Interpret this column as the encoded model input for that derived category/value. registered to vote pre-election",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 104,
+    "feature": "VCF0701_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0701_20` derived from semantic feature `VCF0701`. Interpret this column as the encoded model input for that derived category/value. registered to vote pre-election",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 105,
+    "feature": "VCF0701_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0701_no answer` derived from semantic feature `VCF0701`. Interpret this column as the encoded model input for that derived category/value. registered to vote pre-election",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 106,
+    "feature": "VCF0717_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0717_00` derived from semantic feature `VCF0717`. Interpret this column as the encoded model input for that derived category/value. tried to influence others during campaign",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 107,
+    "feature": "VCF0717_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0717_10` derived from semantic feature `VCF0717`. Interpret this column as the encoded model input for that derived category/value. tried to influence others during campaign",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 108,
+    "feature": "VCF0717_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0717_20` derived from semantic feature `VCF0717`. Interpret this column as the encoded model input for that derived category/value. tried to influence others during campaign",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 109,
+    "feature": "VCF0717_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0717_no answer` derived from semantic feature `VCF0717`. Interpret this column as the encoded model input for that derived category/value. tried to influence others during campaign",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 110,
+    "feature": "VCF0718_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0718_00` derived from semantic feature `VCF0718`. Interpret this column as the encoded model input for that derived category/value. attended political meetings/rallies during campaign",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 111,
+    "feature": "VCF0718_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0718_10` derived from semantic feature `VCF0718`. Interpret this column as the encoded model input for that derived category/value. attended political meetings/rallies during campaign",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 112,
+    "feature": "VCF0718_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0718_20` derived from semantic feature `VCF0718`. Interpret this column as the encoded model input for that derived category/value. attended political meetings/rallies during campaign",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 113,
+    "feature": "VCF0718_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0718_no answer` derived from semantic feature `VCF0718`. Interpret this column as the encoded model input for that derived category/value. attended political meetings/rallies during campaign",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 114,
+    "feature": "VCF0720_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0720_00` derived from semantic feature `VCF0720`. Interpret this column as the encoded model input for that derived category/value. displayed candidate button/sticker during campaign",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 115,
+    "feature": "VCF0720_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0720_10` derived from semantic feature `VCF0720`. Interpret this column as the encoded model input for that derived category/value. displayed candidate button/sticker during campaign",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 116,
+    "feature": "VCF0720_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0720_20` derived from semantic feature `VCF0720`. Interpret this column as the encoded model input for that derived category/value. displayed candidate button/sticker during campaign",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 117,
+    "feature": "VCF0720_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0720_no answer` derived from semantic feature `VCF0720`. Interpret this column as the encoded model input for that derived category/value. displayed candidate button/sticker during campaign",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 118,
+    "feature": "VCF0721_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0721_00` derived from semantic feature `VCF0721`. Interpret this column as the encoded model input for that derived category/value. donated money to party or candidate during campaign",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 119,
+    "feature": "VCF0721_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0721_10` derived from semantic feature `VCF0721`. Interpret this column as the encoded model input for that derived category/value. donated money to party or candidate during campaign",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 120,
+    "feature": "VCF0721_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0721_20` derived from semantic feature `VCF0721`. Interpret this column as the encoded model input for that derived category/value. donated money to party or candidate during campaign",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 121,
+    "feature": "VCF0721_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0721_no answer` derived from semantic feature `VCF0721`. Interpret this column as the encoded model input for that derived category/value. donated money to party or candidate during campaign",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 122,
+    "feature": "VCF0724_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0724_00` derived from semantic feature `VCF0724`. Interpret this column as the encoded model input for that derived category/value. watched TV programs about the election campaigns",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 123,
+    "feature": "VCF0724_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0724_10` derived from semantic feature `VCF0724`. Interpret this column as the encoded model input for that derived category/value. watched TV programs about the election campaigns",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 124,
+    "feature": "VCF0724_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0724_20` derived from semantic feature `VCF0724`. Interpret this column as the encoded model input for that derived category/value. watched TV programs about the election campaigns",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 125,
+    "feature": "VCF0724_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0724_no answer` derived from semantic feature `VCF0724`. Interpret this column as the encoded model input for that derived category/value. watched TV programs about the election campaigns",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 126,
+    "feature": "VCF0725_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0725_00` derived from semantic feature `VCF0725`. Interpret this column as the encoded model input for that derived category/value. heard radio programs about the election campaigns",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 127,
+    "feature": "VCF0725_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0725_10` derived from semantic feature `VCF0725`. Interpret this column as the encoded model input for that derived category/value. heard radio programs about the election campaigns",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 128,
+    "feature": "VCF0725_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0725_20` derived from semantic feature `VCF0725`. Interpret this column as the encoded model input for that derived category/value. heard radio programs about the election campaigns",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 129,
+    "feature": "VCF0725_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0725_no answer` derived from semantic feature `VCF0725`. Interpret this column as the encoded model input for that derived category/value. heard radio programs about the election campaigns",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 130,
+    "feature": "VCF0726_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0726_00` derived from semantic feature `VCF0726`. Interpret this column as the encoded model input for that derived category/value. read about the election campaigns in magazines",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 131,
+    "feature": "VCF0726_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0726_10` derived from semantic feature `VCF0726`. Interpret this column as the encoded model input for that derived category/value. read about the election campaigns in magazines",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 132,
+    "feature": "VCF0726_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0726_20` derived from semantic feature `VCF0726`. Interpret this column as the encoded model input for that derived category/value. read about the election campaigns in magazines",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 133,
+    "feature": "VCF0726_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0726_no answer` derived from semantic feature `VCF0726`. Interpret this column as the encoded model input for that derived category/value. read about the election campaigns in magazines",
+    "values": "1.0=No; 2.0=Yes; 0.0=no answer"
+  },
+  {
+    "feature_id": 134,
+    "feature": "VCF0743_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0743_10` derived from semantic feature `VCF0743`. Interpret this column as the encoded model input for that derived category/value. belongs to political organization or club",
+    "values": "1.0=Yes; 5.0=No; 9.0=no answer"
+  },
+  {
+    "feature_id": 135,
+    "feature": "VCF0743_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0743_50` derived from semantic feature `VCF0743`. Interpret this column as the encoded model input for that derived category/value. belongs to political organization or club",
+    "values": "1.0=Yes; 5.0=No; 9.0=no answer"
+  },
+  {
+    "feature_id": 136,
+    "feature": "VCF0743_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0743_90` derived from semantic feature `VCF0743`. Interpret this column as the encoded model input for that derived category/value. belongs to political organization or club",
+    "values": "1.0=Yes; 5.0=No; 9.0=no answer"
+  },
+  {
+    "feature_id": 137,
+    "feature": "VCF0743_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0743_no answer` derived from semantic feature `VCF0743`. Interpret this column as the encoded model input for that derived category/value. belongs to political organization or club",
+    "values": "1.0=Yes; 5.0=No; 9.0=no answer"
+  },
+  {
+    "feature_id": 138,
+    "feature": "VCF0745_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0745_10` derived from semantic feature `VCF0745`. Interpret this column as the encoded model input for that derived category/value. saw election campaign information on the internet",
+    "values": "1.0=Yes; 5.0=No; 9.0=no answer"
+  },
+  {
+    "feature_id": 139,
+    "feature": "VCF0745_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0745_50` derived from semantic feature `VCF0745`. Interpret this column as the encoded model input for that derived category/value. saw election campaign information on the internet",
+    "values": "1.0=Yes; 5.0=No; 9.0=no answer"
+  },
+  {
+    "feature_id": 140,
+    "feature": "VCF0745_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0745_90` derived from semantic feature `VCF0745`. Interpret this column as the encoded model input for that derived category/value. saw election campaign information on the internet",
+    "values": "1.0=Yes; 5.0=No; 9.0=no answer"
+  },
+  {
+    "feature_id": 141,
+    "feature": "VCF0745_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0745_no answer` derived from semantic feature `VCF0745`. Interpret this column as the encoded model input for that derived category/value. saw election campaign information on the internet",
+    "values": "1.0=Yes; 5.0=No; 9.0=no answer"
+  },
+  {
+    "feature_id": 142,
+    "feature": "VCF0803_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0803_00` derived from semantic feature `VCF0803`. Interpret this column as the encoded model input for that derived category/value. liberal-conservative scale",
+    "values": "1.0=Extremely liberal; 2.0=Liberal; 3.0=Slightly liberal; 4.0=Moderate, middle of the road; 5.0=Slightly conservative; 6.0=Conservative; 7.0=Extremely conservative; 9.0=Don't know; haven’t thought much about it; 0.0=no answer"
+  },
+  {
+    "feature_id": 143,
+    "feature": "VCF0803_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0803_10` derived from semantic feature `VCF0803`. Interpret this column as the encoded model input for that derived category/value. liberal-conservative scale",
+    "values": "1.0=Extremely liberal; 2.0=Liberal; 3.0=Slightly liberal; 4.0=Moderate, middle of the road; 5.0=Slightly conservative; 6.0=Conservative; 7.0=Extremely conservative; 9.0=Don't know; haven’t thought much about it; 0.0=no answer"
+  },
+  {
+    "feature_id": 144,
+    "feature": "VCF0803_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0803_20` derived from semantic feature `VCF0803`. Interpret this column as the encoded model input for that derived category/value. liberal-conservative scale",
+    "values": "1.0=Extremely liberal; 2.0=Liberal; 3.0=Slightly liberal; 4.0=Moderate, middle of the road; 5.0=Slightly conservative; 6.0=Conservative; 7.0=Extremely conservative; 9.0=Don't know; haven’t thought much about it; 0.0=no answer"
+  },
+  {
+    "feature_id": 145,
+    "feature": "VCF0803_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0803_30` derived from semantic feature `VCF0803`. Interpret this column as the encoded model input for that derived category/value. liberal-conservative scale",
+    "values": "1.0=Extremely liberal; 2.0=Liberal; 3.0=Slightly liberal; 4.0=Moderate, middle of the road; 5.0=Slightly conservative; 6.0=Conservative; 7.0=Extremely conservative; 9.0=Don't know; haven’t thought much about it; 0.0=no answer"
+  },
+  {
+    "feature_id": 146,
+    "feature": "VCF0803_40",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0803_40` derived from semantic feature `VCF0803`. Interpret this column as the encoded model input for that derived category/value. liberal-conservative scale",
+    "values": "1.0=Extremely liberal; 2.0=Liberal; 3.0=Slightly liberal; 4.0=Moderate, middle of the road; 5.0=Slightly conservative; 6.0=Conservative; 7.0=Extremely conservative; 9.0=Don't know; haven’t thought much about it; 0.0=no answer"
+  },
+  {
+    "feature_id": 147,
+    "feature": "VCF0803_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0803_50` derived from semantic feature `VCF0803`. Interpret this column as the encoded model input for that derived category/value. liberal-conservative scale",
+    "values": "1.0=Extremely liberal; 2.0=Liberal; 3.0=Slightly liberal; 4.0=Moderate, middle of the road; 5.0=Slightly conservative; 6.0=Conservative; 7.0=Extremely conservative; 9.0=Don't know; haven’t thought much about it; 0.0=no answer"
+  },
+  {
+    "feature_id": 148,
+    "feature": "VCF0803_60",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0803_60` derived from semantic feature `VCF0803`. Interpret this column as the encoded model input for that derived category/value. liberal-conservative scale",
+    "values": "1.0=Extremely liberal; 2.0=Liberal; 3.0=Slightly liberal; 4.0=Moderate, middle of the road; 5.0=Slightly conservative; 6.0=Conservative; 7.0=Extremely conservative; 9.0=Don't know; haven’t thought much about it; 0.0=no answer"
+  },
+  {
+    "feature_id": 149,
+    "feature": "VCF0803_70",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0803_70` derived from semantic feature `VCF0803`. Interpret this column as the encoded model input for that derived category/value. liberal-conservative scale",
+    "values": "1.0=Extremely liberal; 2.0=Liberal; 3.0=Slightly liberal; 4.0=Moderate, middle of the road; 5.0=Slightly conservative; 6.0=Conservative; 7.0=Extremely conservative; 9.0=Don't know; haven’t thought much about it; 0.0=no answer"
+  },
+  {
+    "feature_id": 150,
+    "feature": "VCF0803_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0803_90` derived from semantic feature `VCF0803`. Interpret this column as the encoded model input for that derived category/value. liberal-conservative scale",
+    "values": "1.0=Extremely liberal; 2.0=Liberal; 3.0=Slightly liberal; 4.0=Moderate, middle of the road; 5.0=Slightly conservative; 6.0=Conservative; 7.0=Extremely conservative; 9.0=Don't know; haven’t thought much about it; 0.0=no answer"
+  },
+  {
+    "feature_id": 151,
+    "feature": "VCF0803_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0803_no answer` derived from semantic feature `VCF0803`. Interpret this column as the encoded model input for that derived category/value. liberal-conservative scale",
+    "values": "1.0=Extremely liberal; 2.0=Liberal; 3.0=Slightly liberal; 4.0=Moderate, middle of the road; 5.0=Slightly conservative; 6.0=Conservative; 7.0=Extremely conservative; 9.0=Don't know; haven’t thought much about it; 0.0=no answer"
+  },
+  {
+    "feature_id": 152,
+    "feature": "VCF0809_-10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0809_-10` derived from semantic feature `VCF0809`. Interpret this column as the encoded model input for that derived category/value. guaranteed jobs and income scale (support/don't support)"
+  },
+  {
+    "feature_id": 153,
+    "feature": "VCF0809_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0809_00` derived from semantic feature `VCF0809`. Interpret this column as the encoded model input for that derived category/value. guaranteed jobs and income scale (support/don't support)"
+  },
+  {
+    "feature_id": 154,
+    "feature": "VCF0809_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0809_10` derived from semantic feature `VCF0809`. Interpret this column as the encoded model input for that derived category/value. guaranteed jobs and income scale (support/don't support)"
+  },
+  {
+    "feature_id": 155,
+    "feature": "VCF0809_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0809_20` derived from semantic feature `VCF0809`. Interpret this column as the encoded model input for that derived category/value. guaranteed jobs and income scale (support/don't support)"
+  },
+  {
+    "feature_id": 156,
+    "feature": "VCF0809_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0809_30` derived from semantic feature `VCF0809`. Interpret this column as the encoded model input for that derived category/value. guaranteed jobs and income scale (support/don't support)"
+  },
+  {
+    "feature_id": 157,
+    "feature": "VCF0809_40",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0809_40` derived from semantic feature `VCF0809`. Interpret this column as the encoded model input for that derived category/value. guaranteed jobs and income scale (support/don't support)"
+  },
+  {
+    "feature_id": 158,
+    "feature": "VCF0809_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0809_50` derived from semantic feature `VCF0809`. Interpret this column as the encoded model input for that derived category/value. guaranteed jobs and income scale (support/don't support)"
+  },
+  {
+    "feature_id": 159,
+    "feature": "VCF0809_60",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0809_60` derived from semantic feature `VCF0809`. Interpret this column as the encoded model input for that derived category/value. guaranteed jobs and income scale (support/don't support)"
+  },
+  {
+    "feature_id": 160,
+    "feature": "VCF0809_70",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0809_70` derived from semantic feature `VCF0809`. Interpret this column as the encoded model input for that derived category/value. guaranteed jobs and income scale (support/don't support)"
+  },
+  {
+    "feature_id": 161,
+    "feature": "VCF0809_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0809_90` derived from semantic feature `VCF0809`. Interpret this column as the encoded model input for that derived category/value. guaranteed jobs and income scale (support/don't support)"
+  },
+  {
+    "feature_id": 162,
+    "feature": "VCF0809_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0809_no answer` derived from semantic feature `VCF0809`. Interpret this column as the encoded model input for that derived category/value. guaranteed jobs and income scale (support/don't support)"
+  },
+  {
+    "feature_id": 163,
+    "feature": "VCF0822_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0822_00` derived from semantic feature `VCF0822`. Interpret this column as the encoded model input for that derived category/value. rating of government economic policy",
+    "values": "1.0=Poor job; 2.0=Only fair; 3.0=Good job; 0.0=no answer; 9.0=no answer"
+  },
+  {
+    "feature_id": 164,
+    "feature": "VCF0822_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0822_10` derived from semantic feature `VCF0822`. Interpret this column as the encoded model input for that derived category/value. rating of government economic policy",
+    "values": "1.0=Poor job; 2.0=Only fair; 3.0=Good job; 0.0=no answer; 9.0=no answer"
+  },
+  {
+    "feature_id": 165,
+    "feature": "VCF0822_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0822_20` derived from semantic feature `VCF0822`. Interpret this column as the encoded model input for that derived category/value. rating of government economic policy",
+    "values": "1.0=Poor job; 2.0=Only fair; 3.0=Good job; 0.0=no answer; 9.0=no answer"
+  },
+  {
+    "feature_id": 166,
+    "feature": "VCF0822_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0822_30` derived from semantic feature `VCF0822`. Interpret this column as the encoded model input for that derived category/value. rating of government economic policy",
+    "values": "1.0=Poor job; 2.0=Only fair; 3.0=Good job; 0.0=no answer; 9.0=no answer"
+  },
+  {
+    "feature_id": 167,
+    "feature": "VCF0822_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0822_90` derived from semantic feature `VCF0822`. Interpret this column as the encoded model input for that derived category/value. rating of government economic policy",
+    "values": "1.0=Poor job; 2.0=Only fair; 3.0=Good job; 0.0=no answer; 9.0=no answer"
+  },
+  {
+    "feature_id": 168,
+    "feature": "VCF0822_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0822_no answer` derived from semantic feature `VCF0822`. Interpret this column as the encoded model input for that derived category/value. rating of government economic policy",
+    "values": "1.0=Poor job; 2.0=Only fair; 3.0=Good job; 0.0=no answer; 9.0=no answer"
+  },
+  {
+    "feature_id": 169,
+    "feature": "VCF0838_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0838_00` derived from semantic feature `VCF0838`. Interpret this column as the encoded model input for that derived category/value. when should abortion be allowed by law",
+    "values": "1.0=By law, abortion should never be permitted.; 2.0=The law should permit abortion only in case of rape, incest, or when the woman’s life is in danger.; 3.0=The law should permit abortion for reasons other than rape, incest, or danger to the woman’s life,..."
+  },
+  {
+    "feature_id": 170,
+    "feature": "VCF0838_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0838_10` derived from semantic feature `VCF0838`. Interpret this column as the encoded model input for that derived category/value. when should abortion be allowed by law",
+    "values": "1.0=By law, abortion should never be permitted.; 2.0=The law should permit abortion only in case of rape, incest, or when the woman’s life is in danger.; 3.0=The law should permit abortion for reasons other than rape, incest, or danger to the woman’s life,..."
+  },
+  {
+    "feature_id": 171,
+    "feature": "VCF0838_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0838_20` derived from semantic feature `VCF0838`. Interpret this column as the encoded model input for that derived category/value. when should abortion be allowed by law",
+    "values": "1.0=By law, abortion should never be permitted.; 2.0=The law should permit abortion only in case of rape, incest, or when the woman’s life is in danger.; 3.0=The law should permit abortion for reasons other than rape, incest, or danger to the woman’s life,..."
+  },
+  {
+    "feature_id": 172,
+    "feature": "VCF0838_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0838_30` derived from semantic feature `VCF0838`. Interpret this column as the encoded model input for that derived category/value. when should abortion be allowed by law",
+    "values": "1.0=By law, abortion should never be permitted.; 2.0=The law should permit abortion only in case of rape, incest, or when the woman’s life is in danger.; 3.0=The law should permit abortion for reasons other than rape, incest, or danger to the woman’s life,..."
+  },
+  {
+    "feature_id": 173,
+    "feature": "VCF0838_40",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0838_40` derived from semantic feature `VCF0838`. Interpret this column as the encoded model input for that derived category/value. when should abortion be allowed by law",
+    "values": "1.0=By law, abortion should never be permitted.; 2.0=The law should permit abortion only in case of rape, incest, or when the woman’s life is in danger.; 3.0=The law should permit abortion for reasons other than rape, incest, or danger to the woman’s life,..."
+  },
+  {
+    "feature_id": 174,
+    "feature": "VCF0838_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0838_90` derived from semantic feature `VCF0838`. Interpret this column as the encoded model input for that derived category/value. when should abortion be allowed by law",
+    "values": "1.0=By law, abortion should never be permitted.; 2.0=The law should permit abortion only in case of rape, incest, or when the woman’s life is in danger.; 3.0=The law should permit abortion for reasons other than rape, incest, or danger to the woman’s life,..."
+  },
+  {
+    "feature_id": 175,
+    "feature": "VCF0838_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0838_no answer` derived from semantic feature `VCF0838`. Interpret this column as the encoded model input for that derived category/value. when should abortion be allowed by law",
+    "values": "1.0=By law, abortion should never be permitted.; 2.0=The law should permit abortion only in case of rape, incest, or when the woman’s life is in danger.; 3.0=The law should permit abortion for reasons other than rape, incest, or danger to the woman’s life,..."
+  },
+  {
+    "feature_id": 176,
+    "feature": "VCF0839_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0839_00` derived from semantic feature `VCF0839`. Interpret this column as the encoded model input for that derived category/value. government services and spending scale (fewer/more services)"
+  },
+  {
+    "feature_id": 177,
+    "feature": "VCF0839_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0839_10` derived from semantic feature `VCF0839`. Interpret this column as the encoded model input for that derived category/value. government services and spending scale (fewer/more services)"
+  },
+  {
+    "feature_id": 178,
+    "feature": "VCF0839_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0839_20` derived from semantic feature `VCF0839`. Interpret this column as the encoded model input for that derived category/value. government services and spending scale (fewer/more services)"
+  },
+  {
+    "feature_id": 179,
+    "feature": "VCF0839_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0839_30` derived from semantic feature `VCF0839`. Interpret this column as the encoded model input for that derived category/value. government services and spending scale (fewer/more services)"
+  },
+  {
+    "feature_id": 180,
+    "feature": "VCF0839_40",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0839_40` derived from semantic feature `VCF0839`. Interpret this column as the encoded model input for that derived category/value. government services and spending scale (fewer/more services)"
+  },
+  {
+    "feature_id": 181,
+    "feature": "VCF0839_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0839_50` derived from semantic feature `VCF0839`. Interpret this column as the encoded model input for that derived category/value. government services and spending scale (fewer/more services)"
+  },
+  {
+    "feature_id": 182,
+    "feature": "VCF0839_60",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0839_60` derived from semantic feature `VCF0839`. Interpret this column as the encoded model input for that derived category/value. government services and spending scale (fewer/more services)"
+  },
+  {
+    "feature_id": 183,
+    "feature": "VCF0839_70",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0839_70` derived from semantic feature `VCF0839`. Interpret this column as the encoded model input for that derived category/value. government services and spending scale (fewer/more services)"
+  },
+  {
+    "feature_id": 184,
+    "feature": "VCF0839_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0839_90` derived from semantic feature `VCF0839`. Interpret this column as the encoded model input for that derived category/value. government services and spending scale (fewer/more services)"
+  },
+  {
+    "feature_id": 185,
+    "feature": "VCF0839_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0839_no answer` derived from semantic feature `VCF0839`. Interpret this column as the encoded model input for that derived category/value. government services and spending scale (fewer/more services)"
+  },
+  {
+    "feature_id": 186,
+    "feature": "VCF0843_-10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0843_-10` derived from semantic feature `VCF0843`. Interpret this column as the encoded model input for that derived category/value. defense spending scale (decrease/increase)"
+  },
+  {
+    "feature_id": 187,
+    "feature": "VCF0843_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0843_00` derived from semantic feature `VCF0843`. Interpret this column as the encoded model input for that derived category/value. defense spending scale (decrease/increase)"
+  },
+  {
+    "feature_id": 188,
+    "feature": "VCF0843_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0843_10` derived from semantic feature `VCF0843`. Interpret this column as the encoded model input for that derived category/value. defense spending scale (decrease/increase)"
+  },
+  {
+    "feature_id": 189,
+    "feature": "VCF0843_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0843_20` derived from semantic feature `VCF0843`. Interpret this column as the encoded model input for that derived category/value. defense spending scale (decrease/increase)"
+  },
+  {
+    "feature_id": 190,
+    "feature": "VCF0843_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0843_30` derived from semantic feature `VCF0843`. Interpret this column as the encoded model input for that derived category/value. defense spending scale (decrease/increase)"
+  },
+  {
+    "feature_id": 191,
+    "feature": "VCF0843_40",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0843_40` derived from semantic feature `VCF0843`. Interpret this column as the encoded model input for that derived category/value. defense spending scale (decrease/increase)"
+  },
+  {
+    "feature_id": 192,
+    "feature": "VCF0843_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0843_50` derived from semantic feature `VCF0843`. Interpret this column as the encoded model input for that derived category/value. defense spending scale (decrease/increase)"
+  },
+  {
+    "feature_id": 193,
+    "feature": "VCF0843_60",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0843_60` derived from semantic feature `VCF0843`. Interpret this column as the encoded model input for that derived category/value. defense spending scale (decrease/increase)"
+  },
+  {
+    "feature_id": 194,
+    "feature": "VCF0843_70",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0843_70` derived from semantic feature `VCF0843`. Interpret this column as the encoded model input for that derived category/value. defense spending scale (decrease/increase)"
+  },
+  {
+    "feature_id": 195,
+    "feature": "VCF0843_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0843_90` derived from semantic feature `VCF0843`. Interpret this column as the encoded model input for that derived category/value. defense spending scale (decrease/increase)"
+  },
+  {
+    "feature_id": 196,
+    "feature": "VCF0843_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0843_no answer` derived from semantic feature `VCF0843`. Interpret this column as the encoded model input for that derived category/value. defense spending scale (decrease/increase)"
+  },
+  {
+    "feature_id": 197,
+    "feature": "VCF0846_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0846_00` derived from semantic feature `VCF0846`. Interpret this column as the encoded model input for that derived category/value. importance of religion",
+    "values": "1.0=Yes, important; 2.0=Little to no importance; 0.0=no answer; 8.0=no answer"
+  },
+  {
+    "feature_id": 198,
+    "feature": "VCF0846_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0846_10` derived from semantic feature `VCF0846`. Interpret this column as the encoded model input for that derived category/value. importance of religion",
+    "values": "1.0=Yes, important; 2.0=Little to no importance; 0.0=no answer; 8.0=no answer"
+  },
+  {
+    "feature_id": 199,
+    "feature": "VCF0846_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0846_20` derived from semantic feature `VCF0846`. Interpret this column as the encoded model input for that derived category/value. importance of religion",
+    "values": "1.0=Yes, important; 2.0=Little to no importance; 0.0=no answer; 8.0=no answer"
+  },
+  {
+    "feature_id": 200,
+    "feature": "VCF0846_80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0846_80` derived from semantic feature `VCF0846`. Interpret this column as the encoded model input for that derived category/value. importance of religion",
+    "values": "1.0=Yes, important; 2.0=Little to no importance; 0.0=no answer; 8.0=no answer"
+  },
+  {
+    "feature_id": 201,
+    "feature": "VCF0846_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0846_no answer` derived from semantic feature `VCF0846`. Interpret this column as the encoded model input for that derived category/value. importance of religion",
+    "values": "1.0=Yes, important; 2.0=Little to no importance; 0.0=no answer; 8.0=no answer"
+  },
+  {
+    "feature_id": 202,
+    "feature": "VCF0870_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0870_00` derived from semantic feature `VCF0870`. Interpret this column as the encoded model input for that derived category/value. better or worse economy in past year",
+    "values": "1.0=Better; 3.0=Stayed same; 5.0=Worse; 0.0=no answer; 8.0=no answer"
+  },
+  {
+    "feature_id": 203,
+    "feature": "VCF0870_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0870_10` derived from semantic feature `VCF0870`. Interpret this column as the encoded model input for that derived category/value. better or worse economy in past year",
+    "values": "1.0=Better; 3.0=Stayed same; 5.0=Worse; 0.0=no answer; 8.0=no answer"
+  },
+  {
+    "feature_id": 204,
+    "feature": "VCF0870_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0870_30` derived from semantic feature `VCF0870`. Interpret this column as the encoded model input for that derived category/value. better or worse economy in past year",
+    "values": "1.0=Better; 3.0=Stayed same; 5.0=Worse; 0.0=no answer; 8.0=no answer"
+  },
+  {
+    "feature_id": 205,
+    "feature": "VCF0870_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0870_50` derived from semantic feature `VCF0870`. Interpret this column as the encoded model input for that derived category/value. better or worse economy in past year",
+    "values": "1.0=Better; 3.0=Stayed same; 5.0=Worse; 0.0=no answer; 8.0=no answer"
+  },
+  {
+    "feature_id": 206,
+    "feature": "VCF0870_80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0870_80` derived from semantic feature `VCF0870`. Interpret this column as the encoded model input for that derived category/value. better or worse economy in past year",
+    "values": "1.0=Better; 3.0=Stayed same; 5.0=Worse; 0.0=no answer; 8.0=no answer"
+  },
+  {
+    "feature_id": 207,
+    "feature": "VCF0870_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0870_no answer` derived from semantic feature `VCF0870`. Interpret this column as the encoded model input for that derived category/value. better or worse economy in past year",
+    "values": "1.0=Better; 3.0=Stayed same; 5.0=Worse; 0.0=no answer; 8.0=no answer"
+  },
+  {
+    "feature_id": 208,
+    "feature": "VCF0875_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0875_00` derived from semantic feature `VCF0875`. Interpret this column as the encoded model input for that derived category/value. most important national problem",
+    "values": "1.0=AGRICULTURAL; 2.0=ECONOMICS; BUSINESS; CONSUMER ISSUES; 3.0=FOREIGN AFFAIRS AND NATIONAL DEFENSE; 4.0=GOVERNMENT FUNCTIONING; 5.0=LABOR ISSUES; 6.0=NATURAL RESOURCES; 7.0=PUBLIC ORDER; 8.0=RACIAL PROBLEMS; 9.0=SOCIAL WELFARE; 97.0=Other problems; 98.0=n..."
+  },
+  {
+    "feature_id": 209,
+    "feature": "VCF0875_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0875_10` derived from semantic feature `VCF0875`. Interpret this column as the encoded model input for that derived category/value. most important national problem",
+    "values": "1.0=AGRICULTURAL; 2.0=ECONOMICS; BUSINESS; CONSUMER ISSUES; 3.0=FOREIGN AFFAIRS AND NATIONAL DEFENSE; 4.0=GOVERNMENT FUNCTIONING; 5.0=LABOR ISSUES; 6.0=NATURAL RESOURCES; 7.0=PUBLIC ORDER; 8.0=RACIAL PROBLEMS; 9.0=SOCIAL WELFARE; 97.0=Other problems; 98.0=n..."
+  },
+  {
+    "feature_id": 210,
+    "feature": "VCF0875_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0875_20` derived from semantic feature `VCF0875`. Interpret this column as the encoded model input for that derived category/value. most important national problem",
+    "values": "1.0=AGRICULTURAL; 2.0=ECONOMICS; BUSINESS; CONSUMER ISSUES; 3.0=FOREIGN AFFAIRS AND NATIONAL DEFENSE; 4.0=GOVERNMENT FUNCTIONING; 5.0=LABOR ISSUES; 6.0=NATURAL RESOURCES; 7.0=PUBLIC ORDER; 8.0=RACIAL PROBLEMS; 9.0=SOCIAL WELFARE; 97.0=Other problems; 98.0=n..."
+  },
+  {
+    "feature_id": 211,
+    "feature": "VCF0875_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0875_30` derived from semantic feature `VCF0875`. Interpret this column as the encoded model input for that derived category/value. most important national problem",
+    "values": "1.0=AGRICULTURAL; 2.0=ECONOMICS; BUSINESS; CONSUMER ISSUES; 3.0=FOREIGN AFFAIRS AND NATIONAL DEFENSE; 4.0=GOVERNMENT FUNCTIONING; 5.0=LABOR ISSUES; 6.0=NATURAL RESOURCES; 7.0=PUBLIC ORDER; 8.0=RACIAL PROBLEMS; 9.0=SOCIAL WELFARE; 97.0=Other problems; 98.0=n..."
+  },
+  {
+    "feature_id": 212,
+    "feature": "VCF0875_40",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0875_40` derived from semantic feature `VCF0875`. Interpret this column as the encoded model input for that derived category/value. most important national problem",
+    "values": "1.0=AGRICULTURAL; 2.0=ECONOMICS; BUSINESS; CONSUMER ISSUES; 3.0=FOREIGN AFFAIRS AND NATIONAL DEFENSE; 4.0=GOVERNMENT FUNCTIONING; 5.0=LABOR ISSUES; 6.0=NATURAL RESOURCES; 7.0=PUBLIC ORDER; 8.0=RACIAL PROBLEMS; 9.0=SOCIAL WELFARE; 97.0=Other problems; 98.0=n..."
+  },
+  {
+    "feature_id": 213,
+    "feature": "VCF0875_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0875_50` derived from semantic feature `VCF0875`. Interpret this column as the encoded model input for that derived category/value. most important national problem",
+    "values": "1.0=AGRICULTURAL; 2.0=ECONOMICS; BUSINESS; CONSUMER ISSUES; 3.0=FOREIGN AFFAIRS AND NATIONAL DEFENSE; 4.0=GOVERNMENT FUNCTIONING; 5.0=LABOR ISSUES; 6.0=NATURAL RESOURCES; 7.0=PUBLIC ORDER; 8.0=RACIAL PROBLEMS; 9.0=SOCIAL WELFARE; 97.0=Other problems; 98.0=n..."
+  },
+  {
+    "feature_id": 214,
+    "feature": "VCF0875_60",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0875_60` derived from semantic feature `VCF0875`. Interpret this column as the encoded model input for that derived category/value. most important national problem",
+    "values": "1.0=AGRICULTURAL; 2.0=ECONOMICS; BUSINESS; CONSUMER ISSUES; 3.0=FOREIGN AFFAIRS AND NATIONAL DEFENSE; 4.0=GOVERNMENT FUNCTIONING; 5.0=LABOR ISSUES; 6.0=NATURAL RESOURCES; 7.0=PUBLIC ORDER; 8.0=RACIAL PROBLEMS; 9.0=SOCIAL WELFARE; 97.0=Other problems; 98.0=n..."
+  },
+  {
+    "feature_id": 215,
+    "feature": "VCF0875_70",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0875_70` derived from semantic feature `VCF0875`. Interpret this column as the encoded model input for that derived category/value. most important national problem",
+    "values": "1.0=AGRICULTURAL; 2.0=ECONOMICS; BUSINESS; CONSUMER ISSUES; 3.0=FOREIGN AFFAIRS AND NATIONAL DEFENSE; 4.0=GOVERNMENT FUNCTIONING; 5.0=LABOR ISSUES; 6.0=NATURAL RESOURCES; 7.0=PUBLIC ORDER; 8.0=RACIAL PROBLEMS; 9.0=SOCIAL WELFARE; 97.0=Other problems; 98.0=n..."
+  },
+  {
+    "feature_id": 216,
+    "feature": "VCF0875_80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0875_80` derived from semantic feature `VCF0875`. Interpret this column as the encoded model input for that derived category/value. most important national problem",
+    "values": "1.0=AGRICULTURAL; 2.0=ECONOMICS; BUSINESS; CONSUMER ISSUES; 3.0=FOREIGN AFFAIRS AND NATIONAL DEFENSE; 4.0=GOVERNMENT FUNCTIONING; 5.0=LABOR ISSUES; 6.0=NATURAL RESOURCES; 7.0=PUBLIC ORDER; 8.0=RACIAL PROBLEMS; 9.0=SOCIAL WELFARE; 97.0=Other problems; 98.0=n..."
+  },
+  {
+    "feature_id": 217,
+    "feature": "VCF0875_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0875_90` derived from semantic feature `VCF0875`. Interpret this column as the encoded model input for that derived category/value. most important national problem",
+    "values": "1.0=AGRICULTURAL; 2.0=ECONOMICS; BUSINESS; CONSUMER ISSUES; 3.0=FOREIGN AFFAIRS AND NATIONAL DEFENSE; 4.0=GOVERNMENT FUNCTIONING; 5.0=LABOR ISSUES; 6.0=NATURAL RESOURCES; 7.0=PUBLIC ORDER; 8.0=RACIAL PROBLEMS; 9.0=SOCIAL WELFARE; 97.0=Other problems; 98.0=n..."
+  },
+  {
+    "feature_id": 218,
+    "feature": "VCF0875_970",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0875_970` derived from semantic feature `VCF0875`. Interpret this column as the encoded model input for that derived category/value. most important national problem",
+    "values": "1.0=AGRICULTURAL; 2.0=ECONOMICS; BUSINESS; CONSUMER ISSUES; 3.0=FOREIGN AFFAIRS AND NATIONAL DEFENSE; 4.0=GOVERNMENT FUNCTIONING; 5.0=LABOR ISSUES; 6.0=NATURAL RESOURCES; 7.0=PUBLIC ORDER; 8.0=RACIAL PROBLEMS; 9.0=SOCIAL WELFARE; 97.0=Other problems; 98.0=n..."
+  },
+  {
+    "feature_id": 219,
+    "feature": "VCF0875_980",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0875_980` derived from semantic feature `VCF0875`. Interpret this column as the encoded model input for that derived category/value. most important national problem",
+    "values": "1.0=AGRICULTURAL; 2.0=ECONOMICS; BUSINESS; CONSUMER ISSUES; 3.0=FOREIGN AFFAIRS AND NATIONAL DEFENSE; 4.0=GOVERNMENT FUNCTIONING; 5.0=LABOR ISSUES; 6.0=NATURAL RESOURCES; 7.0=PUBLIC ORDER; 8.0=RACIAL PROBLEMS; 9.0=SOCIAL WELFARE; 97.0=Other problems; 98.0=n..."
+  },
+  {
+    "feature_id": 220,
+    "feature": "VCF0875_990",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0875_990` derived from semantic feature `VCF0875`. Interpret this column as the encoded model input for that derived category/value. most important national problem",
+    "values": "1.0=AGRICULTURAL; 2.0=ECONOMICS; BUSINESS; CONSUMER ISSUES; 3.0=FOREIGN AFFAIRS AND NATIONAL DEFENSE; 4.0=GOVERNMENT FUNCTIONING; 5.0=LABOR ISSUES; 6.0=NATURAL RESOURCES; 7.0=PUBLIC ORDER; 8.0=RACIAL PROBLEMS; 9.0=SOCIAL WELFARE; 97.0=Other problems; 98.0=n..."
+  },
+  {
+    "feature_id": 221,
+    "feature": "VCF0875_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0875_no answer` derived from semantic feature `VCF0875`. Interpret this column as the encoded model input for that derived category/value. most important national problem",
+    "values": "1.0=AGRICULTURAL; 2.0=ECONOMICS; BUSINESS; CONSUMER ISSUES; 3.0=FOREIGN AFFAIRS AND NATIONAL DEFENSE; 4.0=GOVERNMENT FUNCTIONING; 5.0=LABOR ISSUES; 6.0=NATURAL RESOURCES; 7.0=PUBLIC ORDER; 8.0=RACIAL PROBLEMS; 9.0=SOCIAL WELFARE; 97.0=Other problems; 98.0=n..."
+  },
+  {
+    "feature_id": 222,
+    "feature": "VCF0901b_99",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_99` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 223,
+    "feature": "VCF0901b_AK",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_AK` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 224,
+    "feature": "VCF0901b_AL",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_AL` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 225,
+    "feature": "VCF0901b_AR",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_AR` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 226,
+    "feature": "VCF0901b_AZ",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_AZ` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 227,
+    "feature": "VCF0901b_CA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_CA` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 228,
+    "feature": "VCF0901b_CO",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_CO` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 229,
+    "feature": "VCF0901b_CT",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_CT` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 230,
+    "feature": "VCF0901b_DC",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_DC` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 231,
+    "feature": "VCF0901b_DE",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_DE` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 232,
+    "feature": "VCF0901b_FL",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_FL` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 233,
+    "feature": "VCF0901b_GA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_GA` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 234,
+    "feature": "VCF0901b_HI",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_HI` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 235,
+    "feature": "VCF0901b_IA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_IA` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 236,
+    "feature": "VCF0901b_ID",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_ID` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 237,
+    "feature": "VCF0901b_IL",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_IL` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 238,
+    "feature": "VCF0901b_IN",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_IN` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 239,
+    "feature": "VCF0901b_KS",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_KS` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 240,
+    "feature": "VCF0901b_KY",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_KY` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 241,
+    "feature": "VCF0901b_LA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_LA` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 242,
+    "feature": "VCF0901b_MA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_MA` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 243,
+    "feature": "VCF0901b_MD",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_MD` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 244,
+    "feature": "VCF0901b_ME",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_ME` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 245,
+    "feature": "VCF0901b_MI",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_MI` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 246,
+    "feature": "VCF0901b_MN",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_MN` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 247,
+    "feature": "VCF0901b_MO",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_MO` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 248,
+    "feature": "VCF0901b_MS",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_MS` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 249,
+    "feature": "VCF0901b_MT",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_MT` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 250,
+    "feature": "VCF0901b_NC",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_NC` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 251,
+    "feature": "VCF0901b_ND",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_ND` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 252,
+    "feature": "VCF0901b_NE",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_NE` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 253,
+    "feature": "VCF0901b_NH",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_NH` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 254,
+    "feature": "VCF0901b_NJ",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_NJ` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 255,
+    "feature": "VCF0901b_NM",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_NM` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 256,
+    "feature": "VCF0901b_NV",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_NV` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 257,
+    "feature": "VCF0901b_NY",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_NY` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 258,
+    "feature": "VCF0901b_OH",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_OH` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 259,
+    "feature": "VCF0901b_OK",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_OK` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 260,
+    "feature": "VCF0901b_OR",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_OR` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 261,
+    "feature": "VCF0901b_PA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_PA` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 262,
+    "feature": "VCF0901b_RI",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_RI` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 263,
+    "feature": "VCF0901b_SC",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_SC` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 264,
+    "feature": "VCF0901b_SD",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_SD` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 265,
+    "feature": "VCF0901b_TN",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_TN` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 266,
+    "feature": "VCF0901b_TX",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_TX` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 267,
+    "feature": "VCF0901b_UT",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_UT` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 268,
+    "feature": "VCF0901b_VA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_VA` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 269,
+    "feature": "VCF0901b_VT",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_VT` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 270,
+    "feature": "VCF0901b_WA",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_WA` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 271,
+    "feature": "VCF0901b_WI",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_WI` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 272,
+    "feature": "VCF0901b_WV",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_WV` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 273,
+    "feature": "VCF0901b_WY",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_WY` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 274,
+    "feature": "VCF0901b_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF0901b_no answer` derived from semantic feature `VCF0901b`. Interpret this column as the encoded model input for that derived category/value. state"
+  },
+  {
+    "feature_id": 275,
+    "feature": "VCF9008_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9008_10` derived from semantic feature `VCF9008`. Interpret this column as the encoded model input for that derived category/value. party preference on pollution and environment",
+    "values": "1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 276,
+    "feature": "VCF9008_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9008_30` derived from semantic feature `VCF9008`. Interpret this column as the encoded model input for that derived category/value. party preference on pollution and environment",
+    "values": "1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 277,
+    "feature": "VCF9008_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9008_50` derived from semantic feature `VCF9008`. Interpret this column as the encoded model input for that derived category/value. party preference on pollution and environment",
+    "values": "1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 278,
+    "feature": "VCF9008_80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9008_80` derived from semantic feature `VCF9008`. Interpret this column as the encoded model input for that derived category/value. party preference on pollution and environment",
+    "values": "1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 279,
+    "feature": "VCF9008_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9008_90` derived from semantic feature `VCF9008`. Interpret this column as the encoded model input for that derived category/value. party preference on pollution and environment",
+    "values": "1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 280,
+    "feature": "VCF9008_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9008_no answer` derived from semantic feature `VCF9008`. Interpret this column as the encoded model input for that derived category/value. party preference on pollution and environment",
+    "values": "1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 281,
+    "feature": "VCF9010_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9010_10` derived from semantic feature `VCF9010`. Interpret this column as the encoded model input for that derived category/value. party preference on inflation",
+    "values": "1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 282,
+    "feature": "VCF9010_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9010_30` derived from semantic feature `VCF9010`. Interpret this column as the encoded model input for that derived category/value. party preference on inflation",
+    "values": "1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 283,
+    "feature": "VCF9010_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9010_50` derived from semantic feature `VCF9010`. Interpret this column as the encoded model input for that derived category/value. party preference on inflation",
+    "values": "1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 284,
+    "feature": "VCF9010_80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9010_80` derived from semantic feature `VCF9010`. Interpret this column as the encoded model input for that derived category/value. party preference on inflation",
+    "values": "1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 285,
+    "feature": "VCF9010_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9010_90` derived from semantic feature `VCF9010`. Interpret this column as the encoded model input for that derived category/value. party preference on inflation",
+    "values": "1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 286,
+    "feature": "VCF9010_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9010_no answer` derived from semantic feature `VCF9010`. Interpret this column as the encoded model input for that derived category/value. party preference on inflation",
+    "values": "1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 287,
+    "feature": "VCF9011_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9011_10` derived from semantic feature `VCF9011`. Interpret this column as the encoded model input for that derived category/value. party preference on unemployment",
+    "values": "1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 288,
+    "feature": "VCF9011_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9011_30` derived from semantic feature `VCF9011`. Interpret this column as the encoded model input for that derived category/value. party preference on unemployment",
+    "values": "1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 289,
+    "feature": "VCF9011_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9011_50` derived from semantic feature `VCF9011`. Interpret this column as the encoded model input for that derived category/value. party preference on unemployment",
+    "values": "1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 290,
+    "feature": "VCF9011_80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9011_80` derived from semantic feature `VCF9011`. Interpret this column as the encoded model input for that derived category/value. party preference on unemployment",
+    "values": "1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 291,
+    "feature": "VCF9011_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9011_90` derived from semantic feature `VCF9011`. Interpret this column as the encoded model input for that derived category/value. party preference on unemployment",
+    "values": "1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 292,
+    "feature": "VCF9011_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9011_no answer` derived from semantic feature `VCF9011`. Interpret this column as the encoded model input for that derived category/value. party preference on unemployment",
+    "values": "1.0=Better by Democrats; 3.0=Same by both; 5.0=Better by Republicans; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 293,
+    "feature": "VCF9045_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9045_10` derived from semantic feature `VCF9045`. Interpret this column as the encoded model input for that derived category/value. position of the U.S. in past year",
+    "values": "1.0=Weaker; 3.0=Same; 5.0=Stronger; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 294,
+    "feature": "VCF9045_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9045_30` derived from semantic feature `VCF9045`. Interpret this column as the encoded model input for that derived category/value. position of the U.S. in past year",
+    "values": "1.0=Weaker; 3.0=Same; 5.0=Stronger; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 295,
+    "feature": "VCF9045_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9045_50` derived from semantic feature `VCF9045`. Interpret this column as the encoded model input for that derived category/value. position of the U.S. in past year",
+    "values": "1.0=Weaker; 3.0=Same; 5.0=Stronger; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 296,
+    "feature": "VCF9045_80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9045_80` derived from semantic feature `VCF9045`. Interpret this column as the encoded model input for that derived category/value. position of the U.S. in past year",
+    "values": "1.0=Weaker; 3.0=Same; 5.0=Stronger; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 297,
+    "feature": "VCF9045_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9045_90` derived from semantic feature `VCF9045`. Interpret this column as the encoded model input for that derived category/value. position of the U.S. in past year",
+    "values": "1.0=Weaker; 3.0=Same; 5.0=Stronger; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 298,
+    "feature": "VCF9045_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9045_no answer` derived from semantic feature `VCF9045`. Interpret this column as the encoded model input for that derived category/value. position of the U.S. in past year",
+    "values": "1.0=Weaker; 3.0=Same; 5.0=Stronger; 8.0=Don't know; 9.0=no answer"
+  },
+  {
+    "feature_id": 299,
+    "feature": "VCF9052_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9052_10` derived from semantic feature `VCF9052`. Interpret this column as the encoded model input for that derived category/value. are things in U.S. going well or not",
+    "values": "1.0=Very well; 2.0=Fairly well; 4.0=Not too well; 5.0=Not well at all; 8.0=no answer; 9.0=no answer"
+  },
+  {
+    "feature_id": 300,
+    "feature": "VCF9052_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9052_20` derived from semantic feature `VCF9052`. Interpret this column as the encoded model input for that derived category/value. are things in U.S. going well or not",
+    "values": "1.0=Very well; 2.0=Fairly well; 4.0=Not too well; 5.0=Not well at all; 8.0=no answer; 9.0=no answer"
+  },
+  {
+    "feature_id": 301,
+    "feature": "VCF9052_40",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9052_40` derived from semantic feature `VCF9052`. Interpret this column as the encoded model input for that derived category/value. are things in U.S. going well or not",
+    "values": "1.0=Very well; 2.0=Fairly well; 4.0=Not too well; 5.0=Not well at all; 8.0=no answer; 9.0=no answer"
+  },
+  {
+    "feature_id": 302,
+    "feature": "VCF9052_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9052_50` derived from semantic feature `VCF9052`. Interpret this column as the encoded model input for that derived category/value. are things in U.S. going well or not",
+    "values": "1.0=Very well; 2.0=Fairly well; 4.0=Not too well; 5.0=Not well at all; 8.0=no answer; 9.0=no answer"
+  },
+  {
+    "feature_id": 303,
+    "feature": "VCF9052_80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9052_80` derived from semantic feature `VCF9052`. Interpret this column as the encoded model input for that derived category/value. are things in U.S. going well or not",
+    "values": "1.0=Very well; 2.0=Fairly well; 4.0=Not too well; 5.0=Not well at all; 8.0=no answer; 9.0=no answer"
+  },
+  {
+    "feature_id": 304,
+    "feature": "VCF9052_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9052_90` derived from semantic feature `VCF9052`. Interpret this column as the encoded model input for that derived category/value. are things in U.S. going well or not",
+    "values": "1.0=Very well; 2.0=Fairly well; 4.0=Not too well; 5.0=Not well at all; 8.0=no answer; 9.0=no answer"
+  },
+  {
+    "feature_id": 305,
+    "feature": "VCF9052_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9052_no answer` derived from semantic feature `VCF9052`. Interpret this column as the encoded model input for that derived category/value. are things in U.S. going well or not",
+    "values": "1.0=Very well; 2.0=Fairly well; 4.0=Not too well; 5.0=Not well at all; 8.0=no answer; 9.0=no answer"
+  },
+  {
+    "feature_id": 306,
+    "feature": "VCF9201_-10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_-10` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 307,
+    "feature": "VCF9201_-70",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_-70` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 308,
+    "feature": "VCF9201_-80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_-80` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 309,
+    "feature": "VCF9201_-90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_-90` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 310,
+    "feature": "VCF9201_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_00` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 311,
+    "feature": "VCF9201_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_10` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 312,
+    "feature": "VCF9201_100",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_100` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 313,
+    "feature": "VCF9201_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_20` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 314,
+    "feature": "VCF9201_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_30` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 315,
+    "feature": "VCF9201_40",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_40` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 316,
+    "feature": "VCF9201_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_50` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 317,
+    "feature": "VCF9201_60",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_60` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 318,
+    "feature": "VCF9201_70",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_70` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 319,
+    "feature": "VCF9201_80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_80` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 320,
+    "feature": "VCF9201_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_90` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 321,
+    "feature": "VCF9201_960",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_960` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 322,
+    "feature": "VCF9201_970",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_970` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 323,
+    "feature": "VCF9201_980",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_980` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 324,
+    "feature": "VCF9201_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9201_no answer` derived from semantic feature `VCF9201`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for democratic party (0-10)"
+  },
+  {
+    "feature_id": 325,
+    "feature": "VCF9202_-10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9202_-10` derived from semantic feature `VCF9202`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for republican party (0-10)"
+  },
+  {
+    "feature_id": 326,
+    "feature": "VCF9202_-70",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9202_-70` derived from semantic feature `VCF9202`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for republican party (0-10)"
+  },
+  {
+    "feature_id": 327,
+    "feature": "VCF9202_-80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9202_-80` derived from semantic feature `VCF9202`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for republican party (0-10)"
+  },
+  {
+    "feature_id": 328,
+    "feature": "VCF9202_-90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9202_-90` derived from semantic feature `VCF9202`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for republican party (0-10)"
+  },
+  {
+    "feature_id": 329,
+    "feature": "VCF9202_00",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9202_00` derived from semantic feature `VCF9202`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for republican party (0-10)"
+  },
+  {
+    "feature_id": 330,
+    "feature": "VCF9202_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9202_10` derived from semantic feature `VCF9202`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for republican party (0-10)"
+  },
+  {
+    "feature_id": 331,
+    "feature": "VCF9202_100",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9202_100` derived from semantic feature `VCF9202`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for republican party (0-10)"
+  },
+  {
+    "feature_id": 332,
+    "feature": "VCF9202_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9202_20` derived from semantic feature `VCF9202`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for republican party (0-10)"
+  },
+  {
+    "feature_id": 333,
+    "feature": "VCF9202_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9202_30` derived from semantic feature `VCF9202`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for republican party (0-10)"
+  },
+  {
+    "feature_id": 334,
+    "feature": "VCF9202_40",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9202_40` derived from semantic feature `VCF9202`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for republican party (0-10)"
+  },
+  {
+    "feature_id": 335,
+    "feature": "VCF9202_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9202_50` derived from semantic feature `VCF9202`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for republican party (0-10)"
+  },
+  {
+    "feature_id": 336,
+    "feature": "VCF9202_60",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9202_60` derived from semantic feature `VCF9202`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for republican party (0-10)"
+  },
+  {
+    "feature_id": 337,
+    "feature": "VCF9202_70",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9202_70` derived from semantic feature `VCF9202`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for republican party (0-10)"
+  },
+  {
+    "feature_id": 338,
+    "feature": "VCF9202_80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9202_80` derived from semantic feature `VCF9202`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for republican party (0-10)"
+  },
+  {
+    "feature_id": 339,
+    "feature": "VCF9202_90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9202_90` derived from semantic feature `VCF9202`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for republican party (0-10)"
+  },
+  {
+    "feature_id": 340,
+    "feature": "VCF9202_980",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9202_980` derived from semantic feature `VCF9202`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for republican party (0-10)"
+  },
+  {
+    "feature_id": 341,
+    "feature": "VCF9202_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9202_no answer` derived from semantic feature `VCF9202`. Interpret this column as the encoded model input for that derived category/value. like-dislike scale placement for republican party (0-10)"
+  },
+  {
+    "feature_id": 342,
+    "feature": "VCF9203_-80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9203_-80` derived from semantic feature `VCF9203`. Interpret this column as the encoded model input for that derived category/value. do any of the parties in the U.S. represent views reasonably well",
+    "values": "1.0=Yes; 2.0=No; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 343,
+    "feature": "VCF9203_-90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9203_-90` derived from semantic feature `VCF9203`. Interpret this column as the encoded model input for that derived category/value. do any of the parties in the U.S. represent views reasonably well",
+    "values": "1.0=Yes; 2.0=No; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 344,
+    "feature": "VCF9203_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9203_10` derived from semantic feature `VCF9203`. Interpret this column as the encoded model input for that derived category/value. do any of the parties in the U.S. represent views reasonably well",
+    "values": "1.0=Yes; 2.0=No; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 345,
+    "feature": "VCF9203_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9203_20` derived from semantic feature `VCF9203`. Interpret this column as the encoded model input for that derived category/value. do any of the parties in the U.S. represent views reasonably well",
+    "values": "1.0=Yes; 2.0=No; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 346,
+    "feature": "VCF9203_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9203_no answer` derived from semantic feature `VCF9203`. Interpret this column as the encoded model input for that derived category/value. do any of the parties in the U.S. represent views reasonably well",
+    "values": "1.0=Yes; 2.0=No; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 347,
+    "feature": "VCF9204_-80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9204_-80` derived from semantic feature `VCF9204`. Interpret this column as the encoded model input for that derived category/value. party in US that represents views best",
+    "values": "1.0=Democratic; 2.0=Republican; 7.0=Other; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 348,
+    "feature": "VCF9204_-90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9204_-90` derived from semantic feature `VCF9204`. Interpret this column as the encoded model input for that derived category/value. party in US that represents views best",
+    "values": "1.0=Democratic; 2.0=Republican; 7.0=Other; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 349,
+    "feature": "VCF9204_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9204_10` derived from semantic feature `VCF9204`. Interpret this column as the encoded model input for that derived category/value. party in US that represents views best",
+    "values": "1.0=Democratic; 2.0=Republican; 7.0=Other; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 350,
+    "feature": "VCF9204_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9204_20` derived from semantic feature `VCF9204`. Interpret this column as the encoded model input for that derived category/value. party in US that represents views best",
+    "values": "1.0=Democratic; 2.0=Republican; 7.0=Other; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 351,
+    "feature": "VCF9204_70",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9204_70` derived from semantic feature `VCF9204`. Interpret this column as the encoded model input for that derived category/value. party in US that represents views best",
+    "values": "1.0=Democratic; 2.0=Republican; 7.0=Other; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 352,
+    "feature": "VCF9204_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9204_no answer` derived from semantic feature `VCF9204`. Interpret this column as the encoded model input for that derived category/value. party in US that represents views best",
+    "values": "1.0=Democratic; 2.0=Republican; 7.0=Other; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 353,
+    "feature": "VCF9205_-80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9205_-80` derived from semantic feature `VCF9205`. Interpret this column as the encoded model input for that derived category/value. which political party represents views best",
+    "values": "1.0=Democrats; 2.0=No difference; 3.0=Republican; 7.0=Neither party; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 354,
+    "feature": "VCF9205_-90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9205_-90` derived from semantic feature `VCF9205`. Interpret this column as the encoded model input for that derived category/value. which political party represents views best",
+    "values": "1.0=Democrats; 2.0=No difference; 3.0=Republican; 7.0=Neither party; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 355,
+    "feature": "VCF9205_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9205_10` derived from semantic feature `VCF9205`. Interpret this column as the encoded model input for that derived category/value. which political party represents views best",
+    "values": "1.0=Democrats; 2.0=No difference; 3.0=Republican; 7.0=Neither party; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 356,
+    "feature": "VCF9205_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9205_20` derived from semantic feature `VCF9205`. Interpret this column as the encoded model input for that derived category/value. which political party represents views best",
+    "values": "1.0=Democrats; 2.0=No difference; 3.0=Republican; 7.0=Neither party; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 357,
+    "feature": "VCF9205_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9205_30` derived from semantic feature `VCF9205`. Interpret this column as the encoded model input for that derived category/value. which political party represents views best",
+    "values": "1.0=Democrats; 2.0=No difference; 3.0=Republican; 7.0=Neither party; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 358,
+    "feature": "VCF9205_70",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9205_70` derived from semantic feature `VCF9205`. Interpret this column as the encoded model input for that derived category/value. which political party represents views best",
+    "values": "1.0=Democrats; 2.0=No difference; 3.0=Republican; 7.0=Neither party; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 359,
+    "feature": "VCF9205_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9205_no answer` derived from semantic feature `VCF9205`. Interpret this column as the encoded model input for that derived category/value. which political party represents views best",
+    "values": "1.0=Democrats; 2.0=No difference; 3.0=Republican; 7.0=Neither party; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 360,
+    "feature": "VCF9206_-10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9206_-10` derived from semantic feature `VCF9206`. Interpret this column as the encoded model input for that derived category/value. better when one party controls both presidency and congress or when control is split",
+    "values": "1.0=One party control both; 2.0=Control is split; 3.0=It doesn’t matter; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 361,
+    "feature": "VCF9206_-80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9206_-80` derived from semantic feature `VCF9206`. Interpret this column as the encoded model input for that derived category/value. better when one party controls both presidency and congress or when control is split",
+    "values": "1.0=One party control both; 2.0=Control is split; 3.0=It doesn’t matter; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 362,
+    "feature": "VCF9206_-90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9206_-90` derived from semantic feature `VCF9206`. Interpret this column as the encoded model input for that derived category/value. better when one party controls both presidency and congress or when control is split",
+    "values": "1.0=One party control both; 2.0=Control is split; 3.0=It doesn’t matter; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 363,
+    "feature": "VCF9206_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9206_10` derived from semantic feature `VCF9206`. Interpret this column as the encoded model input for that derived category/value. better when one party controls both presidency and congress or when control is split",
+    "values": "1.0=One party control both; 2.0=Control is split; 3.0=It doesn’t matter; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 364,
+    "feature": "VCF9206_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9206_20` derived from semantic feature `VCF9206`. Interpret this column as the encoded model input for that derived category/value. better when one party controls both presidency and congress or when control is split",
+    "values": "1.0=One party control both; 2.0=Control is split; 3.0=It doesn’t matter; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 365,
+    "feature": "VCF9206_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9206_30` derived from semantic feature `VCF9206`. Interpret this column as the encoded model input for that derived category/value. better when one party controls both presidency and congress or when control is split",
+    "values": "1.0=One party control both; 2.0=Control is split; 3.0=It doesn’t matter; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 366,
+    "feature": "VCF9206_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9206_no answer` derived from semantic feature `VCF9206`. Interpret this column as the encoded model input for that derived category/value. better when one party controls both presidency and congress or when control is split",
+    "values": "1.0=One party control both; 2.0=Control is split; 3.0=It doesn’t matter; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 367,
+    "feature": "VCF9239_-80",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9239_-80` derived from semantic feature `VCF9239`. Interpret this column as the encoded model input for that derived category/value. importance of gun control",
+    "values": "1.0=Extremely important; 2.0=Very important; 3.0=Somewhat important; 4.0=Not too important; 5.0=Not at all important; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 368,
+    "feature": "VCF9239_-90",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9239_-90` derived from semantic feature `VCF9239`. Interpret this column as the encoded model input for that derived category/value. importance of gun control",
+    "values": "1.0=Extremely important; 2.0=Very important; 3.0=Somewhat important; 4.0=Not too important; 5.0=Not at all important; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 369,
+    "feature": "VCF9239_10",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9239_10` derived from semantic feature `VCF9239`. Interpret this column as the encoded model input for that derived category/value. importance of gun control",
+    "values": "1.0=Extremely important; 2.0=Very important; 3.0=Somewhat important; 4.0=Not too important; 5.0=Not at all important; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 370,
+    "feature": "VCF9239_20",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9239_20` derived from semantic feature `VCF9239`. Interpret this column as the encoded model input for that derived category/value. importance of gun control",
+    "values": "1.0=Extremely important; 2.0=Very important; 3.0=Somewhat important; 4.0=Not too important; 5.0=Not at all important; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 371,
+    "feature": "VCF9239_30",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9239_30` derived from semantic feature `VCF9239`. Interpret this column as the encoded model input for that derived category/value. importance of gun control",
+    "values": "1.0=Extremely important; 2.0=Very important; 3.0=Somewhat important; 4.0=Not too important; 5.0=Not at all important; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 372,
+    "feature": "VCF9239_40",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9239_40` derived from semantic feature `VCF9239`. Interpret this column as the encoded model input for that derived category/value. importance of gun control",
+    "values": "1.0=Extremely important; 2.0=Very important; 3.0=Somewhat important; 4.0=Not too important; 5.0=Not at all important; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 373,
+    "feature": "VCF9239_50",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9239_50` derived from semantic feature `VCF9239`. Interpret this column as the encoded model input for that derived category/value. importance of gun control",
+    "values": "1.0=Extremely important; 2.0=Very important; 3.0=Somewhat important; 4.0=Not too important; 5.0=Not at all important; -8.0=no answer; -9.0=no answer"
+  },
+  {
+    "feature_id": 374,
+    "feature": "VCF9239_no answer",
+    "type": "encoded_model_feature",
+    "description": "Model feature `VCF9239_no answer` derived from semantic feature `VCF9239`. Interpret this column as the encoded model input for that derived category/value. importance of gun control",
+    "values": "1.0=Extremely important; 2.0=Very important; 3.0=Somewhat important; 4.0=Not too important; 5.0=Not at all important; -8.0=no answer; -9.0=no answer"
+  }
+]
+
+Feature IDs to include exactly once:
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374]
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "ranking": [
+    {
+      "rank": 1,
+      "feature_id": 0
+    }
+  ]
+}
+
+Rules:
+- Include every feature_id exactly once in `ranking`.
+- Use ranks 1 through 375, with no duplicates.
+- Rank 1 is most important.
+- If two features seem similarly important, still break ties.
+- `feature_id` is the authoritative identifier. Include each feature_id exactly
+  once and do not include feature names in the output.
+- For large feature sets, omit rationales and return only rank/feature_id pairs.

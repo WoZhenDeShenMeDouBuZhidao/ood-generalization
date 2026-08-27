@@ -1,0 +1,704 @@
+# acs/acspubliccoverage score prompts
+
+## 1. feature_id=0 feature=AGEP
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 0,
+  "feature": "AGEP",
+  "type": "integer",
+  "description": "Age of the person in years.",
+  "values": "ACS age code; older ages may be topcoded."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 0,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 2. feature_id=1 feature=SCHL
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 1,
+  "feature": "SCHL",
+  "type": "ordinal_categorical",
+  "description": "Educational attainment.",
+  "values": "ACS education level code; larger codes generally indicate more education."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 1,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 3. feature_id=2 feature=MAR
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 2,
+  "feature": "MAR",
+  "type": "categorical",
+  "description": "Marital status.",
+  "values": "ACS marital status code."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 2,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 4. feature_id=3 feature=SEX
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 3,
+  "feature": "SEX",
+  "type": "categorical",
+  "description": "Sex reported in ACS.",
+  "values": "1=male, 2=female."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 3,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 5. feature_id=4 feature=DIS
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 4,
+  "feature": "DIS",
+  "type": "boolean_categorical",
+  "description": "Disability recode.",
+  "values": "1=with a disability, 2=without a disability."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 4,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 6. feature_id=5 feature=ESP
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 5,
+  "feature": "ESP",
+  "type": "categorical",
+  "description": "Employment status of parents.",
+  "values": "ACS family/parent employment code, mainly defined for children."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 5,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 7. feature_id=6 feature=CIT
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 6,
+  "feature": "CIT",
+  "type": "categorical",
+  "description": "Citizenship status.",
+  "values": "US-born, US territory-born, born abroad to American parents, naturalized citizen, or not a citizen."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 6,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 8. feature_id=7 feature=MIG
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 7,
+  "feature": "MIG",
+  "type": "categorical",
+  "description": "Mobility status one year ago.",
+  "values": "Whether and where the person lived one year ago."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 7,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 9. feature_id=8 feature=MIL
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 8,
+  "feature": "MIL",
+  "type": "categorical",
+  "description": "Military service status.",
+  "values": "ACS military service category."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 8,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 10. feature_id=9 feature=ANC
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 9,
+  "feature": "ANC",
+  "type": "categorical",
+  "description": "Ancestry recode.",
+  "values": "ACS ancestry category."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 9,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 11. feature_id=10 feature=NATIVITY
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 10,
+  "feature": "NATIVITY",
+  "type": "categorical",
+  "description": "Nativity recode.",
+  "values": "Native-born or foreign-born."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 10,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 12. feature_id=11 feature=DEAR
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 11,
+  "feature": "DEAR",
+  "type": "boolean_categorical",
+  "description": "Hearing difficulty.",
+  "values": "1=yes, 2=no."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 11,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 13. feature_id=12 feature=DEYE
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 12,
+  "feature": "DEYE",
+  "type": "boolean_categorical",
+  "description": "Vision difficulty.",
+  "values": "1=yes, 2=no."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 12,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 14. feature_id=13 feature=DREM
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 13,
+  "feature": "DREM",
+  "type": "boolean_categorical",
+  "description": "Cognitive difficulty remembering, concentrating, or making decisions.",
+  "values": "1=yes, 2=no."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 13,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 15. feature_id=14 feature=PINCP
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 14,
+  "feature": "PINCP",
+  "type": "continuous",
+  "description": "Total person's income.",
+  "values": "Dollar income amount; may be negative, zero, or positive."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 14,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 16. feature_id=15 feature=ESR
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 15,
+  "feature": "ESR",
+  "type": "categorical",
+  "description": "Employment status recode.",
+  "values": "Employed, unemployed, armed forces, or not in labor force categories."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 15,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 17. feature_id=16 feature=ST
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 16,
+  "feature": "ST",
+  "type": "categorical",
+  "description": "State code.",
+  "values": "Geographic state identifier; likely encodes train/test domain."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 16,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 18. feature_id=17 feature=FER
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 17,
+  "feature": "FER",
+  "type": "categorical",
+  "description": "Gave birth to a child within the past 12 months.",
+  "values": "ACS fertility code; includes not applicable categories."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 17,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.
+
+## 19. feature_id=18 feature=RAC1P
+You are helping design a feature-importance prior for an out-of-distribution
+generalization experiment on the Folktables ACS task `acspubliccoverage`.
+
+Research and use your knowledge of Folktables, ACS PUMS variables, and the task
+definition. Prefer features that should remain semantically predictive across US
+states, and penalize features that likely encode geography, demographic shortcuts,
+or brittle state-specific distributional artifacts.
+
+Score this feature by its stable predictive usefulness for this
+task, considered marginally and without seeing the downstream data.
+
+Feature card:
+{
+  "feature_id": 18,
+  "feature": "RAC1P",
+  "type": "categorical",
+  "description": "Detailed race recode.",
+  "values": "ACS race category code."
+}
+
+Return only valid JSON. Do not wrap it in Markdown.
+Use exactly this schema:
+{
+  "task_summary": "one concise sentence about the prediction target",
+  "feature_id": 18,
+  "score": 0.0,
+  "rationale": "short reason"
+}
+
+Rules:
+- `score` must be a number from 0.0 to 1.0.
+- Higher score means stronger expected stable predictive usefulness.
+- Penalize sensitive or domain-specific shortcuts, leakage, and brittle artifacts.
+- `feature_id` is the authoritative identifier. Do not include feature names in
+  the output.

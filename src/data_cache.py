@@ -28,19 +28,24 @@ def data_cache_dir(
     dataset_config: Optional[Any],
 ) -> Path:
     data_dir = dataset_cache_dir(benchmark, dataset)
+    removed_token = removed_features_cache_token(removed_feature_indices)
     cache_suffix = get_config_value(dataset_config, "cache_suffix", "")
     if cache_suffix:
-        return data_dir / str(cache_suffix)
+        return data_dir / f"{removed_token}__{cache_suffix}"
 
     if benchmark != "acs":
-        return data_dir
+        return data_dir / removed_token
 
     resampling = int(bool(get_config_value(dataset_config, "resampling", False)))
     standardize = int(bool(get_config_value(dataset_config, "standardize", False)))
+    max_train_val_size = int(get_config_value(dataset_config, "max_train_val_size", 0))
+    max_per_test_size = int(get_config_value(dataset_config, "max_per_test_size", 0))
     cache_name = "__".join([
-        removed_features_cache_token(removed_feature_indices),
+        removed_token,
         f"rs{resampling}",
         f"std{standardize}",
+        f"trv{max_train_val_size}",
+        f"test{max_per_test_size}",
     ])
     return data_dir / cache_name
 
@@ -55,13 +60,16 @@ def load_or_build_dataset_cache(
     data_dir = data_cache_dir(benchmark, dataset, removed_feature_indices, dataset_config)
     cache_hit = (data_dir / "train.pkl").is_file()
     if cache_hit:
-        with open(data_dir / "train.pkl", "rb") as fp:
-            train = pickle.load(fp)
-        with open(data_dir / "val.pkl", "rb") as fp:
-            val = pickle.load(fp)
-        with open(data_dir / "tests.pkl", "rb") as fp:
-            tests = pickle.load(fp)
-        return train, val, tests, data_dir, cache_hit
+        try:
+            with open(data_dir / "train.pkl", "rb") as fp:
+                train = pickle.load(fp)
+            with open(data_dir / "val.pkl", "rb") as fp:
+                val = pickle.load(fp)
+            with open(data_dir / "tests.pkl", "rb") as fp:
+                tests = pickle.load(fp)
+            return train, val, tests, data_dir, cache_hit
+        except (AttributeError, ImportError, ModuleNotFoundError):
+            cache_hit = False
 
     train, val, tests = build_fn()
     os.makedirs(data_dir, exist_ok=True)
